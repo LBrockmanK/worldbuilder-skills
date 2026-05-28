@@ -1,11 +1,8 @@
 {
   "name": "worldbuilder-skills",
-  "skills": [
-    "./skills/worldbuilder-calendar",
-    "./skills/worldbuilder-character-blueprint",
-    "./skills/worldbuilder-lorebook",
-    "./skills/worldbuilder-story-direction",
-    "./skills/worldbuilder-world-foundation",
-    "./skills/worldbuilder-world-planning"
-  ]
+  "description": "Workflow skills for building and realizing player world visions for the ainime-games.com world builder platform.",
+  "version": "0.1.0",
+  "author": {
+    "name": "LBrockmanK"
+  }
 }
