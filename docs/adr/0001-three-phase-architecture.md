@@ -1,6 +1,6 @@
 # Three-phase workflow architecture
 
-World builder sessions follow three sequential phases: Seed → Wide → Deliverables. The alternative — linear document-by-document production (lorebook, then calendar, then characters in sequence) — was rejected because it produces orphaned documents. Characters who don't exist yet can't anchor festival events; locations written before the cast exists don't reflect who actually lives in them. The three-phase structure ensures every domain is worked broadly before any domain is finalized, so documents can inform each other before being locked down.
+World builder sessions follow three sequential phases: Seed → Wide → Export. The alternative — linear document-by-document production (lorebook, then calendar, then characters in sequence) — was rejected because it produces orphaned documents. Characters who don't exist yet can't anchor festival events; locations written before the cast exists don't reflect who actually lives in them. The three-phase structure ensures every domain is worked broadly before any domain is finalized, so documents can inform each other before being locked down.
 
 ## Considered Options
 

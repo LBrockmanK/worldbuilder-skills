@@ -1,35 +1,48 @@
 ﻿---
 name: worldbuilder-lorebook
-description: Use when writing world lore entries for an AI-powered narrative game — establishing surface facts, mid-layer history, deep secrets, location descriptions, or background NPC guidelines. Also use when designing keyword triggers and date gates for those entries, or when lorebook entries are injecting too much irrelevant context or too little relevant context.
+description: Use when writing world knowledge concept notes for an AI-powered narrative game — establishing surface facts, mid-layer history, deep secrets, location descriptions, or background NPC guidelines. Also use when a concept note feels too broad or too narrow, or when deciding what layer a piece of world knowledge belongs on.
 ---
 
 # Lorebook
 
 ## Overview
 
-Lorebook entries are keyword-triggered context injected into the LLM's prompt when relevant terms appear in recent scene dialogue. They are precision tools, not flavor text. When keywords match, the matching lore is automatically injected into that specific prompt — giving the engine the right information exactly when it needs it, without bloating every prompt with lore that isn't relevant.
+World knowledge is organized in `concepts/` notes — one note per discrete topic. The ainime export skill reads these notes and packages them as keyword-triggered lorebook entries. This skill covers writing the concept notes well; the export skill handles the packaging.
 
-Good entries give the engine exactly what it needs at the moment a topic arises. Poor entries are either never triggered (bad keywords) or always triggered (too broad), polluting context with irrelevant material.
+Good concept notes give the engine exactly what it needs at the moment a topic arises. The goal is precision: the right information for the right moment. Write notes that are dense and specific rather than broad and atmospheric — 50 tokens of exact context beats 300 tokens of unfocused description.
+
+## Concept Note Frontmatter
+
+Every concept note opens with:
+
+```yaml
+type: concept
+status: draft | complete
+aliases: []           # key terms and synonyms — become keyword candidates at export
+last_updated: YYYY-MM-DD
+layer: "[[surface]]" | "[[mid]]" | "[[deep]]"
+trigger-context: brief plain-text note on when this should activate
+```
+
+`aliases` is the most important field for a concept note. Include every realistic way the topic might be mentioned in dialogue: local names, common phrasings, player-accessible synonyms. The export skill derives keywords from these.
+
+`trigger-context` is a brief note for future reference: what situation causes this lore to be relevant? One phrase is enough. "When player is at or near the old mill" or "When someone mentions the founding family." This guides both alias selection and content focus.
 
 ---
 
-## How Matching Works
+## Alias Writing Guidance
 
-Before each scene, the engine scans recent dialogue and scene context for keywords. Matching entries are injected into that prompt only.
+The export skill derives keyword triggers from the `aliases` field. Writing good aliases requires thinking about how topics actually come up in dialogue.
 
-**AND groups:** Use `+` between words to require all of them. `ruins+old` triggers only when both appear in context.
+**Coverage:** Include every realistic phrasing. If the note is about a specific location, include multiple forms: "the mill," "old mill," "Harrow's mill," "the water wheel." A single overly-precise phrase that never appears verbatim will never trigger.
 
-**OR groups:** Comma-separated keywords trigger if any match. `old mill, abandoned mill, the mill` triggers on any of these.
+**Plural and possessive forms:** Matching is typically exact-string. "mill" won't match "mill's" or "mills." Include the forms that will actually appear in dialogue.
 
-**Date gates:** Set an earliest activation day. Entries with a future gate date are invisible until that day passes. Use this to prevent deep lore from surfacing before the player has spent enough time in the setting.
+**Specificity:** Short generic terms match too broadly. "inn" might fire on "innocent." "well" fires on "well-lit." Prefer multi-word aliases where ambiguity exists: "the inn," "the old well."
 
-**Keyword coverage:** Include the variations people would actually use in conversation. If the entry is about a specific location, include multiple phrasings: "the mill," "old mill," "Harrow's mill," "the water wheel." Don't require exact matches on a single obscure trigger.
+**Local names:** Players and characters use the names they know, not the canonical names you used in the note title. Include both.
 
-**Plural and possessive forms:** Exact-string matching doesn't account for "mill's" or "mills" if your keyword is "mill." Include the forms that will actually appear in dialogue.
-
-**Partial-match traps:** Short keywords can match inside longer words depending on platform. "Inn" might fire on "innocent." "Well" fires on "well-lit." Prefer multi-word triggers where ambiguity exists: "the inn," "the old well" rather than bare short words.
-
-**Common keyword mistakes:** Single overly-precise phrase that never appears verbatim; single generic word that fires constantly; forgetting local names or player-accessible synonyms for the same thing; requiring AND combinations so restrictive they almost never match.
+**Common mistakes:** Single generic word that fires constantly; forgetting local names or synonyms; so many required terms that the combination almost never matches in practice.
 
 ---
 
@@ -37,7 +50,7 @@ Before each scene, the engine scans recent dialogue and scene context for keywor
 
 The setting deepens as the player invests. Do not front-load. Surface entries establish a mundane world with texture; mid-layer entries acknowledge the old stories; deep entries confirm what the hints implied. Jumping straight to deep lore in early entries kills the effect.
 
-### Surface layer (always active — no date gate)
+### Surface layer (active from the start)
 
 What everyone knows. The baseline reality of the setting.
 
@@ -49,7 +62,7 @@ What everyone knows. The baseline reality of the setting.
 
 **Tone:** Matter-of-fact. No mysticism. These entries establish normalcy so that later disruptions of normalcy carry weight. If a surface entry contains a hint like "but some say this is connected to the old stories," you've broken the layer structure.
 
-### Mid-layer (date-gate: roughly the end of the first season)
+### Mid-layer (available after early investment)
 
 Things people half-remember. Old stories told as legend but believed a little.
 
@@ -60,7 +73,7 @@ Things people half-remember. Old stories told as legend but believed a little.
 
 **Tone:** Uncertain. Hedged. People who know these stories are not sure they believe them. "They say..." "It's probably nothing, but..." Characters rationalize and deflect.
 
-### Deep layer (date-gate: second season or later)
+### Deep layer (available after significant investment)
 
 The actual hidden layer — what the hints were pointing toward.
 
@@ -103,43 +116,19 @@ This gives the engine a construction kit rather than a cast list, producing more
 
 ---
 
-## Lorebook Lifecycle
+## Concept Note Lifecycle
 
-The lorebook is a living document, not a phase that opens and closes. Any stage of the project can produce facts worth capturing: a household design decision, a character backstory detail, a calendar event's implied history, a conversation that clarifies the magic system. Do not wait until "the lorebook phase" to write entries — you will forget what you meant to capture.
+World knowledge is a living collection, not a phase that opens and closes. Any stage of the project can produce facts worth capturing: a household design decision, a character backstory detail, an event's implied history, a conversation that clarifies the magic system. Create a concept note whenever a discrete piece of world knowledge solidifies — do not wait.
 
-**During active development:** Maintain a `lorebook-notes.md` scratch file. When any working session produces a fact, name, or implication that belongs in the lorebook, drop it there immediately — a single sentence is enough to anchor the thought. It does not need to be written as a full entry yet.
+**During active development:** When any working session produces a fact or implication that belongs in the lorebook, create a concept note stub immediately — frontmatter + preamble is enough to anchor the thought. Flesh it out when you have more context.
 
-**At project completion:** Run a focused validation pass across the full lorebook:
-- Write any entries that are still only notes
-- Test every keyword set: does it cover the realistic phrasings? Does it trigger on things it shouldn't?
-- Check for contradictions across layers — surface entries should not imply what deep entries are supposed to reveal
-- Verify date gates: are entries gated appropriately for what they reveal?
-- Cross-reference with completed character cards: any implied lore in the cards that has no lorebook entry?
+**At project completion:** Run a validation pass across all `concepts/` notes:
+- Verify every note has complete frontmatter including `layer` and `aliases`
+- Check for contradictions across layers — surface notes should not imply what deep notes are supposed to reveal
+- Cross-reference with completed character notes: any implied lore in those notes that has no concept note?
+- Check that each note's `trigger-context` is specific enough to inform good keyword derivation at export
 
-**Don't front-load.** Writing the complete lorebook before characters are drafted means writing it before you know what the characters will imply about the world. Let the lorebook reflect the full project, not just what you knew at the start.
-
----
-
-## Lorebook Candidates Review Pass
-
-Every Phase 2 document — character blueprints, `calendar.md`, and `story.md` — ends with a `## Lorebook Candidates` section. These sections collect content cut during Wide-phase work and the Phase 2 → Phase 3 trim pass: anything trimmed that has ongoing lore value.
-
-Run the Lorebook Candidates review pass when the following are all complete:
-- All character blueprints drafted
-- `calendar.md` drafted
-- `story.md` drafted
-
-**Process:**
-
-1. Read the `## Lorebook Candidates` section from every blueprint in `characters/blueprints/`.
-2. Read the `## Lorebook Candidates` sections from `calendar.md` and `story.md`.
-3. For each candidate:
-   - Decide which lore layer it belongs to (surface, mid, or deep).
-   - Write it as a full lorebook entry if it doesn't already exist.
-   - If a closely related entry already exists, check whether the candidate adds anything new — if so, expand the existing entry; if not, discard.
-4. After processing all candidates, run the validation pass from Lorebook Lifecycle above.
-
-If a Lorebook Candidates section is empty, skip it. Empty is a valid outcome.
+**Don't front-load.** Writing all concept notes before characters are drafted means writing them before you know what the characters will imply about the world. Let the `concepts/` collection grow with the project.
 
 ---
 

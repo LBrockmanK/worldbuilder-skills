@@ -1,10 +1,10 @@
-﻿# Character Framework — Parts 1 & 2
+﻿# Character Framework — Foundation & Behavioral Descriptions
 
-*Sub-file for `worldbuilder-character-blueprint`. Read this when working on the Foundation and Behavioral Builder sections.*
+*Sub-file for `worldbuilder-character-blueprint`. Read this when working on the Foundation and Behavioral Descriptions sections.*
 
 ---
 
-## Part 1: Character Foundation
+## Foundation
 
 Lajos Egri's three-dimensional framework: body, environment, soul. Work in any order — each dimension feeds causality into the next.
 
@@ -38,7 +38,7 @@ The most important section. This is where the deepest friction lives.
 
 ---
 
-## Part 2: Behavioral Personality Builder
+## Behavioral Descriptions
 
 Convert psychology into behavioral descriptions the LLM can use.
 

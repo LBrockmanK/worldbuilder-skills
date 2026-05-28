@@ -1,123 +1,167 @@
 # RPG World Builder Skills
 
-Workflow skills for building and realizing a player's world vision for the ainime-games.com world builder platform. All outputs are functional documents for an AI GM — clarity and precision outrank stylistic quality in every phase.
+Workflow skills for building and realizing a player's world vision for the ainime-games.com world builder platform. Phases 1 and 2 are platform-agnostic. Only Phase 3 (Export) produces ainime-specific output.
 
 ## Language
 
 ### Phases
 
 **Seed phase (Phase 1)**:
-The clarification-heavy opening phase. Produces the seed document. Ends when the user confirms the seed is ready.
+The clarification-heavy opening phase. Produces `seed.md` — a platform-agnostic project proposal capturing foundational decisions. Ends when the user confirms the seed is ready.
 _Avoid_: Foundation phase, setup phase
 
 **Wide phase (Phase 2)**:
-The expansive generative phase. Covers the character roster, blueprints, locations, and broad setting detail. Lorebook Candidates accumulate here.
+The expansive generative phase. Produces platform-agnostic notes: character notes, concept notes, event notes, story notes. All creative decisions live here.
 _Avoid_: Development phase, building phase
 
-**Deliverables phase (Phase 3)**:
-The conversion phase. Broad Phase 2 documents are trimmed and distilled into final target-format outputs. Trimming at two points — Phase 2→3 transition and within Phase 3 — both generate Lorebook Candidates.
-_Avoid_: Finalization phase, output phase
+**Export phase (Phase 3)**:
+The conversion phase. Wide-phase notes are read by the export skill and packaged into the target system's format. The only phase that writes ainime field names.
+_Avoid_: Deliverables phase, finalization phase, output phase
 
 ### Documents
 
-**Seed document**:
-The world foundation document. A direct draft of the target system's Setting fields, written in final format from the start. A starting point, not gospel — the world will grow in directions it does not anticipate.
-_Avoid_: World summary, world overview, foundation document
+**`seed.md`**:
+The world foundation document. Plain prose with natural section headers — not written in any export format. Captures: setting summary, genre and tone, inspirations, community description, world introduction, opening situation, story direction stub, locations list, art style reference, musical theme, household designs.
+_Avoid_: world-seed.md, seed document (if referring to a file — use `seed.md`)
 
-**Blueprint**:
-A broad, exploratory Phase 2 document for a single character. Covers all dimensions of the character without constraint on length or scope. Distilled into the card.
-_Avoid_: Draft card, character sheet
+**Character note**:
+The comprehensive Wide-phase document for a single character. Single source of truth — richer than any export format can hold. Sections: frontmatter, preamble, concept, inspirations, design notes, foundation, behavioral descriptions, relationships, relationship behavior, appearance, storylines. The ainime character card (`baseProfile`) is derived from this note by the export skill.
+_Avoid_: Blueprint, draft card
 
-**Card**:
-The final character deliverable. Distilled from the blueprint into compact flowing prose. A functional specification for the AI GM, not a creative writing exercise.
-_Avoid_: Character sheet, character document
+**Concept note**:
+A discrete piece of world knowledge in `concepts/`. Layer-tagged (surface, mid, deep). Aliases in frontmatter become keyword candidates at export. The export skill packages concept notes as lorebook entries.
+_Avoid_: Lorebook entry (when referring to the Wide-phase artifact), Lorebook Candidates
 
-**Lorebook Candidates**:
-A dedicated section present in every Phase 2 document. Collects facts that are true and interesting but too narrow in scope for core documents — things best triggered by keyword in-scene rather than always active. Accumulates across both trim passes without being emptied between them.
-_Avoid_: Overflow, world info, extras
+**Event note**:
+A calendar or historical event in `events/`. Frontmatter includes `date` (calendar day), `recurring`, `characters`, `location`. The export skill packages event notes as `storyTriggers` and `calendarConfig` entries.
+_Avoid_: Calendar entry (when referring to the note itself)
+
+**Story note**:
+A narrative direction document in `story/`. Three scopes connected by `up:` hierarchy: direction (top-level creative brief), arc (major story section), intention (specific story possibility). The export skill maps direction notes to `arcManagerGuidance` and intention notes to `storyTriggers` where conditions allow.
+_Avoid_: story.md (as a single document)
+
+**Introduction note**:
+A story note with `scope: "[[introduction]]"` describing first contact between the player and a character. Belongs in `story/`, not in the character note. One introduction note can cover multiple characters.
 
 ### Process
 
-**Trim pass**:
-A review that cuts content from a document to sharpen focus. Two occur per character: once at the Phase 2→3 transition, once within Phase 3 as the card is tightened. Cut content with ongoing value goes to Lorebook Candidates.
+**Cast planning**:
+The Phase 2 process of planning the full cast before writing individual character notes. Produces a cast plan in `worldbuilding-plan.md`. Coverage check happens here.
 
 **Coverage check**:
-A pre-completion review of the character roster showing main/side ratio against the 8/16 default target, household balance, and archetype slot coverage. Surfaced by the skill before asking the user to confirm the roster is complete.
+A pre-completion review of the cast plan verifying: main/side ratio against the 8/16 default target, household balance, archetype slot coverage (6 romance archetypes, all non-romance archetypes placed), negative-track characters present.
+
+**Post-group sync pass**:
+A review run after completing a household group of character notes. Checks that named relationships are consistent across the group before moving on.
 
 **Target system**:
-The ainime-games.com world builder — the platform that will consume all final deliverables. Its field structure defines what the seed document and all final outputs must map to.
+The ainime-games.com world builder — the platform that consumes all export deliverables. Its field structure is documented in `docs/target-system.md`. Only the Export phase writes to this structure.
 
-## Expected Project File Structure
+---
 
-At each phase boundary, a complete project should contain the following files. Paths are relative to the project root.
+## Project File Structure
 
-### After Seed phase
-
-```
-worldbuilding-plan.md
-world-seed.md
-```
-
-`world-seed.md` contains all Setting tab fields and stubs for the Adventure tab fields. The locations list (10–14 entries), art style reference, and musical theme reference are also in `world-seed.md` — they are plain-language descriptions that will be translated to prompt format during the Deliverables phase.
-
-### After Wide phase
+A complete project uses a shallow hybrid vault organized by note type.
 
 ```
-worldbuilding-plan.md
-world-seed.md
-lorebook.md               ← draft; final pass happens after blueprints
-calendar.md
-story.md
-characters/
-  roster.md
-  blueprints/
-    firstname-lastname.md  (one per character)
+worldbuilding-plan.md   ← project plan, cast plan, phase status
+seed.md                 ← world foundation (Seed phase output)
+log.md                  ← retcon and change log
+characters/             ← one .md per character (Wide phase)
+locations/              ← one .md per location (Wide phase)
+factions/               ← households, organizations, groups
+events/                 ← calendar events, historical events, story moments
+concepts/               ← world knowledge: lore, rules, cultural facts
+story/                  ← direction.md + arc-*.md + intention-*.md
+_templates/             ← note templates for human users
 ```
 
-Every blueprint ends with a `## Lorebook Candidates` section. `calendar.md` and `story.md` also end with `## Lorebook Candidates` sections.
+### Note types and frontmatter
 
-### After Deliverables phase (project complete)
+All notes carry universal frontmatter plus type-specific fields:
 
+**Universal:**
+```yaml
+type: character | location | faction | event | concept | story
+status: draft | complete
+aliases: []
+last_updated: YYYY-MM-DD
 ```
-worldbuilding-plan.md
-world-seed.md             ← not modified; source of truth for Setting fields
-lorebook.md               ← finalized after lorebook review pass
-calendar.md
-story.md
-characters/
-  roster.md
-  blueprints/             ← retained as reference
-    firstname-lastname.md
-  cards/
-    firstname-lastname.md  (one per character — final card format)
+
+**Character:**
+```yaml
+factions: ["[[Household Name]]"]   # links
+role: plain text
+archetype: "[[Initially Hostile]]" # link
 ```
+
+**Location:**
+```yaml
+region: "[[The Valley]]"           # link
+function: one phrase
+primary-characters: ["[[Name]]"]   # links
+```
+
+**Faction/Household:**
+```yaml
+members: ["[[Name]]"]              # links
+function: one phrase
+```
+
+**Event:**
+```yaml
+date: "[[Spring-08]]"              # link; clusters events by day
+recurring: false
+characters: ["[[Name]]"]           # links
+location: "[[Location Name]]"      # link
+```
+
+**Concept (lore):**
+```yaml
+layer: "[[surface]]"               # link; clusters by depth
+trigger-context: brief plain text
+```
+
+**Story:**
+```yaml
+up: "[[parent-story-note]]"        # absent on top-level direction note
+scope: "[[direction]]" | "[[arc]]" | "[[intention]]" | "[[introduction]]"
+```
+
+**Link convention:** Anything that represents a category, entity, or concept worth filtering by uses a `[[wikilink]]`. Plain values for operational fields (`status`, `last_updated`, `recurring`, booleans).
 
 ### What goes where
 
-| Document | JSON field(s) it maps to |
+| Note | ainime JSON field(s) |
 |---|---|
-| `world-seed.md` | `settingSummary`, `genre`, `inspirations`, `tonalInspirations`, `keyTropesAndThemes`, `communityDescription`, `introText`, `initialStoryArc` (stub), `arcManagerGuidance` (stub), `calendarConfig.eraReminder` |
-| `lorebook.md` | `loreEntries[]` |
-| `calendar.md` | `calendarConfig.weatherPools`, `storyTriggers[]` (events), `dailyPlannerDirective`, `eventCalendarSummary` |
-| `story.md` | `arcManagerGuidance` (full), `storyTriggers[]` (story events), `initialStoryArc` (refined) |
-| `characters/roster.md` | Precursor to all `characters[]` entries; not directly imported |
-| `characters/blueprints/` | Precursor to `characters[].baseProfile`; not directly imported |
-| `characters/cards/` | `characters[].baseProfile`, `characters[].appearance`, `characters[].spriteSets[].description` |
+| `seed.md` — Setting Summary | `settingSummary` |
+| `seed.md` — Genre and Tone | `genre` |
+| `seed.md` — Inspirations / Tonal Inspirations | `inspirations[]`, `tonalInspirations[]` |
+| `seed.md` — Key Tropes and Themes | `keyTropesAndThemes[]` |
+| `seed.md` — Community | `communityDescription` |
+| `seed.md` — World Introduction | `introText` |
+| `seed.md` — Opening Situation | `initialStoryArc` |
+| `seed.md` — era | `calendarConfig.eraReminder` |
+| `concepts/` notes | `loreEntries[]` |
+| `events/` notes | `storyTriggers[]`, `calendarConfig.weatherPools`, `eventCalendarSummary` |
+| `story/direction.md` | `arcManagerGuidance` |
+| `story/intention-*.md` | `storyTriggers[]` (where day trigger exists) |
+| `characters/` notes | `characters[]` (baseProfile, appearance, spriteSets, metadata) |
 
-Full JSON field reference: `docs/target-system.md`.
+Full ainime field reference: `docs/target-system.md`.
 
 ---
 
 ## Example Dialogue
 
-> "Should I write the smithy description in Bram's card?"
+> "Should I add the smithy description to Bram's character note?"
 >
-> "No — that goes in Lorebook Candidates on his blueprint. The smithy only matters when someone is at the smithy; it's not core to who Bram is. Strip it from the card and flag it as a lorebook entry."
+> "No — that goes in a concept note for the smithy. The smithy only matters when someone is at or near it; it's not core to who Bram is. Create `concepts/harrows-smithy.md` with `layer: surface` and add 'the smithy', 'Harrow's smithy', 'the forge' to its aliases."
 
-> "We're done with the blueprints. What's next?"
+> "We're done with all the character notes. What's next?"
 >
-> "Start the deliverables phase. For each character, distill the blueprint into the card. Anything cut goes to Lorebook Candidates if it's still true and useful. After all cards are done, run the lorebook review pass across every Lorebook Candidates section."
+> "Start the Export phase. For each character, run `worldbuilder-ainime-export` and build the card from the character note. Character notes are independent once complete — parallelize freely."
 
-> "Should I start the calendar before the roster is finished?"
+> "Should I start writing event notes before the cast is finished?"
 >
-> "No. Skeleton structure is fine, but hold the events until the cast exists. Festival scenes are richer once you know who's in them."
+> "Skeleton structure is fine, but hold the detailed event descriptions until the cast exists. Festival scenes are richer once you know who's in them. You can write `events/spring-festival.md` with frontmatter and a placeholder body, then flesh it out after the cast notes are done."

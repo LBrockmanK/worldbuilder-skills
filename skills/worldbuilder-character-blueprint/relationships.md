@@ -1,6 +1,6 @@
 ﻿# Relationships
 
-*Sub-file for `worldbuilder-character-blueprint`. Read this when writing the Relationships section. The full cast roster should already be open — if not, open it before continuing.*
+*Sub-file for `worldbuilder-character-blueprint`. Read this when writing the Relationships section. Have the current cast's character notes available — if not, open them before continuing.*
 
 ---
 

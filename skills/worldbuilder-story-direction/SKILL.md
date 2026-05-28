@@ -7,11 +7,27 @@ description: Use when writing the opening arc or standing creative brief for an 
 
 ## Overview
 
-The story direction is the LLM's standing creative brief. It doesn't describe events — it shapes the engine's approach to generating them. Two documents serve this function:
+The story direction is the LLM's standing creative brief. It doesn't describe events — it shapes the engine's approach to generating them.
 
-**Opening Story Arc:** The initial situation that draws the player in. The only thing approaching a scripted beginning. Sets the stage without constraining it.
+Story notes live in `story/` and use a hierarchy connected by `up:` frontmatter links. Three note types:
 
-**Ongoing Story Direction:** Persistent creative instructions the engine follows throughout the game. The primary guard rail against the LLM's default tendencies — escalation, flattening, repetition, and inappropriate intimacy pacing.
+**Direction** (`scope: "[[direction]]"`) — The top-level creative brief. No `up:` link. Contains the Opening Situation and all standing Ongoing Story Direction content. This is the primary guard rail against the LLM's default failure modes.
+
+**Arc** (`scope: "[[arc]]"`) — A major story section. `up: "[[direction]]"`. Covers a season, a storyline, or a thematic phase.
+
+**Intention** (`scope: "[[intention]]"`) — A specific story possibility within an arc. `up: "[[arc-name]]"`. Not scripted outcomes — soft targets the world is set up to enable.
+
+Frontmatter for all story notes:
+```yaml
+type: story
+status: draft | complete
+aliases: []
+last_updated: YYYY-MM-DD
+up: "[[parent-note]]"   # absent on direction note
+scope: "[[direction]]" | "[[arc]]" | "[[intention]]"
+```
+
+Start with `story/direction.md`. Add arc and intention notes as the story picture develops.
 
 ---
 
@@ -83,7 +99,7 @@ Adapt to the setting's actual time structure. If the setting uses a different rh
 
 ### Pacing and scene structure
 
-Guard against escalation addiction and unnatural day rhythm. Before writing this section, check `calendar.md` for a **Scene Structure Notes** section — any setting-specific day-structure needs noted there should be incorporated here.
+Guard against escalation addiction and unnatural day rhythm. Before writing this section, check the calendar events for a **Scene Structure Notes** section — any setting-specific day-structure needs noted there should be incorporated here.
 
 > Not every scene needs to advance a plot or deepen a relationship. Quiet moments — ordinary routines, passing conversation, small domestic beats — are the foundation that makes eventful scenes meaningful. A given day should have at most one emotionally significant beat under normal circumstances. Multiple significant beats in a single day should feel exceptional. Follow the player's lead when they push toward depth, but let the following scene settle before introducing new material.
 
@@ -103,14 +119,12 @@ After the first full year, if characters with strong chemistry have not moved to
 
 **Dark content feels gratuitous.** "Handle with care and weight, not for shock value" combined with "the player is a witness, not a savior" addresses the most common failures.
 
-**Characters collapse into positivity.** This is a character card problem, not a story direction problem — see `worldbuilder-character-blueprint`, particularly the influence thresholds section and the negative-track character guidance in `worldbuilder-world-planning`.
+**Characters collapse into positivity.** This is a character note problem, not a story direction problem — see `worldbuilder-character-blueprint`, particularly the Relationship Behavior section and the negative-track character guidance in `worldbuilder-world-planning`.
 
 ---
 
-## Lorebook Candidates
+## World Knowledge from Story Direction Work
 
-End `story.md` with a `## Lorebook Candidates` section. Collect here any world-building material that came up during story direction work but belongs in the lorebook rather than the story brief — historical context implied by the opening arc, background on the hidden layer that shouldn't be in the standing brief itself, lore that shapes pacing guidance but reads as exposition if left in this document.
+Story direction work regularly surfaces world knowledge that belongs in `concepts/` notes rather than the direction brief — historical context implied by the opening arc, background on the hidden layer that shouldn't be in the standing brief, lore that shapes pacing guidance but reads as exposition if left in this document.
 
-Format: one entry per candidate, with the lore layer it belongs to (surface, mid, or deep) and a one-sentence note on what it is and why it was cut.
-
-This section may be empty. An empty section is a valid outcome. The `worldbuilder-lorebook` review pass collects from this section along with candidates from blueprints and calendar.
+When this happens, create a concept note immediately. Use `worldbuilder-lorebook` for layer classification and writing guidance. Do not leave world knowledge embedded in the story direction — it will either bloat the brief or be invisible to the export layer's lorebook packaging.

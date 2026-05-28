@@ -305,39 +305,30 @@ Introduction note contains:
 
 ---
 
-## Pending Work (Next Session)
+## Completed in Session 2
 
-**High priority — implement structural decisions:**
+All high and medium priority items implemented:
 
-1. **Formalize ADRs** — write ADR-0003 (platform decoupling, supersedes ADR-0002); update ADR-0001 for Export phase clarification
+1. ✅ **ADRs** — ADR-0001 updated ("Deliverables" → "Export"); ADR-0002 marked superseded; ADR-0003 written (platform decoupling)
+2. ✅ **`worldbuilder-character-blueprint`** — full rewrite; assembly.md and thresholds.md deleted; all changes per spec above
+3. ✅ **`worldbuilder-world-foundation`** — seed.md replaces world-seed.md; all ainime field names removed
+4. ✅ **`worldbuilder-world-planning`** — phase table, checklists, templates updated; cast planning replaces roster
+5. ✅ **`worldbuilder-ainime-export`** — new skill written (SKILL.md + card-assembly.md)
+6. ✅ **`worldbuilder-lorebook`** — reframed as concept note skill; Lorebook Candidates Review Pass removed; frontmatter guidance added
+7. ✅ **`worldbuilder-calendar`** — arcManagerGuidance refs removed; Lorebook Candidates removed; events/ replaces calendar.md
+8. ✅ **`worldbuilder-story-direction`** — story/ note hierarchy added; Lorebook Candidates removed; stale cross-refs fixed
+9. ✅ **`CONTEXT.md`** — full vocabulary rewrite (Export phase, character/concept/event/story note, file structure, What goes where table)
+10. ✅ **`docs/target-system.md`** — Source column and Phase mapping updated to reflect new workflow
+11. ✅ **`docs/agents/domain.md`** — file structure listing updated
 
-2. **Rewrite `worldbuilder-character-blueprint`** — the biggest change:
-   - Drop Stage 1 (roster entry) — replaced by frontmatter + preamble
-   - Drop Stage 3 (card assembly) — moves to ainime export skill
-   - New note structure: frontmatter → preamble → concept → inspirations → design notes → foundation → behavioral descriptions → relationships → relationship behavior → appearance → storylines
-   - Replace influence thresholds with relationship behavior (prose description, no fixed bands)
-   - Rename future storylines → storylines
-   - Remove lorebook candidates section (world knowledge goes to concepts/ notes directly)
-   - Introduction moves out to its own story note (`scope: "[[introduction]]"`)
+---
 
-3. **Update `worldbuilder-world-foundation`** — remove ainime JSON field names from seed phase output; seed produces platform-agnostic `seed.md`
-
-4. **Update `worldbuilder-world-planning`** — remove ainime-specific items from phase checklists (Available Day, Sprite Sets, Daily Planner Directive, token counts); update phase table for new note-based structure; replace roster step with character note frontmatter guidance
-
-5. **Write `worldbuilder-ainime-export`** — receives: card prose assembly from character notes, influence band mapping from relationship behavior, available-from assignment, sprite sets, token targets, lorebook entry packaging from concepts/ notes, storyTriggers from events/ notes, arcManagerGuidance from story/ direction note
-
-**Medium priority:**
-
-6. **Update `worldbuilder-lorebook`** — remove platform-specific entry format; the skill now covers concepts/ note creation rather than lorebook entry writing
-
-7. **Update `worldbuilder-calendar`** — remove storyTriggers/calendarConfig field framing; calendar becomes events/ notes with standard frontmatter
-
-8. **Update `worldbuilder-story-direction`** — remove arcManagerGuidance framing; story direction becomes story/ notes with hierarchy
-
-9. **Develop world and story skill equivalents to character system depth** — currently underspecified; needs equivalent rigor to blueprint process for locations, factions, and concept notes
+## Pending Work (Future Sessions)
 
 **Low priority:**
 
-10. **Templates folder** — copy note templates from skill instructions into `_templates/` in project vault for human users
+- **Develop world and story skill equivalents to character system depth** — currently underspecified; needs equivalent rigor to blueprint process for locations, factions, and concept notes
 
-11. **Default Obsidian config** — `.obsidian/` config for new worldbuilding projects: Dataview, Breadcrumbs, Smart Connections, Relations pre-configured; folder structure created; as part of project init in world-planning or separate setup skill
+- **Templates folder** — copy note templates from skill instructions into `_templates/` in project vault for human users
+
+- **Default Obsidian config** — `.obsidian/` config for new worldbuilding projects: Dataview, Breadcrumbs, Smart Connections, Relations pre-configured; folder structure created; as part of project init in world-planning or separate setup skill

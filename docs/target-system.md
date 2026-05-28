@@ -2,7 +2,7 @@
 
 The ainime-games.com world builder stores all world configuration in a `.sbworld` archive (a ZIP containing `world.json` + image assets). This document is the authoritative map of the `world.json` schema: every field we write, what goes in it, and which skill produces it.
 
-All field names below are the exact JSON keys. Write the seed document and all final deliverables to match these exactly.
+All field names below are the exact JSON keys. These fields are produced by `worldbuilder-ainime-export`, which reads from platform-agnostic Wide-phase notes. The Skill column shows the Wide-phase skill that authors the source content.
 
 **Format version:** 2 (`.sbworld` — current). Earlier `.json` exports may have different or missing fields.
 
@@ -10,15 +10,15 @@ All field names below are the exact JSON keys. Write the seed document and all f
 
 ## Setting Tab
 
-| JSON field | UI label | Type | Skill |
+| JSON field | UI label | Type | Source content skill |
 |---|---|---|---|
-| `settingSummary` | Setting Summary | string | `worldbuilder-world-foundation` |
-| `genre` | Genre & Tone | string | `worldbuilder-world-foundation` |
-| `inspirations` | Inspirations | string[ ] | `worldbuilder-world-foundation` |
-| `tonalInspirations` | Tonal Inspirations | string[ ] | `worldbuilder-world-foundation` |
-| `keyTropesAndThemes` | Key Tropes & Themes | string[ ] | `worldbuilder-world-foundation` |
-| `communityDescription` | Community Description | string | `worldbuilder-world-foundation` |
-| `introText` | World Introduction | string | `worldbuilder-world-foundation` |
+| `settingSummary` | Setting Summary | string | `worldbuilder-world-foundation` → `seed.md` |
+| `genre` | Genre & Tone | string | `worldbuilder-world-foundation` → `seed.md` |
+| `inspirations` | Inspirations | string[ ] | `worldbuilder-world-foundation` → `seed.md` |
+| `tonalInspirations` | Tonal Inspirations | string[ ] | `worldbuilder-world-foundation` → `seed.md` |
+| `keyTropesAndThemes` | Key Tropes & Themes | string[ ] | `worldbuilder-world-foundation` → `seed.md` |
+| `communityDescription` | Community Description | string | `worldbuilder-world-foundation` → `seed.md` |
+| `introText` | World Introduction | string | `worldbuilder-world-foundation` → `seed.md` |
 
 ### Field notes
 
@@ -40,11 +40,11 @@ All field names below are the exact JSON keys. Write the seed document and all f
 
 ## Adventure Tab
 
-| JSON field | UI label | Type | Skill |
+| JSON field | UI label | Type | Source content skill |
 |---|---|---|---|
-| `initialStoryArc` | Opening Story Arc | string | `worldbuilder-world-foundation` / `worldbuilder-story-direction` |
-| `arcManagerGuidance` | Ongoing Story Direction | string | `worldbuilder-story-direction` |
-| `storyTriggers` | Story Triggers (Events) | StoryTrigger[ ] | `worldbuilder-story-direction` / `worldbuilder-calendar` |
+| `initialStoryArc` | Opening Story Arc | string | `worldbuilder-world-foundation` → `seed.md` |
+| `arcManagerGuidance` | Ongoing Story Direction | string | `worldbuilder-story-direction` → `story/` |
+| `storyTriggers` | Story Triggers (Events) | StoryTrigger[ ] | `worldbuilder-story-direction` + `worldbuilder-calendar` → `story/` + `events/` |
 
 ### Field notes
 
@@ -71,16 +71,16 @@ Set `recurring: true` for annual events (festivals, observances). One-time event
 
 ## Calendar Tab
 
-| JSON field / path | UI label | Type | Skill |
+| JSON field / path | UI label | Type | Source content skill |
 |---|---|---|---|
-| `calendarConfig.seasons` | Seasons | string[ ] | `worldbuilder-calendar` |
-| `calendarConfig.daysPerSeason` | Days per Season | number | `worldbuilder-calendar` |
-| `calendarConfig.daysOfWeek` | Days of Week | string[ ] | `worldbuilder-calendar` |
-| `calendarConfig.daySegments` | Day Segments | string[ ] | `worldbuilder-calendar` |
-| `calendarConfig.eraReminder` | Era | string | `worldbuilder-world-foundation` |
-| `calendarConfig.weatherPools` | Weather Pools | object | `worldbuilder-calendar` |
-| `storyTriggers` | Events / Recurring Events | StoryTrigger[ ] | `worldbuilder-calendar` |
-| `eventCalendarSummary` | Event Calendar Summary | string | `worldbuilder-calendar` |
+| `calendarConfig.seasons` | Seasons | string[ ] | `worldbuilder-calendar` → `events/` |
+| `calendarConfig.daysPerSeason` | Days per Season | number | `worldbuilder-calendar` → `events/` |
+| `calendarConfig.daysOfWeek` | Days of Week | string[ ] | `worldbuilder-calendar` → `events/` |
+| `calendarConfig.daySegments` | Day Segments | string[ ] | `worldbuilder-calendar` → `events/` |
+| `calendarConfig.eraReminder` | Era | string | `worldbuilder-world-foundation` → `seed.md` |
+| `calendarConfig.weatherPools` | Weather Pools | object | `worldbuilder-calendar` → `events/` |
+| `storyTriggers` | Events / Recurring Events | StoryTrigger[ ] | `worldbuilder-calendar` → `events/` |
+| `eventCalendarSummary` | Event Calendar Summary | string | `worldbuilder-calendar` → `events/` |
 
 > **Note on `dailyPlannerDirective`:** This field appeared in some earlier `.json` world exports but is absent from the current `.sbworld` format. It may have been folded into `arcManagerGuidance`, removed from the schema, or be UI-only content that does not export. Treat daily planner guidance as part of `arcManagerGuidance` until the field status is confirmed.
 
@@ -156,7 +156,7 @@ One object per character in the `characters` array.
 
 The `baseProfile` field is a single text block: unstructured flowing prose. No JSON sub-fields, no rigid internal format. The card body (personality, background, behavior, relationships, influence thresholds) is written as connected prose followed by a **Future Storylines** section. No internal headers in the card body.
 
-See `worldbuilder-character-blueprint` for the full template, register rules, and token targets.
+See `worldbuilder-ainime-export/card-assembly.md` for the full assembly guide, register rules, and token targets.
 
 ### `appearance` — structure
 
@@ -215,9 +215,9 @@ The Art Style tab configures image generation prompts for backgrounds and charac
 | `artStyle.sprite.style_suffix` | Suffix for all sprite prompts |
 | `artStyle.sprite.negative_prompt` | Negative prompt for sprites |
 
-The Seed phase produces a **plain-language art style reference** describing the desired visual style, color palette, and reference works. This is translated into prompt-engineering format at the Deliverables phase when the actual prompts are being written.
+The Seed phase produces a **plain-language art style reference** describing the desired visual style, color palette, and reference works. This is translated into prompt-engineering format during export.
 
-Do not attempt to write `style_prefix` / `style_suffix` content during the Seed or Wide phases — these are prompt-engineering outputs, not design notes.
+Do not attempt to write `style_prefix` / `style_suffix` content during the Seed or Wide phases — these are prompt-engineering outputs produced by `worldbuilder-ainime-export`.
 
 ---
 
@@ -253,51 +253,32 @@ Advanced overrides for specific engine prompts. Not part of the standard worldbu
 
 ## Phase → Field Mapping
 
-Which phase produces each field:
+All JSON fields are produced by `worldbuilder-ainime-export` reading from Wide-phase notes. This table shows which notes are the source for each field group.
 
-### Seed phase → `world-seed.md`
-
-```
-settingSummary
-genre
-inspirations
-tonalInspirations
-keyTropesAndThemes
-communityDescription
-introText
-initialStoryArc        (stub — refined after roster)
-arcManagerGuidance     (stub — expanded by worldbuilder-story-direction)
-calendarConfig.eraReminder
-calendarConfig.seasons / daysPerSeason / daysOfWeek / daySegments
-[art style reference — plain language, not prompt format]
-[musical theme reference — plain language]
-[locations list — 10-14 named locations, one sentence each]
-[household designs — not a JSON field, informs everything]
-```
-
-### Wide phase → intermediate documents
+### Wide-phase sources → ainime export input
 
 ```
-lorebook.md            → loreEntries[]
-calendar.md            → calendarConfig.weatherPools
-                       → storyTriggers[] (events)
-                       → dailyPlannerDirective
-                       → eventCalendarSummary
-story.md               → arcManagerGuidance (full)
-                       → storyTriggers[] (story events)
-characters/roster.md   → characters[].name, lastName, type, role, availableFromDay (skeleton)
-characters/blueprints/ → characters[].baseProfile (draft — not final format)
+seed.md                → settingSummary, genre, inspirations, tonalInspirations,
+                         keyTropesAndThemes, communityDescription, introText,
+                         initialStoryArc, calendarConfig.eraReminder,
+                         calendarConfig.seasons/daysPerSeason/daysOfWeek/daySegments
+                         [art style reference → artStyle.* prompts]
+
+concepts/              → loreEntries[]
+
+events/                → calendarConfig.weatherPools, storyTriggers[] (events),
+                         eventCalendarSummary
+
+story/direction.md     → arcManagerGuidance
+story/intention-*.md   → storyTriggers[] (story events, where trigger day exists)
+
+characters/*.md        → characters[].name, lastName, type, role, availableFromDay,
+                         baseProfile, appearance, spriteSets[]
 ```
 
-### Deliverables phase → final target format
+### Export skill deliverables
 
-```
-characters/cards/      → characters[].baseProfile (final card prose)
-                       → characters[].appearance
-                       → characters[].spriteSets[].description
-[lorebook review pass] → loreEntries[] (finalized from Lorebook Candidates)
-[art style prompts]    → artStyle.background.*, artStyle.sprite.*
-```
+The `worldbuilder-ainime-export` skill produces formatted output ready for entry into the ainime platform. Character cards are the most complex output; see `card-assembly.md` in that skill's directory.
 
 ---
 

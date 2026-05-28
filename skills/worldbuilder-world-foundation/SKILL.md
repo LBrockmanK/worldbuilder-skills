@@ -1,15 +1,15 @@
 ---
 name: worldbuilder-world-foundation
-description: Use at the start of a new worldbuilding project to establish setting structure and produce the seed document. Also use when auditing an existing world for structural gaps in household design, cast architecture, or thematic grounding. The seed document maps directly to the target system's Setting and Adventure fields.
+description: Use at the start of a new worldbuilding project to establish setting structure and produce the seed document. Also use when auditing an existing world for structural gaps in household design, cast architecture, or thematic grounding.
 ---
 
 # World Foundation
 
 ## Overview
 
-This skill covers two things: the structural decisions that shape the world, and the seed document that captures them in the target system's field format. Work through the decisions first; the seed document is the output, not the starting point.
+This skill covers two things: the structural decisions that shape the world, and the seed document that captures them. Work through the decisions first; the seed document is the output, not the starting point.
 
-The seed document is a starting point, not a finished world — it will grow in directions it does not anticipate. Write it in final format from day one so every refinement session advances the actual deliverable rather than an intermediate that has to be converted later.
+The seed document is a starting point, not a finished world — it will grow in directions it does not anticipate.
 
 ---
 
@@ -142,53 +142,49 @@ At least 2–3 characters should have meaningful content at low or negative infl
 
 ## Seed Document
 
-Once the foundational questions and household structure are settled, produce `world-seed.md` at the project root.
+Once the foundational questions and household structure are settled, produce `seed.md` at the project root.
 
-The seed document maps directly to the target system's fields. Write each section in the format it will be entered — this is not a notes document, it is a draft of the actual deliverable.
+`seed.md` is a platform-agnostic project proposal. Write each section as plain prose under natural headers — this is not an export format, it is the creative document that export skills derive from. The ainime export skill handles field mapping.
 
-The exact JSON field names and full content guidance for every field below are in `../../docs/target-system.md`. What follows is a working brief.
+### Sections
 
-### Setting tab fields
+**Setting Summary**
+Time, place, society, and general feel. The always-active context — concrete and specific.
 
-**`settingSummary`** (Setting Summary)
-Time, place, society, and general feel. The primary always-active context the engine uses throughout the game. Concrete and specific — this is the context the AI reads for every scene.
+**Genre and Tone**
+Primary genre, tonal range (how dark, how light), and any content notes.
 
-**`genre`** (Genre & Tone)
-Explicit description for the AI. Primary genre, tonal range (how dark can it go, how light can it get), and any explicit content notes.
+**Inspirations**
+Source games and media, one per line. Include what specifically is drawn from each rather than just the title ("Stardew Valley — farming life rhythm and community bonds" not just "Stardew Valley").
 
-**`inspirations`** (Inspirations)
-Source games and media. One per line. Include what specifically is drawn from each ("Stardew Valley — farming life rhythm and community bonds" rather than just "Stardew Valley").
-
-**`tonalInspirations`** (Tonal Inspirations)
+**Tonal Inspirations**
 Other media capturing the right feel — films, books, music, anime. One per line with what's being borrowed tonally.
 
-**`keyTropesAndThemes`** (Key Tropes & Themes)
-8–12 recurring concerns of this world. Include both setting tropes and emotional themes.
+**Key Tropes and Themes**
+8–12 recurring concerns of this world. Both setting tropes and emotional themes.
 
-**`communityDescription`** (Community Description)
-The community's social and emotional identity — not its physical description, not a repeat of `settingSummary`. This is specifically how the community behaves and feels as a social entity.
+**Community**
+The community's social and emotional identity — not its physical description, not a repeat of the Setting Summary. How the community behaves and feels as a social entity.
 
-**`introText`** (World Introduction)
-Pre-game text the player reads before creating their character (name and appearance only). Sets expectations for tone and situation.
+**World Introduction**
+Pre-game text the player reads before starting. Sets expectations for tone and situation.
 
-### Adventure tab fields
+**Opening Situation**
+The situation the player arrives into. Evocative, not scripted — establishes the stage rather than dictating what happens. Cover: the setting's visible state on arrival, the immediate invitation for engagement, what the player's arrival means to the community.
 
-**`initialStoryArc`** (Opening Story Arc)
-The initial situation the player arrives into. Evocative, not scripted — establishes the stage rather than dictating what happens. Cover: the setting's visible state when the player arrives, the immediate invitation for engagement, and what the player's arrival means to the community.
-
-**`arcManagerGuidance`** (Ongoing Story Direction)
-Standing creative direction the engine follows throughout the game. See `worldbuilder-story-direction` for the full template. This field is the primary guard rail against the AI's default failure modes (escalation, flattening, inappropriate pacing). Write a stub here once the cast structure is established; the full version is completed by `worldbuilder-story-direction` after the roster exists.
+**Story Direction (stub)**
+Standing creative direction for the story engine. Write a stub once the cast structure is established; the full version is completed by `worldbuilder-story-direction` after the roster exists. See that skill for structure and content guidance.
 
 ### Additional seed outputs
 
 **Locations list**
-Not the full lorebook entries — a list of named locations with one sentence each on their function and character. 10–14 locations. This anchors the world spatially and gives the Wide phase something to build from. Full lorebook entries come later.
+Named locations with one sentence each on function and character. 10–14 locations. Not full location notes — a spatial anchor for the Wide phase. Full location notes come later.
 
-**Art style reference**
-A description of the desired visual style for the Art Style tab. Cover: overall aesthetic (anime, painterly, pixel, etc.), color palette tendencies, reference works if any. This informs art generation configuration but does not need to be in final prompt-engineering format yet.
+**Art style**
+Desired visual aesthetic: overall style (anime, painterly, pixel, etc.), color palette tendencies, reference works if any.
 
 **Musical theme**
-A description of the desired audio atmosphere for the Moods tab. Genre, tempo tendencies, instrumentation reference, and how mood should shift across emotional registers. Reference tracks or artists if helpful.
+Desired audio atmosphere: genre, tempo, instrumentation reference, how mood shifts across emotional registers. Reference tracks or artists if helpful.
 
 ---
 

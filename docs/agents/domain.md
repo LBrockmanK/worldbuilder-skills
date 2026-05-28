@@ -19,11 +19,14 @@ Single-context repo:
 ├── CONTEXT.md
 ├── docs/
 │   ├── agents/         ← agent configuration (this file and siblings)
-│   └── adr/            ← architectural decision records
-│       ├── 0001-three-phase-architecture.md
-│       └── 0002-seed-as-target-format.md
-└── worldbuilder-*/     ← individual skill directories
-    └── SKILL.md
+│   ├── adr/            ← architectural decision records
+│   │   ├── 0001-three-phase-architecture.md
+│   │   ├── 0002-seed-as-target-format.md  (superseded by 0003)
+│   │   └── 0003-platform-decoupling.md
+│   └── target-system.md  ← ainime field reference (export skill uses this)
+└── skills/
+    └── worldbuilder-*/   ← individual skill directories
+        └── SKILL.md
 ```
 
 ## Use the glossary's vocabulary

@@ -15,7 +15,7 @@ The calendar serves two functions: it structures the engine's sense of time, and
 
 **Season length:** Common default is 28 days. Longer seasons feel more immersive; shorter seasons allow more annual events.
 
-**Day segments:** Morning / Afternoon / Evening / Night. Four segments is the standard. Scene structure guidance for each segment lives in `arcManagerGuidance` (see `worldbuilder-story-direction`).
+**Day segments:** Morning / Afternoon / Evening / Night. Four segments is the standard. Scene structure guidance for each segment lives in the story direction notes (see `worldbuilder-story-direction`).
 
 **Era:** The technology/cultural reference point for the setting. A single phrase used by the engine to calibrate anachronism.
 
@@ -29,7 +29,7 @@ The calendar serves two functions: it structures the engine's sense of time, and
 
 **One-time events** fire once and are done. Use for opening arc milestones, first-year setup moments, things that can only happen once.
 
-**Scene structure guidance** applies to every single day. It is not an event — it is standing instruction for how each day segment runs. This lives in `arcManagerGuidance`, not as a separate calendar field. See the Scene Structure section below for what to include; it is written into `arcManagerGuidance` by `worldbuilder-story-direction`.
+**Scene structure guidance** applies to every single day. It is not an event — it is standing instruction for how each day segment runs. This lives in the story direction notes, not as a calendar event. See the Scene Structure section below for what to include; it is written by `worldbuilder-story-direction`.
 
 ---
 
@@ -73,9 +73,9 @@ The same event at year one should feel different from year three — not because
 
 ---
 
-## Scene Structure (writes into `arcManagerGuidance`)
+## Scene Structure (feeds into story direction)
 
-Scene structure guidance is not a standalone calendar field — it is part of `arcManagerGuidance` and is written by `worldbuilder-story-direction`. The calendar skill informs that guidance. When drafting `calendar.md`, note any setting-specific scene structure needs in a **Scene Structure Notes** section; the story direction skill will incorporate them.
+Scene structure guidance is not a calendar event — it is part of the story direction notes and is written by `worldbuilder-story-direction`. The calendar skill informs that guidance. When drafting the calendar events, note any setting-specific scene structure needs in a **Scene Structure Notes** section of your working document; the story direction skill will incorporate them.
 
 Scene structure guidance should establish:
 
@@ -97,14 +97,12 @@ This guidance is the structural complement to the romance pacing guidance in Sto
 
 **One-time events anchor the opening arc.** Use them for the player's introduction to specific households, community moments that establish the current state of the setting, and early beats that can only happen once.
 
-**Scene structure guidance is the most important calendar output.** Festivals are moments; scene structure guidance is the rhythm every day runs on. Well-written guidance produces varied, naturalistic day structure. Poorly-written guidance produces either relentless sameness or chaos. It lands in `arcManagerGuidance` — make sure the scene structure notes in `calendar.md` are specific enough to survive the translation.
+**Scene structure guidance is the most important calendar output.** Festivals are moments; scene structure guidance is the rhythm every day runs on. Well-written guidance produces varied, naturalistic day structure. Poorly-written guidance produces either relentless sameness or chaos. It lands in story direction — make sure the scene structure notes are specific enough to survive the handoff to `worldbuilder-story-direction`.
 
 ---
 
-## Lorebook Candidates
+## World Knowledge from Calendar Work
 
-End `calendar.md` with a `## Lorebook Candidates` section. Collect here any content cut during calendar writing that has ongoing lore value — historical background behind a festival, the origin of a tradition, a detail that contextualizes an event but belongs in a lorebook entry rather than the event description itself.
+Calendar work regularly surfaces world knowledge that belongs in `concepts/` notes rather than event descriptions — historical background behind a festival, the origin of a tradition, a detail that contextualizes an event but reads as exposition if left in the event note itself.
 
-Format: one entry per candidate, with the lore layer it belongs to (surface, mid, or deep) and a one-sentence note on what it is and why it was cut.
-
-This section may be empty. An empty section is a valid outcome. The `worldbuilder-lorebook` review pass collects from this section along with candidates from blueprints and story direction.
+When this happens, create a concept note immediately. Use `worldbuilder-lorebook` for guidance on layer classification and writing. Do not leave this material as inline event content — it will either bloat the event description or get lost.
