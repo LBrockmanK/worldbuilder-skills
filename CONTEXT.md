@@ -47,6 +47,67 @@ A pre-completion review of the character roster showing main/side ratio against 
 **Target system**:
 The ainime-games.com world builder — the platform that will consume all final deliverables. Its field structure defines what the seed document and all final outputs must map to.
 
+## Expected Project File Structure
+
+At each phase boundary, a complete project should contain the following files. Paths are relative to the project root.
+
+### After Seed phase
+
+```
+worldbuilding-plan.md
+world-seed.md
+```
+
+`world-seed.md` contains all Setting tab fields and stubs for the Adventure tab fields. The locations list (10–14 entries), art style reference, and musical theme reference are also in `world-seed.md` — they are plain-language descriptions that will be translated to prompt format during the Deliverables phase.
+
+### After Wide phase
+
+```
+worldbuilding-plan.md
+world-seed.md
+lorebook.md               ← draft; final pass happens after blueprints
+calendar.md
+story.md
+characters/
+  roster.md
+  blueprints/
+    firstname-lastname.md  (one per character)
+```
+
+Every blueprint ends with a `## Lorebook Candidates` section. `calendar.md` and `story.md` also end with `## Lorebook Candidates` sections.
+
+### After Deliverables phase (project complete)
+
+```
+worldbuilding-plan.md
+world-seed.md             ← not modified; source of truth for Setting fields
+lorebook.md               ← finalized after lorebook review pass
+calendar.md
+story.md
+characters/
+  roster.md
+  blueprints/             ← retained as reference
+    firstname-lastname.md
+  cards/
+    firstname-lastname.md  (one per character — final card format)
+```
+
+### What goes where
+
+| Document | JSON field(s) it maps to |
+|---|---|
+| `world-seed.md` | `settingSummary`, `genre`, `inspirations`, `tonalInspirations`, `keyTropesAndThemes`, `communityDescription`, `introText`, `initialStoryArc` (stub), `arcManagerGuidance` (stub), `calendarConfig.eraReminder` |
+| `lorebook.md` | `loreEntries[]` |
+| `calendar.md` | `calendarConfig.weatherPools`, `storyTriggers[]` (events), `dailyPlannerDirective`, `eventCalendarSummary` |
+| `story.md` | `arcManagerGuidance` (full), `storyTriggers[]` (story events), `initialStoryArc` (refined) |
+| `characters/roster.md` | Precursor to all `characters[]` entries; not directly imported |
+| `characters/blueprints/` | Precursor to `characters[].baseProfile`; not directly imported |
+| `characters/cards/` | `characters[].baseProfile`, `characters[].appearance`, `characters[].spriteSets[].description` |
+
+Full JSON field reference: `docs/target-system.md`.
+
+---
+
 ## Example Dialogue
 
 > "Should I write the smithy description in Bram's card?"

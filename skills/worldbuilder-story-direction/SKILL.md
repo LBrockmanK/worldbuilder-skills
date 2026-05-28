@@ -3,7 +3,7 @@ name: worldbuilder-story-direction
 description: Use when writing the opening arc or standing creative brief for an AI-powered narrative game. Also use when LLM output escalates too fast, when romantic or dramatic intensity feels unearned, when dark content is handled carelessly, or when scenes lack pacing variation.
 ---
 
-# RPG Story Direction
+# Story Direction
 
 ## Overview
 
@@ -81,11 +81,13 @@ Example for a four-season setting:
 
 Adapt to the setting's actual time structure. If the setting uses a different rhythm — tides, academic terms, festival calendar — substitute that.
 
-### Pacing
+### Pacing and scene structure
 
-Guard against escalation addiction:
+Guard against escalation addiction and unnatural day rhythm. Before writing this section, check `calendar.md` for a **Scene Structure Notes** section — any setting-specific day-structure needs noted there should be incorporated here.
 
 > Not every scene needs to advance a plot or deepen a relationship. Quiet moments — ordinary routines, passing conversation, small domestic beats — are the foundation that makes eventful scenes meaningful. A given day should have at most one emotionally significant beat under normal circumstances. Multiple significant beats in a single day should feel exceptional. Follow the player's lead when they push toward depth, but let the following scene settle before introducing new material.
+
+**Time-of-day rhythms:** Specify who is naturally awake, active, and social at what point in the day, and include brief guidance on transitions between day segments (Morning / Afternoon / Evening / Night). A brief transition acknowledgment grounds the scene change without consuming the scene itself.
 
 ### NPC relationships (year 2+ guidance)
 
@@ -101,4 +103,14 @@ After the first full year, if characters with strong chemistry have not moved to
 
 **Dark content feels gratuitous.** "Handle with care and weight, not for shock value" combined with "the player is a witness, not a savior" addresses the most common failures.
 
-**Characters collapse into positivity.** This is a relationship card problem, not a story direction problem — see `worldbuilder-character-relationships`.
+**Characters collapse into positivity.** This is a character card problem, not a story direction problem — see `worldbuilder-character-blueprint`, particularly the influence thresholds section and the negative-track character guidance in `worldbuilder-world-planning`.
+
+---
+
+## Lorebook Candidates
+
+End `story.md` with a `## Lorebook Candidates` section. Collect here any world-building material that came up during story direction work but belongs in the lorebook rather than the story brief — historical context implied by the opening arc, background on the hidden layer that shouldn't be in the standing brief itself, lore that shapes pacing guidance but reads as exposition if left in this document.
+
+Format: one entry per candidate, with the lore layer it belongs to (surface, mid, or deep) and a one-sentence note on what it is and why it was cut.
+
+This section may be empty. An empty section is a valid outcome. The `worldbuilder-lorebook` review pass collects from this section along with candidates from blueprints and calendar.

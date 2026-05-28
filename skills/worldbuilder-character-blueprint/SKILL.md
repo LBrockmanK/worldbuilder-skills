@@ -3,7 +3,7 @@ name: worldbuilder-character-blueprint
 description: Use when building or developing an individual character for an AI-powered RPG or collaborative fiction — creating from scratch, expanding a roster entry into a full blueprint, or assembling a final character card. Also use when a character feels flat, inconsistent, or is generating repetitive LLM output.
 ---
 
-# RPG Character Blueprint
+# Character Blueprint
 
 ## Overview
 
@@ -17,7 +17,7 @@ Characters develop in stages. Do not write a final card before the blueprint is 
 
 **Stage 2 — Blueprint:** Full worksheet output. See sub-files below for each section. Iterate until the character is internally consistent and connected to the broader cast.
 
-**Stage 3 — Card:** The blueprint translated into seamless prose. Not an expanded version with more content — the same information woven into a single flowing description without headings or labels. The card contains: the personality/description prose (all foundation dimensions and behavioral descriptions integrated), the influence thresholds (woven with in-character behavioral examples), metadata fields, and future storylines. Example dialogue as a separate section only if it cannot be woven into the prose naturally. Invoke `anthropic-skills:writing` before writing the final card — prose register matters and LLM defaults produce flat output.
+**Stage 3 — Card:** The blueprint translated into seamless prose. Not an expanded version with more content — the same information woven into a single flowing description without headings or labels. The card contains: the personality/description prose (all foundation dimensions and behavioral descriptions integrated), the influence thresholds (woven with in-character behavioral examples), metadata fields, and future storylines. Example dialogue as a separate section only if it cannot be woven into the prose naturally. Read `../../writing-style.md` before writing the final card — prose register matters and LLM defaults produce flat output.
 
 **Before starting any blueprint:** Check the character's roster entry for an `Intimate Dynamics: Yes` flag. If present, read `intimate.md` in this skill directory and complete that section as part of the blueprint. If absent, skip it entirely — do not prompt for it or ask about it.
 
@@ -55,6 +55,16 @@ Work through these in order. Read the relevant sub-file before writing each sect
 ### Post-group sync pass
 
 After completing a household group or batch of characters, run a brief relationship sync pass before moving on. Characters develop during the blueprinting sequence — a character written later may have shifted in ways that make an earlier character's relationship entry inaccurate or incomplete. Check the group's blueprints against each other: are named relationships still consistent? Did any character develop in a direction that changes how another character should see them? Blueprints are not frozen once written; update them when the sequence reveals something that changes the picture.
+
+### Lorebook Candidates
+
+Every blueprint ends with a `## Lorebook Candidates` section. This section collects content cut during blueprint writing and content cut during the Phase 2 → Phase 3 trim pass — anything trimmed that has ongoing value and should be preserved as a lorebook entry.
+
+Format: one entry per candidate, marked with the lore layer it belongs to (surface, mid, or deep) and a one-sentence note on why it was cut rather than kept in the card.
+
+This section may be empty. An empty section is a valid outcome — it means nothing was cut with lorebook value. Do not pad it.
+
+The `worldbuilder-lorebook` review pass collects from all Lorebook Candidates sections across all blueprints, calendar, and story direction documents.
 
 ---
 

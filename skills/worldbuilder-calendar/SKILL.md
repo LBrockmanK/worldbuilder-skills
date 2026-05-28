@@ -1,9 +1,9 @@
 ﻿---
 name: worldbuilder-calendar
-description: Use when designing the calendar, festivals, recurring events, or daily planner directive for an AI-powered RPG or interactive fiction with time-based scene structure. Also use when events feel arbitrary, when the festival calendar lacks thematic variety, or when the daily planner directive is generating scene structures that are too repetitive or too unpredictable.
+description: Use when designing the calendar, festivals, and recurring events for an AI-powered RPG or interactive fiction with time-based scene structure. Also use when events feel arbitrary, when the festival calendar lacks thematic variety, or when scene structures are too repetitive or too unpredictable.
 ---
 
-# RPG Calendar
+# Calendar
 
 ## Overview
 
@@ -15,7 +15,7 @@ The calendar serves two functions: it structures the engine's sense of time, and
 
 **Season length:** Common default is 28 days. Longer seasons feel more immersive; shorter seasons allow more annual events.
 
-**Day segments:** Morning / Afternoon / Evening / Night. Four segments is the standard. The daily planner directive governs how the engine structures each.
+**Day segments:** Morning / Afternoon / Evening / Night. Four segments is the standard. Scene structure guidance for each segment lives in `arcManagerGuidance` (see `worldbuilder-story-direction`).
 
 **Era:** The technology/cultural reference point for the setting. A single phrase used by the engine to calibrate anachronism.
 
@@ -29,7 +29,7 @@ The calendar serves two functions: it structures the engine's sense of time, and
 
 **One-time events** fire once and are done. Use for opening arc milestones, first-year setup moments, things that can only happen once.
 
-**Daily Planner Directive** applies to every single day. It is not an event — it is standing instruction for scene structure.
+**Scene structure guidance** applies to every single day. It is not an event — it is standing instruction for how each day segment runs. This lives in `arcManagerGuidance`, not as a separate calendar field. See the Scene Structure section below for what to include; it is written into `arcManagerGuidance` by `worldbuilder-story-direction`.
 
 ---
 
@@ -73,9 +73,11 @@ The same event at year one should feel different from year three — not because
 
 ---
 
-## Daily Planner Directive
+## Scene Structure (writes into `arcManagerGuidance`)
 
-The directive handles scene structure for every day. It should establish:
+Scene structure guidance is not a standalone calendar field — it is part of `arcManagerGuidance` and is written by `worldbuilder-story-direction`. The calendar skill informs that guidance. When drafting `calendar.md`, note any setting-specific scene structure needs in a **Scene Structure Notes** section; the story direction skill will incorporate them.
+
+Scene structure guidance should establish:
 
 1. **Scene purpose variety** — atmospheric/mundane scenes are valid and desirable; not every scene needs to be emotionally significant; specify that explicitly
 2. **Time-of-day social rhythms** — who is naturally awake, active, and social at what point in the day
@@ -83,7 +85,7 @@ The directive handles scene structure for every day. It should establish:
 4. **Transition handling** — brief narrative acknowledgment between Morning / Afternoon / Evening / Night
 5. **Player disruption response** — when the player drives a scene somewhere unexpected, follow their lead, then let the next scene settle before introducing new material
 
-The directive is the structural complement to the romance pacing and pacing guidance in Story Direction. Together they prevent both flatness (no weight) and escalation addiction (too much weight, too often).
+This guidance is the structural complement to the romance pacing guidance in Story Direction. Together they prevent both flatness (no weight) and escalation addiction (too much weight, too often).
 
 ---
 
@@ -95,4 +97,14 @@ The directive is the structural complement to the romance pacing and pacing guid
 
 **One-time events anchor the opening arc.** Use them for the player's introduction to specific households, community moments that establish the current state of the setting, and early beats that can only happen once.
 
-**The daily planner directive is the most important calendar document.** Festivals are moments; the directive is the rhythm every day runs on. A well-written directive produces varied, naturalistic day structure. A poorly-written one produces either relentless sameness or chaos.
+**Scene structure guidance is the most important calendar output.** Festivals are moments; scene structure guidance is the rhythm every day runs on. Well-written guidance produces varied, naturalistic day structure. Poorly-written guidance produces either relentless sameness or chaos. It lands in `arcManagerGuidance` — make sure the scene structure notes in `calendar.md` are specific enough to survive the translation.
+
+---
+
+## Lorebook Candidates
+
+End `calendar.md` with a `## Lorebook Candidates` section. Collect here any content cut during calendar writing that has ongoing lore value — historical background behind a festival, the origin of a tradition, a detail that contextualizes an event but belongs in a lorebook entry rather than the event description itself.
+
+Format: one entry per candidate, with the lore layer it belongs to (surface, mid, or deep) and a one-sentence note on what it is and why it was cut.
+
+This section may be empty. An empty section is a valid outcome. The `worldbuilder-lorebook` review pass collects from this section along with candidates from blueprints and story direction.

@@ -3,7 +3,7 @@ name: worldbuilder-lorebook
 description: Use when writing world lore entries for an AI-powered narrative game — establishing surface facts, mid-layer history, deep secrets, location descriptions, or background NPC guidelines. Also use when designing keyword triggers and date gates for those entries, or when lorebook entries are injecting too much irrelevant context or too little relevant context.
 ---
 
-# RPG Lorebook
+# Lorebook
 
 ## Overview
 
@@ -117,6 +117,29 @@ The lorebook is a living document, not a phase that opens and closes. Any stage 
 - Cross-reference with completed character cards: any implied lore in the cards that has no lorebook entry?
 
 **Don't front-load.** Writing the complete lorebook before characters are drafted means writing it before you know what the characters will imply about the world. Let the lorebook reflect the full project, not just what you knew at the start.
+
+---
+
+## Lorebook Candidates Review Pass
+
+Every Phase 2 document — character blueprints, `calendar.md`, and `story.md` — ends with a `## Lorebook Candidates` section. These sections collect content cut during Wide-phase work and the Phase 2 → Phase 3 trim pass: anything trimmed that has ongoing lore value.
+
+Run the Lorebook Candidates review pass when the following are all complete:
+- All character blueprints drafted
+- `calendar.md` drafted
+- `story.md` drafted
+
+**Process:**
+
+1. Read the `## Lorebook Candidates` section from every blueprint in `characters/blueprints/`.
+2. Read the `## Lorebook Candidates` sections from `calendar.md` and `story.md`.
+3. For each candidate:
+   - Decide which lore layer it belongs to (surface, mid, or deep).
+   - Write it as a full lorebook entry if it doesn't already exist.
+   - If a closely related entry already exists, check whether the candidate adds anything new — if so, expand the existing entry; if not, discard.
+4. After processing all candidates, run the validation pass from Lorebook Lifecycle above.
+
+If a Lorebook Candidates section is empty, skip it. Empty is a valid outcome.
 
 ---
 
