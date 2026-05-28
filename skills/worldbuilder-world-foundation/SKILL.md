@@ -1,5 +1,5 @@
----
-name: rpg-world-foundation
+﻿---
+name: worldbuilder-world-foundation
 description: Use when beginning to design a new world or setting for an AI-powered RPG or interactive fiction — before naming characters, before writing lorebook entries, before drafting an opening arc. Also use when auditing an existing world for structural gaps in town design, cast architecture, or thematic grounding.
 ---
 

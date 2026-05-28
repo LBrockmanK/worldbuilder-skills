@@ -1,6 +1,6 @@
-# Influence Thresholds — Part 4
+﻿# Influence Thresholds — Part 4
 
-*Sub-file for `rpg-character-blueprint`. Read this when writing the Influence Thresholds section.*
+*Sub-file for `worldbuilder-character-blueprint`. Read this when writing the Influence Thresholds section.*
 
 ---
 

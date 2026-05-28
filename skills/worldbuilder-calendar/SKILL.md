@@ -1,5 +1,5 @@
----
-name: rpg-calendar
+﻿---
+name: worldbuilder-calendar
 description: Use when designing the calendar, festivals, recurring events, or daily planner directive for an AI-powered RPG or interactive fiction with time-based scene structure. Also use when events feel arbitrary, when the festival calendar lacks thematic variety, or when the daily planner directive is generating scene structures that are too repetitive or too unpredictable.
 ---
 

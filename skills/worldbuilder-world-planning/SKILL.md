@@ -1,5 +1,5 @@
----
-name: rpg-world-planning
+﻿---
+name: worldbuilder-world-planning
 description: Use at the start of a new worldbuilding project, when entering a new phase, or when unsure what to work on next. Scopes the project, establishes phase dependencies, produces a worldbuilding-plan.md, and guides execution — including parallel agent dispatch for character work. Also use for mid-project phase audits or when the project feels stuck or disorganized.
 ---
 
@@ -33,14 +33,14 @@ Foundation and Households are strictly sequential. Lorebook, Calendar, and Story
 
 | Phase | Skill | Deliverable |
 |---|---|---|
-| 1. Foundation | `rpg-world-foundation` | `foundational-decisions.md` |
-| 2. Households | `rpg-world-foundation` | `households.md` |
-| 3a. Lorebook | `rpg-lorebook` | `lorebook.md` |
-| 3b. Calendar | `rpg-calendar` | `calendar.md` |
-| 3c. Story Direction | `rpg-story-direction` | `story.md` |
-| 4. Character Roster | `rpg-character-relationships` | `characters/roster.md` |
-| 5. Character Blueprints | `rpg-character-blueprint` + `rpg-character-relationships` | `characters/blueprints/*.md` |
-| 6. Character Cards | `rpg-character-blueprint` | `characters/cards/*.md` |
+| 1. Foundation | `worldbuilder-world-foundation` | `foundational-decisions.md` |
+| 2. Households | `worldbuilder-world-foundation` | `households.md` |
+| 3a. Lorebook | `worldbuilder-lorebook` | `lorebook.md` |
+| 3b. Calendar | `worldbuilder-calendar` | `calendar.md` |
+| 3c. Story Direction | `worldbuilder-story-direction` | `story.md` |
+| 4. Character Roster | `worldbuilder-character-relationships` | `characters/roster.md` |
+| 5. Character Blueprints | `worldbuilder-character-blueprint` + `worldbuilder-character-relationships` | `characters/blueprints/*.md` |
+| 6. Character Cards | `worldbuilder-character-blueprint` | `characters/cards/*.md` |
 | 7. Review | — | Sign-off across all documents |
 
 ---
@@ -49,7 +49,7 @@ Foundation and Households are strictly sequential. Lorebook, Calendar, and Story
 
 Ask these before beginning Phase 1. They shape the rest of the pipeline.
 
-**Intimate dynamics scope:** Does this project include explicit intimate content? Options: all romance-eligible characters, a specific subset, or none. Record the decision in the plan document. If the answer is "some" or "all," identify which characters and flag them in the roster with an `Intimate Dynamics: Yes` marker. If the answer is "none," the `rpg-intimate-dynamics` skill is not invoked at any point in the pipeline.
+**Intimate dynamics scope:** Does this project include explicit intimate content? Options: all romance-eligible characters, a specific subset, or none. Record the decision in the plan document. If the answer is "some" or "all," identify which characters and flag them in the roster with an `Intimate Dynamics: Yes` marker. If the answer is "none," the `worldbuilder-intimate-dynamics` skill is not invoked at any point in the pipeline.
 
 This decision is made once and recorded — it is not revisited character by character. During blueprint work, the agent checks the roster flag; if it is absent, intimate dynamics is skipped without further consideration.
 
@@ -145,7 +145,7 @@ Each agent needs, stated explicitly:
 5. An explicit constraint: do not modify other character files or the roster
 
 Example structure:
-> "Write the blueprint for [Name] using `rpg-character-blueprint` and `rpg-character-relationships`. Roster entry for [Name]: [paste]. Household members for context: [paste relevant entries]. Save to `characters/blueprints/firstname-lastname.md`. Do not modify the roster or any other character's file."
+> "Write the blueprint for [Name] using `worldbuilder-character-blueprint` and `worldbuilder-character-relationships`. Roster entry for [Name]: [paste]. Household members for context: [paste relevant entries]. Save to `characters/blueprints/firstname-lastname.md`. Do not modify the roster or any other character's file."
 
 ---
 

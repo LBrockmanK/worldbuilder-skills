@@ -1,5 +1,5 @@
----
-name: rpg-story-direction
+﻿---
+name: worldbuilder-story-direction
 description: Use when writing the opening arc or standing creative brief for an AI-powered narrative game. Also use when LLM output escalates too fast, when romantic or dramatic intensity feels unearned, when dark content is handled carelessly, or when scenes lack pacing variation.
 ---
 
@@ -101,4 +101,4 @@ After the first full year, if characters with strong chemistry have not moved to
 
 **Dark content feels gratuitous.** "Handle with care and weight, not for shock value" combined with "the player is a witness, not a savior" addresses the most common failures.
 
-**Characters collapse into positivity.** This is a relationship card problem, not a story direction problem — see `rpg-character-relationships`.
+**Characters collapse into positivity.** This is a relationship card problem, not a story direction problem — see `worldbuilder-character-relationships`.

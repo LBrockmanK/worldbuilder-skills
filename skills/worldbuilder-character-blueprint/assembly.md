@@ -1,6 +1,6 @@
-# Assembly Guide — Part 3
+﻿# Assembly Guide — Part 3
 
-*Sub-file for `rpg-character-blueprint`. Read this when writing the Personality/Description prose and when finalizing the card.*
+*Sub-file for `worldbuilder-character-blueprint`. Read this when writing the Personality/Description prose and when finalizing the card.*
 
 ---
 

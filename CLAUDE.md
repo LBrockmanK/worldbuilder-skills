@@ -6,7 +6,7 @@ Workflow skills for building and realizing player world visions for the ainime-g
 
 ### Issue tracker
 
-Issues tracked as local markdown files under `.scratch/`. See `docs/agents/issue-tracker.md`.
+Issues tracked in GitHub Issues (LBrockmanK/worldbuilder-skills). See `docs/agents/issue-tracker.md`.
 
 ### Triage labels
 

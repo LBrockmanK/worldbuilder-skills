@@ -22,7 +22,7 @@ Single-context repo:
 │   └── adr/            ← architectural decision records
 │       ├── 0001-three-phase-architecture.md
 │       └── 0002-seed-as-target-format.md
-└── rpg-*/              ← individual skill directories
+└── worldbuilder-*/     ← individual skill directories
     └── SKILL.md
 ```
 

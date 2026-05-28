@@ -1,5 +1,5 @@
----
-name: rpg-lorebook
+﻿---
+name: worldbuilder-lorebook
 description: Use when writing world lore entries for an AI-powered narrative game — establishing surface facts, mid-layer history, deep secrets, location descriptions, or background NPC guidelines. Also use when designing keyword triggers and date gates for those entries, or when lorebook entries are injecting too much irrelevant context or too little relevant context.
 ---
 

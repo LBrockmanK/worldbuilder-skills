@@ -1,5 +1,5 @@
----
-name: rpg-character-blueprint
+﻿---
+name: worldbuilder-character-blueprint
 description: Use when building or developing an individual character for an AI-powered RPG or collaborative fiction — creating from scratch, expanding a roster entry into a full blueprint, or assembling a final character card. Also use when a character feels flat, inconsistent, or is generating repetitive LLM output.
 ---
 

@@ -1,6 +1,6 @@
-# Character Framework — Parts 1 & 2
+﻿# Character Framework — Parts 1 & 2
 
-*Sub-file for `rpg-character-blueprint`. Read this when working on the Foundation and Behavioral Builder sections.*
+*Sub-file for `worldbuilder-character-blueprint`. Read this when working on the Foundation and Behavioral Builder sections.*
 
 ---
 
