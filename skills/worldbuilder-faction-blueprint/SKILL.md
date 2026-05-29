@@ -107,13 +107,16 @@ Descriptive phrasing tells the engine what to know. Instructional phrasing tells
 
 > When [situation], [members do X] because [faction value or principle].
 
+Example:
+> When a stranger asks Brotherhood members about their pricing or trade routes, members give friendly, vague answers — ranges rather than figures, references to the factor rather than direct quotes — because the Brotherhood treats price information as proprietary. Show this deflection without making it feel hostile.
+
 Cover recognizable situations: encountering outsiders, handling internal conflict or challenge, interacting with rivals or authority, operating under scrutiny or pressure.
 
 ### The collective mask (Demeanor)
 
 How members present as a group to people who don't know them. What a stranger interacting with any member of this faction expects to encounter — before individual personality comes through.
 
-This is the shared surface: the thing that makes members recognizable as members.
+This is the shared surface: the thing that makes members recognizable as members. Write it as a behavioral directive, not a personality label — "members present as..." not "members are...".
 
 ### The variation layer (Nature)
 
@@ -121,7 +124,7 @@ The individual underneath the collective mask. Members share the Demeanor withou
 
 > *Loyalists vs. cynics. True believers vs. pragmatists who joined for the wages. Long-timers who remember the Brotherhood's origins vs. recent recruits who only know its current operation.*
 
-This is what prevents members from being interchangeable. They wear the same mask; who they are underneath differs.
+This is what prevents members from being interchangeable. They wear the same mask; who they are underneath differs. Name the axes in terms of observable behavior — how a loyalist acts differently from a cynic in the same situation, not just that one is loyal and one is cynical.
 
 ---
 
@@ -161,13 +164,21 @@ What could this faction do or reveal that no other faction could?
 
 ## Key Principles
 
-**The member test.** After completing Collective Behavior, ask: if you wrote an unnamed member of this faction into a scene with no other characterization, would they read as a member? If not, the section is incomplete.
+**The member test.** After completing Collective Behavior, read it and ask: if you wrote an unnamed member of this faction into a scene with no other characterization, would they read as a member?
+
+Failing example: a Silt Brotherhood member in a scene where they "eye the player with suspicion and ask what they want." Any faction member could do this. The Brotherhood is invisible.
+
+Passing example: a Silt Brotherhood member who "quotes the player a price range, suggests they talk to the factor for specifics, and finds a reason to be elsewhere before the player can press further." This behavior only makes sense for the Brotherhood.
+
+The standard: a member who could belong to any faction fails the test. A member whose behavior only makes sense given this faction's Demeanor and behavioral tendencies passes it.
 
 **Make decisions, don't hedge.** An active goal that is vague is not a goal. A Demeanor that could belong to any group is not a Demeanor.
 
 **Collective Behavior is the priority section.** A faction note that is mostly Origin & Purpose and thin on Collective Behavior documents history without specifying behavior. History is less important than what the faction does.
 
 **Instructional phrasing is not optional.** Descriptive phrasing in Collective Behavior will not produce behavioral consistency in output. Every entry must specify what members do.
+
+**Note register is functional, not literary.** Plain, direct language throughout — in every section, not just Collective Behavior. "The Brotherhood controls the valley's grain pricing" is correct. "The Brotherhood's iron grip on commerce has shaped the valley's soul for generations" is not.
 
 ---
 
@@ -194,7 +205,7 @@ What could this faction do or reveal that no other faction could?
 - [ ] Demeanor (collective mask) described
 - [ ] Variation layer (Nature axes) named
 - [ ] All entries phrased as instructional directives, not description
-- [ ] Member test passes: an unnamed member would read as a member
+- [ ] Member test passes: Demeanor entry specifies at least one concrete behavior, not a personality label; a member behaving per this note could not belong to a different faction without rewriting their behavior
 
 **Membership**
 - [ ] How membership is acquired and lost is stated
