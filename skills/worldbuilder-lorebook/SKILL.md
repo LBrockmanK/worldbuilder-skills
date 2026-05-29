@@ -30,6 +30,16 @@ trigger-context: brief plain-text note on when this should activate
 
 ---
 
+## Narrative Purpose
+
+Before writing a concept note's content, answer one question:
+
+> *What does the existence of this thing make impossible, costly, or inevitable in a scene that touches it?*
+
+A concept note that cannot answer this question is description, not a constraint. Writing the answer first shapes what to include and what to cut.
+
+---
+
 ## Alias Writing Guidance
 
 The export skill derives keyword triggers from the `aliases` field. Writing good aliases requires thinking about how topics actually come up in dialogue.
@@ -43,6 +53,23 @@ The export skill derives keyword triggers from the `aliases` field. Writing good
 **Local names:** Players and characters use the names they know, not the canonical names you used in the note title. Include both.
 
 **Common mistakes:** Single generic word that fires constantly; forgetting local names or synonyms; so many required terms that the combination almost never matches in practice.
+
+---
+
+## Limitations and Costs
+
+For any concept note covering a rule-bearing concept — magic systems, institutions, cultural practices, social structures, belief systems, anything with internal logic that scenes must respect — include a limitations and costs block.
+
+The block specifies:
+- What the concept **cannot** do
+- What it **costs or demands** from those who use it or participate in it
+- What makes it **fail, break, or produce unexpected results**
+
+A concept documented only by what it can do cannot constrain a scene. One documented by its limits and costs can.
+
+**Example:** A healing magic concept note that says "healers can mend wounds and cure illness" does not constrain anything. One that adds "healing draws from the healer's own vitality — serious wounds leave the healer bedridden for an equal period, and healing the dying risks the healer's own death" constrains every scene that touches it.
+
+Concept notes for rule-bearing concepts without a limitations block are incomplete — see the self-check at the end of this skill.
 
 ---
 
@@ -86,19 +113,25 @@ The actual hidden layer — what the hints were pointing toward.
 
 ---
 
-## Location Entries
+## The Iceberg Split
 
-Short. Physical character first, then narrative associations.
+Distinct from the surface/mid/deep layer classification. The iceberg split operates *within a single note*, for cases where what people in the world believe and what is actually true diverge.
 
-Cover:
-- What the place looks like
-- Who comes here, why, what they do
-- What it means — the emotional or narrative weight of this location
-- One vivid specific detail
+Where the gap between belief and truth is narratively significant, document both explicitly in the same note:
 
-One vivid detail beats three paragraphs of layout. "The old mill hasn't operated in fifteen years. The water wheel still turns sometimes when there's no wind." tells the engine more useful things than a floor plan.
+**Believed:** what characters in the world commonly say, assume, or act on — the public version, the legend, the received wisdom.
 
-Location entries are not image generation descriptions. They tell the engine what a place means and who uses it — not a visual reference. Image generation descriptions are a separate document.
+**True:** what actually happened, or how the thing actually works underneath the common understanding.
+
+This lets the engine have characters speak and act from belief while the true version constrains what can actually happen and what specific informed characters know.
+
+Not every concept note needs this. Use it only when the gap between belief and truth is a live story element.
+
+**Note on layer classification:** The surface/mid/deep layer on a concept note records authorial intent about pacing and register. It is not a reliable mechanism for suppressing information from the engine at runtime — whether a given engine can actually gate context on conditions varies. Its value is in shaping how the content is written (surface: matter-of-fact; mid: hedged and uncertain; deep: confirmed and weighted) and in what export tools can do with the metadata.
+
+## Location Notes
+
+Location notes have their own dedicated skill: **`worldbuilder-location-blueprint`**. Use that skill when creating or deepening any named location.
 
 ---
 
@@ -141,3 +174,13 @@ World knowledge is a living collection, not a phase that opens and closes. Any s
 **Separate entries for separate topics.** Don't pack "the old mill AND the mill family AND the flood of thirty years ago" into a single entry. Split them so each triggers independently and doesn't bloat context when only one is relevant.
 
 **Test the trigger mentally.** Read a sample scene where the topic comes up naturally. Does your keyword set cover the realistic phrasings? Does it avoid triggering on unrelated uses of the same word?
+
+---
+
+## Self-Check Before Marking Complete
+
+**Complete when:** the note can constrain or shape any scene that touches this concept — a scene author reading the note knows what is impossible, what costs something, and what is inevitable because this thing exists.
+
+**Limitations block check:** if this is a rule-bearing concept (magic system, institution, cultural practice, social structure, belief system), does the note include a limitations and costs block? A concept note without one is incomplete regardless of how much descriptive content it contains.
+
+**Over-documented when:** any section adds detail no scene will touch, or duplicates content already in a character, location, or faction note. Concept notes are meant to be short and dense — duplication bloats context for no gain.
