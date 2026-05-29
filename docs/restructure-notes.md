@@ -327,7 +327,7 @@ All high and medium priority items implemented:
 
 **Low priority:**
 
-- **Develop world and story skill equivalents to character system depth** — currently underspecified; needs equivalent rigor to blueprint process for locations, factions, and concept notes
+- ✅ **Develop world and story skill equivalents to character system depth** — completed 2026-05-28: `worldbuilder-location-blueprint` and `worldbuilder-faction-blueprint` added; `worldbuilder-lorebook` deepened with constraint-first concept guidance. See `docs/superpowers/specs/2026-05-28-world-entity-notes-design.md`.
 
 - **Templates folder** — copy note templates from skill instructions into `_templates/` in project vault for human users
 
