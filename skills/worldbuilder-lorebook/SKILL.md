@@ -7,7 +7,7 @@ description: Use when writing world knowledge concept notes for an AI-powered na
 
 ## Overview
 
-World knowledge is organized in `concepts/` notes — one note per discrete topic. The ainime export skill reads these notes and packages them as keyword-triggered lorebook entries. This skill covers writing the concept notes well; the export skill handles the packaging.
+World knowledge is organized in `concepts/` notes — one note per discrete topic. Export skills read these notes and package them as lorebook entries. This skill covers writing the concept notes well; the export skill handles the packaging.
 
 Good concept notes give the engine exactly what it needs at the moment a topic arises. The goal is precision: the right information for the right moment. Write notes that are dense and specific rather than broad and atmospheric — 50 tokens of exact context beats 300 tokens of unfocused description.
 
