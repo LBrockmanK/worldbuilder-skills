@@ -53,7 +53,9 @@ Platform-decoupling restructure: Phases 1–2 are now platform-agnostic; only Ph
 - Folder reference cascade: worldbuilder-world-planning, worldbuilder-ainime-export, worldbuilder-lorebook, worldbuilder-story-direction, worldbuilder-calendar all updated from type-specific folders → `notes/`
 
 ### Next
-- docs/restructure-notes.md: update folder structure section to reflect flat notes/ change (currently still documents old type-specific folders)
+- `docs/restructure-notes.md`: update throughout — still documents old type-specific folder structure (characters/, locations/, etc.) throughout; needs full pass
+- `worldbuilder-world-planning`: phase table has no entry for location notes or faction notes — `worldbuilder-location-blueprint` and `worldbuilder-faction-blueprint` are not mentioned anywhere in the planning skill; decide whether to add explicit Wide phases for these or integrate them differently
+- Incorporate Sunmist Valley character writing feedback into `worldbuilder-character-blueprint` skill content: (1) plain Anglo-Saxon style outside Example Dialogue; (2) initial-state-only rule — no forward refs outside Storylines; (3) relationship entries from this character's POV only; (4) positive characterization — describe what characters ARE, not what they aren't. All four are in `memory/feedback-*.md`.
 - Enable and configure frontmatter-modified-date plugin: set format to `YYYY-MM-DD HH:mm` in plugin settings
 
 ## Key files
