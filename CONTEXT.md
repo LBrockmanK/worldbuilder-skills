@@ -29,19 +29,19 @@ The comprehensive Wide-phase document for a single character. Single source of t
 _Avoid_: Blueprint, draft card
 
 **Concept note**:
-A discrete piece of world knowledge in `concepts/`. Layer-tagged (surface, mid, deep). Aliases in frontmatter become keyword candidates at export. The export skill packages concept notes as lorebook entries.
+A discrete piece of world knowledge in `notes/`. Layer-tagged (surface, mid, deep). Aliases in frontmatter become keyword candidates at export. The export skill packages concept notes as lorebook entries.
 _Avoid_: Lorebook entry (when referring to the Wide-phase artifact), Lorebook Candidates
 
 **Event note**:
-A calendar or historical event in `events/`. Frontmatter includes `date` (calendar day), `recurring`, `characters`, `location`. The export skill packages event notes as `storyTriggers` and `calendarConfig` entries.
+A calendar or historical event in `notes/`. Frontmatter includes `date` (calendar day), `recurring`, `characters`, `location`. The export skill packages event notes as `storyTriggers` and `calendarConfig` entries.
 _Avoid_: Calendar entry (when referring to the note itself)
 
 **Story note**:
-A narrative direction document in `story/`. Three scopes connected by `up:` hierarchy: direction (top-level creative brief), arc (major story section), intention (specific story possibility). The export skill maps direction notes to `arcManagerGuidance` and intention notes to `storyTriggers` where conditions allow.
+A narrative direction document in `notes/`. Three scopes connected by `up:` hierarchy: direction (top-level creative brief), arc (major story section), intention (specific story possibility). The export skill maps direction notes to `arcManagerGuidance` and intention notes to `storyTriggers` where conditions allow.
 _Avoid_: story.md (as a single document)
 
 **Introduction note**:
-A story note with `scope: "[[introduction]]"` describing first contact between the player and a character. Belongs in `story/`, not in the character note. One introduction note can cover multiple characters.
+A story note with `scope: "[[introduction]]"` describing first contact between the player and a character. Belongs in `notes/`, not in the character note. One introduction note can cover multiple characters.
 
 ### Process
 
@@ -64,15 +64,11 @@ The ainime-games.com world builder — the platform that consumes all export del
 A complete project uses a shallow hybrid vault organized by note type.
 
 ```
-worldbuilding-plan.md   ← project plan, cast plan, phase status
-seed.md                 ← world foundation (Seed phase output)
-log.md                  ← retcon and change log
-characters/             ← one .md per character (Wide phase)
-locations/              ← one .md per location (Wide phase)
-factions/               ← households, organizations, groups
-events/                 ← calendar events, historical events, story moments
-concepts/               ← world knowledge: lore, rules, cultural facts
-story/                  ← direction.md + arc-*.md + intention-*.md
+worldbuilding-plan.md   ← project plan, cast plan, phase status (type: project)
+seed.md                 ← world foundation (Seed phase output) (type: project)
+log.md                  ← retcon and change log (type: project)
+agent-context.md        ← agent operational reference (type: reference)
+notes/                  ← all Wide-phase content notes (character, location, faction, event, concept, story)
 _templates/             ← note templates for human users
 ```
 
@@ -82,10 +78,10 @@ All notes carry universal frontmatter plus type-specific fields:
 
 **Universal:**
 ```yaml
-type: character | location | faction | event | concept | story
+type: character | location | faction | event | concept | story | project | reference
 status: draft | complete
 aliases: []
-last_updated: YYYY-MM-DD
+last_updated: YYYY-MM-DD HH:mm
 ```
 
 **Character:**
@@ -142,11 +138,11 @@ scope: "[[direction]]" | "[[arc]]" | "[[intention]]" | "[[introduction]]"
 | `seed.md` — World Introduction | `introText` |
 | `seed.md` — Opening Situation | `initialStoryArc` |
 | `seed.md` — era | `calendarConfig.eraReminder` |
-| `concepts/` notes | `loreEntries[]` |
-| `events/` notes | `storyTriggers[]`, `calendarConfig.weatherPools`, `eventCalendarSummary` |
-| `story/direction.md` | `arcManagerGuidance` |
-| `story/intention-*.md` | `storyTriggers[]` (where day trigger exists) |
-| `characters/` notes | `characters[]` (baseProfile, appearance, spriteSets, metadata) |
+| `notes/` notes with `type: concept` | `loreEntries[]` |
+| `notes/` notes with `type: event` | `storyTriggers[]`, `calendarConfig.weatherPools`, `eventCalendarSummary` |
+| `notes/direction.md` | `arcManagerGuidance` |
+| `notes/intention-*.md` | `storyTriggers[]` (where day trigger exists) |
+| `notes/` notes with `type: character` | `characters[]` (baseProfile, appearance, spriteSets, metadata) |
 
 Full ainime field reference: `docs/target-system.md`.
 
@@ -156,7 +152,7 @@ Full ainime field reference: `docs/target-system.md`.
 
 > "Should I add the smithy description to Bram's character note?"
 >
-> "No — that goes in a concept note for the smithy. The smithy only matters when someone is at or near it; it's not core to who Bram is. Create `concepts/harrows-smithy.md` with `layer: surface` and add 'the smithy', 'Harrow's smithy', 'the forge' to its aliases."
+> "No — that goes in a concept note for the smithy. The smithy only matters when someone is at or near it; it's not core to who Bram is. Create `notes/harrows-smithy.md` with `layer: surface` and add 'the smithy', 'Harrow's smithy', 'the forge' to its aliases."
 
 > "We're done with all the character notes. What's next?"
 >

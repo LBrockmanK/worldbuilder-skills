@@ -103,6 +103,6 @@ This guidance is the structural complement to the romance pacing guidance in Sto
 
 ## World Knowledge from Calendar Work
 
-Calendar work regularly surfaces world knowledge that belongs in `concepts/` notes rather than event descriptions — historical background behind a festival, the origin of a tradition, a detail that contextualizes an event but reads as exposition if left in the event note itself.
+Calendar work regularly surfaces world knowledge that belongs in `notes/` notes rather than event descriptions — historical background behind a festival, the origin of a tradition, a detail that contextualizes an event but reads as exposition if left in the event note itself.
 
 When this happens, create a concept note immediately. Use `worldbuilder-lorebook` for guidance on layer classification and writing. Do not leave this material as inline event content — it will either bloat the event description or get lost.

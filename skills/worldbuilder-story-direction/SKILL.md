@@ -9,7 +9,7 @@ description: Use when writing the opening arc or standing creative brief for an 
 
 The story direction is the LLM's standing creative brief. It doesn't describe events — it shapes the engine's approach to generating them.
 
-Story notes live in `story/` and use a hierarchy connected by `up:` frontmatter links. Three note types:
+Story notes live in `notes/` and use a hierarchy connected by `up:` frontmatter links. Three note types:
 
 **Direction** (`scope: "[[direction]]"`) — The top-level creative brief. No `up:` link. Contains the Opening Situation and all standing Ongoing Story Direction content. This is the primary guard rail against the LLM's default failure modes.
 
@@ -22,12 +22,12 @@ Frontmatter for all story notes:
 type: story
 status: draft | complete
 aliases: []
-last_updated: YYYY-MM-DD
+last_updated: YYYY-MM-DD HH:mm
 up: "[[parent-note]]"   # absent on direction note
 scope: "[[direction]]" | "[[arc]]" | "[[intention]]"
 ```
 
-Start with `story/direction.md`. Add arc and intention notes as the story picture develops.
+Start with `notes/direction.md`. Add arc and intention notes as the story picture develops.
 
 ---
 
@@ -125,6 +125,6 @@ After the first full year, if characters with strong chemistry have not moved to
 
 ## World Knowledge from Story Direction Work
 
-Story direction work regularly surfaces world knowledge that belongs in `concepts/` notes rather than the direction brief — historical context implied by the opening arc, background on the hidden layer that shouldn't be in the standing brief, lore that shapes pacing guidance but reads as exposition if left in this document.
+Story direction work regularly surfaces world knowledge that belongs in `notes/` notes rather than the direction brief — historical context implied by the opening arc, background on the hidden layer that shouldn't be in the standing brief, lore that shapes pacing guidance but reads as exposition if left in this document.
 
 When this happens, create a concept note immediately. Use `worldbuilder-lorebook` for layer classification and writing guidance. Do not leave world knowledge embedded in the story direction — it will either bloat the brief or be invisible to the export layer's lorebook packaging.

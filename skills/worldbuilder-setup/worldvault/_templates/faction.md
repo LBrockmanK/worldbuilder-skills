@@ -2,7 +2,7 @@
 type: faction
 status: draft
 aliases: []
-last_updated: YYYY-MM-DD
+last_updated: YYYY-MM-DD HH:mm
 members: []
 function: 
 ---

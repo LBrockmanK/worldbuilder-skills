@@ -31,7 +31,7 @@ Wait for their answer. Confirm the target path either exists and is empty, or do
 
 Copy all contents of `worldvault/` into the user's specified project directory. Preserve the full structure:
 - `.obsidian/` and all files within
-- Content folders: `characters/`, `locations/`, `factions/`, `concepts/`, `story/`
+- Content folder: `notes/`
 - `_templates/`, `_attachments/`, `_bases/`
 - All stub notes: `Home.md`, `worldbuilding-plan.md`, `log.md`, `seed.md`, `agent-context.md`
 

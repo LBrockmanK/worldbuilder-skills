@@ -4,6 +4,12 @@
 
 ---
 
+## Project
+
+![[project-docs.base]]
+
+---
+
 ## All Notes
 
 ![[all-notes.base]]

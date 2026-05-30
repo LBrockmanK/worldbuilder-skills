@@ -7,7 +7,7 @@ description: Use when writing world knowledge concept notes for an AI-powered na
 
 ## Overview
 
-World knowledge is organized in `concepts/` notes — one note per discrete topic. Export skills read these notes and package them as lorebook entries. This skill covers writing the concept notes well; the export skill handles the packaging.
+World knowledge is organized in `notes/` notes — one note per discrete topic. Export skills read these notes and package them as lorebook entries. This skill covers writing the concept notes well; the export skill handles the packaging.
 
 Good concept notes give the engine exactly what it needs at the moment a topic arises. The goal is precision: the right information for the right moment. Write notes that are dense and specific rather than broad and atmospheric — 50 tokens of exact context beats 300 tokens of unfocused description.
 
@@ -19,7 +19,7 @@ Every concept note opens with:
 type: concept
 status: draft | complete
 aliases: []           # key terms and synonyms — become keyword candidates at export
-last_updated: YYYY-MM-DD
+last_updated: YYYY-MM-DD HH:mm
 layer: "[[surface]]" | "[[mid]]" | "[[deep]]"
 trigger-context: brief plain-text note on when this should activate
 ```
@@ -155,13 +155,13 @@ World knowledge is a living collection, not a phase that opens and closes. Any s
 
 **During active development:** When any working session produces a fact or implication that belongs in the lorebook, create a concept note stub immediately — frontmatter + preamble is enough to anchor the thought. Flesh it out when you have more context.
 
-**At project completion:** Run a validation pass across all `concepts/` notes:
+**At project completion:** Run a validation pass across all `notes/` notes:
 - Verify every note has complete frontmatter including `layer` and `aliases`
 - Check for contradictions across layers — surface notes should not imply what deep notes are supposed to reveal
 - Cross-reference with completed character notes: any implied lore in those notes that has no concept note?
 - Check that each note's `trigger-context` is specific enough to inform good keyword derivation at export
 
-**Don't front-load.** Writing all concept notes before characters are drafted means writing them before you know what the characters will imply about the world. Let the `concepts/` collection grow with the project.
+**Don't front-load.** Writing all concept notes before characters are drafted means writing them before you know what the characters will imply about the world. Let the `notes/` collection grow with the project.
 
 ---
 

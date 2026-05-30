@@ -59,11 +59,11 @@ Keep it short — one short table and one line of proposed action is enough:
 
 ```
 Phase 1  (Seed)             Done    → seed.md
-Phase 2a (Lorebook notes)   Done    → concepts/
-Phase 2b (Calendar/Events)  Done    → events/
-Phase 2c (Story Direction)  Done    → story/
+Phase 2a (Lorebook notes)   Done    → notes/
+Phase 2b (Calendar/Events)  Done    → notes/
+Phase 2c (Story Direction)  Done    → notes/
 Phase 2d (Cast planning)    Done    → worldbuilding-plan.md
-Phase 2e (Character notes)  6/24    → characters/
+Phase 2e (Character notes)  6/24    → notes/
 Phase 3  (Export)           0/24    → worldbuilder-ainime-export
 
 Next: Continue character notes. Suggested: dispatch 4 in parallel.
@@ -79,11 +79,11 @@ Next: Continue character notes. Suggested: dispatch 4 in parallel.
 |---|---|---|---|
 | 0. Ingestion | Pre-Seed | `worldbuilder-ingestion` | Ingestion index + extracted content |
 | 1. Seed | Seed | `worldbuilder-world-foundation` | `seed.md` |
-| 2a. Lorebook notes | Wide | `worldbuilder-lorebook` | `concepts/` |
-| 2b. Calendar/Events | Wide | `worldbuilder-calendar` | `events/` |
-| 2c. Story Direction | Wide | `worldbuilder-story-direction` | `story/` |
+| 2a. Lorebook notes | Wide | `worldbuilder-lorebook` | `notes/` |
+| 2b. Calendar/Events | Wide | `worldbuilder-calendar` | `notes/` |
+| 2c. Story Direction | Wide | `worldbuilder-story-direction` | `notes/` |
 | 2d. Cast planning | Wide | (this skill — see below) | Cast plan in `worldbuilding-plan.md` |
-| 2e. Character notes | Wide | `worldbuilder-character-blueprint` | `characters/` |
+| 2e. Character notes | Wide | `worldbuilder-character-blueprint` | `notes/` |
 | 3. Export | Export | `worldbuilder-ainime-export` | Platform-specific outputs |
 | 3b. Review | Export | — | Sign-off across all documents |
 
@@ -240,7 +240,7 @@ Each agent needs, stated explicitly:
 5. An explicit constraint: do not modify other character files or the cast plan
 
 Example structure:
-> "Write the character note for [Name] using `worldbuilder-character-blueprint`. Cast plan entry for [Name]: [paste]. Household members for context: [paste relevant entries]. Save to `characters/firstname-lastname.md`. Do not modify the cast plan or any other character's file."
+> "Write the character note for [Name] using `worldbuilder-character-blueprint`. Cast plan entry for [Name]: [paste]. Household members for context: [paste relevant entries]. Save to `notes/firstname-lastname.md`. Do not modify the cast plan or any other character's file."
 
 ---
 
@@ -270,11 +270,11 @@ Subset details (if applicable): [character names]
 | Phase | Group | Status | Deliverable | Notes |
 |---|---|---|---|---|
 | 1. Seed | Seed | Done / In Progress / Not Started | seed.md | |
-| 2a. Lorebook notes | Wide | ... | concepts/ | |
-| 2b. Calendar/Events | Wide | ... | events/ | |
-| 2c. Story Direction | Wide | ... | story/ | |
+| 2a. Lorebook notes | Wide | ... | notes/ | |
+| 2b. Calendar/Events | Wide | ... | notes/ | |
+| 2c. Story Direction | Wide | ... | notes/ | |
 | 2d. Cast planning | Wide | ... | worldbuilding-plan.md | |
-| 2e. Character notes | Wide | ... | characters/ | X of Y complete |
+| 2e. Character notes | Wide | ... | notes/ | X of Y complete |
 | 3. Export | Export | ... | worldbuilder-ainime-export | X of Y complete |
 | 3b. Review | Export | ... | — | |
 

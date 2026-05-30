@@ -39,7 +39,7 @@ Every location note opens with YAML frontmatter. Required fields:
 type: location
 status: draft | complete
 aliases: []
-last_updated: YYYY-MM-DD
+last_updated: YYYY-MM-DD HH:mm
 region: "[[The Valley]]"           # link to region note
 function: one phrase (plain text)
 primary-characters: ["[[Name]]"]   # links to character notes

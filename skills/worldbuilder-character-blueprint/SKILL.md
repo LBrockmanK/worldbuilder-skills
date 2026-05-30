@@ -42,7 +42,7 @@ Every character note opens with YAML frontmatter. Required fields:
 type: character
 status: draft | complete
 aliases: []
-last_updated: YYYY-MM-DD
+last_updated: YYYY-MM-DD HH:mm
 factions: ["[[Household Name]]", "[[Guild Name]]"]   # list; links to faction notes
 role: plain text
 archetype: "[[Initially Hostile]]"                    # link; makes archetype groups queryable

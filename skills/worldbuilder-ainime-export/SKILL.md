@@ -17,10 +17,10 @@ Full JSON schema reference: `../../docs/target-system.md`.
 
 Before running export, verify:
 - [ ] `seed.md` complete (all sections present)
-- [ ] All character notes in `characters/` complete (status: complete in frontmatter)
-- [ ] `concepts/` notes written and layer-tagged
-- [ ] `events/` notes written with dates
-- [ ] `story/` direction note and arc notes complete
+- [ ] All character notes in `notes/` complete (status: complete in frontmatter)
+- [ ] `notes/` notes written and layer-tagged
+- [ ] `notes/` notes written with dates
+- [ ] `notes/` direction note and arc notes complete
 - [ ] Introduction notes created for all characters
 
 If any prerequisite is incomplete, return to the relevant Wide-phase skill rather than exporting a partial world.
@@ -40,11 +40,11 @@ If any prerequisite is incomplete, return to the relevant Wide-phase skill rathe
 | `seed.md` — World Introduction | `introText` |
 | `seed.md` — Opening Situation | `initialStoryArc` |
 | `seed.md` — era (from story direction or seed) | `calendarConfig.eraReminder` |
-| `story/direction.md` | `arcManagerGuidance` |
-| `story/intention-*.md` + `events/*.md` | `storyTriggers[]` |
-| `events/*.md` | `calendarConfig.weatherPools`, `eventCalendarSummary` |
-| `concepts/*.md` | `loreEntries[]` |
-| `characters/*.md` | `characters[]` |
+| `notes/direction.md` | `arcManagerGuidance` |
+| `notes/intention-*.md` + `notes/*.md` | `storyTriggers[]` |
+| `notes/*.md` | `calendarConfig.weatherPools`, `eventCalendarSummary` |
+| `notes/*.md` | `loreEntries[]` |
+| `notes/*.md` | `characters[]` |
 | `seed.md` — Art style | `artStyle.background.*`, `artStyle.sprite.*` |
 
 ---
@@ -77,7 +77,7 @@ Read `seed.md` and extract the following. The section names in `seed.md` map dir
 
 ## Calendar Configuration
 
-Read all `events/` notes with a `date` frontmatter field.
+Read all `notes/` notes with a `date` frontmatter field.
 
 **`calendarConfig.weatherPools`** — Nested object: season → day segment → string array. Each string is a one-line weather description. 10–16 entries per season/segment. Produce from the calendar notes' weather descriptions.
 
@@ -112,15 +112,15 @@ Read all `events/` notes with a `date` frontmatter field.
 
 ## Story Direction and Triggers
 
-**`arcManagerGuidance`** — Read `story/direction.md`. This is the standing creative brief for the engine — the primary guard against escalation, flattening, and inappropriate pacing. Export verbatim; do not summarize.
+**`arcManagerGuidance`** — Read `notes/direction.md`. This is the standing creative brief for the engine — the primary guard against escalation, flattening, and inappropriate pacing. Export verbatim; do not summarize.
 
-**`storyTriggers[]` (story events)** — One entry per `story/intention-*.md` note where a trigger condition can be expressed as a calendar day or a story moment. Intentions without a concrete trigger day do not produce `storyTriggers` entries; they remain in the `arcManagerGuidance` as ongoing direction instead.
+**`storyTriggers[]` (story events)** — One entry per `notes/intention-*.md` note where a trigger condition can be expressed as a calendar day or a story moment. Intentions without a concrete trigger day do not produce `storyTriggers` entries; they remain in the `arcManagerGuidance` as ongoing direction instead.
 
 ---
 
 ## Lorebook Entries
 
-Read all `concepts/` notes. Each note produces one `loreEntry`.
+Read all `notes/` notes. Each note produces one `loreEntry`.
 
 ```json
 {
@@ -147,7 +147,7 @@ Adjust thresholds based on world pacing if these defaults don't fit.
 
 ## Character Export
 
-For each character note in `characters/`, produce a character record. Process one character at a time; read `card-assembly.md` before writing the card.
+For each character note in `notes/`, produce a character record. Process one character at a time; read `card-assembly.md` before writing the card.
 
 | Character note field | ainime JSON field |
 |---|---|

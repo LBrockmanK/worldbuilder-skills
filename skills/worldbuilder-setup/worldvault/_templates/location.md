@@ -2,7 +2,7 @@
 type: location
 status: draft
 aliases: []
-last_updated: YYYY-MM-DD
+last_updated: YYYY-MM-DD HH:mm
 region: 
 function: 
 primary-characters: []

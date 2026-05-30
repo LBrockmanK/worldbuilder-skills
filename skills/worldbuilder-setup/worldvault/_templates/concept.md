@@ -2,7 +2,7 @@
 type: concept
 status: draft
 aliases: []
-last_updated: YYYY-MM-DD
+last_updated: YYYY-MM-DD HH:mm
 layer: 
 trigger-context: 
 ---

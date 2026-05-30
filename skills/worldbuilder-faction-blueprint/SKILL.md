@@ -42,7 +42,7 @@ Every faction note opens with YAML frontmatter. Required fields:
 type: faction
 status: draft | complete
 aliases: []
-last_updated: YYYY-MM-DD
+last_updated: YYYY-MM-DD HH:mm
 members: ["[[Name]]"]   # links to character notes
 function: one phrase (plain text)
 ```
