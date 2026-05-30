@@ -14,8 +14,21 @@
               "type": "markdown",
               "state": {
                 "file": "Home.md",
-                "mode": "preview"
-              }
+                "mode": "source",
+                "source": false,
+                "backlinks": true,
+                "backlinkOpts": {
+                  "collapseAll": false,
+                  "extraContext": false,
+                  "sortOrder": "alphabetical",
+                  "showSearch": false,
+                  "searchQuery": "",
+                  "backlinkCollapsed": false,
+                  "unlinkedCollapsed": true
+                }
+              },
+              "icon": "lucide-file",
+              "title": "Home"
             }
           }
         ]
@@ -36,7 +49,12 @@
             "type": "leaf",
             "state": {
               "type": "file-explorer",
-              "state": { "sortOrder": "alphabetical" }
+              "state": {
+                "sortOrder": "alphabetical",
+                "autoReveal": false
+              },
+              "icon": "lucide-folder-closed",
+              "title": "Files"
             }
           },
           {
@@ -44,7 +62,16 @@
             "type": "leaf",
             "state": {
               "type": "search",
-              "state": { "query": "" }
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              },
+              "icon": "lucide-search",
+              "title": "Search"
             }
           },
           {
@@ -52,7 +79,9 @@
             "type": "leaf",
             "state": {
               "type": "bookmarks",
-              "state": {}
+              "state": {},
+              "icon": "lucide-bookmark",
+              "title": "Bookmarks"
             }
           }
         ]
@@ -74,7 +103,18 @@
             "type": "leaf",
             "state": {
               "type": "backlink",
-              "state": { "backlinkCollapsed": false, "unlinkedCollapsed": true }
+              "state": {
+                "file": "Home.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-coming-in",
+              "title": "Backlinks for Home"
             }
           },
           {
@@ -82,7 +122,13 @@
             "type": "leaf",
             "state": {
               "type": "outgoing-link",
-              "state": { "linksCollapsed": false, "unlinkedCollapsed": true }
+              "state": {
+                "file": "Home.md",
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-going-out",
+              "title": "Outgoing links from Home"
             }
           },
           {
@@ -90,7 +136,43 @@
             "type": "leaf",
             "state": {
               "type": "tag",
-              "state": { "sortOrder": "frequency" }
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-tags",
+              "title": "Tags"
+            }
+          },
+          {
+            "id": "bc99d18fb5279a66",
+            "type": "leaf",
+            "state": {
+              "type": "all-properties",
+              "state": {
+                "sortOrder": "frequency",
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-archive",
+              "title": "All properties"
+            }
+          },
+          {
+            "id": "0ed4485696940803",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "Home.md",
+                "followCursor": false,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-list",
+              "title": "Outline of Home"
             }
           }
         ]
@@ -102,6 +184,7 @@
   },
   "left-ribbon": {
     "hiddenItems": {
+      "templates:Insert template": false,
       "switcher:Open quick switcher": false,
       "graph:Open graph view": false,
       "canvas:Create new canvas": false,
@@ -109,6 +192,21 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "file-explorer-leaf",
-  "lastOpenFiles": ["Home.md"]
+  "active": "home-leaf",
+  "lastOpenFiles": [
+    "Home.md.tmp.26780.d5ecdebb5113",
+    "_bases/story.base",
+    "_bases/concepts.base",
+    "_bases/concepts.base.tmp.26780.39ce552ce084",
+    "_bases/factions.base",
+    "_bases/locations.base",
+    "_bases/characters.base",
+    "_bases/all-notes.base",
+    "_bases",
+    "seed.md.tmp.26780.fb9ab3509879",
+    "log.md.tmp.26780.a95b64837c04",
+    "seed.md",
+    "log.md",
+    "Home.md"
+  ]
 }

@@ -1,0 +1,34 @@
+filters: 'type == "character"'
+
+views:
+  - type: table
+    name: All
+    order:
+      - file.name
+      - status
+      - role
+      - archetype
+      - factions
+      - last_updated
+
+  - type: table
+    name: Draft
+    filters: 'status == "draft"'
+    order:
+      - file.name
+      - status
+      - role
+      - archetype
+      - factions
+      - last_updated
+
+  - type: table
+    name: Complete
+    filters: 'status == "complete"'
+    order:
+      - file.name
+      - status
+      - role
+      - archetype
+      - factions
+      - last_updated

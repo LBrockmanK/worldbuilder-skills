@@ -1,6 +1,6 @@
 # {{PROJECT_NAME}} — Worldbuilding Plan
 
-> For future Claude: this is the project plan. Read it at the start of every session. The `worldbuilder-world-planning` skill maintains it. Do not modify the phase table or cast plan except through that skill.
+> For future agents: this is the project plan. Read it at the start of every session. The `worldbuilder-world-planning` skill maintains it. Do not modify the phase table or cast plan except through that skill.
 
 ## Phase Status
 

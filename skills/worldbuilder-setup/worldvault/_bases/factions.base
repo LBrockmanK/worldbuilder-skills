@@ -1,0 +1,28 @@
+filters: 'type == "faction"'
+
+views:
+  - type: table
+    name: All
+    order:
+      - file.name
+      - status
+      - function
+      - last_updated
+
+  - type: table
+    name: Draft
+    filters: 'status == "draft"'
+    order:
+      - file.name
+      - status
+      - function
+      - last_updated
+
+  - type: table
+    name: Complete
+    filters: 'status == "complete"'
+    order:
+      - file.name
+      - status
+      - function
+      - last_updated
