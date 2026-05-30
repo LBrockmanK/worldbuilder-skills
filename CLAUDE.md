@@ -15,3 +15,7 @@ Default mattpocock label vocabulary — no overrides. See `docs/agents/triage-la
 ### Domain docs
 
 Single-context. `CONTEXT.md` and `docs/adr/` at the repo root. See `docs/agents/domain.md`.
+
+### Session memory
+
+Project state, architecture decisions, and feedback are tracked in `memory/`. Read `memory/MEMORY.md` at the start of every session to load current context. Write new memories there — not to any external Claude memory directory.
