@@ -8,7 +8,7 @@
 
 The `baseProfile` field is a single flowing prose block — no internal headers, no JSON sub-fields. It contains two parts written in sequence: the personality/description prose, then the Influence Thresholds, then Future Storylines. The entire block is what the engine reads as "who this character is."
 
-Source material: the character note in `characters/`.
+Source material: the character note in `notes/`.
 
 ---
 
@@ -97,7 +97,7 @@ After the influence thresholds, write the Future Storylines section. Source mate
 - Do not script outcomes — give the engine material to work from and let it find the moment
 - Write for robustness: arcs that remain interesting whether or not a specific beat fires
 
-**Introduction** — The character's introduction is its own story note in `story/` (not a Storylines entry and not in the card). Do not add an Introduction entry here. Verify the introduction note exists before finalizing the character export.
+**Introduction** — The character's introduction is its own story note in `notes/` (not a Storylines entry and not in the card). Do not add an Introduction entry here. Verify the introduction note exists before finalizing the character export.
 
 ---
 
