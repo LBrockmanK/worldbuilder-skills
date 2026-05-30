@@ -1,4 +1,8 @@
-filters: 'type == "character"'
+filters:
+  and:
+    - 'type == "character"'
+    - not:
+        - file.inFolder("_templates")
 
 views:
   - type: table

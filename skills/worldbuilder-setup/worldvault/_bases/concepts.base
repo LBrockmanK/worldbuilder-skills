@@ -1,4 +1,8 @@
-filters: 'type == "concept"'
+filters:
+  and:
+    - 'type == "concept"'
+    - not:
+        - file.inFolder("_templates")
 
 views:
   - type: table

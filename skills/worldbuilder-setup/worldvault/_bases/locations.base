@@ -1,4 +1,8 @@
-filters: 'type == "location"'
+filters:
+  and:
+    - 'type == "location"'
+    - not:
+        - file.inFolder("_templates")
 
 views:
   - type: table

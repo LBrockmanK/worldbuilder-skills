@@ -1,3 +1,8 @@
+filters:
+  and:
+    - not:
+        - file.inFolder("_templates")
+
 views:
   - type: table
     name: All

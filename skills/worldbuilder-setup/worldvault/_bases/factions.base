@@ -1,4 +1,8 @@
-filters: 'type == "faction"'
+filters:
+  and:
+    - 'type == "faction"'
+    - not:
+        - file.inFolder("_templates")
 
 views:
   - type: table
