@@ -2,6 +2,8 @@ filters:
   and:
     - not:
         - file.inFolder("_templates")
+    - not:
+        - file.inFolder("_bases")
 
 views:
   - type: table
