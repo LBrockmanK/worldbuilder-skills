@@ -58,7 +58,7 @@ The distinction matters because starting state is written as truth; intentions a
 
 Minimum useful frontmatter fields to determine — pending research brief. Character files are the reference point for what's already working.
 
-**Implication:** The roster file (`characters/roster.md`) may become redundant if character file headers carry sufficient information. The same applies to other index documents.
+**Implication:** Roster and index documents are replaced by frontmatter + preamble on each note. Obsidian Bases files in `_bases/` provide dashboard views without a separate roster.
 
 ---
 
@@ -88,21 +88,18 @@ World and Story are currently underspecified by comparison. Developing equivalen
 
 ## Structure Decisions (from research findings)
 
-### Vault structure: shallow hybrid by note type
+### Vault structure: flat `notes/` folder
 
-6–8 folders by note type, flat within each. Not flat vault (breaks above ~50 notes). Not deep hierarchy (notes are multi-categorical). Organizing by type rather than by conceptual area (World/Story/Characters) solves cross-cutting entity placement. The three-area model is a mental map, not a folder hierarchy.
+All Wide-phase content (character, location, faction, event, concept, story notes) lives in a single flat `notes/` folder. Root holds project and reference documents. This overrides the initial research recommendation of type-specific folders — the `type` field in frontmatter does the organizational work, and a flat structure eliminates the cross-cutting entity placement problem.
 
 ```
 worldbuilding-plan.md
 seed.md
 log.md                  ← retcon and change log
-characters/
-locations/
-factions/               ← households, organizations, groups
-events/                 ← historical events, calendar events, story moments
-concepts/               ← world rules, lore topics, magic systems, cultural facts
-story/                  ← narrative direction, creative brief, intentions
+agent-context.md        ← reference doc for LLM context
+notes/                  ← all Wide-phase content (characters, locations, factions, events, concepts, story)
 _templates/
+_bases/                 ← Obsidian Bases files
 ```
 
 ### Note types and frontmatter
@@ -112,7 +109,7 @@ Universal on every note:
 type: character | location | faction | event | concept | story
 status: draft | complete
 aliases: []
-last_updated: YYYY-MM-DD
+last_updated: YYYY-MM-DD HH:mm
 ```
 
 Type-specific:
@@ -200,7 +197,7 @@ direction.md (top level, up: absent)
 type: story
 status: draft | complete
 aliases: []
-last_updated: YYYY-MM-DD
+last_updated: YYYY-MM-DD HH:mm
 up: "[[parent-story-note]]"     ← absent on top-level note
 scope: "[[direction]]" | "[[arc]]" | "[[intention]]"
 ```

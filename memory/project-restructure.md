@@ -51,11 +51,11 @@ Platform-decoupling restructure: Phases 1–2 are now platform-agnostic; only Ph
   - Stub notes with frontmatter: worldbuilding-plan.md (type: project), seed.md (type: project), log.md (type: project), agent-context.md (type: reference)
   - Single `notes/` content folder
 - Folder reference cascade: worldbuilder-world-planning, worldbuilder-ainime-export, worldbuilder-lorebook, worldbuilder-story-direction, worldbuilder-calendar all updated from type-specific folders → `notes/`
+- `docs/restructure-notes.md`: full pass complete — old folder structure replaced with flat `notes/` decision; `last_updated` format fixed to `YYYY-MM-DD HH:mm`; roster reference updated
+- `worldbuilder-world-planning`: phases 2d (Location notes) and 2e (Faction notes) added; old 2d→2f (Cast planning), 2e→2g (Character notes); dependency diagram and parallel execution updated
+- `worldbuilder-character-blueprint`: four writing rules incorporated — plain/concrete language (Anglo-Saxon over Latinate), positive statements, starting-state-only rule, relationship POV; self-check updated
 
 ### Next
-- `docs/restructure-notes.md`: update throughout — still documents old type-specific folder structure (characters/, locations/, etc.) throughout; needs full pass
-- `worldbuilder-world-planning`: phase table has no entry for location notes or faction notes — `worldbuilder-location-blueprint` and `worldbuilder-faction-blueprint` are not mentioned anywhere in the planning skill; decide whether to add explicit Wide phases for these or integrate them differently
-- Incorporate Sunmist Valley character writing feedback into `worldbuilder-character-blueprint` skill content: (1) plain Anglo-Saxon style outside Example Dialogue; (2) initial-state-only rule — no forward refs outside Storylines; (3) relationship entries from this character's POV only; (4) positive characterization — describe what characters ARE, not what they aren't. All four are in `memory/feedback-*.md`.
 - Enable and configure frontmatter-modified-date plugin: set format to `YYYY-MM-DD HH:mm` in plugin settings
 
 ## Key files

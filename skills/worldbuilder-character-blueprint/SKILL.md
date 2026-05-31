@@ -98,7 +98,11 @@ Key rules that apply throughout all three:
 
 **Make decisions, don't hedge.** Every fact in the note is a decision. Never write "X or Y" or "grew up somewhere, perhaps Y" unless the ambiguity is a deliberate mystery being preserved intentionally. If you don't know, ask the user. A character who "grew up in the city or possibly a small town" is an incomplete note, not a subtle one.
 
-**Note register is functional, not literary.** Plain, direct language throughout. "He deflects compliments by finding something to fix" is a correct sentence. Poetic constructions gesture at something without stating it — state it plainly instead. If a sentence sounds like it belongs in a novel, rewrite it as a direct statement.
+**Note register is functional, not literary.** Plain, direct language throughout. Prefer short concrete words over Latinate vocabulary: "she knows," "he keeps it to himself" rather than "she maintains an internal rationalization," "he sustains that framing." If a sentence sounds like it belongs in a novel, rewrite it as a direct statement. Only Example Dialogue earns stylistic voice.
+
+**Write what characters ARE, not what they aren't.** Positive statements give the LLM something to act on. Negative constructions ("not the quiet one," "doesn't believe in magic") define by absence — the LLM has to invent the positive case itself. State the fact directly. Factual negatives are fine when the un-done thing is the meaningful information: "she has not sent the letter," "he hasn't asked."
+
+**The note describes the character's starting state.** Nothing outside Storylines may reference events that haven't happened yet or developments that require time to unfold. Check: has this already happened before the player meets this character? If not, move it to Storylines or cut it.
 
 **Section discipline.** Each section carries information the others don't. Soul and behavioral descriptions describe general patterns — if a behavior is primarily about one specific relationship, it belongs in Relationships. History and formative events involving named people belong in Environment. Redundancy between sections usually means content is in the wrong place.
 
@@ -172,10 +176,13 @@ After completing a household group or batch of characters, run a relationship sy
 - [ ] Self-image gap stated directly
 - [ ] Speech patterns described concretely if distinctive
 - [ ] Plain language throughout — no literary flair
+- [ ] No negative-led trait characterization (state what they ARE)
+- [ ] No forward references outside Storylines (starting state only)
 
 **Relationships**
 - [ ] Coverage requirements met (see `relationships.md`)
 - [ ] Each entry specifies current behavioral dynamic, not just history or emotional label
+- [ ] Each entry describes this character's experience of the other person, not the other person's traits
 
 **Relationship Behavior**
 - [ ] Default register described
