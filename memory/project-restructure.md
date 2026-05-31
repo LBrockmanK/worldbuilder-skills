@@ -55,8 +55,6 @@ Platform-decoupling restructure: Phases 1–2 are now platform-agnostic; only Ph
 - `worldbuilder-world-planning`: phases 2d (Location notes) and 2e (Faction notes) added; old 2d→2f (Cast planning), 2e→2g (Character notes); dependency diagram and parallel execution updated
 - `worldbuilder-character-blueprint`: four writing rules incorporated — plain/concrete language (Anglo-Saxon over Latinate), positive statements, starting-state-only rule, relationship POV; self-check updated
 
-### Next
-- Enable and configure frontmatter-modified-date plugin: set format to `YYYY-MM-DD HH:mm` in plugin settings
 
 ## Key files
 - `docs/restructure-notes.md` — full architecture decisions and rationale (current as of 2026-05-30)
