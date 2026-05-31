@@ -1,6 +1,6 @@
 ﻿---
-name: worldbuilder-story-direction
-description: Use when writing the opening arc or standing creative brief for an AI-powered narrative game. Also use when LLM output escalates too fast, when romantic or dramatic intensity feels unearned, when dark content is handled carelessly, or when scenes lack pacing variation.
+name: worldbuilder-story
+description: Use when writing story notes for an AI-powered narrative game — the standing creative brief, opening arc, major arcs, and story intentions. Also use when LLM output escalates too fast, when romantic or dramatic intensity feels unearned, when dark content is handled carelessly, or when scenes lack pacing variation.
 ---
 
 # Story Direction
@@ -127,4 +127,4 @@ After the first full year, if characters with strong chemistry have not moved to
 
 Story direction work regularly surfaces world knowledge that belongs in `notes/` notes rather than the direction brief — historical context implied by the opening arc, background on the hidden layer that shouldn't be in the standing brief, lore that shapes pacing guidance but reads as exposition if left in this document.
 
-When this happens, create a concept note immediately. Use `worldbuilder-lorebook` for layer classification and writing guidance. Do not leave world knowledge embedded in the story direction — it will either bloat the brief or be invisible to the export layer's lorebook packaging.
+When this happens, create a concept note immediately. Use `worldbuilder-concept` for layer classification and writing guidance. Do not leave world knowledge embedded in the story notes — it will either bloat the brief or be invisible to the export layer's lorebook packaging.

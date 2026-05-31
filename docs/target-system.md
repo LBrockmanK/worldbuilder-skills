@@ -43,14 +43,14 @@ All field names below are the exact JSON keys. These fields are produced by `wor
 | JSON field | UI label | Type | Source content skill |
 |---|---|---|---|
 | `initialStoryArc` | Opening Story Arc | string | `worldbuilder-world-foundation` → `seed.md` |
-| `arcManagerGuidance` | Ongoing Story Direction | string | `worldbuilder-story-direction` → `story/` |
-| `storyTriggers` | Story Triggers (Events) | StoryTrigger[ ] | `worldbuilder-story-direction` + `worldbuilder-calendar` → `story/` + `events/` |
+| `arcManagerGuidance` | Ongoing Story Direction | string | `worldbuilder-story` → `notes/` |
+| `storyTriggers` | Story Triggers (Events) | StoryTrigger[ ] | `worldbuilder-story` (intention notes) + `worldbuilder-concept` (recurring event notes) → `notes/` |
 
 ### Field notes
 
-**`initialStoryArc`** — A brief, evocative description of the situation when the player arrives. Not a scripted sequence — it sets the stage. Drafted in the Seed phase and refined after the cast exists. See `worldbuilder-story-direction` for content guidance.
+**`initialStoryArc`** — A brief, evocative description of the situation when the player arrives. Not a scripted sequence — it sets the stage. Drafted in the Seed phase and refined after the cast exists. See `worldbuilder-story` for content guidance.
 
-**`arcManagerGuidance`** — The engine's standing creative brief throughout the game. The primary guard against escalation, flattening, and inappropriate pacing. Covers: author framing, romance pacing, dark themes, hidden layer handling, seasonal tone, pacing. This is one of the most important fields; a weak brief here degrades every scene the engine generates. See `worldbuilder-story-direction` for the full template.
+**`arcManagerGuidance`** — The engine's standing creative brief throughout the game. The primary guard against escalation, flattening, and inappropriate pacing. Covers: author framing, romance pacing, dark themes, hidden layer handling, seasonal tone, pacing. This is one of the most important fields; a weak brief here degrades every scene the engine generates. See `worldbuilder-story` for the full template.
 
 **`storyTriggers`** — Named events with a day trigger and a narrative injection prompt. When the trigger day is reached (or when a recurring event's anniversary arrives), the `promptInjection` text is injected into the engine's context.
 
@@ -113,7 +113,7 @@ Set `recurring: true` for annual events (festivals, observances). One-time event
 
 | JSON field path | Type | Skill |
 |---|---|---|
-| `loreEntries` | LoreEntry[ ] | `worldbuilder-lorebook` |
+| `loreEntries` | LoreEntry[ ] | `worldbuilder-concept` |
 
 ### LoreEntry schema
 

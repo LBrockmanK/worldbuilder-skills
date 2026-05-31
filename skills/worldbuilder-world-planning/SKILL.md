@@ -80,8 +80,8 @@ Next: Continue character notes. Suggested: dispatch 4 in parallel.
 |---|---|---|---|
 | 0. Ingestion | Pre-Seed | `worldbuilder-ingestion` | Ingestion index + extracted content |
 | 1. Seed | Seed | `worldbuilder-world-foundation` | `seed.md` |
-| 2a. Concept notes | Wide | `worldbuilder-lorebook` | `notes/` |
-| 2b. Story notes | Wide | `worldbuilder-story-direction` | `notes/` |
+| 2a. Concept notes | Wide | `worldbuilder-concept` | `notes/` |
+| 2b. Story notes | Wide | `worldbuilder-story` | `notes/` |
 | 2c. Location notes | Wide | `worldbuilder-location-blueprint` | `notes/` |
 | 2d. Faction notes | Wide | `worldbuilder-faction-blueprint` | `notes/` |
 | 2e. Cast planning | Wide | (this skill — see below) | Cast plan in `worldbuilding-plan.md` |

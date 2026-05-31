@@ -105,7 +105,7 @@ Recurring event concept notes in `notes/` become `storyTriggers` entries with `r
 
 ## Scene Structure and Day Segment Pacing
 
-The `arcManagerGuidance` field (derived from `notes/direction.md`) contains the pacing guidance for day segments. This is written during the Wide phase by `worldbuilder-story-direction` — verify it is complete before export.
+The `arcManagerGuidance` field (derived from `notes/direction.md`) contains the pacing guidance for day segments. This is written during the Wide phase by `worldbuilder-story` — verify it is complete before export.
 
 Key items to confirm are present in the direction note:
 - Escalation ceiling: at most one emotionally significant beat per day under normal circumstances

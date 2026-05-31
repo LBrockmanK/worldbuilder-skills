@@ -173,7 +173,7 @@ Pre-game text the player reads before starting. Sets expectations for tone and s
 The situation the player arrives into. Evocative, not scripted — establishes the stage rather than dictating what happens. Cover: the setting's visible state on arrival, the immediate invitation for engagement, what the player's arrival means to the community.
 
 **Story Direction (stub)**
-Standing creative direction for the story engine. Write a stub once the cast structure is established; the full version is completed by `worldbuilder-story-direction` after the roster exists. See that skill for structure and content guidance.
+Standing creative direction for the story engine. Write a stub once the cast structure is established; the full version is completed by `worldbuilder-story` after the roster exists. See that skill for structure and content guidance.
 
 ### Additional seed outputs
 

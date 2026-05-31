@@ -107,7 +107,7 @@ Documents: `agent-context.md` (this file)
 | Character notes | `worldbuilder-character-blueprint` |
 | Location notes | `worldbuilder-location-blueprint` |
 | Faction notes | `worldbuilder-faction-blueprint` |
-| Concept notes | `worldbuilder-lorebook` |
-| Story notes | `worldbuilder-story-direction` |
+| Concept notes | `worldbuilder-concept` |
+| Story notes | `worldbuilder-story` |
 | Ingest existing material | `worldbuilder-ingestion` |
 | Export to target system | `worldbuilder-ainime-export` |
