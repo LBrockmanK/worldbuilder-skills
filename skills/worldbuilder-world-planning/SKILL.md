@@ -212,7 +212,7 @@ Use these checklists at each phase gate. If any item is unresolved, surface it t
 
 ### Cast planning complete
 
-- [ ] All coverage check items from Phase 2d above verified
+- [ ] All coverage check items from Phase 2f above verified
 - [ ] Every character has: household, type, species/age, role, archetype, key relationships, summary
 - [ ] Intimate dynamics flags set where applicable
 

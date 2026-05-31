@@ -59,7 +59,7 @@ Platform-decoupling restructure: Phases 1–2 are now platform-agnostic; only Ph
 - Enable and configure frontmatter-modified-date plugin: set format to `YYYY-MM-DD HH:mm` in plugin settings
 
 ## Key files
-- `docs/restructure-notes.md` — full architecture decisions and rationale (may have stale folder structure)
+- `docs/restructure-notes.md` — full architecture decisions and rationale (current as of 2026-05-30)
 - `docs/target-system.md` — ainime-games field reference (export skill uses this)
 - `skills/worldbuilder-setup/worldvault/` — vault template; canonical source for project structure
 - `skills/worldbuilder-setup/SKILL.md` — setup skill
