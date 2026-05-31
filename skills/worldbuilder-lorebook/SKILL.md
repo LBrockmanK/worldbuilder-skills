@@ -149,6 +149,25 @@ This gives the engine a construction kit rather than a cast list, producing more
 
 ---
 
+## Recurring World Events
+
+Festivals, seasonal observances, cultural rituals, and other recurring world events are concept notes like any other world knowledge. Write one note per discrete event.
+
+**Layer classification applies:**
+- Surface — well-known community celebrations; everyone participates, no one questions it
+- Mid — observances with historical depth or old stories behind them; the community marks them but the origins are half-forgotten
+- Deep — rituals with hidden significance, ancestral ceremonies that touch the hidden layer of the setting
+
+**Write the mood, not what happens.** An event note describes the community's collective behavior, the physical and emotional register of the day, what kinds of interactions become natural, and the traditions that anchor it. The engine generates specific scenes from this context — write what makes those scenes possible.
+
+**Aliases** should cover every realistic way the event comes up in dialogue: common name, formal name, what characters actually say ("the festival," "harvest time," "the long night"). The export skill derives keyword triggers from these.
+
+**Limitations and costs apply here too.** If the event carries social obligation, ritual restriction, or community pressure, document it. A harvest festival that everyone is expected to attend and that carries real social consequence for absence generates more behavioral content than one that is merely pleasant.
+
+The export skill packages recurring event notes into platform-specific calendar formats. Write for the AI's context — the platform format is the export skill's concern.
+
+---
+
 ## Concept Note Lifecycle
 
 World knowledge is a living collection, not a phase that opens and closes. Any stage of the project can produce facts worth capturing: a household design decision, a character backstory detail, an event's implied history, a conversation that clarifies the magic system. Create a concept note whenever a discrete piece of world knowledge solidifies — do not wait.

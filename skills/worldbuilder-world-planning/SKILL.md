@@ -9,7 +9,7 @@ description: Use at the start of every worldbuilding session — new project or 
 
 This skill is the single entry point for all worldbuilding sessions. Every session starts here. It reads project state, determines the current phase, proposes next steps, and hands off to the appropriate skill.
 
-**Hard gate principle:** Phase completion is a prerequisite, not a suggestion. No character work before the household structure in `seed.md` is complete. No export work before character notes are complete. No lorebook or calendar before the foundation decisions are finalized. Each phase produces the context the next phase depends on.
+**Hard gate principle:** Phase completion is a prerequisite, not a suggestion. No character work before the household structure in `seed.md` is complete. No export work before character notes are complete. No Wide-phase content before the foundation decisions are finalized. Each phase produces the context the next phase depends on.
 
 **Ask by default:** At any decision point — a design choice, missing information, options to weigh — stop and surface it to the user. The cost of fixing errors in generated documents is higher than the cost of answering an upfront question.
 
@@ -60,12 +60,11 @@ Keep it short — one short table and one line of proposed action is enough:
 ```
 Phase 1  (Seed)             Done    → seed.md
 Phase 2a (Concept notes)    Done    → notes/
-Phase 2b (Calendar)         Done    → notes/
-Phase 2c (Story notes)      Done    → notes/
-Phase 2d (Location notes)   Done    → notes/
-Phase 2e (Faction notes)    Done    → notes/
-Phase 2f (Cast planning)    Done    → worldbuilding-plan.md
-Phase 2g (Character notes)  6/24    → notes/
+Phase 2b (Story notes)      Done    → notes/
+Phase 2c (Location notes)   Done    → notes/
+Phase 2d (Faction notes)    Done    → notes/
+Phase 2e (Cast planning)    Done    → worldbuilding-plan.md
+Phase 2f (Character notes)  6/24    → notes/
 Phase 3  (Export)           0/24    → worldbuilder-ainime-export
 
 Next: Continue character notes. Suggested: dispatch 4 in parallel.
@@ -82,12 +81,11 @@ Next: Continue character notes. Suggested: dispatch 4 in parallel.
 | 0. Ingestion | Pre-Seed | `worldbuilder-ingestion` | Ingestion index + extracted content |
 | 1. Seed | Seed | `worldbuilder-world-foundation` | `seed.md` |
 | 2a. Concept notes | Wide | `worldbuilder-lorebook` | `notes/` |
-| 2b. Calendar | Wide | `worldbuilder-calendar` | `notes/` (concept + story notes) |
-| 2c. Story notes | Wide | `worldbuilder-story-direction` | `notes/` |
-| 2d. Location notes | Wide | `worldbuilder-location-blueprint` | `notes/` |
-| 2e. Faction notes | Wide | `worldbuilder-faction-blueprint` | `notes/` |
-| 2f. Cast planning | Wide | (this skill — see below) | Cast plan in `worldbuilding-plan.md` |
-| 2g. Character notes | Wide | `worldbuilder-character-blueprint` | `notes/` |
+| 2b. Story notes | Wide | `worldbuilder-story-direction` | `notes/` |
+| 2c. Location notes | Wide | `worldbuilder-location-blueprint` | `notes/` |
+| 2d. Faction notes | Wide | `worldbuilder-faction-blueprint` | `notes/` |
+| 2e. Cast planning | Wide | (this skill — see below) | Cast plan in `worldbuilding-plan.md` |
+| 2f. Character notes | Wide | `worldbuilder-character-blueprint` | `notes/` |
 | 3. Export | Export | `worldbuilder-ainime-export` | Platform-specific outputs |
 | 3b. Review | Export | — | Sign-off across all documents |
 
@@ -97,27 +95,26 @@ Next: Continue character notes. Suggested: dispatch 4 in parallel.
 [Ingestion — optional, when existing material exists]
     └─►
 Seed (seed.md)
-    ├─► Lorebook notes (2a)  ─┐
-    ├─► Calendar/Events (2b)  │
-    ├─► Story Direction (2c)  ├─► Character notes (2g) ─► Export ─► Review
-    ├─► Location notes (2d)   │         ▲
-    ├─► Faction notes (2e)   ─┘         │
-    └─► Cast planning (2f) ─────────────┘ (required gate)
+    ├─► Concept notes (2a)  ─┐
+    ├─► Story notes (2b)     │
+    ├─► Location notes (2c)  ├─► Character notes (2f) ─► Export ─► Review
+    ├─► Faction notes (2d)  ─┘         ▲
+    └─► Cast planning (2e) ─────────────┘ (required gate)
 ```
 
-Phases 2a–2f are independent of each other — all branch from the seed. The only hard dependency is that character notes (2g) require cast planning (2f) to be complete. Completing location and faction notes before character notes is recommended, not required.
+Phases 2a–2e are independent of each other — all branch from the seed. The only hard dependency is that character notes (2f) require cast planning (2e) to be complete. Completing location and faction notes before character notes is recommended, not required.
 
-The Seed phase is strictly sequential with everything that follows. Character notes require cast planning to be complete. All other Wide-phase work (2a–2f) is independent — individual phases can start immediately after the seed with no waiting on each other. Individual character notes are independent of each other once the cast plan exists.
+The Seed phase is strictly sequential with everything that follows. Character notes require cast planning to be complete. All other Wide-phase work (2a–2e) is independent — individual phases can start immediately after the seed with no waiting on each other. Individual character notes are independent of each other once the cast plan exists.
 
-### Phases 2d–2e: Location and faction notes
+### Phases 2c–2d: Location and faction notes
 
-Once seed.md is complete, dispatch `worldbuilder-location-blueprint` for each named location and `worldbuilder-faction-blueprint` for each household cluster. These phases run in parallel with lorebook notes, calendar/events, and story direction — no orchestration needed here; the blueprints are self-contained. Count of notes matches the seed's location list and household cluster list.
+Once seed.md is complete, dispatch `worldbuilder-location-blueprint` for each named location and `worldbuilder-faction-blueprint` for each household cluster. These phases run in parallel with concept notes and story notes — no orchestration needed here; the blueprints are self-contained. Count of notes matches the seed's location list and household cluster list.
 
 Location and faction notes provide context that character notes build on. Run them before character notes where possible.
 
 ---
 
-### Phase 2f: Cast planning
+### Phase 2e: Cast planning
 
 No dedicated skill exists for cast planning. Build it here, with user input, before dispatching to `worldbuilder-character-blueprint`.
 
@@ -184,14 +181,6 @@ Use these checklists at each phase gate. If any item is unresolved, surface it t
 - [ ] Background NPC guidelines concept note written
 - [ ] `layer` frontmatter set on all concept notes
 
-### Calendar complete
-
-- [ ] Era defined
-- [ ] Weather pool written (6–8 types with narrative weight)
-- [ ] All 4 major festivals written as concept notes with full atmospheric descriptions
-- [ ] All 4–5 minor observances written as concept notes
-- [ ] First-year one-time narrative events captured as story notes (scope: intention) if needed
-
 ### Story notes complete
 
 - [ ] `notes/direction.md` written with all required sections: author framing, romance pacing, dark themes, hidden layer handling, seasonal tone, pacing, year 2+ NPC relationships
@@ -212,7 +201,7 @@ Use these checklists at each phase gate. If any item is unresolved, surface it t
 
 ### Cast planning complete
 
-- [ ] All coverage check items from Phase 2f above verified
+- [ ] All coverage check items from Phase 2e above verified
 - [ ] Every character has: household, type, species/age, role, archetype, key relationships, summary
 - [ ] Intimate dynamics flags set where applicable
 
@@ -243,9 +232,9 @@ See `worldbuilder-ainime-export` for export completion criteria. Export is the o
 
 ### What can run in parallel
 
-**Phases 2a–2f** — all Wide-phase work branches from the seed and is independent of every other Wide phase. Dispatch one agent per deliverable. Location notes and faction notes can run at the same time as lorebook, calendar, and story direction.
+**Phases 2a–2e** — all Wide-phase work branches from the seed and is independent of every other Wide phase. Dispatch one agent per deliverable.
 
-**Phase 2g, Character notes** — once the cast plan exists, every character is independent. Dispatch in groups of 3–4 per agent.
+**Phase 2f, Character notes** — once the cast plan exists, every character is independent. Dispatch in groups of 3–4 per agent.
 
 **Phase 3, Export** — once a character note is complete, that character's export is independent. Parallelize freely.
 
@@ -253,7 +242,7 @@ See `worldbuilder-ainime-export` for export completion criteria. Export is the o
 
 **Phase 1 (Seed)** before everything else.
 
-**Phase 2f (Cast planning)** before any character notes begin.
+**Phase 2e (Cast planning)** before any character notes begin.
 
 **Relationship Sync Pass** — run at two points: (1) after each household group of character notes, while the characters are fresh in context; (2) a final pass after all notes are complete. The note-level pass catches inconsistencies before they carry into export.
 
@@ -299,12 +288,11 @@ Subset details (if applicable): [character names]
 |---|---|---|---|---|
 | 1. Seed | Seed | Done / In Progress / Not Started | seed.md | |
 | 2a. Concept notes | Wide | ... | notes/ | |
-| 2b. Calendar | Wide | ... | notes/ | |
-| 2c. Story notes | Wide | ... | notes/ | |
-| 2d. Location notes | Wide | ... | notes/ | X of Y complete |
-| 2e. Faction notes | Wide | ... | notes/ | X of Y complete |
-| 2f. Cast planning | Wide | ... | worldbuilding-plan.md | |
-| 2g. Character notes | Wide | ... | notes/ | X of Y complete |
+| 2b. Story notes | Wide | ... | notes/ | |
+| 2c. Location notes | Wide | ... | notes/ | X of Y complete |
+| 2d. Faction notes | Wide | ... | notes/ | X of Y complete |
+| 2e. Cast planning | Wide | ... | worldbuilding-plan.md | |
+| 2f. Character notes | Wide | ... | notes/ | X of Y complete |
 | 3. Export | Export | ... | worldbuilder-ainime-export | X of Y complete |
 | 3b. Review | Export | ... | — | |
 
@@ -356,4 +344,4 @@ If any check reveals an unresolved issue, ask the user before marking the phase 
 
 **Papering over open questions.** An unresolved decision in the Seed phase propagates inconsistency through every later phase. Flag early, ask the user, do not guess.
 
-**Treating phase gates as optional.** The dependency structure is real. Lorebook written before foundation decisions are finalized will contradict them. Calendar events written before the community's character is established will feel generic.
+**Treating phase gates as optional.** The dependency structure is real. Concept notes and story notes written before the seed is finalized will contradict it — Wide-phase content depends on the foundation being locked.

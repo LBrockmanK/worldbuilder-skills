@@ -1,6 +1,6 @@
 ---
 name: worldbuilder-ainime-export
-description: Use when exporting a completed Wide-phase worldbuilding project to ainime-games.com format. Requires complete character notes, seed.md, and Wide-phase concept, event, and story notes.
+description: Use when exporting a completed Wide-phase worldbuilding project to ainime-games.com format. Requires complete character notes, seed.md, and Wide-phase concept and story notes.
 ---
 
 # Ainime Export
@@ -18,9 +18,8 @@ Full JSON schema reference: `../../docs/target-system.md`.
 Before running export, verify:
 - [ ] `seed.md` complete (all sections present)
 - [ ] All character notes in `notes/` complete (status: complete in frontmatter)
-- [ ] `notes/` notes written and layer-tagged
-- [ ] `notes/` notes written with dates
-- [ ] `notes/` direction note and arc notes complete
+- [ ] `notes/` concept notes written and layer-tagged
+- [ ] `notes/` story notes (direction, arc, key intentions) complete
 - [ ] Introduction notes created for all characters
 
 If any prerequisite is incomplete, return to the relevant Wide-phase skill rather than exporting a partial world.
@@ -77,9 +76,9 @@ Read `seed.md` and extract the following. The section names in `seed.md` map dir
 
 ## Calendar Configuration
 
-Read all `notes/` notes with a `date` frontmatter field.
+Read `calendar.md` (this skill's reference file) for design guidance on weather pools, festival layout, and day-segment defaults before building this section.
 
-**`calendarConfig.weatherPools`** — Nested object: season → day segment → string array. Each string is a one-line weather description. 10–16 entries per season/segment. Produce from the calendar notes' weather descriptions.
+**`calendarConfig.weatherPools`** — Nested object: season → day segment → string array. Each string is a one-line weather description. 10–16 entries per season/segment. Derive from the world's seasonal tone and seed.md; see `calendar.md` for writing guidance.
 
 ```json
 {
@@ -94,19 +93,19 @@ Read all `notes/` notes with a `date` frontmatter field.
 
 **`eventCalendarSummary`** — Prose overview of the event calendar for LLM reference. Summarize the festival calendar and its emotional rhythms after all events are written.
 
-**`storyTriggers[]` (calendar events)** — One entry per event note. Recurring annual events use `recurring: true`.
+**`storyTriggers[]` (calendar events)** — One entry per recurring-event concept note. Recurring annual events use `recurring: true`. See `calendar.md` for how to derive `triggerOnDay` from a concept note's `trigger-context` field and how to write effective `promptInjection` content.
 
 ```json
 {
   "id": "uuid",
   "name": "Event name",
   "triggerOnDay": 8,
-  "promptInjection": "Narrative direction injected on this day.",
-  "recurring": false
+  "promptInjection": "Active creative direction injected on this day.",
+  "recurring": true
 }
 ```
 
-`triggerOnDay` is the calendar day number. For recurring events, this is the day within the year (1–112 for 4×28 default calendar). `promptInjection` should be written as active creative direction to the story engine, not a neutral description of the event.
+`triggerOnDay` is the absolute calendar day (1–112 for the 4×28 default). `promptInjection` is active direction to the story engine, not a neutral description of the event.
 
 ---
 
