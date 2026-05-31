@@ -9,6 +9,8 @@ description: Use when designing the calendar, festivals, and recurring events fo
 
 The calendar serves two functions: it structures the engine's sense of time, and it provides recurring emotional anchors that make the setting feel alive. Festivals and events are narrative directives injected into the planner on specific days — they shift the emotional register of scenes that day without scripting what happens.
 
+Calendar work produces two types of vault notes: **concept notes** for recurring events (festivals, observances) and **story notes** for one-time narrative beats. There is no separate event note type — see Event Types below for where each category lands.
+
 ---
 
 ## Calendar Fields
@@ -23,13 +25,13 @@ The calendar serves two functions: it structures the engine's sense of time, and
 
 ---
 
-## Event Types
+## Event Types and Note Destinations
 
-**Recurring annual events** repeat on the same relative day every year. Use for festivals, cultural observances, community rituals — anything that structures the calendar's emotional rhythm.
+**Recurring annual events** (festivals, cultural observances, community rituals) become **concept notes** (`type: concept`) in `notes/`. Use `worldbuilder-lorebook` for guidance on writing them — layer classification applies, aliases become keyword triggers at export, and limitations/costs blocks apply to any recurring event with internal rules or social obligations.
 
-**One-time events** fire once and are done. Use for opening arc milestones, first-year setup moments, things that can only happen once.
+**One-time narrative events** (opening arc milestones, first-year beats, things that can only happen once) become **story notes** (`type: story`, `scope: "[[intention]]"`) in `notes/`. Use `worldbuilder-story-direction` for guidance on writing intention notes. One-time events are soft targets, not scripts — write them as possibilities the world is set up to enable.
 
-**Scene structure guidance** applies to every single day. It is not an event — it is standing instruction for how each day segment runs. This lives in the story direction notes, not as a calendar event. See the Scene Structure section below for what to include; it is written by `worldbuilder-story-direction`.
+**Scene structure guidance** is not an event — it is standing instruction for how each day segment runs. This lives in `notes/direction.md` (the top-level story note). See the Scene Structure section below for what to include; it is written by `worldbuilder-story-direction`.
 
 ---
 

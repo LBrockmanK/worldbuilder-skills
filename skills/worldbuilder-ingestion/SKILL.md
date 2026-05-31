@@ -100,6 +100,8 @@ Cards that fail on more than one of these are candidates for a full blueprinting
 
 ### SillyTavern / World Info Lorebooks
 
+In the ainime/isekaizero platform, "world info" is the platform term for lorebook entries — the two names refer to the same thing. These skills use "lorebook" as the generic term; "world info" appears in ainime platform documentation.
+
 Lorebooks are JSON files containing arrays of entries. Embedded character books follow the same structure.
 
 **Entry fields:**
@@ -147,6 +149,24 @@ This decision affects everything downstream. Get it before proceeding.
 - Areas where the source is thin and the fidelity decision will matter
 
 Characters from media franchises almost always benefit from a blueprinting pass. Published character descriptions tend to be written for narrative purposes, not as AI behavioral specifications. Behavioral specificity, negative-track content, and relationship depth are usually absent.
+
+### Prior-Workflow Worldbuilder Documents
+
+When the project has character blueprints, notes, or other documents produced by an earlier version of this workflow (or a similar process), assess them carefully before deciding how to treat them.
+
+**The key distinction:** An old blueprint may have been a *narrowing pass* — a planning step before full card writing — rather than the equivalent of what `worldbuilder-character-blueprint` produces today. In the current workflow, the character blueprint IS the full Wide-phase deliverable. An old planning-pass blueprint is source material, not a completed note.
+
+**How to assess:**
+- Compare the document structure to what `worldbuilder-character-blueprint` is expected to produce (frontmatter, preamble, concept, foundation, behavioral descriptions, relationships, relationship behavior, storylines)
+- If the format matches and content is complete → treat as "use near-as-is" and note any gaps
+- If the format differs — even if the content is solid — flag as "source material requiring reprocessing"
+
+**In the ingestion index, mark prior-workflow blueprints as:**
+> "Use as source input for `worldbuilder-character-blueprint` — content is good, structure requires reprocessing."
+
+The content is valuable and should be used as input for the blueprint skill. It is not a substitute for running the skill. Do not mark prior-workflow blueprints as complete Wide-phase notes without explicit confirmation that the format matches.
+
+---
 
 ### Composite Worlds
 

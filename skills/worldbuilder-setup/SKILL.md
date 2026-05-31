@@ -19,13 +19,24 @@ Run this skill once per project, before any other worldbuilder skill. It does no
 
 The `worldvault/` folder that accompanies this skill file is the vault template. Locate it at the same directory level as this SKILL.md file.
 
-### Step 2: Ask for the project directory
+### Step 2: Confirm the vault location
 
-Ask:
+Propose a default and offer two opt-outs:
 
-> "Where should the project vault be created? Provide the full path to a new, empty folder — I'll copy the vault template there."
+> "I'll copy the vault template into a `worldvault/` subfolder here. Let me know if you'd prefer a different location, or if you'd like to use the current directory itself as the vault."
 
-Wait for their answer. Confirm the target path either exists and is empty, or does not yet exist. If it does not exist, ask whether to create it.
+Three branches — handle exactly one:
+
+**Branch A — Default `worldvault/` subfolder or any named subfolder:**
+If the path does not yet exist, create it and proceed to Step 3. If it exists and is empty, proceed to Step 3. If it exists and is **not empty** — stop. Do not touch any existing files. Say: "That folder already has files in it. Please specify a different path." Wait for a new path before continuing.
+
+**Branch B — Root directory as vault, directory is empty:**
+Proceed to Step 3 directly.
+
+**Branch C — Root directory as vault, directory has existing files:**
+Say:
+> "This directory has existing files. I can move them into a `_source/` subfolder to make room for the vault template — please confirm before I move anything, or give me a different location instead."
+Do not move any files until the user explicitly confirms. The `_source/` move is valid only in this branch, only after confirmation. Do not improvise it as a workaround for Branch A.
 
 ### Step 3: Copy worldvault/ into the project directory
 

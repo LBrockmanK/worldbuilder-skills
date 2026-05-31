@@ -59,9 +59,9 @@ Keep it short — one short table and one line of proposed action is enough:
 
 ```
 Phase 1  (Seed)             Done    → seed.md
-Phase 2a (Lorebook notes)   Done    → notes/
-Phase 2b (Calendar/Events)  Done    → notes/
-Phase 2c (Story Direction)  Done    → notes/
+Phase 2a (Concept notes)    Done    → notes/
+Phase 2b (Calendar)         Done    → notes/
+Phase 2c (Story notes)      Done    → notes/
 Phase 2d (Location notes)   Done    → notes/
 Phase 2e (Faction notes)    Done    → notes/
 Phase 2f (Cast planning)    Done    → worldbuilding-plan.md
@@ -81,9 +81,9 @@ Next: Continue character notes. Suggested: dispatch 4 in parallel.
 |---|---|---|---|
 | 0. Ingestion | Pre-Seed | `worldbuilder-ingestion` | Ingestion index + extracted content |
 | 1. Seed | Seed | `worldbuilder-world-foundation` | `seed.md` |
-| 2a. Lorebook notes | Wide | `worldbuilder-lorebook` | `notes/` |
-| 2b. Calendar/Events | Wide | `worldbuilder-calendar` | `notes/` |
-| 2c. Story Direction | Wide | `worldbuilder-story-direction` | `notes/` |
+| 2a. Concept notes | Wide | `worldbuilder-lorebook` | `notes/` |
+| 2b. Calendar | Wide | `worldbuilder-calendar` | `notes/` (concept + story notes) |
+| 2c. Story notes | Wide | `worldbuilder-story-direction` | `notes/` |
 | 2d. Location notes | Wide | `worldbuilder-location-blueprint` | `notes/` |
 | 2e. Faction notes | Wide | `worldbuilder-faction-blueprint` | `notes/` |
 | 2f. Cast planning | Wide | (this skill — see below) | Cast plan in `worldbuilding-plan.md` |
@@ -178,25 +178,25 @@ Use these checklists at each phase gate. If any item is unresolved, surface it t
 - [ ] No individual character names assigned yet — household types and counts only
 - [ ] Every household has at least one named connection to another household
 
-### Lorebook notes complete
+### Concept notes complete
 
 - [ ] All three layers present (surface, mid, deep)
-- [ ] Concept notes written for all major locations
 - [ ] Background NPC guidelines concept note written
 - [ ] `layer` frontmatter set on all concept notes
 
-### Calendar/Events complete
+### Calendar complete
 
 - [ ] Era defined
 - [ ] Weather pool written (6–8 types with narrative weight)
-- [ ] All 4 major festivals written as event notes with full atmospheric descriptions
-- [ ] All 4–5 minor observances written as event notes
-- [ ] First-year one-time events written if needed
+- [ ] All 4 major festivals written as concept notes with full atmospheric descriptions
+- [ ] All 4–5 minor observances written as concept notes
+- [ ] First-year one-time narrative events captured as story notes (scope: intention) if needed
 
-### Story Direction complete
+### Story notes complete
 
-- [ ] Opening arc written — evocative, not scripted
-- [ ] All ongoing story direction sections present: author framing, romance pacing, dark themes, hidden layer handling, seasonal tone, pacing, year 2+ NPC relationships
+- [ ] `notes/direction.md` written with all required sections: author framing, romance pacing, dark themes, hidden layer handling, seasonal tone, pacing, year 2+ NPC relationships
+- [ ] Opening arc note written — evocative, not scripted
+- [ ] Key intention notes written for major story possibilities
 
 ### Location notes complete
 
@@ -298,9 +298,9 @@ Subset details (if applicable): [character names]
 | Phase | Group | Status | Deliverable | Notes |
 |---|---|---|---|---|
 | 1. Seed | Seed | Done / In Progress / Not Started | seed.md | |
-| 2a. Lorebook notes | Wide | ... | notes/ | |
-| 2b. Calendar/Events | Wide | ... | notes/ | |
-| 2c. Story Direction | Wide | ... | notes/ | |
+| 2a. Concept notes | Wide | ... | notes/ | |
+| 2b. Calendar | Wide | ... | notes/ | |
+| 2c. Story notes | Wide | ... | notes/ | |
 | 2d. Location notes | Wide | ... | notes/ | X of Y complete |
 | 2e. Faction notes | Wide | ... | notes/ | X of Y complete |
 | 2f. Cast planning | Wide | ... | worldbuilding-plan.md | |
