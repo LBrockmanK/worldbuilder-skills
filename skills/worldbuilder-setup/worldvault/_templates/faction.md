@@ -7,7 +7,7 @@ members: []
 function: 
 ---
 
-> For future agents: this is a faction note. The filename is the faction's name. Use `worldbuilder-faction-blueprint` to build it out.
+> For future agents: this is a faction note. The filename is the faction's name. Use `worldbuilder-faction` to build it out.
 
 ## Preamble
 

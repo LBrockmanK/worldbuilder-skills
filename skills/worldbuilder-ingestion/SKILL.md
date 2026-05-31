@@ -154,15 +154,15 @@ Characters from media franchises almost always benefit from a blueprinting pass.
 
 When the project has character blueprints, notes, or other documents produced by an earlier version of this workflow (or a similar process), assess them carefully before deciding how to treat them.
 
-**The key distinction:** An old blueprint may have been a *narrowing pass* — a planning step before full card writing — rather than the equivalent of what `worldbuilder-character-blueprint` produces today. In the current workflow, the character blueprint IS the full Wide-phase deliverable. An old planning-pass blueprint is source material, not a completed note.
+**The key distinction:** An old blueprint may have been a *narrowing pass* — a planning step before full card writing — rather than the equivalent of what `worldbuilder-character` produces today. In the current workflow, the character blueprint IS the full Wide-phase deliverable. An old planning-pass blueprint is source material, not a completed note.
 
 **How to assess:**
-- Compare the document structure to what `worldbuilder-character-blueprint` is expected to produce (frontmatter, preamble, concept, foundation, behavioral descriptions, relationships, relationship behavior, storylines)
+- Compare the document structure to what `worldbuilder-character` is expected to produce (frontmatter, preamble, concept, foundation, behavioral descriptions, relationships, relationship behavior, storylines)
 - If the format matches and content is complete → treat as "use near-as-is" and note any gaps
 - If the format differs — even if the content is solid — flag as "source material requiring reprocessing"
 
 **In the ingestion index, mark prior-workflow blueprints as:**
-> "Use as source input for `worldbuilder-character-blueprint` — content is good, structure requires reprocessing."
+> "Use as source input for `worldbuilder-character` — content is good, structure requires reprocessing."
 
 The content is valuable and should be used as input for the blueprint skill. It is not a substitute for running the skill. Do not mark prior-workflow blueprints as complete Wide-phase notes without explicit confirmation that the format matches.
 

@@ -104,9 +104,9 @@ Documents: `agent-context.md` (this file)
 | New project setup | `worldbuilder-setup` (once only, then world-planning) |
 | Session start / phase routing | `worldbuilder-world-planning` |
 | Seed phase / world foundation | `worldbuilder-world-foundation` |
-| Character notes | `worldbuilder-character-blueprint` |
-| Location notes | `worldbuilder-location-blueprint` |
-| Faction notes | `worldbuilder-faction-blueprint` |
+| Character notes | `worldbuilder-character` |
+| Location notes | `worldbuilder-location` |
+| Faction notes | `worldbuilder-faction` |
 | Concept notes | `worldbuilder-concept` |
 | Story notes | `worldbuilder-story` |
 | Ingest existing material | `worldbuilder-ingestion` |

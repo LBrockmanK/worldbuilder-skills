@@ -1,6 +1,6 @@
 ﻿# Character Framework — Foundation & Behavioral Descriptions
 
-*Sub-file for `worldbuilder-character-blueprint`. Read this when working on the Foundation and Behavioral Descriptions sections.*
+*Sub-file for `worldbuilder-character`. Read this when working on the Foundation and Behavioral Descriptions sections.*
 
 ---
 

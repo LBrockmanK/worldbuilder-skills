@@ -81,7 +81,7 @@ SEASON 4
 
 Recurring event concept notes in `notes/` become `storyTriggers` entries with `recurring: true`.
 
-**Finding the calendar day:** Read the note's `trigger-context` field. This should specify the season and day (e.g., "Annual — Spring, Day 8"). Convert to absolute calendar day: `(season_number - 1) × days_per_season + day_within_season`.
+**Finding the calendar day:** Read the note body for seasonal or timing language ("early spring," "the darkest night of winter," "midway through harvest"). Assign an absolute calendar day that fits: `(season_number - 1) × days_per_season + day_within_season`. The concept note does not specify an exact day — the exporter makes this decision based on the note content and the world's calendar structure.
 
 **Constructing the entry:**
 ```json

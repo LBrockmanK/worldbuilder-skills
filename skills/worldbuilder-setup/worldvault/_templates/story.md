@@ -7,7 +7,7 @@ up:
 scope: 
 ---
 
-Scope values: `[[direction]]` (top-level creative brief), `[[arc]]` (major story section), `[[intention]]` (specific story possibility), `[[introduction]]` (first player–character contact). Set the `up:` field to the parent note for arc, intention, and introduction notes; leave blank on direction notes. See `worldbuilder-story` for guidance on which sections to include per scope.
+Scope values: `[[arc]]` (major story section), `[[intention]]` (specific story possibility), `[[introduction]]` (first player–character contact). Set the `up:` field to the parent note. See `worldbuilder-story` for guidance on which sections to include per scope. Note: the standing creative brief lives in `direction.md` (type: project), not in a story note.
 
 > For future agents: this is a story note. Use `worldbuilder-story` to build it out.
 

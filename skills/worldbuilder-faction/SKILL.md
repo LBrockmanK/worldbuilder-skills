@@ -1,5 +1,5 @@
 ---
-name: worldbuilder-faction-blueprint
+name: worldbuilder-faction
 description: Use when creating or deepening a faction note for an AI-powered narrative game — any named group (noble household, merchant guild, religious order, criminal network, informal community). Also use when faction members feel interchangeable, or when faction identity is invisible in generated scenes.
 ---
 

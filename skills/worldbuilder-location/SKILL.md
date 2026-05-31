@@ -1,5 +1,5 @@
 ---
-name: worldbuilder-location-blueprint
+name: worldbuilder-location
 description: Use when creating or deepening a location note for an AI-powered narrative game — building a named place from scratch, giving depth to a location that feels like a backdrop, or fixing a location that generates repetitive or atmospheric-only output.
 ---
 
@@ -27,7 +27,7 @@ Work through sections in order. Do not skip sections because the location seems 
 | Behavioral Register | How this place reads across time, observer type, circumstances |
 | History & Meaning | Why it exists, what it implies, secrets if any |
 
-Location notes do not use sub-files — all content lives in one note. Sub-files are only used in skills where sections are too large for a single document (see `worldbuilder-character-blueprint` for reference).
+Location notes do not use sub-files — all content lives in one note. Sub-files are only used in skills where sections are too large for a single document (see `worldbuilder-character` for reference).
 
 ---
 

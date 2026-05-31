@@ -1,33 +1,37 @@
 ﻿---
 name: worldbuilder-story
-description: Use when writing story notes for an AI-powered narrative game — the standing creative brief, opening arc, major arcs, and story intentions. Also use when LLM output escalates too fast, when romantic or dramatic intensity feels unearned, when dark content is handled carelessly, or when scenes lack pacing variation.
+description: Use when writing arc notes and intention notes for an AI-powered narrative game, or when producing direction.md in Phase 1. Also use when LLM output escalates too fast, when romantic or dramatic intensity feels unearned, when dark content is handled carelessly, or when scenes lack pacing variation.
 ---
 
-# Story Direction
+# Story
 
 ## Overview
 
-The story direction is the LLM's standing creative brief. It doesn't describe events — it shapes the engine's approach to generating them.
+This skill serves two related purposes:
 
-Story notes live in `notes/` and use a hierarchy connected by `up:` frontmatter links. Three note types:
+**Phase 1b — direction.md:** `direction.md` is the world's standing creative brief and the story engine's primary guard rail. It is a project document (`type: project`), produced in Phase 1 by world-planning using this skill's section templates as guidance. See the Ongoing Story Direction section below for its complete structure.
 
-**Direction** (`scope: "[[direction]]"`) — The top-level creative brief. No `up:` link. Contains the Opening Situation and all standing Ongoing Story Direction content. This is the primary guard rail against the LLM's default failure modes.
+**Phase 2b — Arc and intention notes:** Once direction.md exists, this skill creates the story notes that extend it. Story notes live in `notes/` and link up to `direction.md` via `up:` frontmatter.
+
+Story note types:
 
 **Arc** (`scope: "[[arc]]"`) — A major story section. `up: "[[direction]]"`. Covers a season, a storyline, or a thematic phase.
 
 **Intention** (`scope: "[[intention]]"`) — A specific story possibility within an arc. `up: "[[arc-name]]"`. Not scripted outcomes — soft targets the world is set up to enable.
 
-Frontmatter for all story notes:
+**Introduction** (`scope: "[[introduction]]"`) — First-contact scene for a specific character. Created during or after character note work, not during the story notes phase.
+
+Frontmatter for story notes:
 ```yaml
 type: story
 status: draft | complete
 aliases: []
 last_updated: YYYY-MM-DD HH:mm
-up: "[[parent-note]]"   # absent on direction note
-scope: "[[direction]]" | "[[arc]]" | "[[intention]]"
+up: "[[parent-note]]"
+scope: "[[arc]]" | "[[intention]]" | "[[introduction]]"
 ```
 
-Start with `notes/direction.md`. Add arc and intention notes as the story picture develops.
+Read `direction.md` before creating arc notes. Arc notes develop what the brief establishes — they do not contradict it.
 
 ---
 
@@ -119,7 +123,7 @@ After the first full year, if characters with strong chemistry have not moved to
 
 **Dark content feels gratuitous.** "Handle with care and weight, not for shock value" combined with "the player is a witness, not a savior" addresses the most common failures.
 
-**Characters collapse into positivity.** This is a character note problem, not a story direction problem — see `worldbuilder-character-blueprint`, particularly the Relationship Behavior section and the negative-track character guidance in `worldbuilder-world-planning`.
+**Characters collapse into positivity.** This is a character note problem, not a story direction problem — see `worldbuilder-character`, particularly the Relationship Behavior section and the negative-track character guidance in `worldbuilder-world-planning`.
 
 ---
 

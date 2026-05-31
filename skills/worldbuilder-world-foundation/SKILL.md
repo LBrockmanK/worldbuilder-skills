@@ -172,8 +172,8 @@ Pre-game text the player reads before starting. Sets expectations for tone and s
 **Opening Situation**
 The situation the player arrives into. Evocative, not scripted — establishes the stage rather than dictating what happens. Cover: the setting's visible state on arrival, the immediate invitation for engagement, what the player's arrival means to the community.
 
-**Story Direction (stub)**
-Standing creative direction for the story engine. Write a stub once the cast structure is established; the full version is completed by `worldbuilder-story` after the roster exists. See that skill for structure and content guidance.
+**Story Direction note**
+Do not write story direction content into seed.md. direction.md is a separate project document produced in Phase 1b by world-planning, after seed.md is confirmed. See `worldbuilder-story` for section templates and content guidance.
 
 ### Additional seed outputs
 

@@ -8,7 +8,7 @@ role:
 archetype: 
 ---
 
-> For future agents: this is a character note. The filename is the character's name. Use `worldbuilder-character-blueprint` to build it out.
+> For future agents: this is a character note. The filename is the character's name. Use `worldbuilder-character` to build it out.
 
 ## Preamble
 

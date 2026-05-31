@@ -131,7 +131,7 @@ Not every concept note needs this. Use it only when the gap between belief and t
 
 ## Location Notes
 
-Location notes have their own dedicated skill: **`worldbuilder-location-blueprint`**. Use that skill when creating or deepening any named location.
+Location notes have their own dedicated skill: **`worldbuilder-location`**. Use that skill when creating or deepening any named location.
 
 ---
 
@@ -163,6 +163,8 @@ Festivals, seasonal observances, cultural rituals, and other recurring world eve
 **Aliases** should cover every realistic way the event comes up in dialogue: common name, formal name, what characters actually say ("the festival," "harvest time," "the long night"). The export skill derives keyword triggers from these.
 
 **Limitations and costs apply here too.** If the event carries social obligation, ritual restriction, or community pressure, document it. A harvest festival that everyone is expected to attend and that carries real social consequence for absence generates more behavioral content than one that is merely pleasant.
+
+**Timing lives in the note body, not in a structured field.** Note the seasonal or annual timing in plain language within the note content — "early spring," "the darkest night of winter," "midway through the harvest season." Vague is fine; the exact trigger day is an export-time decision. Do not hold a note until the calendar is precisely structured.
 
 The export skill packages recurring event notes into platform-specific calendar formats. Write for the AI's context — the platform format is the export skill's concern.
 

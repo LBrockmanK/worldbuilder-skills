@@ -59,6 +59,7 @@ Keep it short — one short table and one line of proposed action is enough:
 
 ```
 Phase 1  (Seed)             Done    → seed.md
+Phase 1b (Direction doc)    Done    → direction.md
 Phase 2a (Concept notes)    Done    → notes/
 Phase 2b (Story notes)      Done    → notes/
 Phase 2c (Location notes)   Done    → notes/
@@ -80,12 +81,13 @@ Next: Continue character notes. Suggested: dispatch 4 in parallel.
 |---|---|---|---|
 | 0. Ingestion | Pre-Seed | `worldbuilder-ingestion` | Ingestion index + extracted content |
 | 1. Seed | Seed | `worldbuilder-world-foundation` | `seed.md` |
+| 1b. Direction document | Seed | (this skill + `worldbuilder-story`) | `direction.md` |
 | 2a. Concept notes | Wide | `worldbuilder-concept` | `notes/` |
 | 2b. Story notes | Wide | `worldbuilder-story` | `notes/` |
-| 2c. Location notes | Wide | `worldbuilder-location-blueprint` | `notes/` |
-| 2d. Faction notes | Wide | `worldbuilder-faction-blueprint` | `notes/` |
+| 2c. Location notes | Wide | `worldbuilder-location` | `notes/` |
+| 2d. Faction notes | Wide | `worldbuilder-faction` | `notes/` |
 | 2e. Cast planning | Wide | (this skill — see below) | Cast plan in `worldbuilding-plan.md` |
-| 2f. Character notes | Wide | `worldbuilder-character-blueprint` | `notes/` |
+| 2f. Character notes | Wide | `worldbuilder-character` | `notes/` |
 | 3. Export | Export | `worldbuilder-ainime-export` | Platform-specific outputs |
 | 3b. Review | Export | — | Sign-off across all documents |
 
@@ -106,9 +108,33 @@ Phases 2a–2e are independent of each other — all branch from the seed. The o
 
 The Seed phase is strictly sequential with everything that follows. Character notes require cast planning to be complete. All other Wide-phase work (2a–2e) is independent — individual phases can start immediately after the seed with no waiting on each other. Individual character notes are independent of each other once the cast plan exists.
 
+### Phase 1b: Direction document
+
+After seed.md is confirmed complete, produce `direction.md` before any Wide-phase work begins. This is the story engine's primary guard rail — it shapes every scene generated for this world.
+
+Work through each section using `worldbuilder-story` for section templates and content guidance. Write for the world established in seed.md:
+
+- **Author framing** — How the engine should approach characters and narration
+- **Romance pacing** — Slow and earned; the primary guard against the engine's default escalation
+- **Dark themes** — Permission and handling guidance
+- **Hidden layer** (if applicable) — How the supernatural or concealed layer should surface
+- **Seasonal tone** — Brief guidance on each period's emotional register
+- **Pacing and scene structure** — Quiet scenes are valid; escalation ceiling; day-segment rhythms
+
+direction.md frontmatter:
+```yaml
+type: project
+status: draft | complete
+last_updated: YYYY-MM-DD HH:mm
+```
+
+direction.md can be refined as the cast and story develop. The requirement before Wide-phase work is that all sections exist — a brief but complete document is better than a detailed stub.
+
+---
+
 ### Phases 2c–2d: Location and faction notes
 
-Once seed.md is complete, dispatch `worldbuilder-location-blueprint` for each named location and `worldbuilder-faction-blueprint` for each household cluster. These phases run in parallel with concept notes and story notes — no orchestration needed here; the blueprints are self-contained. Count of notes matches the seed's location list and household cluster list.
+Once seed.md is complete, dispatch `worldbuilder-location` for each named location and `worldbuilder-faction` for each household cluster. These phases run in parallel with concept notes and story notes — no orchestration needed here; the blueprints are self-contained. Count of notes matches the seed's location list and household cluster list.
 
 Location and faction notes provide context that character notes build on. Run them before character notes where possible.
 
@@ -116,11 +142,11 @@ Location and faction notes provide context that character notes build on. Run th
 
 ### Phase 2e: Cast planning
 
-No dedicated skill exists for cast planning. Build it here, with user input, before dispatching to `worldbuilder-character-blueprint`.
+No dedicated skill exists for cast planning. Build it here, with user input, before dispatching to `worldbuilder-character`.
 
 The user seeds the cast — names they already have, roles they know they want, characters with personal significance. From each seed, branch through relationships: who is in their household, who do they conflict with, who do they depend on? Fill structural gaps (unfilled archetype slots, households without characters) with proposals for the user to accept, modify, or reject. Never assign a character to a slot without the user's knowledge.
 
-Record the confirmed cast in `worldbuilding-plan.md`. This is a planning document, not the character notes themselves — each character note is created by `worldbuilder-character-blueprint` and carries the authoritative information in its frontmatter and preamble.
+Record the confirmed cast in `worldbuilding-plan.md`. This is a planning document, not the character notes themselves — each character note is created by `worldbuilder-character` and carries the authoritative information in its frontmatter and preamble.
 
 Cast plan entry format (for `worldbuilding-plan.md`):
 
@@ -167,13 +193,18 @@ Use these checklists at each phase gate. If any item is unresolved, surface it t
 - [ ] Community written — social and emotional identity, not physical
 - [ ] World Introduction written — pre-game player text
 - [ ] Opening Situation written — evocative, not scripted
-- [ ] Story Direction stub written (can be brief; expands after cast is established)
 - [ ] Locations list: 10–14 named locations, one sentence each
 - [ ] Art style reference written
 - [ ] Musical theme written
 - [ ] All 6–8 household clusters written with: function, internal tension, inter-household connections, trajectory, narrative hook
 - [ ] No individual character names assigned yet — household types and counts only
 - [ ] Every household has at least one named connection to another household
+
+### Direction document complete
+
+- [ ] `direction.md` exists with `type: project` frontmatter
+- [ ] All required sections present: author framing, romance pacing, dark themes, hidden layer handling, seasonal tone, pacing and scene structure
+- [ ] Opening arc sketched at a broad level
 
 ### Concept notes complete
 
@@ -190,13 +221,13 @@ Use these checklists at each phase gate. If any item is unresolved, surface it t
 ### Location notes complete
 
 - [ ] All named locations from seed.md have a note in `notes/`
-- [ ] Each note passes the `worldbuilder-location-blueprint` self-check
+- [ ] Each note passes the `worldbuilder-location` self-check
 - [ ] Primary characters linked via `[[wikilinks]]` in frontmatter
 
 ### Faction notes complete
 
 - [ ] All household clusters from seed.md have a faction note in `notes/`
-- [ ] Each note passes the `worldbuilder-faction-blueprint` self-check
+- [ ] Each note passes the `worldbuilder-faction` self-check
 - [ ] Member characters linked via `[[wikilinks]]` in frontmatter
 
 ### Cast planning complete
@@ -257,7 +288,7 @@ Each agent needs, stated explicitly:
 5. An explicit constraint: do not modify other character files or the cast plan
 
 Example structure:
-> "Write the character note for [Name] using `worldbuilder-character-blueprint`. Cast plan entry for [Name]: [paste]. Household members for context: [paste relevant entries]. Save to `notes/firstname-lastname.md`. Do not modify the cast plan or any other character's file."
+> "Write the character note for [Name] using `worldbuilder-character`. Cast plan entry for [Name]: [paste]. Household members for context: [paste relevant entries]. Save to `notes/firstname-lastname.md`. Do not modify the cast plan or any other character's file."
 
 ---
 
@@ -287,6 +318,7 @@ Subset details (if applicable): [character names]
 | Phase | Group | Status | Deliverable | Notes |
 |---|---|---|---|---|
 | 1. Seed | Seed | Done / In Progress / Not Started | seed.md | |
+| 1b. Direction document | Seed | Done / In Progress / Not Started | direction.md | |
 | 2a. Concept notes | Wide | ... | notes/ | |
 | 2b. Story notes | Wide | ... | notes/ | |
 | 2c. Location notes | Wide | ... | notes/ | X of Y complete |
