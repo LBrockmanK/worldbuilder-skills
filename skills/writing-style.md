@@ -31,6 +31,15 @@ If a plain word does the job, use it. Don't reach for a longer or more formal wo
 
 When in doubt: would a plain-spoken person use this word in a work meeting? If not, find the word they would.
 
+### Avoid "reads [X] as" — use interpretation verbs instead
+
+"She reads this as..." or "reads the situation as..." sounds like the AI narrating a literary critique rather than specifying a character's behavioral reality. Replace with direct interpretation verbs.
+
+- Wrong: "She reads his tone as hostility."
+- Right: "She sees hostility in his tone" or "She takes his tone to mean he's hostile."
+
+Other natural alternatives: "sees," "takes," "interprets," "understands."
+
 ### Use "is" and "has" — avoid copula avoidance
 
 Use "is" and "has" directly. Don't substitute elaborate constructions.
