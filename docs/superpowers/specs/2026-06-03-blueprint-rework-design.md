@@ -87,7 +87,7 @@ Bullet list. One entry per relationship. Bold `**Name — Archetype(s):**` prefi
 
 *Example bullet:*
 ```
-- **Mira — Kin:** When Mira dismisses her work, she goes quiet and doesn't push back — she's tried before, and it only puts more distance between them.
+- **Mira — Kin:** When Mira dismisses her ideas in front of others, she doesn't argue — she brings the idea back later, one-on-one, where Mira has room to change her mind without losing face.
 ```
 
 ---
