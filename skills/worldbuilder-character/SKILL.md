@@ -21,9 +21,7 @@ Work through sections in order. Do not skip sections because the character seems
 |---|---|---|
 | Frontmatter | — | YAML; see below |
 | Preamble | — | 2–3 sentences; see below |
-| Concept | — | Narrative purpose; see below |
-| Inspirations | — | Design references; see below |
-| Design Notes | — | Meta-commentary; excluded from exports |
+| Design Notes | — | Builder context; excluded from exports |
 | Foundation | `framework.md` | Body, Environment, Soul |
 | Behavioral Descriptions | `framework.md` | When/Behavior/Because formula; contradictions |
 | Relationships | `relationships.md` | Social web; 12 archetypes; coverage check |
@@ -61,31 +59,17 @@ This is the fast-path layer — the summary that makes the note immediately usef
 
 ---
 
-## Concept
-
-The generative idea behind the character — not a personality summary. 3–5 sentences covering:
-
-- What do they bring to the setting that no other character does?
-- What is their narrative function? What kinds of scenes do they anchor?
-- What tension or theme are they a vehicle for?
-
-The concept drives all other decisions. If two sections are pulling in different directions, the concept is the tiebreaker.
-
----
-
-## Inspirations
-
-Real people, existing characters from other works, or combinations that shaped the design. Not required to be direct influences — partial matches and what was specifically drawn from each are more useful than a clean attribution.
-
-This section does not appear in any export. It is design memory.
-
----
-
 ## Design Notes
 
-Meta-commentary: narrative function, structural role, what makes this character interesting to write, any design decisions that would be confusing without context.
+Design Notes is a bullet-point section containing anything that drives the design of this character but does not appear directly in the behavioral content. Excluded from all exports — write freely here.
 
-Excluded from all exports. Write freely here — this section is for the people building the world, not the AI running it.
+Typical bullets to include:
+- Narrative function: what this character uniquely contributes to the setting; what kinds of scenes they anchor; what tension or theme they embody
+- External references: named real people, fictional characters, or combinations that shaped the design; what specifically was drawn from each
+- Design decisions and constraints: choices made that would be confusing without context
+- Open questions: unresolved decisions to revisit in future sessions
+
+Leave blank if there is nothing worth capturing here. Do not pad it with character summary.
 
 ---
 
@@ -161,8 +145,8 @@ After completing a household group or batch of characters, run a relationship sy
 - [ ] 2–3 sentences; answers what this character is and when to use this note
 - [ ] Usable without reading the full note
 
-**Concept**
-- [ ] States narrative function and what this character brings that no other cast member does
+**Design Notes**
+- [ ] Bullet-point format; covers narrative function, external references, design decisions, and/or open questions as applicable; not padded with character summary
 
 **Foundation + Behavioral Descriptions**
 - [ ] 3–5 behavioral descriptions in When/Behavior/Because form

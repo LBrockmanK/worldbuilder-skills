@@ -14,17 +14,11 @@ archetype:
 
 _2–3 sentences orienting a future agent to this character._
 
-## Concept
-
-_What this character is and their core dramatic function._
-
-## Inspirations
-
-_Named references that calibrate tone and behavior._
-
 ## Design Notes
 
-_Open constraints, outstanding questions, decisions to revisit._
+_Builder context: narrative function, external references, design decisions, open questions. Bullet points. Excluded from exports._
+
+-
 
 ## Foundation
 
