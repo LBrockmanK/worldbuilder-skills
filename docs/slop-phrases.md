@@ -79,3 +79,13 @@ Circumlocutions that replace "is" or "has" with something elaborate.
 - "features"
 
 Fix: use "is" or "has."
+
+---
+
+## AI vocabulary
+
+Words that appear constantly in AI-generated text but rarely in how real people describe other people or relationships. Their presence signals the AI is generating rather than observing.
+
+- "gap" / "the gap between them" / "bridge the gap"
+
+Fix: name what is actually different or distant. "She stopped pushing" is more specific than "the gap was too wide."
