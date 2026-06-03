@@ -46,7 +46,21 @@ Sections in order:
 
 Each main section is H2 (`##`): Design Notes, Background, Body, Soul, Relationships, Intimate Dynamics (if present). No H3 subheadings within behavioral sections — Soul's psychological and social-register entries run together in a single bullet list with no dividers.
 
-Design Notes uses H3 subheadings to separate its two content areas (see Design Notes Changes below).
+### Design Notes
+
+H2 section. Two H3 subheadings inside it: `### Session Notes` and `### Builder Context`. Each subheading is followed by a bullet list.
+
+```
+## Design Notes
+
+### Session Notes
+
+- [Q&A capture — raw user intent, plain language]
+
+### Builder Context
+
+- [Narrative function, external references, design decisions, open questions]
+```
 
 ### Background
 
@@ -73,7 +87,7 @@ Bullet list. One entry per relationship. Bold `**Name — Archetype(s):**` prefi
 
 *Example bullet:*
 ```
-- **Mira — Kin:** When Mira dismisses her work, she goes quiet rather than pushing back — she can read when the gap is too wide, and she knows better than to try.
+- **Mira — Kin:** When Mira dismisses her work, she goes quiet and doesn't push back — she's tried before, and it only puts more distance between them.
 ```
 
 ---
@@ -105,6 +119,14 @@ The agent then writes each section from the Q&A answers. Answers do not appear i
 ---
 
 ## Construction Formats
+
+### Design Notes
+
+Two subheadings, each followed by a bullet list.
+
+**Session Notes:** Raw Q&A capture — what the user said they wanted this character to be. Plain language, one bullet per answer or insight. Written during the Q&A phase before note sections are drafted.
+
+**Builder Context:** Narrative function, external references, design decisions, open questions. One bullet per item. Leave blank if there is nothing worth capturing — do not pad.
 
 ### Background
 
