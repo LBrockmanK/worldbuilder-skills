@@ -40,21 +40,62 @@ Sections in order:
 
 ---
 
+## Formatting
+
+### Section headings
+
+Each main section is H2 (`##`): Design Notes, Background, Body, Soul, Relationships, Intimate Dynamics (if present). No H3 subheadings within behavioral sections — Soul's psychological and social-register entries run together in a single bullet list with no dividers.
+
+Design Notes uses H3 subheadings to separate its two content areas (see Design Notes Changes below).
+
+### Background
+
+Bullet list. One entry per fact pair:
+
+```
+- [Formative fact] → [what it made true]
+```
+
+No prose, no elaboration beyond the pair.
+
+### Body, Soul, Intimate Dynamics
+
+Bullet list. One behavioral description per bullet, written as a prose sentence. The When/Behavior/Because structure is a writing guide — it does not appear as visible labels in the output. The sentence embeds all three elements naturally.
+
+*Example bullet:*
+```
+- When she enters a room she doesn't know, she finds a wall or corner first — she grew up visible in ways she didn't choose, and learned to make herself an observer before becoming a subject.
+```
+
+### Relationships
+
+Unchanged from current format: archetype label(s) and name as a bold header; behavioral description as 2–4 prose sentences below it.
+
+---
+
 ## Session Flow
 
-Before writing any note section, the agent conducts a structured Q&A with the user. This is conversational — the agent asks, the user answers, the agent captures.
+Before writing any note section, the agent conducts a Q&A with the user. The Q&A is conversational — the agent asks one question at a time, waits for an answer, then continues. It is not a checklist delivered in bulk.
 
-**Questions to ask (in any order that fits the conversation):**
+**Technique (drawn from grill-me approach):**
 
-*Background:* Where did they grow up? What class, culture, community? What was valued or looked down on? What were the key formative experiences? Where are they now and how do they feel about it?
+- **One question at a time.** Never present the full question list. Ask one, get an answer, ask the next.
+- **Offer a hypothesis.** After each answer, surface what it implies before moving on: "Based on that, she might be afraid of being truly seen — does that sound right?" This gives the user something to confirm, redirect, or build on rather than starting cold each time.
+- **Follow threads.** When an answer opens something up, pursue it before changing topics. A Background answer that implies a Soul pattern should be surfaced immediately: "You said she was the reliable one — that might mean her irrational behavior is overcommitting even when she can't afford to. Does that track?"
+- **Sharpen vague answers.** "She has trouble trusting people" is not enough. Ask what that looks like: does she test people, avoid closeness, or extend trust and then panic when it's taken seriously?
 
-*Body:* What do they look like — age, build, distinguishing features? Has their appearance attracted attention they wanted or didn't? What do their clothing and grooming choices reveal? Any physical habits, self-consciousness, or pride?
+**Coverage the Q&A must reach before writing begins:**
 
-*Soul:* What do they want most — not the surface want, the deeper one? What are they afraid of? Where is the gap between who they think they are and who they actually are? What irrational thing do they do, and where does it come from?
+- Background: origin, class/culture, key formative events, current situation and how they feel about it
+- Body: appearance, any notable physical self-consciousness, embodied habits
+- Soul (psychological): core want beneath the surface want, core fear, self-image gap, irrational behavior and its root
+- Soul (social register): how they are with strangers, what warmth looks like, what distance or conflict looks like
 
-**What happens to the answers:** Captured in Design Notes under a "Session Notes" block — raw user intent, plain language. This is the builder record. Future agents revisiting the character read Design Notes to understand what was originally intended before checking the behavioral sections.
+The Q&A ends when the agent has confident, specific answers across all four areas — not when the list is mechanically exhausted.
 
-The agent then writes each section using the Q&A answers as source material. The answers do not appear in the behavioral sections — they inform the behavioral descriptions through the Because clause.
+**What happens to the answers:** Captured in Design Notes under `### Session Notes` — raw user intent, plain language, bullet points. This is the builder record. Future agents revisiting the character read Session Notes first to understand original intent before examining the behavioral sections.
+
+The agent then writes each section from the Q&A answers. Answers do not appear in the behavioral sections — they inform the behavioral descriptions through the Because clause.
 
 ---
 
@@ -121,13 +162,23 @@ Exploration questions (what does the dynamic give them, how does it connect to t
 
 ## Design Notes Changes
 
-Design Notes now has two categories of content:
+Design Notes now has two H3 subheadings:
 
-**Session Notes (new):** A capture of the Q&A conversation — what the user said they wanted this character to be. Raw intent, not polished prose. Bullet points. This is the builder record: if the character needs to be revised, the agent reads this first to understand original intent before examining the behavioral sections.
+```
+## Design Notes
 
-**Builder context (existing, unchanged):** Narrative function, external references, design decisions, open questions.
+### Session Notes
+- [Q&A capture — raw user intent, plain language, bullet points]
 
-Both categories are excluded from exports.
+### Builder Context
+- [Narrative function, external references, design decisions, open questions]
+```
+
+**Session Notes** is new. It captures the Q&A conversation: what the user said they wanted this character to be. Raw intent, not polished prose. Written during the Q&A phase before note sections are drafted. This is the builder record — future agents read it first when revisiting the character.
+
+**Builder Context** is unchanged in content. The name is now explicit where before the section had no internal structure.
+
+Both subheadings are excluded from exports.
 
 ---
 
@@ -159,6 +210,67 @@ Both categories are excluded from exports.
 **Design Notes**
 - [ ] Session Notes block present with Q&A capture
 - [ ] Builder context present as applicable
+
+---
+
+## Note Template Skeleton
+
+The character note template (`_templates/character.md`) updates to:
+
+```markdown
+---
+type: character
+status: draft
+aliases: []
+last_updated: YYYY-MM-DD HH:mm
+factions: []
+brief: ""
+---
+
+> For future agents: this is a character note. The filename is the character's name. Use `worldbuilder-character` to build it out.
+
+## Design Notes
+
+### Session Notes
+
+_Q&A capture: what the user said they wanted this character to be. Raw intent, bullet points._
+
+-
+
+### Builder Context
+
+_Narrative function, external references, design decisions, open questions. Bullet points._
+
+-
+
+## Background
+
+_Where this character comes from. Declarative fact pairs: [Fact] → [what it made true]. No behavioral content._
+
+-
+
+## Body
+
+_Physical behavioral descriptions. One entry per bullet._
+
+-
+
+## Soul
+
+_Psychological and social behavioral descriptions. One entry per bullet._
+
+-
+
+## Relationships
+
+_Named relationship dynamics._
+
+## Intimate Dynamics
+
+_Only present if flagged in project plan. Remove this section if not flagged._
+
+-
+```
 
 ---
 
