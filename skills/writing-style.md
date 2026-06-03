@@ -84,6 +84,15 @@ Keep actions as verbs. Don't convert them into nouns.
 
 One idea per sentence when ideas are distinct. If a sentence has two clauses, check whether the second earns its place or whether it reads cleaner on its own.
 
+### Limit em-dashes — use periods instead
+
+Em-dashes create a breathless, hedged quality when overused. When you reach for an em-dash to join two thoughts, use a period instead. Two sentences are clearer than one sentence with an em-dash.
+
+- Wrong: "She is guarded with strangers — watchful, brief, slow to smile — and opens up only when she feels safe."
+- Right: "She is guarded with strangers. She is watchful, brief, slow to smile. She opens up only when she feels safe."
+
+Em-dashes are fine in dialogue (natural in speech) but should be rare in spec prose. Each em-dash you remove makes the prose stronger.
+
 ### Numbers as numerals
 
 Write 27, not twenty-seven. Write day 8, not the eighth day.
