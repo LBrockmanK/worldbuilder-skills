@@ -42,10 +42,6 @@ _Who they are connected to and how._
 
 _How they behave with the player as trust and intimacy grow._
 
-## Appearance
-
-_Physical description._
-
 ## Storylines
 
 _Story arcs and participation._

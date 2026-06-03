@@ -25,7 +25,7 @@ The world foundation document. Plain prose with natural section headers — not 
 _Avoid_: world-seed.md, seed document (if referring to a file — use `seed.md`)
 
 **Character note**:
-The comprehensive Wide-phase document for a single character. Single source of truth — richer than any export format can hold. Sections: frontmatter, preamble, concept, inspirations, design notes, foundation, behavioral descriptions, relationships, relationship behavior, appearance, storylines. The ainime character card (`baseProfile`) is derived from this note by the export skill.
+The comprehensive Wide-phase document for a single character. Single source of truth — richer than any export format can hold. Sections: frontmatter, preamble, concept, inspirations, design notes, foundation, behavioral descriptions, relationships, relationship behavior, storylines. The ainime character card (`baseProfile`) is derived from this note by the export skill.
 _Avoid_: Blueprint, draft card
 
 **Concept note**:

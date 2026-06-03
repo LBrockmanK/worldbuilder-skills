@@ -28,7 +28,6 @@ Work through sections in order. Do not skip sections because the character seems
 | Behavioral Descriptions | `framework.md` | When/Behavior/Because formula; contradictions |
 | Relationships | `relationships.md` | Social web; 12 archetypes; coverage check |
 | Relationship Behavior | — | Trust/distance axis; see below |
-| Appearance | — | Physical description; used by all exports |
 | Storylines | — | Story possibilities; see below |
 | Intimate Dynamics (if flagged) | `intimate.md` | Only if flagged in project plan |
 
@@ -94,6 +93,8 @@ Excluded from all exports. Write freely here — this section is for the people 
 
 See `framework.md` for Foundation (Body, Environment, Soul) and Behavioral Descriptions (When/Behavior/Because formula, contradictions). See `relationships.md` for the Relationships section.
 
+> **Note on Appearance:** Physical description belongs in Body (Foundation) — it is part of who the character is, not a separate section. Export skills derive appearance from Body. Existing character notes that have a standalone `## Appearance` section can keep it; export skills will read it if found. New notes should put this information in Body only.
+
 Key rules that apply throughout all three:
 
 **Make decisions, don't hedge.** Every fact in the note is a decision. Never write "X or Y" or "grew up somewhere, perhaps Y" unless the ambiguity is a deliberate mystery being preserved intentionally. If you don't know, ask the user. A character who "grew up in the city or possibly a small town" is an incomplete note, not a subtle one.
@@ -124,12 +125,6 @@ Cover these dimensions without subheadings (prose):
 The intimate register is handled separately in the Intimate Dynamics section if flagged.
 
 Export skills map this section to platform mechanics (influence bands, trust tiers, etc.) as needed. Write it as behavioral truth; the platform mapping is not your concern here.
-
----
-
-## Appearance
-
-Physical description used by all export formats. Cover: species/type and sex if relevant, age presentation and body type, notable features, clothing style. 1–3 sentences. Must be consistent with Foundation (Body).
 
 ---
 
@@ -189,9 +184,6 @@ After completing a household group or batch of characters, run a relationship sy
 - [ ] Warmth described specifically (not "they become warm")
 - [ ] Distance/conflict described specifically (not "they become cold")
 - [ ] Relationship-type variation noted if it exists
-
-**Appearance**
-- [ ] 1–3 sentences; consistent with Foundation (Body)
 
 **Storylines**
 - [ ] All entries phrased as possibility, not script
