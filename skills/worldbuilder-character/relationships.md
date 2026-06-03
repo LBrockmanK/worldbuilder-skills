@@ -99,6 +99,31 @@ When two characters apply different models to the same relationship, the mismatc
 
 ---
 
+### Per-entry self-review: internal state check
+
+After drafting each entry, read it back and ask: **does any sentence describe what the other character thinks, feels, or concludes internally?** If yes, that content does not belong here.
+
+Each relationship entry describes only what *this* character experiences — what they observe, how they interpret it, and what it makes them do. The other character's internal life is not observable and belongs in *their* entry or in their cast plan, not here.
+
+**Remove** any claim that the other character:
+- interprets, hears, reads, or takes something in a particular way
+- is motivated by something internally (unless they've stated it aloud)
+- feels something toward this character that hasn't been expressed behaviorally
+
+**Displaced content** — anything you remove — should be logged as a Blueprint note in the other character's entry in `worldbuilding-plan.md`, not simply deleted. It may be accurate; it just doesn't belong in this character's voice.
+
+**Worked example — Friction entry (Sophie's card, about Vesper):**
+
+> Wrong: "Sophie pushes back on Vesper's decisions and Vesper hears it as normal grousing."
+
+> Right: "Sophie pushes back on Vesper's decisions; Vesper doesn't change course."
+
+The wrong version tells us how Vesper internally classifies Sophie's pushback ("normal grousing"). Sophie cannot know that. The right version reports only what Sophie observes — Vesper's behavior — and leaves Vesper's internal interpretation where it belongs: in Vesper's card.
+
+This check applies to all entries, not just conflict-laden ones. Even positive relationships can slip into describing the other person's interior ("she knows Vesper cares about her") when only the behavior is visible ("Vesper checks in after every hard session").
+
+---
+
 ## Coverage Validation
 
 Before marking the relationships section complete:
