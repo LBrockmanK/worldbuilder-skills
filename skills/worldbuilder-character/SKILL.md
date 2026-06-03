@@ -196,3 +196,7 @@ After completing a household group or batch of characters, run a relationship sy
 **Storylines**
 - [ ] All entries phrased as possibility, not script
 - [ ] Introduction note created or flagged as pending
+
+**Pre-Handoff Scan**
+- [ ] Before moving to the next character, scan the session for any decisions made about characters who do not yet have a complete note
+- [ ] Record any such decisions as a Blueprint note in that character's cast plan entry in `worldbuilding-plan.md`
