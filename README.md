@@ -18,7 +18,7 @@ The clarification-heavy opening phase. Claude asks the foundational questions �
 
 The expansive generative phase. With the seed confirmed, Claude builds out the world's content: concept notes (lore), story notes (narrative direction), location notes, faction notes, cast planning, and individual character notes. All creative decisions live here. Nothing in Phase 2 is ainime-specific.
 
-**Key outputs:** character notes, concept notes, story notes, location notes, faction notes in `notes/`
+**Key outputs:** character notes, concept notes, story notes, location notes, faction notes, event notes in `notes/`
 
 ### Export phase (Phase 3)
 
@@ -61,14 +61,9 @@ Run `worldbuilder-world-planning`. It reads your project state, tells you where 
 
 ## Installing the skills
 
-These skills are distributed as a Claude Code plugin package. Install the plugin through Claude Code's plugin manager — you do not install individual skill files manually.
+These skills are distributed as a Claude Code plugin package. Install the plugin through Claude Code's plugin manager — you do not install individual skill files manually. For step-by-step installation instructions, find this plugin's listing in the Claude Code plugin marketplace.
 
-Once installed, invoke any skill using the `/` command in Claude Code:
-
-```
-/worldbuilder-world-planning
-/worldbuilder-character
-```
+Once installed, invoke any skill using the `/` command prefix in Claude Code (e.g., `/worldbuilder-setup`, `/worldbuilder-world-planning`).
 
 ---
 
