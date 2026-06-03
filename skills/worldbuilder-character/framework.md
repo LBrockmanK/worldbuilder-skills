@@ -14,6 +14,14 @@ Where this character comes from. This section is different in kind from the sect
 
 No prose, no elaboration beyond the pair. No behavioral framing — if the fact implies a behavioral pattern, that pattern belongs in Body or Soul as a behavioral description.
 
+*Example pair (correct — stays factual):*
+- Grew up working-class in a trade city, left at eighteen → never returned to the neighborhood, never explained why
+
+*Anti-example (wrong — crosses into behavioral framing):*
+- Grew up working-class → learned to hide vulnerability and distrust people who have things too easy
+
+(The anti-example's second half belongs in Soul, not Background.)
+
 **What to cover:**
 - Origin: where they grew up, what class and culture shaped them, what was valued and looked down on
 - Formative events: key experiences and turning points that changed their trajectory
@@ -27,7 +35,7 @@ Physical behavioral descriptions — how this character's physicality shapes beh
 
 **Format:** Bullet list. One behavioral description per bullet, written as a prose sentence. The When/Behavior/Because structure is a writing guide — do not label the parts in the output. The sentence embeds all three elements naturally.
 
-**Coverage prompts** (not all require an entry — only those that produce distinctive behavior):
+**Coverage prompts** (not all require an entry — only those where the character has distinctive behavior related to their physicality, regardless of whether the physical trait itself is unusual):
 - Appearance and how it draws or deflects attention
 - Physical self-consciousness or pride and what it produces in behavior
 - Embodied habits: how they carry themselves, what they do with their hands, how they occupy space
@@ -70,9 +78,9 @@ Soul covers two areas. Write them together as a single bullet list with no subhe
 **Psychological patterns (3–5 entries minimum):**
 - Emotional triggers and responses
 - Core drives in action — what does wanting to be respected actually look like when they're in a room?
-- Irrational behavior with its emotional root (required — see note below)
+- Irrational behavior with its emotional root (required — separate entry from contradiction)
 - Self-image gap expressed as behavioral description
-- Contradiction between presented self and actual self (required — one entry must name this)
+- Contradiction between presented self and actual self (required — a second separate entry; names the gap between what they present and what is actually true)
 
 > **Why the irrational behavior entry matters most:** LLMs default to writing rational, helpful-assistant-style characters. An irrational behavior with a clear emotional root forces the LLM to generate responses that feel human rather than algorithmic. It is the single most effective thing in this framework.
 
@@ -81,6 +89,9 @@ Soul covers two areas. Write them together as a single bullet list with no subhe
 - What warmth looks like when it appears — specific behavior, not "they become warm"
 - What distance or friction looks like — specific behavior, not "they become cold"
 - Relationship-type variation if it exists (with authority figures vs. peers vs. someone they're protecting)
+
+*Example social register entry:*
+- When meeting someone new, she asks questions and lets them fill the space — she learned early that people reveal more when they think they're not being evaluated.
 
 If the character has a distinctive speech pattern, include one entry describing it concretely.
 
@@ -93,4 +104,4 @@ The most interesting characters contain contradictions. A character with no fric
 
 ### The Because clause
 
-The Because clause carries the psychological root. Draw it from the Q&A session capture in Design Notes — do not invent psychology the user has not provided. If no session note speaks to a specific behavior's root, ask before writing.
+The Because clause carries the psychological root. Draw it from the Q&A session capture in Design Notes — do not invent psychology the user has not provided. If no session note speaks to a specific behavior's root, ask before writing. If no Design Notes exist yet, provide a reasoned psychological root and flag it for user review.
