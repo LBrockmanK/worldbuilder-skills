@@ -157,7 +157,7 @@ When the project has character blueprints, notes, or other documents produced by
 **The key distinction:** An old blueprint may have been a *narrowing pass* — a planning step before full card writing — rather than the equivalent of what `worldbuilder-character` produces today. In the current workflow, the character blueprint IS the full Wide-phase deliverable. An old planning-pass blueprint is source material, not a completed note.
 
 **How to assess:**
-- Compare the document structure to what `worldbuilder-character` is expected to produce (frontmatter, preamble, concept, foundation, behavioral descriptions, relationships, relationship behavior, storylines)
+- Compare the document structure to what `worldbuilder-character` is expected to produce (frontmatter, design notes, foundation, behavioral descriptions, relationships, relationship behavior)
 - If the format matches and content is complete → treat as "use near-as-is" and note any gaps
 - If the format differs — even if the content is solid — flag as "source material requiring reprocessing"
 

@@ -146,7 +146,7 @@ No dedicated skill exists for cast planning. Build it here, with user input, bef
 
 The user seeds the cast — names they already have, roles they know they want, characters with personal significance. From each seed, branch through relationships: who is in their household, who do they conflict with, who do they depend on? Fill structural gaps (unfilled archetype slots, households without characters) with proposals for the user to accept, modify, or reject. Never assign a character to a slot without the user's knowledge.
 
-Record the confirmed cast in `worldbuilding-plan.md`. This is a planning document, not the character notes themselves — each character note is created by `worldbuilder-character` and carries the authoritative information in its frontmatter and preamble.
+Record the confirmed cast in `worldbuilding-plan.md`. This is a planning document, not the character notes themselves — each character note is created by `worldbuilder-character` and carries the authoritative information in its frontmatter.
 
 Cast plan entry format (for `worldbuilding-plan.md`):
 

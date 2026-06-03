@@ -26,7 +26,6 @@ Work through sections in order. Do not skip sections because the character seems
 | Section | Sub-file | Notes |
 |---|---|---|
 | Frontmatter | — | YAML; see below |
-| Preamble | — | 2–3 sentences; see below |
 | Design Notes | — | Builder context; excluded from exports |
 | Foundation | `framework.md` | Body, Environment, Soul |
 | Behavioral Descriptions | `framework.md` | When/Behavior/Because formula; contradictions |
@@ -46,21 +45,25 @@ status: draft | complete
 aliases: []
 last_updated: YYYY-MM-DD HH:mm
 factions: ["[[Household Name]]", "[[Guild Name]]"]   # list; links to faction notes
-role: plain text
-archetype: "[[Initially Hostile]]"                    # link; makes archetype groups queryable
+brief: |                                              # plain prose; written last — see ## Brief below
+  <written after the full blueprint is complete>
 ```
 
-`factions` and `archetype` use `[[wikilinks]]`. The export skill and Obsidian graph both query these fields. `role` stays plain text — it is too specific per character to warrant a navigable link.
+`factions` uses `[[wikilinks]]`. The export skill and Obsidian graph query this field. `brief` is plain prose — not a wikilink.
 
 ---
 
-## Preamble
+## Brief
 
-2–3 sentences at the top of the note body (after frontmatter). Answers: what is this character, and when should this note be used?
+`brief` is the cast navigation field. When an agent is building relationships for another character or planning story arcs, they scan `brief` across the full roster to understand each character without opening their notes.
 
-> *Aldric is the village blacksmith and the player's primary source of crafting and tool repair. Use this note when the player interacts with him, mentions the smithy, or asks about anything to do with metalwork or local crafts. He is the most physically imposing cast member and the one most likely to underestimate the player initially.*
+**Content:** who this character is in the world, their personality and key traits, their place in the social ecosystem, what makes them distinctive. Described, not prescribed — no relationship recommendations, no design rationale (that goes in Design Notes).
 
-This is the fast-path layer — the summary that makes the note immediately useful without reading it in full. Write it as if briefing a new reader who needs to use the character correctly right now.
+**Length:** up to ~150 words / ~200 tokens. As long as needed; not padded.
+
+**Timing:** written last — after the full blueprint is complete. It can only accurately reflect a completed character.
+
+> **Provisional note:** The content guidelines for this field should be reviewed and refined after initial session testing. An example should be added at that point.
 
 ---
 
@@ -141,12 +144,8 @@ After completing a household group or batch of characters, run a relationship sy
 
 **Frontmatter**
 - [ ] All required fields present
-- [ ] `factions` and `archetype` use `[[wikilinks]]`
+- [ ] `factions` uses `[[wikilinks]]`
 - [ ] `status` is `draft` or `complete`
-
-**Preamble**
-- [ ] 2–3 sentences; answers what this character is and when to use this note
-- [ ] Usable without reading the full note
 
 **Design Notes**
 - [ ] Bullet-point format; covers narrative function, external references, design decisions, and/or open questions as applicable; not padded with character summary
@@ -179,3 +178,6 @@ After completing a household group or batch of characters, run a relationship sy
 **Pre-Handoff Scan**
 - [ ] Before moving to the next character, scan the session for any decisions made about characters who do not yet have a complete note
 - [ ] Record any such decisions as a Blueprint note in that character's cast plan entry in `worldbuilding-plan.md`
+
+**Brief**
+- [ ] `brief:` written and reflects the completed character; no recommendations, no design rationale

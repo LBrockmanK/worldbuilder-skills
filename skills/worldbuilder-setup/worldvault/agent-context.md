@@ -25,10 +25,9 @@ last_updated: YYYY-MM-DD HH:mm
 **Character** — `notes/`
 ```yaml
 factions: ["[[Household Name]]"]
-role: plain text
-archetype: "[[Initially Hostile]]"
+brief: plain prose   # cast navigation summary; written last
 ```
-Sections: Preamble, Concept, Inspirations, Design Notes, Foundation, Behavioral Descriptions, Relationships, Relationship Behavior, Appearance, Storylines
+Sections: Design Notes, Foundation, Behavioral Descriptions, Relationships, Relationship Behavior
 
 **Location** — `notes/`
 ```yaml

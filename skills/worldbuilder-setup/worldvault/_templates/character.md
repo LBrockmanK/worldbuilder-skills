@@ -4,15 +4,10 @@ status: draft
 aliases: []
 last_updated: YYYY-MM-DD HH:mm
 factions: []
-role: 
-archetype: 
+brief: ""   # plain prose; written last, after the full blueprint is complete
 ---
 
 > For future agents: this is a character note. The filename is the character's name. Use `worldbuilder-character` to build it out.
-
-## Preamble
-
-_2–3 sentences orienting a future agent to this character._
 
 ## Design Notes
 

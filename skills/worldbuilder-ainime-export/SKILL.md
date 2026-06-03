@@ -152,17 +152,17 @@ For each character note in `notes/`, produce a character record. Process one cha
 |---|---|
 | frontmatter `type: character` — major/supporting | `type`: `"main"` or `"side"` |
 | Character name | `name`, `lastName` |
-| frontmatter `role` | `role` |
+| Derived by export skill | `role` |
 | Assembled card prose | `baseProfile` |
 | Appearance section | `appearance` |
 | Sprite sets (see below) | `spriteSets[]` |
 | Available Day (see below) | `availableFromDay` |
 
-**`name` / `lastName`** — Extract from the character note filename or preamble.
+**`name` / `lastName`** — Extract from the character note filename.
 
 **`type`** — `"main"` for major characters, `"side"` for supporting. Maps from the character note's frontmatter `type` value.
 
-**`role`** — Use the frontmatter `role` field verbatim.
+**`role`** — Not stored in the character note. Derive from the character's function as established by the character note content (their position in the world, their relationship to the player, their narrative role). Write as plain text.
 
 **`baseProfile`** — The card prose. See `card-assembly.md` for full assembly guidance. This is the most complex field; do not attempt it without reading that file.
 
