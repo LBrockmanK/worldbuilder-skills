@@ -36,6 +36,12 @@ Read `direction.md` before creating arc notes. Arc notes develop what the brief 
 
 ---
 
+## Working with Vault Files
+
+**Renaming a note:** Use Edit or Write to rename the file. Then immediately run `scripts/rename-note.ps1 -OldName "OldName" -NewName "NewName" -VaultPath <vault-root>` to update all wikilinks across the vault. Do not skip this step — Obsidian's auto-rename is bypassed when files are edited directly.
+
+---
+
 ## Opening Story Arc
 
 ### What it is

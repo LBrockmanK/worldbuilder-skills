@@ -11,6 +11,14 @@ World knowledge is organized in `notes/` notes — one note per discrete topic. 
 
 Good concept notes give the engine exactly what it needs at the moment a topic arises. The goal is precision: the right information for the right moment. Write notes that are dense and specific rather than broad and atmospheric — 50 tokens of exact context beats 300 tokens of unfocused description.
 
+---
+
+## Working with Vault Files
+
+**Renaming a note:** Use Edit or Write to rename the file. Then immediately run `scripts/rename-note.ps1 -OldName "OldName" -NewName "NewName" -VaultPath <vault-root>` to update all wikilinks across the vault. Do not skip this step — Obsidian's auto-rename is bypassed when files are edited directly.
+
+---
+
 ## Concept Note Frontmatter
 
 Every concept note opens with:

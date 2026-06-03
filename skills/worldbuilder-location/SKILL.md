@@ -13,6 +13,12 @@ The location note is the comprehensive Wide-phase single source of truth for a n
 
 ---
 
+## Working with Vault Files
+
+**Renaming a note:** Use Edit or Write to rename the file. Then immediately run `scripts/rename-note.ps1 -OldName "OldName" -NewName "NewName" -VaultPath <vault-root>` to update all wikilinks across the vault. Do not skip this step — Obsidian's auto-rename is bypassed when files are edited directly.
+
+---
+
 ## Location Note Structure
 
 Work through sections in order. Do not skip sections because the location seems simple — every section exists to catch what the others miss.

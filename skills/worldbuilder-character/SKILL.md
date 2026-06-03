@@ -13,6 +13,12 @@ The character note is the comprehensive single source of truth for a character i
 
 ---
 
+## Working with Vault Files
+
+**Renaming a note:** Use Edit or Write to rename the file. Then immediately run `scripts/rename-note.ps1 -OldName "OldName" -NewName "NewName" -VaultPath <vault-root>` to update all wikilinks across the vault. Do not skip this step — Obsidian's auto-rename is bypassed when files are edited directly.
+
+---
+
 ## Character Note Structure
 
 Work through sections in order. Do not skip sections because the character seems simple — every section exists to catch what the others miss.
