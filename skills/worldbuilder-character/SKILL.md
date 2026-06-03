@@ -7,7 +7,7 @@ description: Use when building or developing a character for an AI-powered RPG o
 
 ## Overview
 
-A character for an LLM-powered game is not a description — it is a behavioral specification. The engine handles generic social warmth and distance; the character note supplies the specific: what this character carries privately, what they do when trust is low or high, what their contradiction is. Three dimensions build this: body (the physical), environment (the formative), soul (the psychological). Each feeds the next.
+A character for an LLM-powered game is not a description — it is a behavioral specification. The engine handles generic social warmth and distance; the character note supplies the specific: what this character carries privately, what they do when trust is low or high, what their contradiction is.
 
 The character note is the comprehensive single source of truth for a character in the Wide phase. It is richer than any export format can hold — it contains everything true about the character, including material that won't appear in any platform output. Export skills derive their output from this note.
 
@@ -26,11 +26,11 @@ Work through sections in order. Do not skip sections because the character seems
 | Section | Sub-file | Notes |
 |---|---|---|
 | Frontmatter | — | YAML; see below |
-| Design Notes | — | Builder context; excluded from exports |
-| Foundation | `framework.md` | Body, Environment, Soul |
-| Behavioral Descriptions | `framework.md` | When/Behavior/Because formula; contradictions |
-| Relationships | `relationships.md` | Social web; 12 archetypes; coverage check |
-| Relationship Behavior | — | Trust/distance axis; see below |
+| Design Notes | — | Builder record; H3 subheadings; excluded from exports |
+| Background | `framework.md` | Declarative context; different in kind from behavioral sections |
+| Body | `framework.md` | Physical behavioral descriptions |
+| Soul | `framework.md` | Psychological + social register behavioral descriptions |
+| Relationships | `relationships.md` | Named relationships; bullet format |
 | Intimate Dynamics (if flagged) | `intimate.md` | Only if flagged in project plan |
 
 ---
@@ -69,54 +69,79 @@ brief: |                                              # plain prose; written las
 
 ## Design Notes
 
-Design Notes is a bullet-point section containing anything that drives the design of this character but does not appear directly in the behavioral content. Excluded from all exports — write freely here.
+Design Notes is the builder record — it captures what drove the design of this character. Excluded from all exports. Two H3 subheadings:
 
-Typical bullets to include:
-- Narrative function: what this character uniquely contributes to the setting; what kinds of scenes they anchor; what tension or theme they embody
+### Session Notes
+
+Q&A capture: what the user said they wanted this character to be. Written during the Q&A phase, before any note sections are drafted. Raw intent, plain language, bullet points. Future agents revisiting this character read Session Notes first to understand original intent before examining the behavioral sections.
+
+### Builder Context
+
+Narrative function, external references, design decisions, open questions. Bullet points. Leave blank if there is nothing worth capturing — do not pad.
+
+Typical bullets for Builder Context:
+- Narrative function: what this character uniquely contributes to the setting; what tensions or themes they embody
 - External references: named real people, fictional characters, or combinations that shaped the design; what specifically was drawn from each
 - Design decisions and constraints: choices made that would be confusing without context
 - Open questions: unresolved decisions to revisit in future sessions
 
-Leave blank if there is nothing worth capturing here. Do not pad it with character summary.
+---
+
+## Session Flow
+
+Before writing any note section, conduct a Q&A with the user. Ask one question at a time — this is a conversation, not a checklist delivered in bulk.
+
+**Technique:**
+
+- **One question at a time.** Ask one, wait for the answer, ask the next.
+- **Offer a hypothesis.** After each answer, surface what it implies: "Based on that, she might be afraid of being truly seen — does that sound right?" Give the user something to confirm, redirect, or build on.
+- **Follow threads.** When an answer opens something up, pursue it before moving topics. A Background answer that implies a Soul pattern should be surfaced immediately: "You said she was the reliable one — that might mean her irrational behavior is overcommitting even when she can't afford to. Does that track?"
+- **Sharpen vague answers.** "She has trouble trusting people" is not enough. Ask what that looks like: does she test people, avoid closeness, or extend trust and then panic when it's taken seriously?
+
+**Coverage before writing begins:**
+
+- Background: origin, class/culture, key formative events, current situation and how they feel about it
+- Body: appearance, any notable physical self-consciousness, embodied habits
+- Soul (psychological): core want beneath the surface want, core fear, self-image gap, irrational behavior and its root
+- Soul (social register): how they are with strangers, what warmth looks like, what distance or friction looks like
+
+The Q&A ends when the agent has confident, specific answers across all four areas. Capture answers in Design Notes → Session Notes before moving to note writing.
 
 ---
 
-## Foundation, Behavioral Descriptions, Relationships
+## Writing Rules
 
-See `framework.md` for Foundation (Body, Environment, Soul) and Behavioral Descriptions (When/Behavior/Because formula, contradictions). See `relationships.md` for the Relationships section.
+These rules apply to all behavioral sections (Body, Soul, Relationships, Intimate Dynamics):
 
-> **Note on Appearance:** Physical description belongs in Body (Foundation) — it is part of who the character is, not a separate section. Export skills derive appearance from Body. Existing character notes that have a standalone `## Appearance` section can keep it; export skills will read it if found. New notes should put this information in Body only.
+**Make decisions, don't hedge.** Every fact in the note is a decision. Never write "X or Y" or "grew up somewhere, perhaps Y" unless the ambiguity is a deliberate mystery being preserved. If you don't know, ask the user.
 
-Key rules that apply throughout all three:
+**Note register is functional, not literary.** Plain, direct language throughout. Prefer short concrete words over Latinate vocabulary: "she knows," "he keeps it to himself" rather than "she maintains an internal rationalization," "he sustains that framing." If a sentence sounds like it belongs in a novel, rewrite it as a direct statement.
 
-**Make decisions, don't hedge.** Every fact in the note is a decision. Never write "X or Y" or "grew up somewhere, perhaps Y" unless the ambiguity is a deliberate mystery being preserved intentionally. If you don't know, ask the user. A character who "grew up in the city or possibly a small town" is an incomplete note, not a subtle one.
+**Write what characters ARE, not what they aren't.** Positive statements give the LLM something to act on. Negative constructions define by absence — the LLM has to invent the positive case itself. State the fact directly. Factual negatives are fine when the un-done thing is the meaningful information: "she has not sent the letter," "he hasn't asked."
 
-**Note register is functional, not literary.** Plain, direct language throughout. Prefer short concrete words over Latinate vocabulary: "she knows," "he keeps it to himself" rather than "she maintains an internal rationalization," "he sustains that framing." If a sentence sounds like it belongs in a novel, rewrite it as a direct statement. Only Example Dialogue earns stylistic voice.
+**The note describes the character's starting state.** Nothing in the note may reference events that haven't happened yet. Check: has this already happened before the player meets this character? If not, create a story note or cut it.
 
-**Write what characters ARE, not what they aren't.** Positive statements give the LLM something to act on. Negative constructions ("not the quiet one," "doesn't believe in magic") define by absence — the LLM has to invent the positive case itself. State the fact directly. Factual negatives are fine when the un-done thing is the meaningful information: "she has not sent the letter," "he hasn't asked."
+**Section discipline.** Each section carries information the others don't:
+- Background: where they came from (facts, not behavior)
+- Body: behaviors grounded in physical experience
+- Soul: general psychological and social patterns
+- Relationships: behaviors specific to named individuals
 
-**The note describes the character's starting state.** Nothing in the character note may reference events that haven't happened yet or developments that require time to unfold. Check: has this already happened before the player meets this character? If not, create a story note for it or cut it.
-
-**Section discipline.** Each section carries information the others don't. Soul and behavioral descriptions describe general patterns — if a behavior is primarily about one specific relationship, it belongs in Relationships. History and formative events involving named people belong in Environment. Redundancy between sections usually means content is in the wrong place.
+If a behavior is primarily about one specific relationship, it belongs in Relationships. If a behavioral pattern is general (appears with many people), it belongs in Soul. Redundancy between sections means content is in the wrong place.
 
 **Asymmetry in relationships is normal.** A named relationship does not require the other character to name it back. Write only what this character actually experiences.
 
 ---
 
-## Relationship Behavior
+## Background, Body & Soul
 
-How this character acts and speaks across the like/dislike axis. Written as behavioral description — not a numbered band format.
+See `framework.md` for construction format, coverage requirements, the When/Behavior/Because formula, and examples for all three sections.
 
-Cover these dimensions without subheadings (prose):
+---
 
-- **Default register:** How they present to people they don't know yet. What a stranger experiences.
-- **Warmth:** What it looks like when it's present. Does it show? How? What specifically changes in tone, words, or behavior when this character warms to someone?
-- **Distance/conflict:** What distance, coldness, or active friction looks like for this character specifically. Not generic "they become cold" — describe the actual behavior.
-- **Relationship-type variation:** If this character behaves notably differently with authority figures vs. peers vs. someone they're protecting, note it. Skip this if there is no meaningful variation.
+## Relationships
 
-The intimate register is handled separately in the Intimate Dynamics section if flagged.
-
-Export skills map this section to platform mechanics (influence bands, trust tiers, etc.) as needed. Write it as behavioral truth; the platform mapping is not your concern here.
+See `relationships.md` for the full relationship archetypes, coverage requirements, generativity hierarchy, perspective-focus rules, and entry format.
 
 ---
 
@@ -130,7 +155,7 @@ The introduction note is also a story note (`scope: "[[introduction]]"`). When y
 
 ## Intimate Dynamics
 
-Check the project plan before starting any blueprint. If the character is flagged for intimate dynamics, read `intimate.md` before beginning the Relationship Behavior section. If the flag is absent, skip `intimate.md` entirely — do not prompt for it or ask about it.
+Check the project plan before starting any blueprint. If the character is flagged for intimate dynamics, read `intimate.md` before beginning the Soul section. If the flag is absent, skip `intimate.md` entirely — do not prompt for it or ask about it.
 
 ---
 
@@ -148,28 +173,37 @@ After completing a household group or batch of characters, run a relationship sy
 - [ ] `status` is `draft` or `complete`
 
 **Design Notes**
-- [ ] Bullet-point format; covers narrative function, external references, design decisions, and/or open questions as applicable; not padded with character summary
+- [ ] `### Session Notes` present with Q&A capture
+- [ ] `### Builder Context` present as applicable; not padded
 
-**Foundation + Behavioral Descriptions**
-- [ ] 3–5 behavioral descriptions in When/Behavior/Because form
-- [ ] One clear contradiction or friction point
-- [ ] Irrational behavior with emotional root
-- [ ] Self-image gap stated directly
+**Background**
+- [ ] Declarative fact pairs only — no behavioral content, no prose elaboration
+
+**Body**
+- [ ] Entries grounded in physical experience
+- [ ] No forced entries — thin is acceptable if nothing is distinctive
+
+**Soul**
+- [ ] 3–5 psychological behavioral entries minimum
+- [ ] 2–3 general social register entries minimum
+- [ ] One contradiction stated as a behavioral description
+- [ ] Irrational behavior with emotional root present
+- [ ] Self-image gap expressed as behavioral description
 - [ ] Speech patterns described concretely if distinctive
-- [ ] Plain language throughout — no literary flair
-- [ ] No negative-led trait characterization (state what they ARE)
-- [ ] No forward references to events that haven't happened yet (the note describes starting state only; future arc possibilities go in story notes)
+- [ ] Because clauses draw from Design Notes session capture, not invented
+- [ ] Plain language throughout — no literary flair, no Latinate vocabulary
+- [ ] No negative-led characterization (state what they ARE)
+- [ ] No forward references (starting state only)
 
 **Relationships**
 - [ ] Coverage requirements met (see `relationships.md`)
-- [ ] Each entry specifies current behavioral dynamic, not just history or emotional label
-- [ ] Each entry describes this character's experience of the other person, not the other person's traits
+- [ ] Each entry in bullet format with `**Name — Archetype(s):**` prefix
+- [ ] Each entry describes behavioral dynamic, not history or emotional label
+- [ ] Each entry describes this character's experience only, not the other person's traits
 
-**Relationship Behavior**
-- [ ] Default register described
-- [ ] Warmth described specifically (not "they become warm")
-- [ ] Distance/conflict described specifically (not "they become cold")
-- [ ] Relationship-type variation noted if it exists
+**Intimate Dynamics (if flagged)**
+- [ ] Behavioral entries covering attraction expression, hesitation/limits, specific dynamic if present
+- [ ] One friction point present
 
 **Story Notes**
 - [ ] Story notes created or flagged as pending for any known character arcs
