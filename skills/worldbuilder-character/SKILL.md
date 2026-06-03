@@ -97,6 +97,7 @@ Before writing any note section, conduct a Q&A with the user. Ask one question a
 - **Offer a hypothesis.** After each answer, surface what it implies: "Based on that, she might be afraid of being truly seen — does that sound right?" Give the user something to confirm, redirect, or build on.
 - **Follow threads.** When an answer opens something up, pursue it before moving topics. A Background answer that implies a Soul pattern should be surfaced immediately: "You said she was the reliable one — that might mean her irrational behavior is overcommitting even when she can't afford to. Does that track?"
 - **Sharpen vague answers.** "She has trouble trusting people" is not enough. Ask what that looks like: does she test people, avoid closeness, or extend trust and then panic when it's taken seriously?
+- **Check Intimate Dynamics flag first.** Before beginning Q&A, check whether the character is flagged for Intimate Dynamics in the project plan. If flagged, include intimate coverage in the Q&A (see coverage list below). If not flagged, do not raise it.
 
 **Coverage before writing begins:**
 
@@ -104,6 +105,8 @@ Before writing any note section, conduct a Q&A with the user. Ask one question a
 - Body: appearance, any notable physical self-consciousness, embodied habits
 - Soul (psychological): core want beneath the surface want, core fear, self-image gap, irrational behavior and its root
 - Soul (social register): how they are with strangers, what warmth looks like, what distance or friction looks like
+- Relationships: who the named cast is, which relationships matter most to this character, the behavioral dynamic of each — what it makes them do when that person is present or mentioned
+- Intimate Dynamics: if the character is flagged for intimate dynamics (check project plan first), also cover how they express attraction, what makes them hold back, and any specific dynamic that drives their intimate behavior
 
 The Q&A ends when the agent has confident, specific answers across all four areas. Capture answers in Design Notes → Session Notes before moving to note writing.
 
@@ -126,6 +129,8 @@ These rules apply to all behavioral sections (Body, Soul, Relationships, Intimat
 - Body: behaviors grounded in physical experience
 - Soul: general psychological and social patterns
 - Relationships: behaviors specific to named individuals
+
+Physical description (appearance, carriage, notable physical traits) belongs in Body — it is the physical reality that produces behavior, not a separate Appearance section.
 
 If a behavior is primarily about one specific relationship, it belongs in Relationships. If a behavioral pattern is general (appears with many people), it belongs in Soul. Redundancy between sections means content is in the wrong place.
 
@@ -190,13 +195,13 @@ After completing a household group or batch of characters, run a relationship sy
 - [ ] Irrational behavior with emotional root present
 - [ ] Self-image gap expressed as behavioral description
 - [ ] Speech patterns described concretely if distinctive
-- [ ] Because clauses draw from Design Notes session capture, not invented
+- [ ] Because clauses trace to the user's stated wants, fears, or experiences from Session Notes — if a Because clause didn't emerge from the Q&A, ask the user before writing
 - [ ] Plain language throughout — no literary flair, no Latinate vocabulary
 - [ ] No negative-led characterization (state what they ARE)
 - [ ] No forward references (starting state only)
 
 **Relationships**
-- [ ] Coverage requirements met (see `relationships.md`)
+- [ ] Coverage requirements met: 8 named relationships for major characters, 5 for supporting; required anchor types present (family or Ghost, Authority, friction or rivalry, Confidant — see `relationships.md` for full requirements)
 - [ ] Each entry in bullet format with `**Name — Archetype(s):**` prefix
 - [ ] Each entry describes behavioral dynamic, not history or emotional label
 - [ ] Each entry describes this character's experience only, not the other person's traits
