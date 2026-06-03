@@ -153,7 +153,7 @@ After completing a household group or batch of characters, run a relationship sy
 - [ ] Speech patterns described concretely if distinctive
 - [ ] Plain language throughout — no literary flair
 - [ ] No negative-led trait characterization (state what they ARE)
-- [ ] No forward references outside Storylines (starting state only)
+- [ ] No forward references to events that haven't happened yet (the note describes starting state only; future arc possibilities go in story notes)
 
 **Relationships**
 - [ ] Coverage requirements met (see `relationships.md`)
