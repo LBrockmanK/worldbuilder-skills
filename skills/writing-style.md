@@ -31,15 +31,6 @@ If a plain word does the job, use it. Don't reach for a longer or more formal wo
 
 When in doubt: would a plain-spoken person use this word in a work meeting? If not, find the word they would.
 
-### Avoid "reads [X] as" — use interpretation verbs instead
-
-"She reads this as..." or "reads the situation as..." sounds like the AI narrating a literary critique rather than specifying a character's behavioral reality. Replace with direct interpretation verbs.
-
-- Wrong: "She reads his tone as hostility."
-- Right: "She sees hostility in his tone" or "She takes his tone to mean he's hostile."
-
-Other natural alternatives: "sees," "takes," "interprets," "understands."
-
 ### Use "is" and "has" — avoid copula avoidance
 
 Use "is" and "has" directly. Don't substitute elaborate constructions.
@@ -69,7 +60,7 @@ Don't add statements about importance, legacy, or meaning. If something matters,
 State what something IS. Don't open with "not X."
 
 - Wrong: "She is not warm or friendly at first."
-- Right: "She is guarded with strangers — watchful, brief, slow to smile."
+- Right: "She is guarded with strangers. She is watchful, brief, slow to smile."
 
 Negative constructions give the AI one mode (avoidance) instead of something to generate from. Positive statements give behavioral texture.
 
@@ -84,14 +75,19 @@ Keep actions as verbs. Don't convert them into nouns.
 
 One idea per sentence when ideas are distinct. If a sentence has two clauses, check whether the second earns its place or whether it reads cleaner on its own.
 
-### Limit em-dashes — use periods instead
+### No em-dashes
 
-Em-dashes create a breathless, hedged quality when overused. When you reach for an em-dash to join two thoughts, use a period instead. Two sentences are clearer than one sentence with an em-dash.
+Em-dashes are not used in spec documents. Use periods instead. When two thoughts are joined by an em-dash, split them into two sentences.
+
+**Hedging clause pattern:**
 
 - Wrong: "She is guarded with strangers — watchful, brief, slow to smile — and opens up only when she feels safe."
 - Right: "She is guarded with strangers. She is watchful, brief, slow to smile. She opens up only when she feels safe."
 
-Em-dashes are fine in dialogue (natural in speech) but should be rare in spec prose. Each em-dash you remove makes the prose stronger.
+**Mid-sentence interruption pattern:**
+
+- Wrong: "He runs the market — has for twenty years — and knows every trader by name."
+- Right: "He has run the market for twenty years. He knows every trader by name."
 
 ### Numbers as numerals
 
@@ -139,7 +135,7 @@ Each thought is its own sentence.
 
 Each fact lives in one place. Other documents reference it by naming it, not by restating it.
 
-Don't describe a character in a location note because they're connected to that location. Name the connection; keep the description in the character's own document. Don't paraphrase what another note says — link to it by name.
+Don't describe a character in a location note because they're connected to that location. Name the connection; keep the description in the character's own document. Don't paraphrase what another note says. Link to it by name.
 
 ### Don't describe one entity in another entity's document
 
