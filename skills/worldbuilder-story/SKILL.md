@@ -29,6 +29,7 @@ aliases: []
 last_updated: YYYY-MM-DD HH:mm
 up: "[[parent-note]]"
 scope: "[[arc]]" | "[[intention]]" | "[[introduction]]"
+characters: ["[[Name]]"]           # optional; characters central to this story note
 ```
 
 Read `direction.md` before creating arc notes. Arc notes develop what the brief establishes — they do not contradict it.

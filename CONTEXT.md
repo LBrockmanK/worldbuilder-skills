@@ -25,7 +25,7 @@ The world foundation document. Plain prose with natural section headers — not 
 _Avoid_: world-seed.md, seed document (if referring to a file — use `seed.md`)
 
 **Character note**:
-The comprehensive Wide-phase document for a single character. Single source of truth — richer than any export format can hold. Sections: frontmatter, preamble, design notes, foundation, behavioral descriptions, relationships, relationship behavior, storylines. The ainime character card (`baseProfile`) is derived from this note by the export skill.
+The comprehensive Wide-phase document for a single character. Single source of truth — richer than any export format can hold. Sections: frontmatter, preamble, design notes, foundation, behavioral descriptions, relationships, relationship behavior. The ainime character card (`baseProfile`) is derived from this note by the export skill.
 _Avoid_: Blueprint, draft card
 
 **Concept note**:
@@ -122,6 +122,7 @@ trigger-context: brief plain text
 ```yaml
 up: "[[parent-story-note]]"        # absent on top-level direction note
 scope: "[[direction]]" | "[[arc]]" | "[[intention]]" | "[[introduction]]"
+characters: ["[[Name]]"]           # optional; characters central to this story note
 ```
 
 **Link convention:** Anything that represents a category, entity, or concept worth filtering by uses a `[[wikilink]]`. Plain values for operational fields (`status`, `last_updated`, `recurring`, booleans).

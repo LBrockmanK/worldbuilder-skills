@@ -35,7 +35,3 @@ _Who they are connected to and how._
 ## Relationship Behavior
 
 _How they behave with the player as trust and intimacy grow._
-
-## Storylines
-
-_Story arcs and participation._

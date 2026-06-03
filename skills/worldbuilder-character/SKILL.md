@@ -26,7 +26,6 @@ Work through sections in order. Do not skip sections because the character seems
 | Behavioral Descriptions | `framework.md` | When/Behavior/Because formula; contradictions |
 | Relationships | `relationships.md` | Social web; 12 archetypes; coverage check |
 | Relationship Behavior | — | Trust/distance axis; see below |
-| Storylines | — | Story possibilities; see below |
 | Intimate Dynamics (if flagged) | `intimate.md` | Only if flagged in project plan |
 
 ---
@@ -87,7 +86,7 @@ Key rules that apply throughout all three:
 
 **Write what characters ARE, not what they aren't.** Positive statements give the LLM something to act on. Negative constructions ("not the quiet one," "doesn't believe in magic") define by absence — the LLM has to invent the positive case itself. State the fact directly. Factual negatives are fine when the un-done thing is the meaningful information: "she has not sent the letter," "he hasn't asked."
 
-**The note describes the character's starting state.** Nothing outside Storylines may reference events that haven't happened yet or developments that require time to unfold. Check: has this already happened before the player meets this character? If not, move it to Storylines or cut it.
+**The note describes the character's starting state.** Nothing in the character note may reference events that haven't happened yet or developments that require time to unfold. Check: has this already happened before the player meets this character? If not, create a story note for it or cut it.
 
 **Section discipline.** Each section carries information the others don't. Soul and behavioral descriptions describe general patterns — if a behavior is primarily about one specific relationship, it belongs in Relationships. History and formative events involving named people belong in Environment. Redundancy between sections usually means content is in the wrong place.
 
@@ -112,13 +111,11 @@ Export skills map this section to platform mechanics (influence bands, trust tie
 
 ---
 
-## Storylines
+## Story Notes
 
-Story possibilities for this character. Not scripts — possibilities. Each entry phrased as "may surface," "could take," "there is a possibility that." Describes what the character would do or reveal, not preordained outcomes.
+**Story notes instead of inline storylines.** Story possibilities for this character live in separate story notes, not in the character note. When you have enough clarity on a character's arc, create a story note with `type: story`, `scope: "[[intention]]"`, and `characters: ["[[Character Name]]"]`. Link back to the character note via the `characters:` field. See `worldbuilder-story` for story note structure.
 
-Each entry: what conditions make the arc possible; what it reveals about or changes in the character. Write for robustness — arcs that remain interesting whether or not a specific beat fires.
-
-**The introduction is its own story note.** When you have enough character clarity to know where and how the player would first meet this character, create a separate introduction note (`type: story`, `scope: "[[introduction]]"`). Do not write the introduction as a Storylines entry. See the world-planning skill for introduction note structure.
+The introduction note is also a story note (`scope: "[[introduction]]"`). When you have enough character clarity to know where and how the player would first meet this character, create it then.
 
 ---
 
@@ -169,8 +166,8 @@ After completing a household group or batch of characters, run a relationship sy
 - [ ] Distance/conflict described specifically (not "they become cold")
 - [ ] Relationship-type variation noted if it exists
 
-**Storylines**
-- [ ] All entries phrased as possibility, not script
+**Story Notes**
+- [ ] Story notes created or flagged as pending for any known character arcs
 - [ ] Introduction note created or flagged as pending
 
 **Pre-Handoff Scan**
