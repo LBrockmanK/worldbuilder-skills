@@ -4,29 +4,45 @@ status: draft
 aliases: []
 last_updated: YYYY-MM-DD HH:mm
 factions: []
-brief: ""   # plain prose; written last, after the full blueprint is complete
+brief: ""
 ---
 
 > For future agents: this is a character note. The filename is the character's name. Use `worldbuilder-character` to build it out.
 
 ## Design Notes
 
-_Builder context: narrative function, external references, design decisions, open questions. Bullet points. Excluded from exports._
+### Session Notes
+
+_Q&A capture: what the user said they wanted this character to be. Raw intent, bullet points._
 
 -
 
-## Foundation
+### Builder Context
 
-_Background, history, how they got here._
+_Narrative function, external references, design decisions, open questions. Bullet points. Leave blank if nothing to capture — do not pad._
 
-## Behavioral Descriptions
+-
 
-_How they act, what they want, their voice._
+## Background
+
+_Where this character comes from. Declarative fact pairs: [Fact] → [what it made true]. No behavioral content._
+
+-
+
+## Body
+
+_Physical behavioral descriptions. One entry per bullet._
+
+-
+
+## Soul
+
+_Psychological and social behavioral descriptions. One entry per bullet._
+
+-
 
 ## Relationships
 
-_Who they are connected to and how._
+_Named relationship dynamics. One bullet per relationship: **Name — Archetype(s):** [behavioral description]_
 
-## Relationship Behavior
-
-_How they behave with the player as trust and intimacy grow._
+-
