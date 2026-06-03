@@ -69,7 +69,16 @@ Bullet list. One behavioral description per bullet, written as a prose sentence.
 
 ### Relationships
 
-Unchanged from current format: archetype label(s) and name as a bold header; behavioral description as 2–4 prose sentences below it.
+Bullet list. One entry per relationship. Bold `**Name — Archetype(s):**` prefix inline on the bullet, followed by the behavioral description as prose sentence(s).
+
+```
+- **Name — Archetype:** [behavioral description]
+```
+
+*Example:*
+```
+- **Mira — Kin:** When Mira dismisses her work, she goes quiet rather than pushing back — she can read when the gap is too wide, and she knows better than to try.
+```
 
 ---
 
@@ -141,7 +150,7 @@ The Because clause carries the psychological root drawn from the Q&A session. Th
 
 ### Relationships
 
-Behavioral dynamic entries written to the same construction discipline as Soul and Body. Each entry describes what this character does in this relationship — not how they feel about the person, not the other person's internal state.
+Bullet list. One bullet per relationship. Each entry opens with `**Name — Archetype(s):**` as an inline bold prefix, followed by a prose behavioral description — what this character does in this relationship, not how they feel about the person, not the other person's internal state.
 
 Archetype framework, coverage requirements (8 named for major characters, 5 for supporting), generativity hierarchy, perspective-focus rules, and cross-character capture guidance are unchanged.
 
