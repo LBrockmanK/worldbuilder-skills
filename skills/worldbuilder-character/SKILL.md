@@ -108,7 +108,7 @@ Before writing any note section, conduct a Q&A with the user. Ask one question a
 - Relationships: who the named cast is, which relationships matter most to this character, the behavioral dynamic of each — what it makes them do when that person is present or mentioned
 - Intimate Dynamics: if the character is flagged for intimate dynamics (check project plan first), also cover how they express attraction, what makes them hold back, and any specific dynamic that drives their intimate behavior
 
-The Q&A ends when the agent has confident, specific answers across all four areas. Capture answers in Design Notes → Session Notes before moving to note writing.
+The Q&A ends when the agent has confident, specific answers across all coverage areas. Capture answers in Design Notes → Session Notes before moving to note writing.
 
 ---
 
