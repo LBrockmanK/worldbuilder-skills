@@ -31,7 +31,7 @@ If a plain word does the job, use it. Don't reach for a longer or more formal wo
 
 When in doubt: would a plain-spoken person use this word in a work meeting? If not, find the word they would.
 
-### Use "is" and "has" — avoid copula avoidance
+### Use "is" and "has": avoid copula avoidance
 
 Use "is" and "has" directly. Don't substitute elaborate constructions.
 
@@ -40,7 +40,7 @@ Use "is" and "has" directly. Don't substitute elaborate constructions.
 - Wrong: "The building boasts three floors and a cellar."
 - Right: "The building has three floors and a cellar."
 
-"Serves as," "stands as," "functions as," "boasts," "features" — these are circumlocutions. The simple verb is clearer.
+"Serves as," "stands as," "functions as," "boasts," "features" are circumlocutions. The simple verb is clearer.
 
 ### No significance inflation
 
@@ -49,7 +49,7 @@ Don't add statements about importance, legacy, or meaning. If something matters,
 - Wrong: "The founding betrayal is a pivotal moment that underscores the community's enduring wound."
 - Right: "Three families left after the betrayal. The ones who stayed have never discussed it publicly."
 
-"Pivotal," "enduring," "testament," "underscores," "highlights," "reflects broader" — cut them. They add length without adding information.
+"Pivotal," "enduring," "testament," "underscores," "highlights," "reflects broader": cut them. They add length without adding information.
 
 ---
 
@@ -139,7 +139,7 @@ Don't describe a character in a location note because they're connected to that 
 
 ### Don't describe one entity in another entity's document
 
-A character note describes that character's experience. A location note describes the location. A relationship entry describes what *this* character feels, thinks, and does — not a description of the other party.
+A character note describes that character's experience. A location note describes the location. A relationship entry describes what *this* character feels, thinks, and does. It is not a description of the other party.
 
 - Wrong (in Mira's notes): "Jonas is a quiet, solitary man who keeps to himself."
 - Right (in Mira's notes): "She trusts Jonas more than she admits, and resents that she does."
