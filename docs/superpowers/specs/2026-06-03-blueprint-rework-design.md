@@ -71,11 +71,7 @@ Bullet list. One behavioral description per bullet, written as a prose sentence.
 
 Bullet list. One entry per relationship. Bold `**Name — Archetype(s):**` prefix inline on the bullet, followed by the behavioral description as prose sentence(s).
 
-```
-- **Name — Archetype:** [behavioral description]
-```
-
-*Example:*
+*Example bullet:*
 ```
 - **Mira — Kin:** When Mira dismisses her work, she goes quiet rather than pushing back — she can read when the gap is too wide, and she knows better than to try.
 ```
