@@ -30,6 +30,9 @@ Psychological avoidance stated as avoidance rather than as behavior. These phras
 - "[X] she has never articulated"
 - "she doesn't think of it in those terms"
 - "something she has never put into words"
+- "she has no language for it"
+- "she doesn't have that framework"
+- "a [low/quiet] [feeling] she doesn't examine"
 
 Fix: state the behavioral reality directly — what does she do, avoid, or react to?
 
@@ -62,6 +65,7 @@ Announces importance without adding information. Cut on sight.
 - "speaks to"
 - "a defining moment"
 - "the weight of [X]"
+- "load-bearing" (as in "this is load-bearing for both notes")
 
 Fix: if it matters, the facts make it clear. Remove the announcement.
 
@@ -87,5 +91,6 @@ Fix: use "is" or "has."
 Words that appear constantly in AI-generated text but rarely in how real people describe other people or relationships. Their presence signals the AI is generating rather than observing.
 
 - "gap" / "the gap between them" / "bridge the gap"
+- "register" (in the communication sense — "same register," "the register she runs with")
 
-Fix: name what is actually different or distant. "She stopped pushing" is more specific than "the gap was too wide."
+Fix: name what is actually different or distant. "She stopped pushing" is more specific than "the gap was too wide." For "register," describe the actual behavior or tone directly.
