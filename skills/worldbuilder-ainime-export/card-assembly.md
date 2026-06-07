@@ -26,7 +26,7 @@ Weave the character note's Foundation, Behavioral Descriptions, Relationships, a
 
 ### Register rules
 
-- **Functional, not literary.** Plain, direct language. "He deflects compliments by finding something to fix" is correct. Poetic constructions that gesture at something without stating it are wrong register — the card's register becomes the engine's narration register.
+- **Write plainly. No flair.** "He deflects compliments by finding something to fix" is correct. Poetic constructions that gesture at something without stating it are wrong — the card's prose style becomes the engine's narration style.
 - **No internal headers** in the card body. The prose reads as a single unbroken block.
 - **No literary flair or metaphor** in descriptive text — that register belongs in dialogue. "She avoids eye contact when lying" not "her gaze slides away from truth."
 - **Numbers as numerals.** 27, not twenty-seven.

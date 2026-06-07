@@ -29,7 +29,7 @@ Work through sections in order. Do not skip sections because the character seems
 | Design Notes | — | Builder record; H3 subheadings; excluded from exports |
 | Background | `framework.md` | Declarative context; different in kind from behavioral sections |
 | Body | `framework.md` | Physical behavioral descriptions |
-| Soul | `framework.md` | Psychological + social register behavioral descriptions |
+| Soul | `framework.md` | Psychological + social behavioral descriptions |
 | Relationships | `relationships.md` | Named relationships; bullet format |
 | Intimate Dynamics (if flagged) | `intimate.md` | Only if flagged in project plan |
 
@@ -104,7 +104,7 @@ Before writing any note section, conduct a Q&A with the user. Ask one question a
 - Background: origin, class/culture, key formative events, current situation and how they feel about it
 - Body: appearance, any notable physical self-consciousness, embodied habits
 - Soul (psychological): core want beneath the surface want, core fear, self-image gap, irrational behavior and its root
-- Soul (social register): how they are with strangers, what warmth looks like, what distance or friction looks like
+- Soul (social behavior): how they are with strangers, what warmth looks like, what distance or friction looks like
 - Relationships: who the named cast is, which relationships matter most to this character, the behavioral dynamic of each — what it makes them do when that person is present or mentioned
 - Intimate Dynamics: if the character is flagged for intimate dynamics (check project plan first), also cover how they express attraction, what makes them hold back, and any specific dynamic that drives their intimate behavior
 
@@ -118,7 +118,7 @@ These rules apply to all behavioral sections (Body, Soul, Relationships, Intimat
 
 **Make decisions, don't hedge.** Every fact in the note is a decision. Never write "X or Y" or "grew up somewhere, perhaps Y" unless the ambiguity is a deliberate mystery being preserved. If you don't know, ask the user.
 
-**Note register is functional, not literary.** Plain, direct language throughout. Prefer short concrete words over Latinate vocabulary: "she knows," "he keeps it to himself" rather than "she maintains an internal rationalization," "he sustains that framing." If a sentence sounds like it belongs in a novel, rewrite it as a direct statement.
+**Write plainly. No flair.** Write each behavioral description the way a screenplay writes action lines: present tense, only what can be seen or heard, no internal states, short plain sentences. If a director cannot stage the sentence, rewrite it. For vocabulary: shortest Anglo-Saxon word that works, active voice, cut every word that can go. See `writing-style.md` for the full style model.
 
 **Write what characters ARE, not what they aren't.** Positive statements give the LLM something to act on. Negative constructions define by absence — the LLM has to invent the positive case itself. State the fact directly. Factual negatives are fine when the un-done thing is the meaningful information: "she has not sent the letter," "he hasn't asked."
 
@@ -190,7 +190,7 @@ After completing a household group or batch of characters, run a relationship sy
 
 **Soul**
 - [ ] 3–5 psychological behavioral entries minimum
-- [ ] 2–3 general social register entries minimum
+- [ ] 2–3 general social behavior entries minimum
 - [ ] One contradiction stated as a behavioral description
 - [ ] Irrational behavior with emotional root present
 - [ ] Self-image gap expressed as behavioral description

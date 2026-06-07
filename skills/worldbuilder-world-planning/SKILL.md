@@ -88,8 +88,10 @@ Next: Continue character notes. Suggested: dispatch 4 in parallel.
 | 2d. Faction notes | Wide | `worldbuilder-faction` | `notes/` |
 | 2e. Cast planning | Wide | (this skill — see below) | Cast plan in `worldbuilding-plan.md` |
 | 2f. Character notes | Wide | `worldbuilder-character` | `notes/` |
+| 2g. Relationship review | Wide | (this skill) | Updated character notes |
+| 2h. Contradiction validation | Wide | (this skill) | Resolved contradictions |
 | 3. Export | Export | `worldbuilder-ainime-export` | Platform-specific outputs |
-| 3b. Review | Export | — | Sign-off across all documents |
+| 3b. Final review | Export | (TBD) | Sign-off across all deliverables |
 
 ### Dependency structure
 
@@ -99,7 +101,7 @@ Next: Continue character notes. Suggested: dispatch 4 in parallel.
 Seed (seed.md)
     ├─► Concept notes (2a)  ─┐
     ├─► Story notes (2b)     │
-    ├─► Location notes (2c)  ├─► Character notes (2f) ─► Export ─► Review
+    ├─► Location notes (2c)  ├─► Character notes (2f) ─► Relationship review (2g) ─► Contradiction validation (2h) ─► Export
     ├─► Faction notes (2d)  ─┘         ▲
     └─► Cast planning (2e) ─────────────┘ (required gate)
 ```
@@ -166,6 +168,49 @@ Coverage check before declaring cast planning complete:
 - Every household has at least one character assigned
 - Default count: 8 main / 16 side (range: 6–10 main, 6–20 side)
 - Anti-redundancy check: no two romance candidates filling the same slot with the same execution
+
+---
+
+### Phase 2g: Relationship review
+
+After all character notes are complete, run a cast-wide relationship review before export.
+
+Characters develop during blueprinting. A relationship designed when only a handful of characters existed may look different once the full cast is specified. The goal of this pass is to read the cast as a whole and ask whether the relationship sections still reflect what is most interesting.
+
+**This is not a symmetry check.** A names B does not mean B must name A. People feel differently about each other — asymmetry is often the most interesting thing. Do not add relationships solely because another character names this one.
+
+**Process:**
+
+1. Read all `brief` frontmatter fields across the full cast. This gives a current-state picture of everyone without opening every note.
+2. For each character, open their Relationships section and read it against the full cast picture.
+3. For each entry, ask three questions: Does this still reflect what is most interesting about this character's experience of that person? Has the other character developed in a way that creates a richer dynamic? Is this entry redundant with another entry — same archetype, similar dynamic?
+4. Add, edit, remove, or replace entries based on what the full cast reveals. Follow the archetypes and coverage requirements in `relationships.md` when adding entries.
+5. Run the relationships self-check from `worldbuilder-character/SKILL.md` after updating each character.
+
+---
+
+### Phase 2h: Contradiction validation
+
+A full-cast check for factual contradictions before export. Notes written independently or in parallel can conflict in ways no single agent saw.
+
+**The approach:** link-following. Each note references the things it names. Checking a note against its linked notes covers the real contradiction risk without comparing every note pair.
+
+**Process:**
+
+1. List all notes in `notes/`.
+2. For each note, read its outbound wikilinks.
+3. For each linked note: read both. Check whether any fact in the linking note conflicts with any fact in the linked note.
+4. Also check each character note against the faction notes in its `factions:` frontmatter field.
+5. Flag every contradiction: source note, linked note, the specific conflict.
+6. Resolve each contradiction with the user before proceeding. Do not silently choose a version.
+
+**What to look for:**
+- Background facts in one character's note vs. references to that character in other notes
+- Relationship entries that imply something about the other person that their own note contradicts
+- Faction membership stated in a character note vs. what the faction note says about its members
+- References to locations, events, or lore that conflict with what the relevant concept note says
+
+Mark Phase 2h complete only when every flagged contradiction is resolved.
 
 ---
 
@@ -238,24 +283,27 @@ Use these checklists at each phase gate. If any item is unresolved, surface it t
 
 ### Character notes complete (per character)
 
-- [ ] All three foundation dimensions filled out (body, environment, soul)
-- [ ] 3–5 behavioral descriptions in When/Behavior/Because form
-- [ ] Contradiction and irrational behavior identified with emotional root
-- [ ] Relationship Behavior written covering default register, warmth, and distance
-- [ ] Storylines written; introduction note created or flagged as pending
-- [ ] Frontmatter complete with wikilinks on factions and archetype
+Run the self-check in `worldbuilder-character/SKILL.md` before marking any character note complete. That checklist is the authoritative per-note gate.
 
 ### Export phase complete (per character)
 
 See `worldbuilder-ainime-export` for export completion criteria. Export is the only phase that writes ainime field names.
 
-### Review complete (full cast)
+### Phase 2g complete (relationship review)
 
-- [ ] Relationship synchronization verified: if A names B, B's note names A
-- [ ] Every household's internal tension represented in at least one character note
-- [ ] All romance candidates have romance arc guidance
-- [ ] No generic relationship behavior language (the engine handles warmth and distance automatically)
-- [ ] Dark arc characters have hope-tending language and witness-not-savior framing
+- [ ] All `brief` fields read before reviewing any individual relationships
+- [ ] Every character's Relationships section reviewed against the full current cast
+- [ ] Entries that no longer reflect the most interesting dynamic updated or replaced
+- [ ] New relationship opportunities acted on where warranted
+- [ ] Coverage requirements in `relationships.md` still met after any changes
+- [ ] Relationships self-check from `worldbuilder-character/SKILL.md` re-run for each updated character
+
+### Phase 2h complete (contradiction validation)
+
+- [ ] All notes in `notes/` listed
+- [ ] Every outbound link from every note checked against the linked note for factual conflicts
+- [ ] Every character note checked against its `factions:` frontmatter entries
+- [ ] All flagged contradictions resolved with user input — none silently discarded
 
 ---
 
@@ -275,7 +323,11 @@ See `worldbuilder-ainime-export` for export completion criteria. Export is the o
 
 **Phase 2e (Cast planning)** before any character notes begin.
 
-**Relationship Sync Pass** — run at two points: (1) after each household group of character notes, while the characters are fresh in context; (2) a final pass after all notes are complete. The note-level pass catches inconsistencies before they carry into export.
+**Phase 2g (Relationship review)** after all character notes complete.
+
+**Phase 2h (Contradiction validation)** after Phase 2g.
+
+**Phase 3 (Export)** after Phase 2h.
 
 ### Constructing agent prompts for parallel character work
 

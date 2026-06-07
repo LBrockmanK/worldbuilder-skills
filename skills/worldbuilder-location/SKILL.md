@@ -140,7 +140,7 @@ If the location is the subject of concept notes at different knowledge layers, l
 
 **Make decisions, don't hedge.** Every fact in the note is a decision. "The mill burned under disputed circumstances" is a decision. "Something may have happened to the mill at some point" is an incomplete note.
 
-**Note register is functional, not literary.** Plain, direct language throughout. "Locals avoid the east wing after dark" is correct. "Shadows cling to its ancient stones like a shroud of forgotten memory" belongs in prose, not a note. If a sentence sounds like it belongs in a novel, rewrite it as a direct statement.
+**Write plainly. No flair.** "Locals avoid the east wing after dark" is correct. "Shadows cling to its ancient stones like a shroud of forgotten memory" belongs in prose, not here. If a sentence sounds like it belongs in a novel, rewrite it.
 
 **Physical Form is not the point.** A location note that is mostly Physical Form and thin on Social Life and Behavioral Register is description masquerading as specification. The behavioral sections carry more weight.
 

@@ -115,7 +115,7 @@ Romance-eligible characters should collectively cover these six slots across gen
 5. **Creative / dreamy** — artistic or philosophical orientation
 6. **Wild card** — resists easy categorization
 
-**Anti-redundancy check:** If two characters occupy the same slot, verify they differ substantially in execution — different emotional register, different obstacle, different function in the setting. The same archetype expressed the same way produces redundancy that players notice.
+**Anti-redundancy check:** If two characters occupy the same slot, verify they differ substantially in execution — different emotional tone, different obstacle, different role in the setting. The same archetype expressed the same way produces redundancy that players notice.
 
 ### Non-romance archetypes to place somewhere in the cast
 

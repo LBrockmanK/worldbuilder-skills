@@ -8,6 +8,19 @@ Prose guidelines for Export phase outputs (character cards, intro text, etc.) li
 
 ---
 
+## Style Model
+
+Write behavioral descriptions the way a screenplay writes action lines: present tense, only what can be seen or heard in a scene, no internal states or significance announcements, short plain sentences.
+
+**The staging test:** Can a director stage this sentence? If not, rewrite it.
+
+- Fails: "She carries grief she has never articulated."
+- Passes: "She changes the subject and starts wiping down the counter."
+
+For vocabulary, apply Orwell's rule from "Politics and the English Language": shortest Anglo-Saxon word that does the job, active voice, cut every word that can go.
+
+---
+
 ## Word Choice
 
 ### Use the simplest precise word

@@ -184,7 +184,7 @@ The standard: a member who could belong to any faction fails the test. A member 
 
 **Instructional phrasing is not optional.** Descriptive phrasing in Collective Behavior will not produce behavioral consistency in output. Every entry must specify what members do.
 
-**Note register is functional, not literary.** Plain, direct language throughout — in every section, not just Collective Behavior. "The Brotherhood controls the valley's grain pricing" is correct. "The Brotherhood's iron grip on commerce has shaped the valley's soul for generations" is not.
+**Write plainly. No flair.** This applies to every section, not just Collective Behavior. "The Brotherhood controls the valley's grain pricing" is correct. "The Brotherhood's iron grip on commerce has shaped the valley's soul for generations" is not.
 
 ---
 

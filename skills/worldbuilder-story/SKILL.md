@@ -65,7 +65,7 @@ A plot outline. A sequence of events. A list of story beats. The opening arc est
 
 ### Author framing
 
-Position the LLM as a skilled author giving voice to characters, not an entity that becomes them. Author-capture — losing narrative perspective, mirroring the player's mood regardless of whether that serves the story, abandoning a character's established behavioral register — is the root failure mode for most output quality problems.
+Position the LLM as a skilled author giving voice to characters, not an entity that becomes them. Author-capture — losing narrative perspective, mirroring the player's mood regardless of whether that serves the story, abandoning a character's established behavioral patterns — is the root failure mode for most output quality problems.
 
 Adapt this language:
 
@@ -101,10 +101,10 @@ Adapt the bracketed terms to the setting. If the setting has no supernatural ele
 
 ### Seasonal tone (if applicable)
 
-Brief guidance on each time period's emotional register. The same event at different points in the year should feel different.
+Brief guidance on each time period's emotional tone. The same event at different points in the year should feel different.
 
 Example for a four-season setting:
-> Spring: possibility, new starts, something stirring. Summer: abundance, heat, restlessness, the world at full volume. Autumn: harvest and melancholy together; things ending, things becoming clear. Winter: stillness, interiority, honesty that comes with the dark.
+> Spring: possibility, new starts, something stirring. Summer: abundance, heat, restlessness, the world at full volume. Autumn: harvest and melancholy together; things ending, things becoming clear. Winter: stillness, withdrawal, honesty that comes with the dark.
 
 Adapt to the setting's actual time structure. If the setting uses a different rhythm — tides, academic terms, festival calendar — substitute that.
 
