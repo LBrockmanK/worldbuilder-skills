@@ -95,12 +95,14 @@ brief: plain prose                 # cast navigation summary; written last
 region: "[[The Valley]]"           # link
 function: one phrase
 primary-characters: ["[[Name]]"]   # links
+brief: plain prose                 # world navigation summary; written last
 ```
 
 **Faction/Household:**
 ```yaml
 members: ["[[Name]]"]              # links
 function: one phrase
+brief: plain prose                 # world navigation summary; written last
 ```
 
 **Event:**
@@ -109,12 +111,13 @@ date: "[[Spring-08]]"              # link; clusters events by day
 recurring: false
 characters: ["[[Name]]"]           # links
 location: "[[Location Name]]"      # link
+brief: plain prose                 # world navigation summary; written last
 ```
 
 **Concept (lore):**
 ```yaml
 layer: "[[surface]]"               # link; clusters by depth
-trigger-context: brief plain text
+brief: plain prose                 # world navigation summary; written last
 ```
 
 **Story:**
@@ -122,6 +125,7 @@ trigger-context: brief plain text
 up: "[[parent-story-note]]"        # absent on top-level direction note
 scope: "[[direction]]" | "[[arc]]" | "[[intention]]" | "[[introduction]]"
 characters: ["[[Name]]"]           # optional; characters central to this story note
+brief: plain prose                 # navigation summary; written last
 ```
 
 **Link convention:** Anything that represents a category, entity, or concept worth filtering by uses a `[[wikilink]]`. Plain values for operational fields (`status`, `last_updated`, `recurring`, booleans).
