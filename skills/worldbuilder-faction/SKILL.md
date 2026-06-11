@@ -9,7 +9,7 @@ description: Use when creating or deepening a faction note for an AI-powered nar
 
 A faction note is not a roster — it is a shared behavioral specification. The engine handles generic social roles; the faction note supplies the specific: how this group acts as a collective, what its members do when they encounter strangers, how they present to outsiders, and how individuals vary beneath that shared surface.
 
-When a faction is underspecified, the engine defaults to making every member a generic instance of their surface role — every guard gruff, every merchant greedy, faction identity invisible across scenes. The faction note exists to prevent this. The section that carries the specification is Collective Behavior. Origin & Purpose and Membership are supporting context.
+When a faction is underspecified, the engine defaults to making every member a generic instance of their surface role — every guard gruff, every merchant greedy, faction identity invisible across scenes. The faction note exists to prevent this. The section that carries the specification is Collective Behavior. Origin & Structure is supporting context.
 
 The faction note is the comprehensive Wide-phase single source of truth for any named group. Export skills derive their output from this note.
 
@@ -25,16 +25,13 @@ The faction note is the comprehensive Wide-phase single source of truth for any 
 
 Work through sections in order.
 
-| Section | Character blueprint analog | Notes |
-|---|---|---|
-| Frontmatter | — | YAML; see below |
-| Preamble | Preamble | 2–3 sentences; what this faction is and when to use this note |
-| Concept | Concept | What narrative engine does this faction run? |
-| Origin & Purpose | Foundation | Founding, what it controls, its current goal(s) |
-| Collective Behavior | Behavioral Descriptions | When/Behavior/Because for the group; Demeanor/Nature split |
-| Membership | — | Ranks, acquisition/loss, ambiguity cases |
-| Inter-Faction Web | Relationships | Direct allies/rivals only |
-| Storylines | Storylines | Story possibilities anchored by this faction |
+| Section | Notes |
+|---|---|
+| Frontmatter | YAML; see below |
+| Brief | Frontmatter field; written last |
+| Design Notes | Builder record; excluded from exports |
+| Origin & Structure | Founding, holdings, membership |
+| Collective Behavior | Behavioral entries, mask, variation, inter-faction |
 
 Faction notes do not use sub-files — all content lives in one note.
 
@@ -51,33 +48,41 @@ aliases: []
 last_updated: YYYY-MM-DD HH:mm
 members: ["[[Name]]"]   # links to character notes
 function: one phrase (plain text)
+brief: |                # plain prose; written last — see ## Brief below
+  <written after the full note is complete>
 ```
 
 `members` uses `[[wikilinks]]`. `function` stays plain text.
 
 ---
 
-## Preamble
+## Brief
 
-2–3 sentences. What is this faction and when should this note be used?
+The world navigation field for factions. Written last, after the full note is complete.
 
-> *The Silt Brotherhood is a loosely-organized network of river traders who control most commercial traffic between the valley settlements. Use this note when the player deals with any river merchant, asks about trade or supply routes, or encounters anyone working the river. They are the faction most likely to have information the player needs and the least likely to offer it directly.*
+What this group is, what it does to scenes, and what a player can expect from any member they encounter.
 
-Write it as if briefing a reader who needs to use the faction correctly right now, without reading the full note.
+> *The Silt Brotherhood controls river trade and treats pricing information as proprietary — any member in a scene will deflect direct questions about costs and find a reason to leave before being pressed further.*
+
+1–2 sentences. Behavioral, not descriptive. A reader who encounters this field without reading the full note should know what to expect when this faction enters a scene.
 
 ---
 
-## Concept
+## Design Notes
+
+> **Builder record — excluded from exports.**
 
 The narrative engine this faction runs. Not a description of its membership or its history — what does it *do* to the story? What conflicts does it generate or embody? What role does it fill that no other faction could?
 
-A merchant guild and a thieves' guild that produce the same kinds of scenes have the same concept. That is a problem.
+A merchant guild and a thieves' guild that produce the same kinds of scenes have the same narrative engine. That is a problem.
+
+Also record here: inspirations, design decisions, and open questions about the faction's role.
 
 ---
 
-## Origin & Purpose
+## Origin & Structure
 
-Three things, in order:
+Three things, in order, then membership:
 
 **Founding** — how the faction came to exist and what its original purpose was.
 
@@ -90,6 +95,15 @@ Three things, in order:
 "Seeks to grow its power and influence" is not a goal.
 
 Specific goals connect the faction to the events layer and make it a story engine.
+
+**Membership** — Deliberately thin on named-member content — named members have their own character notes. Covers:
+
+- **Ranks or tiers** if they exist (hierarchy only — no personalities here)
+- **Acquisition** — how one becomes a member
+- **Loss** — how membership ends or is revoked
+- **Ambiguity cases** — former members, dual loyalties, contested membership, outsiders who function as members without formal standing
+
+Ambiguity cases earn their place because characters who straddle faction lines are often the most narratively generative.
 
 ---
 
@@ -132,22 +146,7 @@ The individual underneath the collective mask. Members share the Demeanor withou
 
 This is what prevents members from being interchangeable. They wear the same mask; who they are underneath differs. Name the axes in terms of observable behavior — how a loyalist acts differently from a cynic in the same situation, not just that one is loyal and one is cynical.
 
----
-
-## Membership
-
-Deliberately thin on named-member content — named members have their own character notes. Covers:
-
-- **Ranks or tiers** if they exist (hierarchy only — no personalities here)
-- **Acquisition** — how one becomes a member
-- **Loss** — how membership ends or is revoked
-- **Ambiguity cases** — former members, dual loyalties, contested membership, outsiders who function as members without formal standing
-
-Ambiguity cases earn their place because characters who straddle faction lines are often the most narratively generative.
-
----
-
-## Inter-Faction Web
+### Inter-Faction Web
 
 Lightweight by design. Direct relationships only — alliances, rivalries, contested territory, historical grievances with active weight. No comprehensive opinion-of-everyone map.
 
@@ -157,14 +156,6 @@ Each entry:
 ```
 
 Relationships that don't bear on the current project do not go here.
-
----
-
-## Storylines
-
-Story possibilities anchored by this faction's existence. Not scripts — possibilities. Phrased as "could," "may," "there is a possibility that."
-
-What could this faction do or reveal that no other faction could?
 
 ---
 
@@ -180,11 +171,13 @@ The standard: a member who could belong to any faction fails the test. A member 
 
 **Make decisions, don't hedge.** An active goal that is vague is not a goal. A Demeanor that could belong to any group is not a Demeanor.
 
-**Collective Behavior is the priority section.** A faction note that is mostly Origin & Purpose and thin on Collective Behavior documents history without specifying behavior. History is less important than what the faction does.
+**Collective Behavior is the priority section.** A faction note that is mostly Origin & Structure and thin on Collective Behavior documents history without specifying behavior. History is less important than what the faction does.
 
 **Instructional phrasing is not optional.** Descriptive phrasing in Collective Behavior will not produce behavioral consistency in output. Every entry must specify what members do.
 
 **Write plainly. No flair.** This applies to every section, not just Collective Behavior. "The Brotherhood controls the valley's grain pricing" is correct. "The Brotherhood's iron grip on commerce has shaped the valley's soul for generations" is not.
+
+**Storylines belong in story notes, not faction notes.** If a story possibility is anchored by this faction's existence, create a story note.
 
 ---
 
@@ -195,16 +188,19 @@ The standard: a member who could belong to any faction fails the test. A member 
 - [ ] `members` uses `[[wikilinks]]`
 - [ ] `status` is `draft` or `complete`
 
-**Preamble**
-- [ ] 2–3 sentences; usable without reading the full note
+**Brief**
+- [ ] Written last
+- [ ] 1–2 sentences; behavioral — describes what a player encounters with any member, not what the faction is in the abstract
 
-**Concept**
-- [ ] States what narrative engine this faction runs
-- [ ] Names what conflicts it generates that no other faction could
+**Design Notes**
+- [ ] Narrative engine stated
+- [ ] Not padded
 
-**Origin & Purpose**
+**Origin & Structure**
 - [ ] Has a specific active goal (not "seeks power" or similar)
 - [ ] Names what the faction currently controls (specific, not "influence")
+- [ ] How membership is acquired and lost is stated
+- [ ] Ambiguity cases addressed
 
 **Collective Behavior**
 - [ ] 3–5 When/Behavior/Because entries for the group
@@ -213,13 +209,6 @@ The standard: a member who could belong to any faction fails the test. A member 
 - [ ] All entries phrased as instructional directives, not description
 - [ ] Member test passes: Demeanor entry specifies at least one concrete behavior, not a personality label; a member behaving per this note could not belong to a different faction without rewriting their behavior
 
-**Membership**
-- [ ] How membership is acquired and lost is stated
-- [ ] Ambiguity cases addressed
-
 **Inter-Faction Web**
 - [ ] Direct relationships only
 - [ ] Each entry has status + one sentence on what drives it
-
-**Storylines**
-- [ ] All entries phrased as possibility, not script
