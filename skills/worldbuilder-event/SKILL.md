@@ -40,10 +40,10 @@ type: event
 status: draft | complete
 aliases: []           # every realistic way this event is mentioned in dialogue
 last_updated: YYYY-MM-DD HH:mm
-date: Spring-08                                          # plain string; calendar day
+date: "[Spring-08](notes/Spring-08.md)"                  # link; clusters events by day
 recurring: true | false
-characters: ["[Name](notes/name.md)"]                    # links to character notes
-location: "[Location Name](notes/location-name.md)"      # link to location note
+characters: ["[Name](notes/Name.md)"]                    # links to character notes
+location: "[Location Name](notes/Location Name.md)"      # link to location note
 brief: |              # plain prose; written last — see ## Brief below
   <written after the full note is complete>
 ```
@@ -76,12 +76,6 @@ Cover:
 - Inspirations: real festivals, cultural observances, fictional events, what was drawn from each.
 - Narrative intent: what kinds of scenes does this event enable?
 - Open questions.
-
----
-
-## Linking
-
-When writing any section of an event note, link to any referenced note — character, location, faction, concept, event, or story — on its first mention in each section. Use standard markdown links: `[Name](notes/name.md)`. Link even if the target file does not yet exist. See CONTEXT.md for the full link convention.
 
 ---
 
@@ -137,7 +131,7 @@ Event notes can be created at any phase. Create a stub — frontmatter plus a se
 
 **Frontmatter**
 - [ ] `aliases` covers every realistic phrasing
-- [ ] `date` set as a plain string
+- [ ] `date` set as a markdown link
 - [ ] `recurring` set
 
 **Brief**

@@ -44,12 +44,12 @@ type: character
 status: draft | complete
 aliases: []
 last_updated: YYYY-MM-DD HH:mm
-factions: ["[Household Name](notes/household-name.md)", "[Guild Name](notes/guild-name.md)"]   # links to faction notes
+factions: ["[Household Name](notes/Household Name.md)", "[Guild Name](notes/Guild Name.md)"]   # links to faction notes
 brief: |                                              # plain prose; written last — see ## Brief below
   <written after the full blueprint is complete>
 ```
 
-`factions` uses markdown links to faction notes. Derive filenames by lowercasing and replacing spaces with hyphens. `brief` is plain prose — not a link.
+`factions` uses markdown links to faction notes. The filename matches the display name. `brief` is plain prose — not a link.
 
 ---
 
@@ -138,12 +138,6 @@ If a behavior is primarily about one specific relationship, it belongs in Relati
 
 ---
 
-## Linking
-
-When writing any section of a character note, link to any referenced note — character, location, faction, concept, event, or story — on its first mention in each section. Use standard markdown links: `[Name](notes/name.md)`. Link even if the target file does not yet exist. See CONTEXT.md for the full link convention.
-
----
-
 ## Background, Body & Soul
 
 See `framework.md` for construction format, coverage requirements, the When/Behavior/Because formula, and examples for all three sections.
@@ -158,9 +152,9 @@ See `relationships.md` for the full relationship archetypes, coverage requiremen
 
 ## Story Notes
 
-**Story notes instead of inline storylines.** Story possibilities for this character live in separate story notes, not in the character note. When you have enough clarity on a character's arc, create a story note with `type: story`, `scope: intention`, and `characters: ["[Character Name](notes/character-name.md)"]`. Link back to the character note via the `characters:` field. See `worldbuilder-story` for story note structure.
+**Story notes instead of inline storylines.** Story possibilities for this character live in separate story notes, not in the character note. When you have enough clarity on a character's arc, create a story note with `type: story`, `scope: "[intention](notes/intention.md)"`, and `characters: ["[Character Name](notes/Character Name.md)"]`. Link back to the character note via the `characters:` field. See `worldbuilder-story` for story note structure.
 
-The introduction note is also a story note (`scope: introduction`). When you have enough character clarity to know where and how the player would first meet this character, create it then.
+The introduction note is also a story note (`scope: "[introduction](notes/introduction.md)"`). When you have enough character clarity to know where and how the player would first meet this character, create it then.
 
 ---
 

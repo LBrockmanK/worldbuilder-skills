@@ -46,13 +46,13 @@ type: faction
 status: draft | complete
 aliases: []
 last_updated: YYYY-MM-DD HH:mm
-members: ["[Name](notes/name.md)"]   # links to character notes
+members: ["[Name](notes/Name.md)"]   # links to character notes
 function: one phrase (plain text)
 brief: |                # plain prose; written last — see ## Brief below
   <written after the full note is complete>
 ```
 
-`members` uses markdown links. Derive filenames by lowercasing and replacing spaces with hyphens. `function` stays plain text.
+`members` uses markdown links. The filename matches the display name. `function` stays plain text.
 
 ---
 
@@ -77,12 +77,6 @@ The narrative engine this faction runs. Not a description of its membership or i
 A merchant guild and a thieves' guild that produce the same kinds of scenes have the same narrative engine. That is a problem.
 
 Also record here: inspirations, design decisions, and open questions about the faction's role.
-
----
-
-## Linking
-
-When writing any section of a faction note, link to any referenced note — character, location, faction, concept, event, or story — on its first mention in each section. Use standard markdown links: `[Name](notes/name.md)`. Link even if the target file does not yet exist. See CONTEXT.md for the full link convention.
 
 ---
 
@@ -158,7 +152,7 @@ Lightweight by design. Direct relationships only — alliances, rivalries, conte
 
 Each entry:
 ```
-[Faction Name](notes/faction-name.md) — allied / neutral / rival / enemy: one sentence on what drives it.
+[Faction Name](notes/Faction Name.md) — allied / neutral / rival / enemy: one sentence on what drives it.
 ```
 
 Relationships that don't bear on the current project do not go here.

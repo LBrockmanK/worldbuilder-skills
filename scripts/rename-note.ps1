@@ -41,12 +41,8 @@ param(
 
 $VaultPath = Resolve-Path $VaultPath -ErrorAction Stop | Select-Object -ExpandProperty Path
 
-function ConvertTo-NoteFilename([string]$Name) {
-    return ($Name.ToLower() -replace '\s+', '-') + ".md"
-}
-
-$oldFilename = ConvertTo-NoteFilename $OldName
-$newFilename = ConvertTo-NoteFilename $NewName
+$oldFilename = "$OldName.md"
+$newFilename = "$NewName.md"
 $newPath     = "notes/$newFilename"
 
 Write-Host "Vault:    $VaultPath"

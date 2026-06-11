@@ -44,14 +44,14 @@ type: location
 status: draft | complete
 aliases: []
 last_updated: YYYY-MM-DD HH:mm
-region: "[The Valley](notes/the-valley.md)"           # link to region note
+region: "[The Valley](notes/The Valley.md)"            # link to region note
 function: one phrase (plain text)
-primary-characters: ["[Name](notes/name.md)"]         # links to character notes
+primary-characters: ["[Name](notes/Name.md)"]         # links to character notes
 brief: |                           # plain prose; written last — see ## Brief below
   <written after the full note is complete>
 ```
 
-`region` and `primary-characters` use markdown links. Derive filenames by lowercasing and replacing spaces with hyphens. `function` stays plain text. `brief` is plain prose — not a link.
+`region` and `primary-characters` use markdown links. The filename matches the display name. `function` stays plain text. `brief` is plain prose — not a link.
 
 ---
 
@@ -74,12 +74,6 @@ brief: |                           # plain prose; written last — see ## Brief 
 The builder record — what drove the design of this location. Narrative function (what does this location uniquely contribute), intended scene types (what kinds of scenes can only happen here), inspirations (real or fictional), design decisions, open questions. Bullet points under plain sub-headers.
 
 Leave blank if nothing warrants capturing — do not pad.
-
----
-
-## Linking
-
-When writing any section of a location note, link to any referenced note — character, location, faction, concept, event, or story — on its first mention in each section. Use standard markdown links: `[Name](notes/name.md)`. Link even if the target file does not yet exist. See CONTEXT.md for the full link convention.
 
 ---
 

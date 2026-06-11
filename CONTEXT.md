@@ -41,7 +41,7 @@ A narrative direction document in `notes/`. Three scopes connected by `up:` hier
 _Avoid_: story.md (as a single document)
 
 **Introduction note**:
-A story note with `scope: introduction` describing first contact between the player and a character. Belongs in `notes/`, not in the character note. One introduction note can cover multiple characters.
+A story note with `scope: "[introduction](notes/introduction.md)"` describing first contact between the player and a character. Belongs in `notes/`, not in the character note. One introduction note can cover multiple characters.
 
 ### Process
 
@@ -86,51 +86,51 @@ last_updated: YYYY-MM-DD HH:mm
 
 **Character:**
 ```yaml
-factions: ["[Household Name](notes/household-name.md)"]   # links to faction notes
+factions: ["[Household Name](notes/Household Name.md)"]   # links to faction notes
 brief: plain prose                 # cast navigation summary; written last
 ```
 
 **Location:**
 ```yaml
-region: "[The Valley](notes/the-valley.md)"           # link to region note
+region: "[The Valley](notes/The Valley.md)"            # link to region note
 function: one phrase
-primary-characters: ["[Name](notes/name.md)"]         # links to character notes
+primary-characters: ["[Name](notes/Name.md)"]         # links to character notes
 brief: plain prose                 # world navigation summary; written last
 ```
 
 **Faction/Household:**
 ```yaml
-members: ["[Name](notes/name.md)"]   # links to character notes
+members: ["[Name](notes/Name.md)"]   # links to character notes
 function: one phrase
 brief: plain prose                    # world navigation summary; written last
 ```
 
 **Event:**
 ```yaml
-date: Spring-08                    # plain string; calendar day
+date: "[Spring-08](notes/Spring-08.md)"                  # link; clusters events by day
 recurring: false
-characters: ["[Name](notes/name.md)"]                    # links to character notes
-location: "[Location Name](notes/location-name.md)"      # link to location note
+characters: ["[Name](notes/Name.md)"]                    # links to character notes
+location: "[Location Name](notes/Location Name.md)"      # link to location note
 brief: plain prose                 # world navigation summary; written last
 ```
 
 **Concept (lore):**
 ```yaml
-layer: surface                     # plain string; surface | mid | deep
+layer: "[surface](notes/surface.md)"   # link; surface | mid | deep
 brief: plain prose                 # world navigation summary; written last
 ```
 
 **Story:**
 ```yaml
-up: "[Parent Story Note](notes/parent-story-note.md)"   # absent on top-level direction note
-scope: direction | arc | intention | introduction        # plain string
-characters: ["[Name](notes/name.md)"]                    # optional; links to character notes
+up: "[Parent Story Note](notes/Parent Story Note.md)"    # absent on top-level direction note
+scope: "[arc](notes/arc.md)"                             # link; arc | intention | introduction
+characters: ["[Name](notes/Name.md)"]                    # optional; links to character notes
 brief: plain prose                 # navigation summary; written last
 ```
 
-**Link convention:** Named entity references — characters, locations, factions, events, concepts, story notes — use standard markdown links: `[Display Name](notes/filename.md)`. Derive the filename by lowercasing the display name and replacing spaces with hyphens. Paths are always relative to the vault root. Classification values (`layer`, `scope`, `date`) and operational fields (`status`, `last_updated`, `recurring`, booleans) use plain strings.
+**Link convention:** Named entity references — characters, locations, factions, events, concepts, story notes — use standard markdown links: `[Display Name](notes/Display Name.md)`. The filename matches the display name. Paths are always relative to the vault root. Classification values (`layer`, `scope`, `date`) also use markdown links for graph connectivity. Operational fields (`status`, `last_updated`, `recurring`, booleans) use plain strings.
 
-**Body-text linking:** When writing note body text, link to any referenced note (character, location, faction, concept, event, story) on its first mention in each section. Link even when the target file does not yet exist — the link marks the reference as connectable and navigable once the note is created.
+**Body-text linking:** The `worldbuilder-linking` skill runs as a post-pass after any note creation or editing skill. It links references to known notes (first mention per section), back-links from other files to newly created notes, and creates empty links for entities mentioned in text that have no note yet. Empty links are intentional — they mark expansion points and appear in unresolved link reports.
 
 ### What goes where
 

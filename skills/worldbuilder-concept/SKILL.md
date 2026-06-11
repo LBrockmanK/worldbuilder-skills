@@ -40,7 +40,7 @@ type: concept
 status: draft | complete
 aliases: []           # key terms and synonyms — become keyword candidates at export
 last_updated: YYYY-MM-DD HH:mm
-layer: surface | mid | deep        # plain string
+layer: "[surface](notes/surface.md)"   # link; surface | mid | deep
 brief: |    # plain prose; written last — see ## Brief below
   <written after the full note is complete>
 ```
@@ -76,12 +76,6 @@ The Design Notes section is the builder's working record. It is not lorebook con
 **Layer rationale:** Why is this classified as surface, mid, or deep? What would be lost if it were placed one layer lower or higher?
 
 **Open questions:** Unresolved details that may affect how this note is written or how it interacts with other notes.
-
----
-
-## Linking
-
-When writing any section of a concept note, link to any referenced note — character, location, faction, concept, event, or story — on its first mention in each section. Use standard markdown links: `[Name](notes/name.md)`. Link even if the target file does not yet exist. See CONTEXT.md for the full link convention.
 
 ---
 
