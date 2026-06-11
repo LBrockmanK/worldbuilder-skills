@@ -1,4 +1,4 @@
-﻿---
+---
 name: worldbuilder-story
 description: Use when writing arc notes and intention notes for an AI-powered narrative game, or when producing direction.md in Phase 1. Also use when LLM output escalates too fast, when romantic or dramatic intensity feels unearned, when dark content is handled carelessly, or when scenes lack pacing variation.
 ---
@@ -11,7 +11,7 @@ This skill serves two related purposes:
 
 **Phase 1b — direction.md:** `direction.md` is the world's standing creative brief and the story engine's primary guard rail. It is a project document (`type: project`), produced in Phase 1 by world-planning using this skill's section templates as guidance. See the Ongoing Story Direction section below for its complete structure.
 
-**Phase 2b — Arc and intention notes:** Once direction.md exists, this skill creates the story notes that extend it. Story notes live in `notes/` and link up to `direction.md` via `up:` frontmatter.
+**Phase 2b — Arc, intention, and introduction notes:** Once direction.md exists, this skill creates the story notes that extend it. Story notes live in `notes/` and link up to `direction.md` via `up:` frontmatter.
 
 Story note types:
 
@@ -21,7 +21,7 @@ Story note types:
 
 **Introduction** (`scope: "[[introduction]]"`) — First-contact scene for a specific character. Created during or after character note work, not during the story notes phase.
 
-Frontmatter for story notes:
+Frontmatter for story notes (arc, intention, introduction):
 ```yaml
 type: story
 status: draft | complete
@@ -30,7 +30,21 @@ last_updated: YYYY-MM-DD HH:mm
 up: "[[parent-note]]"
 scope: "[[arc]]" | "[[intention]]" | "[[introduction]]"
 characters: ["[[Name]]"]           # optional; characters central to this story note
+brief: |    # plain prose; written last — see ## Brief below
+  <written after the full note is complete>
 ```
+
+Note: direction notes also use `type: story` but have no `up:` field. `brief` applies to all story notes including direction.
+
+Structure for arc, intention, and introduction notes:
+
+| Section | Notes |
+|---|---|
+| Frontmatter | YAML; see above |
+| Brief | Frontmatter field; written last |
+| Design Notes | Builder record; excluded from exports |
+| Situation | State of affairs before player involvement |
+| Story Possibilities | What could happen; phrased as possibility not script |
 
 Read `direction.md` before creating arc notes. Arc notes develop what the brief establishes — they do not contradict it.
 
@@ -42,26 +56,101 @@ Read `direction.md` before creating arc notes. Arc notes develop what the brief 
 
 ---
 
-## Opening Story Arc
+## Arc, Intention, and Introduction Notes
 
-### What it is
+### Brief
 
-A brief description of the initial situation: what is happening in the setting when the player arrives, what tension or possibility is visible, who the player might immediately encounter. Evocative, not prescribed.
+`brief` is a frontmatter field, not a heading inside the note body. Write it last, after the full note is complete.
 
-### What it is not
+**For arc notes:** What this story arc is and what emotional territory it covers.
+Example: "The mill arc: the founding family's buried guilt surfaces; the town must decide whether to protect the story they've told themselves or face what actually happened."
 
-A plot outline. A sequence of events. A list of story beats. The opening arc establishes a stage; player choices and LLM variance will push everything off any scripted path immediately. Design for evocation, not control.
+**For intention notes:** What this story possibility is in one sentence.
+Example: "The confession scene: if trust reaches a high point during the autumn festival, Mira may tell the player what she actually saw the night of the flood."
 
-### What to cover
+**For introduction notes:** Who this introduces and the first impression.
+Example: "Introduces Bram: the player's first encounter is him repairing something that isn't broken, because staying busy is easier than acknowledging they've arrived."
 
-- The setting's visible state when the player arrives
-- The immediate invitation for engagement — a job, a problem, a mystery, an encounter
-- The tone of the first few scenes
-- What the player's arrival means to the community
+1–2 sentences. Other agents scan this field when planning arcs or building character notes.
+
+### Design Notes
+
+> **Excluded from exports.** The story engine acts on Situation and Story Possibilities. Design Notes are for the builder.
+
+This section captures creative intent — the thinking behind the arc or moment before it becomes structure.
+
+Cover:
+
+- **Creative intent:** What kind of story is this emotionally? What should it feel like when it plays out? What experience is the builder trying to create for the player?
+- **Inspirations:** Specific scenes, arcs, or moments from other media being evoked. Name what is being drawn from each — not just "like the opening of Episode 4" but what specifically about that opening: the scale, the stillness before action, the sense of something already in motion.
+- **Why this is worth building toward:** What makes this arc or moment interesting? Why does it earn space in the world?
+- **Open questions:** What is not yet resolved about this arc — thematic, structural, or about a specific character's behavior in it?
+
+### Situation
+
+This section establishes the state of things before any player involvement. Write in present tense.
+
+**For arc and intention notes:**
+
+- The current state of affairs in the world that makes this arc or intention possible
+- Who is involved and what each party wants or fears going in
+- Timing constraints or seasonal considerations if relevant
+- Preconditions: what needs to be true — player trust level, prior events, season — for this arc or intention to be accessible
+
+**For introduction notes:**
+
+- Where and when the introduction could happen
+- Who else is present
+- What the circumstances are that make this a natural first meeting
+
+### Story Possibilities
+
+This section covers what could happen and how it could develop. Phrased as possibility, not script: use "may," "could," "there is a possibility that."
+
+Do not script outcomes. Write for robustness — arcs that remain interesting whether or not a specific beat fires.
+
+**For arc notes:**
+
+- What could happen and how it could develop
+- Key moments: the set pieces that make the arc feel real if they fire
+- Resolution directions: natural ways things could go, not scripted outcomes
+- Connection to other arcs or characters
+
+**For intention notes:**
+
+Typically shorter — one key possibility with the moment that would trigger it and the direction it could go.
+
+**For introduction notes:**
+
+How the scene plays, what the character does, what invitation it extends to the player.
+
+---
+
+## Self-Check Before Marking Complete (arc, intention, introduction notes)
+
+**Brief**
+- [ ] Written last
+- [ ] 1–2 sentences; navigable summary of what this arc or intention is
+
+**Design Notes**
+- [ ] Creative intent stated
+- [ ] Inspirations named with what specifically is being drawn
+- [ ] Not padded
+
+**Situation**
+- [ ] State of affairs before player involvement stated
+- [ ] Preconditions named
+
+**Story Possibilities**
+- [ ] All entries phrased as possibility, not script
+- [ ] At least one key moment or set piece named
+- [ ] Connection to other arcs or characters noted
 
 ---
 
 ## Ongoing Story Direction
+
+> Direction notes are operational instructions for the story engine. They do not use the Design Notes / Situation / Story Possibilities structure — that structure applies to arc, intention, and introduction notes only.
 
 ### Author framing
 
