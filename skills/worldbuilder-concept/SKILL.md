@@ -1,6 +1,6 @@
-﻿---
+---
 name: worldbuilder-concept
-description: Use when writing concept notes for an AI-powered narrative game — establishing surface facts, mid-layer history, deep secrets, recurring world events, or background NPC guidelines. Also use when a concept note feels too broad or too narrow, or when deciding what layer a piece of world knowledge belongs on.
+description: Use when writing concept notes for an AI-powered narrative game — establishing surface facts, mid-layer history, deep secrets, or background NPC guidelines. Also use when a concept note feels too broad or too narrow, or when deciding what layer a piece of world knowledge belongs on.
 ---
 
 # Lorebook
@@ -10,6 +10,18 @@ description: Use when writing concept notes for an AI-powered narrative game —
 World knowledge is organized in `notes/` notes — one note per discrete topic. Export skills read these notes and package them as lorebook entries. This skill covers writing the concept notes well; the export skill handles the packaging.
 
 Good concept notes give the engine exactly what it needs at the moment a topic arises. The goal is precision: the right information for the right moment. Write notes that are dense and specific rather than broad and atmospheric — 50 tokens of exact context beats 300 tokens of unfocused description.
+
+---
+
+## Note Structure
+
+| Section | Notes |
+|---|---|
+| Frontmatter | YAML; see below |
+| Brief | Frontmatter field; written last |
+| Design Notes | Builder record; excluded from exports |
+| Lore | What is true about this thing in the world |
+| Implications | What follows from this being true; activation context |
 
 ---
 
@@ -29,22 +41,115 @@ status: draft | complete
 aliases: []           # key terms and synonyms — become keyword candidates at export
 last_updated: YYYY-MM-DD HH:mm
 layer: "[[surface]]" | "[[mid]]" | "[[deep]]"
-trigger-context: brief plain-text note on when this should activate
+brief: |    # plain prose; written last — see ## Brief below
+  <written after the full note is complete>
 ```
 
 `aliases` is the most important field for a concept note. Include every realistic way the topic might be mentioned in dialogue: local names, common phrasings, player-accessible synonyms. The export skill derives keywords from these.
 
-`trigger-context` is a brief note for future reference: what situation causes this lore to be relevant? One phrase is enough. "When player is at or near the old mill" or "When someone mentions the founding family." This guides both alias selection and content focus.
+`brief` is a 1–2 sentence plain-prose summary written after the full note is complete. It describes what this piece of world knowledge is and when it matters. See the Brief section below.
 
 ---
 
-## Narrative Purpose
+## Brief
 
-Before writing a concept note's content, answer one question:
+The `brief` frontmatter field is the world navigation summary for this note. Write it last, after the rest of the note is complete.
 
-> *What does the existence of this thing make impossible, costly, or inevitable in a scene that touches it?*
+Cover two things in 1–2 sentences: what this piece of world knowledge is, and when it matters in scenes.
 
-A concept note that cannot answer this question is description, not a constraint. Writing the answer first shapes what to include and what to cut.
+**Example:** "The founding flood: the real cause of the Harrow family's departure — the surface story omits that the flood was foreseeable and the warning was ignored. Relevant whenever the Harrow family, the mill, or the town's founding comes up."
+
+A brief that does not say when the lore activates is incomplete.
+
+---
+
+## Design Notes
+
+> **Excluded from exports.**
+
+The Design Notes section is the builder's working record. It is not lorebook content.
+
+**Narrative purpose:** What does the existence of this thing make impossible, costly, or inevitable in any scene that touches it? A concept note that cannot answer this question is description, not a constraint. Write the answer here before drafting the Lore and Implications sections — it shapes what to include and what to cut.
+
+**Why this is its own note:** Record why this knowledge warrants a standalone note rather than being embedded in a character, location, or faction note.
+
+**Layer rationale:** Why is this classified as surface, mid, or deep? What would be lost if it were placed one layer lower or higher?
+
+**Open questions:** Unresolved details that may affect how this note is written or how it interacts with other notes.
+
+---
+
+## Lore
+
+The Lore section contains what is true about this thing in the world. This is the main exportable content.
+
+Write Lore content at the appropriate layer tone:
+
+### The Three-Layer Structure
+
+The setting deepens as the player invests. Do not front-load. Surface entries establish a mundane world with texture; mid-layer entries acknowledge the old stories; deep entries confirm what the hints implied. Jumping straight to deep lore in early entries kills the effect.
+
+**Surface layer** — What everyone knows. The baseline reality of the setting.
+
+- Geography and physical character of the setting
+- Economy — what does this place do, how do people make a living
+- Social texture — is the community close-knit, fractured, proud, struggling
+- Common local history — the stories everyone tells
+- Practical knowledge relevant to the player's daily activities
+
+**Tone:** Matter-of-fact. No mysticism. These entries establish normalcy so that later disruptions of normalcy carry weight. If a surface entry contains a hint like "but some say this is connected to the old stories," you've broken the layer structure.
+
+**Mid-layer** — Things people half-remember. Old stories told as legend but believed a little.
+
+- The old stories — things the community tells as history but with mythic edges
+- Wilderness, ruins, old buildings and what people say about them
+- Historical events that left marks: a fire, a founding family's story, something that divided the community
+- Hints at what lies beneath the surface
+
+**Tone:** Uncertain. Hedged. People who know these stories are not sure they believe them. "They say..." "It's probably nothing, but..." Characters rationalize and deflect.
+
+**Deep layer** — The actual hidden layer — what the hints were pointing toward.
+
+- The supernatural specifics (if the setting has them)
+- The setting's true history
+- The real origin of the wound
+- Any non-human or supernatural entities in detail
+
+**Tone:** Confirmed and weighted. These entries feel like the answer to questions the surface layer raised. Don't explain everything — some things can remain permanent mystery.
+
+**Note on layer classification:** The surface/mid/deep layer on a concept note records authorial intent about pacing. It is not a reliable mechanism for suppressing information from the engine at runtime — whether a given engine can actually gate context on conditions varies. Its value is in shaping how the content is written and in what export tools can do with the metadata.
+
+### The Iceberg Split
+
+Distinct from the surface/mid/deep layer classification. The iceberg split operates *within a single note*, for cases where what people in the world believe and what is actually true diverge.
+
+Where the gap between belief and truth is narratively significant, document both explicitly in the same note:
+
+**Believed:** what characters in the world commonly say, assume, or act on — the public version, the legend, the received wisdom.
+
+**True:** what actually happened, or how the thing actually works underneath the common understanding.
+
+This lets the engine have characters speak and act from belief while the true version constrains what can actually happen and what specific informed characters know.
+
+Not every concept note needs this. Use it only when the gap between belief and truth is a live story element.
+
+---
+
+## Implications
+
+The Implications section covers what follows from this thing being true in the world. It is not a description of the concept — it is an account of what the concept does to scenes.
+
+**Behavioral and social consequences:** What do people do differently because this thing exists? What norms, obligations, or social structures does it produce? What economic consequences does it carry?
+
+**Tensions:** What conflicts, pressures, or contradictions does this thing create for characters or communities that encounter it?
+
+**Costs and limits** (required for rule-bearing concepts): For any concept covering a magic system, institution, cultural practice, belief system, or anything with internal logic that scenes must respect — document what the concept cannot do, what it costs or demands, and what makes it fail, break, or produce unexpected results. A concept documented only by what it can do cannot constrain a scene. One documented by its limits and costs can.
+
+**Example:** A healing magic concept note that says "healers can mend wounds and cure illness" does not constrain anything. One that adds "healing draws from the healer's own vitality — serious wounds leave the healer bedridden for an equal period, and healing the dying risks the healer's own death" constrains every scene that touches it.
+
+**Activation context:** When does this lore become relevant? What situations and phrasings bring it into play? This is where the trigger-context purpose lives — write it here as a specific account of the scenes and moments where this concept matters, rather than as a one-phrase field.
+
+**The key question:** What would a scene look like differently because this thing exists? If the answer is "nothing specific," the Implications section is too thin.
 
 ---
 
@@ -63,79 +168,6 @@ The export skill derives keyword triggers from the `aliases` field. Writing good
 **Common mistakes:** Single generic word that fires constantly; forgetting local names or synonyms; so many required terms that the combination almost never matches in practice.
 
 ---
-
-## Limitations and Costs
-
-For any concept note covering a rule-bearing concept — magic systems, institutions, cultural practices, social structures, belief systems, anything with internal logic that scenes must respect — include a limitations and costs block.
-
-The block specifies:
-- What the concept **cannot** do
-- What it **costs or demands** from those who use it or participate in it
-- What makes it **fail, break, or produce unexpected results**
-
-A concept documented only by what it can do cannot constrain a scene. One documented by its limits and costs can.
-
-**Example:** A healing magic concept note that says "healers can mend wounds and cure illness" does not constrain anything. One that adds "healing draws from the healer's own vitality — serious wounds leave the healer bedridden for an equal period, and healing the dying risks the healer's own death" constrains every scene that touches it.
-
-Concept notes for rule-bearing concepts without a limitations block are incomplete — see the self-check at the end of this skill.
-
----
-
-## The Three-Layer Structure
-
-The setting deepens as the player invests. Do not front-load. Surface entries establish a mundane world with texture; mid-layer entries acknowledge the old stories; deep entries confirm what the hints implied. Jumping straight to deep lore in early entries kills the effect.
-
-### Surface layer (active from the start)
-
-What everyone knows. The baseline reality of the setting.
-
-- Geography and physical character of the setting
-- Economy — what does this place do, how do people make a living
-- Social texture — is the community close-knit, fractured, proud, struggling
-- Common local history — the stories everyone tells
-- Practical knowledge relevant to the player's daily activities
-
-**Tone:** Matter-of-fact. No mysticism. These entries establish normalcy so that later disruptions of normalcy carry weight. If a surface entry contains a hint like "but some say this is connected to the old stories," you've broken the layer structure.
-
-### Mid-layer (available after early investment)
-
-Things people half-remember. Old stories told as legend but believed a little.
-
-- The old stories — things the community tells as history but with mythic edges
-- Wilderness, ruins, old buildings and what people say about them
-- Historical events that left marks: a fire, a founding family's story, something that divided the community
-- Hints at what lies beneath the surface
-
-**Tone:** Uncertain. Hedged. People who know these stories are not sure they believe them. "They say..." "It's probably nothing, but..." Characters rationalize and deflect.
-
-### Deep layer (available after significant investment)
-
-The actual hidden layer — what the hints were pointing toward.
-
-- The supernatural specifics (if the setting has them)
-- The setting's true history
-- The real origin of the wound
-- Any non-human or supernatural entities in detail
-
-**Tone:** Confirmed and weighted. These entries feel like the answer to questions the surface layer raised. Don't explain everything — some things can remain permanent mystery.
-
----
-
-## The Iceberg Split
-
-Distinct from the surface/mid/deep layer classification. The iceberg split operates *within a single note*, for cases where what people in the world believe and what is actually true diverge.
-
-Where the gap between belief and truth is narratively significant, document both explicitly in the same note:
-
-**Believed:** what characters in the world commonly say, assume, or act on — the public version, the legend, the received wisdom.
-
-**True:** what actually happened, or how the thing actually works underneath the common understanding.
-
-This lets the engine have characters speak and act from belief while the true version constrains what can actually happen and what specific informed characters know.
-
-Not every concept note needs this. Use it only when the gap between belief and truth is a live story element.
-
-**Note on layer classification:** The surface/mid/deep layer on a concept note records authorial intent about pacing and register. It is not a reliable mechanism for suppressing information from the engine at runtime — whether a given engine can actually gate context on conditions varies. Its value is in shaping how the content is written (surface: matter-of-fact; mid: hedged and uncertain; deep: confirmed and weighted) and in what export tools can do with the metadata.
 
 ## Location Notes
 
@@ -159,22 +191,7 @@ This gives the engine a construction kit rather than a cast list, producing more
 
 ## Recurring World Events
 
-Festivals, seasonal observances, cultural rituals, and other recurring world events are concept notes like any other world knowledge. Write one note per discrete event.
-
-**Layer classification applies:**
-- Surface — well-known community celebrations; everyone participates, no one questions it
-- Mid — observances with historical depth or old stories behind them; the community marks them but the origins are half-forgotten
-- Deep — rituals with hidden significance, ancestral ceremonies that touch the hidden layer of the setting
-
-**Write the mood, not what happens.** An event note describes the community's collective behavior, the physical and emotional register of the day, what kinds of interactions become natural, and the traditions that anchor it. The engine generates specific scenes from this context — write what makes those scenes possible.
-
-**Aliases** should cover every realistic way the event comes up in dialogue: common name, formal name, what characters actually say ("the festival," "harvest time," "the long night"). The export skill derives keyword triggers from these.
-
-**Limitations and costs apply here too.** If the event carries social obligation, ritual restriction, or community pressure, document it. A harvest festival that everyone is expected to attend and that carries real social consequence for absence generates more behavioral content than one that is merely pleasant.
-
-**Timing lives in the note body, not in a structured field.** Note the seasonal or annual timing in plain language within the note content — "early spring," "the darkest night of winter," "midway through the harvest season." Vague is fine; the exact trigger day is an export-time decision. Do not hold a note until the calendar is precisely structured.
-
-The export skill packages recurring event notes into platform-specific calendar formats. Write for the AI's context — the platform format is the export skill's concern.
+Event notes — festivals, seasonal observances, recurring world events — have their own skill: `worldbuilder-event`. Use that skill for any recurring or calendar event.
 
 ---
 
@@ -182,13 +199,13 @@ The export skill packages recurring event notes into platform-specific calendar 
 
 World knowledge is a living collection, not a phase that opens and closes. Any stage of the project can produce facts worth capturing: a household design decision, a character backstory detail, an event's implied history, a conversation that clarifies the magic system. Create a concept note whenever a discrete piece of world knowledge solidifies — do not wait.
 
-**During active development:** When any working session produces a fact or implication that belongs in the lorebook, create a concept note stub immediately — frontmatter + preamble is enough to anchor the thought. Flesh it out when you have more context.
+**During active development:** When any working session produces a fact or implication that belongs in the lorebook, create a concept note stub immediately — frontmatter + a sentence or two of Lore is enough to anchor the thought. Flesh it out when you have more context.
 
 **At project completion:** Run a validation pass across all `notes/` notes:
-- Verify every note has complete frontmatter including `layer` and `aliases`
+- Verify every note has complete frontmatter including `layer`, `aliases`, and `brief`
 - Check for contradictions across layers — surface notes should not imply what deep notes are supposed to reveal
 - Cross-reference with completed character notes: any implied lore in those notes that has no concept note?
-- Check that each note's `trigger-context` is specific enough to inform good keyword derivation at export
+- Check that each note's Implications section includes specific activation context
 
 **Don't front-load.** Writing all concept notes before characters are drafted means writing them before you know what the characters will imply about the world. Let the `notes/` collection grow with the project.
 
@@ -210,6 +227,26 @@ World knowledge is a living collection, not a phase that opens and closes. Any s
 
 **Complete when:** the note can constrain or shape any scene that touches this concept — a scene author reading the note knows what is impossible, what costs something, and what is inevitable because this thing exists.
 
-**Limitations block check:** if this is a rule-bearing concept (magic system, institution, cultural practice, social structure, belief system), does the note include a limitations and costs block? A concept note without one is incomplete regardless of how much descriptive content it contains.
+**Frontmatter**
+- [ ] `layer` present
+- [ ] `aliases` present and complete
+- [ ] `brief` written last; covers what this knowledge is and when it matters
+
+**Brief**
+- [ ] Written last
+- [ ] 1–2 sentences; covers what this knowledge is and when it matters
+
+**Design Notes**
+- [ ] Narrative purpose stated (what does this make impossible, costly, or inevitable?)
+- [ ] Layer rationale present
+
+**Lore**
+- [ ] Content written at the correct layer tone
+- [ ] Iceberg split present if belief/truth gap is narratively live
+
+**Implications**
+- [ ] Covers behavioral and social consequences, not just restrictions
+- [ ] Costs and limits present for rule-bearing concepts
+- [ ] Activation context stated
 
 **Over-documented when:** any section adds detail no scene will touch, or duplicates content already in a character, location, or faction note. Concept notes are meant to be short and dense — duplication bloats context for no gain.
