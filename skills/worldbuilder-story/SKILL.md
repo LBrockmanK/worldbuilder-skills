@@ -15,11 +15,11 @@ This skill serves two related purposes:
 
 Story note types:
 
-**Arc** (`scope: "[[arc]]"`) — A major story section. `up: "[[direction]]"`. Covers a season, a storyline, or a thematic phase.
+**Arc** (`scope: arc`) — A major story section. `up: "[Direction](notes/direction.md)"`. Covers a season, a storyline, or a thematic phase.
 
-**Intention** (`scope: "[[intention]]"`) — A specific story possibility within an arc. `up: "[[arc-name]]"`. Not scripted outcomes — soft targets the world is set up to enable.
+**Intention** (`scope: intention`) — A specific story possibility within an arc. `up: "[Arc Name](notes/arc-name.md)"`. Not scripted outcomes — soft targets the world is set up to enable.
 
-**Introduction** (`scope: "[[introduction]]"`) — First-contact scene for a specific character. Created during or after character note work, not during the story notes phase.
+**Introduction** (`scope: introduction`) — First-contact scene for a specific character. Created during or after character note work, not during the story notes phase.
 
 Frontmatter for story notes (arc, intention, introduction):
 ```yaml
@@ -27,9 +27,9 @@ type: story
 status: draft | complete
 aliases: []
 last_updated: YYYY-MM-DD HH:mm
-up: "[[parent-note]]"
-scope: "[[arc]]" | "[[intention]]" | "[[introduction]]"
-characters: ["[[Name]]"]           # optional; characters central to this story note
+up: "[Parent Note](notes/parent-note.md)"              # link to parent story note
+scope: arc | intention | introduction                    # plain string
+characters: ["[Name](notes/name.md)"]                   # optional; links to character notes
 brief: |    # plain prose; written last — see ## Brief below
   <written after the full note is complete>
 ```
@@ -52,7 +52,13 @@ Read `direction.md` before creating arc notes. Arc notes develop what the brief 
 
 ## Working with Vault Files
 
-**Renaming a note:** Use Edit or Write to rename the file. Then immediately run `scripts/rename-note.ps1 -OldName "OldName" -NewName "NewName" -VaultPath <vault-root>` to update all wikilinks across the vault. Do not skip this step — Obsidian's auto-rename is bypassed when files are edited directly.
+**Renaming a note:** Use Edit or Write to rename the file. Then immediately run `scripts/rename-note.ps1 -OldName "OldName" -NewName "NewName" -VaultPath <vault-root>` to update all markdown links across the vault. Do not skip this step — Obsidian's auto-rename is bypassed when files are edited directly.
+
+---
+
+## Linking
+
+When writing any section of a story note, link to any referenced note — character, location, faction, concept, event, or story — on its first mention in each section. Use standard markdown links: `[Name](notes/name.md)`. Link even if the target file does not yet exist. See CONTEXT.md for the full link convention.
 
 ---
 

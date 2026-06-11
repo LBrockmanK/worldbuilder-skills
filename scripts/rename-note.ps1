@@ -1,20 +1,24 @@
 <#
 .SYNOPSIS
-    Updates all wikilinks in an Obsidian vault when a note is renamed.
+    Updates all markdown links in an Obsidian vault when a note is renamed.
 
 .DESCRIPTION
     When a note is renamed using external tools (Edit/Write), Obsidian's
-    auto-rename is bypassed. This script updates all wikilink references across
-    the vault to point to the new name.
+    auto-rename is bypassed. This script updates all markdown link references
+    across the vault to point to the new name and path.
+
+    Handles both body-text links [Name](notes/name.md) and frontmatter links
+    inside YAML strings. Derives filenames by lowercasing and replacing spaces
+    with hyphens.
 
     This script only updates link text in other vault files.
     It does NOT rename the file itself — that is a separate operation.
 
 .PARAMETER OldName
-    The old note name without file extension.
+    The old note display name without file extension.
 
 .PARAMETER NewName
-    The new note name without file extension.
+    The new note display name without file extension.
 
 .PARAMETER VaultPath
     Path to the vault root. Defaults to the current directory if not provided.
@@ -35,43 +39,45 @@ param(
     [string]$VaultPath = "."
 )
 
-# Resolve vault path to absolute
 $VaultPath = Resolve-Path $VaultPath -ErrorAction Stop | Select-Object -ExpandProperty Path
 
+function ConvertTo-NoteFilename([string]$Name) {
+    return ($Name.ToLower() -replace '\s+', '-') + ".md"
+}
+
+$oldFilename = ConvertTo-NoteFilename $OldName
+$newFilename = ConvertTo-NoteFilename $NewName
+$newPath     = "notes/$newFilename"
+
 Write-Host "Vault:    $VaultPath"
-Write-Host "Rename:   [[$OldName]] -> [[$NewName]]"
+Write-Host "Rename:   [$OldName](...) -> [$NewName]($newPath)"
 Write-Host ""
 
-# Collect all .md files in the vault
 $allFiles = Get-ChildItem -Path $VaultPath -Filter "*.md" -Recurse -ErrorAction Stop
 $scanned  = $allFiles.Count
 $updated  = 0
 $changed  = @()
 
-# Escape special regex characters in the note name so names like
-# "Aldric (Blacksmith)" or "Note+Title" match literally.
-$escapedOld = [regex]::Escape($OldName)
+$escapedOld     = [regex]::Escape($OldName)
+$escapedOldFile = [regex]::Escape($oldFilename)
 
-# Build the replacement pattern.
-# Wikilink structure: [[ <path> <anchor>? <alias>? ]]
-#   !? — optional embed prefix
-#   \[\[ — opening brackets
-#   (<escapedOld>) — the note name (captured group 1, replaced)
-#   ([#^][^\|\]]*)? — optional anchor (#Heading or #^blockid), captured group 2
-#   (\|[^\]]*)?     — optional alias (|display text), captured group 3
-#   \]\] — closing brackets
-#
-# Group 1 is replaced with $NewName; groups 2 and 3 are preserved verbatim.
-$pattern     = "(!?\[\[)($escapedOld)([#^][^\|\]]*)?(\|[^\]]*)?(\]\])"
-$replacement = "`${1}$NewName`${3}`${4}`${5}"
+# Match markdown links with the old display name: [OldName](any/path.md)
+# Negative lookbehind for ! prevents matching image embeds ![Name](path)
+$pattern     = "(?<!!)\[$escapedOld\]\([^)]*\)"
+$replacement = "[$NewName]($newPath)"
+
+# Also match links found by path alone (display text may differ):
+# [anything](notes/old-name.md) or [...](path/old-name.md)
+$pathPattern     = "(?<!!)\[([^\]]*)\]\(([^)]*/)?$escapedOldFile\)"
+$pathReplacement = "[`$1]($newPath)"
 
 foreach ($file in $allFiles) {
     $content = Get-Content -Path $file.FullName -Raw -Encoding UTF8
 
-    # Skip empty files
     if ($null -eq $content) { continue }
 
     $newContent = [regex]::Replace($content, $pattern, $replacement)
+    $newContent = [regex]::Replace($newContent, $pathPattern, $pathReplacement)
 
     if ($newContent -ne $content) {
         Set-Content -Path $file.FullName -Value $newContent -Encoding UTF8 -NoNewline
@@ -80,7 +86,6 @@ foreach ($file in $allFiles) {
     }
 }
 
-# Report
 Write-Host "Results"
 Write-Host "-------"
 Write-Host "Files scanned: $scanned"
@@ -94,5 +99,5 @@ if ($changed.Count -gt 0) {
     }
 } else {
     Write-Host ""
-    Write-Host "No files contained links to [[$OldName]]."
+    Write-Host "No files contained links to [$OldName]."
 }

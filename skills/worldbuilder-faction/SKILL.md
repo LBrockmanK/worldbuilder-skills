@@ -17,7 +17,7 @@ The faction note is the comprehensive Wide-phase single source of truth for any 
 
 ## Working with Vault Files
 
-**Renaming a note:** Use Edit or Write to rename the file. Then immediately run `scripts/rename-note.ps1 -OldName "OldName" -NewName "NewName" -VaultPath <vault-root>` to update all wikilinks across the vault. Do not skip this step — Obsidian's auto-rename is bypassed when files are edited directly.
+**Renaming a note:** Use Edit or Write to rename the file. Then immediately run `scripts/rename-note.ps1 -OldName "OldName" -NewName "NewName" -VaultPath <vault-root>` to update all markdown links across the vault. Do not skip this step — Obsidian's auto-rename is bypassed when files are edited directly.
 
 ---
 
@@ -46,13 +46,13 @@ type: faction
 status: draft | complete
 aliases: []
 last_updated: YYYY-MM-DD HH:mm
-members: ["[[Name]]"]   # links to character notes
+members: ["[Name](notes/name.md)"]   # links to character notes
 function: one phrase (plain text)
 brief: |                # plain prose; written last — see ## Brief below
   <written after the full note is complete>
 ```
 
-`members` uses `[[wikilinks]]`. `function` stays plain text.
+`members` uses markdown links. Derive filenames by lowercasing and replacing spaces with hyphens. `function` stays plain text.
 
 ---
 
@@ -77,6 +77,12 @@ The narrative engine this faction runs. Not a description of its membership or i
 A merchant guild and a thieves' guild that produce the same kinds of scenes have the same narrative engine. That is a problem.
 
 Also record here: inspirations, design decisions, and open questions about the faction's role.
+
+---
+
+## Linking
+
+When writing any section of a faction note, link to any referenced note — character, location, faction, concept, event, or story — on its first mention in each section. Use standard markdown links: `[Name](notes/name.md)`. Link even if the target file does not yet exist. See CONTEXT.md for the full link convention.
 
 ---
 
@@ -152,7 +158,7 @@ Lightweight by design. Direct relationships only — alliances, rivalries, conte
 
 Each entry:
 ```
-[[Faction Name]] — allied / neutral / rival / enemy: one sentence on what drives it.
+[Faction Name](notes/faction-name.md) — allied / neutral / rival / enemy: one sentence on what drives it.
 ```
 
 Relationships that don't bear on the current project do not go here.
@@ -185,7 +191,7 @@ The standard: a member who could belong to any faction fails the test. A member 
 
 **Frontmatter**
 - [ ] All required fields present
-- [ ] `members` uses `[[wikilinks]]`
+- [ ] `members` uses markdown links: `[Name](notes/name.md)`
 - [ ] `status` is `draft` or `complete`
 
 **Brief**

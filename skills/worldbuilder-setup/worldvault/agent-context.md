@@ -24,37 +24,37 @@ last_updated: YYYY-MM-DD HH:mm
 
 **Character** — `notes/`
 ```yaml
-factions: ["[[Household Name]]"]
+factions: ["[Household Name](notes/household-name.md)"]
 brief: plain prose   # cast navigation summary; written last
 ```
 Sections: Design Notes, Foundation, Behavioral Descriptions, Relationships, Relationship Behavior
 
 **Location** — `notes/`
 ```yaml
-region: "[[The Valley]]"
+region: "[The Valley](notes/the-valley.md)"
 function: one phrase
-primary-characters: ["[[Name]]"]
+primary-characters: ["[Name](notes/name.md)"]
 ```
 Sections: Preamble, Concept, Physical Form, Social Life, Behavioral Register, History & Meaning
 
 **Faction** — `notes/`
 ```yaml
-members: ["[[Name]]"]
+members: ["[Name](notes/name.md)"]
 function: one phrase
 ```
 Sections: Preamble, Concept, Origin & Purpose, Collective Behavior, Membership, Inter-Faction Web, Storylines
 
 **Concept** — `notes/`
 ```yaml
-layer: "[[surface]]"        # surface | mid | deep
+layer: surface        # surface | mid | deep
 trigger-context: brief plain text
 ```
 Sections: Preamble, Limitations and Costs, Content
 
 **Story** — `notes/`
 ```yaml
-up: "[[parent-story-note]]"     # absent on top-level direction note
-scope: "[[direction]]" | "[[arc]]" | "[[intention]]" | "[[introduction]]"
+up: "[Parent Note](notes/parent-note.md)"     # absent on top-level direction note
+scope: arc | intention | introduction
 ```
 Sections: Preamble, Content
 
@@ -70,7 +70,7 @@ Documents: `worldbuilding-plan.md`, `seed.md`, `log.md`
 ```
 Documents: `agent-context.md` (this file)
 
-**Link convention:** Anything that represents a category, entity, or concept worth filtering by uses a `[[wikilink]]`. Operational fields (`status`, `last_updated`, booleans) use plain values.
+**Link convention:** Named entity references (characters, locations, factions, events, concepts, story notes) use standard markdown links: `[Display Name](notes/filename.md)`. Derive filenames by lowercasing and replacing spaces with hyphens. Classification values (`layer`, `scope`, `date`) and operational fields (`status`, `last_updated`, booleans) use plain strings. In body text, link to referenced notes on first mention per section.
 
 ---
 
@@ -88,7 +88,7 @@ Documents: `agent-context.md` (this file)
 
 **Concept note** — A discrete piece of world knowledge in `notes/`. Layer-tagged: surface (freely shareable), mid (contextual), deep (revealed late).
 
-**Story note** — Narrative direction document in `notes/`. Scope hierarchy: direction → arc → intention. Introduction notes have `scope: "[[introduction]]"`.
+**Story note** — Narrative direction document in `notes/`. Scope hierarchy: direction → arc → intention. Introduction notes have `scope: introduction`.
 
 **Cast planning** — Wide-phase process of planning the full cast before writing individual notes. Produces the cast plan in `worldbuilding-plan.md`.
 

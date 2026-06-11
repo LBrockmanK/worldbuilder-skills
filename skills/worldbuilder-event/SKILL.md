@@ -15,7 +15,7 @@ The event note is the Wide-phase single source of truth for a named event. Expor
 
 ## Working with Vault Files
 
-**Renaming a note:** Use Edit or Write to rename the file. Then immediately run `scripts/rename-note.ps1 -OldName "OldName" -NewName "NewName" -VaultPath <vault-root>` to update all wikilinks across the vault. Do not skip this step — Obsidian's auto-rename is bypassed when files are edited directly.
+**Renaming a note:** Use Edit or Write to rename the file. Then immediately run `scripts/rename-note.ps1 -OldName "OldName" -NewName "NewName" -VaultPath <vault-root>` to update all markdown links across the vault. Do not skip this step — Obsidian's auto-rename is bypassed when files are edited directly.
 
 ---
 
@@ -40,10 +40,10 @@ type: event
 status: draft | complete
 aliases: []           # every realistic way this event is mentioned in dialogue
 last_updated: YYYY-MM-DD HH:mm
-date: "[[Spring-08]]"    # wikilink; clusters events by day
+date: Spring-08                                          # plain string; calendar day
 recurring: true | false
-characters: ["[[Name]]"]   # characters central to this event
-location: "[[Location Name]]"   # primary location if fixed
+characters: ["[Name](notes/name.md)"]                    # links to character notes
+location: "[Location Name](notes/location-name.md)"      # link to location note
 brief: |              # plain prose; written last — see ## Brief below
   <written after the full note is complete>
 ```
@@ -76,6 +76,12 @@ Cover:
 - Inspirations: real festivals, cultural observances, fictional events, what was drawn from each.
 - Narrative intent: what kinds of scenes does this event enable?
 - Open questions.
+
+---
+
+## Linking
+
+When writing any section of an event note, link to any referenced note — character, location, faction, concept, event, or story — on its first mention in each section. Use standard markdown links: `[Name](notes/name.md)`. Link even if the target file does not yet exist. See CONTEXT.md for the full link convention.
 
 ---
 
@@ -131,7 +137,7 @@ Event notes can be created at any phase. Create a stub — frontmatter plus a se
 
 **Frontmatter**
 - [ ] `aliases` covers every realistic phrasing
-- [ ] `date` set as a wikilink
+- [ ] `date` set as a plain string
 - [ ] `recurring` set
 
 **Brief**

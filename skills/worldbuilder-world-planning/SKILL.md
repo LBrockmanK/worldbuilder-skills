@@ -198,7 +198,7 @@ A full-cast check for factual contradictions before export. Notes written indepe
 **Process:**
 
 1. List all notes in `notes/`.
-2. For each note, read its outbound wikilinks.
+2. For each note, read its outbound markdown links.
 3. For each linked note: read both. Check whether any fact in the linking note conflicts with any fact in the linked note.
 4. Also check each character note against the faction notes in its `factions:` frontmatter field.
 5. Flag every contradiction: source note, linked note, the specific conflict.
@@ -268,13 +268,13 @@ Use these checklists at each phase gate. If any item is unresolved, surface it t
 
 - [ ] All named locations from seed.md have a note in `notes/`
 - [ ] Each note passes the `worldbuilder-location` self-check
-- [ ] Primary characters linked via `[[wikilinks]]` in frontmatter
+- [ ] Primary characters linked via markdown links in frontmatter
 
 ### Faction notes complete
 
 - [ ] All household clusters from seed.md have a faction note in `notes/`
 - [ ] Each note passes the `worldbuilder-faction` self-check
-- [ ] Member characters linked via `[[wikilinks]]` in frontmatter
+- [ ] Member characters linked via markdown links in frontmatter
 
 ### Cast planning complete
 

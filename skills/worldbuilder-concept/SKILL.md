@@ -27,7 +27,7 @@ Good concept notes give the engine exactly what it needs at the moment a topic a
 
 ## Working with Vault Files
 
-**Renaming a note:** Use Edit or Write to rename the file. Then immediately run `scripts/rename-note.ps1 -OldName "OldName" -NewName "NewName" -VaultPath <vault-root>` to update all wikilinks across the vault. Do not skip this step — Obsidian's auto-rename is bypassed when files are edited directly.
+**Renaming a note:** Use Edit or Write to rename the file. Then immediately run `scripts/rename-note.ps1 -OldName "OldName" -NewName "NewName" -VaultPath <vault-root>` to update all markdown links across the vault. Do not skip this step — Obsidian's auto-rename is bypassed when files are edited directly.
 
 ---
 
@@ -40,7 +40,7 @@ type: concept
 status: draft | complete
 aliases: []           # key terms and synonyms — become keyword candidates at export
 last_updated: YYYY-MM-DD HH:mm
-layer: "[[surface]]" | "[[mid]]" | "[[deep]]"
+layer: surface | mid | deep        # plain string
 brief: |    # plain prose; written last — see ## Brief below
   <written after the full note is complete>
 ```
@@ -76,6 +76,12 @@ The Design Notes section is the builder's working record. It is not lorebook con
 **Layer rationale:** Why is this classified as surface, mid, or deep? What would be lost if it were placed one layer lower or higher?
 
 **Open questions:** Unresolved details that may affect how this note is written or how it interacts with other notes.
+
+---
+
+## Linking
+
+When writing any section of a concept note, link to any referenced note — character, location, faction, concept, event, or story — on its first mention in each section. Use standard markdown links: `[Name](notes/name.md)`. Link even if the target file does not yet exist. See CONTEXT.md for the full link convention.
 
 ---
 

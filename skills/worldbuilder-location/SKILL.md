@@ -15,7 +15,7 @@ The location note is the comprehensive Wide-phase single source of truth for a n
 
 ## Working with Vault Files
 
-**Renaming a note:** Use Edit or Write to rename the file. Then immediately run `scripts/rename-note.ps1 -OldName "OldName" -NewName "NewName" -VaultPath <vault-root>` to update all wikilinks across the vault. Do not skip this step — Obsidian's auto-rename is bypassed when files are edited directly.
+**Renaming a note:** Use Edit or Write to rename the file. Then immediately run `scripts/rename-note.ps1 -OldName "OldName" -NewName "NewName" -VaultPath <vault-root>` to update all markdown links across the vault. Do not skip this step — Obsidian's auto-rename is bypassed when files are edited directly.
 
 ---
 
@@ -44,14 +44,14 @@ type: location
 status: draft | complete
 aliases: []
 last_updated: YYYY-MM-DD HH:mm
-region: "[[The Valley]]"           # link to region note
+region: "[The Valley](notes/the-valley.md)"           # link to region note
 function: one phrase (plain text)
-primary-characters: ["[[Name]]"]   # links to character notes
+primary-characters: ["[Name](notes/name.md)"]         # links to character notes
 brief: |                           # plain prose; written last — see ## Brief below
   <written after the full note is complete>
 ```
 
-`region` and `primary-characters` use `[[wikilinks]]`. `function` stays plain text — it is usually too specific per location to warrant a navigable link. `brief` is plain prose — not a wikilink.
+`region` and `primary-characters` use markdown links. Derive filenames by lowercasing and replacing spaces with hyphens. `function` stays plain text. `brief` is plain prose — not a link.
 
 ---
 
@@ -74,6 +74,12 @@ brief: |                           # plain prose; written last — see ## Brief 
 The builder record — what drove the design of this location. Narrative function (what does this location uniquely contribute), intended scene types (what kinds of scenes can only happen here), inspirations (real or fictional), design decisions, open questions. Bullet points under plain sub-headers.
 
 Leave blank if nothing warrants capturing — do not pad.
+
+---
+
+## Linking
+
+When writing any section of a location note, link to any referenced note — character, location, faction, concept, event, or story — on its first mention in each section. Use standard markdown links: `[Name](notes/name.md)`. Link even if the target file does not yet exist. See CONTEXT.md for the full link convention.
 
 ---
 
@@ -154,7 +160,7 @@ The standard: at least one axis must specify a change in scene logic, tone, or f
 
 **Frontmatter**
 - [ ] All required fields present
-- [ ] `region` and `primary-characters` use `[[wikilinks]]`
+- [ ] `region` and `primary-characters` use markdown links: `[Name](notes/name.md)`
 - [ ] `status` is `draft` or `complete`
 
 **Brief**

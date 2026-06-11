@@ -7,7 +7,7 @@ layer:
 trigger-context: 
 ---
 
-> For future agents: this is a concept note — a discrete piece of world knowledge. Layer values: `[[surface]]` (freely shareable), `[[mid]]` (contextual), `[[deep]]` (revealed late). Aliases become lorebook keyword candidates at export. Use `worldbuilder-concept` to build it out.
+> For future agents: this is a concept note — a discrete piece of world knowledge. Layer values: `surface` (freely shareable), `mid` (contextual), `deep` (revealed late). Aliases become lorebook keyword candidates at export. Use `worldbuilder-concept` to build it out.
 
 ## Preamble
 
