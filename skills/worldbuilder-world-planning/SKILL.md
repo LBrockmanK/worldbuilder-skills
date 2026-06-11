@@ -60,7 +60,7 @@ Keep it short — one short table and one line of proposed action is enough:
 ```
 Phase 1  (Seed)             Done    → seed.md
 Phase 1b (Direction doc)    Done    → direction.md
-Phase 2a (Concept notes)    Done    → notes/
+Phase 2a (Concept & event notes)    Done    → notes/
 Phase 2b (Story notes)      Done    → notes/
 Phase 2c (Location notes)   Done    → notes/
 Phase 2d (Faction notes)    Done    → notes/
@@ -82,7 +82,7 @@ Next: Continue character notes. Suggested: dispatch 4 in parallel.
 | 0. Ingestion | Pre-Seed | `worldbuilder-ingestion` | Ingestion index + extracted content |
 | 1. Seed | Seed | `worldbuilder-world-foundation` | `seed.md` |
 | 1b. Direction document | Seed | (this skill + `worldbuilder-story`) | `direction.md` |
-| 2a. Concept notes | Wide | `worldbuilder-concept` | `notes/` |
+| 2a. Concept & event notes | Wide | `worldbuilder-concept`, `worldbuilder-event` | `notes/` |
 | 2b. Story notes | Wide | `worldbuilder-story` | `notes/` |
 | 2c. Location notes | Wide | `worldbuilder-location` | `notes/` |
 | 2d. Faction notes | Wide | `worldbuilder-faction` | `notes/` |
@@ -99,7 +99,7 @@ Next: Continue character notes. Suggested: dispatch 4 in parallel.
 [Ingestion — optional, when existing material exists]
     └─►
 Seed (seed.md)
-    ├─► Concept notes (2a)  ─┐
+    ├─► Concept & event notes (2a)  ─┐
     ├─► Story notes (2b)     │
     ├─► Location notes (2c)  ├─► Character notes (2f) ─► Relationship review (2g) ─► Contradiction validation (2h) ─► Export
     ├─► Faction notes (2d)  ─┘         ▲
@@ -251,11 +251,12 @@ Use these checklists at each phase gate. If any item is unresolved, surface it t
 - [ ] All required sections present: author framing, romance pacing, dark themes, hidden layer handling, seasonal tone, pacing and scene structure
 - [ ] Opening arc sketched at a broad level
 
-### Concept notes complete
+### Concept and event notes complete
 
 - [ ] All three layers present (surface, mid, deep)
 - [ ] Background NPC guidelines concept note written
 - [ ] `layer` frontmatter set on all concept notes
+- [ ] Event notes written for all named recurring events; each passes the `worldbuilder-event` self-check
 
 ### Story notes complete
 
@@ -371,7 +372,7 @@ Subset details (if applicable): [character names]
 |---|---|---|---|---|
 | 1. Seed | Seed | Done / In Progress / Not Started | seed.md | |
 | 1b. Direction document | Seed | Done / In Progress / Not Started | direction.md | |
-| 2a. Concept notes | Wide | ... | notes/ | |
+| 2a. Concept & event notes | Wide | ... | notes/ | |
 | 2b. Story notes | Wide | ... | notes/ | |
 | 2c. Location notes | Wide | ... | notes/ | X of Y complete |
 | 2d. Faction notes | Wide | ... | notes/ | X of Y complete |
