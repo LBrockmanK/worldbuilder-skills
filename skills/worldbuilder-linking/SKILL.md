@@ -36,7 +36,7 @@ The calling skill or session should invoke this skill with the path(s) of the fi
 Run the note inventory script to get the current state of all notes:
 
 ```powershell
-scripts/list-notes.ps1 -VaultPath <vault-root> -Pretty
+skills/worldbuilder-linking/scripts/list-notes.ps1 -VaultPath <vault-root> -Pretty
 ```
 
 This produces a table of every note's name, type, status, aliases, and brief. Scan this output to understand the link targets available.
@@ -46,7 +46,7 @@ This produces a table of every note's name, type, status, aliases, and brief. Sc
 Run the linker script on the target file with reverse mode:
 
 ```powershell
-scripts/link-notes.ps1 -TargetFile "notes/<filename>.md" -Reverse -VaultPath <vault-root>
+skills/worldbuilder-linking/scripts/link-notes.ps1 -TargetFile "notes/<filename>.md" -Reverse -VaultPath <vault-root>
 ```
 
 This does two things:
@@ -90,7 +90,7 @@ Also scan nearby text in those files for indirect references to the target entit
 Run the unresolved links report to show the current state of phantom links:
 
 ```powershell
-scripts/unresolved-links.ps1 -VaultPath <vault-root>
+skills/worldbuilder-linking/scripts/unresolved-links.ps1 -VaultPath <vault-root>
 ```
 
 This groups all links pointing to non-existent files by target, sorted by reference count. The most-referenced missing targets are natural candidates for the next note to write.
@@ -133,7 +133,7 @@ All links use standard markdown format with vault-root-relative paths:
 When a session needs direction on what to build next, the unresolved links report is a natural source of expansion targets. The most-referenced phantom notes represent entities the world already talks about but hasn't defined — they are the organic next step.
 
 ```powershell
-scripts/unresolved-links.ps1 -VaultPath <vault-root>
+skills/worldbuilder-linking/scripts/unresolved-links.ps1 -VaultPath <vault-root>
 ```
 
 The output sorted by reference count tells you: "these are the things your world keeps mentioning but hasn't built yet." The world-planning skill can use this as input for prioritizing Wide-phase work.
