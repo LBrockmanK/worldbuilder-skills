@@ -70,7 +70,7 @@ Documents: `worldbuilding-plan.md`, `seed.md`, `log.md`
 ```
 Documents: `agent-context.md` (this file)
 
-**Link convention:** Named entity references (characters, locations, factions, events, concepts, story notes) use standard markdown links: `[Display Name](notes/Display Name.md)`. The filename matches the display name. Classification values (`layer`, `scope`, `date`) also use markdown links. Operational fields (`status`, `last_updated`, booleans) use plain strings. In body text, link to referenced notes on first mention per section — the `worldbuilder-linking` skill handles this as a post-pass.
+**Link convention:** Named entity references (characters, locations, factions, events, concepts, story notes) use standard markdown links: `[Display Name](notes/Display Name.md)`. The filename matches the display name. Classification values (`layer`, `scope`, `date`) also use markdown links. Operational fields (`status`, `last_updated`, booleans) use plain strings. In body text, link to referenced notes on first mention per section — the `worldbuilder-skills:linker` agent handles this as a post-pass.
 
 ---
 
