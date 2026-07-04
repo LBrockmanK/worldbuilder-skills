@@ -1,0 +1,2 @@
+- 2026-07-04T12:30: Pare this plugin down to writing/creation guidelines only — its early note-taking/vault logic is fully superseded by scraibe (okf-enforcement repo). Decision trail: okf-enforcement/.claude/specs/2026-07-04-scraibe-skills-design.md (Related External Work) and .claude/grillings/2026-07-02-scraibe-deferred-items-grilling.md.
+- 2026-07-04T12:30: Heads-up, no action: scraibe will copy this plugin's Obsidian config template as the starting point for its defaults/obsidian/ — flag anything worldbuilding-specific in the template that shouldn't generalize.

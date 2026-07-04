@@ -1,0 +1,38 @@
+{
+  "universal_properties": {
+    "type": {"type": "text", "required": true},
+    "title": {"type": "text", "required": true},
+    "description": {"type": "text", "required": true},
+    "tags": {"type": "tags", "required": true},
+    "date": {"type": "date", "required": true},
+    "timestamp": {"type": "datetime", "required": true},
+    "resources": {"type": "list", "required": true},
+    "output": {"type": "list", "required": false},
+    "superseded-by": {"type": "list", "required": false}
+  },
+  "types": {
+    "spec": {"fields": {}, "template": "## Context\n\n## Decisions\n\n## Consequences\n"},
+    "plan": {"fields": {}, "template": "## Goal\n\n## Tasks\n"},
+    "adr": {"fields": {}, "template": ""},
+    "grilling": {"fields": {}, "template": "## Topics\n"},
+    "reflection": {"fields": {}, "template": "## Question\n\n## Findings\n"},
+    "reference": {"fields": {}, "template": ""}
+  },
+  "tags": {
+    "status": {
+      "mutually_exclusive": true,
+      "values": ["human-ready", "agent-ready", "complete", "deprecated", "abandoned", "archived"],
+      "open": ["human-ready", "agent-ready"],
+      "closed": ["complete", "deprecated", "abandoned", "archived"]
+    },
+    "behavioral": ["priority", "deferred"]
+  },
+  "stale_days": 30,
+  "enforced_paths": {
+    ".claude/": {"level": "full", "subdirs_only": true}
+  },
+  "strictness": {
+    "unknown_type": "warn",
+    "broken_links": "warn"
+  }
+}
