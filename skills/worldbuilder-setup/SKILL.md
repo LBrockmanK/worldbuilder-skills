@@ -1,106 +1,69 @@
 ---
 name: worldbuilder-setup
-description: Use when starting a new worldbuilding project from scratch. Runs once, before any other worldbuilder skill. Copies the worldvault template into the user's project directory, asks for a project name, and hands off to worldbuilder-world-planning.
+description: Use when starting a new worldbuilding project. Adopts scraibe with the worldbuilder OKF preset, installs the vault chrome, and hands off to worldbuilder-world-foundation.
 ---
 
 # Worldbuilder Setup
 
 ## Overview
 
-This skill initializes a new worldbuilding project. It copies the pre-configured vault template into the user's designated project directory, writes in the project name, and hands off to `worldbuilder-world-planning`.
+This skill turns a directory into a worldbuilding project: scraibe's OKF machinery configured with the worldbuilder type registry, an Obsidian vault around it, and the three project documents created. Run it once per project, before any other worldbuilder skill.
 
-Run this skill once per project, before any other worldbuilder skill. It does not ask creative questions — genre, tone, cast, and setting all belong in world-planning and world-foundation.
+Scraibe owns file management from here on — document creation, frontmatter enforcement, status lifecycle, inbox, audit. This skill only writes the configuration and chrome, then gets out of the way. It asks no creative questions; genre, tone, cast, and setting belong to `worldbuilder-world-foundation`.
 
----
-
-## Working with Vault Files
-
-**Renaming a note:** Use Edit or Write to rename the file. Then immediately run `agents/linker/scripts/rename-note.ps1 -OldName "OldName" -NewName "NewName" -VaultPath <vault-root>` to update all markdown links across the vault. Do not skip this step — Obsidian's auto-rename is bypassed when files are edited directly.
-
----
+The project root is the directory the user is working in. If they want the vault somewhere else, ask them to name the directory and use that as the project root throughout.
 
 ## Steps
 
-### Step 1: Identify the skill directory
+### Step 1: Check scraibe
 
-The `worldvault/` folder that accompanies this skill file is the vault template. Locate it at the same directory level as this SKILL.md file.
+Glob `~/.claude/plugins/marketplaces/*/scraibe/scripts/new_doc.py`. If nothing matches, stop: "This plugin requires the scraibe plugin. Install it first."
 
-### Step 2: Confirm the vault location
+Record the matched scraibe plugin root (the directory containing `scripts/`) — later steps use its scripts and defaults. Never hardcode this path; resolve it fresh each run.
 
-Propose a default and offer two opt-outs:
+### Step 2: Write the config
 
-> "I'll copy the vault template into a `worldvault/` subfolder here. Let me know if you'd prefer a different location, or if you'd like to use the current directory itself as the vault."
+Ask: "What is the name of your world or project?"
 
-Three branches — handle exactly one:
+Copy this plugin's `defaults/okf.json` to `<project>/.claude/okf.json`. If `<project>/.claude/okf.json` already exists, stop — do not overwrite it. Say the project is already configured and suggest running `scraibe:setup` in configuration mode to change the registry.
 
-**Branch A — Default `worldvault/` subfolder or any named subfolder:**
-If the path does not yet exist, create it and proceed to Step 3. If it exists and is empty, proceed to Step 3. If it exists and is **not empty** — stop. Do not touch any existing files. Say: "That folder already has files in it. Please specify a different path." Wait for a new path before continuing.
+### Step 3: Install the chrome
 
-**Branch B — Root directory as vault, directory is empty:**
-Proceed to Step 3 directly.
+- Copy `<scraibe>/defaults/obsidian/` to `<project>/.obsidian/`.
+- Overlay this skill's `worldvault/.obsidian/app.json` on top (it sets the attachment folder and link behavior).
+- Copy this skill's `worldvault/Home.md` to the project root, replacing `{{PROJECT_NAME}}` with the project name.
+- Copy this skill's `worldvault/_bases/` directory to `<project>/_bases/`.
+- Create empty directories: `notes/`, `project/`, `_attachments/`.
 
-**Branch C — Root directory as vault, directory has existing files:**
-Say:
-> "This directory has existing files. I can move them into a `_source/` subfolder to make room for the vault template — please confirm before I move anything, or give me a different location instead."
-Do not move any files until the user explicitly confirms. The `_source/` move is valid only in this branch, only after confirmation. Do not improvise it as a workaround for Branch A.
+Chrome lives at the vault root, outside the enforced paths — `Home.md` and the Bases carry no OKF frontmatter, and that is correct.
 
-### Step 3: Copy worldvault/ into the project directory
+### Step 4: Create the project documents
 
-Copy all contents of `worldvault/` into the user's specified project directory. Preserve the full structure:
-- `.obsidian/` and all files within
-- Content folder: `notes/`
-- `_templates/`, `_attachments/`, `_bases/`
-- All stub notes: `Home.md`, `worldbuilding-plan.md`, `log.md`, `seed.md`, `agent-context.md`
+Create the three `project/` documents with scraibe's `new_doc.py`, from the project root:
 
-PowerShell:
-```powershell
-Copy-Item -Path "<skill-directory>/worldvault/*" -Destination "<project-directory>" -Recurse -Force
-# Also copy hidden .obsidian directory explicitly:
-Copy-Item -Path "<skill-directory>/worldvault/.obsidian" -Destination "<project-directory>/.obsidian" -Recurse -Force
+```
+python <scraibe>/scripts/new_doc.py --config .claude/okf.json --dir project --type seed --title "<Name> World Foundation"
+python <scraibe>/scripts/new_doc.py --config .claude/okf.json --dir project --type plan --title "<Name> Worldbuilding Plan"
+python <scraibe>/scripts/new_doc.py --config .claude/okf.json --dir project --type direction --title "<Name> Story Direction"
 ```
 
-Bash (macOS/Linux):
-```bash
-cp -r "<skill-directory>/worldvault/." "<project-directory>/"
+Then seed `.claude/glossary.md` with the platform terminology:
+
+```markdown
+**lorebook** — the platform term is "world info" on ainime/isekaizero; both name the same thing. _Avoid_: world info (in vault docs).
 ```
 
-### Step 4: Ask for project name
+### Step 5: Generate rules, validate, hand off
 
-Ask:
-
-> "What is the name of your world or project?"
-
-Replace the `{{PROJECT_NAME}}` placeholder in two files in the project directory:
-
-In `<project-directory>/worldbuilding-plan.md`, replace:
 ```
-# {{PROJECT_NAME}} — Worldbuilding Plan
-```
-with:
-```
-# <ProjectName> — Worldbuilding Plan
+python <scraibe>/scripts/generate_rules.py --root .
+python <scraibe>/scripts/validate.py project --root . --format human
 ```
 
-In `<project-directory>/Home.md`, replace:
-```
-# {{PROJECT_NAME}}
-```
-with:
-```
-# <ProjectName>
-```
-
-### Step 5: Confirm and hand off
-
-Confirm:
-
-> "Your vault is ready at `<project-directory>`. Open it in Obsidian as a vault — use 'Open folder as vault' and point it to that folder. Then start with `worldbuilder-world-planning` to begin the Seed phase."
-
----
+Report the validation result to the user. Tell them the vault is ready to open in Obsidian ("Open folder as vault" on the project root; Bases need Obsidian 1.8+ with the Bases core plugin). Then hand off to `worldbuilder-world-foundation` for the seed conversation.
 
 ## What this skill does not do
 
-- No creative questions. Genre, tone, setting, cast — those belong in world-planning and world-foundation.
-- No Obsidian Sync configuration — user decision, handled manually.
-- No plugin installation. No community plugins are included or required.
-- No cloud integration. The vault is a local directory.
+- No creative questions — those belong to `worldbuilder-world-foundation`.
+- No migration of pre-scraibe worldbuilder vaults — that is a `scraibe:setup` migration run with this registry.
+- No Obsidian Sync configuration, plugin installation, or cloud integration.

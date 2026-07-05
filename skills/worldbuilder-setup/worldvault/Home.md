@@ -34,6 +34,12 @@
 
 ---
 
+## Events
+
+![[events.base]]
+
+---
+
 ## Concepts
 
 ![[concepts.base]]

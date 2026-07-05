@@ -1,35 +1,40 @@
 filters:
   and:
     - 'type == "location"'
-    - not:
-        - file.inFolder("_templates")
+    - file.inFolder("notes")
 
 views:
   - type: table
     name: All
     order:
       - file.name
-      - status
+      - description
+      - tags
       - region
       - function
-      - last_updated
+      - timestamp
 
   - type: table
-    name: Draft
-    filters: 'status == "draft"'
+    name: Open
+    filters:
+      or:
+        - tags.contains("human-ready")
+        - tags.contains("agent-ready")
     order:
       - file.name
-      - status
+      - description
+      - tags
       - region
       - function
-      - last_updated
+      - timestamp
 
   - type: table
     name: Complete
-    filters: 'status == "complete"'
+    filters: 'tags.contains("complete")'
     order:
       - file.name
-      - status
+      - description
+      - tags
       - region
       - function
-      - last_updated
+      - timestamp

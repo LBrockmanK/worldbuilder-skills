@@ -1,33 +1,34 @@
-filters:
-  and:
-    - not:
-        - file.inFolder("_templates")
-    - not:
-        - file.inFolder("_bases")
+filters: file.inFolder("notes")
 
 views:
   - type: table
     name: All
     order:
       - file.name
+      - description
+      - tags
       - type
-      - status
-      - last_updated
+      - timestamp
 
   - type: table
-    name: Draft
-    filters: 'status == "draft"'
+    name: Open
+    filters:
+      or:
+        - tags.contains("human-ready")
+        - tags.contains("agent-ready")
     order:
       - file.name
+      - description
+      - tags
       - type
-      - status
-      - last_updated
+      - timestamp
 
   - type: table
     name: Complete
-    filters: 'status == "complete"'
+    filters: 'tags.contains("complete")'
     order:
       - file.name
+      - description
+      - tags
       - type
-      - status
-      - last_updated
+      - timestamp

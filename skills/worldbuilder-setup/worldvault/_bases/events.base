@@ -1,6 +1,6 @@
 filters:
   and:
-    - 'type == "story"'
+    - 'type == "event"'
     - file.inFolder("notes")
 
 views:
@@ -10,8 +10,9 @@ views:
       - file.name
       - description
       - tags
-      - scope
-      - up
+      - characters
+      - location
+      - layer
       - timestamp
 
   - type: table
@@ -24,8 +25,9 @@ views:
       - file.name
       - description
       - tags
-      - scope
-      - up
+      - characters
+      - location
+      - layer
       - timestamp
 
   - type: table
@@ -35,6 +37,7 @@ views:
       - file.name
       - description
       - tags
-      - scope
-      - up
+      - characters
+      - location
+      - layer
       - timestamp
