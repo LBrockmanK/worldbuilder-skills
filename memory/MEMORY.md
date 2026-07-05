@@ -8,3 +8,4 @@
 - [Session: June 2026 implementation pass](session-2026-06-03.md) — What changed in this session; open issues; next steps
 - [Feedback: relationship entry focus](feedback-relationship-entry-focus.md) — Relationship entries describe THIS character's experience of the other person, not the reverse
 - [Feedback: positive statements](feedback-positive-statements.md) — Describe what characters ARE; avoid opening with or relying on negative constructions for characterization
+- [Feedback: show artifacts in design review](feedback-show-artifacts.md) — Design approval needs the concrete artifact and full prose explanation; no one-line option chips

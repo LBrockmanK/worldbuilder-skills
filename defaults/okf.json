@@ -1,0 +1,175 @@
+{
+  "universal_properties": {
+    "type": {
+      "type": "text",
+      "required": true
+    },
+    "title": {
+      "type": "text",
+      "required": true
+    },
+    "description": {
+      "type": "text",
+      "required": true
+    },
+    "tags": {
+      "type": "tags",
+      "required": true
+    },
+    "date": {
+      "type": "date",
+      "required": true
+    },
+    "timestamp": {
+      "type": "datetime",
+      "required": true
+    },
+    "resources": {
+      "type": "list",
+      "required": true
+    },
+    "aliases": {
+      "type": "list",
+      "required": false
+    },
+    "output": {
+      "type": "list",
+      "required": false
+    },
+    "superseded-by": {
+      "type": "list",
+      "required": false
+    }
+  },
+  "types": {
+    "character": {
+      "fields": {
+        "factions": {
+          "type": "list"
+        }
+      },
+      "template": "> For future agents: this is a character note. The filename is the character's name. Use `worldbuilder-character` to build it out.\n\n## Design Notes\n\n### Session Notes\n\n_Q&A capture: what the user said they wanted this character to be. Raw intent, bullet points._\n\n-\n\n### Builder Context\n\n_Narrative function, external references, design decisions, open questions. Bullet points. Leave blank if nothing to capture — do not pad._\n\n-\n\n## Background\n\n_Where this character comes from. Declarative fact pairs: [Fact] → [what it made true]. No behavioral content._\n\n-\n\n## Body\n\n_Physical behavioral descriptions. One entry per bullet._\n\n-\n\n## Soul\n\n_Psychological and social behavioral descriptions. One entry per bullet._\n\n-\n\n## Relationships\n\n_Named relationship dynamics. One bullet per relationship: **Name — Archetype(s):** [behavioral description]_\n\n-\n"
+    },
+    "location": {
+      "fields": {
+        "region": {
+          "type": "text"
+        },
+        "function": {
+          "type": "text"
+        },
+        "primary-characters": {
+          "type": "list"
+        }
+      },
+      "template": "> For future agents: this is a location note. The filename is the location's name. Use `worldbuilder-location` to build it out.\n\n## Preamble\n\n_2–3 sentences orienting a future agent to this location._\n\n## Concept\n\n_What this place is and why it matters._\n\n## Physical Form\n\n_What it looks, sounds, smells like._\n\n## Social Life\n\n_Who inhabits it, how they use it._\n\n## Behavioral Register\n\n_The emotional and dramatic register of this space._\n\n## History & Meaning\n\n_How this place came to be and what it represents._\n"
+    },
+    "faction": {
+      "fields": {
+        "members": {
+          "type": "list"
+        },
+        "function": {
+          "type": "text"
+        }
+      },
+      "template": "> For future agents: this is a faction note. The filename is the faction's name. Use `worldbuilder-faction` to build it out.\n\n## Preamble\n\n_2–3 sentences orienting a future agent to this faction._\n\n## Concept\n\n_What this faction is and its role in the world._\n\n## Origin & Purpose\n\n_How and why this faction formed._\n\n## Collective Behavior\n\n_How the faction acts as a group._\n\n## Membership\n\n_Who belongs, how membership works._\n\n## Inter-Faction Web\n\n_Relationships to other factions._\n\n## Storylines\n\n_Faction-level story participation._\n"
+    },
+    "event": {
+      "fields": {
+        "characters": {
+          "type": "list"
+        },
+        "location": {
+          "type": "text"
+        },
+        "layer": {
+          "type": "text"
+        }
+      },
+      "template": "> For future agents: this is an event note. The filename is the event's name. Use `worldbuilder-event` to build it out.\n\n## Design Notes\n\n## What Happens\n\n## Scene Effects\n"
+    },
+    "concept": {
+      "fields": {
+        "layer": {
+          "type": "text",
+          "required": true
+        },
+        "trigger-context": {
+          "type": "text"
+        }
+      },
+      "template": "> For future agents: this is a concept note — a discrete piece of world knowledge. Layer values: `[surface](notes/surface.md)` (freely shareable), `[mid](notes/mid.md)` (contextual), `[deep](notes/deep.md)` (revealed late). Aliases become lorebook keyword candidates at export. Use `worldbuilder-concept` to build it out.\n\n## Preamble\n\n_2–3 sentences orienting a future agent to this concept._\n\n## Limitations and Costs\n\n_Constraints, exceptions, or costs that apply to this concept._\n\n## Content\n\n_The actual world knowledge: what this thing is, how it works._\n"
+    },
+    "story": {
+      "fields": {
+        "scope": {
+          "type": "text",
+          "required": true
+        },
+        "up": {
+          "type": "text"
+        }
+      },
+      "template": "Scope values: `[arc](notes/arc.md)` (major story section), `[intention](notes/intention.md)` (specific story possibility), `[introduction](notes/introduction.md)` (first player–character contact). Set the `up:` field to a markdown link pointing at the parent note. See `worldbuilder-story` for guidance on which sections to include per scope. Note: the standing creative brief lives in `direction.md` (type: project), not in a story note.\n\n> For future agents: this is a story note. Use `worldbuilder-story` to build it out.\n\n## Preamble\n\n_2–3 sentences orienting a future agent to this story note._\n\n## Content\n\n_Narrative content appropriate to scope._\n"
+    },
+    "seed": {
+      "fields": {},
+      "template": "> For future agents: this is `seed.md` — the world foundation document produced by `worldbuilder-world-foundation` during the Seed phase.\n"
+    },
+    "plan": {
+      "fields": {},
+      "template": "> For future agents: this is the project plan. Read it at the start of every session.\n\n## Phase Status\n\n| Phase | Status | Notes |\n|---|---|---|\n| Seed | Not started | |\n| Wide | Not started | |\n| Export | Not started | |\n\n## Cast Plan\n"
+    },
+    "direction": {
+      "fields": {},
+      "template": ""
+    },
+    "reference": {
+      "fields": {},
+      "template": ""
+    }
+  },
+  "tags": {
+    "status": {
+      "mutually_exclusive": true,
+      "values": [
+        "human-ready",
+        "agent-ready",
+        "complete",
+        "deprecated",
+        "abandoned",
+        "archived"
+      ],
+      "open": [
+        "human-ready",
+        "agent-ready"
+      ],
+      "closed": [
+        "complete",
+        "deprecated",
+        "abandoned",
+        "archived"
+      ]
+    },
+    "behavioral": [
+      "priority",
+      "deferred"
+    ]
+  },
+  "stale_days": 30,
+  "enforced_paths": {
+    "notes/": {
+      "level": "full",
+      "subdirs_only": false
+    },
+    "project/": {
+      "level": "full",
+      "subdirs_only": false
+    }
+  },
+  "strictness": {
+    "unknown_type": "warn",
+    "broken_links": "warn"
+  }
+}
