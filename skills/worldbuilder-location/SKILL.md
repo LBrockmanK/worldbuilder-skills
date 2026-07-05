@@ -11,11 +11,7 @@ A location for an LLM-powered narrative game is not a description — it is a be
 
 The location note is the comprehensive Wide-phase single source of truth for a named place. It covers everything true about the location that shapes how the engine writes scenes set there. Export skills derive their output from this note.
 
----
-
-## Working with Vault Files
-
-**Renaming a note:** Use Edit or Write to rename the file. Then immediately run `agents/linker/scripts/rename-note.ps1 -OldName "OldName" -NewName "NewName" -VaultPath <vault-root>` to update all markdown links across the vault. Do not skip this step — Obsidian's auto-rename is bypassed when files are edited directly.
+**Description field:** the world navigation summary — what this place is, what makes it distinctive, and what role it plays in the setting's social and narrative life; not a physical description, which goes in Form & History. 1–2 sentences, written last, after the full note is complete.
 
 ---
 
@@ -25,45 +21,13 @@ Work through sections in order. Do not skip sections because the location seems 
 
 | Section | Notes |
 |---|---|
-| Frontmatter | YAML; see below |
-| Brief | Frontmatter field; written last |
 | Design Notes | Builder record; excluded from exports |
 | Form & History | Physical reality and what the place carries |
 | Presence | Who comes here and how the place behaves |
 
 Location notes do not use sub-files — all content lives in one note. Sub-files are only used in skills where sections are too large for a single document (see `worldbuilder-character` for reference).
 
----
-
-## Frontmatter
-
-Every location note opens with YAML frontmatter. Required fields:
-
-```yaml
-type: location
-status: draft | complete
-aliases: []
-last_updated: YYYY-MM-DD HH:mm
-region: "[The Valley](notes/The Valley.md)"            # link to region note
-function: one phrase (plain text)
-primary-characters: ["[Name](notes/Name.md)"]         # links to character notes
-brief: |                           # plain prose; written last — see ## Brief below
-  <written after the full note is complete>
-```
-
-`region` and `primary-characters` use markdown links. The filename matches the display name. `function` stays plain text. `brief` is plain prose — not a link.
-
----
-
-## Brief
-
-`brief` is the world navigation field. When an agent is writing character relationships, planning story arcs, or building export content, they scan `brief` across location notes to understand each place without opening the note.
-
-**Content:** what this place is, what makes it distinctive, what role it plays in the setting's social and narrative life. Not a physical description — that goes in Form & History.
-
-**Length:** 1–2 sentences.
-
-**Timing:** written last — after the full note is complete. No design rationale, no export recommendations.
+Frontmatter is defined by the project's OKF registry; `new_doc.py` stamps it at creation and the generated rules describe it.
 
 ---
 
@@ -152,12 +116,12 @@ The standard: at least one axis must specify a change in scene logic, tone, or f
 
 ## Self-Check Before Marking Complete
 
-**Frontmatter**
-- [ ] All required fields present
-- [ ] `region` and `primary-characters` use markdown links: `[Name](notes/name.md)`
-- [ ] `status` is `draft` or `complete`
+The note stays on an open status tag while work is in progress; mark it `complete` when every item below passes.
 
-**Brief**
+**Frontmatter**
+- [ ] Fields match the generated rules; `region` and `primary-characters` link to their notes
+
+**Description**
 - [ ] Written last — after the full note is complete
 - [ ] 1–2 sentences; describes what makes this location distinctive, not its physical form
 - [ ] No design rationale, no export recommendations

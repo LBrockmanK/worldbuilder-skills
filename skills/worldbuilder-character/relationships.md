@@ -14,7 +14,7 @@ A relationship defined by emotional tone gives the LLM nothing actionable. A rel
 
 **Asymmetry is normal.** Relationships do not require reciprocation. A named relationship in A's card does not mean B must name A back. A one-sided attachment, an unnoticed rivalry, a care that isn't returned: these are realistic and generate behavioral content. Write only what this character actually experiences.
 
-**Perspective-focus and cross-character capture apply simultaneously.** "Write only what this character experiences" governs the relationship entry — it keeps the voice consistent and prevents the LLM from acting on unverifiable claims about another character's interior. It does not mean that insights about the other character are discarded. When writing a relationship entry reveals something true about the other person — a behavioral pattern, a motivation, a likely reaction — that insight goes into that character's cast plan entry as a Blueprint note in `worldbuilding-plan.md`. The two rules do not conflict: the relationship entry stays perspective-focused, and the insight finds a home where it can be acted on later.
+**Perspective-focus and cross-character capture apply simultaneously.** "Write only what this character experiences" governs the relationship entry — it keeps the voice consistent and prevents the LLM from acting on unverifiable claims about another character's interior. It does not mean that insights about the other character are discarded. When writing a relationship entry reveals something true about the other person — a behavioral pattern, a motivation, a likely reaction — that insight goes into that character's cast plan entry as a Blueprint note in the cast plan in `project/plan.md`. The two rules do not conflict: the relationship entry stays perspective-focused, and the insight finds a home where it can be acted on later.
 
 ---
 
@@ -117,7 +117,7 @@ Each relationship entry describes only what *this* character experiences — wha
 - is motivated by something internally (unless they've stated it aloud)
 - feels something toward this character that hasn't been expressed behaviorally
 
-**Displaced content** — anything you remove — should be logged as a Blueprint note in the other character's entry in `worldbuilding-plan.md`, not simply deleted. It may be accurate; it just doesn't belong in this character's voice.
+**Displaced content** — anything you remove — should be logged as a Blueprint note in the other character's entry in the cast plan in `project/plan.md`, not simply deleted. It may be accurate; it just doesn't belong in this character's voice.
 
 **Worked example — Friction entry (Sophie's card, about Vesper):**
 

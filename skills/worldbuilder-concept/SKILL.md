@@ -7,9 +7,11 @@ description: Use when writing concept notes for an AI-powered narrative game —
 
 ## Overview
 
-World knowledge is organized in `notes/` notes — one note per discrete topic. Export skills read these notes and package them as lorebook entries. This skill covers writing the concept notes well; the export skill handles the packaging.
+World knowledge is organized as concept notes — one note per discrete topic. Export skills read these notes and package them as lorebook entries. This skill covers writing the concept notes well; the export skill handles the packaging.
 
 Good concept notes give the engine exactly what it needs at the moment a topic arises. The goal is precision: the right information for the right moment. Write notes that are dense and specific rather than broad and atmospheric — 50 tokens of exact context beats 300 tokens of unfocused description.
+
+**Description field:** the world navigation summary — 1–2 sentences covering what this piece of world knowledge is and when it matters in scenes. Written last; a description that does not say when the lore activates is incomplete.
 
 ---
 
@@ -17,49 +19,11 @@ Good concept notes give the engine exactly what it needs at the moment a topic a
 
 | Section | Notes |
 |---|---|
-| Frontmatter | YAML; see below |
-| Brief | Frontmatter field; written last |
 | Design Notes | Builder record; excluded from exports |
 | Lore | What is true about this thing in the world |
 | Implications | What follows from this being true; activation context |
 
----
-
-## Working with Vault Files
-
-**Renaming a note:** Use Edit or Write to rename the file. Then immediately run `agents/linker/scripts/rename-note.ps1 -OldName "OldName" -NewName "NewName" -VaultPath <vault-root>` to update all markdown links across the vault. Do not skip this step — Obsidian's auto-rename is bypassed when files are edited directly.
-
----
-
-## Concept Note Frontmatter
-
-Every concept note opens with:
-
-```yaml
-type: concept
-status: draft | complete
-aliases: []           # key terms and synonyms — become keyword candidates at export
-last_updated: YYYY-MM-DD HH:mm
-layer: "[surface](notes/surface.md)"   # link; surface | mid | deep
-brief: |    # plain prose; written last — see ## Brief below
-  <written after the full note is complete>
-```
-
-`aliases` is the most important field for a concept note. Include every realistic way the topic might be mentioned in dialogue: local names, common phrasings, player-accessible synonyms. The export skill derives keywords from these.
-
-`brief` is a 1–2 sentence plain-prose summary written after the full note is complete. It describes what this piece of world knowledge is and when it matters. See the Brief section below.
-
----
-
-## Brief
-
-The `brief` frontmatter field is the world navigation summary for this note. Write it last, after the rest of the note is complete.
-
-Cover two things in 1–2 sentences: what this piece of world knowledge is, and when it matters in scenes.
-
-**Example:** "The founding flood: the real cause of the Harrow family's departure — the surface story omits that the flood was foreseeable and the warning was ignored. Relevant whenever the Harrow family, the mill, or the town's founding comes up."
-
-A brief that does not say when the lore activates is incomplete.
+Frontmatter is defined by the project's OKF registry; `new_doc.py` stamps it at creation and the generated rules describe it. `aliases` is the most important field for a concept note — the export skill derives keyword triggers from it; see Alias Writing Guidance below.
 
 ---
 
@@ -82,6 +46,8 @@ The Design Notes section is the builder's working record. It is not lorebook con
 ## Lore
 
 The Lore section contains what is true about this thing in the world. This is the main exportable content.
+
+Imported lorebook entries marked `constant` describe standing setting state — that is seed/world material for `project/seed.md`, not a concept note.
 
 Write Lore content at the appropriate layer tone:
 
@@ -199,15 +165,15 @@ Event notes — festivals, seasonal observances, recurring world events — have
 
 World knowledge is a living collection, not a phase that opens and closes. Any stage of the project can produce facts worth capturing: a household design decision, a character backstory detail, an event's implied history, a conversation that clarifies the magic system. Create a concept note whenever a discrete piece of world knowledge solidifies — do not wait.
 
-**During active development:** When any working session produces a fact or implication that belongs in the lorebook, create a concept note stub immediately — frontmatter + a sentence or two of Lore is enough to anchor the thought. Flesh it out when you have more context.
+**During active development:** When any working session produces a fact or implication that belongs in the lorebook, create the concept note immediately via `new_doc.py` and leave it on an open status tag — a sentence or two of Lore is enough to anchor the thought. Flesh it out when you have more context.
 
-**At project completion:** Run a validation pass across all `notes/` notes:
-- Verify every note has complete frontmatter including `layer`, `aliases`, and `brief`
+**At project completion:** Run a validation pass across all concept notes:
+- Verify every note has `layer`, `aliases`, and `description` filled in
 - Check for contradictions across layers — surface notes should not imply what deep notes are supposed to reveal
 - Cross-reference with completed character notes: any implied lore in those notes that has no concept note?
 - Check that each note's Implications section includes specific activation context
 
-**Don't front-load.** Writing all concept notes before characters are drafted means writing them before you know what the characters will imply about the world. Let the `notes/` collection grow with the project.
+**Don't front-load.** Writing all concept notes before characters are drafted means writing them before you know what the characters will imply about the world. Let the concept collection grow with the project.
 
 ---
 
@@ -228,11 +194,9 @@ World knowledge is a living collection, not a phase that opens and closes. Any s
 **Complete when:** the note can constrain or shape any scene that touches this concept — a scene author reading the note knows what is impossible, what costs something, and what is inevitable because this thing exists.
 
 **Frontmatter**
-- [ ] `layer` present
-- [ ] `aliases` present and complete
-- [ ] `brief` written last; covers what this knowledge is and when it matters
+- [ ] `layer` set; `aliases` complete; other fields per the generated rules
 
-**Brief**
+**Description**
 - [ ] Written last
 - [ ] 1–2 sentences; covers what this knowledge is and when it matters
 

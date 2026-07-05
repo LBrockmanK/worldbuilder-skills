@@ -13,11 +13,7 @@ When a faction is underspecified, the engine defaults to making every member a g
 
 The faction note is the comprehensive Wide-phase single source of truth for any named group. Export skills derive their output from this note.
 
----
-
-## Working with Vault Files
-
-**Renaming a note:** Use Edit or Write to rename the file. Then immediately run `agents/linker/scripts/rename-note.ps1 -OldName "OldName" -NewName "NewName" -VaultPath <vault-root>` to update all markdown links across the vault. Do not skip this step — Obsidian's auto-rename is bypassed when files are edited directly.
+**Description field:** the world navigation summary — what this group is, what it does to scenes, and what a player can expect from any member they encounter. 1–2 sentences, behavioral rather than descriptive, written last: a reader who sees only this field should know what to expect when the faction enters a scene.
 
 ---
 
@@ -27,44 +23,13 @@ Work through sections in order.
 
 | Section | Notes |
 |---|---|
-| Frontmatter | YAML; see below |
-| Brief | Frontmatter field; written last |
 | Design Notes | Builder record; excluded from exports |
 | Origin & Structure | Founding, holdings, membership |
 | Collective Behavior | Behavioral entries, mask, variation, inter-faction |
 
 Faction notes do not use sub-files — all content lives in one note.
 
----
-
-## Frontmatter
-
-Every faction note opens with YAML frontmatter. Required fields:
-
-```yaml
-type: faction
-status: draft | complete
-aliases: []
-last_updated: YYYY-MM-DD HH:mm
-members: ["[Name](notes/Name.md)"]   # links to character notes
-function: one phrase (plain text)
-brief: |                # plain prose; written last — see ## Brief below
-  <written after the full note is complete>
-```
-
-`members` uses markdown links. The filename matches the display name. `function` stays plain text.
-
----
-
-## Brief
-
-The world navigation field for factions. Written last, after the full note is complete.
-
-What this group is, what it does to scenes, and what a player can expect from any member they encounter.
-
-> *The Silt Brotherhood controls river trade and treats pricing information as proprietary — any member in a scene will deflect direct questions about costs and find a reason to leave before being pressed further.*
-
-1–2 sentences. Behavioral, not descriptive. A reader who encounters this field without reading the full note should know what to expect when this faction enters a scene.
+Frontmatter is defined by the project's OKF registry; `new_doc.py` stamps it at creation and the generated rules describe it.
 
 ---
 
@@ -152,7 +117,7 @@ Lightweight by design. Direct relationships only — alliances, rivalries, conte
 
 Each entry:
 ```
-[Faction Name](notes/Faction Name.md) — allied / neutral / rival / enemy: one sentence on what drives it.
+[[Faction Name]] — allied / neutral / rival / enemy: one sentence on what drives it.
 ```
 
 Relationships that don't bear on the current project do not go here.
@@ -183,12 +148,12 @@ The standard: a member who could belong to any faction fails the test. A member 
 
 ## Self-Check Before Marking Complete
 
-**Frontmatter**
-- [ ] All required fields present
-- [ ] `members` uses markdown links: `[Name](notes/name.md)`
-- [ ] `status` is `draft` or `complete`
+The note stays on an open status tag while work is in progress; mark it `complete` when every item below passes.
 
-**Brief**
+**Frontmatter**
+- [ ] Fields match the generated rules; `members` links to member character notes
+
+**Description**
 - [ ] Written last
 - [ ] 1–2 sentences; behavioral — describes what a player encounters with any member, not what the faction is in the abstract
 

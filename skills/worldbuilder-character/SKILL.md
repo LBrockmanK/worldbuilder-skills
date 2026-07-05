@@ -11,11 +11,7 @@ A character for an LLM-powered game is not a description — it is a behavioral 
 
 The character note is the comprehensive single source of truth for a character in the Wide phase. It is richer than any export format can hold — it contains everything true about the character, including material that won't appear in any platform output. Export skills derive their output from this note.
 
----
-
-## Working with Vault Files
-
-**Renaming a note:** Use Edit or Write to rename the file. Then immediately run `agents/linker/scripts/rename-note.ps1 -OldName "OldName" -NewName "NewName" -VaultPath <vault-root>` to update all markdown links across the vault. Do not skip this step — Obsidian's auto-rename is bypassed when files are edited directly.
+**Description field:** the cast navigation summary — who this character is in the world, their key traits, and their place in the social ecosystem. Described, not prescribed: no relationship recommendations, no design rationale. Written last, after the full blueprint is complete; other agents scan it across the roster to understand each character without opening their notes.
 
 ---
 
@@ -25,7 +21,6 @@ Work through sections in order. Do not skip sections because the character seems
 
 | Section | Sub-file | Notes |
 |---|---|---|
-| Frontmatter | — | YAML; see below |
 | Design Notes | — | Builder record; H3 subheadings; excluded from exports |
 | Background | `framework.md` | Declarative context; different in kind from behavioral sections |
 | Body | `framework.md` | Physical behavioral descriptions |
@@ -33,37 +28,7 @@ Work through sections in order. Do not skip sections because the character seems
 | Relationships | `relationships.md` | Named relationships; bullet format |
 | Intimate Dynamics (if flagged) | `intimate.md` | Only if flagged in project plan |
 
----
-
-## Frontmatter
-
-Every character note opens with YAML frontmatter. Required fields:
-
-```yaml
-type: character
-status: draft | complete
-aliases: []
-last_updated: YYYY-MM-DD HH:mm
-factions: ["[Household Name](notes/Household Name.md)", "[Guild Name](notes/Guild Name.md)"]   # links to faction notes
-brief: |                                              # plain prose; written last — see ## Brief below
-  <written after the full blueprint is complete>
-```
-
-`factions` uses markdown links to faction notes. The filename matches the display name. `brief` is plain prose — not a link.
-
----
-
-## Brief
-
-`brief` is the cast navigation field. When an agent is building relationships for another character or planning story arcs, they scan `brief` across the full roster to understand each character without opening their notes.
-
-**Content:** who this character is in the world, their personality and key traits, their place in the social ecosystem, what makes them distinctive. Described, not prescribed — no relationship recommendations, no design rationale (that goes in Design Notes).
-
-**Length:** up to ~150 words / ~200 tokens. As long as needed; not padded.
-
-**Timing:** written last — after the full blueprint is complete. It can only accurately reflect a completed character.
-
-> **Provisional note:** The content guidelines for this field should be reviewed and refined after initial session testing. An example should be added at that point.
+Frontmatter is defined by the project's OKF registry; `new_doc.py` stamps it at creation and the generated rules describe it.
 
 ---
 
@@ -84,6 +49,8 @@ Typical bullets for Builder Context:
 - External references: named real people, fictional characters, or combinations that shaped the design; what specifically was drawn from each
 - Design decisions and constraints: choices made that would be confusing without context
 - Open questions: unresolved decisions to revisit in future sessions
+
+Imported character cards: judge by behavioral specificity, negative-track content, and connections; a card failing more than one needs the full pass, not transcription.
 
 ---
 
@@ -152,9 +119,9 @@ See `relationships.md` for the full relationship archetypes, coverage requiremen
 
 ## Story Notes
 
-**Story notes instead of inline storylines.** Story possibilities for this character live in separate story notes, not in the character note. When you have enough clarity on a character's arc, create a story note with `type: story`, `scope: "[intention](notes/intention.md)"`, and `characters: ["[Character Name](notes/Character Name.md)"]`. Link back to the character note via the `characters:` field. See `worldbuilder-story` for story note structure.
+**Story notes instead of inline storylines.** Story possibilities for this character live in separate story notes, not in the character note. When you have enough clarity on a character's arc, create a story note with intention scope and link it back to this character. See `worldbuilder-story` for story note structure.
 
-The introduction note is also a story note (`scope: "[introduction](notes/introduction.md)"`). When you have enough character clarity to know where and how the player would first meet this character, create it then.
+The introduction note is also a story note (introduction scope). When you have enough character clarity to know where and how the player would first meet this character, create it then.
 
 ---
 
@@ -172,10 +139,10 @@ After completing a household group or batch of characters, run a relationship sy
 
 ## Self-Check Before Marking Complete
 
+The note stays on an open status tag while work is in progress; mark it `complete` when every item below passes.
+
 **Frontmatter**
-- [ ] All required fields present
-- [ ] `factions` uses markdown links: `[Name](notes/name.md)`
-- [ ] `status` is `draft` or `complete`
+- [ ] Fields match the generated rules; `factions` links to this character's faction notes
 
 **Design Notes**
 - [ ] `### Session Notes` present with Q&A capture
@@ -216,7 +183,7 @@ After completing a household group or batch of characters, run a relationship sy
 
 **Pre-Handoff Scan**
 - [ ] Before moving to the next character, scan the session for any decisions made about characters who do not yet have a complete note
-- [ ] Record any such decisions as a Blueprint note in that character's cast plan entry in `worldbuilding-plan.md`
+- [ ] Record any such decisions as a Blueprint note in that character's cast plan entry in `project/plan.md`
 
-**Brief**
-- [ ] `brief:` written and reflects the completed character; no recommendations, no design rationale
+**Description**
+- [ ] `description` written last and reflects the completed character; no recommendations, no design rationale

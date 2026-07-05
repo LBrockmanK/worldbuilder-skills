@@ -9,69 +9,35 @@ description: Use when writing arc notes and intention notes for an AI-powered na
 
 This skill serves two related purposes:
 
-**Phase 1b — direction.md:** `direction.md` is the world's standing creative brief and the story engine's primary guard rail. It is a project document, produced in Phase 1 using this skill's section templates as guidance. See the Ongoing Story Direction section below for its complete structure.
+**Phase 1b — the direction document:** `project/direction.md` is the world's standing creative brief and the story engine's primary guard rail. It is a project document, produced in Phase 1 using this skill's section templates as guidance. See the Ongoing Story Direction section below for its complete structure.
 
-**Phase 2b — Arc, intention, and introduction notes:** Once direction.md exists, this skill creates the story notes that extend it. Story notes live in `notes/` and link up to `direction.md` via `up:` frontmatter.
+**Phase 2b — Arc, intention, and introduction notes:** Once the direction document exists, this skill creates the story notes that extend it. Story notes link to their parent via the `up` field.
 
 Story note types:
 
-**Arc** (`scope: "[arc](notes/arc.md)"`) — A major story section. `up: "[Direction](notes/Direction.md)"`. Covers a season, a storyline, or a thematic phase.
+**Arc** (scope: arc) — A major story section, linking up to the direction document. Covers a season, a storyline, or a thematic phase.
 
-**Intention** (`scope: "[intention](notes/intention.md)"`) — A specific story possibility within an arc. `up: "[Arc Name](notes/Arc Name.md)"`. Not scripted outcomes — soft targets the world is set up to enable.
+**Intention** (scope: intention) — A specific story possibility within an arc, linking up to that arc. Not scripted outcomes — soft targets the world is set up to enable.
 
-**Introduction** (`scope: "[introduction](notes/introduction.md)"`) — First-contact scene for a specific character. Created during or after character note work, not during the story notes phase.
+**Introduction** (scope: introduction) — First-contact scene for a specific character. Created during or after character note work, not during the story notes phase.
 
-Frontmatter for story notes (arc, intention, introduction):
-```yaml
-type: story
-status: draft | complete
-aliases: []
-last_updated: YYYY-MM-DD HH:mm
-up: "[Parent Note](notes/Parent Note.md)"               # link to parent story note
-scope: "[arc](notes/arc.md)"                            # link; arc | intention | introduction
-characters: ["[Name](notes/Name.md)"]                   # optional; links to character notes
-brief: |    # plain prose; written last — see ## Brief below
-  <written after the full note is complete>
-```
+Frontmatter is defined by the project's OKF registry; `new_doc.py` stamps it at creation and the generated rules describe it. Set `scope` to arc, intention, or introduction, and point `up` at the parent note.
 
-Note: direction notes also use `type: story` but have no `up:` field. `brief` applies to all story notes including direction.
+**Description field:** 1–2 sentences naming what this note is — for an arc, the emotional territory it covers; for an intention, the story possibility in one sentence; for an introduction, who it introduces and the first impression. Written last; other agents scan this field when planning arcs or building character notes.
 
 Structure for arc, intention, and introduction notes:
 
 | Section | Notes |
 |---|---|
-| Frontmatter | YAML; see above |
-| Brief | Frontmatter field; written last |
 | Design Notes | Builder record; excluded from exports |
 | Situation | State of affairs before player involvement |
 | Story Possibilities | What could happen; phrased as possibility not script |
 
-Read `direction.md` before creating arc notes. Arc notes develop what the brief establishes — they do not contradict it.
-
----
-
-## Working with Vault Files
-
-**Renaming a note:** Use Edit or Write to rename the file. Then immediately run `agents/linker/scripts/rename-note.ps1 -OldName "OldName" -NewName "NewName" -VaultPath <vault-root>` to update all markdown links across the vault. Do not skip this step — Obsidian's auto-rename is bypassed when files are edited directly.
+Read the direction document before creating arc notes. Arc notes develop what the brief establishes — they do not contradict it.
 
 ---
 
 ## Arc, Intention, and Introduction Notes
-
-### Brief
-
-`brief` is a frontmatter field, not a heading inside the note body. Write it last, after the full note is complete.
-
-**For arc notes:** What this story arc is and what emotional territory it covers.
-Example: "The mill arc: the founding family's buried guilt surfaces; the town must decide whether to protect the story they've told themselves or face what actually happened."
-
-**For intention notes:** What this story possibility is in one sentence.
-Example: "The confession scene: if trust reaches a high point during the autumn festival, Mira may tell the player what she actually saw the night of the flood."
-
-**For introduction notes:** Who this introduces and the first impression.
-Example: "Introduces Bram: the player's first encounter is him repairing something that isn't broken, because staying busy is easier than acknowledging they've arrived."
-
-1–2 sentences. Other agents scan this field when planning arcs or building character notes.
 
 ### Design Notes
 
@@ -128,7 +94,9 @@ How the scene plays, what the character does, what invitation it extends to the 
 
 ## Self-Check Before Marking Complete (arc, intention, introduction notes)
 
-**Brief**
+The note stays on an open status tag while work is in progress; mark it `complete` when every item below passes.
+
+**Description**
 - [ ] Written last
 - [ ] 1–2 sentences; navigable summary of what this arc or intention is
 
@@ -225,6 +193,6 @@ After the first full year, if characters with strong chemistry have not moved to
 
 ## World Knowledge from Story Direction Work
 
-Story direction work regularly surfaces world knowledge that belongs in `notes/` notes rather than the direction brief — historical context implied by the opening arc, background on the hidden layer that shouldn't be in the standing brief, lore that shapes pacing guidance but reads as exposition if left in this document.
+Story direction work regularly surfaces world knowledge that belongs in concept notes rather than the direction brief — historical context implied by the opening arc, background on the hidden layer that shouldn't be in the standing brief, lore that shapes pacing guidance but reads as exposition if left in this document.
 
 When this happens, create a concept note immediately. Use `worldbuilder-concept` for layer classification and writing guidance. Do not leave world knowledge embedded in the story notes — it will either bloat the brief or be invisible to the export layer's lorebook packaging.
