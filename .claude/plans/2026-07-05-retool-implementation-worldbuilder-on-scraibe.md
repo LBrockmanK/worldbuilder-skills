@@ -239,15 +239,15 @@ Apply to each of the five skills, then the two insertions:
 **Interfaces:**
 - Consumes: event registry entry from Task 1 (fields `characters`, `location`, `layer`; no in-world `date`, no `recurring`, no `brief`).
 
-- [ ] **Step 1:** Delete `## Working with Vault Files` (line 16) and `## Brief` (line 55; fold its content-guidance sentence into Overview as the "**Description field:**" paragraph per Task 4's pattern). Replace the whole `## Event Note Frontmatter` section (lines 34–53) with:
+- [x] **Step 1:** Delete `## Working with Vault Files` (line 16) and `## Brief` (line 55; fold its content-guidance sentence into Overview as the "**Description field:**" paragraph per Task 4's pattern). Replace the whole `## Event Note Frontmatter` section (lines 34–53) with:
 ```markdown
 ## Event Note Fields
 
 Frontmatter is defined by the project's OKF registry — `new_doc.py` stamps it and the generated rules describe it. Two writing notes: `aliases` carries every realistic way the event is mentioned in dialogue ("the festival," "harvest time"); the export skill derives keyword triggers from it. Timing — season, day, recurrence — is not a field: open What Happens with when the event takes place and how often.
 ```
-- [ ] **Step 2:** Update `## Lifecycle` (line 124): "stub" phrasing becomes status-tag phrasing (create early via `new_doc.py`, leave open; mark `complete` after the self-check).
-- [ ] **Step 3: Verify.** `grep -n "recurring\|last_updated\|brief\|status: draft" skills/worldbuilder-event/SKILL.md` → no matches (case-sensitive; "Brief" as a heading also gone).
-- [ ] **Step 4: Commit.** `git commit -am "refactor: event skill — timing to body text, registry owns frontmatter"`
+- [x] **Step 2:** Update `## Lifecycle` (line 124): "stub" phrasing becomes status-tag phrasing (create early via `new_doc.py`, leave open; mark `complete` after the self-check).
+- [x] **Step 3: Verify.** `grep -n "recurring\|last_updated\|brief\|status: draft" skills/worldbuilder-event/SKILL.md` → no matches (case-sensitive; "Brief" as a heading also gone).
+- [x] **Step 4: Commit.** `git commit -am "refactor: event skill — timing to body text, registry owns frontmatter"`
 
 ---
 

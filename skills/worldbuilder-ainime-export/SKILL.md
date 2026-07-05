@@ -1,6 +1,6 @@
 ---
 name: worldbuilder-ainime-export
-description: Use when exporting a completed Wide-phase worldbuilding project to ainime-games.com format. Requires complete character notes, seed.md, and Wide-phase concept and story notes.
+description: Use when exporting a completed Wide-phase worldbuilding project to ainime-games.com format. Requires complete character notes, a complete project/seed.md, and Wide-phase concept and story notes.
 ---
 
 # Ainime Export
@@ -16,10 +16,10 @@ Full JSON schema reference: `../../docs/target-system.md`.
 ## Prerequisites
 
 Before running export, verify:
-- [ ] `seed.md` complete (all sections present)
-- [ ] All character notes in `notes/` complete (status: complete in frontmatter)
-- [ ] `notes/` concept notes written and layer-tagged
-- [ ] `notes/` story notes (direction, arc, key intentions) complete
+- [ ] `project/seed.md` tagged `complete` (all sections present)
+- [ ] Every character note in `notes/` carries a closed status tag
+- [ ] Concept notes in `notes/` written with `layer` set
+- [ ] `project/direction.md` and the story notes (arcs, key intentions) in `notes/` tagged `complete`
 - [ ] Introduction notes created for all characters
 
 If any prerequisite is incomplete, return to the relevant Wide-phase skill rather than exporting a partial world.
@@ -30,27 +30,27 @@ If any prerequisite is incomplete, return to the relevant Wide-phase skill rathe
 
 | Source | ainime JSON field(s) |
 |---|---|
-| `seed.md` — Setting Summary | `settingSummary` |
-| `seed.md` — Genre and Tone | `genre` |
-| `seed.md` — Inspirations | `inspirations[]` |
-| `seed.md` — Tonal Inspirations | `tonalInspirations[]` |
-| `seed.md` — Key Tropes and Themes | `keyTropesAndThemes[]` |
-| `seed.md` — Community | `communityDescription` |
-| `seed.md` — World Introduction | `introText` |
-| `seed.md` — Opening Situation | `initialStoryArc` |
-| `seed.md` — era (from story direction or seed) | `calendarConfig.eraReminder` |
-| `notes/direction.md` | `arcManagerGuidance` |
-| `notes/intention-*.md` + `notes/*.md` | `storyTriggers[]` |
-| `notes/*.md` | `calendarConfig.weatherPools`, `eventCalendarSummary` |
-| `notes/*.md` | `loreEntries[]` |
-| `notes/*.md` | `characters[]` |
-| `seed.md` — Art style | `artStyle.background.*`, `artStyle.sprite.*` |
+| `project/seed.md` — Setting Summary | `settingSummary` |
+| `project/seed.md` — Genre and Tone | `genre` |
+| `project/seed.md` — Inspirations | `inspirations[]` |
+| `project/seed.md` — Tonal Inspirations | `tonalInspirations[]` |
+| `project/seed.md` — Key Tropes and Themes | `keyTropesAndThemes[]` |
+| `project/seed.md` — Community | `communityDescription` |
+| `project/seed.md` — World Introduction | `introText` |
+| `project/seed.md` — Opening Situation | `initialStoryArc` |
+| `project/seed.md` — era (from story direction or seed) | `calendarConfig.eraReminder` |
+| `project/direction.md` | `arcManagerGuidance` |
+| intention story notes + event notes in `notes/` | `storyTriggers[]` |
+| event notes in `notes/` | `calendarConfig.weatherPools`, `eventCalendarSummary` |
+| concept notes in `notes/` | `loreEntries[]` |
+| character notes in `notes/` | `characters[]` |
+| `project/seed.md` — Art style | `artStyle.background.*`, `artStyle.sprite.*` |
 
 ---
 
 ## Setting and Adventure Fields
 
-Read `seed.md` and extract the following. The section names in `seed.md` map directly.
+Read `project/seed.md` and extract the following. The section names in the seed map directly.
 
 **`settingSummary`** — Setting Summary section verbatim. Concrete and specific; this is the always-active context.
 
@@ -78,7 +78,7 @@ Read `seed.md` and extract the following. The section names in `seed.md` map dir
 
 Read `calendar.md` (this skill's reference file) for design guidance on weather pools, festival layout, and day-segment defaults before building this section.
 
-**`calendarConfig.weatherPools`** — Nested object: season → day segment → string array. Each string is a one-line weather description. 10–16 entries per season/segment. Derive from the world's seasonal tone and seed.md; see `calendar.md` for writing guidance.
+**`calendarConfig.weatherPools`** — Nested object: season → day segment → string array. Each string is a one-line weather description. 10–16 entries per season/segment. Derive from the world's seasonal tone and `project/seed.md`; see `calendar.md` for writing guidance.
 
 ```json
 {
@@ -93,7 +93,7 @@ Read `calendar.md` (this skill's reference file) for design guidance on weather 
 
 **`eventCalendarSummary`** — Prose overview of the event calendar for LLM reference. Summarize the festival calendar and its emotional rhythms after all events are written.
 
-**`storyTriggers[]` (calendar events)** — One entry per recurring-event concept note. Recurring annual events use `recurring: true`. See `calendar.md` for how to derive `triggerOnDay` from a concept note's `trigger-context` field and how to write effective `promptInjection` content.
+**`storyTriggers[]` (calendar events)** — One entry per event note. Recurring annual events use `recurring: true` in the output. See `calendar.md` for how to derive `triggerOnDay` from the timing language that opens each event note's What Happens section, and how to write effective `promptInjection` content.
 
 ```json
 {
@@ -111,15 +111,15 @@ Read `calendar.md` (this skill's reference file) for design guidance on weather 
 
 ## Story Direction and Triggers
 
-**`arcManagerGuidance`** — Read `notes/direction.md`. This is the standing creative brief for the engine — the primary guard against escalation, flattening, and inappropriate pacing. Export verbatim; do not summarize.
+**`arcManagerGuidance`** — Read `project/direction.md`. This is the standing creative direction for the engine — the primary guard against escalation, flattening, and inappropriate pacing. Export verbatim; do not summarize.
 
-**`storyTriggers[]` (story events)** — One entry per `notes/intention-*.md` note where a trigger condition can be expressed as a calendar day or a story moment. Intentions without a concrete trigger day do not produce `storyTriggers` entries; they remain in the `arcManagerGuidance` as ongoing direction instead.
+**`storyTriggers[]` (story events)** — One entry per intention story note where a trigger condition can be expressed as a calendar day or a story moment. Intentions without a concrete trigger day do not produce `storyTriggers` entries; they remain in the `arcManagerGuidance` as ongoing direction instead.
 
 ---
 
 ## Lorebook Entries
 
-Read all `notes/` notes. Each note produces one `loreEntry`.
+Read all concept notes in `notes/`. Each note produces one `loreEntry`.
 
 ```json
 {
@@ -150,7 +150,7 @@ For each character note in `notes/`, produce a character record. Process one cha
 
 | Character note field | ainime JSON field |
 |---|---|
-| frontmatter `type: character` — major/supporting | `type`: `"main"` or `"side"` |
+| Major/Supporting (cast plan entry in `project/plan.md`) | `type`: `"main"` or `"side"` |
 | Character name | `name`, `lastName` |
 | Derived by export skill | `role` |
 | Assembled card prose | `baseProfile` |
@@ -160,7 +160,7 @@ For each character note in `notes/`, produce a character record. Process one cha
 
 **`name` / `lastName`** — Extract from the character note filename.
 
-**`type`** — `"main"` for major characters, `"side"` for supporting. Maps from the character note's frontmatter `type` value.
+**`type`** — `"main"` for major characters, `"side"` for supporting. Maps from the character's Major/Supporting designation in the cast plan (`project/plan.md`).
 
 **`role`** — Not stored in the character note. Derive from the character's function as established by the character note content (their position in the world, their relationship to the player, their narrative role). Write as plain text.
 

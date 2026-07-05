@@ -42,7 +42,7 @@ These include the Influence Thresholds. If the prose section alone reaches the t
 
 ## Influence Thresholds
 
-After the personality/description prose, write the influence thresholds. These show the engine how the character behaves at each trust level through brief in-character scenes — not behavioral descriptions, but actual moments.
+After the personality/description prose, write the influence thresholds. These show the engine how the character behaves at each trust level through short in-character scenes — not behavioral descriptions, but actual moments.
 
 ### The six bands
 

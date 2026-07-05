@@ -43,7 +43,7 @@ Each string is a one-line weather description injected when that season and segm
 }
 ```
 
-Derive weather descriptions from the world's seasonal tone notes and seed.md. If the world has no strong seasonal character, use climate-appropriate defaults and vary them for narrative weight.
+Derive weather descriptions from the world's seasonal tone notes and `project/seed.md`. If the world has no strong seasonal character, use climate-appropriate defaults and vary them for narrative weight.
 
 ---
 
@@ -77,11 +77,11 @@ SEASON 4
 
 ---
 
-## Mapping Concept Notes to storyTriggers
+## Mapping Event Notes to storyTriggers
 
-Recurring event concept notes in `notes/` become `storyTriggers` entries with `recurring: true`.
+Event notes in `notes/` become `storyTriggers` entries; events whose timing repeats get `recurring: true` in the output.
 
-**Finding the calendar day:** Read the note body for seasonal or timing language ("early spring," "the darkest night of winter," "midway through harvest"). Assign an absolute calendar day that fits: `(season_number - 1) × days_per_season + day_within_season`. The concept note does not specify an exact day — the exporter makes this decision based on the note content and the world's calendar structure.
+**Finding the calendar day:** Read the opening of the event note's What Happens section — it states when the event takes place and how often ("early spring," "the darkest night of winter," "midway through harvest"). Assign an absolute calendar day that fits: `(season_number - 1) × days_per_season + day_within_season`. The event note does not specify an exact day — the exporter makes this decision based on the note content and the world's calendar structure.
 
 **Constructing the entry:**
 ```json
@@ -94,21 +94,21 @@ Recurring event concept notes in `notes/` become `storyTriggers` entries with `r
 }
 ```
 
-**Writing `promptInjection`:** Convert the concept note's atmospheric description into active direction to the story engine — not a neutral description, but an instruction for how the engine should behave today:
+**Writing `promptInjection`:** Convert the event note's Scene Effects into active direction to the story engine — not a neutral description, but an instruction for how the engine should behave today:
 
 > ❌ "Today is the Spring Harvest Festival. People gather at the village center."
 > ✅ "The Spring Harvest Festival transforms every interaction today. Characters are expansive, the usual social distances relax, and introductions that might otherwise take weeks happen naturally. The player should feel the community as a whole for the first time."
 
-**One-time narrative events** from `notes/intention-*.md` that have a concrete calendar day also become `storyTriggers` entries with `recurring: false`.
+**One-time narrative events** from intention story notes that have a concrete calendar day also become `storyTriggers` entries with `recurring: false`.
 
 ---
 
 ## Scene Structure and Day Segment Pacing
 
-The `arcManagerGuidance` field (derived from `notes/direction.md`) contains the pacing guidance for day segments. This is written during the Wide phase by `worldbuilder-story` — verify it is complete before export.
+The `arcManagerGuidance` field (derived from `project/direction.md`) contains the pacing guidance for day segments. This is written during the Wide phase by `worldbuilder-story` — verify it is complete before export.
 
 Key items to confirm are present in the direction note:
 - Escalation ceiling: at most one emotionally significant beat per day under normal circumstances
-- Transition handling: brief narrative acknowledgment between Morning / Afternoon / Evening / Night
+- Transition handling: a short narrative acknowledgment between Morning / Afternoon / Evening / Night
 - Explicit permission for quiet/atmospheric scenes (required; without it the engine treats every scene as an opportunity for significance)
 - Time-of-day social rhythms: who is naturally active and accessible at each segment
