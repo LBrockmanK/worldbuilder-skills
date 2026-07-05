@@ -5,9 +5,9 @@ description: 'Task-by-task implementation of the 2026-07-04 retool spec: OKF pre
   build, setup adopter rewrite, skill pare-down, deletions, docs, and scratch-project
   verification.'
 tags:
-- agent-ready
+- complete
 date: 2026-07-05
-timestamp: 2026-07-05T07:00
+timestamp: 2026-07-05T07:36
 resources:
 - '[[2026-07-04-retool-worldbuilder-skills-on-scraibe-base]]'
 ---
@@ -276,11 +276,11 @@ Frontmatter is defined by the project's OKF registry — `new_doc.py` stamps it 
 **Interfaces:**
 - Consumes: everything prior — this task documents the end state.
 
-- [ ] **Step 1: Delete.** `git rm -r skills/worldbuilder-ingestion agents && git rm dev-feedback.md`
-- [ ] **Step 2: Rewrite `CONTEXT.md`** (keep its role: single-context domain terminology). Required content, in this order: what the plugin is (craft skills + OKF preset on the scraibe base; scraibe owns file management); the player-vault layout diagram from the spec's "Vault layout" section, copied; the ten registry types with one-line definitions; the status-tag lifecycle (scraibe's six, what open/closed means for creative notes and export gating); the three phases as guidance (plan.md's table is the tracker; export skill gates itself); pointers — spec (`.claude/specs/2026-07-04-retool-worldbuilder-skills-on-scraibe-base.md`), `defaults/okf.json` + build script, `docs/target-system.md`.
-- [ ] **Step 3: Update the small files.** `README.md`: skill list to the nine survivors, add "Requires the scraibe plugin" line, terminology pointer stays. `CLAUDE.md`: no content about worldvault remains; add one line under the domain-docs section: "Requires scraibe (hard dependency); its vault conventions govern `.claude/`." `.claude-plugin/plugin.json`: description mentions scraibe base. `docs/agents/domain.md`: remove linker-agent mentions, fix any file-structure diagram to the new tree. `memory/project-restructure.md`: append a dated line to Implementation state: "2026-07-05: retool on scraibe base implemented — see spec/plan in .claude/; worldvault reduced to chrome; skills 11→9."
-- [ ] **Step 4: Leftover sweep (spec Verification #4).** Run and clear each: `grep -rn "world-planning\|worldbuilder-ingestion\|linker" skills/ README.md CONTEXT.md CLAUDE.md docs/agents/` and `grep -rn "log\.md\|agent-context\.md\|last_updated\|brief:" skills/ CONTEXT.md README.md`. Historical docs in `.claude/` are exempt (they describe the past).
-- [ ] **Step 5: Commit.** `git commit -am "feat: retool docs and deletions — plugin is craft skills + preset on scraibe"`
+- [x] **Step 1: Delete.** `git rm -r skills/worldbuilder-ingestion agents && git rm dev-feedback.md`
+- [x] **Step 2: Rewrite `CONTEXT.md`** (keep its role: single-context domain terminology). Required content, in this order: what the plugin is (craft skills + OKF preset on the scraibe base; scraibe owns file management); the player-vault layout diagram from the spec's "Vault layout" section, copied; the ten registry types with one-line definitions; the status-tag lifecycle (scraibe's six, what open/closed means for creative notes and export gating); the three phases as guidance (plan.md's table is the tracker; export skill gates itself); pointers — spec (`.claude/specs/2026-07-04-retool-worldbuilder-skills-on-scraibe-base.md`), `defaults/okf.json` + build script, `docs/target-system.md`.
+- [x] **Step 3: Update the small files.** `README.md`: skill list to the nine survivors, add "Requires the scraibe plugin" line, terminology pointer stays. `CLAUDE.md`: no content about worldvault remains; add one line under the domain-docs section: "Requires scraibe (hard dependency); its vault conventions govern `.claude/`." `.claude-plugin/plugin.json`: description mentions scraibe base. `docs/agents/domain.md`: remove linker-agent mentions, fix any file-structure diagram to the new tree. `memory/project-restructure.md`: append a dated line to Implementation state: "2026-07-05: retool on scraibe base implemented — see spec/plan in .claude/; worldvault reduced to chrome; skills 11→9."
+- [x] **Step 4: Leftover sweep (spec Verification #4).** Run and clear each: `grep -rn "world-planning\|worldbuilder-ingestion\|linker" skills/ README.md CONTEXT.md CLAUDE.md docs/agents/` and `grep -rn "log\.md\|agent-context\.md\|last_updated\|brief:" skills/ CONTEXT.md README.md`. Historical docs in `.claude/` are exempt (they describe the past).
+- [x] **Step 5: Commit.** `git commit -am "feat: retool docs and deletions — plugin is craft skills + preset on scraibe"`
 
 ---
 
@@ -292,8 +292,8 @@ Frontmatter is defined by the project's OKF registry — `new_doc.py` stamps it 
 **Interfaces:**
 - Consumes: the full retooled plugin.
 
-- [ ] **Step 1: Simulate setup.** In a fresh scratch dir, execute `worldbuilder-setup`'s steps literally as the skill now states them (glob scraibe, copy config, chrome, `new_doc.py` × 3, glossary, `generate_rules.py`, `validate.py`). Expected: validation reports 0 critical on `project/`.
-- [ ] **Step 2: Entity round-trip.** Create one character and one event via `new_doc.py --config .claude/okf.json --dir notes`; fill each body minimally per its template sections; run `python <scraibe>/scripts/validate.py notes --root <scratch> --format human`. Expected: 0 critical, 0 warning.
-- [ ] **Step 3: Export dry-run.** Walk `worldbuilder-ainime-export`'s Prerequisites and Field Map against the scratch vault manually (no platform upload): confirm the skill's instructions locate `description`, status tags, and `project/seed.md` where they now are — i.e., following the text verbatim hits no dead reference. Fix any skill text that misdirects, amend the relevant commit's file, re-run.
-- [ ] **Step 4: Report.** Record pass/fail per check in the plan checkboxes here and note anything odd in `.claude/inbox.md`. Remind the user of the one human check remaining: open the scratch vault in Obsidian and confirm Home.md's Bases render (spec Verification #5).
-- [ ] **Step 5: Final commit if fixes occurred**, then `python <scraibe>/scripts/generate_index.py .claude/plans` and mark this plan's status tag `complete`.
+- [x] **Step 1: Simulate setup.** In a fresh scratch dir, execute `worldbuilder-setup`'s steps literally as the skill now states them (glob scraibe, copy config, chrome, `new_doc.py` × 3, glossary, `generate_rules.py`, `validate.py`). Expected: validation reports 0 critical on `project/`.
+- [x] **Step 2: Entity round-trip.** Create one character and one event via `new_doc.py --config .claude/okf.json --dir notes`; fill each body minimally per its template sections; run `python <scraibe>/scripts/validate.py notes --root <scratch> --format human`. Expected: 0 critical, 0 warning.
+- [x] **Step 3: Export dry-run.** Walk `worldbuilder-ainime-export`'s Prerequisites and Field Map against the scratch vault manually (no platform upload): confirm the skill's instructions locate `description`, status tags, and `project/seed.md` where they now are — i.e., following the text verbatim hits no dead reference. Fix any skill text that misdirects, amend the relevant commit's file, re-run.
+- [x] **Step 4: Report.** Record pass/fail per check in the plan checkboxes here and note anything odd in `.claude/inbox.md`. Remind the user of the one human check remaining: open the scratch vault in Obsidian and confirm Home.md's Bases render (spec Verification #5).
+- [x] **Step 5: Final commit if fixes occurred**, then `python <scraibe>/scripts/generate_index.py .claude/plans` and mark this plan's status tag `complete`.

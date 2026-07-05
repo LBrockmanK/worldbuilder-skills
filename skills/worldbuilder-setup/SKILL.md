@@ -39,12 +39,17 @@ Chrome lives at the vault root, outside the enforced paths — `Home.md` and the
 
 ### Step 4: Create the project documents
 
-Create the three `project/` documents with scraibe's `new_doc.py`, from the project root:
+Create the three `project/` documents with scraibe's `new_doc.py`, from the project root. The script produces date-prefixed filenames; rename each to its canonical name afterward so every skill can reference `project/seed.md`, `project/plan.md`, and `project/direction.md` reliably.
 
 ```
-python <scraibe>/scripts/new_doc.py --config .claude/okf.json --dir project --type seed --title "<Name> World Foundation"
-python <scraibe>/scripts/new_doc.py --config .claude/okf.json --dir project --type plan --title "<Name> Worldbuilding Plan"
-python <scraibe>/scripts/new_doc.py --config .claude/okf.json --dir project --type direction --title "<Name> Story Direction"
+python <scraibe>/scripts/new_doc.py --config .claude/okf.json --dir project --type seed --title "<Name> World Foundation" --description "World foundation document for <Name>"
+  → rename the output file to project/seed.md
+
+python <scraibe>/scripts/new_doc.py --config .claude/okf.json --dir project --type plan --title "<Name> Worldbuilding Plan" --description "Phase status and cast plan for <Name>"
+  → rename the output file to project/plan.md
+
+python <scraibe>/scripts/new_doc.py --config .claude/okf.json --dir project --type direction --title "<Name> Story Direction" --description "Standing creative brief for <Name>"
+  → rename the output file to project/direction.md
 ```
 
 Then seed `.claude/glossary.md` with the platform terminology:

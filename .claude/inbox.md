@@ -1,0 +1,1 @@
+- 2026-07-05: scratch trial found `new_doc.py` produces date-prefixed filenames; setup skill Step 4 updated with rename instructions and `--description` args. Export skill `SKILL.md:215` had bare `seed.md` → fixed to `project/seed.md`. One human check remains: open the scratch vault in Obsidian ≥1.8 and confirm Home.md Bases render (spec Verification #5).

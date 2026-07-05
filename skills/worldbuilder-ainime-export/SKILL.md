@@ -212,7 +212,7 @@ The `description` drives art generation context; keep it concrete and consistent
 
 ## Art Style Prompts
 
-Read the Art style section of `seed.md`. Translate the plain-language reference into prompt-engineering format.
+Read the Art style section of `project/seed.md`. Translate the plain-language reference into prompt-engineering format.
 
 **`artStyle.background.style_prefix`** — Prepended to all background prompts. Should establish the visual style consistently: rendering style, color palette tendencies, era cues.
 
