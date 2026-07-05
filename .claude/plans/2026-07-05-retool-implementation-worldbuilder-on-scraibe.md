@@ -44,7 +44,7 @@ resources:
 **Interfaces:**
 - Produces: `defaults/okf.json` — consumed verbatim by Task 2's setup skill and Task 8's scratch trial. `python scripts/build-okf.py` regenerates it; exits non-zero if a template file named in `okf.base.json` is missing.
 
-- [ ] **Step 1: Create the eight template sources.** For character, location, faction, concept, story: copy the body (everything after the closing `---` of frontmatter) byte-for-byte from `skills/worldbuilder-setup/worldvault/_templates/<name>.md` — with one exception: in `story.md`, the sentence "the standing creative brief lives in `direction.md` (type: project), not in a story note" becomes "the standing creative brief lives in `project/direction.md` (type: direction), not in a story note". For the three new files use exactly:
+- [x] **Step 1: Create the eight template sources.** For character, location, faction, concept, story: copy the body (everything after the closing `---` of frontmatter) byte-for-byte from `skills/worldbuilder-setup/worldvault/_templates/<name>.md` — with one exception: in `story.md`, the sentence "the standing creative brief lives in `direction.md` (type: project), not in a story note" becomes "the standing creative brief lives in `project/direction.md` (type: direction), not in a story note". For the three new files use exactly:
 
 `defaults/templates/event.md`:
 ```markdown
@@ -77,9 +77,9 @@ resources:
 ## Cast Plan
 ```
 
-- [ ] **Step 2: Create `defaults/okf.base.json`** — the full config from the current committed `defaults/okf.json`, but with every `"template"` value replaced by a file reference key instead: `"template_file": "character.md"` (same for the other seven; `direction` and `reference` keep `"template": ""` and get no `template_file`).
+- [x] **Step 2: Create `defaults/okf.base.json`** — the full config from the current committed `defaults/okf.json`, but with every `"template"` value replaced by a file reference key instead: `"template_file": "character.md"` (same for the other seven; `direction` and `reference` keep `"template": ""` and get no `template_file`).
 
-- [ ] **Step 3: Write `scripts/build-okf.py`:**
+- [x] **Step 3: Write `scripts/build-okf.py`:**
 ```python
 #!/usr/bin/env python3
 """Regenerate defaults/okf.json from okf.base.json + defaults/templates/*.md."""
@@ -116,9 +116,9 @@ if __name__ == '__main__':
     main()
 ```
 
-- [ ] **Step 4: Run and verify.** `python scripts/build-okf.py` → `Wrote .../defaults/okf.json`. Then verify the output is a superset-equal of the previous committed draft except the three new/changed templates: `python -c "import json;c=json.load(open('defaults/okf.json'));print(sorted(c['types']));print(all(c['types'][t]['template'] for t in ['character','location','faction','event','concept','story','seed','plan']))"` → prints the ten type names and `True`. Delete one template file temporarily, run again, confirm non-zero exit with `Missing template file`, restore it (`git checkout -- defaults/templates/`).
+- [x] **Step 4: Run and verify.** `python scripts/build-okf.py` → `Wrote .../defaults/okf.json`. Then verify the output is a superset-equal of the previous committed draft except the three new/changed templates: `python -c "import json;c=json.load(open('defaults/okf.json'));print(sorted(c['types']));print(all(c['types'][t]['template'] for t in ['character','location','faction','event','concept','story','seed','plan']))"` → prints the ten type names and `True`. Delete one template file temporarily, run again, confirm non-zero exit with `Missing template file`, restore it (`git checkout -- defaults/templates/`).
 
-- [ ] **Step 5: Commit.** `git add defaults scripts && git commit -m "feat: build OKF preset from markdown template sources"`
+- [x] **Step 5: Commit.** `git add defaults scripts && git commit -m "feat: build OKF preset from markdown template sources"`
 
 ---
 
@@ -134,13 +134,13 @@ if __name__ == '__main__':
 - Consumes: `defaults/okf.json` from Task 1.
 - Produces: the setup flow that Task 8's scratch trial executes; `_bases` views that filter on OKF frontmatter (`tags`, `timestamp`, `description`).
 
-- [ ] **Step 1: Rewrite SKILL.md** with this structure (write full prose; keep frontmatter name/description, update description to "Use when starting a new worldbuilding project. Adopts scraibe with the worldbuilder OKF preset, installs the vault chrome, and hands off to worldbuilder-world-foundation."):
+- [x] **Step 1: Rewrite SKILL.md** with this structure (write full prose; keep frontmatter name/description, update description to "Use when starting a new worldbuilding project. Adopts scraibe with the worldbuilder OKF preset, installs the vault chrome, and hands off to worldbuilder-world-foundation."):
   1. *Check scraibe.* Glob `~/.claude/plugins/marketplaces/*/scraibe/scripts/new_doc.py`; if absent, stop: "This plugin requires the scraibe plugin. Install it first." Record the matched scraibe root for later steps.
   2. *Write config.* Ask for the project name. Copy this plugin's `defaults/okf.json` to `<project>/.claude/okf.json` (do not overwrite an existing one — if present, stop and suggest `scraibe:setup` configuration mode).
   3. *Install chrome.* Copy `<scraibe>/defaults/obsidian/` to `<project>/.obsidian/`, then overlay this plugin's `worldvault/.obsidian/app.json`. Copy `worldvault/Home.md` (substitute `{{PROJECT_NAME}}`), `worldvault/_bases/`, and create empty `notes/`, `project/`, `_attachments/`.
   4. *Create project docs.* Via `<scraibe>/scripts/new_doc.py --config .claude/okf.json --dir project`: `--type seed --title "<Name> World Foundation"`, `--type plan --title "<Name> Worldbuilding Plan"`, `--type direction --title "<Name> Story Direction"`. Seed `.claude/glossary.md` with: `**lorebook** — the platform term is "world info" on ainime/isekaizero; both name the same thing. _Avoid_: world info (in vault docs).`
   5. *Generate and validate.* `python <scraibe>/scripts/generate_rules.py --root .` then `python <scraibe>/scripts/validate.py project --root . --format human`; report, then hand off to `worldbuilder-world-foundation` for the seed conversation.
-- [ ] **Step 2: Prune worldvault.** `git rm -r skills/worldbuilder-setup/worldvault/_templates skills/worldbuilder-setup/worldvault/.obsidian` and `git rm skills/worldbuilder-setup/worldvault/{seed.md,worldbuilding-plan.md,log.md,agent-context.md}`. Create `worldvault/.obsidian/app.json`:
+- [x] **Step 2: Prune worldvault.** `git rm -r skills/worldbuilder-setup/worldvault/_templates skills/worldbuilder-setup/worldvault/.obsidian` and `git rm skills/worldbuilder-setup/worldvault/{seed.md,worldbuilding-plan.md,log.md,agent-context.md}`. Create `worldvault/.obsidian/app.json`:
 ```json
 {
   "alwaysUpdateLinks": true,
@@ -148,7 +148,7 @@ if __name__ == '__main__':
   "attachmentFolderPath": "_attachments"
 }
 ```
-- [ ] **Step 3: Rewrite the Bases.** Every `.base` file: filters drop `not file.inFolder("_templates")` and gain `file.inFolder("notes")` (`project-docs.base` uses `file.inFolder("project")`); status views become tag views; columns replace `status`→`tags`, `last_updated`→`timestamp`, add `description`. Pattern (apply per type; `characters.base` shown in full):
+- [x] **Step 3: Rewrite the Bases.** Every `.base` file: filters drop `not file.inFolder("_templates")` and gain `file.inFolder("notes")` (`project-docs.base` uses `file.inFolder("project")`); status views become tag views; columns replace `status`→`tags`, `last_updated`→`timestamp`, add `description`. Pattern (apply per type; `characters.base` shown in full):
 ```yaml
 filters:
   and:
@@ -189,8 +189,8 @@ views:
       - timestamp
 ```
   Type-specific columns replacing `factions` above — locations: `region`, `function`; factions: `members`, `function`; concepts: `layer`, `trigger-context`; story: `scope`, `up`; events: `characters`, `location`, `layer`; all-notes: `type` only; project-docs: `type` only. Create `events.base` with the pattern. Add an `## Events` section embedding `![[events.base]]` to `Home.md` (after Factions).
-- [ ] **Step 4: Verify.** `grep -rn "last_updated\|status ==\|_templates" skills/worldbuilder-setup/worldvault/` → no matches. `ls skills/worldbuilder-setup/worldvault/` → `Home.md`, `_attachments`, `_bases`, `.obsidian` only.
-- [ ] **Step 5: Commit.** `git add -A skills/worldbuilder-setup && git commit -m "feat: setup becomes scraibe adopter; worldvault reduced to chrome"`
+- [x] **Step 4: Verify.** `grep -rn "last_updated\|status ==\|_templates" skills/worldbuilder-setup/worldvault/` → no matches. `ls skills/worldbuilder-setup/worldvault/` → `Home.md`, `_attachments`, `_bases`, `.obsidian` only.
+- [x] **Step 5: Commit.** `git add -A skills/worldbuilder-setup && git commit -m "feat: setup becomes scraibe adopter; worldvault reduced to chrome"`
 
 ---
 

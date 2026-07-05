@@ -20,9 +20,8 @@ Before asking any questions, check whether the user has reference material to pr
 Ask: "Do you have any existing material for this world — notes, documents, previous writing, URLs, or reference media you want to draw from?"
 
 If yes:
-- Accept files, pasted text, or URLs
-- Read everything before proceeding
-- Extract any decisions already made (setting name, tone, existing characters, world details)
+- Run `scraibe:ingest` first — each source becomes a reference document with provenance before anything is extracted from it
+- Then extract any decisions already made (setting name, tone, existing characters, world details) from the reference documents
 - Note contradictions or gaps to resolve during the questions phase
 - Do not discard or override anything the user has already decided
 
@@ -136,15 +135,89 @@ At least 2–3 characters should have meaningful content at low or negative infl
 
 - Default: 8 main / 16 side characters
 - Range: 6–10 main, 6–20 side
-- The coverage check in `worldbuilder-world-planning` verifies ratio, archetype coverage, and household balance before the roster is confirmed complete
+- The coverage check in Wide Phase Planning below verifies ratio, archetype coverage, and household balance before the roster is confirmed complete
+
+---
+
+## Wide Phase Planning
+
+The Wide phase turns the seed into notes. The planning artifact is `project/plan.md`, created by setup: its Phase Status table tracks where the project is, and its `## Cast Plan` section holds the confirmed roster. Update the table at each phase transition; artifacts are ground truth, not the table — if the table says done but the note is missing or thin, believe the note.
+
+### Cast planning
+
+Build the roster from the household design, with user input, before any character note is written.
+
+The user seeds the cast — names they already have, roles they know they want, characters with personal significance. From each seed, branch through relationships: who is in their household, who do they conflict with, who do they depend on? Fill structural gaps (unfilled archetype slots, households without characters) with proposals for the user to accept, modify, or reject. Never assign a character to a slot without the user's knowledge.
+
+Ask the intimate-dynamics scope question once, here: does this project include explicit intimate content — all romance-eligible characters, a specific subset, or none? Record the answer in `project/plan.md` and flag affected cast entries with `Intimate Dynamics: Yes`. The decision is not revisited character by character.
+
+Record the confirmed cast in the `## Cast Plan` section of `project/plan.md`. This is a planning document, not the character notes themselves — each character note is created later and carries the authoritative information.
+
+Cast plan entry format:
+
+```
+**[Name]** — [Household] | [Type: Major/Supporting] | [Species/age]
+Role: [one or two phrases]
+Archetype: [slot from cast architecture]
+Key relationships: [named, one per line]
+Intimate Dynamics: Yes  ← only if applicable; omit line if not
+Summary: [2–3 sentences of behavioral character, not physical description]
+```
+
+Coverage check before declaring the cast plan complete — verify against the seed's themes and household structure:
+- All 6 romance archetype slots filled across gender presentations
+- Non-romance archetypes placed: authority figure, mentor/elder, elderly anchor, child or teen, outcast/philosopher, practitioner, the one who left (or didn't), the secret-carrier
+- 2–3 characters with meaningful negative-track content
+- Every household has at least one character assigned
+- Default count: 8 main / 16 side (range: 6–10 main, 6–20 side)
+- Anti-redundancy check: no two romance candidates filling the same slot with the same execution
+- The setting's wound from the seed is visible in at least two or three unrelated characters' motivations
+
+### Phase completion criteria
+
+Per-phase "done" definitions. If any item is unresolved, surface it to the user before marking the phase done in `project/plan.md`.
+
+**Seed complete** — `project/seed.md` contains: all six foundational questions answered; Setting Summary; Genre & Tone; Inspirations and Tonal Inspirations with specifics; 8–12 Key Tropes & Themes; Community (social and emotional identity, not physical); World Introduction; Opening Situation; a locations list of 10–14 named locations, one sentence each; art style reference; musical theme; all 6–8 household clusters with function, internal tension, inter-household connections, trajectory, and narrative hook; no individual character names — household types and counts only; every household has at least one named connection to another household.
+
+**Direction complete** — `project/direction.md` has all required sections (author framing, romance pacing, dark themes, hidden layer handling, seasonal tone, pacing and scene structure) and the opening arc sketched at a broad level. A brief but complete document beats a detailed stub.
+
+**Concept and event notes complete** — all three layers present (surface, mid, deep); background NPC guidelines concept note written; event notes written for all named recurring events; each note passes its skill's self-check.
+
+**Story notes complete** — opening arc note written (evocative, not scripted); key intention notes written for major story possibilities.
+
+**Location notes complete** — every named location from the seed has a note; each passes the `worldbuilder-location` self-check.
+
+**Faction notes complete** — every household cluster from the seed has a faction note; each passes the `worldbuilder-faction` self-check.
+
+**Cast plan complete** — the coverage check above passes; every entry has household, type, species/age, role, archetype, key relationships, summary; intimate-dynamics flags set where applicable.
+
+**Character notes complete** — per character, the self-check in `worldbuilder-character` is the authoritative gate.
+
+**Relationship review complete** — after all character notes: every character's Relationships section read against the full current cast; entries that no longer reflect the most interesting dynamic updated; this is not a symmetry check — asymmetry is often the most interesting thing.
+
+**Contradiction validation complete** — every note checked against the notes it links to for factual conflicts; every character note checked against its factions; every flagged contradiction resolved with the user, none silently discarded.
+
+**Export** — `worldbuilder-ainime-export` owns its own gate.
+
+### Parallel execution
+
+Once the seed is `complete`, concept, event, story, location, and faction notes are all independent of each other — any can proceed in any order, in parallel. Location and faction notes give character notes context, so run them first where possible.
+
+What blocks on what:
+- Everything blocks on the seed.
+- The direction document comes before any Wide-phase notes.
+- Character notes block on the cast plan. Once the cast plan exists, individual characters are independent of each other — parallelize aggressively; writing a large cast sequentially in one session degrades quality.
+- Relationship review blocks on all character notes; contradiction validation blocks on relationship review; export blocks on contradiction validation.
+
+When dispatching parallel character work, each dispatch needs: the relevant household section of the cast plan, the target character's full cast plan entry, which skill to invoke, and an explicit constraint not to modify other characters' notes or the cast plan.
 
 ---
 
 ## Seed Document
 
-Once the foundational questions and household structure are settled, produce `seed.md` at the project root.
+Once the foundational questions and household structure are settled, fill in `project/seed.md`. The document already exists — `worldbuilder-setup` created it — so this skill writes its body, nothing else. When the user confirms the seed is complete, set its status tag to `complete`.
 
-`seed.md` is a platform-agnostic project proposal. Write each section as plain prose under natural headers — this is not an export format, it is the creative document that export skills derive from. The ainime export skill handles field mapping.
+The seed is a platform-agnostic project proposal. Write each section as plain prose under natural headers — this is not an export format, it is the creative document that export skills derive from. The ainime export skill handles field mapping.
 
 ### Sections
 
@@ -173,7 +246,7 @@ Pre-game text the player reads before starting. Sets expectations for tone and s
 The situation the player arrives into. Evocative, not scripted — establishes the stage rather than dictating what happens. Cover: the setting's visible state on arrival, the immediate invitation for engagement, what the player's arrival means to the community.
 
 **Story Direction note**
-Do not write story direction content into seed.md. direction.md is a separate project document produced in Phase 1b by world-planning, after seed.md is confirmed. See `worldbuilder-story` for section templates and content guidance.
+Do not write story direction content into the seed. `project/direction.md` is a separate project document, already created by setup; fill it with `worldbuilder-story` after the seed is confirmed, before any Wide-phase notes.
 
 ### Additional seed outputs
 

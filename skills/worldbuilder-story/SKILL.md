@@ -9,7 +9,7 @@ description: Use when writing arc notes and intention notes for an AI-powered na
 
 This skill serves two related purposes:
 
-**Phase 1b — direction.md:** `direction.md` is the world's standing creative brief and the story engine's primary guard rail. It is a project document (`type: project`), produced in Phase 1 by world-planning using this skill's section templates as guidance. See the Ongoing Story Direction section below for its complete structure.
+**Phase 1b — direction.md:** `direction.md` is the world's standing creative brief and the story engine's primary guard rail. It is a project document, produced in Phase 1 using this skill's section templates as guidance. See the Ongoing Story Direction section below for its complete structure.
 
 **Phase 2b — Arc, intention, and introduction notes:** Once direction.md exists, this skill creates the story notes that extend it. Story notes live in `notes/` and link up to `direction.md` via `up:` frontmatter.
 
@@ -219,7 +219,7 @@ After the first full year, if characters with strong chemistry have not moved to
 
 **Dark content feels gratuitous.** "Handle with care and weight, not for shock value" combined with "the player is a witness, not a savior" addresses the most common failures.
 
-**Characters collapse into positivity.** This is a character note problem, not a story direction problem — see `worldbuilder-character`, particularly the Relationship Behavior section and the negative-track character guidance in `worldbuilder-world-planning`.
+**Characters collapse into positivity.** This is a character note problem, not a story direction problem — see `worldbuilder-character`, particularly the Relationship Behavior section and the negative-track character guidance in `worldbuilder-world-foundation`.
 
 ---
 
