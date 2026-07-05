@@ -1,8 +1,7 @@
 filters:
   and:
-    - 'type == "event"'
+    - type == "event"
     - file.inFolder("notes")
-
 views:
   - type: table
     name: All
@@ -14,7 +13,6 @@ views:
       - location
       - layer
       - timestamp
-
   - type: table
     name: Open
     filters:
@@ -29,10 +27,9 @@ views:
       - location
       - layer
       - timestamp
-
   - type: table
     name: Complete
-    filters: 'tags.contains("complete")'
+    filters: tags.contains("complete")
     order:
       - file.name
       - description

@@ -1,5 +1,4 @@
 filters: file.inFolder("notes")
-
 views:
   - type: table
     name: All
@@ -9,7 +8,6 @@ views:
       - tags
       - type
       - timestamp
-
   - type: table
     name: Open
     filters:
@@ -22,10 +20,9 @@ views:
       - tags
       - type
       - timestamp
-
   - type: table
     name: Complete
-    filters: 'tags.contains("complete")'
+    filters: tags.contains("complete")
     order:
       - file.name
       - description

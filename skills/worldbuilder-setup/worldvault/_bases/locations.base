@@ -1,8 +1,7 @@
 filters:
   and:
-    - 'type == "location"'
+    - type == "location"
     - file.inFolder("notes")
-
 views:
   - type: table
     name: All
@@ -13,7 +12,6 @@ views:
       - region
       - function
       - timestamp
-
   - type: table
     name: Open
     filters:
@@ -27,10 +25,9 @@ views:
       - region
       - function
       - timestamp
-
   - type: table
     name: Complete
-    filters: 'tags.contains("complete")'
+    filters: tags.contains("complete")
     order:
       - file.name
       - description
