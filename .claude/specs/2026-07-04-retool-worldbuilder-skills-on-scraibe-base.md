@@ -7,7 +7,7 @@ description: Strip note-taking/vault management from worldbuilder skills; scraib
 tags:
 - human-ready
 date: 2026-07-04
-timestamp: 2026-07-05T06:45
+timestamp: 2026-07-05T06:54
 resources: []
 ---
 
@@ -96,7 +96,7 @@ Problem points hit while using scraibe as a base, to be delivered to the okf-enf
 6. Type body templates are single-line escaped JSON strings in `okf.json` — unpleasant to author and review for long structured templates (character template is ~850 chars). Template file references would fix this; meanwhile this plugin keeps markdown originals and regenerates the JSON.
 7. Field types support text/list/tags/date/datetime but not boolean (event `recurring` had to become body text / text field).
 8. `links.py` extracts frontmatter links only from `output`/`superseded-by`; domain link fields (`factions`, `members`, `characters`, `up`) are invisible to backlink analysis. Configurable link-bearing fields would fix this.
-9. Lost goal (2026-07-04 design session): the worldbuilder linker agent was meant to be absorbed into scraibe entirely, but scraibe only got read-side link analysis (`links.py`, audit checks). The write side — deterministic forward/back-link insertion, rename-with-link-rewrite, and the LLM post-pass review agent — never landed. This plugin drops its linker on the strength of that absorption, so scraibe needs to pick it up. To prevent redoing work, the handoff includes the linker material as a starting point: `agents/linker.md` (agent definition, LLM post-pass review flow) and `agents/linker/scripts/` (link-notes.ps1, list-notes.ps1, rename-note.ps1, unresolved-links.ps1).
+9. Lost goal (2026-07-04 design session): the worldbuilder linker agent was meant to be absorbed into scraibe entirely, but scraibe only got read-side link analysis (`links.py`, audit checks). The write side — deterministic forward/back-link insertion, rename-with-link-rewrite, and the LLM post-pass review agent — never landed. This plugin drops its linker on the strength of that absorption, so scraibe needs to pick it up. To prevent redoing work, the linker material (`agents/linker.md` — agent definition, LLM post-pass review flow — and `agents/linker/scripts/`: link-notes.ps1, list-notes.ps1, rename-note.ps1, unresolved-links.ps1) is copied into a self-contained reference directory in the okf-enforcement repo, pointed to by that repo's inbox entry; this repo's copy is then removed during implementation.
 10. Proposed `scraibe:ingest` updates (from dissolving `worldbuilder-ingestion`): (a) with multiple overlapping sources, establish precedence before extraction and surface contradictions upfront; (b) when ingested material seeds derivative work, ask the fidelity level (strict vs. inspired-by) before extracting; (c) documents from an earlier version of one's own workflow that don't match current type templates are source material requiring reprocessing, not completed documents.
 
 ## Consequences
