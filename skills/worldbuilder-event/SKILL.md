@@ -11,11 +11,7 @@ An event note is not a schedule entry. It is a behavioral specification for a da
 
 The event note is the Wide-phase single source of truth for a named event. Export skills derive their output from this note.
 
----
-
-## Working with Vault Files
-
-**Renaming a note:** Use Edit or Write to rename the file. Then immediately run `agents/linker/scripts/rename-note.ps1 -OldName "OldName" -NewName "NewName" -VaultPath <vault-root>` to update all markdown links across the vault. Do not skip this step — Obsidian's auto-rename is bypassed when files are edited directly.
+**Description field:** the world navigation summary — 1–2 sentences on what this event does to the community, not what it is. Written last, after the full note is complete. Example: "The Spring Harvest Festival: the one day the town's usual distances relax — introductions that normally take weeks happen naturally, and the player meets the community as a whole for the first time."
 
 ---
 
@@ -23,44 +19,15 @@ The event note is the Wide-phase single source of truth for a named event. Expor
 
 | Section | Notes |
 |---|---|
-| Frontmatter | YAML; see below |
-| Brief | Frontmatter field; written last |
 | Design Notes | Builder record; excluded from exports |
 | What Happens | Factual description of the event |
 | Scene Effects | What the event does to scenes and social dynamics |
 
 ---
 
-## Event Note Frontmatter
+## Event Note Fields
 
-Every event note opens with:
-
-```yaml
-type: event
-status: draft | complete
-aliases: []           # every realistic way this event is mentioned in dialogue
-last_updated: YYYY-MM-DD HH:mm
-date: "[Spring-08](notes/Spring-08.md)"                  # link; clusters events by day
-recurring: true | false
-characters: ["[Name](notes/Name.md)"]                    # links to character notes
-location: "[Location Name](notes/Location Name.md)"      # link to location note
-brief: |              # plain prose; written last — see ## Brief below
-  <written after the full note is complete>
-```
-
-`aliases` functions the same as in concept notes — the export skill derives keyword triggers from it. Include every realistic phrasing: "the festival," "harvest time," "the long night."
-
----
-
-## Brief
-
-The `brief` frontmatter field is the world navigation summary for this note. Write it last, after the rest of the note is complete.
-
-Content: what this event is and what it does to the community.
-
-**Example:** "The Spring Harvest Festival: the one day the town's usual distances relax — introductions that normally take weeks happen naturally, and the player meets the community as a whole for the first time."
-
-1–2 sentences. Behavioral: what the event does, not what it is.
+Frontmatter is defined by the project's OKF registry — `new_doc.py` stamps it and the generated rules describe it. Two writing notes: `aliases` carries every realistic way the event is mentioned in dialogue ("the festival," "harvest time"); the export skill derives keyword triggers from it. Timing — season, day, recurrence — is not a field: open What Happens with when the event takes place and how often.
 
 ---
 
@@ -123,7 +90,7 @@ Event notes without a hidden dimension do not need layer classification.
 
 ## Lifecycle
 
-Event notes can be created at any phase. Create a stub — frontmatter plus a sentence or two of What Happens — as soon as an event is named. Flesh out What Happens and Scene Effects once the cast is established. Seasonal scenes are richer when you know who is in them.
+Event notes can be created at any phase. Create the note via `new_doc.py` as soon as an event is named — a sentence or two of What Happens is enough — and leave it on an open status tag. Flesh out What Happens and Scene Effects once the cast is established; seasonal scenes are richer when you know who is in them. Mark the note `complete` after the self-check passes.
 
 ---
 
@@ -131,10 +98,9 @@ Event notes can be created at any phase. Create a stub — frontmatter plus a se
 
 **Frontmatter**
 - [ ] `aliases` covers every realistic phrasing
-- [ ] `date` set as a markdown link
-- [ ] `recurring` set
+- [ ] Fields match the generated rules
 
-**Brief**
+**Description**
 - [ ] Written last
 - [ ] Behavioral: describes what the event does to the community
 
