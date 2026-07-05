@@ -1,3 +1,12 @@
+---
+type: spec
+title: Restructure Discussion Notes — 2026-05
+description: Working notes from design discussions capturing decisions on platform decoupling, note structure, and pipeline restructuring ahead of formal ADRs.
+tags: [complete]
+date: 2026-06-15
+timestamp: 2026-06-15T17:10
+resources: []
+---
 # Restructure Discussion Notes — 2026-05
 
 Working notes from design discussions. These will be formalized into ADRs once the research phase (see `research-brief-worldbuilding-docs.md`) is complete and structure decisions are finalized.

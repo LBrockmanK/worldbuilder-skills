@@ -1,3 +1,12 @@
+---
+type: plan
+title: Note Type Restructure Implementation Plan
+description: Implementation plan for rewriting all five non-character note type skills under the Design Notes / Facts / Function framework with a universal brief frontmatter field.
+tags: [complete]
+date: 2026-06-08
+timestamp: 2026-06-08T17:10
+resources: []
+---
 # Note Type Restructure Implementation Plan
 
 > **For agentic workers:** REQUIRED SUB-SKILL: Use superpowers:subagent-driven-development (recommended) or superpowers:executing-plans to implement this plan task-by-task. Steps use checkbox (`- [ ]`) syntax for tracking.

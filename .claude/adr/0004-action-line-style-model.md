@@ -1,3 +1,12 @@
+---
+type: adr
+title: Screenwriting action-line convention as primary writing style model
+description: Decision to adopt the screenwriting action-line convention as the primary style model for behavioral descriptions, with Orwell's rules retained as a vocabulary co-anchor.
+tags: [complete]
+date: 2026-06-15
+timestamp: 2026-06-15T17:10
+resources: []
+---
 # Screenwriting action-line convention as primary writing style model
 
 Behavioral descriptions in Wide phase documents are written using the screenwriting action-line convention as the primary style model: present tense, only what can be seen or heard, no internal states, no significance announcements, short plain sentences.

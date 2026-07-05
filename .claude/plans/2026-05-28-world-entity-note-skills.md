@@ -1,3 +1,12 @@
+---
+type: plan
+title: World Entity Note Skills Implementation Plan
+description: Implementation plan for adding location and faction blueprint skills and constraint-first concept note guidance to the lorebook skill.
+tags: [complete]
+date: 2026-05-28
+timestamp: 2026-05-28T17:10
+resources: []
+---
 # World Entity Note Skills Implementation Plan
 
 > **For agentic workers:** REQUIRED SUB-SKILL: Use superpowers:subagent-driven-development (recommended) or superpowers:executing-plans to implement this plan task-by-task. Steps use checkbox (`- [ ]`) syntax for tracking.

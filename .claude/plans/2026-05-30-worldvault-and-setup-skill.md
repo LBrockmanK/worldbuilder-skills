@@ -1,3 +1,12 @@
+---
+type: plan
+title: worldvault Template & worldbuilder-setup Skill Implementation Plan
+description: Implementation plan for building the worldvault Obsidian vault template and the worldbuilder-setup skill that copies it into new projects.
+tags: [complete]
+date: 2026-05-30
+timestamp: 2026-05-30T17:10
+resources: []
+---
 # worldvault Template & worldbuilder-setup Skill Implementation Plan
 
 > **For agentic workers:** REQUIRED SUB-SKILL: Use superpowers:subagent-driven-development (recommended) or superpowers:executing-plans to implement this plan task-by-task. Steps use checkbox (`- [ ]`) syntax for tracking.

@@ -5,7 +5,7 @@ How the engineering skills should consume this repo's domain documentation when 
 ## Before exploring, read these
 
 - **`CONTEXT.md`** at the repo root — single-context repo
-- **`docs/adr/`** — read ADRs that touch the area you're about to work in
+- **`.claude/adr/`** — read ADRs that touch the area you're about to work in
 
 If any of these files don't exist, **proceed silently**. Don't flag their absence; don't suggest creating them upfront. The producer skill (`/grill-with-docs`) creates them lazily when terms or decisions actually get resolved.
 
@@ -17,12 +17,13 @@ Single-context repo:
 /
 ├── CLAUDE.md
 ├── CONTEXT.md
+├── .claude/
+│   └── adr/            ← architectural decision records
+│       ├── 0001-three-phase-architecture.md
+│       ├── 0002-seed-as-target-format.md  (superseded by 0003)
+│       └── 0003-platform-decoupling.md
 ├── docs/
 │   ├── agents/         ← agent configuration (this file and siblings)
-│   ├── adr/            ← architectural decision records
-│   │   ├── 0001-three-phase-architecture.md
-│   │   ├── 0002-seed-as-target-format.md  (superseded by 0003)
-│   │   └── 0003-platform-decoupling.md
 │   └── target-system.md  ← ainime field reference (export skill uses this)
 └── skills/
     └── worldbuilder-*/   ← individual skill directories

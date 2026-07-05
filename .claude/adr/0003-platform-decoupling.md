@@ -1,3 +1,12 @@
+---
+type: adr
+title: Wide phase is platform-agnostic; only the Export phase targets a specific system
+description: Decision that Phases 1 and 2 produce platform-agnostic notes and only the Export phase knows the target system's field names and format.
+tags: [complete]
+date: 2026-06-15
+timestamp: 2026-06-15T17:10
+resources: []
+---
 # Wide phase is platform-agnostic; only the Export phase targets a specific system
 
 Phases 1 and 2 produce platform-agnostic notes. Phase 3 (Export) is the only phase that knows about the target system's field names and format.

@@ -1,3 +1,12 @@
+---
+type: spec
+title: Character Blueprint Rework — Design Spec
+description: Design for eliminating redundancy in the character blueprint by restructuring Soul, Behavioral Descriptions, and Relationship Behavior into behavioral sections.
+tags: [complete]
+date: 2026-06-03
+timestamp: 2026-06-03T17:10
+resources: []
+---
 # Character Blueprint Rework — Design Spec
 
 **Date:** 2026-06-03  

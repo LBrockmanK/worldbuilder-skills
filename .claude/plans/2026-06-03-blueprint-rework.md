@@ -1,3 +1,12 @@
+---
+type: plan
+title: Character Blueprint Rework Implementation Plan
+description: Implementation plan for restructuring the worldbuilder-character skill so every note section produces behavioral descriptions.
+tags: [complete]
+date: 2026-06-03
+timestamp: 2026-06-03T17:10
+resources: []
+---
 # Character Blueprint Rework Implementation Plan
 
 > **For agentic workers:** REQUIRED SUB-SKILL: Use superpowers:subagent-driven-development (recommended) or superpowers:executing-plans to implement this plan task-by-task. Steps use checkbox (`- [ ]`) syntax for tracking.

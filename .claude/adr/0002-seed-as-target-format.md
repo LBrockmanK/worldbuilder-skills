@@ -1,3 +1,13 @@
+---
+type: adr
+title: Seed document uses target system field format from day one
+description: Superseded decision that the seed document be written directly in the target system's Setting field format from the start of Phase 1.
+tags: [deprecated]
+date: 2026-06-15
+timestamp: 2026-06-15T17:10
+resources: []
+superseded-by: ["[[0003-platform-decoupling]]"]
+---
 # ~~Seed document uses target system field format from day one~~
 
 > **Superseded by ADR-0003 (platform decoupling).** The seed document no longer writes ainime-games field names. Seed phase output is platform-agnostic markdown (`seed.md`). The ainime export skill handles field mapping.

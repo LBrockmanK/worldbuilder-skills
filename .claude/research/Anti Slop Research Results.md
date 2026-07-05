@@ -1,3 +1,12 @@
+---
+type: reference
+title: "Positive Style Model for AI Specification Writing: Recommendation and Survey"
+description: Research results recommending the screenwriting action-line convention as the primary named style model for suppressing AI slop in specification writing.
+tags: [complete]
+date: 2026-06-15
+timestamp: 2026-06-15T17:10
+resources: []
+---
 # Positive Style Model for AI Specification Writing: Recommendation and Survey
 
 ## TL;DR

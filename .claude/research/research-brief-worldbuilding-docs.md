@@ -1,3 +1,12 @@
+---
+type: reflection
+title: "Research Brief: Worldbuilding Documentation Practices"
+description: Research brief requesting best practices for organizing, structuring, and maintaining worldbuilding documentation across tools and use cases.
+tags: [complete]
+date: 2026-06-15
+timestamp: 2026-06-15T17:10
+resources: []
+---
 # Research Brief: Worldbuilding Documentation Practices
 
 ## Purpose
