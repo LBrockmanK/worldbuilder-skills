@@ -259,10 +259,10 @@ Frontmatter is defined by the project's OKF registry — `new_doc.py` stamps it 
 **Interfaces:**
 - Consumes: OKF frontmatter (`description`, status tags) from Task 1's registry.
 
-- [ ] **Step 1:** In all three files: every read of `brief` becomes `description`; every completeness check on `status` becomes a status-tag check (`## Prerequisites` gate: `project/seed.md` tagged `complete`, every exported character's note tagged with a closed status). Path references: notes live in `notes/`, project docs in `project/` (`seed.md`, `plan.md`, `direction.md` — not vault root). Event in-world dates: `calendar.md` mapping reads timing from each event's What Happens opening, not a `date` field.
-- [ ] **Step 2:** Confirm the `../../docs/target-system.md` reference still resolves (file is untouched); output format statements stay non-OKF.
-- [ ] **Step 3: Verify.** `grep -rn "brief\|status:\|last_updated" skills/worldbuilder-ainime-export/` → no matches except prose uses of the English word "brief" if any (rewrite those too for grep cleanliness).
-- [ ] **Step 4: Commit.** `git commit -am "refactor: export reads OKF frontmatter; paths to notes/ and project/"`
+- [x] **Step 1:** In all three files: every read of `brief` becomes `description`; every completeness check on `status` becomes a status-tag check (`## Prerequisites` gate: `project/seed.md` tagged `complete`, every exported character's note tagged with a closed status). Path references: notes live in `notes/`, project docs in `project/` (`seed.md`, `plan.md`, `direction.md` — not vault root). Event in-world dates: `calendar.md` mapping reads timing from each event's What Happens opening, not a `date` field.
+- [x] **Step 2:** Confirm the `../../docs/target-system.md` reference still resolves (file is untouched); output format statements stay non-OKF.
+- [x] **Step 3: Verify.** `grep -rn "brief\|status:\|last_updated" skills/worldbuilder-ainime-export/` → no matches except prose uses of the English word "brief" if any (rewrite those too for grep cleanliness).
+- [x] **Step 4: Commit.** `git commit -am "refactor: export reads OKF frontmatter; paths to notes/ and project/"`
 
 ---
 

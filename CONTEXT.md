@@ -1,169 +1,69 @@
 # RPG World Builder Skills
 
-Workflow skills for building and realizing a player's world vision for the ainime-games.com world builder platform. Phases 1 and 2 are platform-agnostic. Only Phase 3 (Export) produces ainime-specific output.
+Craft skills plus an OKF preset, running on the scraibe base plugin. This plugin defines the worldbuilding types and deliverables for the ainime-games.com world builder platform; scraibe owns all file management — document creation (`new_doc.py`), frontmatter enforcement, status lifecycle, inbox, triage, audit, and generated rules. No skill in this plugin creates files by hand or specifies frontmatter; the registry does that.
 
-## Language
+Phases 1 and 2 are platform-agnostic. Only the Export phase produces ainime-specific output.
 
-### Phases
+## Vault layout
 
-**Seed phase (Phase 1)**:
-The clarification-heavy opening phase. Produces `seed.md` — a platform-agnostic project proposal capturing foundational decisions. Ends when the user confirms the seed is ready.
-_Avoid_: Foundation phase, setup phase
-
-**Wide phase (Phase 2)**:
-The expansive generative phase. Produces platform-agnostic notes: character notes, concept notes, event notes, story notes. All creative decisions live here.
-_Avoid_: Development phase, building phase
-
-**Export phase (Phase 3)**:
-The conversion phase. Wide-phase notes are read by the export skill and packaged into the target system's format. The only phase that writes ainime field names.
-_Avoid_: Deliverables phase, finalization phase, output phase
-
-### Documents
-
-**`seed.md`**:
-The world foundation document. Plain prose with natural section headers — not written in any export format. Captures: setting summary, genre and tone, inspirations, community description, world introduction, opening situation, story direction stub, locations list, art style reference, musical theme, household designs.
-_Avoid_: world-seed.md, seed document (if referring to a file — use `seed.md`)
-
-**Character note**:
-The comprehensive Wide-phase document for a single character. Single source of truth — richer than any export format can hold. Sections: frontmatter, design notes, foundation, behavioral descriptions, relationships, relationship behavior. The ainime character card (`baseProfile`) is derived from this note by the export skill.
-_Avoid_: Blueprint, draft card
-
-**Concept note**:
-A discrete piece of world knowledge in `notes/`. Layer-tagged (surface, mid, deep). Aliases in frontmatter become keyword candidates at export. The export skill packages concept notes as lorebook entries.
-_Avoid_: Lorebook entry (when referring to the Wide-phase artifact), Lorebook Candidates
-
-**Event note**:
-A calendar or historical event in `notes/`. Frontmatter includes `date` (calendar day), `recurring`, `characters`, `location`. The export skill packages event notes as `storyTriggers` and `calendarConfig` entries.
-_Avoid_: Calendar entry (when referring to the note itself)
-
-**Story note**:
-A narrative direction document in `notes/`. Three scopes connected by `up:` hierarchy: direction (top-level creative brief), arc (major story section), intention (specific story possibility). The export skill maps direction notes to `arcManagerGuidance` and intention notes to `storyTriggers` where conditions allow.
-_Avoid_: story.md (as a single document)
-
-**Introduction note**:
-A story note with `scope: "[introduction](notes/introduction.md)"` describing first contact between the player and a character. Belongs in `notes/`, not in the character note. One introduction note can cover multiple characters.
-
-### Process
-
-**Cast planning**:
-The Phase 2 process of planning the full cast before writing individual character notes. Produces a cast plan in `worldbuilding-plan.md`. Coverage check happens here.
-
-**Coverage check**:
-A pre-completion review of the cast plan verifying: main/side ratio against the 8/16 default target, household balance, archetype slot coverage (6 romance archetypes, all non-romance archetypes placed), negative-track characters present.
-
-**Post-group sync pass**:
-A review run after completing a household group of character notes. Checks that named relationships are consistent across the group before moving on.
-
-**Target system**:
-The ainime-games.com world builder — the platform that consumes all export deliverables. Its field structure is documented in `docs/target-system.md`. Only the Export phase writes to this structure.
-
----
-
-## Project File Structure
-
-A complete project uses a shallow hybrid vault organized by note type.
+A player project after `worldbuilder-setup`:
 
 ```
-worldbuilding-plan.md   ← project plan, cast plan, phase status (type: project)
-seed.md                 ← world foundation (Seed phase output) (type: project)
-log.md                  ← retcon and change log (type: project)
-agent-context.md        ← agent operational reference (type: reference)
-notes/                  ← all Wide-phase content notes (character, location, faction, event, concept, story)
-_templates/             ← note templates for human users
+<project>/
+  .claude/okf.json      ← written from this plugin's defaults/okf.json
+  .claude/rules/        ← generated (generate_rules.py)
+  .claude/glossary.md   ← seeded with platform terms ("world info" = lorebook)
+  .claude/inbox.md
+  .obsidian/            ← scraibe defaults + app.json overlay (attachmentFolderPath)
+  Home.md  _bases/  _attachments/   ← chrome, unenforced
+  project/              ← enforced: seed.md, plan.md, direction.md
+  notes/                ← enforced: all entity notes, flat
 ```
 
-### Note types and frontmatter
+Enforced paths are `notes/` and `project/`, full level. Chrome stays at the root, unenforced — `Home.md` and the Bases carry no frontmatter.
 
-All notes carry universal frontmatter plus type-specific fields:
+## Registry types
 
-**Universal:**
-```yaml
-type: character | location | faction | event | concept | story | project | reference
-status: draft | complete
-aliases: []
-last_updated: YYYY-MM-DD HH:mm
-```
+Defined in `defaults/okf.json`. Entity types live in `notes/`; project types live in `project/`.
 
-**Character:**
-```yaml
-factions: ["[Household Name](notes/Household Name.md)"]   # links to faction notes
-brief: plain prose                 # cast navigation summary; written last
-```
+**character** — the comprehensive Wide-phase behavioral specification for one character; the source every export card derives from. _Avoid_: blueprint, draft card.
 
-**Location:**
-```yaml
-region: "[The Valley](notes/The Valley.md)"            # link to region note
-function: one phrase
-primary-characters: ["[Name](notes/Name.md)"]         # links to character notes
-brief: plain prose                 # world navigation summary; written last
-```
+**location** — a named place as behavioral specification: who comes here, how the place pushes back on scenes.
 
-**Faction/Household:**
-```yaml
-members: ["[Name](notes/Name.md)"]   # links to character notes
-function: one phrase
-brief: plain prose                    # world navigation summary; written last
-```
+**faction** — a named group's shared behavioral specification: collective mask, variation axes, inter-faction web.
 
-**Event:**
-```yaml
-date: "[Spring-08](notes/Spring-08.md)"                  # link; clusters events by day
-recurring: false
-characters: ["[Name](notes/Name.md)"]                    # links to character notes
-location: "[Location Name](notes/Location Name.md)"      # link to location note
-brief: plain prose                 # world navigation summary; written last
-```
+**event** — a recurring world event (festival, observance, ritual) and what it does to scenes. Timing lives in the opening of its What Happens section, not in frontmatter.
 
-**Concept (lore):**
-```yaml
-layer: "[surface](notes/surface.md)"   # link; surface | mid | deep
-brief: plain prose                 # world navigation summary; written last
-```
+**concept** — a discrete piece of world knowledge, layer-tagged (surface, mid, deep); packaged as a lorebook entry at export. _Avoid_: lorebook entry (for the Wide-phase artifact).
 
-**Story:**
-```yaml
-up: "[Parent Story Note](notes/Parent Story Note.md)"    # absent on top-level direction note
-scope: "[arc](notes/arc.md)"                             # link; arc | intention | introduction
-characters: ["[Name](notes/Name.md)"]                    # optional; links to character notes
-brief: plain prose                 # navigation summary; written last
-```
+**story** — a narrative note with a `scope` of arc, intention, or introduction, linked to its parent via `up`.
 
-**Link convention:** Named entity references — characters, locations, factions, events, concepts, story notes — use standard markdown links: `[Display Name](notes/Display Name.md)`. The filename matches the display name. Paths are always relative to the vault root. Classification values (`layer`, `scope`, `date`) also use markdown links for graph connectivity. Operational fields (`status`, `last_updated`, `recurring`, booleans) use plain strings.
+**seed** — the world foundation document (`project/seed.md`), produced by `worldbuilder-world-foundation` in the Seed phase.
 
-**Body-text linking:** The `worldbuilder-linking` skill runs as a post-pass after any note creation or editing skill. It links references to known notes (first mention per section), back-links from other files to newly created notes, and creates empty links for entities mentioned in text that have no note yet. Empty links are intentional — they mark expansion points and appear in unresolved link reports.
+**plan** — the project plan (`project/plan.md`): phase status table and cast plan.
 
-### What goes where
+**direction** — the standing creative brief (`project/direction.md`); the story engine's primary guard rail, exported verbatim as `arcManagerGuidance`.
 
-| Note | ainime JSON field(s) |
-|---|---|
-| `seed.md` — Setting Summary | `settingSummary` |
-| `seed.md` — Genre and Tone | `genre` |
-| `seed.md` — Inspirations / Tonal Inspirations | `inspirations[]`, `tonalInspirations[]` |
-| `seed.md` — Key Tropes and Themes | `keyTropesAndThemes[]` |
-| `seed.md` — Community | `communityDescription` |
-| `seed.md` — World Introduction | `introText` |
-| `seed.md` — Opening Situation | `initialStoryArc` |
-| `seed.md` — era | `calendarConfig.eraReminder` |
-| `notes/` notes with `type: concept` | `loreEntries[]` |
-| `notes/` notes with `type: event` | `storyTriggers[]`, `calendarConfig.weatherPools`, `eventCalendarSummary` |
-| `notes/direction.md` | `arcManagerGuidance` |
-| `notes/intention-*.md` | `storyTriggers[]` (where day trigger exists) |
-| `notes/` notes with `type: character` | `characters[]` (baseProfile, appearance, spriteSets, metadata) |
+**reference** — ingested external material with provenance, created by `scraibe:ingest`.
 
-Full ainime field reference: `docs/target-system.md`.
+## Status lifecycle
 
----
+Scraibe's stock tags, no additions. Every typed document carries exactly one status tag: `human-ready` or `agent-ready` while open, `complete` / `deprecated` / `abandoned` / `archived` when closed (`priority` and `deferred` are behavioral, not statuses).
 
-## Example Dialogue
+For creative notes: a note stays open while it is being built and flips to `complete` when its skill's self-check passes. Export gates on this — `project/seed.md` must be tagged `complete`, and every exported character note must carry a closed status.
 
-> "Should I add the smithy description to Bram's character note?"
->
-> "No — that goes in a concept note for the smithy. The smithy only matters when someone is at or near it; it's not core to who Bram is. Create `notes/harrows-smithy.md` with `layer: surface` and add 'the smithy', 'Harrow's smithy', 'the forge' to its aliases."
+## Phases
 
-> "We're done with all the character notes. What's next?"
->
-> "Start the Export phase. For each character, run `worldbuilder-ainime-export` and build the card from the character note. Character notes are independent once complete — parallelize freely."
+Three phases as guidance, not a mechanical lock:
 
-> "Should I start writing event notes before the cast is finished?"
->
-> "Skeleton structure is fine, but hold the detailed event descriptions until the cast exists. Festival scenes are richer once you know who's in them. You can write `events/spring-festival.md` with frontmatter and a placeholder body, then flesh it out after the cast notes are done."
+- **Seed phase** — the clarification-heavy opening. `worldbuilder-world-foundation` produces the seed; `worldbuilder-story` fills the direction document. _Avoid_: foundation phase, setup phase.
+- **Wide phase** — the expansive generative phase: concept, event, story, location, faction notes, cast planning, character notes. All creative decisions live here. _Avoid_: development phase, building phase.
+- **Export phase** — `worldbuilder-ainime-export` packages Wide-phase notes into ainime format; the only phase that writes ainime field names. _Avoid_: deliverables phase, finalization phase.
+
+The Phase Status table in `project/plan.md` is the tracker; the export skill gates itself via its status-tag preflight. Session flow belongs to scraibe: `scraibe:orient` for briefings, `scraibe:triage` for pending work, `scraibe:audit` for health checks.
+
+## Pointers
+
+- Spec for this architecture: `.claude/specs/2026-07-04-retool-worldbuilder-skills-on-scraibe-base.md`
+- Registry: `defaults/okf.json`, regenerated from `defaults/templates/*.md` by `scripts/build-okf.py`
+- Target platform field reference: `docs/target-system.md`

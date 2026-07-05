@@ -18,10 +18,18 @@ Single-context repo:
 ├── CLAUDE.md
 ├── CONTEXT.md
 ├── .claude/
-│   └── adr/            ← architectural decision records
-│       ├── 0001-three-phase-architecture.md
-│       ├── 0002-seed-as-target-format.md  (superseded by 0003)
-│       └── 0003-platform-decoupling.md
+│   ├── adr/            ← architectural decision records
+│   │   ├── 0001-three-phase-architecture.md
+│   │   ├── 0002-seed-as-target-format.md  (superseded by 0003)
+│   │   └── 0003-platform-decoupling.md
+│   ├── specs/          ← scraibe-managed vault (specs, plans, research)
+│   └── plans/
+├── defaults/
+│   ├── okf.json        ← the OKF preset shipped to player projects (generated)
+│   ├── okf.base.json   ← preset source; template bodies referenced by file
+│   └── templates/      ← markdown template sources, one per typed note
+├── scripts/
+│   └── build-okf.py    ← regenerates defaults/okf.json from the sources
 ├── docs/
 │   ├── agents/         ← agent configuration (this file and siblings)
 │   └── target-system.md  ← ainime field reference (export skill uses this)

@@ -54,6 +54,7 @@ Platform-decoupling restructure: Phases 1–2 are now platform-agnostic; only Ph
 - `docs/restructure-notes.md`: full pass complete — old folder structure replaced with flat `notes/` decision; `last_updated` format fixed to `YYYY-MM-DD HH:mm`; roster reference updated
 - `worldbuilder-world-planning`: phases 2d (Location notes) and 2e (Faction notes) added; old 2d→2f (Cast planning), 2e→2g (Character notes); dependency diagram and parallel execution updated
 - `worldbuilder-character-blueprint`: four writing rules incorporated — plain/concrete language (Anglo-Saxon over Latinate), positive statements, starting-state-only rule, relationship POV; self-check updated
+- 2026-07-05: retool on scraibe base implemented — see spec/plan in .claude/; worldvault reduced to chrome; skills 11→9.
 
 
 ## Key files

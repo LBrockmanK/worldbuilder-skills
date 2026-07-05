@@ -2,6 +2,8 @@
 
 Claude Code skills for building a game world on the [ainime-games.com](https://ainime-games.com) world builder platform. Install these skills once; run them in Claude Code to get an AI-assisted worldbuilding pipeline from blank page to finished export.
 
+**Requires the scraibe plugin.** Scraibe owns file management — document creation, frontmatter enforcement, status lifecycle, inbox, and audit. This plugin ships the worldbuilding craft skills and an OKF preset; without scraibe installed it does nothing.
+
 ---
 
 ## What these skills do
@@ -10,9 +12,9 @@ The skills guide you through three sequential phases:
 
 ### Seed phase (Phase 1)
 
-The clarification-heavy opening phase. Claude asks the foundational questions — setting, tone, household structure, hidden layer — and produces `seed.md`, a platform-agnostic world proposal that every later phase builds on.
+The clarification-heavy opening phase. Claude asks the foundational questions — setting, tone, household structure, hidden layer — and produces `project/seed.md`, a platform-agnostic world proposal that every later phase builds on.
 
-**Key output:** `seed.md`
+**Key output:** `project/seed.md`
 
 ### Wide phase (Phase 2)
 
@@ -32,12 +34,11 @@ The conversion phase. Wide-phase notes are read by the export skill and packaged
 
 | Skill | When to use |
 |---|---|
-| `worldbuilder-setup` | Starting a brand-new project — run once |
-| `worldbuilder-world-planning` | Start of every session (new or returning) |
-| `worldbuilder-world-foundation` | Seed phase — builds `seed.md` |
-| `worldbuilder-ingestion` | Starting from existing material (SillyTavern cards, prior exports, notes) |
+| `worldbuilder-setup` | Starting a brand-new project — run once; adopts scraibe with the worldbuilder preset |
+| `worldbuilder-world-foundation` | Seed phase — fills `project/seed.md` and plans the Wide phase |
 | `worldbuilder-concept` | Wide phase — writes concept notes |
-| `worldbuilder-story` | Wide phase — writes story notes |
+| `worldbuilder-event` | Wide phase — writes event notes |
+| `worldbuilder-story` | Wide phase — writes story notes and the direction document |
 | `worldbuilder-location` | Wide phase — writes location notes |
 | `worldbuilder-faction` | Wide phase — writes faction notes |
 | `worldbuilder-character` | Wide phase — builds individual character notes |
@@ -49,13 +50,11 @@ The conversion phase. Wide-phase notes are read by the export skill and packaged
 
 ### New project
 
-Run `worldbuilder-setup` once. It copies the vault template into your project directory and hands off to `worldbuilder-world-planning` to begin the Seed phase.
+Run `worldbuilder-setup` once. It writes the OKF config, installs the vault chrome, creates the project documents, and hands off to `worldbuilder-world-foundation` for the seed conversation.
 
 ### Returning session
 
-Run `worldbuilder-world-planning`. It reads your project state, tells you where you are in the pipeline, and routes to the right next skill.
-
-> **When in doubt, start with `worldbuilder-world-planning`.** It handles both new and returning projects and will route to setup if nothing exists yet.
+Session flow belongs to scraibe: `scraibe:orient` briefs you on where the project stands, `scraibe:triage` processes pending work, and the craft skills fire on demand. Starting from existing material (SillyTavern cards, prior exports, notes)? Run `scraibe:ingest` first, then the craft skills work from the reference documents it produces.
 
 ---
 
@@ -63,7 +62,7 @@ Run `worldbuilder-world-planning`. It reads your project state, tells you where 
 
 These skills are distributed as a Claude Code plugin package. Install the plugin through Claude Code's plugin manager — you do not install individual skill files manually. For step-by-step installation instructions, find this plugin's listing in the Claude Code plugin marketplace.
 
-Once installed, invoke any skill using the `/` command prefix in Claude Code (e.g., `/worldbuilder-setup`, `/worldbuilder-world-planning`).
+Once installed, invoke any skill using the `/` command prefix in Claude Code (e.g., `/worldbuilder-setup`, `/worldbuilder-character`).
 
 ---
 
@@ -72,7 +71,7 @@ Once installed, invoke any skill using the `/` command prefix in Claude Code (e.
 The skills use consistent terminology throughout. Key terms:
 
 - **Seed phase / Wide phase / Export phase** — the three pipeline phases
-- **`seed.md`** — the world foundation document produced in Phase 1
+- **`project/seed.md`** — the world foundation document produced in Phase 1
 - **Character note** — the comprehensive Wide-phase document for a single character
 - **Concept note** — a discrete piece of world knowledge (exported as a lorebook entry)
 - **Story note** — a narrative direction document (direction, arc, or intention scope)
