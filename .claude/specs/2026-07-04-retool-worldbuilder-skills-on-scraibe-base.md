@@ -5,9 +5,9 @@ description: Strip note-taking/vault management from worldbuilder skills; scraib
   owns file management via OKF. This plugin defines worldbuilding types and deliverables
   only. First live trial of scraibe as a base plugin.
 tags:
-- human-ready
+- complete
 date: 2026-07-04
-timestamp: 2026-07-05T06:54
+timestamp: 2026-07-09T23:06Z
 resources: []
 ---
 
