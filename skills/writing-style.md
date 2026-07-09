@@ -184,3 +184,5 @@ Any word or phrase that names a quality without showing how it manifests. What d
 
 **4. Literary flair.**
 Metaphor, atmospheric construction, or evocative phrasing in a spec context. Say the thing directly.
+
+For a phrase-level review checklist of known slop patterns, see `docs/slop-phrases.md` at the plugin root (review reference, not skill instruction).
