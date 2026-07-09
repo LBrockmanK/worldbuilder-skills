@@ -29,7 +29,7 @@ Work through sections in order.
 
 Faction notes do not use sub-files — all content lives in one note.
 
-Frontmatter is defined by the project's OKF registry; `new_doc.py` stamps it at creation and the generated rules describe it.
+Frontmatter is defined by the project's OKF registry; `new_doc.py` stamps it at creation and the generated rules describe it. The script produces a date-prefixed filename; rename the fresh note to the faction's name itself (e.g. `notes/Lantern Guild.md`) before adding content — the filename convention the templates state, and safe while nothing links to the note yet.
 
 ---
 

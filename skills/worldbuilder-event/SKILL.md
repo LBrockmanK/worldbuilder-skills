@@ -27,7 +27,7 @@ The event note is the Wide-phase single source of truth for a named event. Expor
 
 ## Event Note Fields
 
-Frontmatter is defined by the project's OKF registry — `new_doc.py` stamps it and the generated rules describe it. Two writing notes: `aliases` carries every realistic way the event is mentioned in dialogue ("the festival," "harvest time"); the export skill derives keyword triggers from it. Timing — season, day, recurrence — is not a field: open What Happens with when the event takes place and how often.
+Frontmatter is defined by the project's OKF registry — `new_doc.py` stamps it and the generated rules describe it. The script produces a date-prefixed filename; rename the fresh note to the event's name itself (e.g. `notes/Emberfall Vigil.md`) before adding content — the filename convention the templates state, and safe while nothing links to the note yet. Two writing notes: `aliases` carries every realistic way the event is mentioned in dialogue ("the festival," "harvest time"); the export skill derives keyword triggers from it. Timing — season, day, recurrence — is not a field: open What Happens with when the event takes place and how often.
 
 ---
 

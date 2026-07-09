@@ -28,7 +28,7 @@ Work through sections in order. Do not skip sections because the character seems
 | Relationships | `relationships.md` | Named relationships; bullet format |
 | Intimate Dynamics (if flagged) | `intimate.md` | Only if flagged in project plan |
 
-Frontmatter is defined by the project's OKF registry; `new_doc.py` stamps it at creation and the generated rules describe it.
+Frontmatter is defined by the project's OKF registry; `new_doc.py` stamps it at creation and the generated rules describe it. The script produces a date-prefixed filename; rename the fresh note to the character's name itself (e.g. `notes/Maren Holt.md`) before adding content — the filename convention the templates state, and safe while nothing links to the note yet.
 
 ---
 
