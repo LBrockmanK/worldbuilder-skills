@@ -45,14 +45,34 @@ def type_template(config, tname):
     return '\n'.join(lines) + '\n' + (('\n' + body + '\n') if body else '')
 
 
-def picker_template(types):
-    choices = json.dumps(types)
-    return ('<%*\n'
-            f'const choices = {choices};\n'
-            'const type = await tp.system.suggester(choices, choices);\n'
-            'const tmpl = tp.file.find_tfile("_templates/type-" + type);\n'
-            'tR += await tp.file.include(tmpl);\n'
-            '%>')
+def entry_template(types, type_dir='_templates'):
+    """Entry template a folder attaches to: prompt for the note name,
+    rename before the skeleton renders (tp.file.title must resolve to
+    the real name, not 'Untitled'), then include the type template.
+    Mixed-type dirs get a suggester; single-type dirs skip it."""
+    lines = ['<%*']
+    if len(types) == 1:
+        lines.append(f'const type = {json.dumps(types[0])};')
+        # For single-type, build the path directly as a literal string
+        template_path = f'{type_dir}/type-{types[0]}'
+        lines += [
+            'const name = await tp.system.prompt("Note name");',
+            'if (name) { await tp.file.rename(name); }',
+            f'const tmpl = tp.file.find_tfile({json.dumps(template_path)});',
+            'tR += await tp.file.include(tmpl);',
+        ]
+    else:
+        choices = json.dumps(types)
+        lines.append(f'const choices = {choices};')
+        lines.append('const type = await tp.system.suggester(choices, choices);')
+        lines += [
+            'const name = await tp.system.prompt("Note name");',
+            'if (name) { await tp.file.rename(name); }',
+            f'const tmpl = tp.file.find_tfile({json.dumps(type_dir)} + "/type-" + type);',
+            'tR += await tp.file.include(tmpl);',
+        ]
+    lines.append('%>')
+    return '\n'.join(lines)
 
 
 def dir_slug(path):
@@ -128,14 +148,10 @@ def main():
                 write(os.path.join(args.out, '_templates', f'type-{t}.md'),
                       type_template(config, t))
                 emitted.add(t)
-        if len(types) == 1:
-            attachments.append((path, f'_templates/type-{types[0]}.md'))
-        else:
-            name = (f'new-{dir_slug(path)}.md' if args.dir
-                    else 'new-note.md')
-            write(os.path.join(args.out, '_templates', name),
-                  picker_template(types))
-            attachments.append((path, f'_templates/{name}'))
+        name = (f'new-{dir_slug(path)}.md' if args.dir else 'new-note.md')
+        write(os.path.join(args.out, '_templates', name),
+              entry_template(types))
+        attachments.append((path, f'_templates/{name}'))
 
     if args.obsidian:
         update_obsidian_config(args.out, attachments)

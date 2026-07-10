@@ -85,8 +85,13 @@ class GeneratorTests(unittest.TestCase):
         self.assertIn('"event"', picker)
         self.assertIn('tp.system.suggester', picker)
         self.assertIn('tp.file.include', picker)
-        self.assertFalse(os.path.exists(
-            os.path.join(self.dir, '_templates', 'new-project.md')))
+        self.assertIn('tp.system.prompt', picker)   # name prompt
+        self.assertIn('tp.file.rename', picker)     # rename before include
+        entry = self.read('_templates/new-project.md')
+        self.assertNotIn('tp.system.suggester', entry)  # single type: no picker
+        self.assertIn('tp.system.prompt', entry)
+        self.assertIn('tp.file.rename', entry)
+        self.assertIn('"_templates/type-plan"', entry)
 
     def test_obsidian_config_written_and_merged(self):
         cfgdir = os.path.join(self.dir, '.obsidian', 'plugins',
@@ -104,7 +109,7 @@ class GeneratorTests(unittest.TestCase):
         self.assertIs(data['enable_folder_templates'], True)    # 2.20.x boolean key
         self.assertIn({'folder': 'notes', 'template': '_templates/new-notes.md'},
                       data['folder_templates'])
-        self.assertIn({'folder': 'project', 'template': '_templates/type-plan.md'},
+        self.assertIn({'folder': 'project', 'template': '_templates/new-project.md'},
                       data['folder_templates'])
 
     def test_unknown_type_fails(self):
