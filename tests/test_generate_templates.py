@@ -89,8 +89,10 @@ class GeneratorTests(unittest.TestCase):
         self.assertIn('tp.file.rename', picker)     # rename before include
         self.assertIn('let content = await tp.file.include(tmpl);', picker)
         self.assertIn(
-            "content = content.replace(/^title: .*$/m, 'title: \"' + safe + '\"');",
+            "content = content.replace(/^title: .*$/m, () => 'title: \"' + safe + '\"');",
             picker)
+        self.assertIn('if (!type) { return; }', picker)
+        self.assertIn('try { await tp.file.rename(name); }', picker)
         self.assertIn('tR += content;', picker)
         entry = self.read('_templates/new-project.md')
         self.assertNotIn('tp.system.suggester', entry)  # single type: no picker
@@ -128,6 +130,11 @@ class GeneratorTests(unittest.TestCase):
         picker = self.read('_templates/new-note.md')
         for t in ('character', 'event', 'plan'):
             self.assertIn(f'"{t}"', picker)
+
+    def test_empty_type_list_fails(self):
+        r = self.run_gen('--dir', 'notes/=')
+        self.assertEqual(r.returncode, 2)
+        self.assertIn('no types', r.stderr)
 
 
 if __name__ == '__main__':

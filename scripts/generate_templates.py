@@ -57,13 +57,13 @@ def entry_template(types, type_dir='_templates'):
         template_path = f'{type_dir}/type-{types[0]}'
         lines += [
             'const name = await tp.system.prompt("Note name");',
-            'if (name) { await tp.file.rename(name); }',
+            'if (name) { try { await tp.file.rename(name); } catch (e) { } }',
             f'const tmpl = tp.file.find_tfile({json.dumps(template_path)});',
             'let content = await tp.file.include(tmpl);',
             '// tp.file.title is captured before the rename; stamp the real name',
             'if (name) {',
             '  const safe = name.replace(/\\\\/g, "\\\\\\\\").replace(/"/g, \'\\\\"\');',
-            '  content = content.replace(/^title: .*$/m, \'title: "\' + safe + \'"\');',
+            '  content = content.replace(/^title: .*$/m, () => \'title: "\' + safe + \'"\');',
             '}',
             'tR += content;',
         ]
@@ -72,14 +72,15 @@ def entry_template(types, type_dir='_templates'):
         lines.append(f'const choices = {choices};')
         lines.append('const type = await tp.system.suggester(choices, choices);')
         lines += [
+            'if (!type) { return; }',
             'const name = await tp.system.prompt("Note name");',
-            'if (name) { await tp.file.rename(name); }',
+            'if (name) { try { await tp.file.rename(name); } catch (e) { } }',
             f'const tmpl = tp.file.find_tfile({json.dumps(type_dir)} + "/type-" + type);',
             'let content = await tp.file.include(tmpl);',
             '// tp.file.title is captured before the rename; stamp the real name',
             'if (name) {',
             '  const safe = name.replace(/\\\\/g, "\\\\\\\\").replace(/"/g, \'\\\\"\');',
-            '  content = content.replace(/^title: .*$/m, \'title: "\' + safe + \'"\');',
+            '  content = content.replace(/^title: .*$/m, () => \'title: "\' + safe + \'"\');',
             '}',
             'tR += content;',
         ]
@@ -97,6 +98,9 @@ def parse_dirs(pairs, config):
     for pair in pairs:
         path, _, names = pair.partition('=')
         types = [t.strip() for t in names.split(',') if t.strip()]
+        if not types:
+            print(f'error: no types given in --dir {pair!r}', file=sys.stderr)
+            sys.exit(2)
         for t in types:
             if t not in config['types']:
                 print(f'error: unknown type {t!r} in --dir {pair!r}',
