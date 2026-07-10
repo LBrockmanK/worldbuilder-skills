@@ -89,6 +89,10 @@ def update_obsidian_config(out_root, attachments):
             data = json.load(f)
     data['templates_folder'] = '_templates'
     data['trigger_on_file_creation_mode'] = 'folder'
+    # Templater <=2.21 uses boolean keys; >=2.22 uses the _mode string.
+    # Write both so the config works regardless of the vendored version.
+    data['trigger_on_file_creation'] = True
+    data['enable_folder_templates'] = True
     data['folder_templates'] = [
         {'folder': folder.strip('/'), 'template': template}
         for folder, template in attachments]

@@ -100,6 +100,8 @@ class GeneratorTests(unittest.TestCase):
         self.assertEqual(data['command_timeout'], 5)          # merged, not clobbered
         self.assertEqual(data['templates_folder'], '_templates')
         self.assertEqual(data['trigger_on_file_creation_mode'], 'folder')
+        self.assertIs(data['trigger_on_file_creation'], True)   # 2.20.x boolean key
+        self.assertIs(data['enable_folder_templates'], True)    # 2.20.x boolean key
         self.assertIn({'folder': 'notes', 'template': '_templates/new-notes.md'},
                       data['folder_templates'])
         self.assertIn({'folder': 'project', 'template': '_templates/type-plan.md'},
