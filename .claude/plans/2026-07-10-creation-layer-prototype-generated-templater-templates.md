@@ -3,12 +3,12 @@ type: plan
 title: 'Creation-layer prototype: generated Templater templates'
 description: 'Implementation plan for the human-compliance-stack creation layer: generate_templates.py
   emitting per-type Templater templates and type-pickers from okf.json, Templater
-  2.23.1 vendored into the worldbuilder chrome, trialed in the Emberwick scratch vault,
+  2.20.6 vendored into the worldbuilder chrome, trialed in the Emberwick scratch vault,
   built for immediate graduation to okf-enforcement'
 tags:
 - agent-ready
 date: 2026-07-10
-timestamp: 2026-07-10T00:12Z
+timestamp: 2026-07-10T10:57Z
 resources: []
 ---
 
@@ -16,11 +16,11 @@ resources: []
 
 > **For agentic workers:** REQUIRED SUB-SKILL: Use superpowers:subagent-driven-development (recommended) or superpowers:executing-plans to implement this plan task-by-task. Steps use checkbox (`- [ ]`) syntax for tracking.
 
-**Goal:** Humans creating notes in a scraibe vault get compliant OKF frontmatter before their first keystroke: `generate_templates.py` derives Templater templates from `okf.json`, Templater 2.23.1 ships vendored and configured in the worldbuilder chrome, and the Emberwick scratch vault proves the flow.
+**Goal:** Humans creating notes in a scraibe vault get compliant OKF frontmatter before their first keystroke: `generate_templates.py` derives Templater templates from `okf.json`, Templater 2.20.6 ships vendored and configured in the worldbuilder chrome, and the Emberwick scratch vault proves the flow.
 
 **Architecture:** The generator is a sibling of scraibe's `generate_rules.py` — pure stdlib Python reading the registry, emitting one template per type plus a suggester-based type-picker per mixed-type directory into `_templates/`, and (with `--obsidian`) pointing the vendored Templater `data.json` `folder_templates` at them. It contains zero worldbuilder-specific logic and graduates verbatim to `okf-enforcement/scripts/` at the merge point. Spec: fleet vault `.claude/specs/2026-07-09-vault-human-compliance-stack.md`.
 
-**Tech Stack:** Python 3 stdlib (json, argparse, os), stdlib `unittest`; Templater 2.23.1 (pinned release assets); Obsidian Templater syntax (`tp.file.title`, `tp.system.suggester`, `tp.file.include`, global `moment`).
+**Tech Stack:** Python 3 stdlib (json, argparse, os), stdlib `unittest`; Templater 2.20.6 (pinned release assets); Obsidian Templater syntax (`tp.file.title`, `tp.system.suggester`, `tp.file.include`, global `moment`).
 
 ## Global Constraints
 
@@ -29,7 +29,7 @@ resources: []
 - Stdlib-only Python; tests runnable as `python tests/test_generate_templates.py`.
 - OKF frontmatter skeletons emit every required universal property (`type`, `title`, `description`, `tags`, `date`, `timestamp`, `resources`) plus the type's own `fields`; exactly one status tag, the registry's first open status.
 - Timestamps in templates are UTC minute-precision: `<% moment.utc().format("YYYY-MM-DDTHH:mm[Z]") %>` (never `tp.date.now`, which is local).
-- **Prerequisite for the live trial:** Templater 2.23.1 requires Obsidian ≥ 1.13.0; machine 2 runs 1.8.4 — Kevin upgrades Obsidian before Task 4's human steps (also unlocks the Obsidian CLI evaluated in the fleet research doc).
+- **Templater pin: 2.20.6** (minAppVersion 1.12.2, the maintained back-port line). CORRECTION 2026-07-09 during execution (commit 94135b3): the plan originally pinned 2.23.1 requiring Obsidian ≥ 1.13.0 on a false premise — the "1.8.4" read on machine 2 was the *installer* version; the auto-updating app runs 1.12.7, which 2.23.1 still exceeds but 2.20.6 satisfies. No Obsidian upgrade is required for the trial. Task 2's original text below is the executed history; the re-pin commit supersedes its version numbers.
 - Commit after every task in the worldbuilder submodule (attached `master`, not detached HEAD); pin bump in the parent at the end. Commits end with the Claude co-author line.
 - This repo's `.claude/` vault is enforced — the scraibe hooks will police plan/inbox edits; that is expected.
 
@@ -460,7 +460,7 @@ python -c "import json; d=json.load(open('.obsidian/plugins/templater-obsidian/d
 ```
 Expected: `folder 2`. Also confirm `type-character.md` opens with `---`, contains `factions: []` and the moment.utc timestamp line, and ends with the character body sections.
 
-- [ ] **Step 3: Human steps (Kevin).** Upgrade Obsidian to ≥ 1.13. Open the scratch vault, enable community plugins for it, then: create a new note in `notes/` → the type-picker should prompt; choose `location`; name the note `Ashen Lantern`. Verify the frontmatter arrived filled (type, title from filename, one `human-ready` tag, UTC timestamp) and the location body sections are present.
+- [ ] **Step 3: Human steps (Kevin).** (Obsidian 1.12.7 suffices for the 2.20.6 pin — no upgrade needed.) Open the scratch vault, enable community plugins for it, then: create a new note in `notes/` → the type-picker should prompt; choose `location`; name the note `Ashen Lantern`. Verify the frontmatter arrived filled (type, title from filename, one `human-ready` tag, UTC timestamp) and the location body sections are present.
 
 - [ ] **Step 4: Validate the human-created note.**
 
