@@ -85,7 +85,7 @@ python <scraibe>/scripts/generate_rules.py --root .
 python <scraibe>/scripts/validate.py project --root . --format human
 ```
 
-Report the validation result to the user. Tell them the vault is ready to open in Obsidian ('Open folder as vault' on the project root; Bases and the vendored Templater need Obsidian 1.13+ with community plugins enabled for this vault). Then hand off to `worldbuilder-world-foundation` for the seed conversation.
+Report the validation result to the user. Tell them the vault is ready to open in Obsidian ('Open folder as vault' on the project root; Bases and the vendored Templater need Obsidian 1.12.2+ with community plugins enabled for this vault). Then hand off to `worldbuilder-world-foundation` for the seed conversation.
 
 ## What this skill does not do
 
