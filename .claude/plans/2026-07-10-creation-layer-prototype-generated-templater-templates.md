@@ -6,7 +6,7 @@ description: 'Implementation plan for the human-compliance-stack creation layer:
   2.20.6 vendored into the worldbuilder chrome, trialed in the Emberwick scratch vault,
   built for immediate graduation to okf-enforcement'
 tags:
-- agent-ready
+- complete
 date: 2026-07-10
 timestamp: 2026-07-10T10:57Z
 resources: []
@@ -48,7 +48,7 @@ resources: []
   - `--obsidian` merges `templates_folder`, `trigger_on_file_creation_mode: "folder"`, and `folder_templates` into `<out>/.obsidian/plugins/templater-obsidian/data.json` (creating it if absent, preserving unrelated keys).
   - Returns exit 0 on success; exit 2 with a message naming the unknown type if a `--dir` references a type not in the registry.
 
-- [ ] **Step 1: Write the failing tests.**
+- [x] **Step 1: Write the failing tests.**
 
 ```python
 """Tests for generate_templates.py. Run: python tests/test_generate_templates.py"""
@@ -175,12 +175,12 @@ if __name__ == '__main__':
     unittest.main(verbosity=2)
 ```
 
-- [ ] **Step 2: Run tests to verify they fail.**
+- [x] **Step 2: Run tests to verify they fail.**
 
 Run: `python tests/test_generate_templates.py`
 Expected: errors — `scripts/generate_templates.py` does not exist.
 
-- [ ] **Step 3: Write the generator.**
+- [x] **Step 3: Write the generator.**
 
 ```python
 #!/usr/bin/env python
@@ -333,12 +333,12 @@ if __name__ == '__main__':
 
 Implementation note: the no-`--dir` default branch assigns `dirs` twice as written — simplify to a single expression (`[(p, all_types) for p in config.get('enforced_paths', {})] or [('', all_types)]`) while keeping the `new-note.md` shared-picker name.
 
-- [ ] **Step 4: Run tests to verify they pass.**
+- [x] **Step 4: Run tests to verify they pass.**
 
 Run: `python tests/test_generate_templates.py`
 Expected: 6 tests, OK.
 
-- [ ] **Step 5: Commit.**
+- [x] **Step 5: Commit.**
 
 ```bash
 git add scripts/generate_templates.py tests/test_generate_templates.py
@@ -357,7 +357,7 @@ git commit -m "feat: generate Templater templates from the OKF registry"
 - Consumes: nothing from Task 1 (static assets; the generator overwrites `data.json`'s wiring at setup time).
 - Produces: the chrome overlay Task 3's setup flow copies; `data.json` baseline with worldbuilder's two folder attachments.
 
-- [ ] **Step 1: Download the pinned release assets.**
+- [x] **Step 1: Download the pinned release assets.**
 
 ```bash
 cd skills/worldbuilder-setup/worldvault/.obsidian
@@ -370,7 +370,7 @@ python -c "import json;print(json.load(open('plugins/templater-obsidian/manifest
 ```
 Expected: `2.23.1`.
 
-- [ ] **Step 2: Write the config baseline** `plugins/templater-obsidian/data.json`:
+- [x] **Step 2: Write the config baseline** `plugins/templater-obsidian/data.json`:
 
 ```json
 {
@@ -383,7 +383,7 @@ Expected: `2.23.1`.
 }
 ```
 
-- [ ] **Step 3: Check scraibe's `community-plugins.json`** (`cat ../../../../okf-enforcement/defaults/obsidian/community-plugins.json`) and write this overlay's copy extending it — expected result:
+- [x] **Step 3: Check scraibe's `community-plugins.json`** (`cat ../../../../okf-enforcement/defaults/obsidian/community-plugins.json`) and write this overlay's copy extending it — expected result:
 
 ```json
 ["frontmatter-modified-date", "templater-obsidian"]
@@ -391,7 +391,7 @@ Expected: `2.23.1`.
 
 (If scraibe's file lists anything else, keep those entries too — the overlay must be a superset.)
 
-- [ ] **Step 4: Commit.**
+- [x] **Step 4: Commit.**
 
 ```bash
 git add skills/worldbuilder-setup/worldvault/.obsidian
@@ -409,9 +409,9 @@ git commit -m "feat: vendor Templater 2.23.1 into the vault chrome (pinned; need
 - Consumes: Task 1's CLI (`--dir`, `--obsidian`), Task 2's overlay layout.
 - Produces: the setup flow Task 4 executes literally.
 
-- [ ] **Step 1: Update Step 3 ("Install the chrome").** Replace the app.json-only overlay bullet with: "Overlay this skill's `worldvault/.obsidian/` directory on top (app config, community-plugin registration, and the vendored Templater plugin)." Keep the remaining bullets.
+- [x] **Step 1: Update Step 3 ("Install the chrome").** Replace the app.json-only overlay bullet with: "Overlay this skill's `worldvault/.obsidian/` directory on top (app config, community-plugin registration, and the vendored Templater plugin)." Keep the remaining bullets.
 
-- [ ] **Step 2: Insert a new step between Steps 4 and 5**, renumbering the old Step 5 to 6:
+- [x] **Step 2: Insert a new step between Steps 4 and 5**, renumbering the old Step 5 to 6:
 
 ```markdown
 ### Step 5: Generate the creation templates
@@ -430,11 +430,11 @@ Obsidian receives compliant frontmatter at creation — the type-picker
 asks one question in mixed directories.
 ```
 
-- [ ] **Step 3: Update the final report text** (old Step 5, now 6): the Obsidian line becomes "Tell them the vault is ready to open in Obsidian ('Open folder as vault' on the project root; Bases and the vendored Templater need Obsidian 1.13+ with community plugins enabled for this vault)."
+- [x] **Step 3: Update the final report text** (old Step 5, now 6): the Obsidian line becomes "Tell them the vault is ready to open in Obsidian ('Open folder as vault' on the project root; Bases and the vendored Templater need Obsidian 1.13+ with community plugins enabled for this vault)."
 
-- [ ] **Step 4: Verify.** `grep -n "generate_templates\|1.13" skills/worldbuilder-setup/SKILL.md` → both present; step numbering is sequential 1–6.
+- [x] **Step 4: Verify.** `grep -n "generate_templates\|1.13" skills/worldbuilder-setup/SKILL.md` → both present; step numbering is sequential 1–6.
 
-- [ ] **Step 5: Commit.**
+- [x] **Step 5: Commit.**
 
 ```bash
 git commit -am "feat: setup generates creation templates and ships Templater chrome"
@@ -450,9 +450,9 @@ git commit -am "feat: setup generates creation templates and ships Templater chr
 **Interfaces:**
 - Consumes: everything prior, executed as the setup skill states it.
 
-- [ ] **Step 1: Apply to the scratch vault.** Copy the Task 2 overlay into `worldbuilder-scratch/.obsidian/` (plugins dir + community-plugins.json), then run the Task 3 Step-5 command verbatim from the scratch root. Expected: `9 type template(s), 2 folder attachment(s).` (the registry's tenth type, `reference`, is deliberately unmapped — it is scraibe:ingest's output, not a human-creation type).
+- [x] **Step 1: Apply to the scratch vault.** Copy the Task 2 overlay into `worldbuilder-scratch/.obsidian/` (plugins dir + community-plugins.json), then run the Task 3 Step-5 command verbatim from the scratch root. Expected: `9 type template(s), 2 folder attachment(s).` (the registry's tenth type, `reference`, is deliberately unmapped — it is scraibe:ingest's output, not a human-creation type).
 
-- [ ] **Step 2: Agent-side verification.**
+- [x] **Step 2: Agent-side verification.**
 
 ```bash
 ls _templates/          # 9 type-*.md + new-notes.md + new-project.md
@@ -460,21 +460,21 @@ python -c "import json; d=json.load(open('.obsidian/plugins/templater-obsidian/d
 ```
 Expected: `folder 2`. Also confirm `type-character.md` opens with `---`, contains `factions: []` and the moment.utc timestamp line, and ends with the character body sections.
 
-- [ ] **Step 3: Human steps (Kevin).** (Obsidian 1.12.7 suffices for the 2.20.6 pin — no upgrade needed.) Open the scratch vault, enable community plugins for it, then: create a new note in `notes/` → the type-picker should prompt; choose `location`; name the note `Ashen Lantern`. Verify the frontmatter arrived filled (type, title from filename, one `human-ready` tag, UTC timestamp) and the location body sections are present.
+- [x] **Step 3: Human steps (Kevin).** (Obsidian 1.12.7 suffices for the 2.20.6 pin — no upgrade needed.) Open the scratch vault, enable community plugins for it, then: create a new note in `notes/` → the type-picker should prompt; choose `location`; name the note `Ashen Lantern`. Verify the frontmatter arrived filled (type, title from filename, one `human-ready` tag, UTC timestamp) and the location body sections are present.
 
-- [ ] **Step 4: Validate the human-created note.**
+- [x] **Step 4: Validate the human-created note.**
 
 ```bash
 python <scraibe>/scripts/validate.py notes --root . --format human
 ```
 Expected: 0 critical (description is empty but present — if validate flags empty description as warning, record it in the sub-vault inbox as a template-vs-validator gap to resolve at graduation).
 
-- [ ] **Step 5: Record the trial** in the sub-vault inbox (pass/fail per check, any friction) and check off this plan's boxes.
+- [x] **Step 5: Record the trial** in the sub-vault inbox (pass/fail per check, any friction) and check off this plan's boxes.
 
 ---
 
 ### Task 5: Close out and pin bump
 
-- [ ] **Step 1:** Fleet inbox line (parent vault `.claude/inbox.md`): the creation layer is prototyped and trialed; `generate_templates.py` graduates to `okf-enforcement/scripts/` and Templater vendoring to scraibe's `defaults/obsidian/` at the merge point — okf-enforcement inbox gets the pointer.
-- [ ] **Step 2:** Regenerate the sub-vault plans index; flip this plan's tag to `complete` when the trial passes (Kevin confirms).
-- [ ] **Step 3:** Commit the submodule on `master`, push, pin bump in the parent on `machine-2`, push, `sync.py --check` clean.
+- [x] **Step 1:** Fleet inbox line (parent vault `.claude/inbox.md`): the creation layer is prototyped and trialed; `generate_templates.py` graduates to `okf-enforcement/scripts/` and Templater vendoring to scraibe's `defaults/obsidian/` at the merge point — okf-enforcement inbox gets the pointer.
+- [x] **Step 2:** Regenerate the sub-vault plans index; flip this plan's tag to `complete` when the trial passes (Kevin confirms).
+- [x] **Step 3:** Commit the submodule on `master`, push, pin bump in the parent on `machine-2`, push, `sync.py --check` clean.
