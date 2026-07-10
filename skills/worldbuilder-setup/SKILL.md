@@ -35,7 +35,7 @@ Copy this plugin's `defaults/okf.json` to `<project>/.claude/okf.json`. If `<pro
 ### Step 3: Install the chrome
 
 - Copy `<scraibe>/defaults/obsidian/` to `<project>/.obsidian/`.
-- Overlay this skill's `worldvault/.obsidian/app.json` on top (it sets the attachment folder and link behavior).
+- Overlay this skill's `worldvault/.obsidian/` directory on top (app config, community-plugin registration, and the vendored Templater plugin).
 - Copy this skill's `worldvault/Home.md` to the project root, replacing `{{PROJECT_NAME}}` with the project name.
 - Copy this skill's `worldvault/_bases/` directory to `<project>/_bases/`.
 - Create empty directories: `notes/`, `project/`, `_attachments/`.
@@ -63,14 +63,29 @@ Then seed `.claude/glossary.md` with the platform terminology:
 **lorebook** — the platform term is "world info" on ainime/isekaizero; both name the same thing. _Avoid_: world info (in vault docs).
 ```
 
-### Step 5: Generate rules, validate, hand off
+### Step 5: Generate the creation templates
+
+From the project root, with this plugin's root recorded as `<worldbuilder>`:
+
+    python <worldbuilder>/scripts/generate_templates.py --config .claude/okf.json --out . \
+      --dir "notes/=character,location,faction,event,concept,story" \
+      --dir "project/=seed,plan,direction" \
+      --obsidian
+
+This writes `_templates/` (one template per type plus a type-picker per
+directory) and points the vendored Templater's folder attachments at
+them. From here on, a note created in `notes/` or `project/` inside
+Obsidian receives compliant frontmatter at creation — the type-picker
+asks one question in mixed directories.
+
+### Step 6: Generate rules, validate, hand off
 
 ```
 python <scraibe>/scripts/generate_rules.py --root .
 python <scraibe>/scripts/validate.py project --root . --format human
 ```
 
-Report the validation result to the user. Tell them the vault is ready to open in Obsidian ("Open folder as vault" on the project root; Bases need Obsidian 1.8+ with the Bases core plugin). Then hand off to `worldbuilder-world-foundation` for the seed conversation.
+Report the validation result to the user. Tell them the vault is ready to open in Obsidian ('Open folder as vault' on the project root; Bases and the vendored Templater need Obsidian 1.13+ with community plugins enabled for this vault). Then hand off to `worldbuilder-world-foundation` for the seed conversation.
 
 ## What this skill does not do
 
