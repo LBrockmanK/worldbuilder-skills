@@ -59,7 +59,13 @@ def entry_template(types, type_dir='_templates'):
             'const name = await tp.system.prompt("Note name");',
             'if (name) { await tp.file.rename(name); }',
             f'const tmpl = tp.file.find_tfile({json.dumps(template_path)});',
-            'tR += await tp.file.include(tmpl);',
+            'let content = await tp.file.include(tmpl);',
+            '// tp.file.title is captured before the rename; stamp the real name',
+            'if (name) {',
+            '  const safe = name.replace(/\\\\/g, "\\\\\\\\").replace(/"/g, \'\\\\"\');',
+            '  content = content.replace(/^title: .*$/m, \'title: "\' + safe + \'"\');',
+            '}',
+            'tR += content;',
         ]
     else:
         choices = json.dumps(types)
@@ -69,7 +75,13 @@ def entry_template(types, type_dir='_templates'):
             'const name = await tp.system.prompt("Note name");',
             'if (name) { await tp.file.rename(name); }',
             f'const tmpl = tp.file.find_tfile({json.dumps(type_dir)} + "/type-" + type);',
-            'tR += await tp.file.include(tmpl);',
+            'let content = await tp.file.include(tmpl);',
+            '// tp.file.title is captured before the rename; stamp the real name',
+            'if (name) {',
+            '  const safe = name.replace(/\\\\/g, "\\\\\\\\").replace(/"/g, \'\\\\"\');',
+            '  content = content.replace(/^title: .*$/m, \'title: "\' + safe + \'"\');',
+            '}',
+            'tR += content;',
         ]
     lines.append('%>')
     return '\n'.join(lines)

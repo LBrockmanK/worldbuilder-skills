@@ -87,6 +87,11 @@ class GeneratorTests(unittest.TestCase):
         self.assertIn('tp.file.include', picker)
         self.assertIn('tp.system.prompt', picker)   # name prompt
         self.assertIn('tp.file.rename', picker)     # rename before include
+        self.assertIn('let content = await tp.file.include(tmpl);', picker)
+        self.assertIn(
+            "content = content.replace(/^title: .*$/m, 'title: \"' + safe + '\"');",
+            picker)
+        self.assertIn('tR += content;', picker)
         entry = self.read('_templates/new-project.md')
         self.assertNotIn('tp.system.suggester', entry)  # single type: no picker
         self.assertIn('tp.system.prompt', entry)
