@@ -1,0 +1,8 @@
+{
+  "templates_folder": "_templates",
+  "trigger_on_file_creation_mode": "folder",
+  "folder_templates": [
+    {"folder": "notes", "template": "_templates/new-notes.md"},
+    {"folder": "project", "template": "_templates/new-project.md"}
+  ]
+}
