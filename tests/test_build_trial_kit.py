@@ -46,8 +46,17 @@ class TestTrialKitBuild(unittest.TestCase):
             self.assertNotIn("<!--", text)
 
     def test_packets_share_identical_frame(self):
-        first_headings = {text.splitlines()[0] for text in self.packets.values()}
-        self.assertEqual(first_headings, {"# Character Note Instructions"})
+        with open(os.path.join(KIT, "src", "base.md"), encoding="utf-8") as f:
+            base = f.read().strip()
+        seg1, rest = base.split("<!-- DOCTRINE-BLOCK -->")
+        seg2, seg3 = rest.split("<!-- STYLE-BLOCK -->")
+        segments = [re.sub(r"\n{3,}", "\n\n", s.strip()) for s in (seg1, seg2, seg3)]
+        for i, text in self.packets.items():
+            pos = 0
+            for n, seg in enumerate(segments, start=1):
+                idx = text.find(seg, pos)
+                self.assertNotEqual(idx, -1, "packet-%d missing frame segment %d" % (i, n))
+                pos = idx + len(seg)
 
     def test_axis_content_matches_key(self):
         for name, cell in self.key.items():
