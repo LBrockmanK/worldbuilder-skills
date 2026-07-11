@@ -1,0 +1,56 @@
+filters:
+  and:
+  - type != null
+  - not:
+    - file.inFolder("_bases")
+    - file.inFolder("_templates")
+    - file.inFolder("rules")
+    - file.name == "glossary.md"
+    - file.name == "inbox.md"
+    - file.name == "index.md"
+    - file.name == "log.md"
+    - file.name == "Home.md"
+views:
+- type: table
+  name: All documents
+  groupBy:
+    property: type
+    direction: ASC
+  order:
+  - file.name
+  - title
+  - description
+  - tags
+  - timestamp
+- type: table
+  name: Open
+  filters:
+    or:
+    - file.hasTag("human-ready")
+    - file.hasTag("agent-ready")
+  groupBy:
+    property: type
+    direction: ASC
+  order:
+  - file.name
+  - title
+  - description
+  - tags
+  - timestamp
+- type: table
+  name: Closed
+  filters:
+    or:
+    - file.hasTag("complete")
+    - file.hasTag("deprecated")
+    - file.hasTag("abandoned")
+    - file.hasTag("archived")
+  groupBy:
+    property: type
+    direction: ASC
+  order:
+  - file.name
+  - title
+  - description
+  - tags
+  - timestamp

@@ -4,8 +4,9 @@ title: "Research Brief: Location, Faction, and Concept Note Depth"
 description: Research brief requesting guidance on bringing location, faction, and concept notes to the same behavioral-specification depth as character notes.
 tags: [complete]
 date: 2026-06-15
-timestamp: 2026-06-15T17:10
+timestamp: 2026-07-11T15:04Z
 resources: []
+output: ["[[Loc_Conc_Faction_Research Results]]"]
 ---
 # Research Brief: Location, Faction, and Concept Note Depth
 

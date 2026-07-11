@@ -4,8 +4,8 @@ title: "Comprehensive Research Brief: Worldbuilding Documentation Practices"
 description: Research results on worldbuilding documentation practices covering vault structure, LLM-readable notes, and consistency processes.
 tags: [complete]
 date: 2026-06-15
-timestamp: 2026-06-15T17:10
-resources: []
+timestamp: 2026-07-11T15:04Z
+resources: ["[[research-brief-worldbuilding-docs]]"]
 ---
 # Comprehensive Research Brief: Worldbuilding Documentation Practices
 

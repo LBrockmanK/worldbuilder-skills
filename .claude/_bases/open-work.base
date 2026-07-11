@@ -1,0 +1,36 @@
+filters:
+  and:
+  - type != null
+  - not:
+    - file.inFolder("_bases")
+    - file.inFolder("_templates")
+    - file.inFolder("rules")
+    - file.name == "glossary.md"
+    - file.name == "inbox.md"
+    - file.name == "index.md"
+    - file.name == "log.md"
+    - file.name == "Home.md"
+  - or:
+    - file.hasTag("human-ready")
+    - file.hasTag("agent-ready")
+views:
+- type: table
+  name: By type
+  groupBy:
+    property: type
+    direction: ASC
+  order: &id001
+  - file.name
+  - type
+  - title
+  - description
+  - tags
+  - timestamp
+- type: table
+  name: human-ready
+  filters: file.hasTag("human-ready")
+  order: *id001
+- type: table
+  name: agent-ready
+  filters: file.hasTag("agent-ready")
+  order: *id001

@@ -1,0 +1,35 @@
+filters:
+  and:
+  - file.ext == "md"
+  - not:
+    - file.inFolder("_bases")
+    - file.inFolder("_templates")
+    - file.inFolder("rules")
+    - file.name == "glossary.md"
+    - file.name == "inbox.md"
+    - file.name == "index.md"
+    - file.name == "log.md"
+    - file.name == "Home.md"
+views:
+- type: table
+  name: Missing status tag
+  filters: '!file.hasTag("human-ready") && !file.hasTag("agent-ready") && !file.hasTag("complete")
+    && !file.hasTag("deprecated") && !file.hasTag("abandoned") && !file.hasTag("archived")'
+  order: &id001
+  - file.name
+  - type
+  - title
+  - tags
+  - timestamp
+- type: table
+  name: Missing required properties
+  filters:
+    or:
+    - type == null || type == ""
+    - title == null || title == ""
+    - description == null || description == ""
+    - tags == null
+    - date == null
+    - timestamp == null
+    - resources == null
+  order: *id001

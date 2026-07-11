@@ -4,8 +4,8 @@ title: Location, Faction, and Concept Note Depth for AI-Assisted Interactive Fic
 description: Research results on writing location, faction, and concept notes as behavioral specifications for AI-assisted interactive fiction.
 tags: [complete]
 date: 2026-06-15
-timestamp: 2026-06-15T17:10
-resources: []
+timestamp: 2026-07-11T15:04Z
+resources: ["[[research-brief-world-entity-notes]]"]
 ---
 # Location, Faction, and Concept Note Depth for AI-Assisted Interactive Fiction Worldbuilding
 
