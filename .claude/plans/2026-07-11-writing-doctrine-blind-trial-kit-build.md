@@ -46,7 +46,7 @@ resources:
 **Interfaces:**
 - Produces: `base.md` containing exactly one `<!-- STYLE-BLOCK -->` line and one `<!-- DOCTRINE-BLOCK -->` line (Task 5's build script replaces them; Task 5's tests assert no markers survive assembly).
 
-- [ ] **Step 1: Write the frame and contract**
+- [x] **Step 1: Write the frame and contract**
 
 Open `base.md` with this structure (actual heading names; prose to be written in full, following the include/exclude map below):
 
@@ -81,7 +81,7 @@ Open `base.md` with this structure (actual heading names; prose to be written in
 - Do not read any other packet or any other agent's output.
 ```
 
-- [ ] **Step 2: Port the note structure and writing rules**
+- [x] **Step 2: Port the note structure and writing rules**
 
 From `skills/worldbuilder-character/SKILL.md`, per the dossier §1 map:
 
@@ -89,14 +89,14 @@ From `skills/worldbuilder-character/SKILL.md`, per the dossier §1 map:
 - Rewire every "ask the user" phrasing to the no-questions rule (e.g. the hedging rule's "If you don't know, ask the user." becomes "If the brief doesn't say, decide and keep it consistent.").
 - Exclude: `## Design Notes`, `### Session Notes`, `### Builder Context`, `## Session Flow`, `## Story Notes`, `## Post-Group Sync Pass`, all sub-file pointers, all `new_doc.py`/frontmatter/status-tag mechanics.
 
-- [ ] **Step 3: Port the section construction rules**
+- [x] **Step 3: Port the section construction rules**
 
 - `## Background`, `## Body`, `## Soul` from `skills/worldbuilder-character/framework.md`: include essentially all — the When/Behavior/Because formula, the label-vs-behavioral table, coverage minimums (3–5 psychological + 2–3 social entries, required contradiction and irrational-behavior-with-root), the Because-clause section with its Design-Notes/Q&A dependency redirected to "the Because clause must trace to wants, fears, or experiences stated in the brief; if the brief gives none, choose one consistent with the brief and use it consistently."
 - `## Relationships` from `relationships.md`: the 12 archetypes, coverage requirements (major: 8 named, anchors Kin-or-Ghost / Authority / rivalry-or-friction / Confidant plus one more friction source; supporting: 5), archetype distribution, entry format (`**Name — Archetype(s):**` bullets), generativity hierarchy, per-entry internal-state check — minus all `project/plan.md` capture mechanics.
 - `## Intimate Dynamics` from `intimate.md`: overview paragraph 1, format, coverage including the required friction point; conditional stated as "only if the brief flags this character for intimate dynamics."
 - `## Self-Check Before Finishing`: only the Background / Body / Soul / Relationships / Intimate blocks from SKILL.md's self-check, minus Frontmatter, Design Notes, Story Notes, Pre-Handoff Scan, and Description items.
 
-- [ ] **Step 4: Verify self-containment and neutrality**
+- [x] **Step 4: Verify self-containment and neutrality**
 
 Run: `grep -inE "claude|anthropic|gpt|openai|gemini" trials/2026-07-writing-doctrine/src/base.md`
 Expected: no output.
@@ -105,7 +105,7 @@ Expected: no output.
 Run: `grep -c "STYLE-BLOCK" trials/2026-07-writing-doctrine/src/base.md` and same for `DOCTRINE-BLOCK`
 Expected: `1` each.
 
-- [ ] **Step 5: Commit**
+- [x] **Step 5: Commit**
 
 ```bash
 git add trials/2026-07-writing-doctrine/src/base.md
@@ -122,11 +122,11 @@ git commit -m "trial-kit: shared instruction set (base block)"
 **Interfaces:**
 - Produces: a block of H3-and-below content (no H1/H2 — it lands under base.md's `## Style Rules`). Contains the sentinel heading `### Four Failure Modes` (Task 5's tests key on it).
 
-- [ ] **Step 1: Port writing-style.md, demoted one heading level**
+- [x] **Step 1: Port writing-style.md, demoted one heading level**
 
 Copy `skills/writing-style.md` content with H2→H3, H3→H4. Include everything: Style Model (staging test), Word Choice (3 subsections, full 12-row table), Sentence Structure (5 subsections including no em-dashes), Content Standards (6 subsections), Structure, Four Failure Modes. Exclude: the header paragraphs naming Wide/Export phases and the export-skill pointer; the closing `docs/slop-phrases.md` pointer (that file is the rubric's slop-density checklist — shipping it in a packet coaches the arm). Replace "spec documents" framing with "the character note" where it appears.
 
-- [ ] **Step 2: Verify**
+- [x] **Step 2: Verify**
 
 Run: `grep -inE "export|wide phase|slop-phrases" trials/2026-07-writing-doctrine/src/style-current.md`
 Expected: no output.
@@ -135,7 +135,7 @@ Expected: `1`.
 Run: `grep -nE "^## |^# " trials/2026-07-writing-doctrine/src/style-current.md`
 Expected: no output (block starts at H3).
 
-- [ ] **Step 3: Commit**
+- [x] **Step 3: Commit**
 
 ```bash
 git add trials/2026-07-writing-doctrine/src/style-current.md
@@ -152,7 +152,7 @@ git commit -m "trial-kit: current style block"
 **Interfaces:**
 - Produces: a block of H3-and-below content in the same format as Task 2 (rule + wrong/right example pairs). Contains the sentinel heading `### Vary Rhythm` (Task 5's tests key on it).
 
-- [ ] **Step 1: Write the eight rules in current-block format**
+- [x] **Step 1: Write the eight rules in current-block format**
 
 Source: dossier §2 (stop-slop is MIT-licensed; derivation is fine). One H3 per rule, each with at least one wrong/right pair **written fresh in the character-note domain** — do not copy stop-slop's own examples (its examples.md is internally inconsistent: an em-dash appears in an "after" example). The eight rules, with required adaptations:
 
@@ -176,7 +176,7 @@ Delete phrases that announce importance instead of carrying it.
 - Right: "She runs the kitchen."
 ```
 
-- [ ] **Step 2: Verify**
+- [x] **Step 2: Verify**
 
 Run: `grep -inE "claude|anthropic|gpt|openai|stop-slop|stopslop" trials/2026-07-writing-doctrine/src/style-stopslop.md`
 Expected: no output.
@@ -185,7 +185,7 @@ Expected: `1`.
 Run: `grep -n "—" trials/2026-07-writing-doctrine/src/style-stopslop.md | grep -v "Wrong:"`
 Expected: no output (em-dashes only inside Wrong examples, if anywhere).
 
-- [ ] **Step 3: Commit**
+- [x] **Step 3: Commit**
 
 ```bash
 git add trials/2026-07-writing-doctrine/src/style-stopslop.md
@@ -203,7 +203,7 @@ git commit -m "trial-kit: stop-slop style block"
 **Interfaces:**
 - Produces: `doctrine-additive.md` opens with `## Additional Construction Rules` and contains the sentinel heading `### Knowledge Boundaries`. `doctrine-tensions.md` contains only H3s (it concatenates under additive's H2) and the sentinel heading `### Anchor Repetition`. (Task 5's tests key on both sentinels; level-3 packets receive additive + tensions concatenated.)
 
-- [ ] **Step 1: Write `doctrine-additive.md`**
+- [x] **Step 1: Write `doctrine-additive.md`**
 
 Five H3 principles under `## Additional Construction Rules`, each an instruction (not a finding) with one wrong/right pair, sourced from dossier §3 quotes:
 
@@ -213,14 +213,14 @@ Five H3 principles under `## Additional Construction Rules`, each an instruction
 4. `### The Specification Boundary` — for each detail, decide: does it change behavior, or can it stay open? Specify what locks behavior; deliberately leave the rest open. This governs what you deliberately don't write; the no-hedging rule still governs what you do write.
 5. `### A Life in Motion` — the character carries independent ongoing pressures (money, family, obligations) that move without the player.
 
-- [ ] **Step 2: Write `doctrine-tensions.md`**
+- [x] **Step 2: Write `doctrine-tensions.md`**
 
 Two H3 exemptions, phrased as explicit overrides layered onto the base rules (so level-3 packets differ from level-2 only by these paragraphs):
 
 1. `### Emotional Memory Hooks` — exemption to the plain-style rule: up to a handful of compressed, specific, unresolved sensory fragments are allowed where they carry more behavioral weight than explanation. A hook is still concrete and observable; it is dense, not decorative.
 2. `### Anchor Repetition` — exemption to section discipline: a key anchor (a person, object, or loss) may be referenced from multiple sections to give it multiple activation routes. Reference, don't duplicate: the anchor's description lives once; other sections name it.
 
-- [ ] **Step 3: Verify**
+- [x] **Step 3: Verify**
 
 Run: `grep -inE "claude|anthropic|gpt|openai|reference doc|dossier|trial" trials/2026-07-writing-doctrine/src/doctrine-additive.md trials/2026-07-writing-doctrine/src/doctrine-tensions.md`
 Expected: no output.
@@ -231,7 +231,7 @@ Expected: `1`.
 Run: `grep -nE "^## " trials/2026-07-writing-doctrine/src/doctrine-tensions.md`
 Expected: no output.
 
-- [ ] **Step 4: Commit**
+- [x] **Step 4: Commit**
 
 ```bash
 git add trials/2026-07-writing-doctrine/src/doctrine-additive.md trials/2026-07-writing-doctrine/src/doctrine-tensions.md
@@ -250,7 +250,7 @@ git commit -m "trial-kit: doctrine blocks (additive + tensions)"
 - Consumes: the five `src/` files and their markers/sentinels from Tasks 1–4.
 - Produces: `build.py` writing `packet-1.md` … `packet-6.md` and `key.md` into its own directory by default, or into `sys.argv[1]` when given (tests build into a temp dir so the committed shuffle is not churned). Key format: markdown warning header, then a fenced block holding base64-encoded JSON `{"packet-N": {"style": "current"|"stopslop", "doctrine": "current"|"additive"|"tensions"}}`.
 
-- [ ] **Step 1: Write the failing test**
+- [x] **Step 1: Write the failing test**
 
 ```python
 import base64
@@ -329,12 +329,12 @@ if __name__ == "__main__":
     unittest.main()
 ```
 
-- [ ] **Step 2: Run test to verify it fails**
+- [x] **Step 2: Run test to verify it fails**
 
 Run: `python tests/test_build_trial_kit.py -v`
 Expected: setUpClass error — `build.py` not found / CalledProcessError.
 
-- [ ] **Step 3: Write `build.py`**
+- [x] **Step 3: Write `build.py`**
 
 ```python
 #!/usr/bin/env python3
@@ -402,12 +402,12 @@ if __name__ == "__main__":
     main()
 ```
 
-- [ ] **Step 4: Run tests to verify they pass**
+- [x] **Step 4: Run tests to verify they pass**
 
 Run: `python tests/test_build_trial_kit.py -v`
 Expected: 5 tests, `OK`.
 
-- [ ] **Step 5: Commit**
+- [x] **Step 5: Commit**
 
 ```bash
 git add trials/2026-07-writing-doctrine/build.py tests/test_build_trial_kit.py
@@ -424,7 +424,7 @@ git commit -m "trial-kit: packet build script with shuffle and sealed key"
 **Interfaces:**
 - Produces: the procedure the downstream orchestrator follows before dispatch; names `brief.md` as its output (README, Task 8, references both).
 
-- [ ] **Step 1: Write the procedure**
+- [x] **Step 1: Write the procedure**
 
 Content, in order:
 
@@ -435,12 +435,12 @@ Content, in order:
 
 The installed-skill ban applies to the six writing agents, not to this pre-trial Q&A — state that explicitly so the orchestrator doesn't over-apply it.
 
-- [ ] **Step 2: Verify neutrality**
+- [x] **Step 2: Verify neutrality**
 
 Run: `grep -inE "claude|anthropic|gpt|openai" trials/2026-07-writing-doctrine/brief-procedure.md`
 Expected: no output.
 
-- [ ] **Step 3: Commit**
+- [x] **Step 3: Commit**
 
 ```bash
 git add trials/2026-07-writing-doctrine/brief-procedure.md
@@ -457,7 +457,7 @@ git commit -m "trial-kit: brief-freezing procedure"
 **Interfaces:**
 - Produces: the sheet the user fills in; README (Task 8) hands it over as the final runner step.
 
-- [ ] **Step 1: Write the rubric**
+- [x] **Step 1: Write the rubric**
 
 Structure:
 
@@ -473,14 +473,14 @@ Structure:
    - Preference rank (1–6, forced, no ties).
 3. **Results record** — empty sections to fill after decoding: the decoded map pasted in; three decision blocks matching the spec's decision mapping (style axis: arms 1–3 vs 4–6; additive step: cells {current} vs {additive}; tensions step: cells {additive} vs {tensions}); an interactions note ("suggestive, not conclusive — one character per cell").
 
-- [ ] **Step 2: Verify**
+- [x] **Step 2: Verify**
 
 Run: `grep -inE "claude|anthropic|gpt|openai" trials/2026-07-writing-doctrine/rubric.md`
 Expected: no output.
 Run: `grep -c "packet-6" trials/2026-07-writing-doctrine/rubric.md`
 Expected: at least `1`.
 
-- [ ] **Step 3: Commit**
+- [x] **Step 3: Commit**
 
 ```bash
 git add trials/2026-07-writing-doctrine/rubric.md
@@ -498,7 +498,7 @@ git commit -m "trial-kit: scoring rubric and results record"
 **Interfaces:**
 - Consumes: everything from Tasks 1–7.
 
-- [ ] **Step 1: Write the runner README**
+- [x] **Step 1: Write the runner README**
 
 Addressed to the downstream project's orchestrating agent ("for future agents" voice, model-neutral). Contents, in order:
 
@@ -508,7 +508,7 @@ Addressed to the downstream project's orchestrating agent ("for future agents" v
 4. **Collect and hand off** — confirm six output files exist; give the human `rubric.md` and the `out/` folder; do not open `key.md` yourself; the human decodes it only after the rubric is fully scored.
 5. **Regeneration note** — packets and `key.md` are generated by `build.py` in the source repo; never hand-edit; a rebuild reshuffles the key, so never rebuild once outputs exist for the current packets.
 
-- [ ] **Step 2: Run the first real build**
+- [x] **Step 2: Run the first real build**
 
 Run: `python trials/2026-07-writing-doctrine/build.py`
 Expected: silent exit 0.
@@ -517,13 +517,13 @@ Expected: `README.md`, `brief-procedure.md`, `rubric.md`, `build.py`, `key.md`, 
 Run: `python tests/test_build_trial_kit.py -v`
 Expected: 5 tests, `OK` (tests build into a temp dir; the committed shuffle is untouched).
 
-- [ ] **Step 3: Kit prose review**
+- [x] **Step 3: Kit prose review**
 
 Read each non-generated kit file once against `docs/slop-phrases.md` and the plugin writing doctrine; fix hits in `src/` blocks, then re-run `python trials/2026-07-writing-doctrine/build.py` if any src file changed (a re-run reshuffles — acceptable before release; note it happened).
 Run: `grep -rinE "claude|anthropic|gpt|openai|gemini" trials/2026-07-writing-doctrine/ --include="*.md" --exclude=key.md`
 Expected: no output. (`key.md` is excluded: its base64 payload can contain any letter run by chance; the decoded map is covered by the unittest.)
 
-- [ ] **Step 4: Commit the complete kit**
+- [x] **Step 4: Commit the complete kit**
 
 ```bash
 git add trials/2026-07-writing-doctrine/
@@ -537,3 +537,12 @@ git commit -m "trial-kit: runner README and first sealed build"
 - Running the trial (downstream project's work, per README).
 - The results reflection document and doctrine fold-in edits (follow-up work after the trial; results doc is `--type reflection` per the registry).
 - Any edit to shipped skills, `defaults/`, or `docs/`.
+
+## Execution Record (2026-07-11)
+
+All 8 tasks complete over commits `d1e0f5b..c799821`; per-task reviews plus a final whole-branch review, verdict: ready to merge. Deviations from the plan as written:
+
+- The identical-frame test was strengthened beyond the plan's code: it now checks all three static base.md segments in order, not just the first line (`df7e807`); a committed-kit consistency test (6th test) was added by the final-review fix wave, closing the src-drift gap the plan's test spec missed.
+- Two rebuild/reshuffles beyond the planned first build: a per-task reviewer disclosed part of the shuffle, forcing a reshuffle (`ead4afa`); the final fix wave rebuilt again (`c799821`).
+- Final-review fixes the plan did not anticipate: an em-dash carve-out added identically to both style blocks plus de-dashed base.md example prose (the plan missed the entry-format/style-rule collision while catching the analogous When-formula one); a style-rules scope line in base.md; the README rerun-after-decode caveat; a rubric decode-timing reword.
+- Trial-run discipline recorded here for the scorer: before scoring, do not read the packet files, key.md, or any review artifacts containing packet contents — the mapping is derivable from packet content plus the design.
