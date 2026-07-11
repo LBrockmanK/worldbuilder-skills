@@ -12,8 +12,6 @@ filters:
   - or:
     - file.hasTag("human-ready")
     - file.hasTag("agent-ready")
-formulas:
-  status: if(file.hasTag("human-ready"), "human-ready", if(file.hasTag("agent-ready"), "agent-ready", ""))
 views:
 - type: table
   name: By type
@@ -23,10 +21,9 @@ views:
   order: &id001
   - file.name
   - type
-  - formula.status
+  - tags
   - title
   - description
-  - tags
   - timestamp
 - type: table
   name: human-ready
