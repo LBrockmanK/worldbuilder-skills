@@ -1,5 +1,6 @@
 # research
 
+* [Blind-trial kit implementation research](2026-07-11-blind-trial-kit-implementation-research.md) - Implementation research for the writing-doctrine blind-trial kit plan: current instruction-set inventory, stop-slop rule inventory, additive-principle source passages, repo conventions.
 * [Causal character writing for LLM roleplay: friction, engines, and trait-word poisoning](2026-07-11-causal-character-writing-for-llm-roleplay-friction-engines-and-trait-word-poisoning.md) - Key-info extraction from three community references on writing character cards for LLM roleplay: causal chains over trait lists, interaction constraint engines and emotional memory hooks, and the trait-word poisoning failure mode for intelligence-type adjectives. Includes a delta assessment against the worldbuilder character doctrine.
 * [Positive Style Model for AI Specification Writing: Recommendation and Survey](Anti Slop Research Results.md) - Research results recommending the screenwriting action-line convention as the primary named style model for suppressing AI slop in specification writing.
 * [Location, Faction, and Concept Note Depth for AI-Assisted Interactive Fiction Worldbuilding](Loc_Conc_Faction_Research Results.md) - Research results on writing location, faction, and concept notes as behavioral specifications for AI-assisted interactive fiction.
