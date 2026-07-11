@@ -5,9 +5,9 @@ description: 'Implementation plan for trials/2026-07-writing-doctrine/: source b
   packet build script with baked shuffle and sealed key, brief procedure, rubric,
   runner README.'
 tags:
-- human-ready
+- complete
 date: 2026-07-11
-timestamp: 2026-07-11T16:48Z
+timestamp: 2026-07-11T16:50Z
 resources:
 - '[[2026-07-11-writing-doctrine-blind-trial-kit]]'
 - '[[2026-07-11-blind-trial-kit-implementation-research]]'
