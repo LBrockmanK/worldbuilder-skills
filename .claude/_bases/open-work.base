@@ -1,18 +1,19 @@
 filters:
   and:
   - type != null
-  - not:
-    - file.inFolder("_bases")
-    - file.inFolder("_templates")
-    - file.inFolder("rules")
-    - file.name == "glossary.md"
-    - file.name == "inbox.md"
-    - file.name == "index.md"
-    - file.name == "log.md"
-    - file.name == "Home.md"
+  - '!file.inFolder("_bases")'
+  - '!file.inFolder("_templates")'
+  - '!file.inFolder("rules")'
+  - file.basename != "Home"
+  - file.basename != "glossary"
+  - file.basename != "inbox"
+  - file.basename != "index"
+  - file.basename != "log"
   - or:
     - file.hasTag("human-ready")
     - file.hasTag("agent-ready")
+formulas:
+  status: if(file.hasTag("human-ready"), "human-ready", if(file.hasTag("agent-ready"), "agent-ready", ""))
 views:
 - type: table
   name: By type
@@ -22,6 +23,7 @@ views:
   order: &id001
   - file.name
   - type
+  - formula.status
   - title
   - description
   - tags

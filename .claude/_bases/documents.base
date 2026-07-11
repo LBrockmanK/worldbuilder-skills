@@ -1,15 +1,14 @@
 filters:
   and:
   - type != null
-  - not:
-    - file.inFolder("_bases")
-    - file.inFolder("_templates")
-    - file.inFolder("rules")
-    - file.name == "glossary.md"
-    - file.name == "inbox.md"
-    - file.name == "index.md"
-    - file.name == "log.md"
-    - file.name == "Home.md"
+  - '!file.inFolder("_bases")'
+  - '!file.inFolder("_templates")'
+  - '!file.inFolder("rules")'
+  - file.basename != "Home"
+  - file.basename != "glossary"
+  - file.basename != "inbox"
+  - file.basename != "index"
+  - file.basename != "log"
 views:
 - type: table
   name: All documents

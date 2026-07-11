@@ -1,30 +1,23 @@
 filters:
   and:
   - file.ext == "md"
-  - not:
-    - file.inFolder("_bases")
-    - file.inFolder("_templates")
-    - file.inFolder("rules")
-    - file.name == "glossary.md"
-    - file.name == "inbox.md"
-    - file.name == "index.md"
-    - file.name == "log.md"
-    - file.name == "Home.md"
+  - '!file.inFolder("_bases")'
+  - '!file.inFolder("_templates")'
+  - '!file.inFolder("rules")'
+  - file.basename != "Home"
+  - file.basename != "glossary"
+  - file.basename != "inbox"
+  - file.basename != "index"
+  - file.basename != "log"
+formulas:
+  missing_status: if(!file.hasTag("human-ready") && !file.hasTag("agent-ready") && !file.hasTag("complete") && !file.hasTag("deprecated") && !file.hasTag("abandoned") && !file.hasTag("archived"), "✗", "")
+  missing_properties: if(type == null || type == "" || title == null || title == "" || description == null || description == "" || tags == null || date == null || timestamp == null || resources == null, "✗", "")
 views:
 - type: table
-  name: Missing status tag
-  filters: '!file.hasTag("human-ready") && !file.hasTag("agent-ready") && !file.hasTag("complete")
-    && !file.hasTag("deprecated") && !file.hasTag("abandoned") && !file.hasTag("archived")'
-  order: &id001
-  - file.name
-  - type
-  - title
-  - tags
-  - timestamp
-- type: table
-  name: Missing required properties
+  name: Non-compliant
   filters:
     or:
+    - '!file.hasTag("human-ready") && !file.hasTag("agent-ready") && !file.hasTag("complete") && !file.hasTag("deprecated") && !file.hasTag("abandoned") && !file.hasTag("archived")'
     - type == null || type == ""
     - title == null || title == ""
     - description == null || description == ""
@@ -32,4 +25,11 @@ views:
     - date == null
     - timestamp == null
     - resources == null
-  order: *id001
+  order:
+  - file.name
+  - formula.missing_status
+  - formula.missing_properties
+  - type
+  - title
+  - tags
+  - timestamp
