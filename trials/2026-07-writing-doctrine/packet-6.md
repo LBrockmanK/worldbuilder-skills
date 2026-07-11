@@ -167,6 +167,9 @@ beyond reacting to the player.
   brother has asked to borrow money again. Neither problem waits for
   anyone to ask about it."
 ## Style Rules
+
+Style rules govern sentence prose. Where a section mandates a format
+(Background fact pairs, relationship-entry prefixes), the format wins.
 ### Style Model
 
 Write behavioral descriptions the way a screenplay writes action lines: present tense, only what can be seen or heard in a scene, no internal states or significance announcements, short plain sentences.
@@ -260,6 +263,8 @@ Em-dashes are not used in the character note. Use periods instead. When two thou
 
 - Wrong: "He runs the market — has for twenty years — and knows every trader by name."
 - Right: "He has run the market for twenty years. He knows every trader by name."
+
+Exception: the `**Name — Archetype(s):**` relationship-entry prefix is required format, not prose. The ban covers sentences.
 
 #### Numbers as numerals
 
@@ -401,7 +406,7 @@ physicality is distinctive. Do not force entries.
 *Example:*
 
 - When she enters a room she doesn't know, she finds a wall or corner
-  first — she grew up visible in ways she didn't choose, and learned
+  first. She grew up visible in ways she didn't choose, and learned
   to make herself an observer before becoming a subject.
 
 ## Soul
@@ -438,7 +443,7 @@ resists."
 |---|---|---|
 | Confident | "She is confident." | "When challenged, she responds with certainty, treating doubt as a personal insult rather than a reasonable position." |
 | Stubborn | "He is stubborn." | "When someone pushes back, he doubles down. Changing his mind feels like losing, and he does not lose." |
-| Kind | "They are kind." | "When someone is struggling, they drop everything to help — partly because they care, partly because being needed is the only time they feel valuable." |
+| Kind | "They are kind." | "When someone is struggling, they drop everything to help, partly because they care, partly because being needed is the only time they feel valuable." |
 | Nervous | "She is anxious." | "In new social situations she over-prepares what to say, then abandons all of it and talks too fast. She apologizes for things that are not her fault." |
 
 Labels give the LLM one word to repeat. Behavioral descriptions force
@@ -479,7 +484,7 @@ with no subheadings.
 
 *Example social behavior entry:*
 - When meeting someone new, she asks questions and lets them fill the
-  space — she learned early that people reveal more when they think
+  space. She learned early that people reveal more when they think
   they're not being evaluated.
 
 If the character has a distinctive speech pattern, include one entry
@@ -669,7 +674,7 @@ behavioral description as prose sentence(s).
 *Example bullet:*
 ```
 - **Mira — Kin:** When Mira dismisses her ideas in front of others,
-  she doesn't argue — she brings the idea back later, one-on-one,
+  she doesn't argue. She brings the idea back later, one-on-one,
   where Mira has room to change her mind without losing face.
 ```
 
@@ -800,10 +805,10 @@ settling into a loop of escalation with no variation.
 *Example entries:*
 
 - When a partner moves slowly and waits for her, she relaxes in a way
-  she doesn't elsewhere — being met rather than pursued is the only
+  she doesn't elsewhere. Being met rather than pursued is the only
   context where she stops managing how she comes across.
 - When an encounter starts to feel scripted, she disengages and gets
-  quiet — she needs it to be real, and performance from the other
+  quiet. She needs it to be real, and performance from the other
   person collapses the thing she came for.
 
 ## Self-Check Before Finishing

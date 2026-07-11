@@ -92,6 +92,8 @@ Em-dashes are not used in the character note. Use periods instead. When two thou
 - Wrong: "He runs the market — has for twenty years — and knows every trader by name."
 - Right: "He has run the market for twenty years. He knows every trader by name."
 
+Exception: the `**Name — Archetype(s):**` relationship-entry prefix is required format, not prose. The ban covers sentences.
+
 #### Numbers as numerals
 
 Write 27, not twenty-seven. Write day 8, not the eighth day.

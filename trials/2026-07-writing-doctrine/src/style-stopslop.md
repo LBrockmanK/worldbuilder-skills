@@ -70,6 +70,8 @@ No em-dashes. Where a draft reaches for one to join two thoughts, split them int
 - Wrong: "She runs the shop alone — has for a decade — and trusts no one else with the keys."
 - Right: "She has run the shop alone for a decade. She trusts no one else with the keys."
 
+Exception: the `**Name — Archetype(s):**` relationship-entry prefix is required format, not prose. The ban covers sentences.
+
 ---
 
 ### Trust the Reader

@@ -166,7 +166,40 @@ beyond reacting to the player.
 - Right: "Rent is due at the end of the month and she is short. Her
   brother has asked to borrow money again. Neither problem waits for
   anyone to ask about it."
+
+### Emotional Memory Hooks
+
+Exception to the rule that behavioral descriptions stay plain and
+observable, with no internal states: a small number of compressed,
+specific, unresolved sensory fragments are allowed where they carry
+more behavioral weight than an explanation would. A hook is still
+concrete and observable — an object, a gesture, one remembered line of
+speech. It compresses; it does not decorate.
+
+- Wrong: "She carries deep unresolved trauma about her mother that
+  shapes everything she does."
+- Right: "The last thing she remembers of her mother: a hand on the
+  door latch, one word, run."
+
+### Anchor Repetition
+
+Exception to the rule that each section carries information the others
+don't, where redundancy between sections means content is in the wrong
+place: a key anchor — a person, an object, a loss — may be referenced
+from more than one section, so the character has multiple routes back
+to it. Reference the anchor; don't duplicate it. Its description lives
+once; other sections name it without redescribing it.
+
+- Wrong: describing the mentor's death in full, with the same details,
+  in both the origin section and the psychological section.
+- Right: the origin section states once that her mentor died in a fall
+  she didn't see. The psychological section names the same fall without
+  redescribing it: "when someone questions her judgment on a climb, she
+  goes quiet. She has been wrong about a fall before."
 ## Style Rules
+
+Style rules govern sentence prose. Where a section mandates a format
+(Background fact pairs, relationship-entry prefixes), the format wins.
 ### Cut Filler
 
 Delete phrases that announce importance instead of carrying it, and strip adverbs that pad a claim instead of sharpening it.
@@ -238,6 +271,8 @@ No em-dashes. Where a draft reaches for one to join two thoughts, split them int
 
 - Wrong: "She runs the shop alone — has for a decade — and trusts no one else with the keys."
 - Right: "She has run the shop alone for a decade. She trusts no one else with the keys."
+
+Exception: the `**Name — Archetype(s):**` relationship-entry prefix is required format, not prose. The ban covers sentences.
 
 ---
 
@@ -332,7 +367,7 @@ physicality is distinctive. Do not force entries.
 *Example:*
 
 - When she enters a room she doesn't know, she finds a wall or corner
-  first — she grew up visible in ways she didn't choose, and learned
+  first. She grew up visible in ways she didn't choose, and learned
   to make herself an observer before becoming a subject.
 
 ## Soul
@@ -369,7 +404,7 @@ resists."
 |---|---|---|
 | Confident | "She is confident." | "When challenged, she responds with certainty, treating doubt as a personal insult rather than a reasonable position." |
 | Stubborn | "He is stubborn." | "When someone pushes back, he doubles down. Changing his mind feels like losing, and he does not lose." |
-| Kind | "They are kind." | "When someone is struggling, they drop everything to help — partly because they care, partly because being needed is the only time they feel valuable." |
+| Kind | "They are kind." | "When someone is struggling, they drop everything to help, partly because they care, partly because being needed is the only time they feel valuable." |
 | Nervous | "She is anxious." | "In new social situations she over-prepares what to say, then abandons all of it and talks too fast. She apologizes for things that are not her fault." |
 
 Labels give the LLM one word to repeat. Behavioral descriptions force
@@ -410,7 +445,7 @@ with no subheadings.
 
 *Example social behavior entry:*
 - When meeting someone new, she asks questions and lets them fill the
-  space — she learned early that people reveal more when they think
+  space. She learned early that people reveal more when they think
   they're not being evaluated.
 
 If the character has a distinctive speech pattern, include one entry
@@ -600,7 +635,7 @@ behavioral description as prose sentence(s).
 *Example bullet:*
 ```
 - **Mira — Kin:** When Mira dismisses her ideas in front of others,
-  she doesn't argue — she brings the idea back later, one-on-one,
+  she doesn't argue. She brings the idea back later, one-on-one,
   where Mira has room to change her mind without losing face.
 ```
 
@@ -731,10 +766,10 @@ settling into a loop of escalation with no variation.
 *Example entries:*
 
 - When a partner moves slowly and waits for her, she relaxes in a way
-  she doesn't elsewhere — being met rather than pursued is the only
+  she doesn't elsewhere. Being met rather than pursued is the only
   context where she stops managing how she comes across.
 - When an encounter starts to feel scripted, she disengages and gets
-  quiet — she needs it to be real, and performance from the other
+  quiet. She needs it to be real, and performance from the other
   person collapses the thing she came for.
 
 ## Self-Check Before Finishing

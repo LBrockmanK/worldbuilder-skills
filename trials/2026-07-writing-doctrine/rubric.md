@@ -50,7 +50,7 @@ Column definitions:
 ## Results record
 
 Fill this section only after every cell in the scoring table above is
-filled, key included.
+filled, including the rank column. Then decode `key.md`.
 
 ### Decoded map
 

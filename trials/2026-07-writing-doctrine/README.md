@@ -37,4 +37,7 @@ human decodes it only after the rubric is fully scored.
 
 `build.py` in the source repo generates the packets and `key.md`.
 Never hand-edit either. A rebuild reshuffles the key, so never rebuild
-once outputs exist for the current packets.
+once outputs exist for the current packets. Rerunning the trial on
+another character after the key has been decoded is unblinded;
+rebuild the kit (fresh shuffle) in the source repo before any rerun
+once the key has been seen.

@@ -96,107 +96,11 @@ is in the wrong place.
 **Asymmetry in relationships is normal.** A named relationship does not
 require the other character to name it back. Write only what this
 character actually experiences.
-## Additional Construction Rules
 
-### Banned Trait Words
-
-Heavy trait adjectives — intelligent, analytical, arrogant, dominant, and
-words of that weight — may not appear anywhere in the note, in any
-section. One of these words outvotes a page of behavioral description
-and drags the character toward the stock type welded to that word. The
-fix is never a softer adjective. Replace the label with three things:
-the domain the character is competent in, the drive behind that
-competence, and a cost or flaw the competence produces.
-
-- Wrong: "She is highly intelligent and analytical."
-- Right: "She rereads every contract twice and catches the clause
-  everyone else missed, because one bad signature cost her a job at 24.
-  She cannot sign off on anything without checking it three times,
-  which makes her slow under pressure."
-
-### Knowledge Boundaries
-
-For every topic the character has expertise in, state where that
-expertise stops. Unbounded competence produces a character who somehow
-knows everything about everything, because nothing in the note says
-otherwise. Per-topic depth beats a global claim of intelligence.
-
-- Wrong: "She's the smartest person in the room and can handle anything
-  that comes up."
-- Right: "She can price a shipment of grain to the coin and knows which
-  merchants are lying about a bad harvest. She has never read a legal
-  contract and hands those to someone else without embarrassment."
-
-### Unresolved States
-
-The present must contain live, competing pulls, not settled facts. A
-resolved fact is a shortcut around the work of finding out who the
-character is right now; an unresolved tension forces that discovery in
-every scene. Leave the character's direction open: multiple futures the
-note supports, none of them chosen.
-
-- Wrong: "She has decided to leave the guild once the debt is paid."
-- Right: "She keeps a half-packed bag under her bed and adds to the
-  guild's ledger anyway. Some weeks she counts the debt down. Some
-  weeks she pays more than she owes."
-
-### The Specification Boundary
-
-For each detail, decide: does it change behavior, or can it stay open?
-Specify the details that lock behavior. Deliberately leave the rest
-unwritten. This is a different rule from the no-hedging rule: no-hedging
-governs what you commit to when you do write a fact. This rule governs
-what you deliberately choose not to write at all.
-
-- Wrong: "The house was pale green with a red door on the third street
-  past the mill, and the family kept a gray cart horse named Birch."
-  None of it changes how she behaves.
-- Right: "The house was cramped and the walls were thin." That fact
-  alone explains why she can't sleep with a door closed.
-
-### A Life in Motion
-
-The character carries independent ongoing pressures — money, family,
-obligations — that move on their own timeline whether or not the player
-is present. These pressures give the character something to act on
-beyond reacting to the player.
-
-- Wrong: a character whose only stated concerns are things the player
-  raises first.
-- Right: "Rent is due at the end of the month and she is short. Her
-  brother has asked to borrow money again. Neither problem waits for
-  anyone to ask about it."
-
-### Emotional Memory Hooks
-
-Exception to the rule that behavioral descriptions stay plain and
-observable, with no internal states: a small number of compressed,
-specific, unresolved sensory fragments are allowed where they carry
-more behavioral weight than an explanation would. A hook is still
-concrete and observable — an object, a gesture, one remembered line of
-speech. It compresses; it does not decorate.
-
-- Wrong: "She carries deep unresolved trauma about her mother that
-  shapes everything she does."
-- Right: "The last thing she remembers of her mother: a hand on the
-  door latch, one word, run."
-
-### Anchor Repetition
-
-Exception to the rule that each section carries information the others
-don't, where redundancy between sections means content is in the wrong
-place: a key anchor — a person, an object, a loss — may be referenced
-from more than one section, so the character has multiple routes back
-to it. Reference the anchor; don't duplicate it. Its description lives
-once; other sections name it without redescribing it.
-
-- Wrong: describing the mentor's death in full, with the same details,
-  in both the origin section and the psychological section.
-- Right: the origin section states once that her mentor died in a fall
-  she didn't see. The psychological section names the same fall without
-  redescribing it: "when someone questions her judgment on a climb, she
-  goes quiet. She has been wrong about a fall before."
 ## Style Rules
+
+Style rules govern sentence prose. Where a section mandates a format
+(Background fact pairs, relationship-entry prefixes), the format wins.
 ### Style Model
 
 Write behavioral descriptions the way a screenplay writes action lines: present tense, only what can be seen or heard in a scene, no internal states or significance announcements, short plain sentences.
@@ -290,6 +194,8 @@ Em-dashes are not used in the character note. Use periods instead. When two thou
 
 - Wrong: "He runs the market — has for twenty years — and knows every trader by name."
 - Right: "He has run the market for twenty years. He knows every trader by name."
+
+Exception: the `**Name — Archetype(s):**` relationship-entry prefix is required format, not prose. The ban covers sentences.
 
 #### Numbers as numerals
 
@@ -431,7 +337,7 @@ physicality is distinctive. Do not force entries.
 *Example:*
 
 - When she enters a room she doesn't know, she finds a wall or corner
-  first — she grew up visible in ways she didn't choose, and learned
+  first. She grew up visible in ways she didn't choose, and learned
   to make herself an observer before becoming a subject.
 
 ## Soul
@@ -468,7 +374,7 @@ resists."
 |---|---|---|
 | Confident | "She is confident." | "When challenged, she responds with certainty, treating doubt as a personal insult rather than a reasonable position." |
 | Stubborn | "He is stubborn." | "When someone pushes back, he doubles down. Changing his mind feels like losing, and he does not lose." |
-| Kind | "They are kind." | "When someone is struggling, they drop everything to help — partly because they care, partly because being needed is the only time they feel valuable." |
+| Kind | "They are kind." | "When someone is struggling, they drop everything to help, partly because they care, partly because being needed is the only time they feel valuable." |
 | Nervous | "She is anxious." | "In new social situations she over-prepares what to say, then abandons all of it and talks too fast. She apologizes for things that are not her fault." |
 
 Labels give the LLM one word to repeat. Behavioral descriptions force
@@ -509,7 +415,7 @@ with no subheadings.
 
 *Example social behavior entry:*
 - When meeting someone new, she asks questions and lets them fill the
-  space — she learned early that people reveal more when they think
+  space. She learned early that people reveal more when they think
   they're not being evaluated.
 
 If the character has a distinctive speech pattern, include one entry
@@ -699,7 +605,7 @@ behavioral description as prose sentence(s).
 *Example bullet:*
 ```
 - **Mira — Kin:** When Mira dismisses her ideas in front of others,
-  she doesn't argue — she brings the idea back later, one-on-one,
+  she doesn't argue. She brings the idea back later, one-on-one,
   where Mira has room to change her mind without losing face.
 ```
 
@@ -830,10 +736,10 @@ settling into a loop of escalation with no variation.
 *Example entries:*
 
 - When a partner moves slowly and waits for her, she relaxes in a way
-  she doesn't elsewhere — being met rather than pursued is the only
+  she doesn't elsewhere. Being met rather than pursued is the only
   context where she stops managing how she comes across.
 - When an encounter starts to feel scripted, she disengages and gets
-  quiet — she needs it to be real, and performance from the other
+  quiet. She needs it to be real, and performance from the other
   person collapses the thing she came for.
 
 ## Self-Check Before Finishing
