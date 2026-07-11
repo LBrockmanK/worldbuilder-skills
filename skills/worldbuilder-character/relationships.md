@@ -8,7 +8,7 @@
 
 A relationship defined by emotional tone gives the LLM nothing actionable. A relationship defined by behavioral dynamic gives the LLM an engine that fires in every scene where that person appears or is mentioned.
 
-**The core rule:** Specify the current behavioral dynamic of each relationship, not its history. History belongs in the character's Environment section; the relationship entry contains what the relationship looks like right now and what it makes the character do.
+**The core rule:** Specify the current behavioral dynamic of each relationship, not its history. History belongs in the character's Background section; the relationship entry contains what the relationship looks like right now and what it makes the character do.
 
 **The most generative relationships** are those where the character wants two incompatible things from the same person simultaneously. A rival who secretly admires. A mentor who fears being surpassed. A friend who needs to betray. Every scene requires the LLM to navigate between competing impulses.
 
