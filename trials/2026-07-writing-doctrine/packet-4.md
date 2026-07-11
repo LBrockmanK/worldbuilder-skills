@@ -166,213 +166,114 @@ beyond reacting to the player.
 - Right: "Rent is due at the end of the month and she is short. Her
   brother has asked to borrow money again. Neither problem waits for
   anyone to ask about it."
-
-### Emotional Memory Hooks
-
-Exception to the rule that behavioral descriptions stay plain and
-observable, with no internal states: a small number of compressed,
-specific, unresolved sensory fragments are allowed where they carry
-more behavioral weight than an explanation would. A hook is still
-concrete and observable — an object, a gesture, one remembered line of
-speech. It compresses; it does not decorate.
-
-- Wrong: "She carries deep unresolved trauma about her mother that
-  shapes everything she does."
-- Right: "The last thing she remembers of her mother: a hand on the
-  door latch, one word, run."
-
-### Anchor Repetition
-
-Exception to the rule that each section carries information the others
-don't, where redundancy between sections means content is in the wrong
-place: a key anchor — a person, an object, a loss — may be referenced
-from more than one section, so the character has multiple routes back
-to it. Reference the anchor; don't duplicate it. Its description lives
-once; other sections name it without redescribing it.
-
-- Wrong: describing the mentor's death in full, with the same details,
-  in both the origin section and the psychological section.
-- Right: the origin section states once that her mentor died in a fall
-  she didn't see. The psychological section names the same fall without
-  redescribing it: "when someone questions her judgment on a climb, she
-  goes quiet. She has been wrong about a fall before."
 ## Style Rules
-### Style Model
+### Cut Filler
 
-Write behavioral descriptions the way a screenplay writes action lines: present tense, only what can be seen or heard in a scene, no internal states or significance announcements, short plain sentences.
+Delete phrases that announce importance instead of carrying it, and strip adverbs that pad a claim instead of sharpening it.
 
-**The staging test:** Can a director stage this sentence? If not, rewrite it.
+- Wrong: "It's worth noting that she essentially runs the kitchen."
+- Right: "She runs the kitchen."
 
-- Fails: "She carries grief she has never articulated."
-- Passes: "She changes the subject and starts wiping down the counter."
+Ban these groups outright:
 
-For vocabulary, apply Orwell's rule from "Politics and the English Language": shortest Anglo-Saxon word that does the job, active voice, cut every word that can go.
+- Throat-clearers: "here's the thing," "it's worth noting," "the truth is," "let me be clear."
+- Emphasis crutches: "full stop," "make no mistake," "let that sink in," "I promise."
+- Jargon standing in for a plain verb: "navigate," "unpack," "lean into," "deep dive," "circle back."
+- Adverbs of degree: "really," "just," "genuinely," "truly," "deeply," "actually," "simply," "honestly."
+- Vague declaratives: "the stakes are high," "the reasons are structural," "the implications are significant."
 
----
-
-### Word Choice
-
-#### Use the simplest precise word
-
-If a plain word does the job, use it. Don't reach for a longer or more formal word to sound authoritative.
-
-| Avoid | Use instead |
-|---|---|
-| perceive, observe | see, notice |
-| demonstrate | show |
-| melancholic | sad |
-| contemplative | thoughtful |
-| gregarious | outgoing |
-| reticent | quiet, guarded |
-| reside | live |
-| endeavour | try |
-| facilitate | help |
-| utilize | use |
-| exhibits | shows |
-| maintains | keeps, has |
-
-When in doubt: would a plain-spoken person use this word in a work meeting? If not, find the word they would.
-
-#### Use "is" and "has": avoid copula avoidance
-
-Use "is" and "has" directly. Don't substitute elaborate constructions.
-
-- Wrong: "The settlement serves as a waypoint for traders."
-- Right: "The settlement is a waypoint for traders."
-- Wrong: "The building boasts three floors and a cellar."
-- Right: "The building has three floors and a cellar."
-
-"Serves as," "stands as," "functions as," "boasts," "features" are circumlocutions. The simple verb is clearer.
-
-#### No significance inflation
-
-Don't add statements about importance, legacy, or meaning. If something matters, the facts make that clear without announcement.
-
-- Wrong: "The founding betrayal is a pivotal moment that underscores the community's enduring wound."
-- Right: "Three families left after the betrayal. The ones who stayed have never discussed it publicly."
-
-"Pivotal," "enduring," "testament," "underscores," "highlights," "reflects broader": cut them. They add length without adding information.
+- Wrong: "She genuinely just wants to help, honestly."
+- Right: "She wants to help."
 
 ---
 
-### Sentence Structure
+### Break Formulaic Structures
 
-#### Write positive statements
+Don't build a sentence around a rhetorical shape. State the fact the shape was gesturing at.
 
-State what something IS. Don't open with "not X."
+- Wrong: "She isn't cold. She's careful."
+- Right: "She checks a stranger's story twice before she trusts it."
 
-- Wrong: "She is not warm or friendly at first."
-- Right: "She is guarded with strangers. She is watchful, brief, slow to smile."
+Avoid negative listing ("Not a leader. Not a follower. A watcher."). Name the one thing instead. Avoid dramatic fragmentation ("A scar. That's it. That's the whole story."). Write the sentence in full. Avoid rhetorical setups ("Here's what happens when she's cornered:"). Describe what happens instead. Avoid false agency, where an abstraction acts instead of a person.
 
-Negative constructions give the AI one mode (avoidance) instead of something to generate from. Positive statements give behavioral texture.
-
-#### Prefer verbs over nominalizations
-
-Keep actions as verbs. Don't convert them into nouns.
-
-- Wrong: "The implementation of the change resulted in a reduction in complaints."
-- Right: "The change cut complaints."
-
-#### Keep sentences short enough to parse on first read
-
-One idea per sentence when ideas are distinct. If a sentence has two clauses, check whether the second earns its place or whether it reads cleaner on its own.
-
-#### No em-dashes
-
-Em-dashes are not used in the character note. Use periods instead. When two thoughts are joined by an em-dash, split them into two sentences.
-
-**Hedging clause pattern:**
-
-- Wrong: "She is guarded with strangers — watchful, brief, slow to smile — and opens up only when she feels safe."
-- Right: "She is guarded with strangers. She is watchful, brief, slow to smile. She opens up only when she feels safe."
-
-**Mid-sentence interruption pattern:**
-
-- Wrong: "He runs the market — has for twenty years — and knows every trader by name."
-- Right: "He has run the market for twenty years. He knows every trader by name."
-
-#### Numbers as numerals
-
-Write 27, not twenty-seven. Write day 8, not the eighth day.
+- Wrong: "The tension in the room forces her hand."
+- Right: "She grabs the ledger and walks out before the argument finishes."
 
 ---
 
-### Content Standards
+### Active Voice, Human Subject
 
-#### Describe behavior, not labels
+Every sentence names the person doing the thing. No passive constructions that let the actor disappear.
 
-Name what something *does*, not what it *is* in the abstract.
+- Wrong: "The register was left unlocked overnight."
+- Right: "She left the register unlocked overnight."
 
-- Label: "She tends to be evasive."
-- Behavior: "She deflects personal questions by turning them back on the asker."
-
-Labels give the AI a category to file under. Behaviors give it something to enact.
-
-#### Make claims verifiable or behavioral
-
-A claim in the character note should be something that can be checked against the world or enacted in a scene. Abstract claims are weak. Concrete claims are strong.
-
-- Weak: "The region has a troubled history."
-- Strong: "Three of the four founding families lost someone in the flood of Year 12."
-
-Ask: what would the AI do differently in a scene because of this statement? If the answer is "nothing specific," the statement is probably too abstract.
-
-#### No flair
-
-Metaphor, evocative language, and atmospheric color belong in prose outputs. In the character note they are noise. State the thing directly.
-
-- Wrong: "Her silence stretches like frost across the room."
-- Right: "She goes quiet when this subject comes up and doesn't re-engage until it passes."
-
-#### No -ing padding
-
-Don't tack present participle phrases onto sentences to add apparent depth.
-
-- Wrong: "He keeps to himself, reflecting his distrust of outsiders and underscoring the community's broader insularity."
-- Right: "He keeps to himself. He doesn't trust outsiders. Most of the community is the same way."
-
-Each thought is its own sentence.
-
-#### Single source of truth
-
-Each fact lives in one place. Other documents reference it by naming it, not by restating it.
-
-Don't describe a character in a location note because they're connected to that location. Name the connection; keep the description in the character's own document. Don't paraphrase what another note says. Link to it by name.
-
-#### Don't describe one entity in another entity's document
-
-A character note describes that character's experience. A location note describes the location. A relationship entry describes what *this* character feels, thinks, and does. It is not a description of the other party.
-
-- Wrong (in Mira's notes): "Jonas is a quiet, solitary man who keeps to himself."
-- Right (in Mira's notes): "She trusts Jonas more than she admits, and resents that she does."
-
-The description of Jonas belongs in Jonas's own notes.
+- Wrong: "Mistakes were made with the inventory count."
+- Right: "She miscounted the inventory twice in one month."
 
 ---
 
-### Structure
+### Be Specific
 
-Structure is expected in the character note. Use headers, bullets, and tables where they help clarity and scanning. Don't use them decoratively.
+Cut vague intensity words used as a substitute for a fact: "very," "extremely," "incredibly," or blanket claims like "everyone trusts her" that no scene could verify.
 
-Use bullets for discrete parallel items. Use prose for reasoning, relationships, or anything where the connection between ideas matters.
+- Wrong: "She's extremely reliable and everyone counts on her."
+- Right: "She has covered every missed shift on the schedule for three years running."
+
+This doesn't ban true routines. "Always counts the till twice" or "never opens the shop before 7" is a behavior, not a lazy extreme. Keep frequency words when they describe something the character actually, verifiably does every time. The ban is on intensity as decoration, not on stating a real habit.
+
+- Wrong: "She's basically the most careful person in the building."
+- Right: "She always counts the till twice before she locks it."
 
 ---
 
-### Four Failure Modes
+### Vary Rhythm
 
-Check for all four before finalizing any document.
+Mix short and long sentences instead of settling into one length. When listing traits or examples, use two items, not three. Three reads as a formula.
 
-**1. Latinate or formal vocabulary.**
-Scan for -tion, -ity, -ence, -ance endings and formal synonyms. Replace with plain equivalents.
+- Wrong: "She is patient, careful, and thorough in everything she does."
+- Right: "She is patient and careful. She rechecks work other people would call finished."
 
-**2. Negative constructions.**
-Search for "not," "never," "without," "lacks," "no X" in descriptions. Rewrite as positive behavioral statements.
+No em-dashes. Where a draft reaches for one to join two thoughts, split them into two sentences instead.
 
-**3. Labels without behaviors.**
-Any word or phrase that names a quality without showing how it manifests. What does the character *do* because they are "ambitious"? That's the statement worth keeping.
+- Wrong: "She runs the shop alone — has for a decade — and trusts no one else with the keys."
+- Right: "She has run the shop alone for a decade. She trusts no one else with the keys."
 
-**4. Literary flair.**
-Metaphor, atmospheric construction, or evocative phrasing in the character note. Say the thing directly.
+---
+
+### Trust the Reader
+
+State the fact and stop. Don't soften it, don't justify it, and don't comment on the fact instead of giving it.
+
+- Wrong: "She yells at new hires, which, to be fair, is understandable given how short-staffed the shop is."
+- Right: "She yells at new hires."
+
+Cut meta-commentary ("Here's the interesting part:", "You'd think this would bother her, but"). It tells the reader how to feel about a fact instead of giving the fact.
+
+- Wrong: "Plot twist: she's the one who reported her own brother."
+- Right: "She reported her own brother."
+
+---
+
+### Cut Quotables
+
+If a sentence sounds like it was written to be pulled out and admired, rewrite it as a plain statement of what happens.
+
+- Wrong: "Trust, to her, is a debt that compounds and is rarely repaid in full."
+- Right: "She remembers who owes her a favor and who has never paid one back."
+
+---
+
+### Sentence Openers
+
+Don't open a sentence with "What," "Why," "So," or "Look" to manufacture rhetorical momentum. State the point directly.
+
+- Wrong: "So why does she keep the shop open on days it loses money? Look, it's about her father."
+- Right: "She keeps the shop open on days it loses money because her father died in the back room."
+
+Exempt the note's own formula. "When [trigger], [behavior], because [reason]" sentences open with "When" by design and aren't covered by this ban. The ban targets rhetorical openers used for effect, not the formula the note is built on.
+
+- Right: "When a customer questions the price, she repeats the number once and doesn't explain it again, because she decided years ago that explaining invites haggling."
 ## Background
 
 Where this character comes from. This section is different in kind
