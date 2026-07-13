@@ -1,6 +1,6 @@
 ---
 name: worldbuilder-concept
-description: Use when writing concept notes for an AI-powered narrative game — establishing surface facts, mid-layer history, deep secrets, or background NPC guidelines. Also use when a concept note feels too broad or too narrow, or when deciding what layer a piece of world knowledge belongs on.
+description: Use when writing concept notes for an AI-powered narrative game — surface facts, mid-layer history, deep secrets, or background NPC guidelines. Also when a concept note feels too broad or narrow, or when deciding what layer knowledge belongs on.
 ---
 
 # Lorebook

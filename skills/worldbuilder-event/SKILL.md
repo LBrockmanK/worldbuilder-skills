@@ -1,6 +1,6 @@
 ---
 name: worldbuilder-event
-description: Use when creating or deepening an event note for an AI-powered narrative game — festivals, seasonal observances, calendar events, cultural rituals, historical commemorations, or any recurring world event. Also use when an event note feels thin, generic, or is failing to generate distinctive scene behavior.
+description: Use when creating or deepening an event note for an AI-powered narrative game — festivals, calendar events, rituals, commemorations, recurring events. Also when an event note feels thin or generic, or fails to generate distinctive scene behavior.
 ---
 
 # Event Notes

@@ -1,0 +1,10 @@
+# doodle-lint config for worldbuilder-skills.
+#
+# body/absolute-user-path is disabled per-path where `~/` references are
+# verified-portable: they point at Claude Code's user-level config
+# (~/.claude/plugins/...), the canonical location on every machine —
+# the user-relative form IS the portable form there.
+
+[[paths]]
+glob = "skills/worldbuilder-setup/SKILL.md"
+disabled = ["body/absolute-user-path"]

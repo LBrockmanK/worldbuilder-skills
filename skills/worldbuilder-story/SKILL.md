@@ -1,6 +1,6 @@
 ---
 name: worldbuilder-story
-description: Use when writing arc notes and intention notes for an AI-powered narrative game, or when producing direction.md in Phase 1. Also use when LLM output escalates too fast, when romantic or dramatic intensity feels unearned, when dark content is handled carelessly, or when scenes lack pacing variation.
+description: Use when writing arc or intention notes for an AI-powered narrative game, or producing direction.md in Phase 1. Also when output escalates too fast, intensity feels unearned, dark content is handled carelessly, or pacing lacks variation.
 ---
 
 # Story
