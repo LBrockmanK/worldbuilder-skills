@@ -16,8 +16,8 @@ jobs:
       - run: python -m pip install pytest
       - run: python -m pytest tests -q
   skill-lint:
-    # doodle-lint over this repo's skills. Gate on errors only for now
-    # (exit 2+); pre-existing warnings are tracked in the fleet inbox.
+    # doodle-lint over this repo's skills. Strict: warnings fail the
+    # build (all repos linted clean 2026-07-14).
     runs-on: windows-latest
     steps:
       - uses: actions/checkout@v4
@@ -25,6 +25,4 @@ jobs:
         with:
           python-version: '3.12'
       - run: python -m pip install doodle-lint
-      - run: |
-          doodle skills
-          if ($LASTEXITCODE -ge 2) { exit $LASTEXITCODE } else { exit 0 }
+      - run: doodle --strict skills
