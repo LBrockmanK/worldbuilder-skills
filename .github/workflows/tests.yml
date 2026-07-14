@@ -17,12 +17,14 @@ jobs:
       - run: python -m pytest tests -q
   skill-lint:
     # doodle-lint over this repo's skills. Strict: warnings fail the
-    # build (all repos linted clean 2026-07-14).
+    # build (linted clean 2026-07-14). Version pinned: a gate must not
+    # change rules on PyPI's schedule — upgrade deliberately (1.0.0's
+    # desc/typo flags project vocabulary).
     runs-on: windows-latest
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v5
         with:
           python-version: '3.12'
-      - run: python -m pip install doodle-lint
+      - run: python -m pip install doodle-lint==0.5.0
       - run: doodle --strict skills
