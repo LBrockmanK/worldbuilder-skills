@@ -44,7 +44,7 @@ Thin Body sections are acceptable when nothing about a character's physicality i
 
 *Example:*
 
-- When she enters a room she doesn't know, she finds a wall or corner first — she grew up visible in ways she didn't choose, and learned to make herself an observer before becoming a subject.
+- When she enters a room she doesn't know, she finds a wall or corner first. She grew up visible in ways she didn't choose, and learned to make herself an observer before becoming a subject.
 
 ---
 
@@ -73,7 +73,7 @@ The Because clause earns a limited exemption. It may name an internal state if t
 |---|---|---|
 | Confident | "She is confident." | "When challenged, she responds with certainty, treating doubt as a personal insult rather than a reasonable position." |
 | Stubborn | "He is stubborn." | "When someone pushes back, he doubles down. Changing his mind feels like losing, and he does not lose." |
-| Kind | "They are kind." | "When someone is struggling, they drop everything to help — partly because they care, partly because being needed is the only time they feel valuable." |
+| Kind | "They are kind." | "When someone is struggling, they drop everything to help, partly because they care, partly because being needed is the only time they feel valuable." |
 | Nervous | "She is anxious." | "In new social situations she over-prepares what to say, then abandons all of it and talks too fast. She apologizes for things that are not her fault." |
 
 Labels give the LLM one word to repeat. Behavioral descriptions force it to generate language that fits the behavior — dramatically more varied output.
@@ -98,7 +98,7 @@ Soul covers two areas. Write them together as a single bullet list with no subhe
 - Relationship-type variation if it exists (with authority figures vs. peers vs. someone they're protecting)
 
 *Example social behavior entry:*
-- When meeting someone new, she asks questions and lets them fill the space — she learned early that people reveal more when they think they're not being evaluated.
+- When meeting someone new, she asks questions and lets them fill the space. She learned early that people reveal more when they think they're not being evaluated.
 
 If the character has a distinctive speech pattern, include one entry describing it concretely.
 
