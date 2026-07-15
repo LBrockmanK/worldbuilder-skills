@@ -74,6 +74,7 @@ Behavioral: `priority`, `deferred`
 
 - Reviewable content (designs, proposals, decisions) must be written to a vault document before asking for approval — link the file in the ask, not inline text.
 - Place the review material and the approval question in the final message block of your turn — mid-turn text can collapse unseen in the desktop app.
+- Explain each decision in full sentences in the ask — do not compress the reasoning into one-line option chips.
 - Never link a file that is not on disk yet.
 
 ## Consuming the vault
