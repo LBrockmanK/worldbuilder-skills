@@ -5,6 +5,11 @@
 # (~/.claude/plugins/...), the canonical location on every machine —
 # the user-relative form IS the portable form there.
 
+# Project vocabulary the desc/typo spellcheck (doodle >= 1.0.0) must not
+# flag as misspellings. Case-insensitive; add words as they get flagged.
+[spelling]
+allow = ["scraibe", "okf", "worldbuilder", "worldbuilding", "ainime", "rpg", "npc"]
+
 [[paths]]
 glob = "skills/worldbuilder-setup/SKILL.md"
 disabled = ["body/absolute-user-path"]
