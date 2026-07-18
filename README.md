@@ -1,5 +1,7 @@
 # worldbuilder-skills
 
+[![tests](https://github.com/LBrockmanK/worldbuilder-skills/actions/workflows/tests.yml/badge.svg?branch=master)](https://github.com/LBrockmanK/worldbuilder-skills/actions/workflows/tests.yml)
+
 Claude Code skills for building a game world on the [ainime-games.com](https://ainime-games.com) world builder platform. Install these skills once; run them in Claude Code to get an AI-assisted worldbuilding pipeline from blank page to finished export.
 
 **Requires the scraibe plugin.** Scraibe owns file management — document creation, frontmatter enforcement, status lifecycle, inbox, and audit. This plugin ships the worldbuilding craft skills and an OKF preset; without scraibe installed it does nothing.
