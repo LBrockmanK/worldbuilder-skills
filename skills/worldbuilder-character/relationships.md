@@ -60,7 +60,7 @@ Each archetype is defined by its behavioral signature — the specific way it ch
 
 **The goal is variety, not accurate labeling.** When assigning archetypes, the question is not "which archetype fits this person best?" but "does the full set of relationships cover a wide range of behavioral modes?" A character whose relationships are all Community Thread, Kin, and Confidant will produce narrow, repetitive LLM output regardless of how accurately each label fits.
 
-**The ideal is no repeats.** No archetype should appear twice across a character's full relationship list, counting every tag on every entry. There are 12 archetypes against 8 named relationships for a major character and 5 for a supporting one, so a set with no repeats has room to spare, though tagging an entry with more than one archetype uses that room up faster. Treat every repeat as a signal to reconsider before accepting it: is the framing too loose, or is there a more specific archetype that would better serve behavioral variety? Where a repeat survives that check, no archetype may appear more than twice.
+**The ideal is no repeats.** No archetype should appear twice across a character's full relationship list, counting every tag on every entry. With 12 archetypes and 8 named relationships for a major character, one tag per entry leaves room to spare. Two tags on every entry does not: 16 tags against a pool that Community Thread's single-use cap already narrows will force repeats. Give an entry a second archetype only where the second one earns its place. Treat every repeat as a signal to reconsider before accepting it: is the framing too loose, or is there a more specific archetype that would better serve behavioral variety? Where a repeat survives that check, no archetype may appear more than twice.
 
 **Community Thread is a last resort.** It is the lowest-generativity archetype and the easiest one to over-apply because it fits almost any low-intensity relationship. Use it only for relationships where no higher-generativity archetype is even partially applicable. If you find yourself reaching for Community Thread more than once on a single character, stop — the relationship likely has a more specific texture worth naming.
 
@@ -84,7 +84,7 @@ Each entry is 2–4 sentences describing the character's own experience of this 
 Consider which relational model the character applies to each relationship:
 
 - **Communal Sharing** — what's mine is yours; violation = betrayal or exclusion
-- **Authority Ranking** — hierarchy with pastoral care downward, deference upward; violation = tyranny or insubordination
+- **Authority Ranking** — hierarchy with pastoral care downward, deference upward; violation = tyranny or insubordination. This is a lens on how the relationship works, not an archetype label: the archetype for the downward direction is Charge, not Authority.
 - **Equality Matching** — reciprocity, turn-taking, score-keeping; violation = failure to reciprocate
 - **Market Pricing** — cost-benefit assessment; violation = exploitation or breach of contract
 

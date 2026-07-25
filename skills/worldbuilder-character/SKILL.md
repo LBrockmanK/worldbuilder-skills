@@ -81,7 +81,7 @@ The Q&A ends when the agent has confident, specific answers across all coverage 
 
 ## Writing Rules
 
-These rules apply to all behavioral sections (Body, Soul, Relationships, Intimate Dynamics):
+These rules apply to all behavioral sections (Body, Soul, Relationships, Intimate Dynamics). Two of them reach further and say so in their own text: the ban on heavy trait adjectives and the rule on deciding what not to specify apply to every section, Background included.
 
 **Make decisions, don't hedge.** Every fact in the note is a decision. Never write "X or Y" or "grew up somewhere, perhaps Y" unless the ambiguity is a deliberate mystery being preserved. If you don't know, ask the user.
 
@@ -163,7 +163,6 @@ The note stays on an open status tag while work is in progress; mark it `complet
 **Soul**
 - [ ] 3–5 psychological behavioral entries minimum
 - [ ] 2–3 general social behavior entries minimum
-- [ ] 1 standing-pressure entry minimum, plus a boundary entry for each stated expertise
 - [ ] One contradiction stated as a behavioral description
 - [ ] Irrational behavior with emotional root present
 - [ ] Self-image gap expressed as behavioral description
