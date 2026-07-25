@@ -64,6 +64,25 @@ Don't add statements about importance, legacy, or meaning. If something matters,
 
 "Pivotal," "enduring," "testament," "underscores," "highlights," "reflects broader": cut them. They add length without adding information.
 
+Vague declaratives are the same move in sentence form: "the stakes are high," "the reasons are structural," "the implications are significant." Each one announces that something matters without saying what it is. Cut the sentence and state the fact it was standing in for.
+
+### Cut filler
+
+Delete phrases that announce importance instead of carrying it, and strip adverbs that pad a claim instead of sharpening it.
+
+- Wrong: "It's worth noting that she essentially runs the kitchen."
+- Right: "She runs the kitchen."
+
+Cut these groups outright:
+
+- Throat-clearers: "here's the thing," "it's worth noting," "the truth is," "let me be clear."
+- Emphasis crutches: "full stop," "make no mistake," "let that sink in," "I promise."
+- Jargon standing in for a plain verb: "navigate," "unpack," "lean into," "deep dive," "circle back."
+- Adverbs of degree: "really," "just," "genuinely," "truly," "deeply," "actually," "simply," "honestly."
+
+- Wrong: "She genuinely just wants to help, honestly."
+- Right: "She wants to help."
+
 ---
 
 ## Sentence Structure
