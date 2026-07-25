@@ -95,11 +95,11 @@ Wherever the blueprint states the character has expertise, state where that expe
 The character carries ongoing pressures of their own — money, family, obligations — that move on their own timeline whether or not the player is present. These give the character something to act on beyond reacting to the player. They are standing pressures in the present, not scheduled events: a debt already owed and a letter already unanswered are starting state, while a betrayal the character has not yet committed is a forward reference and belongs in a story note. The pressure goes in the Soul bullet list as a behavioral description, not as a standalone note.
 
 - Wrong: a character whose only stated concerns are things the player raises first.
-- Right: "Rent is due at the end of the month and she is short. Her brother has asked to borrow money again. Neither problem waits for anyone to ask about it."
+- Right: "She counts the rent money twice a week and moves the short amount between two jars. When her brother's name comes up she changes the subject and starts sorting the mail."
 
 ### Coverage
 
-Soul covers two areas. Write them together as a single bullet list with no subheadings.
+Soul covers three areas. Write them together as a single bullet list with no subheadings.
 
 **Psychological patterns (3–5 entries minimum):**
 - Emotional triggers and responses
@@ -118,6 +118,10 @@ Soul covers two areas. Write them together as a single bullet list with no subhe
 
 *Example social behavior entry:*
 - When meeting someone new, she asks questions and lets them fill the space. She learned early that people reveal more when they think they're not being evaluated.
+
+**Boundaries and ongoing pressures (2 entries minimum):**
+- Where a stated expertise stops — what the character does when a question falls outside it
+- A standing pressure of the character's own, shown through what they do about it
 
 If the character has a distinctive speech pattern, include one entry describing it concretely.
 
