@@ -60,11 +60,11 @@ Each archetype is defined by its behavioral signature — the specific way it ch
 
 **The goal is variety, not accurate labeling.** When assigning archetypes, the question is not "which archetype fits this person best?" but "does the full set of relationships cover a wide range of behavioral modes?" A character whose relationships are all Community Thread, Kin, and Confidant will produce narrow, repetitive LLM output regardless of how accurately each label fits.
 
-**Per-character repetition limit:** No single archetype should appear more than once or twice across a character's full relationship list. If an archetype is applied more than twice, treat that as a signal to reconsider: is the framing too loose, or is there a more specific archetype that would better serve behavioral variety?
+**The ideal is no repeats.** Every relationship should carry a different archetype. A major character has 8 named relationships and there are 12 archetypes to draw on, so a full set with no repeats is achievable, and a supporting character's 5 relationships more so. Treat every repeat as a signal to reconsider before accepting it: is the framing too loose, or is there a more specific archetype that would better serve behavioral variety? Where a repeat survives that check, no archetype may appear more than twice.
 
 **Community Thread is a last resort.** It is the lowest-generativity archetype and the easiest one to over-apply because it fits almost any low-intensity relationship. Use it only for relationships where no higher-generativity archetype is even partially applicable. If you find yourself reaching for Community Thread more than once on a single character, stop — the relationship likely has a more specific texture worth naming.
 
-**Self-check before finalizing:** Scan the full relationship list and count how many times each archetype appears. If any archetype appears three or more times, revisit those entries. If Community Thread appears more than once, reconsider the weaker entry. Aim for at least 4–5 distinct archetypes across the full set.
+**Self-check before finalizing:** Scan the full relationship list and count how many times each archetype appears. Every repeat is worth revisiting. An archetype appearing three or more times is a defect, not a tolerance. If Community Thread appears more than once, reconsider the weaker entry. A major character's 8 relationships should ideally use 8 distinct archetypes.
 
 ---
 
@@ -137,7 +137,7 @@ Before marking the relationships section complete:
 
 1. **Behavioral coverage check:** "If this character appeared in a scene with any named cast member, does the card give the LLM a specific behavioral instruction for that interaction?"
 
-2. **Archetype distribution scan:** Count how many times each archetype appears across the full relationship list. Flag any archetype used three or more times for revision. Flag any Community Thread entry beyond the first — these are the lowest-value entries and should be replaced with something more specific when possible.
+2. **Archetype distribution scan:** Count how many times each archetype appears across the full relationship list. The ideal is no repeats: flag every repeat for reconsideration, and treat any archetype used three or more times as a defect to fix. Flag any Community Thread entry beyond the first — these are the lowest-value entries and should be replaced with something more specific when possible.
 
 3. **Cast web check:** At least 2 relationships should be with other named cast members (not offscreen figures), keeping the cast's social web interconnected.
 
