@@ -83,11 +83,11 @@ The Q&A ends when the agent has confident, specific answers across all coverage 
 
 ## Writing Rules
 
-These rules apply to all behavioral sections (Body, Soul, Relationships, Intimate Dynamics). Two bans reach every section, Background included: the rule below on deciding what not to specify, and the ban on heavy trait adjectives in `framework.md`.
+These rules apply to all behavioral sections (Body, Soul, Relationships, Intimate Dynamics). Two bans reach every section, Background included: the rule below on deciding what not to specify, and the ban on heavy trait adjectives in `../writing-style.md`.
 
 **Make decisions, don't hedge.** Every fact in the note is a decision. Never write "X or Y" or "grew up somewhere, perhaps Y" unless the ambiguity is a deliberate mystery being preserved. If you don't know, ask the user.
 
-**Decide what not to specify.** Specify the details that lock behavior and leave the rest unwritten. This is not the same as the hedging rule above: hedging governs what you commit to when you do write a fact, and this governs which facts you decline to write at all. See *Decide what not to specify* in `../writing-style.md`.
+**Decide what not to specify.** This is not the same as the hedging rule above: hedging governs what you commit to when you do write a fact, and this governs which facts you decline to write at all. See *Decide what not to specify* in `../writing-style.md`.
 
 **Write plainly. No flair.** Write each behavioral description the way a screenplay writes action lines: present tense, only what can be seen or heard, no internal states, short plain sentences. If a director cannot stage the sentence, rewrite it. For vocabulary: shortest Anglo-Saxon word that works, active voice, cut every word that can go. See `../writing-style.md` for the full style model.
 

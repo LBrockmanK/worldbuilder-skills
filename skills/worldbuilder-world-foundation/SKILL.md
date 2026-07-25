@@ -5,7 +5,7 @@ description: Use at the start of a new worldbuilding project to establish settin
 
 # World Foundation
 
-*All prose this skill produces follows `../writing-style.md`. Read it before writing.*
+*All prose this skill produces follows `../writing-style.md`, with one exception: the World Introduction is player-facing text that the export skill ships verbatim, and it follows that skill's prose rules instead. Read the style reference before writing.*
 
 ## Overview
 
@@ -245,7 +245,7 @@ The community's social and emotional identity — not its physical description, 
 Pre-game text the player reads before starting. Sets expectations for tone and situation.
 
 **Opening Situation**
-The situation the player arrives into. Evocative, not scripted — establishes the stage rather than dictating what happens. Cover: the setting's visible state on arrival, the immediate invitation for engagement, what the player's arrival means to the community.
+The situation the player arrives into. Evocative, not scripted — establishes the stage rather than dictating what happens. Cover: the setting's visible state on arrival, the immediate invitation for engagement, what the player's arrival means to the community. This section is the one exception to the style reference; it is player-facing prose, not spec prose.
 
 **Story Direction note**
 Do not write story direction content into the seed. `project/direction.md` is a separate project document, already created by setup; fill it with `worldbuilder-story` after the seed is confirmed, before any Wide-phase notes.

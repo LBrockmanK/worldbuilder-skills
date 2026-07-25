@@ -153,10 +153,10 @@ Ask: what would the AI do differently in a scene because of this statement? If t
 
 ### Decide what not to specify
 
-For each detail, ask whether it changes behavior. Specify the details that lock behavior and leave the rest unwritten. This governs which facts you decline to write at all, which is a different question from what you commit to when you do write one.
+For each detail, ask whether it changes behavior. Specify the details that lock behavior and leave the rest unwritten.
 
 - Wrong: "The house was pale green with a red door on the third street past the mill, and the family kept a gray cart horse named Birch." None of it changes how anyone behaves.
-- Right: "The house was cramped and the walls were thin." That fact alone explains why she can't sleep with a door closed.
+- Right: "The house was cramped and the walls were thin." That fact alone explains why someone raised there does not sleep with a door closed.
 
 ### No flair
 
