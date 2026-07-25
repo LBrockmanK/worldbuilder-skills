@@ -5,9 +5,9 @@ description: 'Implementation research for adopting the 2026-07-23 blind-trial ou
   what stopslop and the additive doctrine concretely differ by, where they fold into
   shipped skills, and every site that renders relationship archetype labels.'
 tags:
-- human-ready
+- complete
 date: 2026-07-25
-timestamp: 2026-07-25T15:37Z
+timestamp: 2026-07-25T17:19Z
 resources: []
 ---
 
@@ -96,11 +96,23 @@ to survive the fold-in or the two rules read as contradictory.
 
 ### Relationship labels are mandated in four places
 
-The trial's "misapplied labels" finding has a simpler cause than
-mis-orientation: the labels were never supposed to be visible, and four
-separate instructions say otherwise. `relationships.md:23` states
-archetypes "do not appear in the final card as labels" — and is
-contradicted inside its own file.
+**Corrected 2026-07-25 — the conclusion below was wrong.** This section
+originally read `relationships.md:23` ("archetypes do not appear in the
+final card as labels") as describing the character blueprint, and
+concluded that four instructions contradicted it. `CONTEXT.md:29`
+reserves "card" for the Export-phase artifact, so line 23 was always
+describing the exported card. Archetypes are labelled in the blueprint
+by design, and all four instructions below are correct as written. A
+task acting on the wrong reading was implemented and reverted; see the
+plan's void Task 1.
+
+The trial's "misapplied labels" finding therefore has a different cause,
+covered under *Authority carries no direction* below: the labels do ship
+in the blueprint, so their accuracy matters, and `Authority` carried no
+direction to get right.
+
+The four sites, retained because they are still the inventory of where
+the entry format is defined:
 
 | Site | Instruction |
 |---|---|
@@ -135,7 +147,7 @@ supporting) and the Relationships checklist in `SKILL.md`.
 - Build: `python scripts/build-okf.py` — reads `defaults/okf.base.json`
   and `defaults/templates/*.md`, writes `defaults/okf.json`. Required
   after any template edit; `defaults/okf.json` is never hand-edited.
-- Tests: `python -m pytest tests -q` — 14 unit tests across
+- Tests: `python -m pytest tests -q` — 13 unit tests across
   `tests/test_generate_templates.py` and `tests/test_build_trial_kit.py`.
 - Lint: `doodle --strict skills`, configured by `.doodle.toml`
   (doodle-lint 1.0.0, project-word allowlist).
@@ -152,7 +164,10 @@ The relationship work is a separate concern that the trial surfaced
 incidentally, and it is the more clearly-earned fix of the two: it
 corrects a self-contradiction in shipped content rather than acting on a
 single-cell preference. Its one judgment call — widening Charge to
-absorb formal subordinates — was settled by the user on 2026-07-25.
+absorb formal subordinates — was settled by the user on 2026-07-25. The
+first attempt widened it too far, covering peer responsibility and
+dropping the kin exclusion; the shipped definition requires the stronger
+position and still excludes kin.
 
 Both threads edit `skills/worldbuilder-character/SKILL.md`, so they
 should be sequenced rather than run in parallel.

@@ -5,7 +5,7 @@ description: Results of the 2x3 blind A/B trial crossing stopslop vs current sty
   with current/additive/tensions doctrine, run on the Nadja character note in the
   Viralys project
 tags:
-- human-ready
+- complete
 date: 2026-07-23
 timestamp: 2026-07-23T02:03Z
 resources: []
