@@ -7,7 +7,7 @@ description: Implementation plan folding the stopslop Cut Filler rules and the f
 tags:
 - complete
 date: 2026-07-25
-timestamp: 2026-07-25T16:09Z
+timestamp: 2026-07-25T16:31Z
 resources: []
 ---
 
@@ -702,7 +702,7 @@ Replace the **Per-character repetition limit** paragraph:
 with:
 
 ```markdown
-**The ideal is no repeats.** Every relationship should carry a different archetype. A major character has 8 named relationships and there are 12 archetypes to draw on, so a full set with no repeats is achievable, and a supporting character's 5 relationships more so. Treat every repeat as a signal to reconsider before accepting it: is the framing too loose, or is there a more specific archetype that would better serve behavioral variety? Where a repeat survives that check, no archetype may appear more than twice.
+**The ideal is no repeats.** No archetype should appear twice across a character's full relationship list, counting every tag on every entry. There are 12 archetypes against 8 named relationships for a major character and 5 for a supporting one, so a set with no repeats has room to spare, though tagging an entry with more than one archetype uses that room up faster. Treat every repeat as a signal to reconsider before accepting it: is the framing too loose, or is there a more specific archetype that would better serve behavioral variety? Where a repeat survives that check, no archetype may appear more than twice.
 ```
 
 - [ ] **Step 2: Align the self-check with the same ideal**
@@ -716,7 +716,7 @@ Replace the **Self-check before finalizing** paragraph:
 with:
 
 ```markdown
-**Self-check before finalizing:** Scan the full relationship list and count how many times each archetype appears. Every repeat is worth revisiting. An archetype appearing three or more times is a defect, not a tolerance. If Community Thread appears more than once, reconsider the weaker entry. A major character's 8 relationships should ideally use 8 distinct archetypes.
+**Self-check before finalizing:** Scan the full relationship list and count how many times each archetype appears, counting every tag on every entry. Every repeat is worth revisiting. An archetype appearing three or more times is wrong and must be fixed. If Community Thread appears more than once, reconsider the weaker entry. The ideal is that no archetype appears twice anywhere in the set, whether or not an entry carries more than one tag.
 ```
 
 - [ ] **Step 3: Align the Coverage Validation scan**
@@ -730,10 +730,10 @@ In `## Coverage Validation`, replace item 2:
 with:
 
 ```markdown
-2. **Archetype distribution scan:** Count how many times each archetype appears across the full relationship list. The ideal is no repeats: flag every repeat for reconsideration, and treat any archetype used three or more times as a defect to fix. Flag any Community Thread entry beyond the first — these are the lowest-value entries and should be replaced with something more specific when possible.
+2. **Archetype distribution scan:** Count how many times each archetype appears across the full relationship list, counting every tag on every entry. The ideal is no repeats: flag every repeat for reconsideration, and treat any archetype used three or more times as wrong and fix it. Flag any Community Thread entry beyond the first — these are the lowest-value entries and should be replaced with something more specific when possible.
 ```
 
-- [ ] **Step 4: Verify the ceiling framing is gone**
+- [ ] **Step 4: Verify the ceiling framing is gone and the counting unit is stated**
 
 Run: `rg -n 'once or twice|at least 4' skills/worldbuilder-character/relationships.md`
 
@@ -742,6 +742,12 @@ Expected: no matches, exit code 1.
 Run: `rg -c 'no repeats' skills/worldbuilder-character/relationships.md`
 
 Expected: `2`.
+
+Run: `rg -c 'counting every tag on every entry' skills/worldbuilder-character/relationships.md`
+
+Expected: `3` — all three passages must name the same counting unit, because
+an entry may carry more than one archetype (`relationships.md:23`) and a
+passage that counts entries instead of tags will disagree with the others.
 
 - [ ] **Step 5: Run the repo gates**
 
