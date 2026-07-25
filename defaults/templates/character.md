@@ -34,6 +34,6 @@ _Psychological and social behavioral descriptions. One entry per bullet._
 
 ## Relationships
 
-_Named relationship dynamics. One bullet per relationship: **Name — Archetype(s):** [behavioral description]_
+_Named relationship dynamics. One bullet per relationship: **Name:** [behavioral description]_
 
 -

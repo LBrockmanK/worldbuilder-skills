@@ -72,11 +72,11 @@ Each archetype is defined by its behavioral signature — the specific way it ch
 
 Each entry is 2–4 sentences describing the character's own experience of this person and the behavioral dynamic between them. Write the character's side, not a neutral summary.
 
-**Format:** Bullet list. One entry per relationship. Bold `**Name — Archetype(s):**` prefix inline on the bullet, followed by behavioral description as prose sentence(s).
+**Format:** Bullet list. One entry per relationship. Bold `**Name:**` prefix inline on the bullet, followed by behavioral description as prose sentence(s). The archetype is not written into the entry — it is a planning tool for checking variety, and naming it in the note gives the LLM a label to repeat.
 
 *Example bullet:*
 ```
-- **Mira — Kin:** When Mira dismisses her ideas in front of others, she doesn't argue — she brings the idea back later, one-on-one, where Mira has room to change her mind without losing face.
+- **Mira:** When Mira dismisses her ideas in front of others, she doesn't argue. She brings the idea back later, one-on-one, where Mira has room to change her mind without losing face.
 ```
 
 ### The Fiske relational model lens
