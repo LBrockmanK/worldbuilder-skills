@@ -5,7 +5,7 @@ description: Use at the start of a new worldbuilding project to establish settin
 
 # World Foundation
 
-*All prose this skill produces follows `../writing-style.md`, with two exceptions: the World Introduction and the Opening Situation are written evocatively rather than as specification, so the style reference's ban on flair does not reach them. Every other section of the seed follows it. Read it before writing.*
+*All prose this skill produces follows `../writing-style.md`, with two exceptions. The World Introduction and the Opening Situation are written evocatively rather than as specification, and the style reference excludes prose of that kind by its own terms. Every other section of the seed follows it. Read it before writing.*
 
 ## Overview
 
