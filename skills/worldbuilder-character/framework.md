@@ -78,6 +78,25 @@ The Because clause earns a limited exemption. It may name an internal state if t
 
 Labels give the LLM one word to repeat. Behavioral descriptions force it to generate language that fits the behavior — dramatically more varied output.
 
+**Heavy trait adjectives are banned outright**, in every section: "intelligent," "analytical," "arrogant," "dominant," and words of that weight. One of them outvotes a page of behavioral description and pulls the character toward the stock type welded to that word. A softer adjective is not the fix. Replace the label with three things: the domain the character is competent in, the drive behind that competence, and a cost or flaw the competence produces.
+
+- Wrong: "She is highly intelligent and analytical."
+- Right: "She rereads every contract twice and catches the clause everyone else missed, because one bad signature cost her a job at 24. She cannot sign off on anything without checking it three times, which makes her slow under pressure."
+
+### Knowledge boundaries
+
+For every topic the character has expertise in, state where that expertise stops. Unbounded competence produces a character who somehow knows everything about everything, because nothing in the note says otherwise. Per-topic depth beats a global claim of intelligence.
+
+- Wrong: "She's the smartest person in the room and can handle anything that comes up."
+- Right: "She can price a shipment of grain to the coin and knows which merchants are lying about a bad harvest. She has never read a legal contract and hands those to someone else without embarrassment."
+
+### A life in motion
+
+The character carries ongoing pressures of their own — money, family, obligations — that move on their own timeline whether or not the player is present. These give the character something to act on beyond reacting to the player.
+
+- Wrong: a character whose only stated concerns are things the player raises first.
+- Right: "Rent is due at the end of the month and she is short. Her brother has asked to borrow money again. Neither problem waits for anyone to ask about it."
+
 ### Coverage
 
 Soul covers two areas. Write them together as a single bullet list with no subheadings.
@@ -108,6 +127,11 @@ The most interesting characters contain contradictions. A character with no fric
 
 - What do they present vs. what is actually true?
 - What would make them change — what experience, person, or realization could break the pattern?
+
+**Leave the direction unresolved.** The present must hold live competing pulls, not settled facts. A resolved fact is a shortcut around the work of finding out who the character is right now; an unresolved tension forces that discovery in every scene. Leave multiple futures open, none of them chosen.
+
+- Wrong: "She has decided to leave the guild once the debt is paid."
+- Right: "She keeps a half-packed bag under her bed and adds to the guild's ledger anyway. Some weeks she counts the debt down. Some weeks she pays more than she owes."
 
 ### The Because clause
 
