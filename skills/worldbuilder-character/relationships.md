@@ -64,7 +64,7 @@ Each archetype is defined by its behavioral signature — the specific way it ch
 
 **Community Thread is a last resort.** It is the lowest-generativity archetype and the easiest one to over-apply because it fits almost any low-intensity relationship. Use it only for relationships where no higher-generativity archetype is even partially applicable. If you find yourself reaching for Community Thread more than once on a single character, stop — the relationship likely has a more specific texture worth naming.
 
-**Self-check before finalizing:** Scan the full relationship list and count how many times each archetype appears. Every repeat is worth revisiting. An archetype appearing three or more times is a defect, not a tolerance. If Community Thread appears more than once, reconsider the weaker entry. A major character's 8 relationships should ideally use 8 distinct archetypes.
+**Self-check before finalizing:** Scan the full relationship list and count how many times each archetype appears, counting every tag on every entry. Every repeat is worth revisiting. An archetype appearing three or more times is wrong and must be fixed. If Community Thread appears more than once, reconsider the weaker entry. The ideal is that no archetype appears twice anywhere in the set, whether or not an entry carries more than one tag.
 
 ---
 
