@@ -244,7 +244,7 @@ variety count that the repetition limit depends on.
 - Produces: `Authority` = upward only; `Charge` = downward, including
   formal subordinates. Both remain valid power-asymmetry anchors.
 
-- [ ] **Step 1: Narrow Authority to upward only**
+- [x] **Step 1: Narrow Authority to upward only**
 
 Replace `relationships.md:27`:
 
@@ -258,7 +258,7 @@ with:
 **2. Authority** — Someone who holds structured power over the character: a mentor, employer, elder, or superior. Behavioral signature: deference, resentment, and the desire to prove oneself. The label always points upward. For the downward direction, use Charge.
 ```
 
-- [ ] **Step 2: Widen Charge to cover the downward direction**
+- [x] **Step 2: Widen Charge to cover the downward direction**
 
 Replace `relationships.md:47`:
 
@@ -272,7 +272,7 @@ with:
 **12. Charge** — Someone the character holds responsibility for, whether the role is formal (an apprentice, subordinate, or ward) or self-appointed. Behavioral signature: worry and preemptive action. Produces unwanted intervention, sacrifice, and conflict when the charge resists protection. Where the responsibility is formal, the duty is the setup and the behavior is what the character does beyond it.
 ```
 
-- [ ] **Step 3: Update the Coverage Requirements**
+- [x] **Step 3: Update the Coverage Requirements**
 
 In `## Coverage Requirements`, replace both anchor clauses. Major
 characters:
@@ -291,7 +291,7 @@ The supporting-character line already says "one power-asymmetric
 relationship" without naming Authority, so it needs no change. Verify
 that in Step 5 rather than assuming it.
 
-- [ ] **Step 4: Update the checklist anchor list in `SKILL.md`**
+- [x] **Step 4: Update the checklist anchor list in `SKILL.md`**
 
 In the **Relationships** block of the Self-Check list, replace:
 
@@ -305,7 +305,7 @@ with:
 - [ ] Coverage requirements met: 8 named relationships for major characters, 5 for supporting; required anchor types present (family or Ghost, Authority or Charge, friction or rivalry, Confidant; see `relationships.md` for full requirements)
 ```
 
-- [ ] **Step 5: Verify no stale Authority-as-anchor wording survives**
+- [x] **Step 5: Verify no stale Authority-as-anchor wording survives**
 
 Run: `rg -n 'power-asymmetric' skills`
 
@@ -318,7 +318,7 @@ Run: `rg -n 'ward downward|not a formal subordinate' skills`
 
 Expected: no matches, exit code 1.
 
-- [ ] **Step 6: Run the repo gates**
+- [x] **Step 6: Run the repo gates**
 
 Run: `python -m pytest tests -q`
 
@@ -328,7 +328,7 @@ Run: `doodle --strict skills`
 
 Expected: exits 0, no findings.
 
-- [ ] **Step 7: Commit**
+- [x] **Step 7: Commit**
 
 ```bash
 git add skills/worldbuilder-character/relationships.md skills/worldbuilder-character/SKILL.md
@@ -371,7 +371,7 @@ rather than appended whole.
 - Produces: a `### Cut filler` subsection that every Wide-phase skill
   inherits by reference to `writing-style.md`.
 
-- [ ] **Step 1: Fold the vague-declarative group into the existing rule**
+- [x] **Step 1: Fold the vague-declarative group into the existing rule**
 
 Cut Filler's fifth group duplicates *No significance inflation*. Extend
 the shipped rule instead of restating it. Replace
@@ -389,7 +389,7 @@ with:
 Vague declaratives are the same move in sentence form: "the stakes are high," "the reasons are structural," "the implications are significant." Each one announces that something matters without saying what it is. Cut the sentence and state the fact it was standing in for.
 ```
 
-- [ ] **Step 2: Add the Cut filler subsection**
+- [x] **Step 2: Add the Cut filler subsection**
 
 Insert a new subsection at the end of `## Word Choice`, immediately
 after the extended *No significance inflation* rule and before the `---`
@@ -419,7 +419,7 @@ The vague-declaratives group is deliberately absent here: it lives in
 `skills/writing-style.md:147` (*Single source of truth*) forbids stating
 one rule in two places.
 
-- [ ] **Step 3: Verify placement and non-duplication**
+- [x] **Step 3: Verify placement and non-duplication**
 
 Run: `rg -n '^#{2,3} ' skills/writing-style.md`
 
@@ -431,7 +431,7 @@ Run: `rg -n 'the stakes are high' skills/writing-style.md`
 Expected: exactly one match, inside the *No significance inflation*
 rule.
 
-- [ ] **Step 4: Run the repo gates**
+- [x] **Step 4: Run the repo gates**
 
 Run: `doodle --strict skills`
 
@@ -442,7 +442,7 @@ Run: `python -m pytest tests -q`
 
 Expected: all 13 tests pass.
 
-- [ ] **Step 5: Commit**
+- [x] **Step 5: Commit**
 
 ```bash
 git add skills/writing-style.md
@@ -478,7 +478,7 @@ task covers everything landing in `framework.md`.
 - Produces: Knowledge Boundaries, Unresolved States and A Life in Motion
   as named Soul rules that Task 5's checklist items refer to by name.
 
-- [ ] **Step 1: Add the replacement formula to the trait rule**
+- [x] **Step 1: Add the replacement formula to the trait rule**
 
 `framework.md:70-80` shows label-vs-behavioral pairs but does not say
 what to replace a trait word with. Append after the closing line
@@ -491,7 +491,7 @@ what to replace a trait word with. Append after the closing line
 - Right: "She rereads every contract twice and catches the clause everyone else missed, because one bad signature cost her a job at 24. She cannot sign off on anything without checking it three times, which makes her slow under pressure."
 ```
 
-- [ ] **Step 2: Add Knowledge Boundaries to the Soul section**
+- [x] **Step 2: Add Knowledge Boundaries to the Soul section**
 
 Insert a new `###` subsection in the Soul section, after the trait rule
 from Step 1:
@@ -505,7 +505,7 @@ For every topic the character has expertise in, state where that expertise stops
 - Right: "She can price a shipment of grain to the coin and knows which merchants are lying about a bad harvest. She has never read a legal contract and hands those to someone else without embarrassment."
 ```
 
-- [ ] **Step 3: Add A Life in Motion to the Soul section**
+- [x] **Step 3: Add A Life in Motion to the Soul section**
 
 Insert immediately after the Knowledge boundaries subsection:
 
@@ -518,7 +518,7 @@ The character carries ongoing pressures of their own — money, family, obligati
 - Right: "Rent is due at the end of the month and she is short. Her brother has asked to borrow money again. Neither problem waits for anyone to ask about it."
 ```
 
-- [ ] **Step 4: Extend Contradictions with Unresolved States**
+- [x] **Step 4: Extend Contradictions with Unresolved States**
 
 The shipped Contradictions rule covers internal friction but not leaving
 the character's direction open. Append to the Contradictions subsection,
@@ -531,7 +531,7 @@ after the existing two bullet questions:
 - Right: "She keeps a half-packed bag under her bed and adds to the guild's ledger anyway. Some weeks she counts the debt down. Some weeks she pays more than she owes."
 ```
 
-- [ ] **Step 5: Verify the new rules landed**
+- [x] **Step 5: Verify the new rules landed**
 
 Run: `rg -n '^### ' skills/worldbuilder-character/framework.md`
 
@@ -543,7 +543,7 @@ Run: `rg -c 'half-packed bag|price a shipment of grain|rereads every contract' s
 
 Expected: `3`.
 
-- [ ] **Step 6: Run the repo gates**
+- [x] **Step 6: Run the repo gates**
 
 Run: `doodle --strict skills`
 
@@ -553,7 +553,7 @@ Run: `python -m pytest tests -q`
 
 Expected: all 13 tests pass.
 
-- [ ] **Step 7: Commit**
+- [x] **Step 7: Commit**
 
 ```bash
 git add skills/worldbuilder-character/framework.md
@@ -590,7 +590,7 @@ it will not be enforced.
 - Consumes: the rule names established in Task 4 — "knowledge
   boundaries", "a life in motion", "leave the direction unresolved".
 
-- [ ] **Step 1: Add the specification boundary rule**
+- [x] **Step 1: Add the specification boundary rule**
 
 Insert into `## Writing Rules`, immediately after the **Make decisions,
 don't hedge** rule (so the two sit adjacent and the distinction is
@@ -603,7 +603,7 @@ readable):
 - Right: "The house was cramped and the walls were thin." That fact alone explains why she can't sleep with a door closed.
 ```
 
-- [ ] **Step 2: Add self-check items for the new rules**
+- [x] **Step 2: Add self-check items for the new rules**
 
 In the **Soul** block of `## Self-Check Before Marking Complete`, add
 after the existing "Plain language throughout" item:
@@ -636,7 +636,7 @@ Task 4 added a third coverage area to `framework.md`. Leaving this
 checklist at two means a blueprint can pass its own completion check
 while missing the entire third group.
 
-- [ ] **Step 3: Verify every new rule has an enforcement item**
+- [x] **Step 3: Verify every new rule has an enforcement item**
 
 Run: `rg -n 'states where that expertise stops' skills/worldbuilder-character/SKILL.md`
 
@@ -648,7 +648,7 @@ Run: `rg -c '^- \[ \]' skills/worldbuilder-character/SKILL.md`
 
 Expected: `33`. The file has 27 checklist items before this task; the five new Soul rule checks plus the third coverage-minimum item make 33.
 
-- [ ] **Step 4: Run the repo gates**
+- [x] **Step 4: Run the repo gates**
 
 Run: `doodle --strict skills`
 
@@ -658,7 +658,7 @@ Run: `python -m pytest tests -q`
 
 Expected: all 13 tests pass.
 
-- [ ] **Step 5: Full-repo regression check**
+- [x] **Step 5: Full-repo regression check**
 
 Run: `python scripts/build-okf.py`
 
@@ -670,7 +670,7 @@ Expected: `defaults/okf.json` is unchanged by this run. If it is
 modified, Task 1's regeneration was skipped or the templates drifted;
 stop and investigate before committing.
 
-- [ ] **Step 6: Commit**
+- [x] **Step 6: Commit**
 
 ```bash
 git add skills/worldbuilder-character/SKILL.md
@@ -712,7 +712,7 @@ there are 12 archetypes, so a set with no repeats is achievable.
   Authority to one direction increases the archetype pool available for
   a no-repeat set, so this task must not run before it.
 
-- [ ] **Step 1: Rewrite the repetition limit as a no-repeat ideal**
+- [x] **Step 1: Rewrite the repetition limit as a no-repeat ideal**
 
 Replace the **Per-character repetition limit** paragraph:
 
@@ -726,7 +726,7 @@ with:
 **The ideal is no repeats.** No archetype should appear twice across a character's full relationship list, counting every tag on every entry. There are 12 archetypes against 8 named relationships for a major character and 5 for a supporting one, so a set with no repeats has room to spare, though tagging an entry with more than one archetype uses that room up faster. Treat every repeat as a signal to reconsider before accepting it: is the framing too loose, or is there a more specific archetype that would better serve behavioral variety? Where a repeat survives that check, no archetype may appear more than twice.
 ```
 
-- [ ] **Step 2: Align the self-check with the same ideal**
+- [x] **Step 2: Align the self-check with the same ideal**
 
 Replace the **Self-check before finalizing** paragraph:
 
@@ -740,7 +740,7 @@ with:
 **Self-check before finalizing:** Scan the full relationship list and count how many times each archetype appears, counting every tag on every entry. Every repeat is worth revisiting. An archetype appearing three or more times is wrong and must be fixed. If Community Thread appears more than once, reconsider the weaker entry. The ideal is that no archetype appears twice anywhere in the set, whether or not an entry carries more than one tag.
 ```
 
-- [ ] **Step 3: Align the Coverage Validation scan**
+- [x] **Step 3: Align the Coverage Validation scan**
 
 In `## Coverage Validation`, replace item 2:
 
@@ -754,7 +754,7 @@ with:
 2. **Archetype distribution scan:** Count how many times each archetype appears across the full relationship list, counting every tag on every entry. The ideal is no repeats: flag every repeat for reconsideration, and treat any archetype used three or more times as wrong and fix it. Flag any Community Thread entry beyond the first — these are the lowest-value entries and should be replaced with something more specific when possible.
 ```
 
-- [ ] **Step 4: Verify the ceiling framing is gone and the counting unit is stated**
+- [x] **Step 4: Verify the ceiling framing is gone and the counting unit is stated**
 
 Run: `rg -n 'once or twice|at least 4' skills/worldbuilder-character/relationships.md`
 
@@ -770,7 +770,7 @@ Expected: `3` — all three passages must name the same counting unit, because
 an entry may carry more than one archetype (`relationships.md:23`) and a
 passage that counts entries instead of tags will disagree with the others.
 
-- [ ] **Step 5: Run the repo gates**
+- [x] **Step 5: Run the repo gates**
 
 Run: `python -m pytest tests -q`
 
@@ -780,7 +780,7 @@ Run: `doodle --strict skills`
 
 Expected: exits 0, no findings.
 
-- [ ] **Step 6: Commit**
+- [x] **Step 6: Commit**
 
 ```bash
 git add skills/worldbuilder-character/relationships.md
@@ -857,15 +857,15 @@ reword the item to force the grep to pass.
 
 After Task 5:
 
-- [ ] Flip this plan's status tag to `complete`.
-- [ ] Flip
+- [x] Flip this plan's status tag to `complete`.
+- [x] Flip
   [2026-07-23-writing-doctrine-blind-trial-results-viralys-nadja.md](../research/2026-07-23-writing-doctrine-blind-trial-results-viralys-nadja.md)
   to `complete` — its findings are now acted on.
-- [ ] Delete the two 2026-07-24 inbox lines this plan closes (the
+- [x] Delete the two 2026-07-24 inbox lines this plan closes (the
   relationship-label fix and the doctrine fold-in). Leave the
   2026-07-25 revisit line in place; it tracks work this plan
   deliberately does not do.
-- [ ] The fold-in inbox line also carried the World-Forge audit patterns
+- [x] The fold-in inbox line also carried the World-Forge audit patterns
   (scenario classes, cold-read author/grader separation, counterfactual
   probe, blind-line voice test). This plan does **not** cover them —
   they are trial-methodology improvements, not doctrine. Re-capture them

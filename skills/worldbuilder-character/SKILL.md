@@ -81,7 +81,7 @@ The Q&A ends when the agent has confident, specific answers across all coverage 
 
 ## Writing Rules
 
-These rules apply to all behavioral sections (Body, Soul, Relationships, Intimate Dynamics). Two of them reach further and say so in their own text: the ban on heavy trait adjectives and the rule on deciding what not to specify apply to every section, Background included.
+These rules apply to all behavioral sections (Body, Soul, Relationships, Intimate Dynamics). Two bans reach every section, Background included: the rule below on deciding what not to specify, and the ban on heavy trait adjectives in `framework.md`.
 
 **Make decisions, don't hedge.** Every fact in the note is a decision. Never write "X or Y" or "grew up somewhere, perhaps Y" unless the ambiguity is a deliberate mystery being preserved. If you don't know, ask the user.
 
