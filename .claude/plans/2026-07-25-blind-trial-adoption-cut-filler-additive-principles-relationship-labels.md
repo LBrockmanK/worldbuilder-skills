@@ -638,10 +638,11 @@ while missing the entire third group.
 
 - [ ] **Step 3: Verify every new rule has an enforcement item**
 
-Run: `rg -n 'Knowledge boundaries|knowledge boundaries' skills/worldbuilder-character/`
+Run: `rg -n 'states where that expertise stops' skills/worldbuilder-character/SKILL.md`
 
-Expected: two matches — the `framework.md` rule from Task 4 and the
-`SKILL.md` checklist item from Step 2.
+Expected: exactly one match, the checklist item added by Step 2. The
+corresponding rule lives in `framework.md` under different wording, so
+grep for the checklist item's own text rather than a shared phrase.
 
 Run: `rg -c '^- \[ \]' skills/worldbuilder-character/SKILL.md`
 
