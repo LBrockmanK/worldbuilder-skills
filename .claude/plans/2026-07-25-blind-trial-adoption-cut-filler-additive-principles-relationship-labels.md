@@ -7,7 +7,7 @@ description: Implementation plan folding the stopslop Cut Filler rules and the f
 tags:
 - complete
 date: 2026-07-25
-timestamp: 2026-07-25T16:59Z
+timestamp: 2026-07-25T17:11Z
 resources: []
 ---
 
@@ -796,6 +796,60 @@ The two-occurrence ceiling is retained as the outer bound for a repeat
 that survives reconsideration, and three or more is now stated as a
 defect rather than a flag."
 ```
+
+---
+
+## Execution amendments
+
+Review found defects in this plan's own step text, not only in how it was
+applied. The step text above is what was planned; this section records
+what actually shipped. Where the two differ, the commits are authoritative.
+
+Task 6's step text was rewritten in place at `c95d6b9` because its brief
+was still regenerable at the time and would have reintroduced a closed
+defect. Tasks 2, 4 and 5 were already past that point, so their changes
+are recorded here instead of retro-edited into the steps, which would
+erase the fix history.
+
+**Task 2 — `cdc2373`.** The Charge rewrite was over-wide: it covered
+responsibility toward a peer, which carries no asymmetry, and silently
+dropped the original exclusion of kin while the commit documented only
+the formal-subordinate drop. Both hollowed out the "Authority or Charge"
+coverage anchor. Charge now requires the stronger position, excludes kin,
+and names itself the downward counterpart to Authority.
+
+**Task 4 — `c44903d`, `38ac2cd`, `5b9f907`.** Four defects, all in the
+planned text:
+
+- The trait-word replacement was competence-shaped (domain, drive, cost)
+  while the ban names "arrogant" and "dominant", which are not
+  competences. Now general, with the three-part form as the competence
+  case.
+- "For every topic the character has expertise in" was unbounded and
+  collided with the specification boundary added in Task 5. Now scoped to
+  expertise the blueprint already states.
+- "A life in motion" collided with the shipped no-forward-references
+  rule, since a standing pressure and a scheduled event read alike. The
+  boundary is now drawn at whether the thing has already happened.
+- Neither new Soul rule had a slot or an entry budget in the Soul
+  coverage list, and the Soul section opener still announced two coverage
+  areas. Both rules now name where their output lands, the coverage list
+  has a third group, and its minimum is conditional so a character with
+  no stated expertise can still satisfy it.
+
+The "a life in motion" Right example was also replaced: the planned one
+stated the character's situation rather than showing behavior, which
+contradicted the instruction above it and failed the file's staging test.
+
+**Task 5 — `b327b25`.** The self-check item for the specification
+boundary sat in the Soul block with no scope marker, so a rule
+deliberately placed in Writing Rules for governing every section read as
+Soul-only. It now opens with "Across every section".
+
+Task 5's Step 3 check was also corrected at `2fd1c17`: it grepped for a
+phrase from an earlier draft of the checklist item and could not be
+satisfied by any faithful transcription. The executor stopped rather than
+reword the item to force the grep to pass.
 
 ---
 
