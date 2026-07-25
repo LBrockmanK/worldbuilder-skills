@@ -7,7 +7,7 @@ description: Implementation plan folding the stopslop Cut Filler rules and the f
 tags:
 - complete
 date: 2026-07-25
-timestamp: 2026-07-25T15:47Z
+timestamp: 2026-07-25T16:09Z
 resources: []
 ---
 
@@ -24,12 +24,16 @@ doctrine principles into shipped skill content, and stop relationship
 archetypes from being rendered as visible labels while splitting
 Authority and Charge by direction.
 
-**Architecture:** All five tasks are prose edits to shipped skill
-markdown plus one generated-preset rebuild. Two independent threads
-share `skills/worldbuilder-character/SKILL.md`, so they are sequenced in
-one plan rather than split: relationship fixes first (Tasks 1–2, the
-clearly-earned correction of a self-contradiction), then the doctrine
-adoption (Tasks 3–5, acting on a single-cell human preference).
+**Architecture:** Every task is a prose edit to shipped skill markdown.
+Two threads share `skills/worldbuilder-character/SKILL.md`, so they are
+sequenced in one plan rather than split: the relationship-archetype
+fixes first (Tasks 2 and 6), then the doctrine adoption (Tasks 3–5,
+acting on a single-cell human preference).
+
+**Execution order: 2, 6, 3, 4, 5.** Task 1 is void — it was implemented
+on a wrong premise and reverted; see its entry for the reason. Task 6
+was added after Task 1's review and runs directly after Task 2 because
+both edit `relationships.md`.
 
 **Tech Stack:** Markdown skill content, Python 3 build script
 (`scripts/build-okf.py`), pytest, doodle-lint 1.0.0.
@@ -52,7 +56,7 @@ Trial outcome:
   significance inflation, plain vocabulary.
 - `doodle --strict skills` must pass. Any new project word must be added
   to the allowlist in `.doodle.toml`, not spelled around.
-- `python -m pytest tests -q` must pass (14 tests).
+- `python -m pytest tests -q` must pass (13 tests).
 - Do not edit anything under `trials/2026-07-writing-doctrine/`. The kit
   is the trial record and must stay reproducible.
 
@@ -66,11 +70,28 @@ output, plus the repo's real lint and test gates. Do not substitute
 
 ## Tasks
 
-### Task 1: Stop rendering relationship archetypes as labels
+### Task 1: Stop rendering relationship archetypes as labels — VOID
 
-Archetypes are a blueprinting tool for variety and were never meant to
-appear in the finished note. `relationships.md:23` already says so and
-is contradicted by three format instructions plus the OKF template.
+**This task was implemented (6d09054) and reverted (c9c4f8c). Do not
+execute it. It is retained for the record.**
+
+The premise was wrong. `relationships.md:23` says archetypes do not
+appear "in the final card", and `CONTEXT.md:29` reserves "card" for the
+Export-phase artifact. Line 23 was always describing the exported card,
+not the character blueprint. Archetypes are labelled in the blueprint by
+design, so the format instruction, the worked example, the SKILL.md
+checklist and the OKF template were all correct as written and there was
+no contradiction to resolve.
+
+The blind trial's relationship-label finding therefore stands on its
+original footing: labels do ship in the blueprint, so their accuracy
+matters, and the real defect is the bidirectional Authority definition
+that Task 2 fixes.
+
+Task 6 covers the archetype-variety wording that this task's review
+raised.
+
+The original task text follows, unchanged, for the record only.
 
 **Files:**
 - Modify: `skills/worldbuilder-character/relationships.md:76`
@@ -173,7 +194,7 @@ Expected: no matches, exit code 1.
 
 Run: `python -m pytest tests -q`
 
-Expected: all 14 tests pass. If `tests/test_generate_templates.py`
+Expected: all 13 tests pass. If `tests/test_generate_templates.py`
 fails, it asserts on the old template text — read the failing assertion
 and update the fixture to the new format, then re-run.
 
@@ -301,7 +322,7 @@ Expected: no matches, exit code 1.
 
 Run: `python -m pytest tests -q`
 
-Expected: all 14 tests pass.
+Expected: all 13 tests pass.
 
 Run: `doodle --strict skills`
 
@@ -419,7 +440,7 @@ prose, since the section bans constructions the linter also flags.
 
 Run: `python -m pytest tests -q`
 
-Expected: all 14 tests pass.
+Expected: all 13 tests pass.
 
 - [ ] **Step 5: Commit**
 
@@ -530,7 +551,7 @@ Expected: exits 0.
 
 Run: `python -m pytest tests -q`
 
-Expected: all 14 tests pass.
+Expected: all 13 tests pass.
 
 - [ ] **Step 7: Commit**
 
@@ -614,7 +635,7 @@ Expected: exits 0.
 
 Run: `python -m pytest tests -q`
 
-Expected: all 14 tests pass.
+Expected: all 13 tests pass.
 
 - [ ] **Step 5: Full-repo regression check**
 
@@ -643,6 +664,110 @@ fact, this is about which facts you decline to write.
 Adds five self-check items so the four rules added to framework.md and
 the one added here are actually enforced at completion time. A rule with
 no checklist item does not survive contact with a real note."
+```
+
+---
+
+### Task 6: State no repeats as the archetype-variety ideal
+
+**Execution order: run this immediately after Task 2**, before Task 3.
+Both edit `relationships.md`, and Task 2's changes should land first.
+
+The distribution guidance currently sets its target as a ceiling ("no
+more than once or twice", "at least 4–5 distinct archetypes"), which
+reads as permission to repeat. The ideal is that every relationship
+carries a different archetype. A major character has 8 relationships and
+there are 12 archetypes, so a set with no repeats is achievable.
+
+**Files:**
+- Modify: `skills/worldbuilder-character/relationships.md` (Archetype
+  Distribution: the repetition-limit paragraph and the self-check
+  paragraph)
+- Modify: `skills/worldbuilder-character/relationships.md` (Coverage
+  Validation, item 2)
+
+**Interfaces:**
+- Consumes: the `Authority` / `Charge` split from Task 2. Narrowing
+  Authority to one direction increases the archetype pool available for
+  a no-repeat set, so this task must not run before it.
+
+- [ ] **Step 1: Rewrite the repetition limit as a no-repeat ideal**
+
+Replace the **Per-character repetition limit** paragraph:
+
+```markdown
+**Per-character repetition limit:** No single archetype should appear more than once or twice across a character's full relationship list. If an archetype is applied more than twice, treat that as a signal to reconsider: is the framing too loose, or is there a more specific archetype that would better serve behavioral variety?
+```
+
+with:
+
+```markdown
+**The ideal is no repeats.** Every relationship should carry a different archetype. A major character has 8 named relationships and there are 12 archetypes to draw on, so a full set with no repeats is achievable, and a supporting character's 5 relationships more so. Treat every repeat as a signal to reconsider before accepting it: is the framing too loose, or is there a more specific archetype that would better serve behavioral variety? Where a repeat survives that check, no archetype may appear more than twice.
+```
+
+- [ ] **Step 2: Align the self-check with the same ideal**
+
+Replace the **Self-check before finalizing** paragraph:
+
+```markdown
+**Self-check before finalizing:** Scan the full relationship list and count how many times each archetype appears. If any archetype appears three or more times, revisit those entries. If Community Thread appears more than once, reconsider the weaker entry. Aim for at least 4–5 distinct archetypes across the full set.
+```
+
+with:
+
+```markdown
+**Self-check before finalizing:** Scan the full relationship list and count how many times each archetype appears. Every repeat is worth revisiting. An archetype appearing three or more times is a defect, not a tolerance. If Community Thread appears more than once, reconsider the weaker entry. A major character's 8 relationships should ideally use 8 distinct archetypes.
+```
+
+- [ ] **Step 3: Align the Coverage Validation scan**
+
+In `## Coverage Validation`, replace item 2:
+
+```markdown
+2. **Archetype distribution scan:** Count how many times each archetype appears across the full relationship list. Flag any archetype used three or more times for revision. Flag any Community Thread entry beyond the first — these are the lowest-value entries and should be replaced with something more specific when possible.
+```
+
+with:
+
+```markdown
+2. **Archetype distribution scan:** Count how many times each archetype appears across the full relationship list. The ideal is no repeats: flag every repeat for reconsideration, and treat any archetype used three or more times as a defect to fix. Flag any Community Thread entry beyond the first — these are the lowest-value entries and should be replaced with something more specific when possible.
+```
+
+- [ ] **Step 4: Verify the ceiling framing is gone**
+
+Run: `rg -n 'once or twice|at least 4' skills/worldbuilder-character/relationships.md`
+
+Expected: no matches, exit code 1.
+
+Run: `rg -c 'no repeats' skills/worldbuilder-character/relationships.md`
+
+Expected: `3`.
+
+- [ ] **Step 5: Run the repo gates**
+
+Run: `python -m pytest tests -q`
+
+Expected: all 13 tests pass.
+
+Run: `doodle --strict skills`
+
+Expected: exits 0, no findings.
+
+- [ ] **Step 6: Commit**
+
+```bash
+git add skills/worldbuilder-character/relationships.md
+git commit -m "State no repeats as the archetype-variety ideal
+
+The distribution guidance expressed its target as a ceiling: 'no more
+than once or twice' and 'at least 4-5 distinct archetypes' both read as
+permission to repeat, when the intent is that every relationship carries
+a different archetype. A major character has 8 relationships against 12
+archetypes, so a no-repeat set is achievable rather than aspirational.
+
+The two-occurrence ceiling is retained as the outer bound for a repeat
+that survives reconsideration, and three or more is now stated as a
+defect rather than a flag."
 ```
 
 ---
