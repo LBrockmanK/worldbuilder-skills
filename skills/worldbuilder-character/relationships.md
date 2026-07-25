@@ -44,7 +44,7 @@ Each archetype is defined by its behavioral signature — the specific way it ch
 
 **11. Ghost** — Someone absent (dead, estranged, departed) whose influence still shapes present behavior. Behavioral signature: reference and comparison. The character measures current situations against this person's memory, standards, or absence.
 
-**12. Charge** — Someone the character holds responsibility for, whether the role is formal (an apprentice, subordinate, or ward) or self-appointed. Behavioral signature: worry and preemptive action. Produces unwanted intervention, sacrifice, and conflict when the charge resists protection. Where the responsibility is formal, the duty is the setup and the behavior is what the character does beyond it.
+**12. Charge** — Someone the character holds responsibility for from the stronger position: an apprentice, subordinate, or ward where the role is formal, or someone more vulnerable they have taken on themselves. Not kin — family responsibility is Kin. Behavioral signature: worry and preemptive action. Produces unwanted intervention, sacrifice, and conflict when the charge resists protection. Where the responsibility is formal, the duty is the setup and the behavior is what the character does beyond it. This is the downward counterpart to Authority.
 
 ---
 
