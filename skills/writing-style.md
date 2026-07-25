@@ -140,6 +140,8 @@ Name what something *does*, not what it *is* in the abstract.
 
 Labels give the AI a category to file under. Behaviors give it something to enact.
 
+**Heavy trait adjectives are banned outright.** "Intelligent," "analytical," "arrogant," "dominant," "majestic," "bustling," and words of that weight may not appear anywhere in a note. One of them outvotes a page of behavioral description and pulls the subject toward the stock type welded to that word. A softer adjective is not the fix. Replace the label with the behavior that earned it. Where the trait is a competence, name three things: the domain the subject is competent in, the drive behind that competence, and a cost or flaw the competence produces. Where it is not a competence, write what happens that makes people reach for the word, and what it costs.
+
 ### Make claims verifiable or behavioral
 
 A spec claim should be something that can be checked against the world or enacted in a scene. Abstract claims are weak. Concrete claims are strong.
@@ -148,6 +150,13 @@ A spec claim should be something that can be checked against the world or enacte
 - Strong: "Three of the four founding families lost someone in the flood of Year 12."
 
 Ask: what would the AI do differently in a scene because of this statement? If the answer is "nothing specific," the statement is probably too abstract.
+
+### Decide what not to specify
+
+For each detail, ask whether it changes behavior. Specify the details that lock behavior and leave the rest unwritten. This governs which facts you decline to write at all, which is a different question from what you commit to when you do write one.
+
+- Wrong: "The house was pale green with a red door on the third street past the mill, and the family kept a gray cart horse named Birch." None of it changes how anyone behaves.
+- Right: "The house was cramped and the walls were thin." That fact alone explains why she can't sleep with a door closed.
 
 ### No flair
 

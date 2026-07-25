@@ -78,7 +78,7 @@ The Because clause earns a limited exemption. It may name an internal state if t
 
 Labels give the LLM one word to repeat. Behavioral descriptions force it to generate language that fits the behavior — dramatically more varied output.
 
-**Heavy trait adjectives are banned outright**, in every section: "intelligent," "analytical," "arrogant," "dominant," and words of that weight. One of them outvotes a page of behavioral description and pulls the character toward the stock type welded to that word. A softer adjective is not the fix. Replace the label with the behavior that earned it. Where the trait is a competence, that means three things: the domain the character is competent in, the drive behind that competence, and a cost or flaw the competence produces. Where the trait is not a competence, write what the character does that makes other people reach for the word, and what doing it costs them.
+**Heavy trait adjectives are banned outright**, in every section. The ban and the replacement formula are in *Describe behavior, not labels* in `../writing-style.md`. The table above and the example below are the character-specific worked cases.
 
 - Wrong: "She is highly intelligent and analytical."
 - Right: "She rereads every contract twice and catches the clause everyone else missed, because one bad signature cost her a job at 24. She cannot sign off on anything without checking it three times, which makes her slow under pressure."
