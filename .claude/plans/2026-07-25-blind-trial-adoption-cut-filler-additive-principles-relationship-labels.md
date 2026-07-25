@@ -541,7 +541,7 @@ subsection's closing.
 
 Run: `rg -c 'half-packed bag|price a shipment of grain|rereads every contract' skills/worldbuilder-character/framework.md`
 
-Expected: `3`.
+Expected: `2`.
 
 - [ ] **Step 6: Run the repo gates**
 
@@ -741,7 +741,7 @@ Expected: no matches, exit code 1.
 
 Run: `rg -c 'no repeats' skills/worldbuilder-character/relationships.md`
 
-Expected: `3`.
+Expected: `2`.
 
 - [ ] **Step 5: Run the repo gates**
 
