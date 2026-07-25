@@ -24,7 +24,7 @@ Each archetype is defined by its behavioral signature — the specific way it ch
 
 **1. Kin** — Family by blood, adoption, or found-family bond of equivalent depth. Behavioral signature: unconditional stakes without unconditional agreement. Cannot walk away without identity cost. Activates protective instincts, guilt, and loyalty that overrides rational calculation. Every character needs family context — if family is absent or dead, Ghost may substitute.
 
-**2. Authority** — A structured power relationship: mentor, employer, elder, or superior upward; apprentice, subordinate, or ward downward. Behavioral signature: asymmetric obligation. Upward: deference, resentment, desire to prove oneself. Downward: responsibility, protectiveness, impatience, fear of failing them.
+**2. Authority** — Someone who holds structured power over the character: a mentor, employer, elder, or superior. Behavioral signature: deference, resentment, and the desire to prove oneself. The label always points upward. For the downward direction, use Charge.
 
 **3. Rival** — Someone who competes for the same thing: status, recognition, mastery of a shared domain. Behavioral signature: compulsive comparison. The character measures themselves against this person involuntarily. Need not be hostile — friendly rivalry is equally generative.
 
@@ -44,13 +44,13 @@ Each archetype is defined by its behavioral signature — the specific way it ch
 
 **11. Ghost** — Someone absent (dead, estranged, departed) whose influence still shapes present behavior. Behavioral signature: reference and comparison. The character measures current situations against this person's memory, standards, or absence.
 
-**12. Charge** — Someone the character feels self-appointed responsibility for who is not their kin and not a formal subordinate. Behavioral signature: worry and preemptive action. Produces unwanted intervention, sacrifice, and conflict when the charge resists protection.
+**12. Charge** — Someone the character holds responsibility for, whether the role is formal (an apprentice, subordinate, or ward) or self-appointed. Behavioral signature: worry and preemptive action. Produces unwanted intervention, sacrifice, and conflict when the charge resists protection. Where the responsibility is formal, the duty is the setup and the behavior is what the character does beyond it.
 
 ---
 
 ## Coverage Requirements
 
-**Major characters:** target 8 named relationships. Anchor types that should be present: a family or family-equivalent tie (Kin or Ghost), at least one power-asymmetric relationship (Authority), at least one rivalry or friction relationship, at least one Confidant. Additional entries should include at least one genuine friction source beyond rivalry — Obligation, Unease, or Ideological Counterpart.
+**Major characters:** target 8 named relationships. Anchor types that should be present: a family or family-equivalent tie (Kin or Ghost), at least one power-asymmetric relationship (Authority or Charge), at least one rivalry or friction relationship, at least one Confidant. Additional entries should include at least one genuine friction source beyond rivalry: Obligation, Unease, or Ideological Counterpart.
 
 **Supporting characters:** target 5 named relationships. Anchor types: a family or family-equivalent tie, one power-asymmetric relationship, one friction or rivalry relationship.
 

@@ -168,7 +168,7 @@ The note stays on an open status tag while work is in progress; mark it `complet
 - [ ] No forward references (starting state only)
 
 **Relationships**
-- [ ] Coverage requirements met: 8 named relationships for major characters, 5 for supporting; required anchor types present (family or Ghost, Authority, friction or rivalry, Confidant — see `relationships.md` for full requirements)
+- [ ] Coverage requirements met: 8 named relationships for major characters, 5 for supporting; required anchor types present (family or Ghost, Authority or Charge, friction or rivalry, Confidant; see `relationships.md` for full requirements)
 - [ ] Each entry in bullet format with `**Name — Archetype(s):**` prefix
 - [ ] Each entry describes behavioral dynamic, not history or emotional label
 - [ ] Each entry describes this character's experience only, not the other person's traits
