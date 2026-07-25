@@ -109,7 +109,9 @@ One idea per sentence when ideas are distinct. If a sentence has two clauses, ch
 
 ### No em-dashes
 
-Em-dashes are not used in spec documents. Use periods instead. When two thoughts are joined by an em-dash, split them into two sentences.
+Em-dashes are not used in prose. Use periods instead. When two thoughts are joined by an em-dash, split them into two sentences.
+
+The rule governs sentences, not structure. Where a format uses an em-dash as a separator inside a label, as the `**Name — Archetype(s):**` relationship prefix does, that is structure and keeps its em-dash.
 
 **Hedging clause pattern:**
 
