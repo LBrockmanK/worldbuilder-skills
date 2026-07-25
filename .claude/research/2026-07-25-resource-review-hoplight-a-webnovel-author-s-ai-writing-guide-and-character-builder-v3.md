@@ -8,7 +8,7 @@ description: 'Verdicts on three incoming resources: the Hoplight local-first rol
 tags:
 - complete
 date: 2026-07-25
-timestamp: 2026-07-25T20:24Z
+timestamp: 2026-07-25T20:29Z
 resources:
 - https://github.com/Coneja-Chibi/Hoplight
 - https://www.reddit.com/r/WritingWithAI/comments/1v66q3e/a_guide_to_writing_with_ai_from_a_webnovel_author/
@@ -500,9 +500,19 @@ candidates, not in a spec of its own.
 What survives from that thread as a genuine gap is narrower and
 sharper: **we never grade behavior, only notes.** Every check we run
 reads the note. Nothing plays the character and grades the transcript.
-That limitation is the same one behind the trial's inverted ranking,
-and it belongs with the automated-assessment work rather than with
-character doctrine.
+That limitation is the same one behind the trial's inverted ranking.
+
+**Decided 2026-07-25 (Kevin): live play testing is out of scope, and
+this is not a deferral.** Side-by-side play comparison carries too many
+uncontrolled variables and too much cost to be worth running at this
+stage, and the variance it would add would swamp whatever signal it
+produced. The gap is accepted rather than closed. The intended source
+of behavioral evidence is uncontrolled user feedback once outputs are
+live, which is not a trial arm and should not be treated as one. So
+automated assessment stays confined to what can be read off the note
+and off paired generations of it, and any future proposal to grade play
+transcripts starts by revisiting this decision rather than assuming the
+gap is still open.
 
 Two things across the batch turn out to point the same way, and neither
 was what the resource was nominally about. Hoplight's real gift is not
