@@ -7,7 +7,7 @@ description: Implementation plan folding the stopslop Cut Filler rules and the f
 tags:
 - complete
 date: 2026-07-25
-timestamp: 2026-07-25T16:31Z
+timestamp: 2026-07-25T16:59Z
 resources: []
 ---
 
@@ -609,12 +609,32 @@ In the **Soul** block of `## Self-Check Before Marking Complete`, add
 after the existing "Plain language throughout" item:
 
 ```markdown
-- [ ] No heavy trait adjectives anywhere in the note; each replaced by domain, drive, and a cost or flaw
-- [ ] Knowledge boundaries stated for every topic the character has expertise in
-- [ ] At least one ongoing pressure that moves on the character's own timeline, not the player's
+- [ ] No heavy trait adjectives anywhere in the note; each replaced by the behavior that earned it
+- [ ] Where the blueprint states an expertise, it also states where that expertise stops
+- [ ] At least one standing pressure of the character's own, shown through what they do about it
 - [ ] The character's direction is left unresolved: competing pulls, no chosen future
 - [ ] Details that do not change behavior are left unwritten
 ```
+
+Then, in the same **Soul** block, replace the two coverage-minimum items so
+the checklist mirrors the framework's three coverage areas rather than two:
+
+```markdown
+- [ ] 3–5 psychological behavioral entries minimum
+- [ ] 2–3 general social behavior entries minimum
+```
+
+with:
+
+```markdown
+- [ ] 3–5 psychological behavioral entries minimum
+- [ ] 2–3 general social behavior entries minimum
+- [ ] 1 standing-pressure entry minimum, plus a boundary entry for each stated expertise
+```
+
+Task 4 added a third coverage area to `framework.md`. Leaving this
+checklist at two means a blueprint can pass its own completion check
+while missing the entire third group.
 
 - [ ] **Step 3: Verify every new rule has an enforcement item**
 
@@ -625,7 +645,7 @@ Expected: two matches — the `framework.md` rule from Task 4 and the
 
 Run: `rg -c '^- \[ \]' skills/worldbuilder-character/SKILL.md`
 
-Expected: the previous count plus 5.
+Expected: `33`. The file has 27 checklist items before this task; the five new Soul rule checks plus the third coverage-minimum item make 33.
 
 - [ ] **Step 4: Run the repo gates**
 
