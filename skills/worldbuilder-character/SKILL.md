@@ -174,7 +174,7 @@ The note stays on an open status tag while work is in progress; mark it `complet
 - [ ] Where the blueprint states an expertise, it also states where that expertise stops
 - [ ] At least one standing pressure of the character's own, shown through what they do about it
 - [ ] The character's direction is left unresolved: competing pulls, no chosen future
-- [ ] Details that do not change behavior are left unwritten
+- [ ] Across every section, details that do not change behavior are left unwritten
 - [ ] No negative-led characterization (state what they ARE)
 - [ ] No forward references (starting state only)
 
