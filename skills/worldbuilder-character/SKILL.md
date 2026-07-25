@@ -85,6 +85,11 @@ These rules apply to all behavioral sections (Body, Soul, Relationships, Intimat
 
 **Make decisions, don't hedge.** Every fact in the note is a decision. Never write "X or Y" or "grew up somewhere, perhaps Y" unless the ambiguity is a deliberate mystery being preserved. If you don't know, ask the user.
 
+**Decide what not to specify.** For each detail, ask whether it changes behavior. Specify the details that lock behavior and leave the rest unwritten. This is not the same as the hedging rule above: hedging governs what you commit to when you do write a fact, and this governs which facts you decline to write at all.
+
+- Wrong: "The house was pale green with a red door on the third street past the mill, and the family kept a gray cart horse named Birch." None of it changes how she behaves.
+- Right: "The house was cramped and the walls were thin." That fact alone explains why she can't sleep with a door closed.
+
 **Write plainly. No flair.** Write each behavioral description the way a screenplay writes action lines: present tense, only what can be seen or heard, no internal states, short plain sentences. If a director cannot stage the sentence, rewrite it. For vocabulary: shortest Anglo-Saxon word that works, active voice, cut every word that can go. See `writing-style.md` for the full style model.
 
 **Write what characters ARE, not what they aren't.** Positive statements give the LLM something to act on. Negative constructions define by absence — the LLM has to invent the positive case itself. State the fact directly. Factual negatives are fine when the un-done thing is the meaningful information: "she has not sent the letter," "he hasn't asked."
@@ -158,12 +163,18 @@ The note stays on an open status tag while work is in progress; mark it `complet
 **Soul**
 - [ ] 3–5 psychological behavioral entries minimum
 - [ ] 2–3 general social behavior entries minimum
+- [ ] 1 standing-pressure entry minimum, plus a boundary entry for each stated expertise
 - [ ] One contradiction stated as a behavioral description
 - [ ] Irrational behavior with emotional root present
 - [ ] Self-image gap expressed as behavioral description
 - [ ] Speech patterns described concretely if distinctive
 - [ ] Because clauses trace to the user's stated wants, fears, or experiences from Session Notes — if a Because clause didn't emerge from the Q&A, ask the user before writing
 - [ ] Plain language throughout — no literary flair, no Latinate vocabulary
+- [ ] No heavy trait adjectives anywhere in the note; each replaced by the behavior that earned it
+- [ ] Where the blueprint states an expertise, it also states where that expertise stops
+- [ ] At least one standing pressure of the character's own, shown through what they do about it
+- [ ] The character's direction is left unresolved: competing pulls, no chosen future
+- [ ] Details that do not change behavior are left unwritten
 - [ ] No negative-led characterization (state what they ARE)
 - [ ] No forward references (starting state only)
 
