@@ -50,7 +50,7 @@ Thin Body sections are acceptable when nothing about a character's physicality i
 
 ## Soul
 
-Psychological and general social behavioral descriptions. Two coverage areas written together as a single bullet list — no subheadings.
+Psychological and general social behavioral descriptions. Three coverage areas written together as a single bullet list — no subheadings.
 
 **Format:** Bullet list. One behavioral description per bullet, written as a prose sentence.
 
@@ -119,9 +119,9 @@ Soul covers three areas. Write them together as a single bullet list with no sub
 *Example social behavior entry:*
 - When meeting someone new, she asks questions and lets them fill the space. She learned early that people reveal more when they think they're not being evaluated.
 
-**Boundaries and ongoing pressures (2 entries minimum):**
-- Where a stated expertise stops — what the character does when a question falls outside it
-- A standing pressure of the character's own, shown through what they do about it
+**Boundaries and ongoing pressures:**
+- A standing pressure of the character's own, shown through what they do about it (1 entry minimum)
+- Where a stated expertise stops — what the character does when a question falls outside it. Required for each expertise the blueprint states; omit if it states none.
 
 If the character has a distinctive speech pattern, include one entry describing it concretely.
 
