@@ -6,6 +6,8 @@ These documents are functional specifications for an AI game master. Every sente
 
 Prose guidelines for Export phase outputs (character cards, intro text, etc.) live in the export skill, not here.
 
+These rules govern sentence prose. Where a section mandates a format, such as the Background fact pairs or the relationship entry prefix, the format wins and is reproduced exactly as written.
+
 ---
 
 ## Style Model
@@ -109,9 +111,7 @@ One idea per sentence when ideas are distinct. If a sentence has two clauses, ch
 
 ### No em-dashes
 
-Em-dashes are not used in prose. Use periods instead. When two thoughts are joined by an em-dash, split them into two sentences.
-
-The rule governs sentences, not structure. Where a format uses an em-dash as a separator inside a label, as the `**Name — Archetype(s):**` relationship prefix does, that is structure and keeps its em-dash.
+Em-dashes are not used in spec documents. Use periods instead. When two thoughts are joined by an em-dash, split them into two sentences.
 
 **Hedging clause pattern:**
 
