@@ -60,7 +60,7 @@ Each archetype is defined by its behavioral signature — the specific way it ch
 
 **The goal is variety, not accurate labeling.** When assigning archetypes, the question is not "which archetype fits this person best?" but "does the full set of relationships cover a wide range of behavioral modes?" A character whose relationships are all Community Thread, Kin, and Confidant will produce narrow, repetitive LLM output regardless of how accurately each label fits.
 
-**The ideal is no repeats.** Every relationship should carry a different archetype. A major character has 8 named relationships and there are 12 archetypes to draw on, so a full set with no repeats is achievable, and a supporting character's 5 relationships more so. Treat every repeat as a signal to reconsider before accepting it: is the framing too loose, or is there a more specific archetype that would better serve behavioral variety? Where a repeat survives that check, no archetype may appear more than twice.
+**The ideal is no repeats.** No archetype should appear twice across a character's full relationship list, counting every tag on every entry. There are 12 archetypes against 8 named relationships for a major character and 5 for a supporting one, so a set with no repeats has room to spare, though tagging an entry with more than one archetype uses that room up faster. Treat every repeat as a signal to reconsider before accepting it: is the framing too loose, or is there a more specific archetype that would better serve behavioral variety? Where a repeat survives that check, no archetype may appear more than twice.
 
 **Community Thread is a last resort.** It is the lowest-generativity archetype and the easiest one to over-apply because it fits almost any low-intensity relationship. Use it only for relationships where no higher-generativity archetype is even partially applicable. If you find yourself reaching for Community Thread more than once on a single character, stop — the relationship likely has a more specific texture worth naming.
 
@@ -137,7 +137,7 @@ Before marking the relationships section complete:
 
 1. **Behavioral coverage check:** "If this character appeared in a scene with any named cast member, does the card give the LLM a specific behavioral instruction for that interaction?"
 
-2. **Archetype distribution scan:** Count how many times each archetype appears across the full relationship list. The ideal is no repeats: flag every repeat for reconsideration, and treat any archetype used three or more times as a defect to fix. Flag any Community Thread entry beyond the first — these are the lowest-value entries and should be replaced with something more specific when possible.
+2. **Archetype distribution scan:** Count how many times each archetype appears across the full relationship list, counting every tag on every entry. The ideal is no repeats: flag every repeat for reconsideration, and treat any archetype used three or more times as wrong and fix it. Flag any Community Thread entry beyond the first — these are the lowest-value entries and should be replaced with something more specific when possible.
 
 3. **Cast web check:** At least 2 relationships should be with other named cast members (not offscreen figures), keeping the cast's social web interconnected.
 
