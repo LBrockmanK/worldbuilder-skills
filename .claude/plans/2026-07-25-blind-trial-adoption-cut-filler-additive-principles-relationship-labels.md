@@ -541,7 +541,7 @@ subsection's closing.
 
 Run: `rg -c 'half-packed bag|price a shipment of grain|rereads every contract' skills/worldbuilder-character/framework.md`
 
-Expected: `2`.
+Expected: `3`.
 
 - [ ] **Step 6: Run the repo gates**
 
