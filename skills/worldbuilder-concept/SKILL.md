@@ -5,6 +5,8 @@ description: Use when writing concept notes for an AI-powered narrative game —
 
 # Lorebook
 
+*All prose this skill produces follows `../writing-style.md`. Read it before writing.*
+
 ## Overview
 
 World knowledge is organized as concept notes — one note per discrete topic. Export skills read these notes and package them as lorebook entries. This skill covers writing the concept notes well; the export skill handles the packaging.

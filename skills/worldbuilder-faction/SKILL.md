@@ -5,6 +5,8 @@ description: Use when creating or deepening a faction note for an AI-powered nar
 
 # Faction Blueprint
 
+*All prose this skill produces follows `../writing-style.md`. Read it before writing.*
+
 ## Overview
 
 A faction note is not a roster — it is a shared behavioral specification. The engine handles generic social roles; the faction note supplies the specific: how this group acts as a collective, what its members do when they encounter strangers, how they present to outsiders, and how individuals vary beneath that shared surface.

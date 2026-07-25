@@ -5,6 +5,8 @@ description: Use when writing arc or intention notes for an AI-powered narrative
 
 # Story
 
+*All prose this skill produces follows `../writing-style.md`. Read it before writing.*
+
 ## Overview
 
 This skill serves two related purposes:

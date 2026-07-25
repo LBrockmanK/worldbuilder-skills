@@ -5,6 +5,8 @@ description: Use when creating or deepening an event note for an AI-powered narr
 
 # Event Notes
 
+*All prose this skill produces follows `../writing-style.md`. Read it before writing.*
+
 ## Overview
 
 An event note is not a schedule entry. It is a behavioral specification for a day. The export skill handles calendar mapping and storyTrigger packaging; this skill covers writing event notes that do real work: making any scene set on this day feel different from any other day.

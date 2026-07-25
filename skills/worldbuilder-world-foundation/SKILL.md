@@ -5,6 +5,8 @@ description: Use at the start of a new worldbuilding project to establish settin
 
 # World Foundation
 
+*All prose this skill produces follows `../writing-style.md`. Read it before writing.*
+
 ## Overview
 
 This skill covers two things: the structural decisions that shape the world, and the seed document that captures them. Work through the decisions first; the seed document is the output, not the starting point.

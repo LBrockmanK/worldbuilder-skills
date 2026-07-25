@@ -5,6 +5,8 @@ description: Use when creating or deepening a location note for an AI-powered na
 
 # Location Blueprint
 
+*All prose this skill produces follows `../writing-style.md`. Read it before writing.*
+
 ## Overview
 
 A location for an LLM-powered narrative game is not a description — it is a behavioral specification. The engine handles generic scene-setting; the location note supplies the specific: who comes here and why, what the place does to the people in it, how it reads differently at different moments. A location that only answers "what does it look like?" is a backdrop. One that answers "what happens here, and how does this place push back on a scene?" is an actor. The sections that carry this specification are Form & History (physical reality and what the place carries) and Presence (who comes here and how the place behaves across different circumstances). Presence carries the most weight.
