@@ -5,7 +5,7 @@ description: Use at the start of a new worldbuilding project to establish settin
 
 # World Foundation
 
-*All prose this skill produces follows `../writing-style.md`, with two exceptions: the World Introduction and the Opening Situation are player-facing text that the export skill ships verbatim, and they follow that skill's prose rules instead. Read the style reference before writing.*
+*All prose this skill produces follows `../writing-style.md`, with two exceptions: the World Introduction and the Opening Situation are written evocatively rather than as specification, so the style reference's ban on flair does not reach them. Every other section of the seed follows it. Read it before writing.*
 
 ## Overview
 
@@ -242,10 +242,10 @@ Other media capturing the right feel — films, books, music, anime. One per lin
 The community's social and emotional identity — not its physical description, not a repeat of the Setting Summary. How the community behaves and feels as a social entity.
 
 **World Introduction**
-Pre-game text the player reads before starting. Sets expectations for tone and situation. This section is exempt from the style reference; it is player-facing prose, not spec prose.
+Pre-game text the player reads before starting. Sets expectations for tone and situation. This section is written evocatively and is exempt from the style reference. No other section of the seed is.
 
 **Opening Situation**
-The situation the player arrives into. Evocative, not scripted — establishes the stage rather than dictating what happens. Cover: the setting's visible state on arrival, the immediate invitation for engagement, what the player's arrival means to the community. This section is exempt from the style reference; it is player-facing prose, not spec prose.
+The situation the player arrives into. Evocative, not scripted — establishes the stage rather than dictating what happens. Cover: the setting's visible state on arrival, the immediate invitation for engagement, what the player's arrival means to the community. This section is written evocatively and is exempt from the style reference. No other section of the seed is.
 
 **Story Direction note**
 Do not write story direction content into the seed. `project/direction.md` is a separate project document, already created by setup; fill it with `worldbuilder-story` after the seed is confirmed, before any Wide-phase notes.
