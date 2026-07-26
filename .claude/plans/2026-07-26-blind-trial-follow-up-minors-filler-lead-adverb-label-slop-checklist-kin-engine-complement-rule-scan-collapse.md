@@ -2,16 +2,18 @@
 type: plan
 title: 'Blind-trial follow-up minors: filler lead, adverb label, slop checklist, Kin
   engine, complement rule, scan collapse'
-description: 'Eight scoped prose fixes across four instruction files: the seven follow-up
-  minors from the blind-trial adoption reviews, plus a field-raised defect where the
-  Archetype Distribution section directs the agent to choose labels for variety rather
-  than for fit. Covers two writing-style.md corrections, a slop-phrases.md coverage
-  gap, a framework.md missing example, the no-complement principle, the Kin friction
-  engine, and a rewrite of the Archetype Distribution section.'
+description: 'Eleven scoped prose fixes across five instruction files: the seven follow-up
+  minors from the blind-trial adoption reviews, plus two field-raised changes — the
+  Archetype Distribution section directed the agent to choose labels for variety rather
+  than for fit, and the relationship anchor types were enforced at writing time rather
+  than established with the user during Q&A. Covers two writing-style.md corrections,
+  a slop-phrases.md coverage gap, a framework.md missing example, the no-complement
+  principle, the Kin friction engine, the Archetype Distribution rewrite with its fit
+  check, and the Q&A anchor move.'
 tags:
 - human-ready
 date: 2026-07-26
-timestamp: 2026-07-26T16:56Z
+timestamp: 2026-07-26T18:11Z
 resources:
 - '[[2026-07-26-verified-site-inventory-for-the-blind-trial-follow-up-minors]]'
 ---
@@ -26,20 +28,22 @@ resources:
 
 ## Goal
 
-Close the seven follow-up minors raised by the blind-trial adoption reviews, each verified against current file text in the [site inventory](../research/2026-07-26-verified-site-inventory-for-the-blind-trial-follow-up-minors.md), plus one further defect raised from field use: the Archetype Distribution section tells the agent to pick labels for variety rather than for fit.
+Close the seven follow-up minors raised by the blind-trial adoption reviews, each verified against current file text in the [site inventory](../research/2026-07-26-verified-site-inventory-for-the-blind-trial-follow-up-minors.md), plus two changes raised from field use: the Archetype Distribution section tells the agent to pick labels for variety rather than for fit, and the relationship anchor types are enforced at writing time when they should be established with the user during Q&A.
 
-**Architecture:** Nine scoped edits across four instruction files, grouped into five tasks by file and by whether a reviewer could accept one while rejecting its neighbour. Two corrections and one addition in `skills/writing-style.md` and `docs/slop-phrases.md`, one worked example in `framework.md`, and the rest in `relationships.md` — the no-complement principle, the Kin friction engine, and a rewrite of the Archetype Distribution section that relocates variety from the labeling step to the design step, collapses the rule's three statements into one, and adds the fit check that makes the distribution scan non-gameable.
+**Architecture:** Eleven scoped edits across five instruction files, grouped into six tasks by file and by whether a reviewer could accept one while rejecting its neighbour. Two corrections and one addition in `skills/writing-style.md` and `docs/slop-phrases.md`, one worked example in `framework.md`, and the rest in `relationships.md` — the no-complement principle, the Kin friction engine, and a rewrite of the Archetype Distribution section that relocates variety from the labeling step to the design step, collapses the rule's three statements into one, and adds the fit check that makes the distribution scan non-gameable.
 
 **Tech stack:** Plain markdown instruction prose. No frontmatter in any file touched.
 
 ## Global Constraints
 
-- **These four files use one line per paragraph — no hard wrapping.** This is the opposite of `trials/METHODOLOGY.md`. Never reflow a paragraph into wrapped lines; a replaced paragraph stays one long line.
+- **All five files use one line per paragraph — no hard wrapping.** This is the opposite of `trials/METHODOLOGY.md`. Never reflow a paragraph into wrapped lines; a replaced paragraph stays one long line.
 - Surgical edits only. Touch the exact text each step names; leave every other line byte-identical.
 - Shipped skill prose is model-neutral: no AI product or vendor names anywhere in `skills/` or `docs/`.
 - Follows the plugin's writing doctrine: plain and concrete, no filler (`skills/writing-style.md`, checklist in `docs/slop-phrases.md`). Prose added by this plan is subject to the same rules it is editing.
 - None of these files carry YAML frontmatter. Do not add any.
-- `doodle` discovers `SKILL.md` files only, so none of the files edited here are linted by it. Do not run `doodle` against an individual non-SKILL.md file — it fails on missing frontmatter by design.
+- `doodle` discovers `SKILL.md` files only. Four of the five files edited here are therefore outside the lint gate — but **Task 6 edits `skills/worldbuilder-character/SKILL.md`, which CI does lint** (`doodle --strict skills`, pinned at `doodle-lint==1.0.0` in `.github/workflows/tests.yml:29-30`). Task 6 runs that lint; the earlier tasks have nothing for it to check.
+- Local `doodle` is 0.5.0 against CI's pinned 1.0.0, and the `desc/typo` spellcheck is 1.0.0-only, so a local pass is partial evidence rather than proof CI is clean. Report the local result; do not claim CI will pass.
+- The `doodle` console script is not on PATH in this environment. Invoke it as `python -c "from doodle.cli import main; import sys; sys.argv=['doodle','--strict','skills']; sys.exit(main())"`. Never point it at an individual non-SKILL.md file — it fails on missing frontmatter by design.
 - The `card` vocabulary at `relationships.md:14` refers to the Export-phase artifact per `CONTEXT.md:29`; new prose in that file matches its neighbours' usage rather than introducing a synonym.
 
 ## Tasks
@@ -417,7 +421,7 @@ Rewriting the goal paragraph tells the author to label accurately, but nothing c
 
 ```markdown
 
-4. **Archetype fit check:** Read each entry's archetype against the relationship it tags: does that archetype's behavioral signature describe what this relationship actually does? A label that does not fit is a defect however well it serves the distribution — fix it by changing the archetype to the one that fits, or by changing the relationship so the archetype is earned. Where an anchor type from the targets above has no relationship that genuinely carries it, flag that gap rather than tagging a near-miss to fill the slot.
+4. **Archetype fit check:** Read each entry's archetype against the relationship it tags: does that archetype's behavioral signature describe what this relationship actually does? A label that does not fit is a defect however well it serves the distribution — fix it by changing the archetype to the one that fits, or by changing the relationship so the archetype is earned. Where an anchor type has no relationship that genuinely carries it, flag that gap rather than tagging a near-miss to fill the slot — unless the Q&A established that anchor as absent for this character, which is a recorded answer and not a gap.
 ```
 
 This is what makes the distribution scan non-gameable: distribution and fit are now both checked, and fit wins. The final clause covers the anchor types listed under `**Major characters:**` and `**Supporting characters:**` — a missing anchor is reported, not papered over.
@@ -492,13 +496,120 @@ the ideal-is-no-repeats paragraph and the enforceable cap in Coverage
 Validation, phrased as 'more than twice' to match."
 ```
 
+### Task 6: Move the anchor types into the Q&A
+
+**Files:**
+- Modify: `skills/worldbuilder-character/SKILL.md:77` (the Relationships coverage bullet)
+- Modify: `skills/worldbuilder-character/relationships.md` (insert a paragraph after the `**Supporting characters:**` line)
+
+**Interfaces:**
+- Consumes: Tasks 4 and 5 have already shifted `relationships.md` line numbers. Locate the insertion point by the text of the `**Supporting characters:**` line, not by number. `SKILL.md` is untouched by every earlier task, so its line numbers are as stated.
+
+The anchor types are currently a requirement the writing step must satisfy from whatever the Q&A happened to surface. That is the wrong end: an agent facing a missing anchor and a checklist will fill the slot with the nearest relationship it has. Asking the user directly during the session lets them confirm each anchor, form one that is missing, or state that it genuinely is not part of this character — and a stated absence is an answer the writing step can act on rather than a hole it must paper over.
+
+- [ ] **Step 1: Extend the Relationships coverage bullet**
+
+`SKILL.md:71` opens a coverage list for the Q&A; line 77 is its Relationships entry. Replace that line:
+
+Find:
+
+```
+- Relationships: who the named cast is, which relationships matter most to this character, the behavioral dynamic of each — what it makes them do when that person is present or mentioned
+```
+
+Replace with:
+
+```
+- Relationships: who the named cast is, which relationships matter most to this character, the behavioral dynamic of each — what it makes them do when that person is present or mentioned. Establish each anchor type explicitly: a family or family-equivalent tie, a power-asymmetric relationship in either direction, a rivalry or friction source, and someone they confide in. Where one has not come up, ask whether it exists and simply was not mentioned, or is genuinely not part of this character's life. An absent anchor is a real answer — record it as one rather than leaving it open.
+```
+
+Note the technique rules directly above this list: one question at a time, conversationally. This bullet says what must be established by the end of the Q&A, not a block of questions to deliver at once.
+
+- [ ] **Step 2: Point the anchor targets at the Q&A**
+
+Without this, `relationships.md` still reads as a checklist the writing step must satisfy on its own. Insert a new paragraph after the `**Supporting characters:**` line and before the `---` separator that follows it:
+
+```markdown
+
+**Anchors come from the Q&A.** The anchor types above are established with the user during the session, not inferred at writing time. Where the Q&A established that an anchor is genuinely not part of this character's life, record that and move on — do not manufacture a relationship to fill the slot.
+```
+
+This is one line, not wrapped, matching the file.
+
+- [ ] **Step 3: Verify the coverage bullet carries all four anchors**
+
+Run:
+
+```bash
+python -c "import io; l=[x for x in io.open('skills/worldbuilder-character/SKILL.md',encoding='utf-8') if x.startswith('- Relationships:')][0]; m=[a for a in ['family or family-equivalent','power-asymmetric','rivalry or friction','confide in'] if a not in l]; print('MISSING:',m) if m else print('ALL FOUR ANCHORS IN THE Q&A BULLET')"
+```
+
+Expected: `ALL FOUR ANCHORS IN THE Q&A BULLET`.
+
+- [ ] **Step 4: Verify the coverage list is still six bullets and nothing else moved**
+
+Run:
+
+```bash
+sed -n '71,80p' skills/worldbuilder-character/SKILL.md && git diff --stat skills/worldbuilder-character/SKILL.md
+```
+
+Expected: the `**Coverage before writing begins:**` heading, six bullets (Background, Body, Soul psychological, Soul social, Relationships, Intimate Dynamics), then the line beginning `The Q&A ends when`. The diff stat shows `1 insertion(+), 1 deletion(-)`.
+
+- [ ] **Step 5: Verify the relationships.md paragraph landed between the targets and the separator**
+
+Run:
+
+```bash
+python -c "import io; t=io.open('skills/worldbuilder-character/relationships.md',encoding='utf-8').read(); seg=t.split('**Supporting characters:**')[1].split('## Archetype Distribution')[0]; print('ANCHORS PARAGRAPH IN PLACE' if 'Anchors come from the Q&A' in seg else 'MISPLACED OR MISSING')"
+```
+
+Expected: `ANCHORS PARAGRAPH IN PLACE`.
+
+- [ ] **Step 6: Run the skill lint — this task is the one that needs it**
+
+`SKILL.md` files are what `doodle` discovers, so this is the only task in the plan whose edit CI lints.
+
+Run:
+
+```bash
+python -c "from doodle.cli import main; import sys; sys.argv=['doodle','--strict','skills']; sys.exit(main())"
+```
+
+Expected: `no issues found`. If it reports anything, fix it before committing. Record the exact output in your report, and state plainly that local doodle is 0.5.0 while CI pins 1.0.0 — a local pass does not prove the 1.0.0-only spellcheck clean.
+
+- [ ] **Step 7: Run the test suite to confirm no collateral damage**
+
+Run: `python -m pytest tests -q`
+Expected: `13 passed`.
+
+- [ ] **Step 8: Commit**
+
+```bash
+git add skills/worldbuilder-character/SKILL.md skills/worldbuilder-character/relationships.md
+git commit -m "Establish relationship anchors in the Q&A, not at writing time
+
+The anchor types were a requirement the writing step had to satisfy from
+whatever the Q&A happened to surface, which is the wrong end of the
+process: an agent holding a checklist and a missing anchor fills the slot
+with the nearest relationship it has. That is the same label-first
+pressure the Archetype Distribution rewrite removes, arriving by a
+different route.
+
+The Q&A coverage list now names the four anchors and asks the user to
+confirm, form, or rule out each one, and relationships.md defers to what
+the session established. A stated absence is an answer the writing step
+can act on instead of a hole it must paper over."
+```
+
 ## Out of scope
 
 Named here so an executor does not drift into them:
 
 - The arithmetic inside the `**The ideal is no repeats.**` paragraph — the 12-archetypes-against-8-relationships count, the second-tag rule, and the cap sentence. Task 5 Step 2 changes one sentence in that paragraph and nothing else; it remains the single place explaining *why* the cap is two.
 - The archetype definitions themselves, apart from Kin in Task 4. Task 5 changes how archetypes are chosen, not what any of them mean.
-- The anchor-type targets under `**Major characters:**` and `**Supporting characters:**`. They stay as written; Task 5's fit check is what catches an anchor filled by a near-miss. Relocating those targets into the user Q&A that precedes blueprint generation is the better fix and is queued separately — this plan does not anticipate it.
+- The anchor-type lists themselves under `**Major characters:**` and `**Supporting characters:**`. Task 6 changes where the anchors are established, not which anchors are required; the lists stay as written.
+- Any other coverage bullet in the `SKILL.md` Q&A list. Task 6 edits the Relationships bullet only.
 - Splitting validation into a separate grader agent. The checks this plan adds are written as instructions to whoever runs them; who runs them is a separate design question, queued.
 - Adding the Cut filler groups (throat-clearers, emphasis crutches, jargon verbs, padding adverbs) to `docs/slop-phrases.md`. The verified gap is vague declaratives only; whether the checklist should also mirror the filler groups is a separate question.
 - Any change to the trait rule itself at `skills/writing-style.md:143`. Task 3 adds a worked example for its existing second branch; the rule text stands.
