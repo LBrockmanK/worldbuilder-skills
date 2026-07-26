@@ -74,7 +74,7 @@ Before writing any note section, conduct a Q&A with the user. Ask one question a
 - Body: appearance, any notable physical self-consciousness, embodied habits
 - Soul (psychological): core want beneath the surface want, core fear, self-image gap, irrational behavior and its root
 - Soul (social behavior): how they are with strangers, what warmth looks like, what distance or friction looks like
-- Relationships: who the named cast is, which relationships matter most to this character, the behavioral dynamic of each — what it makes them do when that person is present or mentioned. Ask about each of these separately rather than as one question: who counts as family and what that is like now, who they answer to, who depends on them, who they clash with, and who they would tell the truth to. If one of them does not exist for this character, that is an answer worth having: ask, note it, and move on.
+- Relationships: who the named cast is, which relationships matter most to this character, the behavioral dynamic of each — what it makes them do when that person is present or mentioned. Then as separate questions: who counts as family, who they answer to, who depends on them, who they clash with, who they would tell the truth to. An absence here is an answer: note it and move on.
 - Intimate Dynamics: if the character is flagged for intimate dynamics (check project plan first), also cover how they express attraction, what makes them hold back, and any specific dynamic that drives their intimate behavior
 
 The Q&A ends when the agent has confident, specific answers across all coverage areas. Capture answers in Design Notes → Session Notes before moving to note writing.
