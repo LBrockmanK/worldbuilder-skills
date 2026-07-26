@@ -7,9 +7,9 @@ description: 'Two-part assessment system: a standing A/B testing suite (trials/M
   battery for the production character-card workflow, connected by a graduation rule:
   a mechanism ships in production only after the suite validates it.'
 tags:
-- human-ready
+- complete
 date: 2026-07-26
-timestamp: 2026-07-26T15:21Z
+timestamp: 2026-07-26T15:25Z
 resources:
 - '[[2026-07-17-resource-review-world-forge-multi-agent-world-pipeline]]'
 - '[[2026-07-25-resource-review-hoplight-a-webnovel-author-s-ai-writing-guide-and-character-builder-v3]]'
