@@ -83,6 +83,11 @@ Labels give the LLM one word to repeat. Behavioral descriptions force it to gene
 - Wrong: "She is highly intelligent and analytical."
 - Right: "She rereads every contract twice and catches the clause everyone else missed, because one bad signature cost her a job at 24. She cannot sign off on anything without checking it three times, which makes her slow under pressure."
 
+The rule's other branch covers traits that are not competences: name the behavior that makes people reach for the word, and what it costs.
+
+- Wrong: "He is arrogant and dominant."
+- Right: "He finishes other people's sentences wrong, then corrects them on the correction. His team stopped bringing him problems early, so he hears about them once they are expensive."
+
 ### Knowledge boundaries
 
 Wherever the blueprint states the character has expertise, state where that expertise stops. Unbounded competence produces a character who somehow knows everything about everything, because nothing in the note says otherwise. Per-topic depth beats a global claim of intelligence. The boundary goes in the Soul bullet list as a behavioral description, not as a standalone note.
