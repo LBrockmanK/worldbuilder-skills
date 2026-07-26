@@ -11,9 +11,9 @@ description: 'Eleven scoped prose fixes across five instruction files: the seven
   principle, the Kin friction engine, the Archetype Distribution rewrite with its fit
   check, and the Q&A anchor move.'
 tags:
-- human-ready
+- complete
 date: 2026-07-26
-timestamp: 2026-07-26T18:26Z
+timestamp: 2026-07-26T18:27Z
 resources:
 - '[[2026-07-26-verified-site-inventory-for-the-blind-trial-follow-up-minors]]'
 ---
