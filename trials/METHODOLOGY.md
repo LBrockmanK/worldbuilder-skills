@@ -54,11 +54,11 @@ the bar needs a stated justification and a sampling strategy.
 
 ### 2.4 What assessment reads
 
-Assessment reads notes, and output generated from notes by self-
-contained probes. Full or real play sessions are out of scope: too many
-uncontrolled variables, too much cost, and a human needed in the loop.
-Simulated probes are in, provided they run start to finish without human
-input.
+Assessment reads notes, and output generated from notes by
+self-contained probes. Full or real play sessions are out of scope: too
+many uncontrolled variables, too much cost, and a human needed in the
+loop. Simulated probes are in, provided they run start to finish
+without human input.
 
 Humans may grade. The system is built to need as little of that as
 possible.
