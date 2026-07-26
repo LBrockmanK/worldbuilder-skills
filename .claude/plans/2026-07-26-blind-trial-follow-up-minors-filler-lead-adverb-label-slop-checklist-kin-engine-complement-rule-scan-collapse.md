@@ -13,7 +13,7 @@ description: 'Eleven scoped prose fixes across five instruction files: the seven
 tags:
 - complete
 date: 2026-07-26
-timestamp: 2026-07-26T18:27Z
+timestamp: 2026-07-26T18:40Z
 resources:
 - '[[2026-07-26-verified-site-inventory-for-the-blind-trial-follow-up-minors]]'
 ---
@@ -287,7 +287,7 @@ and the cost it produces, which is what the branch asks for."
 
 ```markdown
 
-**No relationship requires a complement.** A character who sees someone as an Authority does not oblige that person's card to carry a Charge. The complement may even be true and still not belong: a teacher who shaped a student profoundly may see one student among many, formative to no particular degree. The story pressure runs from the student's end, and that is enough to write. What the card fixes is the starting state — the other character may grow into the relationship later, and that is a story event rather than a card entry.
+**No relationship requires a complement.** A character who sees someone as an Authority does not oblige a Charge on that person's side. The complement may even be true and still not belong: a teacher who shaped a student profoundly may see one student among many, formative to no particular degree. The story pressure runs from the student's end, and that is enough to write. What the card fixes is the starting state — the other character may grow into the relationship later, and that is a story event rather than a card entry.
 ```
 
 Remember the global constraint: this is one line, not wrapped.
