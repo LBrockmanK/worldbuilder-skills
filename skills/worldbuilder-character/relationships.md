@@ -14,6 +14,8 @@ A relationship defined by emotional tone gives the LLM nothing actionable. A rel
 
 **Asymmetry is normal.** Relationships do not require reciprocation. A named relationship in A's card does not mean B must name A back. A one-sided attachment, an unnoticed rivalry, a care that isn't returned: these are realistic and generate behavioral content. Write only what this character actually experiences.
 
+**No relationship requires a complement.** A character who sees someone as an Authority does not oblige that person's card to carry a Charge. The complement may even be true and still not belong: a teacher who shaped a student profoundly may see one student among many, formative to no particular degree. The story pressure runs from the student's end, and that is enough to write. What the card fixes is the starting state — the other character may grow into the relationship later, and that is a story event rather than a card entry.
+
 **Perspective-focus and cross-character capture apply simultaneously.** "Write only what this character experiences" governs the relationship entry — it keeps the voice consistent and prevents the LLM from acting on unverifiable claims about another character's interior. It does not mean that insights about the other character are discarded. When writing a relationship entry reveals something true about the other person — a behavioral pattern, a motivation, a likely reaction — that insight goes into that character's cast plan entry as a Blueprint note in the cast plan in `project/plan.md`. The two rules do not conflict: the relationship entry stays perspective-focused, and the insight finds a home where it can be acted on later.
 
 ---
@@ -22,7 +24,7 @@ A relationship defined by emotional tone gives the LLM nothing actionable. A rel
 
 Each archetype is defined by its behavioral signature — the specific way it changes what the character says, how they carry themselves, and what they want in a scene. Archetypes are a blueprinting tool for variety; they do not appear in the final card as labels. A single relationship can carry more than one archetype.
 
-**1. Kin** — Family by blood, adoption, or found-family bond of equivalent depth. Behavioral signature: unconditional stakes without unconditional agreement. Cannot walk away without identity cost. Activates protective instincts, guilt, and loyalty that overrides rational calculation. Every character needs family context — if family is absent or dead, Ghost may substitute.
+**1. Kin** — Family by blood, adoption, or found-family bond of equivalent depth. Behavioral signature: unconditional stakes without unconditional agreement. Cannot walk away without identity cost. Activates protective instincts, guilt, and loyalty that overrides rational calculation. Protection here is refused as often as it is accepted: family resists being handled by family, and the refusal costs more than a stranger's would. Every character needs family context — if family is absent or dead, Ghost may substitute.
 
 **2. Authority** — Someone who holds structured power over the character: a mentor, employer, elder, or superior. Behavioral signature: deference, resentment, and the desire to prove oneself. The label always points upward. For the downward direction, use Charge.
 
