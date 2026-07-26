@@ -8,7 +8,7 @@ description: 'Implementation plan for trials/METHODOLOGY.md: the standing A/B tr
 tags:
 - human-ready
 date: 2026-07-26
-timestamp: 2026-07-26T15:31Z
+timestamp: 2026-07-26T15:51Z
 resources:
 - '[[2026-07-26-standing-writing-assessment-methodology-a-b-trial-suite-and-production-self-review-battery]]'
 - '[[2026-07-26-implementation-research-standing-methodology-document-conventions]]'
@@ -537,4 +537,4 @@ Named here so an executor does not drift into them:
 - Any edit under `skills/` or `docs/`. The battery is designed, not implemented; implementation is gated on validation per section 5.
 - Running the section 6 pilot, or any regeneration of the 2026-07-23 arms.
 - Rewriting the 2026-07 kit's `brief-procedure.md` or `rubric.md` to match the generalized protocol.
-- Extending doodle-lint or CI coverage to `trials/`. The dossier notes the gap; closing it is a repo-config change outside this spec.
+- Extending doodle-lint or CI coverage to `trials/`. Investigated and rejected on evidence, not deferred: doodle-lint is a skill linter and fails any file without SKILL.md frontmatter (`parse/missing-frontmatter`, `desc/too-short`, exit 2). `trials/METHODOLOGY.md` has no frontmatter by design, so linting it would fail CI on two inapplicable errors. Do not revisit this without a different tool.

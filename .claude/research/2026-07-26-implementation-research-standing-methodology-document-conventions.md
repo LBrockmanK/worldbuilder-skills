@@ -7,7 +7,7 @@ description: 'Repo conventions for authoring trials/METHODOLOGY.md: existing tri
 tags:
 - human-ready
 date: 2026-07-26
-timestamp: 2026-07-26T15:28Z
+timestamp: 2026-07-26T15:51Z
 resources: []
 ---
 
@@ -40,5 +40,5 @@ Gather the repo conventions needed to author `trials/METHODOLOGY.md` per the [st
 Three implications for the plan:
 
 1. **The document is greenfield but not styleless.** It should match the kit's conventions — no frontmatter, hard wrap at ~72 characters, `## N. Title` numbered sections — so a trial builder reads the standing document and its instance in one idiom.
-2. **No automated gate will catch errors in it.** Because `trials/` is outside both the doodle glob and CI, verification steps in the plan must be explicit structural commands (heading presence, wrap width, required-string greps) rather than an appeal to a lint or test suite that does not cover this path. Extending lint coverage to `trials/` is a live option but a repo-config change beyond the spec's deliverable.
+2. **No automated gate will catch errors in it, and doodle-lint cannot become one.** Because `trials/` is outside both the doodle glob and CI, verification steps in the plan must be explicit structural commands (heading presence, wrap width, required-string greps) rather than an appeal to a lint or test suite that does not cover this path. Extending doodle coverage to `trials/` was considered and rejected on evidence: doodle-lint is a skill linter, not a general prose linter, and it fails any file lacking SKILL.md frontmatter. Run against `docs/slop-phrases.md` it emits `parse/missing-frontmatter` and `desc/too-short` and exits 2. Since `trials/METHODOLOGY.md` deliberately carries no frontmatter, adding it to the lint scope would fail CI on two inapplicable errors. The gap stays open by decision, not oversight.
 3. **The 2026-07 kit becomes the first instance.** It stays functionally untouched; the only change it needs is a pointer to the standing document so the relationship is discoverable from either direction.
