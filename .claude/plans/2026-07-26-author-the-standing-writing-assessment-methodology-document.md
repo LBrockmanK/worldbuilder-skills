@@ -50,7 +50,7 @@ Author `trials/METHODOLOGY.md`, the standing writing-assessment methodology, per
 **Interfaces:**
 - Produces: sections `## 1.` and `## 2.`, and the subsection anchors `2.1`–`2.4` that later sections cite as "§2.2" and "§2.3".
 
-- [ ] **Step 1: Create the file with the header and section 1**
+- [x] **Step 1: Create the file with the header and section 1**
 
 ```markdown
 # Writing-Assessment Methodology
@@ -75,7 +75,7 @@ one way: the suite is how a check earns its place in the battery, never
 the reverse. See section 5.
 ```
 
-- [ ] **Step 2: Append section 2, the standing rules**
+- [x] **Step 2: Append section 2, the standing rules**
 
 ```markdown
 ## 2. Standing rules
@@ -123,7 +123,7 @@ Humans may grade. The system is built to need as little of that as
 possible.
 ```
 
-- [ ] **Step 3: Verify structure and wrap width**
+- [x] **Step 3: Verify structure and wrap width**
 
 Run:
 
@@ -133,12 +133,12 @@ grep -n '^#\{1,3\} ' trials/METHODOLOGY.md && python -c "import io; bad=[(i,len(
 
 Expected: the heading list shows `# Writing-Assessment Methodology`, `## 1. Two systems, one methodology`, `## 2. Standing rules`, `### 2.1` through `### 2.4`; then `WRAP OK`.
 
-- [ ] **Step 4: Confirm no frontmatter leaked in**
+- [x] **Step 4: Confirm no frontmatter leaked in**
 
 Run: `head -1 trials/METHODOLOGY.md`
 Expected: `# Writing-Assessment Methodology` (not `---`).
 
-- [ ] **Step 5: Commit**
+- [x] **Step 5: Commit**
 
 ```bash
 git add trials/METHODOLOGY.md
@@ -158,7 +158,7 @@ rules binding both, including the per-metric validation rule that the
 - Consumes: section 2 anchors (cites "section 2.2" for agent-scorable dimensions).
 - Produces: section `## 3.` with subsections `3.1` protocol, `3.2` scenario classes, `3.3` rubric construction, `3.4` kit instantiation.
 
-- [ ] **Step 1: Append section 3**
+- [x] **Step 1: Append section 3**
 
 ````markdown
 ## 3. The A/B trial suite
@@ -225,12 +225,12 @@ instead.
 First instance: `trials/2026-07-writing-doctrine/`.
 ````
 
-- [ ] **Step 2: Verify the section landed with its subsections**
+- [x] **Step 2: Verify the section landed with its subsections**
 
 Run: `grep -n '^### 3\.' trials/METHODOLOGY.md`
 Expected: exactly four lines — `3.1 Trial protocol`, `3.2 Probe design: scenario classes`, `3.3 Rubric construction`, `3.4 Instantiating a kit`.
 
-- [ ] **Step 3: Verify all six scenario classes are present**
+- [x] **Step 3: Verify all six scenario classes are present**
 
 Run:
 
@@ -240,7 +240,7 @@ python -c "import io; t=io.open('trials/METHODOLOGY.md',encoding='utf-8').read()
 
 Expected: `ALL 6 CLASSES PRESENT`.
 
-- [ ] **Step 4: Re-run the wrap check**
+- [x] **Step 4: Re-run the wrap check**
 
 Run:
 
@@ -250,7 +250,7 @@ python -c "import io; bad=[(i,len(l.rstrip())) for i,l in enumerate(io.open('tri
 
 Expected: `WRAP OK`.
 
-- [ ] **Step 5: Commit**
+- [x] **Step 5: Commit**
 
 ```bash
 git add trials/METHODOLOGY.md
@@ -270,7 +270,7 @@ rather than the live-play audit they came from."
 - Consumes: section 2.3 (cheapness bar) for the sampling rationale in 4.2; section 2.2 for the validation note in 4.3.
 - Produces: subsection anchors `4.1`–`4.4`, cited by the section 5 status table.
 
-- [ ] **Step 1: Append section 4**
+- [x] **Step 1: Append section 4**
 
 ````markdown
 ## 4. The production self-review battery
@@ -348,7 +348,7 @@ detector built for human readers, which is irrelevant to a note written
 for a model to read.
 ````
 
-- [ ] **Step 2: Verify subsections and the model-neutrality constraint**
+- [x] **Step 2: Verify subsections and the model-neutrality constraint**
 
 Run:
 
@@ -358,7 +358,7 @@ grep -n '^### 4\.' trials/METHODOLOGY.md && python -c "import io,re; t=io.open('
 
 Expected: four `### 4.x` headings, then `MODEL-NEUTRAL OK`.
 
-- [ ] **Step 3: Re-run the wrap check**
+- [x] **Step 3: Re-run the wrap check**
 
 Run:
 
@@ -368,7 +368,7 @@ python -c "import io; bad=[(i,len(l.rstrip())) for i,l in enumerate(io.open('tri
 
 Expected: `WRAP OK`.
 
-- [ ] **Step 4: Commit**
+- [x] **Step 4: Commit**
 
 ```bash
 git add trials/METHODOLOGY.md
@@ -391,7 +391,7 @@ fresh idea."
 - Consumes: the `4.1`–`4.4` anchors from Task 3 and the `2.2` anchor from Task 1.
 - Produces: the finished document.
 
-- [ ] **Step 1: Append sections 5 and 6**
+- [x] **Step 1: Append sections 5 and 6**
 
 ````markdown
 ## 5. Mechanism status and the graduation rule
@@ -429,7 +429,7 @@ can move the metric to validated.
 Until step 2 passes, the metric is labeled `unvalidated` per section 2.2.
 ````
 
-- [ ] **Step 2: Verify the status table covers every section 4 mechanism**
+- [x] **Step 2: Verify the status table covers every section 4 mechanism**
 
 Run:
 
@@ -439,12 +439,12 @@ python -c "import io,re; t=io.open('trials/METHODOLOGY.md',encoding='utf-8').rea
 
 Expected: `ALL 4 MECHANISMS IN STATUS TABLE`.
 
-- [ ] **Step 3: Verify no mechanism is described as shipped**
+- [x] **Step 3: Verify no mechanism is described as shipped**
 
 Run: `grep -n 'graduated\|shipped' trials/METHODOLOGY.md`
 Expected: every hit states the negative — "Nothing has graduated", "No shipped skill implements this battery yet", "nothing here is shipped prose until it graduates", plus the section 1 definition. No hit claims a mechanism is live.
 
-- [ ] **Step 4: Full-document structural check**
+- [x] **Step 4: Full-document structural check**
 
 Run:
 
@@ -454,7 +454,7 @@ grep -c '' trials/METHODOLOGY.md && grep -n '^## ' trials/METHODOLOGY.md && pyth
 
 Expected: a line count in the 240–330 range; six `## N.` headings in order 1–6; `WRAP OK`.
 
-- [ ] **Step 5: Commit**
+- [x] **Step 5: Commit**
 
 ```bash
 git add trials/METHODOLOGY.md
@@ -477,12 +477,12 @@ to voice - so only the cross-provider pass can validate it."
 
 The kit's working files are otherwise untouched — this adds a cross-reference, not a rewrite.
 
-- [ ] **Step 1: Read the current section**
+- [x] **Step 1: Read the current section**
 
 Run: `sed -n '1,16p' trials/2026-07-writing-doctrine/README.md`
 Expected: the `# Trial Runner` heading and the `## 1. What this is` section, to see the exact prose the pointer follows.
 
-- [ ] **Step 2: Insert the pointer as the last line of `## 1. What this is`**
+- [x] **Step 2: Insert the pointer as the last line of `## 1. What this is`**
 
 Add this paragraph at the end of that section, before the `## 2. Setup` heading:
 
@@ -493,7 +493,7 @@ rubric construction, and the metric-validation rule — live in
 records only what is specific to this trial.
 ```
 
-- [ ] **Step 3: Verify the pointer landed inside section 1**
+- [x] **Step 3: Verify the pointer landed inside section 1**
 
 Run:
 
@@ -503,7 +503,7 @@ python -c "import io; t=io.open('trials/2026-07-writing-doctrine/README.md',enco
 
 Expected: `POINTER IN SECTION 1`.
 
-- [ ] **Step 4: Verify the relative path resolves**
+- [x] **Step 4: Verify the relative path resolves**
 
 Run:
 
@@ -513,12 +513,12 @@ python -c "import os; print('PATH OK' if os.path.exists('trials/2026-07-writing-
 
 Expected: `PATH OK`.
 
-- [ ] **Step 5: Confirm nothing else in the kit changed**
+- [x] **Step 5: Confirm nothing else in the kit changed**
 
 Run: `git diff --stat`
 Expected: one file changed — `trials/2026-07-writing-doctrine/README.md` — with roughly 5 insertions and 0 deletions.
 
-- [ ] **Step 6: Commit**
+- [x] **Step 6: Commit**
 
 ```bash
 git add trials/2026-07-writing-doctrine/README.md
@@ -538,3 +538,15 @@ Named here so an executor does not drift into them:
 - Running the section 6 pilot, or any regeneration of the 2026-07-23 arms.
 - Rewriting the 2026-07 kit's `brief-procedure.md` or `rubric.md` to match the generalized protocol.
 - Extending doodle-lint or CI coverage to `trials/`. Investigated and rejected on evidence, not deferred: doodle-lint is a skill linter and fails any file without SKILL.md frontmatter (`parse/missing-frontmatter`, `desc/too-short`, exit 2). `trials/METHODOLOGY.md` has no frontmatter by design, so linting it would fail CI on two inapplicable errors. Do not revisit this without a different tool.
+
+## Execution record
+
+Executed 2026-07-26 on branch `standing-assessment-methodology` (base 4027a25), subagent-driven, all five tasks complete. Spec compliance was checked deterministically for every task by byte-comparing the delivered section against the task brief; all four content tasks came back an exact match.
+
+Deviations from the plan as written:
+
+- **Task 1 needed a fix pass.** The plan wrapped `self-contained` as `self-` + `contained` across a line break, which markdown renders as two words. Fixed in both the document and this plan, so regenerating the brief cannot reintroduce it.
+- **Task 1's verification used `cd trials`,** which would have poisoned the following step's path because the Bash tool persists its working directory between calls. Corrected to repo-root-relative paths before dispatch.
+- **The finished document is 235 lines,** below Task 4's estimated 240-330. The estimate was high; the content is complete and verbatim. The implementer reported the real number rather than padding to hit it, which is the behaviour the step asked for.
+- **Task reviews ran in the main loop rather than as dispatched reviewer subagents.** The frugal routing guard blocks reasoning-tier agents, and frugal's decision table routes reviews to the main loop. Spec compliance was therefore checked by byte-comparison rather than by reviewer judgment, which is a stronger check for verbatim transcription; the quality read was not blind, since the same session authored the prose.
+
