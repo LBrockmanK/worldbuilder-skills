@@ -125,3 +125,77 @@ trial does. A kit that restates a standing rule has copied it — link
 instead.
 
 First instance: `trials/2026-07-writing-doctrine/`.
+
+## 4. The production self-review battery
+
+Mechanism designs. Status is in section 5; nothing here is shipped prose
+until it graduates.
+
+### 4.1 Dilemma test and anti-convergence probe
+
+**Run.** Write one scenario putting the character's highest-ranked value
+against common decency. Answer it from the note alone.
+
+**Pass:** the note decides. **Fail:** the author had to decide — the
+motive content is underwritten and the value is decoration.
+
+**Anti-convergence half.** Put the same dilemma to the character this
+one was declared to be built against. The answers must differ in what
+the characters do, not in how they sound. Same action in a different
+accent is a fail.
+
+**Cost:** O(1) per note. The probe targets the one declared contrast
+character, not every pair.
+
+**Caveat.** RoleCDE (arXiv:2606.01552) reports that role-conditioned
+agents default to alignment-consistent choices over role-specific ones
+when the two collide, and its demonstrated mitigation is fine-tuning,
+not prompting. Expect a partial effect. This test verifies that
+value-conflict material works rather than assuming it does.
+
+### 4.2 Blind-line voice test, scatter-shot
+
+**Run.** Take probe-generated dialogue, strip speaker attribution, and
+have an agent assign each line to a character. Score as classification
+accuracy.
+
+**Sampling.** When a cast is large enough that all-pairs comparison
+exceeds the section 2.3 bar, draw random subsets of characters and run
+the test within each subset, repeating across different subsets rather
+than completing the matrix.
+
+**Pass:** accuracy meaningfully above chance for the subset size.
+**Fail:** at-chance accuracy. The failure is homogenization across the
+cast, not infidelity in any one note.
+
+**Not adopted:** the full cross-character distinctiveness matrix. It is
+O(n^2), and sampling answers the same question.
+
+### 4.3 Counterfactual probe and the not-binding verdict
+
+**Run.** For a behavior the note is supposed to compel, cite both the
+generated line and the note line that produced it. Then ask whether that
+same note line would equally permit the opposite behavior.
+
+**Pass:** the note line rules the failing version out.
+**Verdict `present but not binding`:** the material is there and permits
+either outcome. The fix is directive language or a missing context
+qualifier, not more prose.
+
+**Status.** The most judgment-laden mechanism here. Its agent-run
+verdicts need section 2.2 validation before they are trusted.
+
+### 4.4 Cross-model convergence check
+
+**Run.** Generate the same section from two models. Flag sentences the
+two produce identically or near-identically.
+
+**Reading.** Cross-model agreement marks a sentence as the model's voice
+rather than the author's, so high convergence is a slop signal.
+
+**Requires** paired generations, which single-model packets do not
+produce. Enters the battery only if section 6 validates it.
+
+**Not adopted:** AI detectors. They measure whether prose fools a
+detector built for human readers, which is irrelevant to a note written
+for a model to read.
