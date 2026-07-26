@@ -6,9 +6,9 @@ description: 'Implementation plan for trials/METHODOLOGY.md: the standing A/B tr
   rule, and the convergence-metric validation path, plus a back-pointer from the 2026-07
   kit as the first instance.'
 tags:
-- human-ready
+- complete
 date: 2026-07-26
-timestamp: 2026-07-26T15:51Z
+timestamp: 2026-07-26T15:55Z
 resources:
 - '[[2026-07-26-standing-writing-assessment-methodology-a-b-trial-suite-and-production-self-review-battery]]'
 - '[[2026-07-26-implementation-research-standing-methodology-document-conventions]]'
@@ -128,7 +128,7 @@ possible.
 Run:
 
 ```bash
-cd trials && grep -n '^#\{1,3\} ' METHODOLOGY.md && python -c "import io; bad=[(i,len(l.rstrip())) for i,l in enumerate(io.open('METHODOLOGY.md',encoding='utf-8'),1) if len(l.rstrip())>76 and not l.lstrip().startswith('|') and '](' not in l]; print(bad if bad else 'WRAP OK')"
+grep -n '^#\{1,3\} ' trials/METHODOLOGY.md && python -c "import io; bad=[(i,len(l.rstrip())) for i,l in enumerate(io.open('trials/METHODOLOGY.md',encoding='utf-8'),1) if len(l.rstrip())>76 and not l.lstrip().startswith('|') and '](' not in l]; print(bad if bad else 'WRAP OK')"
 ```
 
 Expected: the heading list shows `# Writing-Assessment Methodology`, `## 1. Two systems, one methodology`, `## 2. Standing rules`, `### 2.1` through `### 2.4`; then `WRAP OK`.
