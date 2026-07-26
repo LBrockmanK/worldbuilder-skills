@@ -625,10 +625,17 @@ with the nearest relationship it has. That is the same label-first
 pressure the Archetype Distribution rewrite removes, arriving by a
 different route.
 
-The Q&A coverage list now names the four anchors and asks the user to
-confirm, form, or rule out each one, and relationships.md defers to what
-the session established. A stated absence is an answer the writing step
-can act on instead of a hole it must paper over."
+The Q&A coverage list now carries five plain questions - who counts as
+family, who they answer to, who depends on them, who they clash with,
+who they would tell the truth to - asked separately and in the words a
+person would use, with no archetype named on the conversation side.
+
+The lists leave relationships.md rather than staying as a
+cross-reference. Keeping them would mean the file could demand a
+relationship the user had just ruled out, which puts the writing step
+back to filling the slot. The counts stay; what fills them is now the
+session's answer alone. The friction-source quota goes for the same
+reason."
 ```
 
 ## Out of scope
