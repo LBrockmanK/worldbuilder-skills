@@ -13,7 +13,7 @@ description: 'Eleven scoped prose fixes across five instruction files: the seven
 tags:
 - human-ready
 date: 2026-07-26
-timestamp: 2026-07-26T18:11Z
+timestamp: 2026-07-26T18:15Z
 resources:
 - '[[2026-07-26-verified-site-inventory-for-the-blind-trial-follow-up-minors]]'
 ---
@@ -520,10 +520,10 @@ Find:
 Replace with:
 
 ```
-- Relationships: who the named cast is, which relationships matter most to this character, the behavioral dynamic of each — what it makes them do when that person is present or mentioned. Establish each anchor type explicitly: a family or family-equivalent tie, a power-asymmetric relationship in either direction, a rivalry or friction source, and someone they confide in. Where one has not come up, ask whether it exists and simply was not mentioned, or is genuinely not part of this character's life. An absent anchor is a real answer — record it as one rather than leaving it open.
+- Relationships: who the named cast is, which relationships matter most to this character, the behavioral dynamic of each — what it makes them do when that person is present or mentioned. Ask about each of these separately rather than as one question: who counts as family and what that is like now, who they answer to, who depends on them, who they clash with, and who they would tell the truth to. If one of them does not exist for this character, that is an answer worth having: ask, note it, and move on.
 ```
 
-Note the technique rules directly above this list: one question at a time, conversationally. This bullet says what must be established by the end of the Q&A, not a block of questions to deliver at once.
+Two things about the phrasing. These are five separate questions asked across the conversation, matching the one-question-at-a-time rule directly above this list — not one compound question with five parts. And they are worded the way a person would ask them: the Q&A never says "anchor type" or names an archetype, because the user is describing a character, not filling in a taxonomy. Matching those answers to archetypes happens later, in `relationships.md`.
 
 - [ ] **Step 2: Point the anchor targets at the Q&A**
 
@@ -531,20 +531,20 @@ Without this, `relationships.md` still reads as a checklist the writing step mus
 
 ```markdown
 
-**Anchors come from the Q&A.** The anchor types above are established with the user during the session, not inferred at writing time. Where the Q&A established that an anchor is genuinely not part of this character's life, record that and move on — do not manufacture a relationship to fill the slot.
+**Anchors come from the Q&A.** The anchor types above are established with the user during the session, not inferred at writing time. The Q&A asks about them in ordinary terms — who counts as family, who they answer to, who depends on them, who they clash with, who they would tell the truth to — and matching those answers to archetypes happens here. Where the session established that one of them is genuinely not part of this character's life, record that and move on; do not manufacture a relationship to fill the slot.
 ```
 
 This is one line, not wrapped, matching the file.
 
-- [ ] **Step 3: Verify the coverage bullet carries all four anchors**
+- [ ] **Step 3: Verify all five questions are present and stay in plain language**
 
 Run:
 
 ```bash
-python -c "import io; l=[x for x in io.open('skills/worldbuilder-character/SKILL.md',encoding='utf-8') if x.startswith('- Relationships:')][0]; m=[a for a in ['family or family-equivalent','power-asymmetric','rivalry or friction','confide in'] if a not in l]; print('MISSING:',m) if m else print('ALL FOUR ANCHORS IN THE Q&A BULLET')"
+python -c "import io; l=[x for x in io.open('skills/worldbuilder-character/SKILL.md',encoding='utf-8') if x.startswith('- Relationships:')][0]; m=[a for a in ['who counts as family','who they answer to','who depends on them','who they clash with','who they would tell the truth to'] if a not in l]; print('MISSING:',m) if m else print('ALL FIVE QUESTIONS PRESENT'); j=[w for w in ['anchor','archetype','Kin','Charge','Authority','Confidant'] if w in l]; print('JARGON LEAKED:',j) if j else print('PLAIN LANGUAGE OK')"
 ```
 
-Expected: `ALL FOUR ANCHORS IN THE Q&A BULLET`.
+Expected: `ALL FIVE QUESTIONS PRESENT` then `PLAIN LANGUAGE OK`. The second check matters — the Q&A is a conversation with the user about a person, so no archetype name or system term belongs in it.
 
 - [ ] **Step 4: Verify the coverage list is still six bullets and nothing else moved**
 
