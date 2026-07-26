@@ -13,7 +13,7 @@ description: 'Eleven scoped prose fixes across five instruction files: the seven
 tags:
 - human-ready
 date: 2026-07-26
-timestamp: 2026-07-26T18:15Z
+timestamp: 2026-07-26T18:22Z
 resources:
 - '[[2026-07-26-verified-site-inventory-for-the-blind-trial-follow-up-minors]]'
 ---
@@ -421,7 +421,7 @@ Rewriting the goal paragraph tells the author to label accurately, but nothing c
 
 ```markdown
 
-4. **Archetype fit check:** Read each entry's archetype against the relationship it tags: does that archetype's behavioral signature describe what this relationship actually does? A label that does not fit is a defect however well it serves the distribution — fix it by changing the archetype to the one that fits, or by changing the relationship so the archetype is earned. Where an anchor type has no relationship that genuinely carries it, flag that gap rather than tagging a near-miss to fill the slot — unless the Q&A established that anchor as absent for this character, which is a recorded answer and not a gap.
+4. **Archetype fit check:** Read each entry's archetype against the relationship it tags: does that archetype's behavioral signature describe what this relationship actually does? A label that does not fit is a defect however well it serves the distribution — fix it by changing the archetype to the one that fits, or by changing the relationship so the archetype is earned. Where a relationship the Q&A established has no entry carrying it, that is a gap worth flagging. This check imposes no list of its own: the session decides what should be present.
 ```
 
 This is what makes the distribution scan non-gameable: distribution and fit are now both checked, and fit wins. The final clause covers the anchor types listed under `**Major characters:**` and `**Supporting characters:**` — a missing anchor is reported, not papered over.
@@ -505,7 +505,9 @@ Validation, phrased as 'more than twice' to match."
 **Interfaces:**
 - Consumes: Tasks 4 and 5 have already shifted `relationships.md` line numbers. Locate the insertion point by the text of the `**Supporting characters:**` line, not by number. `SKILL.md` is untouched by every earlier task, so its line numbers are as stated.
 
-The anchor types are currently a requirement the writing step must satisfy from whatever the Q&A happened to surface. That is the wrong end: an agent facing a missing anchor and a checklist will fill the slot with the nearest relationship it has. Asking the user directly during the session lets them confirm each anchor, form one that is missing, or state that it genuinely is not part of this character — and a stated absence is an answer the writing step can act on rather than a hole it must paper over.
+The anchor types are currently a requirement the writing step must satisfy from whatever the Q&A happened to surface. That is the wrong end: an agent facing a missing anchor and a checklist will fill the slot with the nearest relationship it has. Asking the user directly during the session lets them confirm each anchor, form one that is missing, or state that it genuinely is not part of this character.
+
+The lists then have to leave `relationships.md` rather than stay as a cross-reference. If the user rules an anchor out and the file still requires it, the two sources contradict each other and the writing step is back to filling the slot — the same defect arriving by a different route. After this task the Q&A is the only place that decides which relationships a character has.
 
 - [ ] **Step 1: Extend the Relationships coverage bullet**
 
@@ -525,16 +527,37 @@ Replace with:
 
 Two things about the phrasing. These are five separate questions asked across the conversation, matching the one-question-at-a-time rule directly above this list — not one compound question with five parts. And they are worded the way a person would ask them: the Q&A never says "anchor type" or names an archetype, because the user is describing a character, not filling in a taxonomy. Matching those answers to archetypes happens later, in `relationships.md`.
 
-- [ ] **Step 2: Point the anchor targets at the Q&A**
+- [ ] **Step 2: Remove the anchor lists from the relationship targets**
 
-Without this, `relationships.md` still reads as a checklist the writing step must satisfy on its own. Insert a new paragraph after the `**Supporting characters:**` line and before the `---` separator that follows it:
+Once the anchors are established in the Q&A, listing them here as requirements sets up a direct contradiction: the user rules one out during the session and this file still demands it. Remove the lists; keep the counts.
 
-```markdown
+Find:
 
-**Anchors come from the Q&A.** The anchor types above are established with the user during the session, not inferred at writing time. The Q&A asks about them in ordinary terms — who counts as family, who they answer to, who depends on them, who they clash with, who they would tell the truth to — and matching those answers to archetypes happens here. Where the session established that one of them is genuinely not part of this character's life, record that and move on; do not manufacture a relationship to fill the slot.
+```
+**Major characters:** target 8 named relationships. Anchor types that should be present: a family or family-equivalent tie (Kin or Ghost), at least one power-asymmetric relationship (Authority or Charge), at least one rivalry or friction relationship, at least one Confidant. Additional entries should include at least one genuine friction source beyond rivalry: Obligation, Unease, or Ideological Counterpart.
 ```
 
-This is one line, not wrapped, matching the file.
+Replace with:
+
+```
+**Major characters:** target 8 named relationships. What those relationships are comes from the Q&A, not from a list here.
+```
+
+Find:
+
+```
+**Supporting characters:** target 5 named relationships. Anchor types: a family or family-equivalent tie, one power-asymmetric relationship, one friction or rivalry relationship.
+```
+
+Replace with:
+
+```
+**Supporting characters:** target 5 named relationships.
+```
+
+Both are single lines, not wrapped. The trailing sentence on the major-character line exists to stop a list being reintroduced later; it states where the material comes from and requires nothing.
+
+Note what leaves with the anchor list: the friction-source clause on the major-character line (`at least one genuine friction source beyond rivalry`). It is the same kind of quota as the anchors and would conflict the same way, so it goes with them. The Q&A's "who they clash with" is where friction now comes from.
 
 - [ ] **Step 3: Verify all five questions are present and stay in plain language**
 
@@ -556,17 +579,22 @@ sed -n '71,80p' skills/worldbuilder-character/SKILL.md && git diff --stat skills
 
 Expected: the `**Coverage before writing begins:**` heading, six bullets (Background, Body, Soul psychological, Soul social, Relationships, Intimate Dynamics), then the line beginning `The Q&A ends when`. The diff stat shows `1 insertion(+), 1 deletion(-)`.
 
-- [ ] **Step 5: Verify the relationships.md paragraph landed between the targets and the separator**
+- [ ] **Step 5: Verify no anchor quota survives anywhere in relationships.md**
 
 Run:
 
 ```bash
-python -c "import io; t=io.open('skills/worldbuilder-character/relationships.md',encoding='utf-8').read(); seg=t.split('**Supporting characters:**')[1].split('## Archetype Distribution')[0]; print('ANCHORS PARAGRAPH IN PLACE' if 'Anchors come from the Q&A' in seg else 'MISPLACED OR MISSING')"
+python -c "import io; t=io.open('skills/worldbuilder-character/relationships.md',encoding='utf-8').read(); m=[s for s in ['Anchor types','anchor type','genuine friction source beyond rivalry','at least one Confidant'] if s in t]; print('QUOTA STILL PRESENT:',m) if m else print('NO ANCHOR QUOTA IN FILE')"
 ```
 
-Expected: `ANCHORS PARAGRAPH IN PLACE`.
+Expected: `NO ANCHOR QUOTA IN FILE`. If any of those strings survives, the file can still demand a relationship the user ruled out in the Q&A, which is the contradiction this task exists to remove.
 
-- [ ] **Step 6: Run the skill lint — this task is the one that needs it**
+- [ ] **Step 6: Verify the counts survived the removal**
+
+Run: `grep -n 'target 8 named relationships\|target 5 named relationships' skills/worldbuilder-character/relationships.md`
+Expected: two lines. Only the anchor lists were removed; the relationship counts are unchanged generation guidance.
+
+- [ ] **Step 7: Run the skill lint — this task is the one that needs it**
 
 `SKILL.md` files are what `doodle` discovers, so this is the only task in the plan whose edit CI lints.
 
@@ -578,12 +606,12 @@ python -c "from doodle.cli import main; import sys; sys.argv=['doodle','--strict
 
 Expected: `no issues found`. If it reports anything, fix it before committing. Record the exact output in your report, and state plainly that local doodle is 0.5.0 while CI pins 1.0.0 — a local pass does not prove the 1.0.0-only spellcheck clean.
 
-- [ ] **Step 7: Run the test suite to confirm no collateral damage**
+- [ ] **Step 8: Run the test suite to confirm no collateral damage**
 
 Run: `python -m pytest tests -q`
 Expected: `13 passed`.
 
-- [ ] **Step 8: Commit**
+- [ ] **Step 9: Commit**
 
 ```bash
 git add skills/worldbuilder-character/SKILL.md skills/worldbuilder-character/relationships.md
@@ -608,7 +636,7 @@ Named here so an executor does not drift into them:
 
 - The arithmetic inside the `**The ideal is no repeats.**` paragraph — the 12-archetypes-against-8-relationships count, the second-tag rule, and the cap sentence. Task 5 Step 2 changes one sentence in that paragraph and nothing else; it remains the single place explaining *why* the cap is two.
 - The archetype definitions themselves, apart from Kin in Task 4. Task 5 changes how archetypes are chosen, not what any of them mean.
-- The anchor-type lists themselves under `**Major characters:**` and `**Supporting characters:**`. Task 6 changes where the anchors are established, not which anchors are required; the lists stay as written.
+- The relationship counts (`target 8 named relationships`, `target 5 named relationships`). Task 6 removes the anchor lists from those lines and leaves the counts alone.
 - Any other coverage bullet in the `SKILL.md` Q&A list. Task 6 edits the Relationships bullet only.
 - Splitting validation into a separate grader agent. The checks this plan adds are written as instructions to whoever runs them; who runs them is a separate design question, queued.
 - Adding the Cut filler groups (throat-clearers, emphasis crutches, jargon verbs, padding adverbs) to `docs/slop-phrases.md`. The verified gap is vague declaratives only; whether the checklist should also mirror the filler groups is a separate question.
