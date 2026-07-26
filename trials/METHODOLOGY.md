@@ -199,3 +199,37 @@ produce. Enters the battery only if section 6 validates it.
 **Not adopted:** AI detectors. They measure whether prose fools a
 detector built for human readers, which is irrelevant to a note written
 for a model to read.
+
+## 5. Mechanism status and the graduation rule
+
+A mechanism ships in the production battery only after the trial suite
+has validated it under section 2.2. Adopting one ahead of measured data
+stays possible, but it is an explicit human call recorded at the time —
+never a default, never silent.
+
+| Mechanism | Status |
+| --- | --- |
+| Dilemma test and anti-convergence probe (4.1) | Designed, pending validation |
+| Blind-line voice test, scatter-shot (4.2) | Designed, pending validation |
+| Counterfactual and not-binding verdict (4.3) | Designed, pending validation |
+| Cross-model convergence check (4.4) | Designed, validation path in section 6 |
+
+Nothing has graduated. No shipped skill implements this battery yet.
+
+## 6. Convergence-metric validation path
+
+**Step 1, same-family pilot.** Regenerate the six arms of the 2026-07-23
+trial under two model tiers from the same family. Compute arm-level
+convergence and correlate it against the human preference ranks already
+recorded for those arms.
+
+Same-family agreement is a weak signal: shared training makes two models
+converge for reasons unrelated to authorial voice. The pilot is read as
+a relative measure across arms, and it can only disqualify the metric or
+support it provisionally.
+
+**Step 2, cross-provider confirmation.** Rerun the correlation with
+models from different providers once that access exists. Only this step
+can move the metric to validated.
+
+Until step 2 passes, the metric is labeled `unvalidated` per section 2.2.
