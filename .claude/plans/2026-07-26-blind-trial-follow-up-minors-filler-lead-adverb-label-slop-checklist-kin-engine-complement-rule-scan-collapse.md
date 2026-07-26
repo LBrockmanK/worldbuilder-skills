@@ -11,7 +11,7 @@ description: 'Eight scoped prose fixes across four instruction files: the seven 
 tags:
 - human-ready
 date: 2026-07-26
-timestamp: 2026-07-26T16:48Z
+timestamp: 2026-07-26T16:56Z
 resources:
 - '[[2026-07-26-verified-site-inventory-for-the-blind-trial-follow-up-minors]]'
 ---
@@ -28,7 +28,7 @@ resources:
 
 Close the seven follow-up minors raised by the blind-trial adoption reviews, each verified against current file text in the [site inventory](../research/2026-07-26-verified-site-inventory-for-the-blind-trial-follow-up-minors.md), plus one further defect raised from field use: the Archetype Distribution section tells the agent to pick labels for variety rather than for fit.
 
-**Architecture:** Eight scoped edits across four instruction files, grouped into five tasks by file and by whether a reviewer could accept one while rejecting its neighbour. Two corrections and one addition in `skills/writing-style.md` and `docs/slop-phrases.md`, one worked example in `framework.md`, and the rest in `relationships.md` — the no-complement principle, the Kin friction engine, and a rewrite of the Archetype Distribution section that relocates variety from the labeling step to the design step and collapses the rule's three statements into one.
+**Architecture:** Nine scoped edits across four instruction files, grouped into five tasks by file and by whether a reviewer could accept one while rejecting its neighbour. Two corrections and one addition in `skills/writing-style.md` and `docs/slop-phrases.md`, one worked example in `framework.md`, and the rest in `relationships.md` — the no-complement principle, the Kin friction engine, and a rewrite of the Archetype Distribution section that relocates variety from the labeling step to the design step, collapses the rule's three statements into one, and adds the fit check that makes the distribution scan non-gameable.
 
 **Tech stack:** Plain markdown instruction prose. No frontmatter in any file touched.
 
@@ -411,7 +411,18 @@ Replace with:
 
 The cap is phrased as `more than twice` to match the paragraph that derives it. The threshold is unchanged in effect: three or more occurrences remain a defect.
 
-- [ ] **Step 5: Verify the section now has three paragraphs and no self-check**
+- [ ] **Step 5: Add the archetype fit check to Coverage Validation**
+
+Rewriting the goal paragraph tells the author to label accurately, but nothing currently checks that they did — the distribution scan counts labels and cannot tell a fitting one from a filler. Add a fourth numbered item after the `Cast web check` item and before the Community Thread blockquote:
+
+```markdown
+
+4. **Archetype fit check:** Read each entry's archetype against the relationship it tags: does that archetype's behavioral signature describe what this relationship actually does? A label that does not fit is a defect however well it serves the distribution — fix it by changing the archetype to the one that fits, or by changing the relationship so the archetype is earned. Where an anchor type from the targets above has no relationship that genuinely carries it, flag that gap rather than tagging a near-miss to fill the slot.
+```
+
+This is what makes the distribution scan non-gameable: distribution and fit are now both checked, and fit wins. The final clause covers the anchor types listed under `**Major characters:**` and `**Supporting characters:**` — a missing anchor is reported, not papered over.
+
+- [ ] **Step 6: Verify the section now has three paragraphs and no self-check**
 
 Run:
 
@@ -421,7 +432,7 @@ python -c "import io; t=io.open('skills/worldbuilder-character/relationships.md'
 
 Expected: `PARAGRAPHS: 3` then `SELF-CHECK REMOVED`.
 
-- [ ] **Step 6: Verify no instruction anywhere still sends the agent to the label**
+- [ ] **Step 7: Verify no instruction anywhere still sends the agent to the label**
 
 Run:
 
@@ -431,22 +442,27 @@ grep -n 'goal is variety\|three or more\|more specific archetype that would bett
 
 Expected: no matching lines and `exit:1`. Each of those three strings is a place that either stated the old goal or nudged toward relabeling.
 
-- [ ] **Step 7: Verify the cap survives in exactly two places**
+- [ ] **Step 8: Verify the cap survives in exactly two places and the fit check landed**
 
 Run:
 
 ```bash
-grep -c 'more than twice' skills/worldbuilder-character/relationships.md
+grep -c 'more than twice' skills/worldbuilder-character/relationships.md && grep -n '^4\. \*\*Archetype fit check' skills/worldbuilder-character/relationships.md
 ```
 
-Expected: `2` — the ideal-is-no-repeats paragraph and the Coverage Validation item.
+Expected: `2` — the ideal-is-no-repeats paragraph and the Coverage Validation item — then one line showing the new item 4.
 
-- [ ] **Step 8: Run the test suite to confirm no collateral damage**
+- [ ] **Step 9: Verify Coverage Validation reads 1-4 in order**
+
+Run: `grep -n '^[0-9]\. \*\*' skills/worldbuilder-character/relationships.md`
+Expected: four lines numbered 1 through 4 — behavioral coverage check, archetype distribution scan, cast web check, archetype fit check.
+
+- [ ] **Step 10: Run the test suite to confirm no collateral damage**
 
 Run: `python -m pytest tests -q`
 Expected: `13 passed`.
 
-- [ ] **Step 9: Commit**
+- [ ] **Step 11: Commit**
 
 ```bash
 git add skills/worldbuilder-character/relationships.md
@@ -463,6 +479,11 @@ Variety is now stated as a property of the relationships themselves, and
 a narrow spread is named as the symptom that sends the author back to
 what the relationship is. The repeat-handling advice points the same way.
 
+A fit check joins Coverage Validation, because telling the author to
+label accurately means nothing while the only check counts labels. Fit
+outranks distribution, and an anchor type with no relationship carrying
+it is flagged rather than filled with a near-miss.
+
 The distribution rule was also stated three times at the same moment.
 The self-check paragraph is deleted with nothing carried over - every
 clause in it already existed in the paragraph above, the Community
@@ -477,6 +498,8 @@ Named here so an executor does not drift into them:
 
 - The arithmetic inside the `**The ideal is no repeats.**` paragraph — the 12-archetypes-against-8-relationships count, the second-tag rule, and the cap sentence. Task 5 Step 2 changes one sentence in that paragraph and nothing else; it remains the single place explaining *why* the cap is two.
 - The archetype definitions themselves, apart from Kin in Task 4. Task 5 changes how archetypes are chosen, not what any of them mean.
+- The anchor-type targets under `**Major characters:**` and `**Supporting characters:**`. They stay as written; Task 5's fit check is what catches an anchor filled by a near-miss. Relocating those targets into the user Q&A that precedes blueprint generation is the better fix and is queued separately — this plan does not anticipate it.
+- Splitting validation into a separate grader agent. The checks this plan adds are written as instructions to whoever runs them; who runs them is a separate design question, queued.
 - Adding the Cut filler groups (throat-clearers, emphasis crutches, jargon verbs, padding adverbs) to `docs/slop-phrases.md`. The verified gap is vague declaratives only; whether the checklist should also mirror the filler groups is a separate question.
 - Any change to the trait rule itself at `skills/writing-style.md:143`. Task 3 adds a worked example for its existing second branch; the rule text stands.
 - Rewriting `relationships.md:16` (perspective-focus and cross-character capture), which sits adjacent to Task 4's insertion point and is not part of these findings.
