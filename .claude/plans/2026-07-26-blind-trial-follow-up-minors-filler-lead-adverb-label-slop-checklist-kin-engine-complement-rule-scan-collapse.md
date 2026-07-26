@@ -13,7 +13,7 @@ description: 'Eleven scoped prose fixes across five instruction files: the seven
 tags:
 - human-ready
 date: 2026-07-26
-timestamp: 2026-07-26T18:22Z
+timestamp: 2026-07-26T18:23Z
 resources:
 - '[[2026-07-26-verified-site-inventory-for-the-blind-trial-follow-up-minors]]'
 ---
@@ -424,7 +424,7 @@ Rewriting the goal paragraph tells the author to label accurately, but nothing c
 4. **Archetype fit check:** Read each entry's archetype against the relationship it tags: does that archetype's behavioral signature describe what this relationship actually does? A label that does not fit is a defect however well it serves the distribution — fix it by changing the archetype to the one that fits, or by changing the relationship so the archetype is earned. Where a relationship the Q&A established has no entry carrying it, that is a gap worth flagging. This check imposes no list of its own: the session decides what should be present.
 ```
 
-This is what makes the distribution scan non-gameable: distribution and fit are now both checked, and fit wins. The final clause covers the anchor types listed under `**Major characters:**` and `**Supporting characters:**` — a missing anchor is reported, not papered over.
+This is what makes the distribution scan non-gameable: distribution and fit are now both checked, and fit wins. The final clause is deliberately sourced from the session rather than from a list in this file — Task 6 removes the anchor lists entirely, so a check that named them would break.
 
 - [ ] **Step 6: Verify the section now has three paragraphs and no self-check**
 
@@ -485,8 +485,9 @@ what the relationship is. The repeat-handling advice points the same way.
 
 A fit check joins Coverage Validation, because telling the author to
 label accurately means nothing while the only check counts labels. Fit
-outranks distribution, and an anchor type with no relationship carrying
-it is flagged rather than filled with a near-miss.
+outranks distribution, and a relationship the session established but no
+entry carries is flagged rather than quietly dropped. The check names no
+list of its own - the Q&A decides what should be present.
 
 The distribution rule was also stated three times at the same moment.
 The self-check paragraph is deleted with nothing carried over - every
