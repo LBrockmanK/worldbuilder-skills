@@ -2,16 +2,18 @@
 type: plan
 title: 'Blind-trial follow-up minors: filler lead, adverb label, slop checklist, Kin
   engine, complement rule, scan collapse'
-description: 'Seven scoped prose fixes across four instruction files, closing the
-  follow-up minors raised by the blind-trial adoption reviews: two writing-style.md
-  corrections, a slop-phrases.md coverage gap, a framework.md missing example, and
-  three relationships.md changes including the no-complement principle and the archetype-scan
-  duplication collapse.'
+description: 'Eight scoped prose fixes across four instruction files: the seven follow-up
+  minors from the blind-trial adoption reviews, plus a field-raised defect where the
+  Archetype Distribution section directs the agent to choose labels for variety rather
+  than for fit. Covers two writing-style.md corrections, a slop-phrases.md coverage
+  gap, a framework.md missing example, the no-complement principle, the Kin friction
+  engine, and a rewrite of the Archetype Distribution section.'
 tags:
 - human-ready
 date: 2026-07-26
-timestamp: 2026-07-26T16:39Z
-resources: []
+timestamp: 2026-07-26T16:48Z
+resources:
+- '[[2026-07-26-verified-site-inventory-for-the-blind-trial-follow-up-minors]]'
 ---
 
 # Blind-trial follow-up minors: filler lead, adverb label, slop checklist, Kin engine, complement rule, scan collapse
@@ -24,9 +26,9 @@ resources: []
 
 ## Goal
 
-Close the seven follow-up minors raised by the blind-trial adoption reviews, each verified against current file text in the [site inventory](../research/2026-07-26-verified-site-inventory-for-the-blind-trial-follow-up-minors.md).
+Close the seven follow-up minors raised by the blind-trial adoption reviews, each verified against current file text in the [site inventory](../research/2026-07-26-verified-site-inventory-for-the-blind-trial-follow-up-minors.md), plus one further defect raised from field use: the Archetype Distribution section tells the agent to pick labels for variety rather than for fit.
 
-**Architecture:** Seven scoped edits across four instruction files, grouped into five tasks by file and by whether a reviewer could accept one while rejecting its neighbour. Two corrections and one addition in `skills/writing-style.md` and `docs/slop-phrases.md`, one worked example in `framework.md`, and three changes in `relationships.md` — the no-complement principle, the Kin friction engine, and the archetype-scan duplication collapse. No behaviour changes, no new sections beyond one checklist group.
+**Architecture:** Eight scoped edits across four instruction files, grouped into five tasks by file and by whether a reviewer could accept one while rejecting its neighbour. Two corrections and one addition in `skills/writing-style.md` and `docs/slop-phrases.md`, one worked example in `framework.md`, and the rest in `relationships.md` — the no-complement principle, the Kin friction engine, and a rewrite of the Archetype Distribution section that relocates variety from the labeling step to the design step and collapses the rule's three statements into one.
 
 **Tech stack:** Plain markdown instruction prose. No frontmatter in any file touched.
 
@@ -339,35 +341,63 @@ the resist-protection engine and explicitly excluded kin, so family
 protection had no friction to generate scenes from."
 ```
 
-### Task 5: Collapse the archetype-scan duplication
+### Task 5: Rewrite the Archetype Distribution section
 
 **Files:**
-- Modify: `skills/worldbuilder-character/relationships.md` — the self-check paragraph (`**Self-check before finalizing:**`) and the `Archetype distribution scan` item under `## Coverage Validation`
+- Modify: `skills/worldbuilder-character/relationships.md` — the whole `## Archetype Distribution` section (the goal paragraph, the ideal-is-no-repeats paragraph, and the self-check paragraph), plus the `Archetype distribution scan` item under `## Coverage Validation`
 
 **Interfaces:**
-- Consumes: Task 4's edits shift this file's line numbers by roughly two. Locate both targets by their text, not by the line numbers quoted here.
+- Consumes: Task 4's edits shift this file's line numbers by roughly two. Locate every target by its text, not by the line numbers quoted here.
 
-The same rule is currently stated three times: the paragraph beginning `**The ideal is no repeats.**` carries the arithmetic and the hard cap, the self-check restates it, and Coverage Validation restates it again. The decision is to keep the hard check in Coverage Validation, soften the self-check to a preference, and leave the `**The ideal is no repeats.**` paragraph untouched.
+Two problems in one section. First, the goal paragraph tells the agent to choose archetypes for distribution rather than for fit — which makes relabeling the cheapest way to satisfy the variety check, and produces entries whose archetype does not describe the relationship. Second, the same distribution rule is stated three times: in the ideal-is-no-repeats paragraph with its arithmetic, again in the self-check, and again in Coverage Validation, all firing at the same moment.
 
-- [ ] **Step 1: Soften the self-check**
+The decision: variety moves from the labeling step to the design step, all standing instruction gathers in the ideal-is-no-repeats paragraph, the self-check is deleted outright, and the enforceable cap lives in Coverage Validation.
 
-Find this line (it begins `**Self-check before finalizing:**`):
+- [ ] **Step 1: Relocate variety from labeling to design**
+
+Replace the goal paragraph. Find:
 
 ```
-**Self-check before finalizing:** Scan the full relationship list and count how many times each archetype appears, counting every tag on every entry. Every repeat is worth revisiting. An archetype appearing three or more times is wrong and must be fixed. If Community Thread appears more than once, reconsider the weaker entry. The ideal is that no archetype appears twice anywhere in the set, whether or not an entry carries more than one tag.
+**The goal is variety, not accurate labeling.** When assigning archetypes, the question is not "which archetype fits this person best?" but "does the full set of relationships cover a wide range of behavioral modes?" A character whose relationships are all Community Thread, Kin, and Confidant will produce narrow, repetitive LLM output regardless of how accurately each label fits.
 ```
 
 Replace with:
 
 ```
-**Self-check before finalizing:** Scan the full relationship list and count each archetype, counting every tag on every entry. Favor unique archetypes over repeats: a repeat is a signal to look for a more specific archetype, not a failure on its own. The hard cap is checked at Coverage Validation.
+**Variety is a property of the relationships, not of the labels.** A character whose relationships are all Community Thread, Kin, and Confidant will produce narrow, repetitive LLM output however well each label fits. The fix is never to relabel. An archetype that does not describe the relationship makes the entry wrong, and the behavior generated from it wrong with it. A narrow spread means the relationships themselves are too alike: go back and change what one of them is — who the person is to this character, and what the character wants from them. Label each relationship as what it actually is, and read a monotonous distribution as the symptom that sends you back to the relationship.
 ```
 
-The numeric threshold and the Community Thread clause both leave this paragraph — the threshold is enforced at Coverage Validation, and Community Thread's single-use guidance already has its own paragraph directly above.
+This is the substantive change in the task. The old text asked "does the set cover a wide range?" at the moment of assigning a label, which authorizes picking a label the relationship does not earn. The distribution scan then measures labels rather than relationships, and passes.
 
-- [ ] **Step 2: Restate the cap in Coverage Validation**
+- [ ] **Step 2: Fix the relabeling nudge in the ideal-is-no-repeats paragraph**
 
-Find the `Archetype distribution scan` item:
+This paragraph is now the section's single standing guide, so its own repeat-handling advice must point at the relationship too. Find:
+
+```
+Treat every repeat as a signal to reconsider before accepting it: is the framing too loose, or is there a more specific archetype that would better serve behavioral variety?
+```
+
+Replace with:
+
+```
+Treat every repeat as a signal to reconsider the relationship before accepting it: is the framing too loose, or is this relationship doing the same work as another one in the set?
+```
+
+Everything else in that paragraph — the arithmetic, the second-tag rule, and the `no archetype may appear more than twice` cap — stays exactly as it is.
+
+- [ ] **Step 3: Delete the self-check paragraph**
+
+Every clause in it already exists elsewhere: the count and the repeat signal in the ideal-is-no-repeats paragraph, the Community Thread limit in the paragraph directly above it, and the cap in Coverage Validation. Delete this line and the blank line that follows it:
+
+```
+**Self-check before finalizing:** Scan the full relationship list and count how many times each archetype appears, counting every tag on every entry. Every repeat is worth revisiting. An archetype appearing three or more times is wrong and must be fixed. If Community Thread appears more than once, reconsider the weaker entry. The ideal is that no archetype appears twice anywhere in the set, whether or not an entry carries more than one tag.
+```
+
+Nothing is carried over from it. After the deletion the section runs: goal paragraph, ideal-is-no-repeats paragraph, Community Thread paragraph, then the `---` separator.
+
+- [ ] **Step 4: Update the Coverage Validation item**
+
+Find:
 
 ```
 2. **Archetype distribution scan:** Count how many times each archetype appears across the full relationship list, counting every tag on every entry. The ideal is no repeats: flag every repeat for reconsideration, and treat any archetype used three or more times as wrong and fix it. Flag any Community Thread entry beyond the first — these are the lowest-value entries and should be replaced with something more specific when possible.
@@ -376,57 +406,77 @@ Find the `Archetype distribution scan` item:
 Replace with:
 
 ```
-2. **Archetype distribution scan:** Count how many times each archetype appears across the full relationship list, counting every tag on every entry. The ideal is no repeats: flag every repeat for reconsideration. No archetype may appear more than twice — fix any that does. Flag any Community Thread entry beyond the first — these are the lowest-value entries and should be replaced with something more specific when possible.
+2. **Archetype distribution scan:** Count how many times each archetype appears across the full relationship list, counting every tag on every entry. The ideal is no repeats: flag every repeat and reconsider the relationship behind it, not the label on it. No archetype may appear more than twice — fix any that does. Flag any Community Thread entry beyond the first — these are the lowest-value entries and should be replaced with something more specific when possible.
 ```
 
-This phrases the cap as "more than twice", matching the wording already used in the `**The ideal is no repeats.**` paragraph. The threshold is unchanged in effect: three or more occurrences remain a defect.
+The cap is phrased as `more than twice` to match the paragraph that derives it. The threshold is unchanged in effect: three or more occurrences remain a defect.
 
-- [ ] **Step 3: Verify the hard threshold now appears in exactly one validation site**
+- [ ] **Step 5: Verify the section now has three paragraphs and no self-check**
 
 Run:
 
 ```bash
-grep -n 'three or more\|more than twice' skills/worldbuilder-character/relationships.md
+python -c "import io; t=io.open('skills/worldbuilder-character/relationships.md',encoding='utf-8').read(); s=t.split('## Archetype Distribution')[1].split('---')[0]; paras=[p for p in s.split(chr(10)) if p.strip()]; print('PARAGRAPHS:',len(paras)); print('SELF-CHECK PRESENT' if 'Self-check before finalizing' in t else 'SELF-CHECK REMOVED')"
 ```
 
-Expected: exactly two lines — the `**The ideal is no repeats.**` paragraph and the Coverage Validation item, both saying `more than twice`. No line says `three or more`.
+Expected: `PARAGRAPHS: 3` then `SELF-CHECK REMOVED`.
 
-- [ ] **Step 4: Verify the self-check no longer carries a threshold or a Community Thread clause**
+- [ ] **Step 6: Verify no instruction anywhere still sends the agent to the label**
 
 Run:
 
 ```bash
-python -c "import io; l=[x for x in io.open('skills/worldbuilder-character/relationships.md',encoding='utf-8') if x.startswith('**Self-check before finalizing:**')][0]; bad=[s for s in ['three or more','more than twice','Community Thread'] if s in l]; print('LEFTOVER:',bad) if bad else print('SELF-CHECK IS SOFT GUIDANCE ONLY')"
+grep -n 'goal is variety\|three or more\|more specific archetype that would better serve' skills/worldbuilder-character/relationships.md; echo "exit:$?"
 ```
 
-Expected: `SELF-CHECK IS SOFT GUIDANCE ONLY`.
+Expected: no matching lines and `exit:1`. Each of those three strings is a place that either stated the old goal or nudged toward relabeling.
 
-- [ ] **Step 5: Run the test suite to confirm no collateral damage**
+- [ ] **Step 7: Verify the cap survives in exactly two places**
+
+Run:
+
+```bash
+grep -c 'more than twice' skills/worldbuilder-character/relationships.md
+```
+
+Expected: `2` — the ideal-is-no-repeats paragraph and the Coverage Validation item.
+
+- [ ] **Step 8: Run the test suite to confirm no collateral damage**
 
 Run: `python -m pytest tests -q`
 Expected: `13 passed`.
 
-- [ ] **Step 6: Commit**
+- [ ] **Step 9: Commit**
 
 ```bash
 git add skills/worldbuilder-character/relationships.md
-git commit -m "Collapse the triplicated archetype-distribution rule
+git commit -m "Move relationship variety from the label to the relationship
 
-The cap was stated three times: in the ideal-is-no-repeats paragraph
-with its arithmetic, again in the self-check, and again in Coverage
-Validation, all firing at the same moment. The self-check is now a
-preference - favor unique archetypes, a repeat is a signal not a failure
-- and the enforceable cap lives in Coverage Validation alone, phrased as
-'more than twice' to match the paragraph that derives it. Community
-Thread's single-use guidance leaves the self-check because the paragraph
-directly above it already covers that."
+The section opened by telling the agent the goal is variety rather than
+accurate labeling, and that the question is not which archetype fits
+best. Read literally - which is how it gets read - that authorizes
+relabeling a relationship to fill a gap in the spread, so the
+distribution scan ends up measuring labels instead of relationships and
+passes on a cast that has not changed. Observed in field use.
+
+Variety is now stated as a property of the relationships themselves, and
+a narrow spread is named as the symptom that sends the author back to
+what the relationship is. The repeat-handling advice points the same way.
+
+The distribution rule was also stated three times at the same moment.
+The self-check paragraph is deleted with nothing carried over - every
+clause in it already existed in the paragraph above, the Community
+Thread paragraph, or Coverage Validation. Standing guidance now lives in
+the ideal-is-no-repeats paragraph and the enforceable cap in Coverage
+Validation, phrased as 'more than twice' to match."
 ```
 
 ## Out of scope
 
 Named here so an executor does not drift into them:
 
-- The `**The ideal is no repeats.**` paragraph. It carries the arithmetic the cap is derived from and is deliberately left as the single place that explains *why* the cap is two.
+- The arithmetic inside the `**The ideal is no repeats.**` paragraph — the 12-archetypes-against-8-relationships count, the second-tag rule, and the cap sentence. Task 5 Step 2 changes one sentence in that paragraph and nothing else; it remains the single place explaining *why* the cap is two.
+- The archetype definitions themselves, apart from Kin in Task 4. Task 5 changes how archetypes are chosen, not what any of them mean.
 - Adding the Cut filler groups (throat-clearers, emphasis crutches, jargon verbs, padding adverbs) to `docs/slop-phrases.md`. The verified gap is vague declaratives only; whether the checklist should also mirror the filler groups is a separate question.
 - Any change to the trait rule itself at `skills/writing-style.md:143`. Task 3 adds a worked example for its existing second branch; the rule text stands.
 - Rewriting `relationships.md:16` (perspective-focus and cross-character capture), which sits adjacent to Task 4's insertion point and is not part of these findings.

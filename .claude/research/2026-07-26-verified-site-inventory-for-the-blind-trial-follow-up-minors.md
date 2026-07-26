@@ -7,7 +7,7 @@ description: Line-accurate inventory of the seven follow-up defect sites across 
 tags:
 - human-ready
 date: 2026-07-26
-timestamp: 2026-07-26T16:36Z
+timestamp: 2026-07-26T16:48Z
 resources: []
 ---
 
@@ -30,6 +30,7 @@ All seven claims verified against current text. Line numbers as of 2026-07-26.
 | 5 | `skills/worldbuilder-character/relationships.md:25` | Kin lacks Charge's resist-protection engine | Confirmed, and worse than stated |
 | 6 | `relationships.md:63, :67, :140` | two scans state the same clauses | Confirmed — it is three passages, not two |
 | 7 | `skills/worldbuilder-character/framework.md:83-84` | non-competence branch has no Wrong/Right pair | Confirmed |
+| 8 | `skills/worldbuilder-character/relationships.md:61` | not from the reviews — raised from field use: the section directs the agent to choose labels for variety rather than for fit | Confirmed |
 
 Detail where the finding differs from the original note:
 
@@ -40,6 +41,8 @@ Detail where the finding differs from the original note:
 **Site 6 involves three passages, not two.** `:63` already carries the hard cap ("no archetype may appear more than twice") along with the arithmetic; `:67` restates it as "three or more times is wrong"; `:140` restates it again. The original note saw only `:67` and `:140`.
 
 **Trait-rule ownership.** The rule with the competence and non-competence branches lives at `writing-style.md:143`. `framework.md:81` defers to it and supplies the character-specific worked cases, so the missing non-competence example belongs in `framework.md`, not in the rule's own file.
+
+**Site 8 is the one with teeth, and it explains site 6.** `relationships.md:61` reads "The goal is variety, not accurate labeling" and states that the question is not "which archetype fits this person best?" but whether the set covers a wide range. Read literally — which is how an instruction file gets read — that authorizes relabeling a relationship to fill a gap in the spread. The distribution scan downstream then measures labels rather than relationships and passes on a cast that has not changed, which is a metric satisfiable without the quality it stands for. The same nudge recurs inside the `**The ideal is no repeats.**` paragraph, which asks whether "a more specific archetype would better serve behavioral variety" — again a question about the label. Raised from field use rather than from the reviews.
 
 **Gates covering these paths.** `python -m pytest tests -q` passes at 13 tests. CI also runs `doodle --strict skills` pinned at 1.0.0; doodle discovers `SKILL.md` files only, so `writing-style.md`, `relationships.md` and `framework.md` are not linted by it — a local `doodle --strict skills` returns "no issues found" and stays clean regardless of these edits. `docs/` is outside both gates. Local doodle is 0.5.0 against CI's 1.0.0, so a local pass does not prove the 1.0.0-only spellcheck clean.
 
