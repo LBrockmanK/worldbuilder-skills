@@ -71,6 +71,20 @@ Fix: if it matters, the facts make it clear. Remove the announcement.
 
 ---
 
+## Vague declaratives
+
+The sentence form of significance inflation. Announces that something matters without saying what it is.
+
+- "the stakes are high"
+- "the reasons are structural"
+- "the implications are significant"
+- "the dynamic is complex"
+- "there is history there"
+
+Fix: cut the sentence and state the fact it was standing in for.
+
+---
+
 ## Copula avoidance
 
 Circumlocutions that replace "is" or "has" with something elaborate.
