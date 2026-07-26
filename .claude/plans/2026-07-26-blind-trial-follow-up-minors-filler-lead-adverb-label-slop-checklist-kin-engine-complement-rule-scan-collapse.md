@@ -56,7 +56,7 @@ Close the seven follow-up minors raised by the blind-trial adoption reviews, eac
 **Interfaces:**
 - Produces: the corrected Cut filler lead and the renamed adverb group. Task 2 adds checklist entries for a neighbouring section but does not depend on this text.
 
-- [ ] **Step 1: Replace the Cut filler lead sentence**
+- [x] **Step 1: Replace the Cut filler lead sentence**
 
 The current lead restates *No significance inflation* twelve lines above it, and describes only two of the four groups it introduces. Replace the whole line at `skills/writing-style.md:72`:
 
@@ -74,7 +74,7 @@ Delete words that take up room without doing work: openers that delay the senten
 
 Each clause now maps to one of the four groups listed below it, in the same order.
 
-- [ ] **Step 2: Rename the mislabelled adverb group**
+- [x] **Step 2: Rename the mislabelled adverb group**
 
 `actually`, `honestly` and `genuinely` are stance markers, not adverbs of degree; the group mixes two categories, in a file that demands the simplest precise word. Replace the line at `skills/writing-style.md:82`:
 
@@ -92,7 +92,7 @@ Replace with:
 
 The word list is unchanged — only the group name.
 
-- [ ] **Step 3: Verify both edits landed and nothing else moved**
+- [x] **Step 3: Verify both edits landed and nothing else moved**
 
 Run:
 
@@ -102,12 +102,12 @@ grep -n 'Delete words that take up room\|Padding adverbs' skills/writing-style.m
 
 Expected: the first grep prints two lines (72 and 82). The second grep prints `0` — both old strings gone. The diff stat shows `2 insertions(+), 2 deletions(-)`, proving no other line moved.
 
-- [ ] **Step 4: Confirm the four groups still read in order**
+- [x] **Step 4: Confirm the four groups still read in order**
 
 Run: `sed -n '72p;79,82p' skills/writing-style.md`
 Expected: the new lead, then the four group bullets — throat-clearers, emphasis crutches, jargon standing in for a plain verb, padding adverbs — in that order, so the lead's four clauses match the list order.
 
-- [ ] **Step 5: Commit**
+- [x] **Step 5: Commit**
 
 ```bash
 git add skills/writing-style.md
@@ -129,12 +129,12 @@ file does not need. Word list unchanged."
 **Interfaces:**
 - Consumes: nothing. The gap is against `writing-style.md:68`, which already exists.
 
-- [ ] **Step 1: Read the section boundary you are inserting between**
+- [x] **Step 1: Read the section boundary you are inserting between**
 
 Run: `sed -n '68,76p' docs/slop-phrases.md`
 Expected: the tail of `Significance inflation` (its last bullet and its `Fix:` line), then a `---` separator, then the `## Copula avoidance` heading. Insert between the separator and that heading.
 
-- [ ] **Step 2: Insert the new section**
+- [x] **Step 2: Insert the new section**
 
 `writing-style.md:68` bans vague declaratives in sentence form, but this checklist lists only single words and phrases, so those sentence forms have no entry. Insert this section immediately before `## Copula avoidance`, matching the file's existing shape — heading, one-line description, bullet list, `Fix:` line:
 
@@ -182,7 +182,7 @@ Fix: cut the sentence and state the fact it was standing in for.
 
 Note the blank line after the new `---` and before `## Copula avoidance` — without it the separator butts against the heading and breaks the file's pattern.
 
-- [ ] **Step 3: Verify the section landed in the right place**
+- [x] **Step 3: Verify the section landed in the right place**
 
 Run:
 
@@ -192,7 +192,7 @@ grep -n '^## ' docs/slop-phrases.md
 
 Expected: seven headings, with `## Vague declaratives` sitting between `## Significance inflation` and `## Copula avoidance`.
 
-- [ ] **Step 4: Verify all three doctrine phrases are present**
+- [x] **Step 4: Verify all three doctrine phrases are present**
 
 Run:
 
@@ -202,7 +202,7 @@ python -c "import io; t=io.open('docs/slop-phrases.md',encoding='utf-8').read();
 
 Expected: `ALL DOCTRINE PHRASES PRESENT`.
 
-- [ ] **Step 5: Commit**
+- [x] **Step 5: Commit**
 
 ```bash
 git add docs/slop-phrases.md
@@ -223,12 +223,12 @@ material this file is actually scanned against."
 **Interfaces:**
 - Consumes: the trait rule at `skills/writing-style.md:143`, which `framework.md:81` already points to. That rule is not edited by this plan.
 
-- [ ] **Step 1: Read the insertion point**
+- [x] **Step 1: Read the insertion point**
 
 Run: `sed -n '81,86p' skills/worldbuilder-character/framework.md`
 Expected: the trait-ban paragraph at 81, a blank line, the `Wrong:`/`Right:` pair at 83-84 (a competence case — "highly intelligent and analytical"), then the `### Knowledge boundaries` heading. Insert between the pair and that heading.
 
-- [ ] **Step 2: Insert the non-competence pair**
+- [x] **Step 2: Insert the non-competence pair**
 
 The rule has two branches — competence and non-competence — but this example-driven file works only the competence one. Insert after line 84, before the blank line preceding `### Knowledge boundaries`:
 
@@ -240,7 +240,7 @@ The rule's other branch covers traits that are not competences: name the behavio
 - Right: "He finishes other people's sentences wrong, then corrects them on the correction. His team stopped bringing him problems early, so he hears about them once they are expensive."
 ```
 
-- [ ] **Step 3: Verify placement and that the competence pair is intact**
+- [x] **Step 3: Verify placement and that the competence pair is intact**
 
 Run:
 
@@ -250,7 +250,7 @@ sed -n '81,92p' skills/worldbuilder-character/framework.md && git diff --stat sk
 
 Expected: the original competence pair still at 83-84 unchanged, the new paragraph and pair following it, then `### Knowledge boundaries`. The diff stat shows insertions only — `0 deletions(-)`.
 
-- [ ] **Step 4: Verify the new example carries a cost clause**
+- [x] **Step 4: Verify the new example carries a cost clause**
 
 Run:
 
@@ -260,7 +260,7 @@ python -c "import io; t=io.open('skills/worldbuilder-character/framework.md',enc
 
 Expected: `NON-COMPETENCE PAIR PRESENT`. The rule demands both the behavior and its cost; the second string is the cost clause.
 
-- [ ] **Step 5: Commit**
+- [x] **Step 5: Commit**
 
 ```bash
 git add skills/worldbuilder-character/framework.md
@@ -281,7 +281,7 @@ and the cost it produces, which is what the branch asks for."
 **Interfaces:**
 - Produces: the no-complement principle, which Task 5 does not depend on. Both tasks edit this file; run Task 4 first so Task 5's line numbers are checked against the updated file.
 
-- [ ] **Step 1: Insert the no-complement principle**
+- [x] **Step 1: Insert the no-complement principle**
 
 `relationships.md:14` guarantees that relationships need not be reciprocated, but says nothing about the *archetype* on the other side. Left unstated, the model assumes every relationship is mirrored by its complement, which collapses the space of relationships worth writing. Insert this as a new paragraph immediately after line 14, before the `**Perspective-focus and cross-character capture apply simultaneously.**` paragraph:
 
@@ -292,7 +292,7 @@ and the cost it produces, which is what the branch asks for."
 
 Remember the global constraint: this is one line, not wrapped.
 
-- [ ] **Step 2: Give Kin its resist-protection engine**
+- [x] **Step 2: Give Kin its resist-protection engine**
 
 Charge produces "conflict when the charge resists protection" and explicitly excludes family, so the one archetype covering family protection has no friction engine and cannot borrow one. Replace the Kin line at `skills/worldbuilder-character/relationships.md:25`:
 
@@ -310,7 +310,7 @@ Replace with:
 
 One sentence added mid-line; everything else identical.
 
-- [ ] **Step 3: Verify both edits and that nothing else moved**
+- [x] **Step 3: Verify both edits and that nothing else moved**
 
 Run:
 
@@ -320,7 +320,7 @@ grep -n 'No relationship requires a complement\|refused as often as it is accept
 
 Expected: two matching lines printed. The diff stat shows `3 insertions(+), 1 deletion(-)` — the new paragraph plus its blank line, and the Kin line replaced.
 
-- [ ] **Step 4: Verify no line was wrapped**
+- [x] **Step 4: Verify no line was wrapped**
 
 Run:
 
@@ -330,7 +330,7 @@ python -c "import io; ls=io.open('skills/worldbuilder-character/relationships.md
 
 Expected: `SHORT PARAGRAPH LINES: none` — the new paragraph is a single long line, matching the file. A hit here means the paragraph was wrapped and must be rejoined.
 
-- [ ] **Step 5: Commit**
+- [x] **Step 5: Commit**
 
 ```bash
 git add skills/worldbuilder-character/relationships.md
@@ -357,7 +357,7 @@ Two problems in one section. First, the goal paragraph tells the agent to choose
 
 The decision: variety moves from the labeling step to the design step, all standing instruction gathers in the ideal-is-no-repeats paragraph, the self-check is deleted outright, and the enforceable cap lives in Coverage Validation.
 
-- [ ] **Step 1: Relocate variety from labeling to design**
+- [x] **Step 1: Relocate variety from labeling to design**
 
 Replace the goal paragraph. Find:
 
@@ -373,7 +373,7 @@ Replace with:
 
 This is the substantive change in the task. The old text asked "does the set cover a wide range?" at the moment of assigning a label, which authorizes picking a label the relationship does not earn. The distribution scan then measures labels rather than relationships, and passes.
 
-- [ ] **Step 2: Fix the relabeling nudge in the ideal-is-no-repeats paragraph**
+- [x] **Step 2: Fix the relabeling nudge in the ideal-is-no-repeats paragraph**
 
 This paragraph is now the section's single standing guide, so its own repeat-handling advice must point at the relationship too. Find:
 
@@ -389,7 +389,7 @@ Treat every repeat as a signal to reconsider the relationship before accepting i
 
 Everything else in that paragraph — the arithmetic, the second-tag rule, and the `no archetype may appear more than twice` cap — stays exactly as it is.
 
-- [ ] **Step 3: Delete the self-check paragraph**
+- [x] **Step 3: Delete the self-check paragraph**
 
 Every clause in it already exists elsewhere: the count and the repeat signal in the ideal-is-no-repeats paragraph, the Community Thread limit in the paragraph directly above it, and the cap in Coverage Validation. Delete this line and the blank line that follows it:
 
@@ -399,7 +399,7 @@ Every clause in it already exists elsewhere: the count and the repeat signal in 
 
 Nothing is carried over from it. After the deletion the section runs: goal paragraph, ideal-is-no-repeats paragraph, Community Thread paragraph, then the `---` separator.
 
-- [ ] **Step 4: Update the Coverage Validation item**
+- [x] **Step 4: Update the Coverage Validation item**
 
 Find:
 
@@ -415,7 +415,7 @@ Replace with:
 
 The cap is phrased as `more than twice` to match the paragraph that derives it. The threshold is unchanged in effect: three or more occurrences remain a defect.
 
-- [ ] **Step 5: Add the archetype fit check to Coverage Validation**
+- [x] **Step 5: Add the archetype fit check to Coverage Validation**
 
 Rewriting the goal paragraph tells the author to label accurately, but nothing currently checks that they did — the distribution scan counts labels and cannot tell a fitting one from a filler. Add a fourth numbered item after the `Cast web check` item and before the Community Thread blockquote:
 
@@ -426,7 +426,7 @@ Rewriting the goal paragraph tells the author to label accurately, but nothing c
 
 This is what makes the distribution scan non-gameable: distribution and fit are now both checked, and fit wins. The final clause is deliberately sourced from the session rather than from a list in this file — Task 6 removes the anchor lists entirely, so a check that named them would break.
 
-- [ ] **Step 6: Verify the section now has three paragraphs and no self-check**
+- [x] **Step 6: Verify the section now has three paragraphs and no self-check**
 
 Run:
 
@@ -436,7 +436,7 @@ python -c "import io; t=io.open('skills/worldbuilder-character/relationships.md'
 
 Expected: `PARAGRAPHS: 3` then `SELF-CHECK REMOVED`.
 
-- [ ] **Step 7: Verify no instruction anywhere still sends the agent to the label**
+- [x] **Step 7: Verify no instruction anywhere still sends the agent to the label**
 
 Run:
 
@@ -446,7 +446,7 @@ grep -n 'goal is variety\|three or more\|more specific archetype that would bett
 
 Expected: no matching lines and `exit:1`. Each of those three strings is a place that either stated the old goal or nudged toward relabeling.
 
-- [ ] **Step 8: Verify the cap survives in exactly two places and the fit check landed**
+- [x] **Step 8: Verify the cap survives in exactly two places and the fit check landed**
 
 Run:
 
@@ -456,17 +456,17 @@ grep -c 'more than twice' skills/worldbuilder-character/relationships.md && grep
 
 Expected: `2` — the ideal-is-no-repeats paragraph and the Coverage Validation item — then one line showing the new item 4.
 
-- [ ] **Step 9: Verify Coverage Validation reads 1-4 in order**
+- [x] **Step 9: Verify Coverage Validation reads 1-4 in order**
 
 Run: `grep -n '^[0-9]\. \*\*' skills/worldbuilder-character/relationships.md`
 Expected: four lines numbered 1 through 4 — behavioral coverage check, archetype distribution scan, cast web check, archetype fit check.
 
-- [ ] **Step 10: Run the test suite to confirm no collateral damage**
+- [x] **Step 10: Run the test suite to confirm no collateral damage**
 
 Run: `python -m pytest tests -q`
 Expected: `13 passed`.
 
-- [ ] **Step 11: Commit**
+- [x] **Step 11: Commit**
 
 ```bash
 git add skills/worldbuilder-character/relationships.md
@@ -510,7 +510,7 @@ The anchor types are currently a requirement the writing step must satisfy from 
 
 The lists then have to leave `relationships.md` rather than stay as a cross-reference. If the user rules an anchor out and the file still requires it, the two sources contradict each other and the writing step is back to filling the slot — the same defect arriving by a different route. After this task the Q&A is the only place that decides which relationships a character has.
 
-- [ ] **Step 1: Extend the Relationships coverage bullet**
+- [x] **Step 1: Extend the Relationships coverage bullet**
 
 `SKILL.md:71` opens a coverage list for the Q&A; line 77 is its Relationships entry. Replace that line:
 
@@ -528,7 +528,7 @@ Replace with:
 
 Two things about the phrasing. These are five separate questions asked across the conversation, matching the one-question-at-a-time rule directly above this list — not one compound question with five parts. And they are worded the way a person would ask them: the Q&A never says "anchor type" or names an archetype, because the user is describing a character, not filling in a taxonomy. Matching those answers to archetypes happens later, in `relationships.md`.
 
-- [ ] **Step 2: Remove the anchor lists from the relationship targets**
+- [x] **Step 2: Remove the anchor lists from the relationship targets**
 
 Once the anchors are established in the Q&A, listing them here as requirements sets up a direct contradiction: the user rules one out during the session and this file still demands it. Remove the lists; keep the counts.
 
@@ -562,7 +562,7 @@ Both are single lines, not wrapped. The trailing sentence on the major-character
 
 Note what leaves with the anchor list: the friction-source clause on the major-character line (`at least one genuine friction source beyond rivalry`). It is the same kind of quota as the anchors and would conflict the same way, so it goes with them. The Q&A's "who they clash with" is where friction now comes from.
 
-- [ ] **Step 3: Verify all five questions are present and stay in plain language**
+- [x] **Step 3: Verify all five questions are present and stay in plain language**
 
 Run:
 
@@ -572,7 +572,7 @@ python -c "import io; l=[x for x in io.open('skills/worldbuilder-character/SKILL
 
 Expected: `ALL FIVE QUESTIONS PRESENT` then `PLAIN LANGUAGE OK`. The second check matters — the Q&A is a conversation with the user about a person, so no archetype name or system term belongs in it.
 
-- [ ] **Step 4: Verify the coverage list is still six bullets and nothing else moved**
+- [x] **Step 4: Verify the coverage list is still six bullets and nothing else moved**
 
 Run:
 
@@ -582,7 +582,7 @@ sed -n '71,80p' skills/worldbuilder-character/SKILL.md && git diff --stat skills
 
 Expected: the `**Coverage before writing begins:**` heading, six bullets (Background, Body, Soul psychological, Soul social, Relationships, Intimate Dynamics), then the line beginning `The Q&A ends when`. The diff stat shows `1 insertion(+), 1 deletion(-)`.
 
-- [ ] **Step 5: Verify no anchor quota survives anywhere in relationships.md**
+- [x] **Step 5: Verify no anchor quota survives anywhere in relationships.md**
 
 Run:
 
@@ -592,12 +592,12 @@ python -c "import io; t=io.open('skills/worldbuilder-character/relationships.md'
 
 Expected: `NO ANCHOR QUOTA IN FILE`. If any of those strings survives, the file can still demand a relationship the user ruled out in the Q&A, which is the contradiction this task exists to remove.
 
-- [ ] **Step 6: Verify the counts survived the removal**
+- [x] **Step 6: Verify the counts survived the removal**
 
 Run: `grep -n 'named relationships' skills/worldbuilder-character/relationships.md`
 Expected: two lines, reading `at least 8 named relationships` and `at least 5 named relationships`. Neither says `target`. Only the anchor lists were removed; the counts survive as a floor.
 
-- [ ] **Step 7: Run the skill lint — this task is the one that needs it**
+- [x] **Step 7: Run the skill lint — this task is the one that needs it**
 
 `SKILL.md` files are what `doodle` discovers, so this is the only task in the plan whose edit CI lints.
 
@@ -609,12 +609,12 @@ python -c "from doodle.cli import main; import sys; sys.argv=['doodle','--strict
 
 Expected: `no issues found`. If it reports anything, fix it before committing. Record the exact output in your report, and state plainly that local doodle is 0.5.0 while CI pins 1.0.0 — a local pass does not prove the 1.0.0-only spellcheck clean.
 
-- [ ] **Step 8: Run the test suite to confirm no collateral damage**
+- [x] **Step 8: Run the test suite to confirm no collateral damage**
 
 Run: `python -m pytest tests -q`
 Expected: `13 passed`.
 
-- [ ] **Step 9: Commit**
+- [x] **Step 9: Commit**
 
 ```bash
 git add skills/worldbuilder-character/SKILL.md skills/worldbuilder-character/relationships.md
@@ -653,3 +653,16 @@ Named here so an executor does not drift into them:
 - Adding the Cut filler groups (throat-clearers, emphasis crutches, jargon verbs, padding adverbs) to `docs/slop-phrases.md`. The verified gap is vague declaratives only; whether the checklist should also mirror the filler groups is a separate question.
 - Any change to the trait rule itself at `skills/writing-style.md:143`. Task 3 adds a worked example for its existing second branch; the rule text stands.
 - Rewriting `relationships.md:16` (perspective-focus and cross-character capture), which sits adjacent to Task 4's insertion point and is not part of these findings.
+
+## Execution record
+
+Executed 2026-07-26 on branch `follow-up-minors` (base 6d07211), subagent-driven, all six tasks complete. Every task's edits were re-verified independently of the implementer's report. Gates at close: `pytest` 13 passed, `doodle --strict skills` no issues found (local 0.5.0; CI pins 1.0.0 and its spellcheck is 1.0.0-only, so this is partial evidence).
+
+Deviations from the plan as written:
+
+- **The plan's line numbers for `writing-style.md` and `docs/slop-phrases.md` ran one low** — the Cut filler lead is at 73, not 72; the adverb bullet at 83, not 82. Inherited from the research extraction. No edit was affected, because every step is anchored on Find text rather than on a number, but the briefs carried the drift and two implementers reported it.
+- **One defect found in the final review and fixed at e681924.** The no-complement paragraph said an Authority does not oblige "that person's card to carry a Charge", which contradicts the archetype list eleven lines below it: archetypes are a blueprinting tool and do not appear in the final card as labels. Reworded to "a Charge on that person's side" and synced into this plan.
+- **Reviews ran in the main loop rather than as dispatched reviewer subagents,** as with the previous plan. The frugal routing guard blocks reasoning-tier agents and frugal's decision table routes reviews to the main loop. Spec compliance was checked by re-running each task's verification independently of the implementer; the quality read was not blind, since this session authored the prose.
+
+Open Minor, not fixed: the `SKILL.md` Relationships coverage bullet is now three sentences where its five siblings are single noun phrases, so it reads heavier than the list around it. Left alone because trimming it risks losing the ask-separately instruction the task depends on.
+
