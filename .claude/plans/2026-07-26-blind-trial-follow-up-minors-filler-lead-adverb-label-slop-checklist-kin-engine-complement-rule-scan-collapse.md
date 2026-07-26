@@ -13,7 +13,7 @@ description: 'Eleven scoped prose fixes across five instruction files: the seven
 tags:
 - human-ready
 date: 2026-07-26
-timestamp: 2026-07-26T18:23Z
+timestamp: 2026-07-26T18:26Z
 resources:
 - '[[2026-07-26-verified-site-inventory-for-the-blind-trial-follow-up-minors]]'
 ---
@@ -541,8 +541,10 @@ Find:
 Replace with:
 
 ```
-**Major characters:** target 8 named relationships. What those relationships are comes from the Q&A, not from a list here.
+**Major characters:** at least 8 named relationships. What those relationships are comes from the Q&A, not from a list here.
 ```
+
+`target` becomes `at least`: the count is a floor, not a number to hit and stop at.
 
 Find:
 
@@ -553,7 +555,7 @@ Find:
 Replace with:
 
 ```
-**Supporting characters:** target 5 named relationships.
+**Supporting characters:** at least 5 named relationships.
 ```
 
 Both are single lines, not wrapped. The trailing sentence on the major-character line exists to stop a list being reintroduced later; it states where the material comes from and requires nothing.
@@ -592,8 +594,8 @@ Expected: `NO ANCHOR QUOTA IN FILE`. If any of those strings survives, the file 
 
 - [ ] **Step 6: Verify the counts survived the removal**
 
-Run: `grep -n 'target 8 named relationships\|target 5 named relationships' skills/worldbuilder-character/relationships.md`
-Expected: two lines. Only the anchor lists were removed; the relationship counts are unchanged generation guidance.
+Run: `grep -n 'named relationships' skills/worldbuilder-character/relationships.md`
+Expected: two lines, reading `at least 8 named relationships` and `at least 5 named relationships`. Neither says `target`. Only the anchor lists were removed; the counts survive as a floor.
 
 - [ ] **Step 7: Run the skill lint — this task is the one that needs it**
 
@@ -644,7 +646,8 @@ Named here so an executor does not drift into them:
 
 - The arithmetic inside the `**The ideal is no repeats.**` paragraph — the 12-archetypes-against-8-relationships count, the second-tag rule, and the cap sentence. Task 5 Step 2 changes one sentence in that paragraph and nothing else; it remains the single place explaining *why* the cap is two.
 - The archetype definitions themselves, apart from Kin in Task 4. Task 5 changes how archetypes are chosen, not what any of them mean.
-- The relationship counts (`target 8 named relationships`, `target 5 named relationships`). Task 6 removes the anchor lists from those lines and leaves the counts alone.
+- The relationship counts themselves — 8 for major characters, 5 for supporting. Task 6 removes the anchor lists from those lines and changes `target` to `at least`; the numbers do not change.
+- The arithmetic in the `**The ideal is no repeats.**` paragraph, which reasons from 12 archetypes against 8 relationships. Turning the count into a floor makes the no-repeat ideal harder to reach at higher counts, but the paragraph's cap still holds and rewriting that reasoning is not part of this plan.
 - Any other coverage bullet in the `SKILL.md` Q&A list. Task 6 edits the Relationships bullet only.
 - Splitting validation into a separate grader agent. The checks this plan adds are written as instructions to whoever runs them; who runs them is a separate design question, queued.
 - Adding the Cut filler groups (throat-clearers, emphasis crutches, jargon verbs, padding adverbs) to `docs/slop-phrases.md`. The verified gap is vague declaratives only; whether the checklist should also mirror the filler groups is a separate question.
