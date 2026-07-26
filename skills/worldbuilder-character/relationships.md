@@ -52,9 +52,9 @@ Each archetype is defined by its behavioral signature — the specific way it ch
 
 ## Coverage Requirements
 
-**Major characters:** target 8 named relationships. Anchor types that should be present: a family or family-equivalent tie (Kin or Ghost), at least one power-asymmetric relationship (Authority or Charge), at least one rivalry or friction relationship, at least one Confidant. Additional entries should include at least one genuine friction source beyond rivalry: Obligation, Unease, or Ideological Counterpart.
+**Major characters:** at least 8 named relationships. What those relationships are comes from the Q&A, not from a list here.
 
-**Supporting characters:** target 5 named relationships. Anchor types: a family or family-equivalent tie, one power-asymmetric relationship, one friction or rivalry relationship.
+**Supporting characters:** at least 5 named relationships.
 
 ---
 
