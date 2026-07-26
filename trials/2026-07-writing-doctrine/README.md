@@ -8,6 +8,11 @@ This is a blind writing trial: six sealed instruction packets, one
 character, six independent agents, each writing one character note;
 the human scores the results blind.
 
+Standing rules for every trial — the blind protocol, probe classes,
+rubric construction, and the metric-validation rule — live in
+`../METHODOLOGY.md`. This kit is that document's first instance and
+records only what is specific to this trial.
+
 ## 2. Setup
 
 Copy this folder into the project. A scratch location is fine. Run
