@@ -21,3 +21,11 @@ conventions govern this repo's own `.claude/`.
 - **Skill prose follows the plugin's own writing doctrine:** plain,
   concrete, no filler — `skills/writing-style.md`; phrase-level review
   checklist in `docs/slop-phrases.md`.
+
+## Review records
+
+Review documents for this project live in `.claude/reviews/`.
+Interim assignment (2026-07-28, Kevin): set directly across all projects
+in lieu of a fleet:setup walk; superseded when the vault-merger
+migration lands. The fleet:adversarial-review skill follows this
+declaration and stops if it is absent.
