@@ -56,6 +56,8 @@ Each archetype is defined by its behavioral signature — the specific way it ch
 
 **Supporting characters:** at least 5 named relationships.
 
+Counts are per-character. A relationship in A's list does not require a matching entry in B's list, and no archetype on one side obliges a complement on the other.
+
 ---
 
 ## Archetype Distribution

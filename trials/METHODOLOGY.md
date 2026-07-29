@@ -42,9 +42,10 @@ individual metric inside it is inverted.
 Until a metric passes, its numbers carry an explicit `unvalidated` label
 wherever they appear — rubrics, results records, battery output.
 
-This rule exists because the 2026-07-23 blind trial ranked the human's
-top note last. Independent agent graders scored all six notes nearly
-identically, and their preference order inverted the human's.
+This rule exists because the [2026-07-23 blind trial](../.claude/research/2026-07-23-writing-doctrine-blind-trial-results-viralys-nadja.md)
+ranked the human's top note last. Independent agent graders scored all
+six notes nearly identically, and their preference order inverted the
+human's.
 
 ### 2.3 The cheapness bar
 
@@ -164,7 +165,9 @@ exceeds the section 2.3 bar, draw random subsets of characters and run
 the test within each subset, repeating across different subsets rather
 than completing the matrix.
 
-**Pass:** accuracy meaningfully above chance for the subset size.
+**Pass:** accuracy above chance for the subset size; the provisional
+threshold is set by the first pilot run's observed chance rate plus one
+standard error and revisited as data accumulates.
 **Fail:** at-chance accuracy. The failure is homogenization across the
 cast, not infidelity in any one note.
 
