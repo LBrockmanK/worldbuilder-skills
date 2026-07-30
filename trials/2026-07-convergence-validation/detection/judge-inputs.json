@@ -1,0 +1,273 @@
+{
+  "flagged": [
+    {
+      "sentence_a": "She likes them.",
+      "sentence_b": "She likes them.",
+      "normalized": "she likes them.",
+      "source_pair": "opus46-vs-opus5",
+      "character": "nadja",
+      "method": "exact"
+    },
+    {
+      "sentence_a": "She says nothing.",
+      "sentence_b": "She says nothing.",
+      "normalized": "she says nothing.",
+      "source_pair": "opus46-vs-opus5",
+      "character": "kallya",
+      "method": "exact"
+    },
+    {
+      "sentence_a": "---\n\n# Kallya\n\n## Design Notes\n\n### Session Notes\n\n- Arrived before Viralys existed, found Vesper's tree and settled in it; the village formed around them both\n- Previously ran a bluff at another human settlement: implied she would eat them all if not accommodated; they called it; she could not follow through with wiping out a community she knew and left\n- The relief at not following through was the revelation: it told her she cared about the community as a whole, and she did not want to know that\n- She can and does eat individual humans she knows; the line drawn was genocide, not predation; she feels connection to community as a continuous whole rather than to specific individuals\n- Core dynamic: presents as airhead; reads situations and people with precision; the vapidity is performance; the laziness is real\n- Views humans through an animal-husbandry framework: the community matters, individual humans do not; she keeps the flock healthy while eating individuals hedonistically; she enjoys how they squirm and struggle; the only giantess in the cast who is actively predatory\n- Treats the human population like a multi-celled organism: short-lived individual cells are expendable, but the community as a whole can endure and is worth preserving\n- Social predator through persuasion: constructs pretexts for humans to enter her mouth; manipulates them into compliance using her airhead persona; unpredictability is her tool\n- When witnesses are absent she may be more direct; exploits resurrection memory loss systematically\n- Self-image gap: tells herself she stays for the tree and the convenience; stays because she found people she does not want to leave\n- Nominal roles: town guard (post hoc justification), passive alchemical source (grew from a predation pretext), vibration-sensing early warning system\n- Steward's House assignment is administrative fiction; she contributes nothing\n- Lamia-giantess: 81m total, 65m snake tail; humanoid torso equivalent to other giantesses (30-35m standing)\n- Heavier than any other giantess; physically moving her against resistance would demolish the village\n- No magic; purely physical; strong but untrained in combat\n- Presents as careless about her size while actually being very careful; cajoles people closer to her mouth rather than grabbing them partly because sudden movement can disturb rope ladders, displace objects, and injure humans nearby\n- Slow metabolism; slow digestion; victims are stuck inside her for a long time\n- Cares about the people around her, both humans and giantesses, and will not admit this; friendship with Vesper is real even though she plays it off as freeloading\n- When the village faces external threats she responds with brutal effectiveness, returns to sunbathing, refuses credit\n- When a human she knows dies permanently she notices and says nothing; moves to a different spot and lies there\n- Spares Rado Stary despite easy opportunity, claiming there is no sport in prey that cannot process what is happening; the reason is closer to pity for his specific suffering\n- Liza keeps Mir away from Kallya; one of the few contexts where Liza's possessive instinct is protective rather than possessive\n- Maja: gets along but Kallya finds her boring since Maja is hyperactive and Kallya is lazy; they do not interact much\n- Ataraxia: neutral; lazy solidarity on the surface; both treat the village as personal space\n- Leif Holtveld may be secretly engineering cooling devices to make areas uncomfortable for Kallya, attempting to control her movements through temperature; she does not know about it yet\n- Melinda, Kodia, Sigrid: no specific dynamics established beyond community presence\n- Character art reference name: Viri\n\n### Builder Context\n\n- Narrative function: the character who demonstrates that care and predation coexist without resolving into either; her animal-husbandry framework is the most honest articulation of how several giantesses relate to humans, and she is the only one who has named it\n- Thematic mirror with Vesper: both care about humans while running frameworks (protection vs.",
+      "sentence_b": "---\n\n# Kallya\n\n## Design Notes\n\n### Session Notes\n\n- Arrived before Viralys existed, found Vesper's tree and settled in it; the village formed around them both\n- Previously ran a bluff at another human settlement: implied she would eat them all if not accommodated; they called it; she could not follow through with wiping out a community she knew and left\n- The relief at not following through was the revelation: it told her she cared about the community as a whole, and she did not want to know that\n- She can and does eat individual humans she knows; the line drawn was genocide, not predation; she feels connection to community as a continuous whole rather than to specific individuals\n- Core dynamic: presents as airhead; reads situations and people with precision; the vapidity is performance; the laziness is real\n- Views humans through an animal-husbandry framework: the community matters, individual humans do not; she keeps the flock healthy while eating individuals hedonistically; she enjoys how they squirm and struggle; the only giantess in the cast who is actively predatory\n- Treats the human population like a multi-celled organism: short-lived individual cells are expendable, but the community as a whole can endure and is worth preserving\n- Social predator through persuasion: constructs pretexts for humans to enter her mouth; manipulates them into compliance using her airhead persona; unpredictability is her tool\n- When witnesses are absent she may be more direct; exploits resurrection memory loss systematically\n- Self-image gap: tells herself she stays for the tree and the convenience; stays because she found people she does not want to leave\n- Nominal roles: town guard (post hoc justification), passive alchemical source (grew from a predation pretext), vibration-sensing early warning system\n- Steward's House assignment is administrative fiction; she contributes nothing\n- Lamia-giantess: 81m total, 65m snake tail; humanoid torso equivalent to other giantesses (30-35m standing)\n- Heavier than any other giantess; physically moving her against resistance would demolish the village\n- No magic; purely physical; strong but untrained in combat\n- Presents as careless about her size while actually being very careful; cajoles people closer to her mouth rather than grabbing them partly because sudden movement can disturb rope ladders, displace objects, and injure humans nearby\n- Slow metabolism; slow digestion; victims are stuck inside her for a long time\n- Cares about the people around her, both humans and giantesses, and will not admit this; friendship with Vesper is real even though she plays it off as freeloading\n- When the village faces external threats she responds with brutal effectiveness, returns to sunbathing, refuses credit\n- When a human she knows dies permanently she notices and says nothing; moves to a different spot and lies there\n- Spares Rado Stary despite easy opportunity, claiming there is no sport in prey that cannot process what is happening; the reason is closer to pity for his specific suffering\n- Liza keeps Mir away from Kallya; one of the few contexts where Liza's possessive instinct is protective rather than possessive\n- Maja: gets along but Kallya finds her boring since Maja is hyperactive and Kallya is lazy; they do not interact much\n- Ataraxia: neutral; lazy solidarity on the surface; both treat the village as personal space\n- Leif Holtveld may be secretly engineering cooling devices to make areas uncomfortable for Kallya, attempting to control her movements through temperature; she does not know about it yet\n- Melinda, Kodia, Sigrid: no specific dynamics established beyond community presence\n- Character art reference name: Viri\n\n### Builder Context\n\n- Narrative function: the character who demonstrates that care and predation coexist without resolving into either; her animal-husbandry framework is the most honest articulation of how several giantesses relate to humans, and she is the only one who has named it\n- Thematic mirror with Vesper: both care about humans while running frameworks (protection vs.",
+      "normalized": "--- # kallya ## design notes ### session notes - arrived before viralys existed, found vesper's tree and settled in it; the village formed around them both - previously ran a bluff at another human settlement: implied she would eat them all if not accommodated; they called it; she could not follow through with wiping out a community she knew and left - the relief at not following through was the revelation: it told her she cared about the community as a whole, and she did not want to know that - she can and does eat individual humans she knows; the line drawn was genocide, not predation; she feels connection to community as a continuous whole rather than to specific individuals - core dynamic: presents as airhead; reads situations and people with precision; the vapidity is performance; the laziness is real - views humans through an animal-husbandry framework: the community matters, individual humans do not; she keeps the flock healthy while eating individuals hedonistically; she enjoys how they squirm and struggle; the only giantess in the cast who is actively predatory - treats the human population like a multi-celled organism: short-lived individual cells are expendable, but the community as a whole can endure and is worth preserving - social predator through persuasion: constructs pretexts for humans to enter her mouth; manipulates them into compliance using her airhead persona; unpredictability is her tool - when witnesses are absent she may be more direct; exploits resurrection memory loss systematically - self-image gap: tells herself she stays for the tree and the convenience; stays because she found people she does not want to leave - nominal roles: town guard (post hoc justification), passive alchemical source (grew from a predation pretext), vibration-sensing early warning system - steward's house assignment is administrative fiction; she contributes nothing - lamia-giantess: 81m total, 65m snake tail; humanoid torso equivalent to other giantesses (30-35m standing) - heavier than any other giantess; physically moving her against resistance would demolish the village - no magic; purely physical; strong but untrained in combat - presents as careless about her size while actually being very careful; cajoles people closer to her mouth rather than grabbing them partly because sudden movement can disturb rope ladders, displace objects, and injure humans nearby - slow metabolism; slow digestion; victims are stuck inside her for a long time - cares about the people around her, both humans and giantesses, and will not admit this; friendship with vesper is real even though she plays it off as freeloading - when the village faces external threats she responds with brutal effectiveness, returns to sunbathing, refuses credit - when a human she knows dies permanently she notices and says nothing; moves to a different spot and lies there - spares rado stary despite easy opportunity, claiming there is no sport in prey that cannot process what is happening; the reason is closer to pity for his specific suffering - liza keeps mir away from kallya; one of the few contexts where liza's possessive instinct is protective rather than possessive - maja: gets along but kallya finds her boring since maja is hyperactive and kallya is lazy; they do not interact much - ataraxia: neutral; lazy solidarity on the surface; both treat the village as personal space - leif holtveld may be secretly engineering cooling devices to make areas uncomfortable for kallya, attempting to control her movements through temperature; she does not know about it yet - melinda, kodia, sigrid: no specific dynamics established beyond community presence - character art reference name: viri ### builder context - narrative function: the character who demonstrates that care and predation coexist without resolving into either; her animal-husbandry framework is the most honest articulation of how several giantesses relate to humans, and she is the only one who has named it - thematic mirror with vesper: both care about humans while running frameworks (protection vs.",
+      "source_pair": "opus5-vs-sol",
+      "character": "kallya",
+      "method": "exact"
+    }
+  ],
+  "unflagged_sample": [
+    {
+      "sentence_a": "She works through the space without stopping, and anyone in it either keeps up or gets moved aside.",
+      "sentence_b": "- She works with her hands close to the surface and keeps her tail and hips clear of human paths.",
+      "pair": "opus46-vs-terra",
+      "character": "nadja"
+    },
+    {
+      "sentence_a": "What she presents and what is true are not the same, and she is the only one who does not see it.",
+      "sentence_b": "When someone asks how she is, she answers with what needs doing next.",
+      "pair": "opus46-vs-opus5",
+      "character": "nadja"
+    },
+    {
+      "sentence_a": "If someone thanks her directly, she deflects until they stop.",
+      "sentence_b": "The arrangement has never required a conversation and has never had one.",
+      "pair": "opus46-vs-opus5",
+      "character": "kallya"
+    },
+    {
+      "sentence_a": "- She treats the human population the way a herder treats a flock.",
+      "sentence_b": "Her targets come back and do not remember what happened.",
+      "pair": "opus46-vs-opus5",
+      "character": "kallya"
+    },
+    {
+      "sentence_a": "- **[[Vesper]] \u2014 Authority:** Nadja brings [[Vesper]] shortages, staffing needs, and safety trouble in a short list.",
+      "sentence_b": "A person who asks for help gets a task broken into steps and a place beside her worktable.",
+      "pair": "sol-vs-terra",
+      "character": "nadja"
+    },
+    {
+      "sentence_a": "---\ntype: character\nstatus: complete\naliases: []\nlast_updated: 2026-07-30\nfactions: [\"[[Hunt and Hearth]]\"]\nrole: Kitchen forewoman\narchetype: \"[[Initially Hostile]]\"\ndescription: \"Fox-girl giantess and kitchen forewoman of Viralys.",
+      "sentence_b": "She follows village-wide calls once they are made, but argues when an order leaves human crews near giant-scale risk.",
+      "pair": "opus5-vs-sol",
+      "character": "nadja"
+    },
+    {
+      "sentence_a": "She cannot tell whether Ataraxia has handed Liza off on purpose or whether Ataraxia does not think about it at all.",
+      "sentence_b": "- **[[Vesper]] \u2014 Authority:** Nadja brings [[Vesper]] shortages, staffing needs, and safety trouble in a short list.",
+      "pair": "opus46-vs-sol",
+      "character": "nadja"
+    },
+    {
+      "sentence_a": "Maja's pace makes even friendly company feel like work, so Kallya keeps their time together short.",
+      "sentence_b": "- **Sophie \u2014 Unease:** Kallya keeps her airhead act in place around Sophie and gives away less than usual.",
+      "pair": "sol-vs-terra",
+      "character": "kallya"
+    },
+    {
+      "sentence_a": "She keeps a list of tasks she could hand off.",
+      "sentence_b": "- With strangers, she asks where they work, what they can lift, and whether they have eaten.",
+      "pair": "opus46-vs-sol",
+      "character": "nadja"
+    },
+    {
+      "sentence_a": "The only giantess in the village who is actively predatory.",
+      "sentence_b": "- She keeps taking village titles while calling each one made-up.",
+      "pair": "opus5-vs-sol",
+      "character": "kallya"
+    },
+    {
+      "sentence_a": "- She is overworked all the time.",
+      "sentence_b": "That the burns heal and the falls end in resurrection does not soften the reaction.",
+      "pair": "opus46-vs-opus5",
+      "character": "nadja"
+    },
+    {
+      "sentence_a": "- When someone pushes back on how she runs things, she does not argue.",
+      "sentence_b": "Maja is durable and a peer, and the hit is how they have always handled correction.",
+      "pair": "opus46-vs-opus5",
+      "character": "nadja"
+    },
+    {
+      "sentence_a": "- **[[strelitzia-liza|Liza]] \u2014 Charge:** Nadja took on Liza because [[Ataraxia]] is not around enough to do it.",
+      "sentence_b": "She sets aside a favorite dish, notices a missed meal, and leaves a filled plate within reach before returning to work.",
+      "pair": "opus46-vs-sol",
+      "character": "nadja"
+    },
+    {
+      "sentence_a": "She asks hunters what they brought and field crews what they can spare because her skill starts once food reaches the kitchen.",
+      "sentence_b": "- **[[Sigrid]] \u2014 Ideological Counterpart:** When Sigrid argues that grown humans should bear their own risks, Nadja points to the heat, blades, and giant-sized loads around them.",
+      "pair": "sol-vs-terra",
+      "character": "nadja"
+    },
+    {
+      "sentence_a": "She is careful about it.",
+      "sentence_b": "Individual humans are expendable.",
+      "pair": "opus46-vs-opus5",
+      "character": "kallya"
+    },
+    {
+      "sentence_a": "They called the bluff.",
+      "sentence_b": "- With strangers, she gives a loose smile, misses obvious details on purpose, and lets them explain things twice.",
+      "pair": "opus5-vs-terra",
+      "character": "kallya"
+    },
+    {
+      "sentence_a": "She starts managing before she has their name.",
+      "sentence_b": "- **Kallya -- Rival:** Kallya runs the smithy the way Nadja runs the kitchen: tight schedule, high standards, no tolerance for preventable mistakes.",
+      "pair": "opus46-vs-opus5",
+      "character": "nadja"
+    },
+    {
+      "sentence_a": "She treats Liza the way she treats every young creature in her reach: with structure, standards, and the certainty that without supervision, something will break.",
+      "sentence_b": "She gives humans more rules after these talks and watches for the first mistake that will prove her case.",
+      "pair": "opus5-vs-terra",
+      "character": "nadja"
+    },
+    {
+      "sentence_a": "- **Maja \u2014 Friction:** When Maja arrives at speed, Kallya lets her talk, answers direct questions, and claims a nap as soon as the topic runs out.",
+      "sentence_b": "His refusal to play prey keeps drawing her attention.",
+      "pair": "sol-vs-terra",
+      "character": "kallya"
+    },
+    {
+      "sentence_a": "Town guard in name only.",
+      "sentence_b": "- When talk turns to a person she has eaten, she makes a lazy joke or asks for food.",
+      "pair": "opus46-vs-terra",
+      "character": "kallya"
+    },
+    {
+      "sentence_a": "She also keeps food back for her and lets her see the tired silence that everyone else gets ordered away from.",
+      "sentence_b": "- When people wait for her to solve each small problem, she scolds them for making her do it.",
+      "pair": "sol-vs-terra",
+      "character": "nadja"
+    },
+    {
+      "sentence_a": "People who have been dismissed this way tend to avoid her afterward.",
+      "sentence_b": "## Soul\n\n- When people expect little from her, Kallya widens her eyes, loses the thread on purpose, and asks a foolish question.",
+      "pair": "opus5-vs-sol",
+      "character": "kallya"
+    },
+    {
+      "sentence_a": "She learned there that she has a line she will not cross: she will eat individuals but she will not destroy a community she knows.",
+      "sentence_b": "Some months she does not.",
+      "pair": "opus46-vs-opus5",
+      "character": "kallya"
+    },
+    {
+      "sentence_a": "The intent does not.",
+      "sentence_b": "She is creating the dependency she complains about and has not connected the two.",
+      "pair": "opus46-vs-opus5",
+      "character": "nadja"
+    },
+    {
+      "sentence_a": "She does not have anyone she goes to when the work is too much, and she would not describe it as too much.",
+      "sentence_b": "She also keeps food back for her and lets her see the tired silence that everyone else gets ordered away from.",
+      "pair": "opus5-vs-sol",
+      "character": "nadja"
+    },
+    {
+      "sentence_a": "husbandry) that let them avoid confronting what that care coexists with; Vesper cannot confront Kallya's treatment of humans without examining her own relationship to the humans bound to her tree\n- Spans more cross-population relationships than most residents while presenting as the village's most useless member; a community lynchpin who would deny being one\n- Cross-references: [[Vesper]] (Kin), [[Nadja]] (Friction), [[Elara]] (Ideological Counterpart), Jaro Jerab (Rival), [[sophie-liska|Sophie]] (Unease), Rado Stary (Charge), previous settlement (Ghost)\n\n## Background\n\n- Arrived before Viralys existed, found Vesper's tree and settled in it \u2192 the village formed around them both\n- Ran a bluff at a previous human settlement, implying she would eat them all if not accommodated \u2192 they called it; she could not follow through and left\n- The relief at not following through told her she cared about the community as a whole \u2192 she did not want to know that about herself\n- Lamia-giantess: 81m total, 65m snake tail \u2192 humanoid torso equivalent to other giantesses at 30-35m standing height\n- Heavier than any other giantess in the village \u2192 physically moving her against resistance would demolish structures around her\n- No magic, purely physical \u2192 strong but untrained in combat\n- Slow metabolism \u2192 slow digestion; she processes food over days rather than hours\n- Assigned to the Steward's House as town guard, passive alchemical source, and vibration-sensing early warning system \u2192 the assignment is administrative fiction; she contributes nothing to administration\n\n## Body\n\n- She is 81m of lamia coiled through Vesper's tree, heavier than any other giantess in the village.",
+      "sentence_b": "- She feels footfalls and impacts through her tail.",
+      "pair": "opus5-vs-sol",
+      "character": "kallya"
+    },
+    {
+      "sentence_a": "Her framework says individual humans are expendable cells in a larger organism, but she tracks who is present by their vibrations and she knows when someone stops appearing.",
+      "sentence_b": "She coils through Vesper's tree and leaves paths open through the village because shifting her full weight against a building would bring it down.",
+      "pair": "opus46-vs-sol",
+      "character": "kallya"
+    },
+    {
+      "sentence_a": "She learned there that she has a line she will not cross: she will eat individuals but she will not destroy a community she knows.",
+      "sentence_b": "- She views humans the way a herder views livestock.",
+      "pair": "opus46-vs-opus5",
+      "character": "kallya"
+    },
+    {
+      "sentence_a": "She is overworked and makes the exact mistakes she is trying to prevent: a pot left too long, a shelf misjudged, a human underfoot at the wrong moment.",
+      "sentence_b": "- **Nadja's mother \u2014 Ghost:** Nadja speaks of her mother's departure as the day she was judged grown.",
+      "pair": "opus5-vs-sol",
+      "character": "nadja"
+    },
+    {
+      "sentence_a": "- With strangers, she asks where they work, what they can lift, and whether they have eaten.",
+      "sentence_b": "---\ntype: character\nstatus: complete\naliases: [\"Nadja\"]\nlast_updated: 2026-07-30\nfactions: [\"[[Hunt and Hearth]]\"]\nrole: Kitchen forewoman\narchetype: \"[[Caretaker]]\"\ndescription: \"Viralys's kitchen forewoman feeds both populations with close control, small acts of care, and rules that leave little room for anyone else to act on their own.\"\n---\n\n# Nadja\n\n## Design Notes\n\n### Session Notes\n\n- Born in Viralys; mother left once she considered Nadja old enough \u2014 not very old by human standards, but giantesses reach independence faster; her mother kept watch longer than some; no trauma or bitterness about it\n- [[Maja]]'s mother abandoned her young (or at least that's presumed \u2014 no one ever saw her); Nadja started looking out for Maja and took a big-sister role, which developed into caretaking more broadly\n- The caretaking instinct started with Maja specifically \u2014 a kid who needed someone \u2014 and grew outward as the village's practical needs gave structure; she didn't set out to become the person who feeds everyone; it accumulated\n- Now serves as kitchen forewoman, feeding both human and giantess populations\n- Core fear: if she stops controlling the outcome, someone gets hurt; not just professional diligence but personal \u2014 she's between fragile humans and giantess-scale hazards every day; the warmth she won't acknowledge is what makes the stakes feel so high\n- Self-image gap: sees what she does as normal, thinks others should be more responsible \u2014 while her overbearing nature prevents them from developing that responsibility; creating the problem she's solving\n- Unconsciously infantilizes humans; not malicious \u2014 just how things are to her; humans are small, fragile, need looking after; she likes them, feeds them, cares individually \u2014 but doesn't think of them as fully autonomous\n- When things go wrong, doubles down: more rules, more oversight, more hands-on control; human autonomy shrinks further\n- Refuses to delegate dangerous tasks even when someone else would do them better; result is she's overworked and occasionally makes the exact mistakes she's trying to prevent; root is the control pattern \u2014 can't trust anyone else to be careful enough\n- Won't admit she enjoys people having fun at work; bark worse than bite; doesn't notice she softens around people enjoying themselves or that her punishments for minor infractions are lighter than she thinks\n- Self-reliant; no one she's personally vulnerable with; always the one holding it together\n- Warmth is acts of service she doesn't draw attention to: preparing someone's favorite dish, making sure they remember to eat\n- Physical discipline scales with target: [[Maja]] gets hit (durable peer); [[strelitzia-liza|Liza]] gets standard child discipline; humans get contained \u2014 pinned under a finger, shoved in a pocket, put on a shelf, held up for a talking-down; constricting but not harmful\n- Protectiveness operates within resurrection framework: strict about safety because accidents are disruptive and unpleasant, not because she treats human life as sacred\n\n### Builder Context\n\n- Narrative function: the giantess whose caretaking has become control; demonstrates how genuine kindness becomes suffocating when the caretaker cannot let go; the self-reinforcing cycle (accident \u2192 tighter grip \u2192 overwork \u2192 more accidents) is the engine\n- The [[Maja]] dynamic is reciprocal across both notes: Maja's Confidant entry describes getting more of Nadja than anyone; Nadja's Kin entry describes the origin of the caretaking instinct\n- [[strelitzia-liza|Liza]]'s note labels Nadja as Authority; from Nadja's side the label is Charge \u2014 she has self-appointed the responsibility because [[Ataraxia]] isn't around to do it\n- [[Melinda]]'s note does not currently have a Nadja relationship entry; Nadja's Obligation entry describes the supply-chain discipline dynamic, which may warrant a reciprocal entry from Melinda's side\n\n## Background\n\n- Born in Viralys to a giantess mother who left after Nadja reached giantess independence \u00e2\u2020\u2019 has lived in the village her whole life\n- Maja's mother vanished while Maja was young \u00e2\u2020\u2019 Nadja took on a big-sister role with Maja\n- The kitchen's need for steady food grew around her care for Maja \u00e2\u2020\u2019 Nadja became the kitchen forewoman\n- Feeds the human and giantess populations from Viralys's kitchen \u00e2\u2020\u2019 holds one of the village's daily work posts\n\n## Body\n\n- In the kitchen, she keeps humans in sight on counters, shelves, and marked work paths.",
+      "pair": "sol-vs-terra",
+      "character": "nadja"
+    },
+    {
+      "sentence_a": "When no one is watching, she may drop the pretext.",
+      "sentence_b": "- She spends long stretches stretched out in the sun.",
+      "pair": "opus46-vs-sol",
+      "character": "kallya"
+    },
+    {
+      "sentence_a": "She cannot tell whether Ataraxia has handed Liza off on purpose or whether Ataraxia does not think about it at all.",
+      "sentence_b": "She turns her head at each call while her hands keep moving, because every sound may mark a spill, a missed count, or someone underfoot.",
+      "pair": "opus46-vs-sol",
+      "character": "nadja"
+    },
+    {
+      "sentence_a": "When Maja crosses a line, Nadja hits her, because Maja can take it.",
+      "sentence_b": "She gives the reason once, then moves the person or the tool herself.",
+      "pair": "opus46-vs-sol",
+      "character": "nadja"
+    },
+    {
+      "sentence_a": "Slow digestion.",
+      "sentence_b": "His suffering makes her care for one person in a way her herd talk cannot hold.",
+      "pair": "opus46-vs-terra",
+      "character": "kallya"
+    },
+    {
+      "sentence_a": "She sets the terms of what the kitchen needs and how it arrives.",
+      "sentence_b": "When the numbers fail, she changes the menu before she lets the shortage reach the village.",
+      "pair": "opus46-vs-sol",
+      "character": "nadja"
+    },
+    {
+      "sentence_a": "She has not decided whether Elara's position is honest or convenient.",
+      "sentence_b": "Maja's pace makes even friendly company feel like work, so Kallya keeps their time together short.",
+      "pair": "opus46-vs-sol",
+      "character": "kallya"
+    },
+    {
+      "sentence_a": "- She speaks slowly, with long pauses that look like she has lost her thought.",
+      "sentence_b": "- She feels footfalls and impacts through her tail.",
+      "pair": "opus46-vs-sol",
+      "character": "kallya"
+    },
+    {
+      "sentence_a": "- She can read a social situation in seconds and knows which approach will bring a human closer.",
+      "sentence_b": "She tells herself there is no sport in prey that cannot process what is happening.",
+      "pair": "opus46-vs-opus5",
+      "character": "kallya"
+    },
+    {
+      "sentence_a": "- **[[strelitzia-liza|Liza]] \u2014 Charge:** Nadja took on Liza because [[Ataraxia]] is not around enough to do it.",
+      "sentence_b": "## Relationships\n\n- **Maja -- Kin, Confidant:** She found Maja young and alone, and started looking after her before she had a word for what she was doing.",
+      "pair": "opus46-vs-opus5",
+      "character": "nadja"
+    },
+    {
+      "sentence_a": "Nadja pushes.",
+      "sentence_b": "She calls this convenience so the welcome carries no debt.",
+      "pair": "opus5-vs-sol",
+      "character": "kallya"
+    }
+  ],
+  "total_flagged": 3,
+  "total_unflagged_sampled": 40,
+  "note": "embedding-results not available (no VOYAGE_API_KEY); flagged set is exact-match only"
+}
