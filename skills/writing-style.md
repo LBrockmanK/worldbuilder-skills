@@ -70,7 +70,7 @@ Vague declaratives are the same move in sentence form: "the stakes are high," "t
 
 ### Cut filler
 
-Delete words that take up room without doing work: openers that delay the sentence, emphasis standing in for evidence, fashionable verbs where a plain one exists, and adverbs that pad a claim instead of sharpening it.
+Cut words and phrases that stall, inflate, obscure, or dilute a sentence.
 
 - Wrong: "It's worth noting that she essentially runs the kitchen."
 - Right: "She runs the kitchen."
@@ -80,7 +80,7 @@ Cut these groups outright:
 - Throat-clearers: "here's the thing," "it's worth noting," "the truth is," "let me be clear."
 - Emphasis crutches: "full stop," "make no mistake," "let that sink in," "I promise."
 - Jargon standing in for a plain verb: "navigate," "unpack," "lean into," "deep dive," "circle back."
-- Padding adverbs: "really," "just," "genuinely," "truly," "deeply," "actually," "simply," "honestly."
+- Filler words: "really," "just," "genuinely," "truly," "deeply," "actually," "simply," "honestly."
 
 - Wrong: "She genuinely just wants to help, honestly."
 - Right: "She wants to help."

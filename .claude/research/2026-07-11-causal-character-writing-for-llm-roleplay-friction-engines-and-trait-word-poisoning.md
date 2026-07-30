@@ -7,9 +7,9 @@ description: 'Key-info extraction from three community references on writing cha
   and emotional memory hooks, and the trait-word poisoning failure mode for intelligence-type
   adjectives. Includes a delta assessment against the worldbuilder character doctrine.'
 tags:
-- human-ready
+- complete
 date: 2026-07-11
-timestamp: 2026-07-11T15:42Z
+timestamp: 2026-07-30T02:28Z
 resources:
 - https://likesumiink.substack.com/p/building-engines-and-making-hairballs
 - https://www.reddit.com/r/SillyTavernAI/comments/1qopo7h/on_building_characters_with_friction/

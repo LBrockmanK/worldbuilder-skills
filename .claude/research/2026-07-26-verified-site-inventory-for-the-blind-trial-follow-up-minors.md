@@ -5,9 +5,9 @@ description: Line-accurate inventory of the seven follow-up defect sites across 
   slop-phrases.md, relationships.md and framework.md, each checked against current
   file text, plus the lint and test gates that apply to those paths.
 tags:
-- human-ready
+- complete
 date: 2026-07-26
-timestamp: 2026-07-26T16:48Z
+timestamp: 2026-07-30T01:58Z
 resources: []
 ---
 

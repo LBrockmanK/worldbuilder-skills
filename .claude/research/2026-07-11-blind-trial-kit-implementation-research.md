@@ -5,9 +5,9 @@ description: 'Implementation research for the writing-doctrine blind-trial kit p
   current instruction-set inventory, stop-slop rule inventory, additive-principle
   source passages, repo conventions.'
 tags:
-- human-ready
+- complete
 date: 2026-07-11
-timestamp: 2026-07-11T16:42Z
+timestamp: 2026-07-30T02:26Z
 resources:
 - '[[2026-07-11-writing-doctrine-blind-trial-kit]]'
 - '[[2026-07-11-causal-character-writing-for-llm-roleplay-friction-engines-and-trait-word-poisoning]]'

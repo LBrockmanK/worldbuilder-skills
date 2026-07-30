@@ -5,9 +5,9 @@ description: 'Repo conventions for authoring trials/METHODOLOGY.md: existing tri
   file structure and headings, prose wrapping conventions, lint and CI coverage gaps
   over trials/, and the absence of any prior standing methodology document.'
 tags:
-- human-ready
+- complete
 date: 2026-07-26
-timestamp: 2026-07-26T15:51Z
+timestamp: 2026-07-30T02:01Z
 resources: []
 ---
 
