@@ -1,15 +1,1 @@
-[
-  {
-    "normalized": "she likes them.",
-    "model_count": 2,
-    "models": [
-      "opus46",
-      "opus5"
-    ],
-    "examples": {
-      "opus46": "She likes them.",
-      "opus5": "She likes them."
-    },
-    "character": "nadja"
-  }
-]
+[]

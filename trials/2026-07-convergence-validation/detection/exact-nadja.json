@@ -3,14 +3,8 @@
     "pair": "opus46-vs-opus5",
     "type": "within-claude",
     "character": "nadja",
-    "match_count": 1,
-    "matches": [
-      {
-        "sentence_a": "She likes them.",
-        "sentence_b": "She likes them.",
-        "normalized": "she likes them."
-      }
-    ]
+    "match_count": 0,
+    "matches": []
   },
   {
     "pair": "opus46-vs-sol",

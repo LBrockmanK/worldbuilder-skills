@@ -19,8 +19,33 @@ PAIR_LABELS = {
     ('sol', 'terra'): 'within-gpt',
 }
 
+def strip_non_generated(text):
+    """Remove frontmatter and Design Notes — only compare generated content."""
+    lines = text.split('\n')
+    out = []
+    in_frontmatter = False
+    in_design_notes = False
+    for line in lines:
+        if line.strip() == '---' and not out:
+            in_frontmatter = True
+            continue
+        if in_frontmatter:
+            if line.strip() == '---':
+                in_frontmatter = False
+            continue
+        if re.match(r'^##\s+Design Notes', line):
+            in_design_notes = True
+            continue
+        if in_design_notes and re.match(r'^##\s+', line) and 'Design Notes' not in line:
+            in_design_notes = False
+        if in_design_notes:
+            continue
+        out.append(line)
+    return '\n'.join(out)
+
 def split_sentences(text):
     """Split on sentence boundaries. Preserves sentence content."""
+    text = strip_non_generated(text)
     raw = re.split(r'(?<=[.!?])\s+', text)
     return [s.strip() for s in raw if s.strip() and len(s.strip()) > 10]
 
