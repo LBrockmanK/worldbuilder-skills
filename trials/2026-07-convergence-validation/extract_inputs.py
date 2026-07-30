@@ -7,7 +7,6 @@ and cast roster from the notes directory. Writes to inputs/.
 Usage: python extract_inputs.py <viralys_worldvault_path>
 """
 import sys
-import re
 from pathlib import Path
 
 CHARACTERS = {
