@@ -51,7 +51,7 @@ def categorize(
         dict with keys:
         - category: "input_echo" | "clean"
         - matched_input: the input line that triggered echo, or None
-        - overlap: the overlap score (0.0 if clean)
+        - overlap: the overlap score (actual best score for all categories)
     """
     input_lines = [
         line.strip().lstrip("- ")
@@ -77,7 +77,7 @@ def categorize(
             "overlap": best_overlap,
         }
 
-    return {"category": "clean", "matched_input": None, "overlap": 0.0}
+    return {"category": "clean", "matched_input": None, "overlap": best_overlap}
 
 
 def compare_cross_model(

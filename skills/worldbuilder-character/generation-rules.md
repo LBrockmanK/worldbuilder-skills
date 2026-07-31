@@ -49,4 +49,4 @@ After generating three variants per entry, select the best using the active sele
 
 **Mechanism 3. Synthesis:** A final pass takes the strongest elements from all three variants and writes a synthesis. Applied unconditionally during the trial so it can be scored against the other two mechanisms.
 
-**Decision rule:** If all three mechanisms score within 0.3 of each other, adopt Mechanism 2 (judge). Otherwise, if exactly two mechanisms tie, prefer the cheaper one.
+**Decision rule:** Adopt the highest-scoring mechanism. If all three score within 0.3 of each other, adopt Mechanism 2 (judge). If exactly two tie, prefer the cheaper one.

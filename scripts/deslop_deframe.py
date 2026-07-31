@@ -75,7 +75,7 @@ def _load_slop_patterns() -> list[tuple[str, str]]:
         phrases = re.findall(r'"([^"]+)"', line)
         for phrase in phrases:
             # Skip phrases that are purely descriptive placeholders
-            if phrase in ("same register", "the register she runs with"):
+            if phrase.rstrip('.,;:') in ("same register", "the register she runs with"):
                 # These are examples within the "register" entry; keep as-is
                 pass
 
@@ -89,7 +89,14 @@ def _load_slop_patterns() -> list[tuple[str, str]]:
             for j, part in enumerate(parts):
                 escaped.append(re.escape(part))
                 if j < len(parts) - 1:
-                    escaped.append(r"(?:\s+\S+){0,3}\s+")
+                    # Phrase-final [X]: no trailing \s+, use \b
+                    if j == len(parts) - 2 and not parts[j + 1]:
+                        escaped.append(r"(?:\s+\S+){1,3}\b")
+                    else:
+                        escaped.append(r"(?:\s+\S+){0,3}\s+")
+            # Remove trailing empty escaped part from phrase-final [X]
+            if escaped and escaped[-1] == re.escape(""):
+                escaped.pop()
             regex = "".join(escaped)
             # Word boundaries
             regex = r"(?i)\b" + regex + r"\b"

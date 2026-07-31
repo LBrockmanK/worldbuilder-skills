@@ -5,7 +5,7 @@ ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 sys.path.insert(0, ROOT)
 
 import pytest
-from scripts.detect_input_echo import categorize, ngram_overlap, compare_cross_model
+from scripts.detect_input_echo import categorize, ngram_overlap, compare_cross_model, ECHO_THRESHOLD
 
 
 class TestNgramOverlap:
@@ -49,7 +49,7 @@ class TestCategorize:
         result = categorize(output, input_notes)
         assert result["category"] == "clean"
         assert result["matched_input"] is None
-        assert result["overlap"] == 0.0
+        assert result["overlap"] < ECHO_THRESHOLD
 
     def test_partial_echo(self):
         output = "She cajoles people closer rather than reaching for them."

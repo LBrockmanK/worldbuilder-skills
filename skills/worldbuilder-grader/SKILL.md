@@ -15,9 +15,6 @@ This skill is experimental pending the convergence metric retest (Task 6).
 Do not integrate into the standard authoring pipeline until the retest
 confirms the metric graduates. Use only for quality analysis and trial runs.
 
-Status: Experimental — do not integrate into the standard authoring pipeline
-until the convergence metric retest (Task 6) confirms graduation.
-
 ## When to use
 
 Run after generating a character note with `worldbuilder-character`.
