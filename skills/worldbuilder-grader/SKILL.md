@@ -1,7 +1,6 @@
 ---
 name: worldbuilder-grader
-description: Post-generation quality check for character notes using input-aware convergence detection.
-status: experimental
+description: Use when running a post-generation quality check on character notes — detects input-echo and cross-model convergence. Experimental.
 ---
 
 # Worldbuilder Grader
