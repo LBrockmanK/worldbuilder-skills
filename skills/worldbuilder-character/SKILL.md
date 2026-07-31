@@ -119,6 +119,12 @@ If a behavior is primarily about one specific relationship, it belongs in Relati
 
 ---
 
+## Generation Rules
+
+See `generation-rules.md` for preprocessing, routing, fact-to-manifestation, multi-option spread, and selection rules. Read before generating any section.
+
+---
+
 ## Background, Body & Soul
 
 See `framework.md` for construction format, coverage requirements, the When/Behavior/Because formula, and examples for all three sections.
