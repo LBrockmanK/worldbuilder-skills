@@ -27,6 +27,13 @@ No prose, no elaboration beyond the pair. No behavioral framing — if the fact 
 - Formative events: key experiences and turning points that changed their trajectory
 - Current situation: where they are now and how they feel about it (content, stuck, restless)
 
+**Charge tags:** Every formative memory carries a charge tag. Inline syntax: `[high] Fact → consequence`.
+- **high** — unresolved, emotionally live, shapes present behavior directly. Must also generate a corresponding Soul entry. Operational test: can you write a Soul entry "When [trigger], they [behavior], because [this memory]"?
+- **mid** — settled but still referenced, explains patterns. Operational test: does removing this memory change any Soul entry?
+- **low** — context only, explains origin but does not drive present action. May be omitted if it adds nothing behavioral. Operational test: does this memory appear in any Because clause?
+
+**Values carry costs (2–3 entries):** Name each top value and state in one sentence what holding it has cost. Also state the character's lowest values and one act proving they are not held.
+
 ---
 
 ## Body
@@ -130,6 +137,12 @@ Soul covers three areas. Write them together as a single bullet list with no sub
 
 If the character has a distinctive speech pattern, include one entry describing it concretely.
 
+**Doctrine-required entries:**
+- Core want as behavioral description (1 entry minimum). How the want shows — not "she wants respect" but what she does when she senses disrespect.
+- Core fear as behavioral description (1 entry minimum). What the character does when the feared outcome approaches — observable action, not internal dread.
+- False belief in action (1 entry minimum). A behavior the character performs because of something they believe that is not true. The belief and the resulting behavior must both be specific.
+- Value-conflict stance as behavioral description (1 entry minimum). What the character does when their operating code collides with conventional expectations — the specific action, not the abstract position.
+
 ### Contradictions
 
 The most interesting characters contain contradictions. A character with no friction between what they want and what they do gives the LLM nothing to work with. The contradiction must appear as a behavioral description in the Soul bullet list — not as a standalone note.
@@ -145,3 +158,13 @@ The most interesting characters contain contradictions. A character with no fric
 ### The Because clause
 
 The Because clause carries the psychological root. Draw it from the Q&A session capture in Design Notes — do not invent psychology the user has not provided. If no session note speaks to a specific behavior's root, ask before writing. If no Design Notes exist yet, provide a reasoned psychological root and flag it for user review.
+
+### Anchor repetition and single source of truth
+
+The behavioral framework requires dense interconnection for LLM activation. The writing-style rule requires each fact to live in one place. Resolution:
+
+**Facts live in one place. Behavioral consequences appear wherever they are relevant.** A formative event is stated once in Background. Its behavioral impact appears in Soul (psychological pattern), Body (physical habit it produced), and Relationships (how it shapes a specific dynamic). Each appearance is a behavioral description of the consequence, not a restatement of the fact. The fact is the anchor; the behavioral consequences are the repetition.
+
+### Compressed sensory fragments
+
+Dense sensory fragments as emotional memory hooks ("the last thing she remembers of her mother: lowering her yukata's collar, one word — run") carry more weight than explanation. These are permitted in Background as high-charge memory entries. They do not need to pass the staging test — Background is factual, not behavioral. Their corresponding Soul entry (required for all high-charge memories) must be stageable: the present-day behavior the memory drives, not the memory itself.
