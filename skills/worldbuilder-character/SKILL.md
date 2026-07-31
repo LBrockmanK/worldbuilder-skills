@@ -77,7 +77,17 @@ Before writing any note section, conduct a Q&A with the user. Ask one question a
 - Relationships: who the named cast is, which relationships matter most to this character, the behavioral dynamic of each — what it makes them do when that person is present or mentioned. Then as separate questions: who counts as family, who they answer to, who depends on them, who they clash with, who they would tell the truth to. An absence here is an answer: note it and move on.
 - Intimate Dynamics: if the character is flagged for intimate dynamics (check project plan first), also cover how they express attraction, what makes them hold back, and any specific dynamic that drives their intimate behavior
 
-The Q&A ends when the agent has confident, specific answers across all coverage areas. Capture answers in Design Notes → Session Notes before moving to note writing.
+During the Q&A phase, capture the following doctrine fields in the **Structured Doctrine** subsection of Design Notes (not Session Notes). Ask for each explicitly if the user's answers do not surface them naturally:
+
+- **Core want:** "What does this character want most — not the surface want, but the deeper want underneath?"
+- **Core fear:** "What outcome or realization would be hardest for them to face?"
+- **Values carry costs:** "What has holding that value cost them or someone else?" (for each stated value)
+- **False belief:** "What does this character believe that is not true, and how does it shape what they do?"
+- **Contrast declaration:** "Which existing cast member is this character most likely to be confused with, and what separates them?" For the first character or a standalone character: "What archetype or trope is this character designed to subvert?"
+- **Value-conflict stance:** "When this character's code hits what most people would consider decent behavior, which wins? What would tip them the other way?"
+- **Charge-scored memories:** After capturing formative memories, tag each as high/mid/low charge.
+
+The Q&A ends when the agent has confident, specific answers across all coverage areas. Capture general answers in Design Notes → Session Notes before moving to note writing.
 
 ---
 
@@ -151,6 +161,7 @@ The note stays on an open status tag while work is in progress; mark it `complet
 **Design Notes**
 - [ ] `### Session Notes` present with Q&A capture
 - [ ] `### Builder Context` present as applicable; not padded
+- [ ] `### Structured Doctrine` present with all 7 fields filled: core want, core fear, values carry costs, false belief, contrast declaration, value-conflict stance, charge-scored memories
 
 **Background**
 - [ ] Declarative fact pairs only — no behavioral content, no prose elaboration
@@ -160,7 +171,7 @@ The note stays on an open status tag while work is in progress; mark it `complet
 - [ ] No forced entries — thin is acceptable if nothing is distinctive
 
 **Soul**
-- [ ] 3–5 psychological behavioral entries minimum
+- [ ] 7–9 psychological behavioral entries minimum (3–5 base + 4 doctrine-required: core want, core fear, false belief, value-conflict stance)
 - [ ] 2–3 general social behavior entries minimum
 - [ ] One contradiction stated as a behavioral description
 - [ ] Irrational behavior with emotional root present
