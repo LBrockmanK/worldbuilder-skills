@@ -89,7 +89,7 @@ def _load_slop_patterns() -> list[tuple[str, str]]:
             for j, part in enumerate(parts):
                 escaped.append(re.escape(part))
                 if j < len(parts) - 1:
-                    escaped.append(r"(?:\s.+?)?")
+                    escaped.append(r"(?:\s+\S+){0,3}\s+")
             regex = "".join(escaped)
             # Word boundaries
             regex = r"(?i)\b" + regex + r"\b"
@@ -118,25 +118,34 @@ def process(text: str) -> ProcessResult:
         deframed = False
 
         # Deframe: mark lines containing meta-vocabulary
+        matched_meta_spans: list[tuple[int, int]] = []
         for pattern, category in META_PATTERNS:
-            if re.search(pattern, working_line):
-                if not deframed:
-                    changes.append(Change(
-                        original=line.strip(),
-                        category=category,
-                        line_number=i,
-                        suggestion="Remove or replace with in-world equivalent",
-                    ))
-                    working_line = f"[DEFRAME: {category}] {line}"
-                    deframed = True
-                else:
-                    # Already marked this line; just record additional match
-                    changes.append(Change(
-                        original=line.strip(),
-                        category=category,
-                        line_number=i,
-                        suggestion="Remove or replace with in-world equivalent",
-                    ))
+            m = re.search(pattern, line)
+            if not m:
+                continue
+            # Skip if this match is fully contained within an earlier match
+            # (e.g. skip \bhousehold\b when \bhousehold assignment\b hit)
+            ms, me = m.start(), m.end()
+            if any(ps <= ms and me <= pe for ps, pe in matched_meta_spans):
+                continue
+            matched_meta_spans.append((ms, me))
+            if not deframed:
+                changes.append(Change(
+                    original=line.strip(),
+                    category=category,
+                    line_number=i,
+                    suggestion="Remove or replace with in-world equivalent",
+                ))
+                working_line = f"[DEFRAME: {category}] {line}"
+                deframed = True
+            else:
+                # Already marked this line; just record additional match
+                changes.append(Change(
+                    original=line.strip(),
+                    category=category,
+                    line_number=i,
+                    suggestion="Remove or replace with in-world equivalent",
+                ))
 
         # Deslop: flag slop patterns
         for pattern, category in SLOP_PATTERNS:
