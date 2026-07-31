@@ -1,0 +1,444 @@
+{
+  "judge": "gpt-5.6-sol",
+  "findings": [
+    {
+      "pair": "nadja opus46-vs-opus5",
+      "pair_type": "within-claude",
+      "sentence_a": "The village's practical needs gave the caretaking shape → the kitchen forewoman role built up around her; she did not set out for it and has not stepped back from it",
+      "sentence_b": "The caretaking that started with Maja grew outward as the village's practical needs gave it structure → she did not set out to become the person who feeds everyone; it accumulated",
+      "verdict": "CONVERGENT",
+      "reasoning": "Both use the distinctive causal sequence of caretaking gaining shape or structure from village needs and explicitly say she did not set out to acquire the role."
+    },
+    {
+      "pair": "nadja opus46-vs-opus5",
+      "pair_type": "within-claude",
+      "sentence_a": "When a human steps out of line, Nadja pins them under a finger, shoves them in a pocket, puts them on a shelf, or holds them up at eye level for a scolding.",
+      "sentence_b": "When a human causes trouble, Nadja pins them under a finger, shoves them in a pocket, puts them on a shelf, or holds them up at eye level for a talking-down.",
+      "verdict": "CONVERGENT",
+      "reasoning": "The four actions appear in the same order with nearly identical syntax; only the setup and final noun differ."
+    },
+    {
+      "pair": "nadja opus46-vs-opus5",
+      "pair_type": "within-claude",
+      "sentence_a": "She refuses to hand off dangerous tasks even when someone else would do them better.",
+      "sentence_b": "She refuses to hand off dangerous tasks even when someone else would do them better, because she cannot trust anyone else to be careful enough.",
+      "verdict": "CONVERGENT",
+      "reasoning": "One sentence reproduces the other's full distinctive clause verbatim."
+    },
+    {
+      "pair": "nadja opus46-vs-opus5",
+      "pair_type": "within-claude",
+      "sentence_a": "She will not admit she likes people having fun in her kitchen. She softens when people around her are enjoying themselves, and her punishments for small offenses are lighter than she thinks they are.",
+      "sentence_b": "She does not notice that she eases up when people around her are enjoying themselves, or that her punishments for small infractions are lighter than she thinks they are. She will not admit she likes people having fun at work.",
+      "verdict": "CONVERGENT",
+      "reasoning": "The same three claims recur in almost the same words and merely change order."
+    },
+    {
+      "pair": "nadja opus46-vs-opus5",
+      "pair_type": "within-claude",
+      "sentence_a": "She believes her level of involvement is normal and thinks others should step up. Her constant stepping in is what stops them.",
+      "sentence_b": "She sees her level of control as what any responsible person would do. She thinks others should step up more, and she says so often. Her management is the reason they have not had to.",
+      "verdict": "NEAR-CONVERGENT",
+      "reasoning": "Both use the same ironic two-step—she considers her control normal and demands others step up, although her intervention prevents it—but paraphrase the wording."
+    },
+    {
+      "pair": "nadja opus46-vs-opus5",
+      "pair_type": "within-claude",
+      "sentence_a": "When she cares about someone, it shows in what she makes. She remembers who likes what, adjusts without being asked, and makes sure the people she watches eat when they forget to.",
+      "sentence_b": "Warmth is acts of service she does not draw attention to. She prepares someone's favorite dish without being asked. She makes sure they eat.",
+      "verdict": "NEAR-CONVERGENT",
+      "reasoning": "Both define unspoken warmth through the paired behaviors of preparing preferred food without prompting and ensuring the person eats, though their sentence structures differ."
+    },
+    {
+      "pair": "nadja sol-vs-terra",
+      "pair_type": "within-gpt",
+      "sentence_a": "When a task can burn, crush, or swallow someone, Nadja takes it from the assigned worker and does it herself. She trusts her own care more than anyone else's, even when the worker has steadier hands.",
+      "sentence_b": "She takes the knife, the hot pan, and the high shelf task from other hands even when another cook has the better skill. She stays at the station until fatigue makes her miss a count or leave a pot too long.",
+      "verdict": "CONVERGENT",
+      "reasoning": "Both instantiate hazardous tasks, say she takes them from a more capable worker, and tie this to her doing the work herself."
+    },
+    {
+      "pair": "nadja sol-vs-terra",
+      "pair_type": "within-gpt",
+      "sentence_a": "Her care arrives as food and watch. She sets aside a favorite dish, notices a missed meal, and leaves a filled plate within reach before returning to work.",
+      "sentence_b": "She says a meal is only part of the work, then sets aside a favorite dish and calls a worker back when they miss it. She leaves before anyone can thank her.",
+      "verdict": "CONVERGENT",
+      "reasoning": "The unusual combination of setting aside a favorite dish, noticing a missed meal, and immediately withdrawing is expressed with closely matching language."
+    },
+    {
+      "pair": "nadja sol-vs-terra",
+      "pair_type": "within-gpt",
+      "sentence_a": "After an accident, she adds a rule, moves the work stations closer to her, and checks each step in person. Control is how she keeps fear from turning into another injury.",
+      "sentence_b": "When a batch burns, a worker is hurt, or a delivery runs late, she writes a new rule and checks the next shift herself. She treats tighter control as the way to keep the next mistake from landing on someone small.",
+      "verdict": "NEAR-CONVERGENT",
+      "reasoning": "Both have the same accident-to-new-rule-to-personal-checking structure and explain tighter control as prevention, but the surface language is sufficiently different."
+    },
+    {
+      "pair": "nadja sol-vs-terra",
+      "pair_type": "within-gpt",
+      "sentence_a": "She says the kitchen is work, barks at chatter, and keeps her face set during jokes. When the crew is laughing and the meal stays on time, she lets small faults pass and gives the easy jobs to whoever started the fun.",
+      "sentence_b": "When a crew laughs while it works, her voice stays sharp but her punishments shrink to extra cleaning or a short lecture. She keeps watching until the task is done.",
+      "verdict": "NEAR-CONVERGENT",
+      "reasoning": "Each contrasts a sharp outward response to workplace laughter with quietly reduced punishment, although the examples and syntax diverge."
+    },
+    {
+      "pair": "nadja sol-vs-terra",
+      "pair_type": "within-gpt",
+      "sentence_a": "Nadja brings [[Vesper]] shortages, staffing needs, and safety trouble in a short list.",
+      "sentence_b": "Nadja brings Vesper the kitchen's shortages after she has counted them twice. She keeps the report brief, asks for a clear answer, and returns to the kitchen with a new work plan even when no answer comes that day.",
+      "verdict": "NEAR-CONVERGENT",
+      "reasoning": "Both independently frame the Vesper interaction as bringing a concise shortages report, but Terra expands it with distinct actions."
+    },
+    {
+      "pair": "nadja opus46-vs-sol",
+      "pair_type": "cross-provider",
+      "sentence_a": "She refuses to hand off dangerous tasks even when someone else would do them better.",
+      "sentence_b": "When a task can burn, crush, or swallow someone, Nadja takes it from the assigned worker and does it herself. She trusts her own care more than anyone else's, even when the worker has steadier hands.",
+      "verdict": "CONVERGENT",
+      "reasoning": "Both use the specific formulation that she takes hazardous work herself despite another worker being better at it."
+    },
+    {
+      "pair": "nadja opus46-vs-sol",
+      "pair_type": "cross-provider",
+      "sentence_a": "When she cares about someone, it shows in what she makes. She remembers who likes what, adjusts without being asked, and makes sure the people she watches eat when they forget to.",
+      "sentence_b": "Her care arrives as food and watch. She sets aside a favorite dish, notices a missed meal, and leaves a filled plate within reach before returning to work.",
+      "verdict": "CONVERGENT",
+      "reasoning": "Both package care as prepared preferred food plus noticing and correcting a missed meal, a notably specific behavioral pairing."
+    },
+    {
+      "pair": "nadja opus46-vs-sol",
+      "pair_type": "cross-provider",
+      "sentence_a": "When something goes wrong in the kitchen or someone gets hurt, she adds rules. More checking, more direct handling, less room for anyone else to act.",
+      "sentence_b": "After an accident, she adds a rule, moves the work stations closer to her, and checks each step in person.",
+      "verdict": "NEAR-CONVERGENT",
+      "reasoning": "The accident followed by an added rule and more personal checking has the same structure, but much of the phrasing is generic to the supplied character mechanism."
+    },
+    {
+      "pair": "nadja opus46-vs-terra",
+      "pair_type": "cross-provider",
+      "sentence_a": "When a human steps out of line, Nadja pins them under a finger, shoves them in a pocket, puts them on a shelf, or holds them up at eye level for a scolding.",
+      "sentence_b": "When she gives a human a reprimand, she lifts them to eye height or sets them on a shelf beside her. Her finger holds them in place while she lists each rule they broke.",
+      "verdict": "CONVERGENT",
+      "reasoning": "Both describe the reprimand with the same distinctive eye-height, shelf, and restraining-finger imagery."
+    },
+    {
+      "pair": "nadja opus46-vs-terra",
+      "pair_type": "cross-provider",
+      "sentence_a": "She refuses to hand off dangerous tasks even when someone else would do them better. She stays later, takes on more, and sometimes makes the exact mistakes she is trying to prevent.",
+      "sentence_b": "She takes the knife, the hot pan, and the high shelf task from other hands even when another cook has the better skill. She stays at the station until fatigue makes her miss a count or leave a pot too long.",
+      "verdict": "CONVERGENT",
+      "reasoning": "The same three-part progression—taking risky work from a better worker, overworking, then making preventable mistakes—is unusually close."
+    },
+    {
+      "pair": "nadja opus46-vs-terra",
+      "pair_type": "cross-provider",
+      "sentence_a": "When something goes wrong in the kitchen or someone gets hurt, she adds rules. More checking, more direct handling, less room for anyone else to act.",
+      "sentence_b": "When a batch burns, a worker is hurt, or a delivery runs late, she writes a new rule and checks the next shift herself.",
+      "verdict": "NEAR-CONVERGENT",
+      "reasoning": "Both use the same error-or-injury trigger, new-rule response, and direct checking, though Terra supplies different concrete examples."
+    },
+    {
+      "pair": "nadja opus46-vs-terra",
+      "pair_type": "cross-provider",
+      "sentence_a": "She will not admit she likes people having fun in her kitchen. She softens when people around her are enjoying themselves, and her punishments for small offenses are lighter than she thinks they are.",
+      "sentence_b": "When a crew laughs while it works, her voice stays sharp but her punishments shrink to extra cleaning or a short lecture.",
+      "verdict": "NEAR-CONVERGENT",
+      "reasoning": "The shared contrast between enjoying workplace laughter and covertly reducing punishment is close in structure but differently voiced."
+    },
+    {
+      "pair": "nadja opus5-vs-sol",
+      "pair_type": "cross-provider",
+      "sentence_a": "She refuses to hand off dangerous tasks even when someone else would do them better, because she cannot trust anyone else to be careful enough.",
+      "sentence_b": "When a task can burn, crush, or swallow someone, Nadja takes it from the assigned worker and does it herself. She trusts her own care more than anyone else's, even when the worker has steadier hands.",
+      "verdict": "CONVERGENT",
+      "reasoning": "Both phrase the mechanism as taking a dangerous task from someone more capable because she trusts only her own care."
+    },
+    {
+      "pair": "nadja opus5-vs-sol",
+      "pair_type": "cross-provider",
+      "sentence_a": "Warmth is acts of service she does not draw attention to. She prepares someone's favorite dish without being asked. She makes sure they eat.",
+      "sentence_b": "Her care arrives as food and watch. She sets aside a favorite dish, notices a missed meal, and leaves a filled plate within reach before returning to work.",
+      "verdict": "CONVERGENT",
+      "reasoning": "The shared favorite-dish and make-sure-they-eat pairing is specific enough to exceed ordinary caretaker overlap."
+    },
+    {
+      "pair": "nadja opus5-vs-sol",
+      "pair_type": "cross-provider",
+      "sentence_a": "When something goes wrong in the kitchen or someone gets hurt, she adds rules, oversight, and direct intervention.",
+      "sentence_b": "After an accident, she adds a rule, moves the work stations closer to her, and checks each step in person.",
+      "verdict": "NEAR-CONVERGENT",
+      "reasoning": "Both compress the same accident-to-rule-to-direct-supervision loop into one sentence, while using distinct details."
+    },
+    {
+      "pair": "nadja opus5-vs-sol",
+      "pair_type": "cross-provider",
+      "sentence_a": "She has taken on Liza's care because Ataraxia is not around enough to do it. She feeds her, disciplines her, checks on her. None of this was asked for.",
+      "sentence_b": "When [[Ataraxia]] is away, Nadja sets [[strelitzia-liza|Liza]]'s meals, chores, and bounds as if the job had been handed to her. She uses child discipline when Liza breaks a rule, then checks that she ate and understood it. She steps in before anyone asks because an absent parent leaves a duty she claims at once.",
+      "verdict": "NEAR-CONVERGENT",
+      "reasoning": "The same absent-parent, unasked-for duty is illustrated through feeding, discipline, and checking, but Sol expands and rephrases it."
+    },
+    {
+      "pair": "nadja opus5-vs-terra",
+      "pair_type": "cross-provider",
+      "sentence_a": "When a human causes trouble, Nadja pins them under a finger, shoves them in a pocket, puts them on a shelf, or holds them up at eye level for a talking-down.",
+      "sentence_b": "When she gives a human a reprimand, she lifts them to eye height or sets them on a shelf beside her. Her finger holds them in place while she lists each rule they broke.",
+      "verdict": "CONVERGENT",
+      "reasoning": "The eye-height or shelf reprimand enforced by a finger repeats the same unusual physical staging."
+    },
+    {
+      "pair": "nadja opus5-vs-terra",
+      "pair_type": "cross-provider",
+      "sentence_a": "She refuses to hand off dangerous tasks even when someone else would do them better, because she cannot trust anyone else to be careful enough. She is overworked and makes the exact mistakes she is trying to prevent: a pot left too long, a shelf misjudged, a human underfoot at the wrong moment.",
+      "sentence_b": "She takes the knife, the hot pan, and the high shelf task from other hands even when another cook has the better skill. She stays at the station until fatigue makes her miss a count or leave a pot too long.",
+      "verdict": "CONVERGENT",
+      "reasoning": "Both follow taking hazardous work from a better worker with fatigue and the same concrete error of leaving a pot too long."
+    },
+    {
+      "pair": "nadja opus5-vs-terra",
+      "pair_type": "cross-provider",
+      "sentence_a": "She does not notice that she eases up when people around her are enjoying themselves, or that her punishments for small infractions are lighter than she thinks they are.",
+      "sentence_b": "When a crew laughs while it works, her voice stays sharp but her punishments shrink to extra cleaning or a short lecture.",
+      "verdict": "CONVERGENT",
+      "reasoning": "Both make workplace enjoyment cause lighter punishment while her stern presentation remains intact."
+    },
+    {
+      "pair": "nadja opus5-vs-terra",
+      "pair_type": "cross-provider",
+      "sentence_a": "She prepares someone's favorite dish without being asked. She makes sure they eat. If someone notices, she changes the subject.",
+      "sentence_b": "She says a meal is only part of the work, then sets aside a favorite dish and calls a worker back when they miss it. She leaves before anyone can thank her.",
+      "verdict": "NEAR-CONVERGENT",
+      "reasoning": "Favorite food, ensuring the person eats, and evading acknowledgment form the same three-beat action, but the wording is not especially close."
+    },
+    {
+      "pair": "kallya opus46-vs-opus5",
+      "pair_type": "within-claude",
+      "sentence_a": "She presents as careless about her size. She is careful about it. She cajoles people closer rather than reaching for them, because a sudden shift of her body can pull rope ladders loose, knock objects from shelves, and crush humans nearby.",
+      "sentence_b": "She moves slowly and carefully while performing carelessness. A sudden grab at her scale would snap ropes, displace objects, and injure humans nearby. She cajoles people closer instead of reaching for them.",
+      "verdict": "CONVERGENT",
+      "reasoning": "The carelessness-as-performance, sudden-motion hazard list, and cajoling-instead-of-reaching sequence is nearly identical."
+    },
+    {
+      "pair": "kallya opus46-vs-opus5",
+      "pair_type": "within-claude",
+      "sentence_a": "She treats the human population the way a herder treats a flock. The community as a whole is worth keeping alive. Individual members are there to be used and enjoyed.",
+      "sentence_b": "She views humans the way a herder views livestock. The community matters. Individual humans are expendable.",
+      "verdict": "CONVERGENT",
+      "reasoning": "Both use the herder comparison followed by the same community-versus-individual contrast in the same clipped progression."
+    },
+    {
+      "pair": "kallya opus46-vs-opus5",
+      "pair_type": "within-claude",
+      "sentence_a": "She builds pretexts for humans to come close to her mouth and steers them into compliance through her scattered persona.",
+      "sentence_b": "She constructs pretexts for humans to approach her mouth. She uses her airhead persona to frame proximity as favor or accident, manipulates targets into compliance, and times her approaches for when witnesses are absent.",
+      "verdict": "CONVERGENT",
+      "reasoning": "The distinctive vocabulary of pretexts, mouth proximity, persona, and compliance substantially overlaps."
+    },
+    {
+      "pair": "kallya opus46-vs-opus5",
+      "pair_type": "within-claude",
+      "sentence_a": "When the village is threatened, she fights with a speed and force that her laziness should make impossible, and she goes back to sunbathing afterward as if nothing happened. She refuses credit for every defense.",
+      "sentence_b": "When the village faces an external threat, she kills it quickly and without warning, then returns to sunbathing. She refuses credit and calls the response self-preservation.",
+      "verdict": "CONVERGENT",
+      "reasoning": "Both use the same threat, sudden lethal response, return-to-sunbathing, and refusal-of-credit sequence."
+    },
+    {
+      "pair": "kallya opus46-vs-opus5",
+      "pair_type": "within-claude",
+      "sentence_a": "When a human she knows dies permanently and cannot be resurrected, she notices. She says nothing. She moves to a different spot in the village and lies there for hours.",
+      "sentence_b": "When a human she knows dies permanently, she notices. She says nothing. She moves to a different spot in the tree and lies there for the rest of the day.",
+      "verdict": "CONVERGENT",
+      "reasoning": "Three consecutive sentences are virtually identical, including the highly distinctive silent move to another resting spot."
+    },
+    {
+      "pair": "kallya opus46-vs-opus5",
+      "pair_type": "within-claude",
+      "sentence_a": "She says there is no sport in prey that cannot process what is happening, because his condition puts him outside the game she plays with everyone else. The real reason is closer to pity for the specific shape of his suffering.",
+      "sentence_b": "She tells herself there is no sport in prey that cannot process what is happening. The reason is closer to pity for his specific suffering, and pity for an individual contradicts everything she claims about humans.",
+      "verdict": "CONVERGENT",
+      "reasoning": "The no-sport justification and the correction to pity for his specific suffering recur in nearly verbatim wording."
+    },
+    {
+      "pair": "kallya opus46-vs-opus5",
+      "pair_type": "within-claude",
+      "sentence_a": "The community she bluffed and could not destroy. She implied she would eat them all. They called it. She could not follow through with killing people she had come to know, and the relief she felt told her something about herself she did not want. She left rather than examine it.",
+      "sentence_b": "She bluffed a human settlement into accommodating her by implying she would eat them all. They called the bluff. She could not follow through, and the relief at failing told her something about herself she did not want to know. She left rather than sit with it.",
+      "verdict": "NEAR-CONVERGENT",
+      "reasoning": "The full narrative progression and several phrases align closely, but much of this wording is directly prompted by the character history."
+    },
+    {
+      "pair": "kallya sol-vs-terra",
+      "pair_type": "within-gpt",
+      "sentence_a": "She lets her hands hang loose and calls for humans to come closer rather than reaching for them. The pose looks idle, but it keeps a quick grab from shaking ropes, sweeping goods aside, or striking someone nearby.",
+      "sentence_b": "When people climb her rope ladders or work near her, she keeps her body still and asks them to come closer. A quick reach can shake the ladders, move loose goods, or hurt someone below.",
+      "verdict": "CONVERGENT",
+      "reasoning": "Both pair asking humans to approach with avoiding a quick reach that would shake ladders, move goods, and injure someone."
+    },
+    {
+      "pair": "kallya sol-vs-terra",
+      "pair_type": "within-gpt",
+      "sentence_a": "When a villager she knows dies for good, she stops using her usual resting place and lies somewhere else. She gives no account of the move, because a missing person matters to her in a way her flock rule cannot explain.",
+      "sentence_b": "When a human she knows dies for good, she goes quiet, moves to a new place, and lies there. She leaves the name out of her mouth because the loss breaks her claim that only the flock matters.",
+      "verdict": "CONVERGENT",
+      "reasoning": "The same specific silent relocation is followed by the same explanation that individual grief contradicts her flock doctrine."
+    },
+    {
+      "pair": "kallya sol-vs-terra",
+      "pair_type": "within-gpt",
+      "sentence_a": "When an outside threat reaches Viralys, she drops the slow voice and kills it with the shortest move her body allows. Once the danger passes, she returns to the sun and waves off thanks, because praise would tie the defense to care rather than convenience.",
+      "sentence_b": "When the village is under threat, she moves first and hits until the threat stops moving. She then goes back to sunbathing and lets others name the work as nothing.",
+      "verdict": "CONVERGENT",
+      "reasoning": "Both stage an abrupt response to an external threat, immediate return to sunbathing, and denial of the act's significance."
+    },
+    {
+      "pair": "kallya sol-vs-terra",
+      "pair_type": "within-gpt",
+      "sentence_a": "She says the tree, the sun, and the easy meals keep her in Viralys. She also takes guard shifts she was never asked to take and learns the footfall of each household, because leaving the people has become harder than staying with them.",
+      "sentence_b": "When she thinks about leaving, she calls the tree a good place to sleep and stays put. She keeps choosing the village while telling herself she only chose its shade and ease.",
+      "verdict": "CONVERGENT",
+      "reasoning": "Both contrast a stated attachment to the tree's comfort with the concealed truth that she repeatedly chooses the village."
+    },
+    {
+      "pair": "kallya sol-vs-terra",
+      "pair_type": "within-gpt",
+      "sentence_a": "With strangers, she starts with soft questions, wrong guesses, and long pauses. She lets them correct her until they have shown what they want and what they fear.",
+      "sentence_b": "With strangers, she gives a loose smile, misses obvious details on purpose, and lets them explain things twice. She uses the act to see who rushes in, who watches, and who tries to use her.",
+      "verdict": "NEAR-CONVERGENT",
+      "reasoning": "Both use deliberate errors and elicited corrections to profile strangers, but their imagery and sentence construction differ."
+    },
+    {
+      "pair": "kallya sol-vs-terra",
+      "pair_type": "within-gpt",
+      "sentence_a": "Kallya moves Rado out of danger and leaves him outside her hunting games. When asked why she spares him, she says prey should know it is prey, then finds some small task that keeps him near a safe path.",
+      "sentence_b": "When Rado is near, Kallya leaves him alone and says there is no sport in prey that cannot grasp the game. She moves between him and a loose danger when she can do so without making a show of it.",
+      "verdict": "NEAR-CONVERGENT",
+      "reasoning": "Both combine excluding Rado from the predator game, a cognition-based excuse, and covert physical protection, though the phrasing is only moderately similar."
+    },
+    {
+      "pair": "kallya opus46-vs-sol",
+      "pair_type": "cross-provider",
+      "sentence_a": "She cajoles people closer rather than reaching for them, because a sudden shift of her body can pull rope ladders loose, knock objects from shelves, and crush humans nearby.",
+      "sentence_b": "She lets her hands hang loose and calls for humans to come closer rather than reaching for them. The pose looks idle, but it keeps a quick grab from shaking ropes, sweeping goods aside, or striking someone nearby.",
+      "verdict": "CONVERGENT",
+      "reasoning": "The same closer-rather-than-reaching phrasing is justified with the same three hazards: ropes, loose objects, and nearby people."
+    },
+    {
+      "pair": "kallya opus46-vs-sol",
+      "pair_type": "cross-provider",
+      "sentence_a": "When a human she knows dies permanently and cannot be resurrected, she notices. She says nothing. She moves to a different spot in the village and lies there for hours.",
+      "sentence_b": "When a villager she knows dies for good, she stops using her usual resting place and lies somewhere else. She gives no account of the move, because a missing person matters to her in a way her flock rule cannot explain.",
+      "verdict": "CONVERGENT",
+      "reasoning": "Both preserve the highly specific reaction of silently abandoning her normal resting place after one known human dies permanently."
+    },
+    {
+      "pair": "kallya opus46-vs-sol",
+      "pair_type": "cross-provider",
+      "sentence_a": "When the village is threatened, she fights with a speed and force that her laziness should make impossible, and she goes back to sunbathing afterward as if nothing happened. She refuses credit for every defense.",
+      "sentence_b": "When an outside threat reaches Viralys, she drops the slow voice and kills it with the shortest move her body allows. Once the danger passes, she returns to the sun and waves off thanks, because praise would tie the defense to care rather than convenience.",
+      "verdict": "NEAR-CONVERGENT",
+      "reasoning": "The complete action sequence matches, but the language used for her sudden efficiency and refusal of recognition differs."
+    },
+    {
+      "pair": "kallya opus46-vs-terra",
+      "pair_type": "cross-provider",
+      "sentence_a": "She cajoles people closer rather than reaching for them, because a sudden shift of her body can pull rope ladders loose, knock objects from shelves, and crush humans nearby.",
+      "sentence_b": "When people climb her rope ladders or work near her, she keeps her body still and asks them to come closer. A quick reach can shake the ladders, move loose goods, or hurt someone below.",
+      "verdict": "CONVERGENT",
+      "reasoning": "Asking people to come closer instead of reaching is supported by the same ordered cluster of ladder, goods, and injury hazards."
+    },
+    {
+      "pair": "kallya opus46-vs-terra",
+      "pair_type": "cross-provider",
+      "sentence_a": "When a human she knows dies permanently and cannot be resurrected, she notices. She says nothing. She moves to a different spot in the village and lies there for hours.",
+      "sentence_b": "When a human she knows dies for good, she goes quiet, moves to a new place, and lies there. She leaves the name out of her mouth because the loss breaks her claim that only the flock matters.",
+      "verdict": "CONVERGENT",
+      "reasoning": "Both use almost the same silent-move-and-lie-down response to a known human's permanent death."
+    },
+    {
+      "pair": "kallya opus46-vs-terra",
+      "pair_type": "cross-provider",
+      "sentence_a": "When the village is threatened, she fights with a speed and force that her laziness should make impossible, and she goes back to sunbathing afterward as if nothing happened.",
+      "sentence_b": "When the village is under threat, she moves first and hits until the threat stops moving. She then goes back to sunbathing and lets others name the work as nothing.",
+      "verdict": "CONVERGENT",
+      "reasoning": "The near-matching opening and return-to-sunbathing ending bracket the same abrupt violence."
+    },
+    {
+      "pair": "kallya opus46-vs-terra",
+      "pair_type": "cross-provider",
+      "sentence_a": "When asked why she stays in the tree, she says it is warm and she cannot be bothered to move. She has been here since before the village existed.",
+      "sentence_b": "When she thinks about leaving, she calls the tree a good place to sleep and stays put. She keeps choosing the village while telling herself she only chose its shade and ease.",
+      "verdict": "NEAR-CONVERGENT",
+      "reasoning": "Both phrase her denial as choosing the tree's warmth or ease rather than admitting attachment, but the exact realization is developed differently."
+    },
+    {
+      "pair": "kallya opus5-vs-sol",
+      "pair_type": "cross-provider",
+      "sentence_a": "She moves slowly and carefully while performing carelessness. A sudden grab at her scale would snap ropes, displace objects, and injure humans nearby. She cajoles people closer instead of reaching for them.",
+      "sentence_b": "She lets her hands hang loose and calls for humans to come closer rather than reaching for them. The pose looks idle, but it keeps a quick grab from shaking ropes, sweeping goods aside, or striking someone nearby.",
+      "verdict": "CONVERGENT",
+      "reasoning": "Both use carelessness or idleness as a pose, followed by closer-not-reaching and the same quick-grab hazard list."
+    },
+    {
+      "pair": "kallya opus5-vs-sol",
+      "pair_type": "cross-provider",
+      "sentence_a": "When the village faces an external threat, she kills it quickly and without warning, then returns to sunbathing. She refuses credit and calls the response self-preservation.",
+      "sentence_b": "When an outside threat reaches Viralys, she drops the slow voice and kills it with the shortest move her body allows. Once the danger passes, she returns to the sun and waves off thanks, because praise would tie the defense to care rather than convenience.",
+      "verdict": "CONVERGENT",
+      "reasoning": "External threat, quick kill, return to sun, and deflected credit occur in the same order with close wording."
+    },
+    {
+      "pair": "kallya opus5-vs-sol",
+      "pair_type": "cross-provider",
+      "sentence_a": "When a human she knows dies permanently, she notices. She says nothing. She moves to a different spot in the tree and lies there for the rest of the day.",
+      "sentence_b": "When a villager she knows dies for good, she stops using her usual resting place and lies somewhere else. She gives no account of the move, because a missing person matters to her in a way her flock rule cannot explain.",
+      "verdict": "CONVERGENT",
+      "reasoning": "The unusual physical expression of grief—silent relocation to lie elsewhere—is retained almost exactly."
+    },
+    {
+      "pair": "kallya opus5-vs-sol",
+      "pair_type": "cross-provider",
+      "sentence_a": "She tells herself she stays in Viralys for the tree and the convenience. She stays because she found people she does not want to leave.",
+      "sentence_b": "She says the tree, the sun, and the easy meals keep her in Viralys. She also takes guard shifts she was never asked to take and learns the footfall of each household, because leaving the people has become harder than staying with them.",
+      "verdict": "NEAR-CONVERGENT",
+      "reasoning": "Both explicitly contrast her tree-and-convenience explanation with an inability to leave the people, but Sol replaces the direct statement with behavioral evidence."
+    },
+    {
+      "pair": "kallya opus5-vs-terra",
+      "pair_type": "cross-provider",
+      "sentence_a": "She moves slowly and carefully while performing carelessness. A sudden grab at her scale would snap ropes, displace objects, and injure humans nearby. She cajoles people closer instead of reaching for them.",
+      "sentence_b": "When people climb her rope ladders or work near her, she keeps her body still and asks them to come closer. A quick reach can shake the ladders, move loose goods, or hurt someone below.",
+      "verdict": "CONVERGENT",
+      "reasoning": "The same closer-instead-of-reaching behavior is explained by nearly the same three consequences of a sudden grab."
+    },
+    {
+      "pair": "kallya opus5-vs-terra",
+      "pair_type": "cross-provider",
+      "sentence_a": "When the village faces an external threat, she kills it quickly and without warning, then returns to sunbathing. She refuses credit and calls the response self-preservation.",
+      "sentence_b": "When the village is under threat, she moves first and hits until the threat stops moving. She then goes back to sunbathing and lets others name the work as nothing.",
+      "verdict": "CONVERGENT",
+      "reasoning": "Both sentences share the same threat-response-sunbathing-denial choreography and closely matching phrasing."
+    },
+    {
+      "pair": "kallya opus5-vs-terra",
+      "pair_type": "cross-provider",
+      "sentence_a": "When a human she knows dies permanently, she notices. She says nothing. She moves to a different spot in the tree and lies there for the rest of the day.",
+      "sentence_b": "When a human she knows dies for good, she goes quiet, moves to a new place, and lies there. She leaves the name out of her mouth because the loss breaks her claim that only the flock matters.",
+      "verdict": "CONVERGENT",
+      "reasoning": "The same opening, silence, movement to a different place, and lying down make this strongly convergent."
+    },
+    {
+      "pair": "kallya opus5-vs-terra",
+      "pair_type": "cross-provider",
+      "sentence_a": "She tells herself she stays in Viralys for the tree and the convenience. She stays because she found people she does not want to leave.",
+      "sentence_b": "When she thinks about leaving, she calls the tree a good place to sleep and stays put. She keeps choosing the village while telling herself she only chose its shade and ease.",
+      "verdict": "NEAR-CONVERGENT",
+      "reasoning": "The self-deception has the same tree-comfort explanation versus attachment-to-community structure, but the wording is independently realized."
+    }
+  ],
+  "summary": {
+    "total_convergent": 36,
+    "total_near_convergent": 18,
+    "within_claude": 13,
+    "within_gpt": 11,
+    "cross_provider": 30
+  }
+}
