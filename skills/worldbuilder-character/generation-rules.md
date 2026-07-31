@@ -28,7 +28,7 @@ For each entry you would produce (each bullet in Background, Body, Soul, Relatio
 
 **Rules:**
 1. All three variants express the same underlying character fact.
-2. Each variant uses genuinely different phrasing, emphasis, or behavioral angle. Three rewrites of the same sentence structure do not count as divergence.
+2. Each variant uses different phrasing, emphasis, or behavioral angle. Three rewrites of the same sentence structure do not count as divergence.
 3. After generating three variants, check: could a reader tell them apart without comparing word by word? If not, discard all three and regenerate with deliberate divergence. One retry.
 4. Present all three to the selection step (see below).
 
