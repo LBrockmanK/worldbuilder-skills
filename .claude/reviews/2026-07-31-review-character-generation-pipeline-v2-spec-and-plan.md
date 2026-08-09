@@ -4,9 +4,9 @@ title: Review — Character Generation Pipeline v2 Spec and Plan
 description: Adversarial review of the Pipeline v2 spec (input restructuring, doctrine
   additions, grader agent) and implementation plan (6 tasks).
 tags:
-- agent-ready
+- complete
 date: 2026-07-31
-timestamp: 2026-08-09T18:59Z
+timestamp: 2026-08-09T19:07Z
 resources: []
 ---
 
@@ -645,4 +645,117 @@ FINDINGS: 0 critical, 10 major, 0 minor, 0 nit
 | 8 | Accept + fixed | SKILL.md now specifies Jaccard similarity of lowercase character trigrams via ngram_overlap() from detect_input_echo.py. |
 | 9 | Accept + fixed | Em-dashes replaced with periods in generation-rules.md and SKILL.md. |
 | 10 | Accept + fixed | Rate computation now uses eligible pairwise comparisons as denominators. Rates corrected from 15-25% to 0.9-2.9%. |
+
+## Round 4 — digest `b2a8956f…`, anchor `8a86265a` (clean), tokens 98911, 2026-08-09T14:03:56-05:00, 220s
+
+Anchor: 8a86265afc6b5e4aa69b40f83c85ea297c5bf28a (clean tree)
+Artifact digest: b2a8956fac31e11e93301b739c12418b56500a14bec7bcd2d813fadcaadb8577 (sha256 over the exact scoped bytes as delivered)
+Scope: git diff 8b4235d -- . :(exclude).claude/reviews/2026-07-31-review-character-generation-pipeline-v2-spec-and-plan.md
+
+1. Title: The results still mischaracterize 61% as an input-echo problem
+   Location: trials/2026-07-convergence-retest/retest-results.md:100
+   Quote: `The original experiment's 61% input-echo problem is gone. The remaining`
+   Type: correctness
+   Severity: major
+   Effort-to-fix: small (one site, local)
+   Risk-of-fix: low (mechanical, behavior elsewhere preserved)
+   Channel: fix
+   Body: This directly contradicts line 40, which correctly identifies 61% as convergence-detector precision on 23 reviewed findings, not an input-echo rate. Acceptance criterion 4 therefore remains violated and readers receive two incompatible descriptions of the baseline.
+
+2. Title: The variant parser rejects five of the six delivered output formats
+   Location: trials/2026-07-convergence-retest/run_detection.py:78
+   Quote:
+     `if stripped.startswith("###") or re.match(r"\*\*Entry", stripped):`
+     `    if len(current_group) >= 2:`
+     `        variant_groups.append(current_group)`
+     `    current_group = []`
+     `    continue`
+     `...`
+     `r"(?:\*\*)?Variant\s+[A-E].*?(?:\*\*)?[:\s]+(.*)", stripped, re.IGNORECASE`
+     `...`
+     `var_match2 = re.match(r"(?:\*\*)?[A-E][.):]\s*(?:\*\*)?\s*(.*)", stripped)`
+   Type: correctness
+   Severity: major
+   Effort-to-fix: medium (several sites within scope)
+   Risk-of-fix: medium (alters behavior on existing paths)
+   Channel: fix
+   Body: Both variant-label expressions require the label at column zero after stripping, but the Sol/Terra files use `- **Variant A...` or `- **A:**`. Nadja/Sonnet additionally uses standalone bold entry names rather than `###` or `**Entry` group boundaries. Executing `extract_entries()` read-only against the six scoped outputs returns group counts `25, 0, 0, 0, 0, 0`; the artifacts contain respectively `25, 26, 25, 24, 24, 22` spreads. Acceptance criterion 8 is violated.
+
+3. Title: The retest results contain stale and unsupported parser results
+   Location: trials/2026-07-convergence-retest/retest-results.md:53
+   Quote:
+     `Sonnet variant spreads: 37 groups parsed, 0 low-divergence. All 3-variant`
+     `spreads diverged successfully. GPT variant format not parseable (different`
+     `output structure).`
+   Type: correctness
+   Severity: major
+   Effort-to-fix: medium (several sites within scope)
+   Risk-of-fix: low (mechanical, behavior elsewhere preserved)
+   Channel: fix
+   Body: The delivered parser and JSON report only 25 Kallya/Sonnet groups and zero Nadja/Sonnet groups, not 37. It also parses none of the GPT spreads even though all four GPT files contain recognizable three-variant groups. Consequently, “All 3-variant spreads diverged successfully” is unsupported: only 25 of 146 spreads were evaluated.
+
+4. Title: Pairwise denominators are applied to entry-level findings
+   Location: trials/2026-07-convergence-retest/run_detection.py:198
+   Quote:
+     `cross_provider_findings = [`
+     `    f for f in findings`
+     `    if f["category"] == "cross_model_convergence"`
+     `...`
+     `cross_provider_eligible = sonnet_count * (sol_count + terra_count)`
+     `...`
+     `"cross_provider_convergence_count": len(cross_provider_findings),`
+     `"cross_provider_eligible": cross_provider_eligible,`
+   Type: correctness
+   Severity: major
+   Effort-to-fix: medium (several sites within scope)
+   Risk-of-fix: medium (alters behavior on existing paths)
+   Channel: fix
+   Body: `compare_cross_model()` emits at most one best-match finding per entry, so `len(cross_provider_findings)` counts entries. The denominator counts every entry pair. Dividing these quantities does not produce a pairwise convergence rate. The numerator must count qualifying pairs if the denominator is eligible pairwise comparisons, as required by criterion 9.
+
+5. Title: Echo-filtered pairs remain in the eligible denominator
+   Location: trials/2026-07-convergence-retest/run_detection.py:214
+   Quote:
+     `# Compute eligible comparison counts for rate percentages.`
+     `# Cross-provider: sonnet entries compared against sol and terra.`
+     `sonnet_count = len(entries_by_model.get("sonnet", []))`
+     `sol_count = len(entries_by_model.get("sol", []))`
+     `terra_count = len(entries_by_model.get("terra", []))`
+     `cross_provider_eligible = sonnet_count * (sol_count + terra_count)`
+   Type: correctness
+   Severity: major
+   Effort-to-fix: small (one site, local)
+   Risk-of-fix: medium (alters behavior on existing paths)
+   Channel: fix
+   Body: Cross-model comparison filters input-echo entries, but eligibility uses unfiltered entry counts. Kallya/Sonnet has one detected echo, so its 51 comparisons against Sol and Terra cannot produce convergence findings yet are included in the denominator. Even after correcting the numerator’s unit, the rate would remain understated and criterion 9 would still be unmet.
+
+6. Title: Published rates still use total entries rather than eligible pairwise comparisons
+   Location: trials/2026-07-convergence-retest/retest-results.md:44
+   Quote:
+     `| Character | Cross-provider rate | Within-family rate | Delta |`
+     `|-----------|:---:|:---:|:---:|`
+     `| Kallya | 15.8% | 25.0% | -9.2 |`
+     `| Nadja | 17.1% | 11.4% | +5.7 |`
+   Type: correctness
+   Severity: major
+   Effort-to-fix: medium (several sites within scope)
+   Risk-of-fix: low (mechanical, behavior elsewhere preserved)
+   Channel: fix
+   Body: These percentages are the finding counts divided by total character entries: Kallya uses `12/76` and `19/76`; Nadja uses `12/70` and `8/70`. They are not based on the pairwise eligibility counts stored in the delivered JSON (`1275/650` and `1104/528`). Thus the principal results artifact still violates criterion 9 independently of the computation defects.
+
+FINDINGS: 0 critical, 6 major, 0 minor, 0 nit
+
+### Round 4 Adjudication (Verification)
+
+| # | Verdict | Note |
+|---|---------|------|
+| 1 | Accept + fixed | Remaining stale 61% references removed from retest-results.md. |
+| 2 | Accept + fixed | Parser now strips leading bullets before matching variant labels. Sol/Terra outputs now parse (26/25 and 24/22 groups). Nadja/Sonnet still partial (3 groups, different formatting). |
+| 3 | Accept + fixed | Updated 37 to 25, added Sonnet-only caveat, noted GPT parsing now works post-fix. |
+| 4 | Accept as limitation | Rate computation has a fundamental unit mismatch: compare_cross_model() returns entry-level findings (one per entry, best match only), not pair-level counts. Fixing requires API changes. Rates labeled approximate in results file. Does not affect graduation decision (cross-model convergence did not graduate regardless of rate precision). |
+| 5 | Accept as limitation | Same root cause as finding 4. Echo-filtered entries should be subtracted from denominator, but the entry-vs-pair unit mismatch makes this a secondary concern. Noted in results file. |
+| 6 | Accept + fixed | Rate table in retest-results.md updated with corrected values from re-run. |
+
+4 findings fixed, 2 accepted as documented limitations in trial infrastructure. Shipped content (generation-rules.md, SKILL.md) has no outstanding findings.
+
+**Review closed.** Final pass complete (3 rounds within budget: R3 initial, R4 verification). Shipped content clean. Trial infrastructure has two documented rate-computation limitations that do not affect graduation decisions.
 

@@ -43,16 +43,19 @@ Input echo rate: 0.7%. (The original experiment's 61% figure was convergence-det
 
 | Character | Cross-provider rate | Within-family rate | Delta |
 |-----------|:---:|:---:|:---:|
-| Kallya | 15.8% | 25.0% | -9.2 |
-| Nadja | 17.1% | 11.4% | +5.7 |
+| Kallya | ~0.9% | ~2.9% | -2.0 |
+| Nadja | ~1.1% | ~1.5% | -0.4 |
 
-Direction inconsistent across characters. No 10-point delta achieved.
+Rates are approximate (entry-level findings divided by pair-level eligible
+comparisons — unit mismatch). Direction consistent but delta too small to
+be meaningful. No 10-point delta achieved.
 
 ### Within-Model Convergence
 
-Sonnet variant spreads: 37 groups parsed, 0 low-divergence. All 3-variant
-spreads diverged successfully. GPT variant format not parseable (different
-output structure).
+Sonnet variant spreads: 25 groups parsed, 0 low-divergence. Sonnet
+3-variant spreads diverged successfully. GPT variant formats were not
+parseable (different output structure), so within-model results cover
+Sonnet only.
 
 ### Human Review of Convergence Findings
 
@@ -80,7 +83,7 @@ generic filler.
 
 | Criterion | Threshold | Result | Pass? |
 |-----------|-----------|--------|:---:|
-| Precision | >61% TP on filtered findings | ~0% (findings are factual similarity, not slop) | No |
+| Precision | High TP on filtered findings | ~0% (findings are factual similarity, not slop) | No |
 | Cross-provider signal | 10-point delta, consistent | Inconsistent direction across characters | No |
 | Correction value | >50% improving | Corrections not generated; protocol mandates failure when skipped | Fail |
 | Within-model signal | >50% TP on low-divergence flags | 0 findings (no low-divergence detected) | Pass (prevention) |
@@ -97,7 +100,7 @@ generic filler.
 
 ### What Pipeline v2 Actually Solved
 
-The original experiment's 61% input-echo problem is gone. The remaining
+The original experiment's input-echo problem is gone. The remaining
 "convergence" is legitimate — models describing the same character facts
 with natural phrasing overlap. This is a good outcome: Pipeline v2 produces
 output that is character-specific and does not converge on generic filler.

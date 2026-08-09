@@ -84,6 +84,9 @@ def extract_entries(filepath: str) -> tuple[list[str], list[list[str]]]:
             continue
         if not stripped:
             continue
+        # Strip leading bullet for GPT output formats
+        if stripped.startswith("- "):
+            stripped = stripped[2:].strip()
         # Look for variant labels
         var_match = re.match(
             r"(?:\*\*)?Variant\s+[A-E].*?(?:\*\*)?[:\s]+(.*)", stripped, re.IGNORECASE
