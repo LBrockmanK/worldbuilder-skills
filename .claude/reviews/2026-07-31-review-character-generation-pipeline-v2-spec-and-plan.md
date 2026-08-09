@@ -4,9 +4,9 @@ title: Review — Character Generation Pipeline v2 Spec and Plan
 description: Adversarial review of the Pipeline v2 spec (input restructuring, doctrine
   additions, grader agent) and implementation plan (6 tasks).
 tags:
-- agent-ready
+- complete
 date: 2026-07-31
-timestamp: 2026-07-31T02:10Z
+timestamp: 2026-07-31T10:56Z
 resources: []
 ---
 

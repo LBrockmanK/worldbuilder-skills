@@ -7,7 +7,7 @@ description: 'Implementation plan for spec 2026-07-31: template doctrine fields,
 tags:
 - complete
 date: 2026-07-31
-timestamp: 2026-07-31T02:12Z
+timestamp: 2026-08-09T00:52Z
 resources:
 - "[[2026-07-31-character-generation-pipeline-v2-input-restructuring-doctrine-additions-and-grader-agent]]"
 - "[[2026-07-31-pipeline-v2-implementation-research-dossier]]"
@@ -50,14 +50,14 @@ Add the 7 structured doctrine fields to the Design Notes template, add new cover
 - Consumes: nothing (first task)
 - Produces: updated template structure that Tasks 2, 3 reference; updated coverage requirements that Task 3's generation instructions enforce
 
-- [ ] **Step 1: Create feature branch**
+- [x] **Step 1: Create feature branch**
 
 ```bash
 git checkout master
 git checkout -b pipeline-v2
 ```
 
-- [ ] **Step 2: Add structured doctrine fields to character.md template**
+- [x] **Step 2: Add structured doctrine fields to character.md template**
 
 Add a new `### Structured Doctrine` subsection under `## Design Notes`, after `### Builder Context`. The content to insert after line 15 (`-`) of `defaults/templates/character.md`:
 
@@ -87,7 +87,7 @@ _Operating code in their own words. Which way they go when it hits conventional 
 _Tag each formative memory: **high** (unresolved, drives present behavior), **mid** (settled, explains patterns), **low** (context only). High-charge memories must generate Soul entries._
 ```
 
-- [ ] **Step 3: Add coverage requirements to framework.md**
+- [x] **Step 3: Add coverage requirements to framework.md**
 
 Insert the following after the current "Boundaries and ongoing pressures" block (after line 131 of `skills/worldbuilder-character/framework.md`), before the "Contradictions" section:
 
@@ -122,7 +122,7 @@ Insert the following in the Relationships section guidance (in `skills/worldbuil
 **Contrast declaration (1 entry):** Name the cast member this character is built against and the axis of differentiation. This may be a standalone note rather than a relationship entry. Nothing else in this framework asks whether two characters in a cast are distinguishable — this entry does.
 ```
 
-- [ ] **Step 4: Add tension resolutions to framework.md**
+- [x] **Step 4: Add tension resolutions to framework.md**
 
 Append the following two sections at the end of `skills/worldbuilder-character/framework.md`:
 
@@ -139,7 +139,7 @@ The behavioral framework requires dense interconnection for LLM activation. The 
 Dense sensory fragments as emotional memory hooks ("the last thing she remembers of her mother: lowering her yukata's collar, one word — run") carry more weight than explanation. These are permitted in Background as high-charge memory entries. They do not need to pass the staging test — Background is factual, not behavioral. Their corresponding Soul entry (required for all high-charge memories) must be stageable: the present-day behavior the memory drives, not the memory itself.
 ```
 
-- [ ] **Step 5: Update SKILL.md Q&A to capture new fields**
+- [x] **Step 5: Update SKILL.md Q&A to capture new fields**
 
 In `skills/worldbuilder-character/SKILL.md`, add the new doctrine fields to the Q&A coverage prompts. The exact location depends on the skill's Q&A section structure, but the content to add is:
 
@@ -157,7 +157,7 @@ During the Q&A phase, capture the following doctrine fields in the Structured Do
 
 Note: The four new doctrine-required Soul entries (core want, core fear, false belief, value-conflict stance) are ADDITIONAL to the existing 3–5 psychological entry minimum. A complete Soul section needs at minimum 7–9 psychological entries (3–5 existing + 4 doctrine). Update the skill's completion self-check to verify all doctrine entries are present.
 
-- [ ] **Step 6: Rebuild OKF preset**
+- [x] **Step 6: Rebuild OKF preset**
 
 ```bash
 python scripts/build-okf.py
@@ -165,7 +165,7 @@ python scripts/build-okf.py
 
 Expected: script exits 0, `defaults/okf.json` is regenerated with the new template content embedded.
 
-- [ ] **Step 7: Verify the build**
+- [x] **Step 7: Verify the build**
 
 ```bash
 python -c "import json; d=json.load(open('defaults/okf.json')); t=[t for t in d['types'] if t['name']=='character'][0]; print('Structured Doctrine' in t.get('template',''))"
@@ -173,7 +173,7 @@ python -c "import json; d=json.load(open('defaults/okf.json')); t=[t for t in d[
 
 Expected: `True`
 
-- [ ] **Step 8: Commit**
+- [x] **Step 8: Commit**
 
 ```bash
 git add defaults/templates/character.md skills/worldbuilder-character/framework.md skills/worldbuilder-character/SKILL.md skills/worldbuilder-character/relationships.md defaults/okf.json
@@ -200,7 +200,7 @@ Build a Python script that processes Design Notes content before generation: str
 - Consumes: Design Notes content (markdown string), `docs/slop-phrases.md` (pattern source)
 - Produces: `deslop_deframe.process(text: str) -> ProcessResult` where `ProcessResult` has `.cleaned: str` and `.changes: list[Change]`; Task 3's generation flow calls this before generating entries
 
-- [ ] **Step 1: Write the failing tests**
+- [x] **Step 1: Write the failing tests**
 
 Create `tests/test_deslop_deframe.py`:
 
@@ -282,7 +282,7 @@ class TestChangeTracking:
             assert hasattr(change, "line_number")
 ```
 
-- [ ] **Step 2: Run tests to verify they fail**
+- [x] **Step 2: Run tests to verify they fail**
 
 ```bash
 pytest tests/test_deslop_deframe.py -v
@@ -290,7 +290,7 @@ pytest tests/test_deslop_deframe.py -v
 
 Expected: ImportError — `scripts.deslop_deframe` does not exist yet.
 
-- [ ] **Step 3: Implement the script**
+- [x] **Step 3: Implement the script**
 
 Create `scripts/deslop_deframe.py`:
 
@@ -419,7 +419,7 @@ def process(text: str) -> ProcessResult:
     )
 ```
 
-- [ ] **Step 4: Run tests**
+- [x] **Step 4: Run tests**
 
 ```bash
 pytest tests/test_deslop_deframe.py -v
@@ -427,7 +427,7 @@ pytest tests/test_deslop_deframe.py -v
 
 Expected: all tests pass.
 
-- [ ] **Step 5: Commit**
+- [x] **Step 5: Commit**
 
 ```bash
 git add scripts/deslop_deframe.py tests/test_deslop_deframe.py
@@ -453,7 +453,7 @@ Update the worldbuilder-character skill with multi-option generation instruction
 - Consumes: doctrine fields from Task 1's template, preprocessed text from Task 2's script
 - Produces: generation instructions that Task 4 tests with selection mechanism trials
 
-- [ ] **Step 1: Create generation-rules.md**
+- [x] **Step 1: Create generation-rules.md**
 
 Create `skills/worldbuilder-character/generation-rules.md`:
 
@@ -510,7 +510,7 @@ After generating three variants per entry, select the best using the active sele
 **Mechanism 3 — Synthesis:** Take the strongest elements from all three variants and write a combined version. Use when no single variant is clearly best.
 ```
 
-- [ ] **Step 2: Reference generation-rules.md from SKILL.md**
+- [x] **Step 2: Reference generation-rules.md from SKILL.md**
 
 Add the following line to the skill's file-reference list in `skills/worldbuilder-character/SKILL.md`, alongside the existing references to `framework.md` and `relationships.md`:
 
@@ -518,7 +518,7 @@ Add the following line to the skill's file-reference list in `skills/worldbuilde
 - `generation-rules.md` — preprocessing, routing, fact-to-manifestation, multi-option spread, and selection rules. Read before generating any section.
 ```
 
-- [ ] **Step 3: Commit**
+- [x] **Step 3: Commit**
 
 ```bash
 git add skills/worldbuilder-character/generation-rules.md skills/worldbuilder-character/SKILL.md
@@ -543,7 +543,7 @@ Run all three selection mechanisms on one test character to determine which prod
 - Consumes: generation-rules.md from Task 3, a test character's Design Notes
 - Produces: a chosen default selection mechanism written back into generation-rules.md
 
-- [ ] **Step 1: Write trial protocol**
+- [x] **Step 1: Write trial protocol**
 
 Create `trials/2026-07-selection-mechanism/trial-protocol.md`:
 
@@ -575,15 +575,15 @@ Adopt the mechanism with the highest mean score. If all three score within 0.3 o
 Write results to `trials/2026-07-selection-mechanism/results/` and update `skills/worldbuilder-character/generation-rules.md` with the chosen mechanism.
 ```
 
-- [ ] **Step 2: Run the trial**
+- [x] **Step 2: Run the trial**
 
 Execute the trial per the protocol. This is a manual/agent-driven step — generate the Soul section once to produce 3-variant spreads per entry. Apply all three selection mechanisms to the same variant sets, blind the results, and present for human review.
 
-- [ ] **Step 3: Record results and update generation-rules.md**
+- [x] **Step 3: Record results and update generation-rules.md**
 
 Based on the trial outcome, update the Selection section in `skills/worldbuilder-character/generation-rules.md` to specify the winning mechanism as the default.
 
-- [ ] **Step 4: Commit**
+- [x] **Step 4: Commit**
 
 ```bash
 git add trials/2026-07-selection-mechanism/ skills/worldbuilder-character/generation-rules.md
@@ -609,7 +609,7 @@ Build the input-aware detection script that categorizes output entries as input-
 - Consumes: generated character notes (markdown), source Design Notes (markdown), output from other models (for cross-model comparison)
 - Produces: `detect_input_echo.categorize(output_entry: str, input_notes: str) -> Category` where Category is `"input_echo" | "clean"`; `compare_cross_model(entries_by_model: dict, input_notes: str) -> list[dict]`; the grader skill orchestrates cross-model comparison on top of this
 
-- [ ] **Step 1: Write the failing tests**
+- [x] **Step 1: Write the failing tests**
 
 Create `tests/test_detect_input_echo.py`:
 
@@ -664,7 +664,7 @@ class TestCategorize:
         assert categorize(output, input_notes) == "clean"
 ```
 
-- [ ] **Step 2: Run tests to verify they fail**
+- [x] **Step 2: Run tests to verify they fail**
 
 ```bash
 pytest tests/test_detect_input_echo.py -v
@@ -672,7 +672,7 @@ pytest tests/test_detect_input_echo.py -v
 
 Expected: ImportError.
 
-- [ ] **Step 3: Implement the detection script**
+- [x] **Step 3: Implement the detection script**
 
 Create `scripts/detect_input_echo.py`:
 
@@ -740,7 +740,7 @@ def categorize(
     return "clean"
 ```
 
-- [ ] **Step 4: Run tests**
+- [x] **Step 4: Run tests**
 
 ```bash
 pytest tests/test_detect_input_echo.py -v
@@ -748,7 +748,7 @@ pytest tests/test_detect_input_echo.py -v
 
 Expected: all tests pass. If threshold needs tuning, adjust `ECHO_THRESHOLD` and rerun.
 
-- [ ] **Step 4b: Add cross-model convergence detection**
+- [x] **Step 4b: Add cross-model convergence detection**
 
 Add the following function to `scripts/detect_input_echo.py`:
 
@@ -860,7 +860,7 @@ class TestCrossModel:
         assert len(clean) == 2
 ```
 
-- [ ] **Step 5: Write the grader skill file**
+- [x] **Step 5: Write the grader skill file**
 
 Create `skills/worldbuilder-grader/SKILL.md`:
 
@@ -913,7 +913,7 @@ entry with its category, the matching input line (for echo), and a
 recommendation (regenerate / rewrite / clean).
 ```
 
-- [ ] **Step 6: Commit**
+- [x] **Step 6: Commit**
 
 ```bash
 git add scripts/detect_input_echo.py tests/test_detect_input_echo.py skills/worldbuilder-grader/SKILL.md
@@ -939,7 +939,7 @@ After Tasks 1–5 are complete, rerun the convergence validation experiment usin
 - Consumes: all of Tasks 1–5 (the full pipeline)
 - Produces: graduation decision for the convergence metric
 
-- [ ] **Step 1: Write retest protocol**
+- [x] **Step 1: Write retest protocol**
 
 Create `trials/2026-07-convergence-retest/retest-protocol.md`:
 

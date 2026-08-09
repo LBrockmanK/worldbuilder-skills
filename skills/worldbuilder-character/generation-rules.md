@@ -41,12 +41,8 @@ All three pass the staging test, except Background entries (which are factual, n
 
 ## Selection
 
-After generating three variants per entry, select the best using the active selection mechanism. The mechanism is determined by the empirical trial (Task 4 of the implementation plan). Until the trial completes, use Mechanism 2 (judge) as the default.
+After generating three variants per entry, produce the final version using synthesis.
 
-**Mechanism 1. Mechanical rules:** Score each variant against the stop-slop phrase list, input-similarity (string overlap with source Design Notes), and writing-style rules. Select the highest-scoring variant.
+**Synthesis (default):** A final pass takes the strongest elements from all three variants and writes a combined version. Do not simply pick one variant — combine the most stageable phrasing, the strongest behavioral detail, and the most revealing angle from across the set. The synthesis must still pass the staging test and avoid input phrasing.
 
-**Mechanism 2. Judge (default):** A separate evaluation picks the best of three with a short rationale, guided by the staging test and writing-style rules.
-
-**Mechanism 3. Synthesis:** A final pass takes the strongest elements from all three variants and writes a synthesis. Applied unconditionally during the trial so it can be scored against the other two mechanisms.
-
-**Decision rule:** Adopt the highest-scoring mechanism. If all three score within 0.3 of each other, adopt Mechanism 2 (judge). If exactly two tie, prefer the cheaper one.
+The synthesis step was validated by blind trial (2026-08-08, Kallya Soul section, 10 entries). Synthesis scored highest of three mechanisms tested (mechanical rules, judge selection, synthesis) with the strongest peak quality on entries where the variant angles diverged meaningfully.
