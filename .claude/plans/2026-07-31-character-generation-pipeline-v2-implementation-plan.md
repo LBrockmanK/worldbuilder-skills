@@ -7,7 +7,7 @@ description: 'Implementation plan for spec 2026-07-31: template doctrine fields,
 tags:
 - complete
 date: 2026-07-31
-timestamp: 2026-08-09T18:27Z
+timestamp: 2026-08-09T18:28Z
 resources:
 - "[[2026-07-31-character-generation-pipeline-v2-input-restructuring-doctrine-additions-and-grader-agent]]"
 - "[[2026-07-31-pipeline-v2-implementation-research-dossier]]"
@@ -993,7 +993,7 @@ Run the experiment per the protocol. This is an agent-driven step:
 
 Update the convergence experiment findings document and inbox item 9 with the retest outcome.
 
-- [ ] **Step 5: Commit**
+- [x] **Step 5: Commit**
 
 ```bash
 git add trials/2026-07-convergence-retest/
