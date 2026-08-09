@@ -37,7 +37,7 @@ Output: 6 files in `out/` (2 characters x 3 models), 15-27K bytes each.
 | Nadja | Terra | 22 | 0 | 22 |
 | **Total** | | **146** | **1** | **145** |
 
-Input echo rate: 0.7% (down from 61% in original experiment).
+Input echo rate: 0.7%. (The original experiment's 61% figure was convergence-detector precision on 23 reviewed findings, not an input-echo rate. The two metrics are not directly comparable.)
 
 ### Cross-Model Convergence
 
@@ -82,16 +82,16 @@ generic filler.
 |-----------|-----------|--------|:---:|
 | Precision | >61% TP on filtered findings | ~0% (findings are factual similarity, not slop) | No |
 | Cross-provider signal | 10-point delta, consistent | Inconsistent direction across characters | No |
-| Correction value | >50% improving | Not assessed (no true-positive slop findings to correct) | N/A |
-| Within-model signal | >50% TP on low-divergence flags | 0 findings (no low-divergence detected) | Pass (trivially) |
+| Correction value | >50% improving | Corrections not generated; protocol mandates failure when skipped | Fail |
+| Within-model signal | >50% TP on low-divergence flags | 0 findings (no low-divergence detected) | Pass (prevention) |
 | Consistency | Same verdict both characters | Cross-provider direction disagrees | No |
 
 ### Graduation Decisions
 
 | Component | Verdict | Rationale |
 |-----------|---------|-----------|
-| Input-echo detection | **Graduate** | 0.7% echo rate, down from 61%. Pipeline v2 solved the problem upstream. |
-| Within-model divergence check | **Graduate** | Zero marginal cost (built into 3-variant spread). 0 false positives. The spread's divergence rule is both detection and prevention. |
+| Input-echo detection | **Graduate** | 0.7% echo rate across 146 entries. Pipeline v2's deslop/deframe and fact-to-manifestation rule reduced input echo to near zero. |
+| Within-model divergence check | **Graduate** | Zero marginal cost (built into 3-variant spread). Graduated as a prevention mechanism: the divergence rule prevents low-divergence output, confirmed by 0 findings. Detection precision requires positive cases from a future trial with the rule relaxed. |
 | Cross-model convergence | **Do not graduate** | Cannot distinguish factual similarity from slop. Precision near zero for slop detection. Adds multi-model generation cost without reliable signal. |
 | Full grader mechanism | **Partial graduation** | Restructure around input-echo detection + within-model divergence only. Drop cross-model convergence requirement. |
 

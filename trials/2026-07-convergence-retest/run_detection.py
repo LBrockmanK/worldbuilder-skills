@@ -67,34 +67,50 @@ def extract_entries(filepath: str) -> tuple[list[str], list[list[str]]]:
             entries.append(line)
 
     # Extract variant groups from PART 2
+    # Split on entry headers (### or **Entry) rather than blank lines,
+    # because blank lines between variant headers and bodies would
+    # incorrectly split groups.
     variant_groups = []
     current_group = []
     for line in part2.split("\n"):
-        line = line.strip()
-        if not line or line.startswith("#") or line.startswith("---"):
+        stripped = line.strip()
+        # New entry header starts a new group
+        if stripped.startswith("###") or re.match(r"\*\*Entry", stripped):
             if len(current_group) >= 2:
                 variant_groups.append(current_group)
-                current_group = []
+            current_group = []
+            continue
+        if stripped.startswith("---"):
+            continue
+        if not stripped:
             continue
         # Look for variant labels
         var_match = re.match(
-            r"(?:\*\*)?Variant\s+[A-E].*?(?:\*\*)?[:\s]+(.*)", line, re.IGNORECASE
+            r"(?:\*\*)?Variant\s+[A-E].*?(?:\*\*)?[:\s]+(.*)", stripped, re.IGNORECASE
         )
         if var_match:
             text = var_match.group(1).strip()
             if text:
                 current_group.append(text)
+            else:
+                # Header only on this line; body follows on next line(s)
+                current_group.append("")
             continue
         # Also try "**A.**" or "A:" patterns
-        var_match2 = re.match(r"(?:\*\*)?[A-E][.):]\s*(?:\*\*)?\s*(.*)", line)
+        var_match2 = re.match(r"(?:\*\*)?[A-E][.):]\s*(?:\*\*)?\s*(.*)", stripped)
         if var_match2:
             text = var_match2.group(1).strip()
             if text:
                 current_group.append(text)
+            else:
+                current_group.append("")
             continue
-        # Continuation of previous variant
-        if current_group and len(line) > 20:
-            current_group[-1] += " " + line
+        # Continuation of previous variant (join multi-line bodies)
+        if current_group and len(stripped) > 20:
+            if current_group[-1]:
+                current_group[-1] += " " + stripped
+            else:
+                current_group[-1] = stripped
 
     if len(current_group) >= 2:
         variant_groups.append(current_group)
@@ -195,15 +211,21 @@ def main():
                 and f["match_model"] in ("sol", "terra")
             ]
 
-            total_cross = sum(
-                len(entries_by_model[m]) for m in entries_by_model
-            )
+            # Compute eligible comparison counts for rate percentages.
+            # Cross-provider: sonnet entries compared against sol and terra.
+            sonnet_count = len(entries_by_model.get("sonnet", []))
+            sol_count = len(entries_by_model.get("sol", []))
+            terra_count = len(entries_by_model.get("terra", []))
+            cross_provider_eligible = sonnet_count * (sol_count + terra_count)
+            # Within-family: sol entries compared against terra only.
+            within_family_eligible = sol_count * terra_count
 
             char_report["cross_model"] = {
                 "category_counts": categories,
-                "total_entries_compared": total_cross,
                 "cross_provider_convergence_count": len(cross_provider_findings),
+                "cross_provider_eligible": cross_provider_eligible,
                 "within_family_convergence_count": len(within_family_findings),
+                "within_family_eligible": within_family_eligible,
             }
 
             # Save detailed findings
@@ -240,15 +262,19 @@ def main():
             print(
                 f"  Within-family convergence: {cm.get('within_family_convergence_count', 0)}"
             )
-            total = cm.get("total_entries_compared", 1)
             cross_prov = cm.get("cross_provider_convergence_count", 0)
+            cross_elig = cm.get("cross_provider_eligible", 1)
             within_fam = cm.get("within_family_convergence_count", 0)
-            if total > 0:
+            within_elig = cm.get("within_family_eligible", 1)
+            if cross_elig > 0:
                 print(
-                    f"  Cross-provider rate: {cross_prov / total * 100:.1f}%"
+                    f"  Cross-provider rate: {cross_prov / cross_elig * 100:.1f}%"
+                    f" ({cross_prov}/{cross_elig} eligible comparisons)"
                 )
+            if within_elig > 0:
                 print(
-                    f"  Within-family rate: {within_fam / total * 100:.1f}%"
+                    f"  Within-family rate: {within_fam / within_elig * 100:.1f}%"
+                    f" ({within_fam}/{within_elig} eligible comparisons)"
                 )
 
     # Save full report

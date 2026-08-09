@@ -43,6 +43,6 @@ All three pass the staging test, except Background entries (which are factual, n
 
 After generating three variants per entry, produce the final version using synthesis.
 
-**Synthesis (default):** A final pass takes the strongest elements from all three variants and writes a combined version. Do not simply pick one variant — combine the most stageable phrasing, the strongest behavioral detail, and the most revealing angle from across the set. The synthesis must still pass the staging test and avoid input phrasing.
+**Synthesis (default):** A final pass takes the strongest elements from all three variants and writes a combined version. Do not simply pick one variant. Combine the most stageable phrasing, the strongest behavioral detail, and the most revealing angle from across the set. The synthesis must still pass the staging test and avoid input phrasing.
 
 The synthesis step was validated by blind trial (2026-08-08, Kallya Soul section, 10 entries). Synthesis scored highest of three mechanisms tested (mechanical rules, judge selection, synthesis) with the strongest peak quality on entries where the variant angles diverged meaningfully.

@@ -515,6 +515,8 @@ Blinded review scored 2026-08-08.
 
 **Decision: 3 variants confirmed as optimal count.**
 
+**Limitation:** The protocol required minimum 2 additional generation runs per variant count to control for generation variance; only one run per count was completed. The 5-variant conclusion is robust (clear hallucination failure mode independent of generation variance). The 2-vs-3 comparison (2.1 vs 2.5) should be treated as directional rather than conclusive. The 3-variant count was the pre-existing default, so this trial confirms rather than changes the status quo.
+
 5-variant synthesis failed due to hallucination: the D (internal framing) and E (exception) angles introduced specific fabricated scenarios. Synthesis combined these uncritically, producing invented content and overly poetic prose. More input variants = more hallucination risk.
 
 2-variant synthesis was decent but more generic — with only trigger+action and cost/consequence angles, synthesis had insufficient divergence to produce distinctive output.

@@ -4,9 +4,9 @@ title: Review — Character Generation Pipeline v2 Spec and Plan
 description: Adversarial review of the Pipeline v2 spec (input restructuring, doctrine
   additions, grader agent) and implementation plan (6 tasks).
 tags:
-- complete
+- agent-ready
 date: 2026-07-31
-timestamp: 2026-07-31T10:56Z
+timestamp: 2026-08-09T18:59Z
 resources: []
 ---
 
@@ -450,4 +450,199 @@ Escalated to human after Round 2. User accepted remaining findings as executor c
 | 15 | Accept as executor concern | Standalone household pattern added during implementation |
 
 **Review closed.** 3 findings fixed in refine round 2. 12 findings accepted as executor concerns — these are implementation-level details that the plan's executor resolves during task execution. The plan is approved for implementation with these known items carried forward.
+
+## Round 3 — digest `e4010a48…`, anchor `64a8c570` (dirty), tokens 119169, 2026-08-09T13:49:47-05:00, 340s
+
+Anchor: 64a8c5707c52c70bff1a8126b735d8ca69719681 (dirty tree)
+Artifact digest: e4010a48a6520f19794774b3932fd30c1624d1eaeeaf2108103e139fce9ef0bb (sha256 over the exact scoped bytes as delivered)
+Scope: git diff 8b4235d -- . :(exclude).claude/reviews/2026-07-31-review-character-generation-pipeline-v2-spec-and-plan.md
+
+1. Title: The shipped default contradicts the trial’s decision rule
+   Location: trials/2026-07-selection-mechanism/trial-protocol.md:18-24; trials/2026-07-selection-mechanism/results/trial-data.md:310-316
+   Quote:
+   > - If all three mechanisms score within 0.3 of each other, adopt Mechanism 2 (judge) as the default, for flexibility.
+   >
+   > | M3 Synthesis (X) | 2.0 | 2, 1, 3, 2, 2, 2, 1, 2, 2, 3 |
+   > | M2 Judge (Z) | 1.9 | 2, 1, 2, 2, 2, 2, 2, 1, 2, 3 |
+   > | M1 Mechanical (Y) | 1.8 | 2, 1, 1, 3, 2, 2, 2, 1, 2, 2 |
+   >
+   > All three within 0.3 range (decision rule tie-break → Judge). User's qualitative read: "X had the highest highs." Order-bias correction favors Synthesis further. **Decision: Synthesis adopted as default.**
+   Type: test-integrity
+   Severity: major
+   Effort-to-fix: medium
+   Risk-of-fix: medium
+   Channel: fix
+   Body: The anchored trial triggered its preregistered Judge tie-break, then overrode it with an unquantified qualitative preference and an undocumented “order-bias correction.” Under the trial as written, Judge is the selected mechanism. Consequently, the synthesis default and its claim of validation violate acceptance criteria 1 and 5. Either ship Judge or run a new trial under a prospectively changed decision rule.
+
+2. Title: The variant-count conclusion comes from the single-run design the protocol forbids
+   Location: trials/2026-07-selection-mechanism/trial-protocol.md:30-33; trials/2026-07-selection-mechanism/results/trial-data.md:506-516
+   Quote:
+   > 2. Run each variant count (2, 3, 5) **multiple times** (minimum 2 additional generation runs per count) to control for generation variance — a single run per count is not sufficient to draw a conclusion.
+   >
+   > | Variant Count | Mean | Scores by entry (1-10) |
+   > |---------------|------|------------------------|
+   > | 3-variant (R) | 2.5 | 2, 2, 3, 3, 2, 3, 3, 2, 2, 3 |
+   > | 2-variant (Q) | 2.1 | 2, 2, 3, 3, 2, 2, 2, 1, 1, 3 |
+   > | 5-variant (P) | 1.3 | 1, 1, 2, 1, 1, 1, 2, 1, 1, 2 |
+   >
+   > **Decision: 3 variants confirmed as optimal count.**
+   Type: test-integrity
+   Severity: major
+   Effort-to-fix: medium
+   Risk-of-fix: low
+   Channel: fix
+   Body: Only one result set per condition is recorded, with no per-run results or averages across the required additional runs. The protocol explicitly says this is insufficient for a conclusion, yet the artifact calls the count “confirmed.” The missing runs must be completed and scored before retaining that decision.
+
+3. Title: Both claimed blinded reviews remain unscored
+   Location: trials/2026-07-selection-mechanism/results/blinded-review.md:180-188; trials/2026-07-selection-mechanism/results/blinded-review-variant-count.md:179-187
+   Quote:
+   > ## Summary (fill after scoring)
+   >
+   > | Version | Entry scores (comma-separated) | Mean |
+   > |---------|-------------------------------|------|
+   > | X | | |
+   > | Y | | |
+   > | Z | | |
+   >
+   > **Notes / observations:**
+   Type: test-integrity
+   Severity: major
+   Effort-to-fix: medium
+   Risk-of-fix: low
+   Channel: fix
+   Body: Every per-entry score and both summary tables are blank, while `trial-data.md` says the reviews were scored and supplies derived means. The scoped data therefore lacks the source ratings needed to verify its reported results and is internally inconsistent with the recorded completion state. Record the actual blinded ratings and summaries, or withdraw the derived claims.
+
+4. Title: The within-model parser never measured complete three-variant spreads
+   Location: trials/2026-07-convergence-retest/retest-results.md:51-55; trials/2026-07-convergence-retest/detection-report.json:37-43
+   Quote:
+   > Sonnet variant spreads: 37 groups parsed, 0 low-divergence. All 3-variant
+   > spreads diverged successfully. GPT variant format not parseable (different
+   > output structure).
+   >
+   > {
+   >   "entry_index": 0,
+   >   "num_variants": 2,
+   >   "avg_pairwise_overlap": 0.108,
+   >   "max_pairwise_overlap": 0.108,
+   >   "low_divergence": false
+   > }
+   Type: test-integrity
+   Severity: major
+   Effort-to-fix: medium
+   Risk-of-fix: low
+   Channel: fix
+   Body: All 37 recorded groups have `num_variants: 2`, not 3; the other five character/model outputs have zero parsed groups. Blank lines between variant headings and bodies cause the parser to split or discard material, while the other output formats are not recognized. The statement that all three-variant spreads passed is false. Fix parsing, rerun detection across all six outputs, and replace the derived report.
+
+5. Title: Zero findings cannot satisfy the stated precision threshold
+   Location: trials/2026-07-convergence-retest/retest-results.md:81-95
+   Quote:
+   > | Within-model signal | >50% TP on low-divergence flags | 0 findings (no low-divergence detected) | Pass (trivially) |
+   >
+   > | Within-model divergence check | **Graduate** | Zero marginal cost (built into 3-variant spread). 0 false positives. The spread's divergence rule is both detection and prevention. |
+   Type: test-integrity
+   Severity: major
+   Effort-to-fix: medium
+   Risk-of-fix: low
+   Channel: fix
+   Body: With no flags, true-positive precision and false-positive count are undefined, not 100% and zero. The trial produced no positive cases with which to show that the detector recognizes low divergence. This does not meet the protocol’s “>50% TP” or “reliable signal” requirements, so the within-model component cannot be graduated from this evidence.
+
+6. Title: The retest compares an echo rate with an unrelated 61% precision statistic
+   Location: trials/2026-07-convergence-retest/retest-results.md:38-40,91-94; trials/2026-07-convergence-validation/2026-07-30-convergence-validation-experiment-findings-and-graduation-assessment.md:64
+   Quote:
+   > Input echo rate: 0.7% (down from 61% in original experiment).
+   >
+   > | Input-echo detection | **Graduate** | 0.7% echo rate, down from 61%. Pipeline v2 solved the problem upstream. |
+   >
+   > **Precision on reviewed subset:** 14 TP out of 23 = 61%. However, many true positives are themselves partially input-derived, and many false positives are caused by faithful input reproduction rather than independent slop.
+   Type: test-integrity
+   Severity: major
+   Effort-to-fix: medium
+   Risk-of-fix: low
+   Channel: fix
+   Body: The original 61% is convergence-detector precision on 23 reviewed findings; it is not the fraction of generated entries containing input echo. Comparing it with the retest’s 1-of-146 detector rate is invalid. A low flag rate also does not establish input-echo detector recall. The claimed improvement and graduation need comparable human-labeled baseline and retest measurements.
+
+7. Title: Mandatory correction generation was skipped but recorded as N/A instead of failure
+   Location: trials/2026-07-convergence-retest/retest-protocol.md:48-50,69-72; trials/2026-07-convergence-retest/retest-results.md:81-86
+   Quote:
+   > 5. Generate corrections for the filtered (post-input-echo-removal)
+   >    cross-model findings. Correction generation is mandatory, not optional —
+   >    the correction-value criterion below cannot be assessed without it.
+   >
+   > This criterion fails if
+   > corrections were not generated.
+   >
+   > | Correction value | >50% improving | Not assessed (no true-positive slop findings to correct) | N/A |
+   Type: test-integrity
+   Severity: major
+   Effort-to-fix: small
+   Risk-of-fix: low
+   Channel: fix
+   Body: The anchored protocol explicitly assigns a failing result when corrections are not generated. Recording N/A contradicts that rule. Mark the criterion failed, or prospectively revise and rerun the protocol if zero reviewed true positives should permit a skip.
+
+8. Title: The shipped divergence check does not define the metric it requires
+   Location: skills/worldbuilder-grader/SKILL.md:25-29
+   Quote:
+   > 3. **Within-model divergence check:** For each entry's 3-variant spread,
+   >    measure pairwise n-gram overlap across the three variants. Flag
+   >    entries where average pairwise overlap exceeds 0.25 as
+   >    `low_divergence` — the model could not produce genuinely different
+   >    renderings, which signals either input-forcing or generic output.
+   Type: correctness
+   Severity: major
+   Effort-to-fix: small
+   Risk-of-fix: low
+   Channel: fix
+   Body: “N-gram overlap” does not specify character versus word n-grams, n, normalization, or the overlap formula. The trial used Jaccard similarity over lowercase character trigrams, so 0.25 has meaning only with that exact algorithm. Different compliant implementations will return different flags. The shipped skill must name the existing `ngram_overlap` implementation or state its complete calculation.
+
+9. Title: Changed skill prose violates the repository’s no-em-dash doctrine
+   Location: skills/worldbuilder-character/generation-rules.md:46; skills/worldbuilder-grader/SKILL.md:21-24
+   Quote:
+   > Do not simply pick one variant — combine the most stageable phrasing, the strongest behavioral detail, and the most revealing angle from across the set.
+   >
+   > 2. **Input-echo detection:** For each synthesized entry in Background,
+   >    Body, Soul, and Relationships, run `scripts/detect_input_echo.py` —
+   >    compare the entry's phrasing against the Design Notes.
+   Type: other
+   Severity: major
+   Effort-to-fix: medium
+   Risk-of-fix: low
+   Channel: fix
+   Body: Project guidance applies `skills/writing-style.md` to skill prose, and that doctrine says em-dashes are not used in spec documents. The new shipped sections use them repeatedly, violating acceptance criterion 4. Replace them with periods or restructure the sentences across all added skill prose.
+
+10. Title: Cross-provider and within-family “rates” use an invalid common denominator
+   Location: trials/2026-07-convergence-retest/run_detection.py:198-207,243-252
+   Quote:
+   > total_cross = sum(
+   >     len(entries_by_model[m]) for m in entries_by_model
+   > )
+   >
+   > "cross_provider_convergence_count": len(cross_provider_findings),
+   > "within_family_convergence_count": len(within_family_findings),
+   >
+   > f"  Cross-provider rate: {cross_prov / total * 100:.1f}%"
+   >
+   > f"  Within-family rate: {within_fam / total * 100:.1f}%"
+   Type: test-integrity
+   Severity: major
+   Effort-to-fix: medium
+   Risk-of-fix: low
+   Channel: fix
+   Body: Cross-provider comparison has two model pairings while within-family comparison has one, but both counts are divided by the total number of entries across all models. Moreover, each entry retains only its single best matching model, so the counts are not pair-level opportunities. The reported 15.8%/25.0% and 17.1%/11.4% values therefore are not comparable convergence rates and cannot support the 10-point-delta criterion. Compute each rate over the eligible comparisons for that pairing class and regenerate the results.
+
+FINDINGS: 0 critical, 10 major, 0 minor, 0 nit
+
+### Round 3 Adjudication (Final Pass)
+
+| # | Verdict | Note |
+|---|---------|------|
+| 1 | Reject | Human decision to override mechanical tie-break based on qualitative assessment and order-bias reasoning. The protocol's human review step exists for this. Trial data records both outcomes. |
+| 2 | Accept + fixed | Added single-run limitation note to trial-data.md. 5-variant conclusion robust; 2-vs-3 directional. |
+| 3 | Accept + fixed | Scores backfilled into both blinded review files with summary tables. |
+| 4 | Accept + fixed | Parser split groups on blank lines instead of entry headers. Fixed; re-run shows 25 groups (was 37 broken). GPT variant format still not parseable. |
+| 5 | Accept + fixed | Within-model reframed as prevention mechanism in retest-results.md and SKILL.md. Detection precision deferred to future trial. |
+| 6 | Accept + fixed | Removed misleading "down from 61%" comparison. 61% was convergence-detector precision, not echo rate. |
+| 7 | Accept + fixed | Correction value criterion changed from N/A to Fail per protocol mandate. |
+| 8 | Accept + fixed | SKILL.md now specifies Jaccard similarity of lowercase character trigrams via ngram_overlap() from detect_input_echo.py. |
+| 9 | Accept + fixed | Em-dashes replaced with periods in generation-rules.md and SKILL.md. |
+| 10 | Accept + fixed | Rate computation now uses eligible pairwise comparisons as denominators. Rates corrected from 15-25% to 0.9-2.9%. |
 
