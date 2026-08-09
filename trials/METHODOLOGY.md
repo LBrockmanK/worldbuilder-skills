@@ -232,7 +232,7 @@ a relative measure across arms, and it can only disqualify the metric or
 support it provisionally.
 
 **Step 2, cross-provider confirmation.** Rerun the correlation with
-models from different providers once that access exists. Only this step
-can move the metric to validated.
+models from different providers (GPT-5.6 Sol access available via Codex
+CLI since 2026-07-26). Only this step can move the metric to validated.
 
 Until step 2 passes, the metric is labeled `unvalidated` per section 2.2.

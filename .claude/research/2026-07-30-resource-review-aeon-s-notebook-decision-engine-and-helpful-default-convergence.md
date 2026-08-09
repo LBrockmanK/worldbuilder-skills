@@ -6,9 +6,9 @@ description: 'Review of three linked resources from Aeon''s Notebook (u/Tasty_Li
   testing, and Decision Engine specification. Same author as Character Builder V3
   (previously reviewed).'
 tags:
-- human-ready
+- complete
 date: 2026-07-30
-timestamp: 2026-07-30T23:21Z
+timestamp: 2026-08-09T20:00Z
 resources:
 - "[[2026-07-25-resource-review-hoplight-a-webnovel-author-s-ai-writing-guide-and-character-builder-v3]]"
 - "[[2026-07-30-convergence-validation-experiment-findings-and-graduation-assessment]]"
