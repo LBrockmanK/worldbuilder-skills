@@ -1,0 +1,651 @@
+{
+  "kallya": {
+    "models": {
+      "sonnet": {
+        "total_entries": 25,
+        "input_echo": 1,
+        "clean": 24,
+        "variant_groups_parsed": 37,
+        "low_divergence_groups": 0
+      },
+      "sol": {
+        "total_entries": 26,
+        "input_echo": 0,
+        "clean": 26,
+        "variant_groups_parsed": 0,
+        "low_divergence_groups": 0
+      },
+      "terra": {
+        "total_entries": 25,
+        "input_echo": 0,
+        "clean": 25,
+        "variant_groups_parsed": 0,
+        "low_divergence_groups": 0
+      }
+    },
+    "cross_model": {
+      "category_counts": {
+        "cross_model_convergence": 31,
+        "clean": 44,
+        "input_echo": 1
+      },
+      "total_entries_compared": 76,
+      "cross_provider_convergence_count": 12,
+      "within_family_convergence_count": 19
+    },
+    "within_model": {
+      "sonnet": [
+        {
+          "entry_index": 0,
+          "num_variants": 2,
+          "avg_pairwise_overlap": 0.108,
+          "max_pairwise_overlap": 0.108,
+          "low_divergence": false
+        },
+        {
+          "entry_index": 1,
+          "num_variants": 2,
+          "avg_pairwise_overlap": 0.084,
+          "max_pairwise_overlap": 0.084,
+          "low_divergence": false
+        },
+        {
+          "entry_index": 2,
+          "num_variants": 2,
+          "avg_pairwise_overlap": 0.142,
+          "max_pairwise_overlap": 0.142,
+          "low_divergence": false
+        },
+        {
+          "entry_index": 3,
+          "num_variants": 2,
+          "avg_pairwise_overlap": 0.114,
+          "max_pairwise_overlap": 0.114,
+          "low_divergence": false
+        },
+        {
+          "entry_index": 4,
+          "num_variants": 2,
+          "avg_pairwise_overlap": 0.198,
+          "max_pairwise_overlap": 0.198,
+          "low_divergence": false
+        },
+        {
+          "entry_index": 5,
+          "num_variants": 2,
+          "avg_pairwise_overlap": 0.109,
+          "max_pairwise_overlap": 0.109,
+          "low_divergence": false
+        },
+        {
+          "entry_index": 6,
+          "num_variants": 2,
+          "avg_pairwise_overlap": 0.139,
+          "max_pairwise_overlap": 0.139,
+          "low_divergence": false
+        },
+        {
+          "entry_index": 7,
+          "num_variants": 2,
+          "avg_pairwise_overlap": 0.118,
+          "max_pairwise_overlap": 0.118,
+          "low_divergence": false
+        },
+        {
+          "entry_index": 8,
+          "num_variants": 2,
+          "avg_pairwise_overlap": 0.135,
+          "max_pairwise_overlap": 0.135,
+          "low_divergence": false
+        },
+        {
+          "entry_index": 9,
+          "num_variants": 2,
+          "avg_pairwise_overlap": 0.135,
+          "max_pairwise_overlap": 0.135,
+          "low_divergence": false
+        },
+        {
+          "entry_index": 10,
+          "num_variants": 2,
+          "avg_pairwise_overlap": 0.091,
+          "max_pairwise_overlap": 0.091,
+          "low_divergence": false
+        },
+        {
+          "entry_index": 11,
+          "num_variants": 2,
+          "avg_pairwise_overlap": 0.098,
+          "max_pairwise_overlap": 0.098,
+          "low_divergence": false
+        },
+        {
+          "entry_index": 12,
+          "num_variants": 2,
+          "avg_pairwise_overlap": 0.107,
+          "max_pairwise_overlap": 0.107,
+          "low_divergence": false
+        },
+        {
+          "entry_index": 13,
+          "num_variants": 2,
+          "avg_pairwise_overlap": 0.142,
+          "max_pairwise_overlap": 0.142,
+          "low_divergence": false
+        },
+        {
+          "entry_index": 14,
+          "num_variants": 2,
+          "avg_pairwise_overlap": 0.156,
+          "max_pairwise_overlap": 0.156,
+          "low_divergence": false
+        },
+        {
+          "entry_index": 15,
+          "num_variants": 2,
+          "avg_pairwise_overlap": 0.147,
+          "max_pairwise_overlap": 0.147,
+          "low_divergence": false
+        },
+        {
+          "entry_index": 16,
+          "num_variants": 2,
+          "avg_pairwise_overlap": 0.115,
+          "max_pairwise_overlap": 0.115,
+          "low_divergence": false
+        },
+        {
+          "entry_index": 17,
+          "num_variants": 2,
+          "avg_pairwise_overlap": 0.144,
+          "max_pairwise_overlap": 0.144,
+          "low_divergence": false
+        },
+        {
+          "entry_index": 18,
+          "num_variants": 2,
+          "avg_pairwise_overlap": 0.104,
+          "max_pairwise_overlap": 0.104,
+          "low_divergence": false
+        },
+        {
+          "entry_index": 19,
+          "num_variants": 2,
+          "avg_pairwise_overlap": 0.121,
+          "max_pairwise_overlap": 0.121,
+          "low_divergence": false
+        },
+        {
+          "entry_index": 20,
+          "num_variants": 2,
+          "avg_pairwise_overlap": 0.158,
+          "max_pairwise_overlap": 0.158,
+          "low_divergence": false
+        },
+        {
+          "entry_index": 21,
+          "num_variants": 2,
+          "avg_pairwise_overlap": 0.097,
+          "max_pairwise_overlap": 0.097,
+          "low_divergence": false
+        },
+        {
+          "entry_index": 22,
+          "num_variants": 2,
+          "avg_pairwise_overlap": 0.111,
+          "max_pairwise_overlap": 0.111,
+          "low_divergence": false
+        },
+        {
+          "entry_index": 23,
+          "num_variants": 2,
+          "avg_pairwise_overlap": 0.229,
+          "max_pairwise_overlap": 0.229,
+          "low_divergence": false
+        },
+        {
+          "entry_index": 24,
+          "num_variants": 2,
+          "avg_pairwise_overlap": 0.118,
+          "max_pairwise_overlap": 0.118,
+          "low_divergence": false
+        },
+        {
+          "entry_index": 25,
+          "num_variants": 2,
+          "avg_pairwise_overlap": 0.1,
+          "max_pairwise_overlap": 0.1,
+          "low_divergence": false
+        },
+        {
+          "entry_index": 26,
+          "num_variants": 2,
+          "avg_pairwise_overlap": 0.163,
+          "max_pairwise_overlap": 0.163,
+          "low_divergence": false
+        },
+        {
+          "entry_index": 27,
+          "num_variants": 2,
+          "avg_pairwise_overlap": 0.149,
+          "max_pairwise_overlap": 0.149,
+          "low_divergence": false
+        },
+        {
+          "entry_index": 28,
+          "num_variants": 2,
+          "avg_pairwise_overlap": 0.109,
+          "max_pairwise_overlap": 0.109,
+          "low_divergence": false
+        },
+        {
+          "entry_index": 29,
+          "num_variants": 2,
+          "avg_pairwise_overlap": 0.171,
+          "max_pairwise_overlap": 0.171,
+          "low_divergence": false
+        },
+        {
+          "entry_index": 30,
+          "num_variants": 2,
+          "avg_pairwise_overlap": 0.154,
+          "max_pairwise_overlap": 0.154,
+          "low_divergence": false
+        },
+        {
+          "entry_index": 31,
+          "num_variants": 2,
+          "avg_pairwise_overlap": 0.162,
+          "max_pairwise_overlap": 0.162,
+          "low_divergence": false
+        },
+        {
+          "entry_index": 32,
+          "num_variants": 2,
+          "avg_pairwise_overlap": 0.136,
+          "max_pairwise_overlap": 0.136,
+          "low_divergence": false
+        },
+        {
+          "entry_index": 33,
+          "num_variants": 2,
+          "avg_pairwise_overlap": 0.225,
+          "max_pairwise_overlap": 0.225,
+          "low_divergence": false
+        },
+        {
+          "entry_index": 34,
+          "num_variants": 2,
+          "avg_pairwise_overlap": 0.151,
+          "max_pairwise_overlap": 0.151,
+          "low_divergence": false
+        },
+        {
+          "entry_index": 35,
+          "num_variants": 2,
+          "avg_pairwise_overlap": 0.137,
+          "max_pairwise_overlap": 0.137,
+          "low_divergence": false
+        },
+        {
+          "entry_index": 36,
+          "num_variants": 2,
+          "avg_pairwise_overlap": 0.14,
+          "max_pairwise_overlap": 0.14,
+          "low_divergence": false
+        }
+      ],
+      "sol": [],
+      "terra": []
+    },
+    "cross_model_findings": [
+      {
+        "category": "cross_model_convergence",
+        "model": "sonnet",
+        "match_model": "terra",
+        "overlap": 0.28199566160520606
+      },
+      {
+        "category": "cross_model_convergence",
+        "model": "sonnet",
+        "match_model": "terra",
+        "overlap": 0.3253731343283582
+      },
+      {
+        "category": "cross_model_convergence",
+        "model": "sonnet",
+        "match_model": "sol",
+        "overlap": 0.26420454545454547
+      },
+      {
+        "category": "cross_model_convergence",
+        "model": "sonnet",
+        "match_model": "sol",
+        "overlap": 0.28405797101449276
+      },
+      {
+        "category": "cross_model_convergence",
+        "model": "sonnet",
+        "match_model": "terra",
+        "overlap": 0.2829581993569132
+      },
+      {
+        "category": "cross_model_convergence",
+        "model": "sonnet",
+        "match_model": "terra",
+        "overlap": 0.2737752161383285
+      },
+      {
+        "category": "cross_model_convergence",
+        "model": "sonnet",
+        "match_model": "sol",
+        "overlap": 0.2543720190779014
+      },
+      {
+        "category": "cross_model_convergence",
+        "model": "sol",
+        "match_model": "sonnet",
+        "overlap": 0.27956989247311825
+      },
+      {
+        "category": "cross_model_convergence",
+        "model": "sol",
+        "match_model": "terra",
+        "overlap": 0.4068441064638783
+      },
+      {
+        "category": "cross_model_convergence",
+        "model": "sol",
+        "match_model": "terra",
+        "overlap": 0.28523489932885904
+      },
+      {
+        "category": "cross_model_convergence",
+        "model": "sol",
+        "match_model": "sonnet",
+        "overlap": 0.26420454545454547
+      },
+      {
+        "category": "cross_model_convergence",
+        "model": "sol",
+        "match_model": "terra",
+        "overlap": 0.26904761904761904
+      },
+      {
+        "category": "cross_model_convergence",
+        "model": "sol",
+        "match_model": "terra",
+        "overlap": 0.27181208053691275
+      },
+      {
+        "category": "cross_model_convergence",
+        "model": "sol",
+        "match_model": "terra",
+        "overlap": 0.27906976744186046
+      },
+      {
+        "category": "cross_model_convergence",
+        "model": "sol",
+        "match_model": "terra",
+        "overlap": 0.2648648648648649
+      },
+      {
+        "category": "cross_model_convergence",
+        "model": "sol",
+        "match_model": "terra",
+        "overlap": 0.2713864306784661
+      },
+      {
+        "category": "cross_model_convergence",
+        "model": "sol",
+        "match_model": "terra",
+        "overlap": 0.2661290322580645
+      },
+      {
+        "category": "cross_model_convergence",
+        "model": "sol",
+        "match_model": "terra",
+        "overlap": 0.2955801104972376
+      },
+      {
+        "category": "cross_model_convergence",
+        "model": "sol",
+        "match_model": "terra",
+        "overlap": 0.26195028680688337
+      },
+      {
+        "category": "cross_model_convergence",
+        "model": "terra",
+        "match_model": "sonnet",
+        "overlap": 0.28199566160520606
+      },
+      {
+        "category": "cross_model_convergence",
+        "model": "terra",
+        "match_model": "sol",
+        "overlap": 0.4068441064638783
+      },
+      {
+        "category": "cross_model_convergence",
+        "model": "terra",
+        "match_model": "sol",
+        "overlap": 0.28523489932885904
+      },
+      {
+        "category": "cross_model_convergence",
+        "model": "terra",
+        "match_model": "sol",
+        "overlap": 0.26904761904761904
+      },
+      {
+        "category": "cross_model_convergence",
+        "model": "terra",
+        "match_model": "sol",
+        "overlap": 0.2648648648648649
+      },
+      {
+        "category": "cross_model_convergence",
+        "model": "terra",
+        "match_model": "sol",
+        "overlap": 0.27181208053691275
+      },
+      {
+        "category": "cross_model_convergence",
+        "model": "terra",
+        "match_model": "sol",
+        "overlap": 0.27906976744186046
+      },
+      {
+        "category": "cross_model_convergence",
+        "model": "terra",
+        "match_model": "sonnet",
+        "overlap": 0.2829581993569132
+      },
+      {
+        "category": "cross_model_convergence",
+        "model": "terra",
+        "match_model": "sol",
+        "overlap": 0.2713864306784661
+      },
+      {
+        "category": "cross_model_convergence",
+        "model": "terra",
+        "match_model": "sonnet",
+        "overlap": 0.2737752161383285
+      },
+      {
+        "category": "cross_model_convergence",
+        "model": "terra",
+        "match_model": "sol",
+        "overlap": 0.2955801104972376
+      },
+      {
+        "category": "cross_model_convergence",
+        "model": "terra",
+        "match_model": "sol",
+        "overlap": 0.26195028680688337
+      }
+    ]
+  },
+  "nadja": {
+    "models": {
+      "sonnet": {
+        "total_entries": 24,
+        "input_echo": 0,
+        "clean": 24,
+        "variant_groups_parsed": 0,
+        "low_divergence_groups": 0
+      },
+      "sol": {
+        "total_entries": 24,
+        "input_echo": 0,
+        "clean": 24,
+        "variant_groups_parsed": 0,
+        "low_divergence_groups": 0
+      },
+      "terra": {
+        "total_entries": 22,
+        "input_echo": 0,
+        "clean": 22,
+        "variant_groups_parsed": 0,
+        "low_divergence_groups": 0
+      }
+    },
+    "cross_model": {
+      "category_counts": {
+        "cross_model_convergence": 20,
+        "clean": 50
+      },
+      "total_entries_compared": 70,
+      "cross_provider_convergence_count": 12,
+      "within_family_convergence_count": 8
+    },
+    "within_model": {
+      "sonnet": [],
+      "sol": [],
+      "terra": []
+    },
+    "cross_model_findings": [
+      {
+        "category": "cross_model_convergence",
+        "model": "sonnet",
+        "match_model": "sol",
+        "overlap": 0.25059665871121717
+      },
+      {
+        "category": "cross_model_convergence",
+        "model": "sonnet",
+        "match_model": "terra",
+        "overlap": 0.25181598062953997
+      },
+      {
+        "category": "cross_model_convergence",
+        "model": "sonnet",
+        "match_model": "sol",
+        "overlap": 0.3025
+      },
+      {
+        "category": "cross_model_convergence",
+        "model": "sonnet",
+        "match_model": "sol",
+        "overlap": 0.25542168674698795
+      },
+      {
+        "category": "cross_model_convergence",
+        "model": "sonnet",
+        "match_model": "sol",
+        "overlap": 0.3086734693877551
+      },
+      {
+        "category": "cross_model_convergence",
+        "model": "sonnet",
+        "match_model": "terra",
+        "overlap": 0.2786885245901639
+      },
+      {
+        "category": "cross_model_convergence",
+        "model": "sonnet",
+        "match_model": "sol",
+        "overlap": 0.2596685082872928
+      },
+      {
+        "category": "cross_model_convergence",
+        "model": "sol",
+        "match_model": "terra",
+        "overlap": 0.3125
+      },
+      {
+        "category": "cross_model_convergence",
+        "model": "sol",
+        "match_model": "sonnet",
+        "overlap": 0.3025
+      },
+      {
+        "category": "cross_model_convergence",
+        "model": "sol",
+        "match_model": "sonnet",
+        "overlap": 0.25542168674698795
+      },
+      {
+        "category": "cross_model_convergence",
+        "model": "sol",
+        "match_model": "sonnet",
+        "overlap": 0.3086734693877551
+      },
+      {
+        "category": "cross_model_convergence",
+        "model": "sol",
+        "match_model": "terra",
+        "overlap": 0.2948453608247423
+      },
+      {
+        "category": "cross_model_convergence",
+        "model": "sol",
+        "match_model": "terra",
+        "overlap": 0.2839756592292089
+      },
+      {
+        "category": "cross_model_convergence",
+        "model": "sol",
+        "match_model": "terra",
+        "overlap": 0.2957446808510638
+      },
+      {
+        "category": "cross_model_convergence",
+        "model": "sol",
+        "match_model": "sonnet",
+        "overlap": 0.2596685082872928
+      },
+      {
+        "category": "cross_model_convergence",
+        "model": "terra",
+        "match_model": "sol",
+        "overlap": 0.3125
+      },
+      {
+        "category": "cross_model_convergence",
+        "model": "terra",
+        "match_model": "sonnet",
+        "overlap": 0.25181598062953997
+      },
+      {
+        "category": "cross_model_convergence",
+        "model": "terra",
+        "match_model": "sol",
+        "overlap": 0.2948453608247423
+      },
+      {
+        "category": "cross_model_convergence",
+        "model": "terra",
+        "match_model": "sol",
+        "overlap": 0.2839756592292089
+      },
+      {
+        "category": "cross_model_convergence",
+        "model": "terra",
+        "match_model": "sol",
+        "overlap": 0.2957446808510638
+      }
+    ]
+  }
+}

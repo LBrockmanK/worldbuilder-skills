@@ -7,7 +7,7 @@ description: 'Implementation plan for spec 2026-07-31: template doctrine fields,
 tags:
 - complete
 date: 2026-07-31
-timestamp: 2026-08-09T00:52Z
+timestamp: 2026-08-09T18:27Z
 resources:
 - "[[2026-07-31-character-generation-pipeline-v2-input-restructuring-doctrine-additions-and-grader-agent]]"
 - "[[2026-07-31-pipeline-v2-implementation-research-dossier]]"
@@ -977,11 +977,11 @@ graduate, document what remains unresolved.
 Write results to this directory and update inbox item 9 with the outcome.
 ```
 
-- [ ] **Step 2: Value-conflict stance effectiveness test**
+- [x] **Step 2: Value-conflict stance effectiveness test**
 
 Before the full retest, test whether the value-conflict stance entries (spec 3.1(f)) actually influence model behavior. Run 2–3 dilemma scenarios against the generated character where the character's operating code conflicts with the "correct" action. Compare responses with and without the stance entry present. If the stance entry has no measurable effect on model behavior, record this and flag for the graduation assessment — the entry may still have value as documentation even if the model ignores it at inference time.
 
-- [ ] **Step 3: Execute the retest**
+- [x] **Step 3: Execute the retest**
 
 Run the experiment per the protocol. This is an agent-driven step:
 - Generate notes using the full Pipeline v2 flow (Tasks 1–5)
@@ -989,7 +989,7 @@ Run the experiment per the protocol. This is an agent-driven step:
 - Compile reports
 - Present for human review
 
-- [ ] **Step 4: Record graduation decision**
+- [x] **Step 4: Record graduation decision**
 
 Update the convergence experiment findings document and inbox item 9 with the retest outcome.
 
