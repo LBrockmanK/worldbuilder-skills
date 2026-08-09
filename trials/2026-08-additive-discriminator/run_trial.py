@@ -18,12 +18,23 @@ import os
 import re
 import sys
 
+try:
+    import anthropic
+except ImportError:
+    anthropic = None
+
 TRIAL_DIR = os.path.dirname(os.path.abspath(__file__))
 PROJECT_ROOT = os.path.abspath(os.path.join(TRIAL_DIR, "..", ".."))
 OUT_DIR = os.path.join(TRIAL_DIR, "out")
 
 sys.path.insert(0, PROJECT_ROOT)
 from scripts.detect_input_echo import categorize, ngram_overlap
+
+SYSTEM_PROMPT = (
+    "You are a character designer for an LLM-powered game. "
+    "Write a complete character note following the instructions provided. "
+    "Output only the character note in markdown, no commentary."
+)
 
 # --- Constants ---
 
@@ -98,11 +109,81 @@ def parse_args() -> argparse.Namespace:
     return parser.parse_args()
 
 
+def generate_one(
+    client,
+    model: str,
+    prompt: str,
+    max_tokens: int = MAX_TOKENS,
+    temperature: float = TEMPERATURE,
+) -> str:
+    """Generate one character note via the Claude API."""
+    response = client.messages.create(
+        model=model,
+        max_tokens=max_tokens,
+        temperature=temperature,
+        system=SYSTEM_PROMPT,
+        messages=[{"role": "user", "content": prompt}],
+    )
+    return response.content[0].text
+
+
+def generate_all(
+    matrix: list[dict],
+    runs: int,
+    out_dir: str,
+    dry_run: bool = False,
+) -> dict[str, str]:
+    """Run all generations and save outputs.
+
+    Returns {output_file_path: generated_content}.
+    """
+    if anthropic is None:
+        raise ImportError("pip install anthropic")
+
+    os.makedirs(out_dir, exist_ok=True)
+    client = anthropic.Anthropic()
+    results = {}
+    total = len(matrix) * runs
+    done = 0
+
+    for cell in matrix:
+        prompt = assemble_prompt(cell["character"], cell["doctrine"])
+        for run in range(1, runs + 1):
+            done += 1
+            path = output_path(cell["character"], cell["doctrine"],
+                               cell["model"], run)
+            # Use out_dir override if provided
+            if out_dir != OUT_DIR:
+                fname = os.path.basename(path)
+                path = os.path.join(out_dir, fname)
+
+            if dry_run:
+                content = f"# Dry Run\n\n{cell}"
+            else:
+                print(f"[{done}/{total}] {cell['character']}/{cell['doctrine']}"
+                      f"/{cell['model']} run {run}...")
+                content = generate_one(client, cell["model"], prompt)
+
+            with open(path, "w", encoding="utf-8") as f:
+                f.write(content)
+            results[path] = content
+
+    return results
+
+
 if __name__ == "__main__":
     args = parse_args()
+    out_dir = args.out_dir or OUT_DIR
+
     if args.dry_run:
         for cell in MATRIX:
             prompt = assemble_prompt(cell["character"], cell["doctrine"])
             print(f"--- {cell['character']}/{cell['doctrine']}/{cell['model']} ---")
             print(f"Prompt length: {len(prompt)} chars")
             print(prompt[:200] + "...\n")
+        sys.exit(0)
+
+    if not args.detect_only:
+        print(f"Generating {len(MATRIX) * RUNS_PER_CELL} notes...")
+        generate_all(MATRIX, RUNS_PER_CELL, out_dir)
+        print("Generation complete.\n")
