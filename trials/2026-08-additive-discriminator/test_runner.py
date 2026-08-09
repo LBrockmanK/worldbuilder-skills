@@ -6,7 +6,10 @@ import sys
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 
 from unittest.mock import patch, MagicMock
-from run_trial import assemble_prompt, MATRIX, ARMS, RUNS_PER_CELL
+from run_trial import (
+    assemble_prompt, MATRIX, ARMS, MODELS, CHARACTERS, RUNS_PER_CELL,
+    extract_entries, run_detection, write_summary,
+)
 
 
 def test_assemble_prompt_current_arm():
@@ -100,3 +103,124 @@ def test_generate_all_creates_files(tmp_path):
     assert len(results) == 36
     for path in results:
         assert os.path.exists(path)
+
+
+def test_extract_entries_splits_by_h2():
+    """Entries are the body text of ## sections."""
+    note = (
+        "---\ntype: note\n---\n\n"
+        "# Character Name\n\n"
+        "## Background\n\nShe grew up in a village.\n\n"
+        "## Personality\n\nQuiet but fierce.\n\n"
+        "## Relationships\n\nHates her brother.\n"
+    )
+    entries = extract_entries(note)
+    assert len(entries) == 3
+    assert "grew up" in entries[0]
+    assert "Quiet" in entries[1]
+    assert "Hates" in entries[2]
+
+
+def test_extract_entries_skips_empty_sections():
+    """Empty sections are dropped."""
+    note = "# Title\n\n## Empty\n\n## Content\n\nSome text.\n"
+    entries = extract_entries(note)
+    assert len(entries) == 1
+    assert "Some text" in entries[0]
+
+
+def test_extract_entries_strips_subheadings():
+    """Subheadings (### and below) are stripped from entry text."""
+    note = (
+        "# Title\n\n"
+        "## Section\n\n"
+        "### Sub\n\nParagraph one.\n\nParagraph two.\n"
+    )
+    entries = extract_entries(note)
+    assert len(entries) == 1
+    assert "Sub" not in entries[0]
+    assert "Paragraph one" in entries[0]
+    assert "Paragraph two" in entries[0]
+
+
+def test_run_detection_structure(tmp_path):
+    """Detection report has the expected structure."""
+    # Create synthetic outputs: 3 runs x 12 cells = 36 files
+    for char in CHARACTERS:
+        for arm in ARMS:
+            for model in MODELS:
+                model_short = model.replace("claude-", "")
+                for run in range(1, 4):
+                    fname = f"{char}-{arm}-{model_short}-run{run}.md"
+                    path = tmp_path / fname
+                    path.write_text(
+                        f"# {char.title()}\n\n"
+                        f"## Background\n\nUnique content for {arm} "
+                        f"run {run} model {model_short}.\n\n"
+                        f"## Personality\n\nDifferent text here {run}.\n",
+                        encoding="utf-8",
+                    )
+
+    report = run_detection(str(tmp_path))
+
+    # Top-level structure
+    assert "cells" in report
+    assert "summary" in report
+
+    # Should have 12 cells
+    assert len(report["cells"]) == 12
+
+    # Each cell has required fields
+    for cell_key, cell_data in report["cells"].items():
+        assert "echo_mean" in cell_data
+        assert "echo_rate" in cell_data
+        assert "pairwise_overlap_mean" in cell_data
+
+    # Summary has cross-arm deltas
+    summary = report["summary"]
+    assert "additive_vs_current" in summary
+    assert "stopslop_vs_current" in summary
+
+
+def test_write_summary_creates_file(tmp_path):
+    """write_summary creates a markdown file with required sections."""
+    # Minimal report structure
+    report = {
+        "cells": {
+            "nadja/current/sonnet-5": {
+                "character": "nadja", "doctrine": "current",
+                "model": "sonnet-5", "echo_mean": 0.2,
+                "echo_rate": 0.0, "pairwise_overlap_mean": 0.3,
+                "runs": [], "pairwise_overlaps": [],
+            },
+            "nadja/additive/sonnet-5": {
+                "character": "nadja", "doctrine": "additive",
+                "model": "sonnet-5", "echo_mean": 0.15,
+                "echo_rate": 0.0, "pairwise_overlap_mean": 0.25,
+                "runs": [], "pairwise_overlaps": [],
+            },
+        },
+        "summary": {
+            "additive_vs_current": {
+                "echo_delta": -0.05, "divergence_delta": -0.05,
+                "echo_consistent_wins": "1/1",
+                "pairwise_overlap_consistent_wins": "1/1",
+            },
+            "stopslop_vs_current": {"echo_delta": 0.0, "divergence_delta": 0.0},
+            "arm_means": {
+                "current": {"echo": 0.2, "pairwise_overlap": 0.3},
+                "additive": {"echo": 0.15, "pairwise_overlap": 0.25},
+                "stopslop": {"echo": 0.2, "pairwise_overlap": 0.3},
+            },
+            "per_model": {},
+            "per_character": {},
+        },
+    }
+    out = str(tmp_path / "summary.md")
+    write_summary(report, out)
+    assert os.path.exists(out)
+    content = open(out).read()
+    assert "Arm means" in content
+    assert "Cross-arm deltas" in content
+    assert "Consistency" in content
+    assert "Per-cell detail" in content
