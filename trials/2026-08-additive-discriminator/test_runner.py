@@ -219,7 +219,7 @@ def test_write_summary_creates_file(tmp_path):
     out = str(tmp_path / "summary.md")
     write_summary(report, out)
     assert os.path.exists(out)
-    content = open(out).read()
+    content = open(out, encoding="utf-8").read()
     assert "Arm means" in content
     assert "Cross-arm deltas" in content
     assert "Consistency" in content
