@@ -123,9 +123,9 @@ and lore data already covers.
 |-------|----------|-----------------|
 | `personality` | Derived | Character note Foundation and Behavioral Descriptions sections (condensed separately from `description`/baseProfile) |
 | `scenario` | Derived | `project/seed.md` Setting Summary + Opening Situation (combined) |
-| `first_mes` | Derived | Character introduction note in `notes/` |
+| `first_mes` | Constructed | No current note source; candidate: character behavior + scenario context |
 | `mes_example` | Derived | Character note Influence Thresholds (reformatted as example dialogue) |
-| `system_prompt` | Structural | `project/direction.md` (arcManagerGuidance, verbatim) |
+| `system_prompt` | Derived | `project/direction.md` (requires target-specific transformation, not verbatim) |
 | `post_history_instructions` | Constructed | No current note source |
 | `alternate_greetings[]` | Constructed | No current note source |
 | `creator_notes` | Constructed | Export-time metadata |
