@@ -97,6 +97,10 @@
         },
         "trigger-context": {
           "type": "text"
+        },
+        "keywords": {
+          "type": "list",
+          "required": false
         }
       },
       "template": "> For future agents: this is a concept note — a discrete piece of world knowledge. Layer values: `[surface](notes/surface.md)` (freely shareable), `[mid](notes/mid.md)` (contextual), `[deep](notes/deep.md)` (revealed late). Aliases become lorebook keyword candidates at export. Use `worldbuilder-concept` to build it out.\n\n## Preamble\n\n_2–3 sentences orienting a future agent to this concept._\n\n## Limitations and Costs\n\n_Constraints, exceptions, or costs that apply to this concept._\n\n## Content\n\n_The actual world knowledge: what this thing is, how it works._\n"

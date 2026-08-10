@@ -130,6 +130,12 @@ Read all concept notes in `notes/`. Each note produces one `loreEntry`.
 }
 ```
 
+**Explicit keywords.** If a concept note has a non-empty `keywords`
+frontmatter field, use those values directly as the entry's
+`keywords[]`. Do not derive from aliases or body terms — the author
+has specified the trigger words. When the field is absent or empty,
+fall back to the derivation rules below.
+
 **Keywords** — Derive from the note's `aliases` frontmatter and any key terms in the note body. Use `+` between words for AND (both must appear together). Single terms are OR with other array entries. Keep keywords specific enough that they only fire when the topic is actually relevant.
 
 **Content** — Summarize the concept note into a precise, dense lore injection. 50 tokens of exact context beats 300 tokens of vague description. Aim for what the AI most needs to know at the moment the topic arises.

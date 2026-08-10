@@ -97,6 +97,10 @@
         },
         "trigger-context": {
           "type": "text"
+        },
+        "keywords": {
+          "type": "list",
+          "required": false
         }
       },
       "template_file": "concept.md"
