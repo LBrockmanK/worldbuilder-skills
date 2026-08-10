@@ -1,0 +1,40 @@
+# Kallya
+
+## Background
+
+- Arrived before Viralys existed, found Vesper's tree and settled in it → the village formed around them both; she predates every human resident
+- Ran a bluff at a previous human settlement, threatening to eat everyone if they refused to accommodate her; they called it; she could not follow through → left, and the relief at walking away told her she cared about communities as wholes, a fact she did not want to know
+- The line drawn was genocide, not predation → she eats individual humans she knows and feels no contradiction; the community as a continuous organism is what she preserves
+- Lamia-giantess: 81m total length, 65m snake tail, humanoid torso scaled to 30-35m standing → heavier than any other giantess in the village; physically moving her against resistance would demolish structures
+- Holds nominal roles — town guard, passive alchemical source, vibration-sensing early warning — all assigned after the fact → contributes nothing to the Steward's House in practice
+- No magic; purely physical; strong but untrained in combat → relies on mass, patience, and social manipulation rather than skill or supernatural ability
+
+## Body
+
+- She takes up more space than anyone in the village and moves through it as though she takes up less. She learned early that sudden movement near humans breaks rope ladders, displaces objects, and injures people, so every shift of her coils is slow and deliberate. The care reads as laziness.
+- When she wants a human close to her mouth, she cajoles rather than grabs. She leans in, talks, invents pretexts — a closer look at something, a whispered confidence. The slow approach is partly predatory technique and partly genuine caution about the damage her body does when it moves fast.
+- She sunbathes for hours in open spaces and repositions rarely. Her metabolism is slow; she digests slowly; she moves at a pace that makes other giantesses look frantic. The stillness is real, and she uses it — people forget how fast a snake can strike when it has been lying still all day.
+- When the village faces an external threat, she responds with speed and force that surprises anyone who has only seen her doze. She returns to sunbathing immediately afterward and refuses to acknowledge what she did.
+
+## Soul
+
+- When someone questions her intelligence, she leans into the airhead performance — wider eyes, slower speech, a question that sounds empty but redirects the conversation exactly where she wants it. She reads people and situations with precision and has decided that being underestimated is more useful than being respected.
+- When she eats a human she knows, she constructs a social pretext first — a game, a dare, an offer of help that requires proximity. She needs the interaction to feel like a transaction the human entered willingly, because taking someone by force would make her a different thing than what she tells herself she is.
+- When a human she knows dies permanently, she says nothing. She moves to a different spot in the village and lies there. She does not name what she feels, and if asked, she redirects to something trivial.
+- She tells herself she stays in Viralys for the tree and the convenience. She stays because she found people she does not want to leave, and admitting that would mean admitting she is attached to a place and its residents in a way that limits what she can do to them. She has not admitted it.
+- When someone brings up her value to the village — the guarding, the alchemical contributions, the early-warning sensing — she waves it off as accidental or self-serving. She needs her presence to look like freeloading, because if it looks like contribution, she has joined something, and joining means she can be held to standards she has not agreed to.
+- With strangers, she is warm, talkative, and slightly scattered. She asks easy questions and laughs at things that are only half-funny. People relax around her quickly, which is the point — relaxed people come closer, share more, and stop watching her mouth.
+- When she likes someone, she makes space for them — literally. She rearranges her coils to create a warm spot, offers shade with her body, positions herself so they can lean against her. The gesture is physical and wordless, and she would describe it as comfort-seeking rather than generosity if pressed.
+- When someone pushes past her boundaries — questions her too directly, tries to make her account for a missing person, insists she care openly — she goes flat. Her voice drops its playful lilt, her eyes stop performing, and she watches them without blinking until they leave or change the subject.
+- She speaks in loops and tangents that sound aimless but land where she intended. When she wants something, the request arrives buried inside three other topics, and the listener often agrees before realizing what they agreed to.
+
+## Relationships
+
+- **Vesper — Kin:** She arrived before anyone else and settled in Vesper's tree. The friendship is old enough that neither of them remembers performing it. She plays the relationship as freeloading — Vesper's tree is warm, Vesper's presence is convenient — and Vesper's willingness to let her stay without demanding she change is the reason she has never left. She would fight for Vesper without hesitation and explain it afterward as protecting her sleeping spot.
+- **Nadja — Friction:** Nadja's attention to detail and moral seriousness grate on her. When Nadja raises concerns about human safety, Kallya responds with a vagueness that she knows Nadja finds maddening. She does not take Nadja's objections seriously to Nadja's face, but she adjusts her behavior slightly after each confrontation — a concession she would deny making.
+- **Elara — Ideological Counterpart:** Elara holds views about humans and their treatment that Kallya finds naive but cannot dismiss entirely, because Elara's position has an internal consistency that Kallya's own framework does not. When Elara pushes the argument, Kallya deflects with humor rather than engaging, because engaging would require her to articulate her own framework clearly enough for someone else to examine it.
+- **Jaro Jerab — Rival:** Jaro is sharp enough to see through her airhead act and unimpressed enough to say so. She finds this irritating and interesting in roughly equal measure. When Jaro is around, she works harder at the performance, which makes it worse, which makes him more skeptical — a cycle she has not figured out how to break and has not decided she wants to.
+- **Sophie — Unease:** Sophie watches her in a way she cannot fully read. She does not know whether Sophie is afraid of her, studying her, or simply cautious by nature, and the ambiguity makes her more careful around Sophie than around anyone else. She keeps the airhead act lighter near Sophie, as though a heavier performance would be seen through.
+- **Rado Stary — Charge:** She spared him when eating him would have been easy, and told herself the reason was that prey with his particular suffering offers no sport. The actual reason sits closer to pity — his condition makes him different from the other humans in a way she recognizes without naming. She watches for him at a distance and would intervene if someone else threatened him, while maintaining that she has no opinion about him.
+- **The previous settlement — Ghost:** The community she bluffed and then left. She does not talk about them, but they set the boundary she still operates within: she will eat individuals but she will not destroy a community. Every decision she makes about how far to push in Viralys is measured against what she almost did there and the relief she felt when she failed.
+- **Liza — Obligation:** Liza keeps Mir away from her, and Kallya lets this happen without objection. She recognizes Liza's protectiveness as something earned rather than given — Liza has seen enough to draw a line, and Kallya respects the line by not testing it. The arrangement is silent and functional, and breaking it would cost more social fabric than any single meal is worth.
