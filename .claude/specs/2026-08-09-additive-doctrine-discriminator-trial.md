@@ -8,7 +8,7 @@ description: Trial using graduated detection components (input-echo, within-mode
 tags:
 - complete
 date: 2026-08-09
-timestamp: 2026-08-09T22:45Z
+timestamp: 2026-08-10T01:20Z
 resources:
 - "[[2026-07-23-writing-doctrine-blind-trial-results-viralys-nadja]]"
 - "[[2026-07-26-standing-writing-assessment-methodology-a-b-trial-suite-and-production-self-review-battery]]"
@@ -182,7 +182,9 @@ Contents:
   generations, collects outputs into `out/`, runs detection over the
   full set, produces the report.
 - `out/` — generated notes, named
-  `{character}-{doctrine}-{model}-run{n}.md`.
+  `{character}-{doctrine}-{model_short}-run{n}.md` where
+  `model_short` strips the `claude-` prefix (e.g., `sonnet-5`,
+  `opus-4-6`).
 - `report.json` — structured results.
 - `summary.md` — human-readable comparison report.
 - `README.md` — trial description and reproduction instructions.
@@ -238,9 +240,9 @@ primary outcome action.
 ## Consequences
 
 - Consumes ~36 character-note generations across Sonnet and Opus.
-- Produces a reproducible, mechanically-scored comparison that either
-  strengthens or leaves unchanged the additive-doctrine adoption's
-  evidence base.
+- Produces a reproducible, mechanically-scored comparison that
+  strengthens, leaves unchanged, or provides evidence against the
+  additive-doctrine adoption's evidence base.
 - Does not and cannot replace the human qualitative judgment — these
   metrics measure behavior, not quality.
 - Reuses the graduated detection components without modification,

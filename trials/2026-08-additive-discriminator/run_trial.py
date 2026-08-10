@@ -377,13 +377,13 @@ def _compute_summary(cells: dict) -> dict:
     return {
         "additive_vs_current": {
             "echo_delta": additive_echo - current_echo,
-            "divergence_delta": additive_div - current_div,
+            "pairwise_overlap_delta": additive_div - current_div,
             "echo_consistent_wins": f"{add_echo_wins}/{combos}",
             "pairwise_overlap_consistent_wins": f"{add_div_wins}/{combos}",
         },
         "stopslop_vs_current": {
             "echo_delta": stopslop_echo - current_echo,
-            "divergence_delta": stopslop_div - current_div,
+            "pairwise_overlap_delta": stopslop_div - current_div,
         },
         "arm_means": {
             "current": {"echo": current_echo, "pairwise_overlap": current_div},
@@ -413,10 +413,10 @@ def write_summary(report: dict, path: str) -> None:
     lines += [
         "",
         "## Cross-arm deltas (vs current)\n",
-        "| Comparison | Echo delta | Divergence delta |",
+        "| Comparison | Echo delta | Pairwise overlap delta |",
         "|---|---|---|",
-        f"| additive | {avsc['echo_delta']:+.4f} | {avsc['divergence_delta']:+.4f} |",
-        f"| stopslop | {svsc['echo_delta']:+.4f} | {svsc['divergence_delta']:+.4f} |",
+        f"| additive | {avsc['echo_delta']:+.4f} | {avsc['pairwise_overlap_delta']:+.4f} |",
+        f"| stopslop | {svsc['echo_delta']:+.4f} | {svsc['pairwise_overlap_delta']:+.4f} |",
         "",
         "## Consistency (additive vs current)\n",
         f"- Echo: additive lower in {avsc['echo_consistent_wins']} "

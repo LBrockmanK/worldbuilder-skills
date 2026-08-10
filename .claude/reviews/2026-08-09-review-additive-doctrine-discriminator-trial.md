@@ -3,9 +3,9 @@ type: review
 title: Review — Additive-Doctrine Discriminator Trial
 description: Adversarial review of the Additive-Doctrine Discriminator Trial spec.
 tags:
-- agent-ready
+- complete
 date: 2026-08-09
-timestamp: 2026-08-09T22:57Z
+timestamp: 2026-08-10T01:21Z
 resources:
 - "[[2026-08-09-additive-doctrine-discriminator-trial]]"
 ---
@@ -366,3 +366,144 @@ FINDINGS: 0 critical, 9 major, 1 minor, 0 nit
 9. **Accept.** Add expected output to directory creation and commit steps.
 10. **Accept.** Rename divergence_mean → pairwise_overlap_mean.
 
+### Fix verification (2026-08-09)
+
+All accepted findings from rounds 1 and 2 verified as implemented in
+the spec, plan, and code:
+
+**Round 1 (spec):**
+- F1: D2 table specifies per-arm overlay composition (current=none, additive=doctrine, stopslop=style)
+- F2: D1 pins `claude-sonnet-5`, `claude-opus-4-6`
+- F3: D3 defines entry extraction (## sections, exclude frontmatter/H1/subheadings), aggregation (equal-weight run means), and reporting granularity
+- F4+F5: D1 reframes stopslop as reference delta for non-doctrine change, not a null control
+- F6: D6 separates generation (Claude API calls) from detection (imports from existing scripts)
+- F8: D8 covers consistent improvement (both/one metric), split result, consistent worsening, inconsistent (2-of-4), null result, and precedence between stopslop comparison and primary outcomes
+
+**Round 2 (plan/code):**
+- F1: `run_detection()` validates all 36 files present + at least one extracted entry per run (`FileNotFoundError`/`ValueError`)
+- F2: `_compute_summary()` computes `per_model` and `per_character` breakdowns with per-arm echo and pairwise overlap means
+- F4: Raw floats through all computation; `round()` only on serialized `pairwise_overlaps` list in cell data
+- F5: Global constraint pins `model_short` convention; filenames and keys consistent
+- F7: `test_write_summary_creates_file()` verifies file creation and required sections
+- F8: Test count matches implementation (14 tests, all passing)
+- F9: Step 1 and commit steps have expected output and verification commands
+- F10: Field renamed `pairwise_overlap_mean` throughout code and summary
+
+## Round 3 — digest `9aa136be…`, anchor `c72c1a58` (dirty), tokens 54312, 2026-08-09T20:17:12-05:00, 252s
+
+Anchor: c72c1a58bf3108ea8b409146fd480694f3af3b68 (dirty tree)
+Artifact digest: 9aa136be9cf5f7efc416db1c2896998e84acb21dcd8e734118e06e9d0849a721 (sha256 over the exact scoped bytes as delivered)
+Scope: .claude/specs/2026-08-09-additive-doctrine-discriminator-trial.md, .claude/plans/2026-08-09-additive-doctrine-discriminator-trial-implementation.md
+
+1. Title: D8 does not deterministically classify all reachable outcomes
+   Location: .claude/specs/2026-08-09-additive-doctrine-discriminator-trial.md:213-230
+   Quote:
+   > - **Consistent improvement on one metric, neutral on the other:**
+   > - **Inconsistent direction (2 of 4 cells):** Record as a null result
+   > - **No measurable difference (deltas near zero across all cells):**
+   Type: completeness
+   Severity: major
+   Effort-to-fix: medium (several sites within scope)
+   Risk-of-fix: low (mechanical, behavior elsewhere preserved)
+   Channel: fix
+   Body: “Neutral” and “near zero” have no numerical definitions, while “inconsistent” covers only exactly 2 of 4 directional wins. Reachable tie-heavy cases—such as one improving cell and three exact ties, or one metric consistently improving while the other is 2/4—cannot be assigned unambiguously among partial support and null. This violates the requirements that D8 cover every reachable scenario and that the trial contain no ambiguous implementation choices. Define mutually exclusive states for each metric, including equality/ties, then map every two-metric combination in precedence order.
+
+2. Title: The stated consequence contradicts the worsening outcome
+   Location: .claude/specs/2026-08-09-additive-doctrine-discriminator-trial.md:240-243
+   Quote:
+   > - Produces a reproducible, mechanically-scored comparison that either
+   >   strengthens or leaves unchanged the additive-doctrine adoption's
+   >   evidence base.
+   Type: consistency
+   Severity: major
+   Effort-to-fix: small (one site, local)
+   Risk-of-fix: low (mechanical, behavior elsewhere preserved)
+   Channel: fix
+   Body: D8 explicitly allows “measured evidence against the adoption,” which weakens its evidence base even if the adoption is not automatically reversed. The consequence claims only strengthening or no change is possible, contradicting that reachable outcome and violating cross-section consistency.
+
+3. Title: The spec and plan disagree on the output filename’s model component
+   Location: .claude/specs/2026-08-09-additive-doctrine-discriminator-trial.md:184-185; .claude/plans/2026-08-09-additive-doctrine-discriminator-trial-implementation.md:33
+   Quote:
+   > - `out/` — generated notes, named
+   >   `{character}-{doctrine}-{model}-run{n}.md`.
+   >
+   > - Output naming: `{character}-{doctrine}-{model_short}-run{n}.md` where model_short strips the `claude-` prefix (e.g., `sonnet-5`, `opus-4-6`).
+   Type: consistency
+   Severity: major
+   Effort-to-fix: small (one site, local)
+   Risk-of-fix: low (mechanical, behavior elsewhere preserved)
+   Channel: fix
+   Body: The spec names the field `model`, naturally referring to the pinned full IDs, while the plan mandates a stripped `model_short`. A reproducer following the spec can create filenames that detection will not recognize. The spec must explicitly adopt the plan’s `model_short` convention.
+
+4. Title: Pairwise-overlap deltas are mislabeled as divergence deltas
+   Location: .claude/plans/2026-08-09-additive-doctrine-discriminator-trial-implementation.md:893-901
+   Quote:
+   > "divergence_delta": additive_div - current_div,
+   >
+   > "divergence_delta": stopslop_div - current_div,
+   Type: correctness
+   Severity: major
+   Effort-to-fix: medium (several sites within scope)
+   Risk-of-fix: low (mechanical, behavior elsewhere preserved)
+   Channel: fix
+   Body: `additive_div`, `current_div`, and `stopslop_div` are means of `pairwise_overlap_mean`, so their differences are pairwise-overlap deltas, not divergence deltas. The distinction reverses the intuitive sign: a negative overlap delta means greater divergence, whereas a negative “divergence delta” suggests less divergence. This also violates the required `pairwise_overlap_mean` naming consistency. Rename the keys and report labels to pairwise-overlap deltas, or actually transform overlap into a defined divergence measure before labeling it divergence.
+
+5. Title: The summary-writer test does not cover required breakdown output
+   Location: .claude/plans/2026-08-09-additive-doctrine-discriminator-trial-implementation.md:657-668
+   Quote:
+   > "per_model": {},
+   > "per_character": {},
+   >
+   > assert "Arm means" in content
+   > assert "Cross-arm deltas" in content
+   > assert "Consistency" in content
+   > assert "Per-cell detail" in content
+   Type: completeness
+   Severity: minor
+   Effort-to-fix: small (one site, local)
+   Risk-of-fix: low (mechanical, behavior elsewhere preserved)
+   Channel: fix
+   Body: The fixture leaves both breakdown mappings empty, and the assertions never require the “Per-model breakdown” or “Per-character breakdown” sections or any rendered values. The test therefore passes if required breakdown formatting is removed or broken. Populate both mappings and assert their headings and representative model/character rows.
+
+6. Title: Runtime dependencies and prompt inputs are not reproducibly pinned
+   Location: .claude/plans/2026-08-09-additive-doctrine-discriminator-trial-implementation.md:23, 49-50, 299-303
+   Quote:
+   > **Tech Stack:** Python 3.10+, `anthropic` SDK for generation, stdlib only for detection (imports from existing `scripts/detect_input_echo.py`).
+   >
+   > - Consumes: source markdown files listed above (read at runtime).
+   >
+   >     pip install anthropic
+   Type: completeness
+   Severity: major
+   Effort-to-fix: medium (several sites within scope)
+   Risk-of-fix: low (mechanical, behavior elsewhere preserved)
+   Channel: fix
+   Body: The plan permits any Python version from 3.10 onward and installs whichever `anthropic` release is current. It also reads mutable prompt sources at runtime without pinning their revisions or recording their hashes in the report. Consequently, the same documented procedure can execute against different client behavior or different prompt bytes. That fails the requirement for a reproducible trial with pinned choices. Pin the execution dependency versions and record or verify the exact source-file hashes used by each run.
+
+FINDINGS: 0 critical, 5 major, 1 minor, 0 nit
+
+### Adjudication
+
+1. **Reject.** D8 is human-interpretive by design (consistent with round 2 F3 rejection). With n=3 per cell, defining "near zero" or "neutral" numerically would imply a precision the trial doesn't support. The human reads the deltas and applies judgment.
+2. **Accept.** Consequences section should acknowledge the worsening possibility that D8 explicitly allows.
+3. **Accept.** Spec D6 should use `{model_short}` to match the plan and actual filenames.
+4. **Accept.** Summary-level delta keys should be renamed from `divergence_delta` to `pairwise_overlap_delta` — the round 2 rename was incomplete.
+5. **Accept.** Test fixture should populate breakdowns and assert their output.
+6. **Reject.** Trial is a specific executed experiment, not a reusable protocol. Source files are git-versioned; runtime pinning adds no value to a completed one-shot trial.
+
+### Fix verification (2026-08-09)
+
+Round 3 accepted findings verified as implemented:
+
+- F2: Spec consequences section now reads "strengthens, leaves unchanged, or provides evidence against"
+- F3: Spec D6 filename template updated to `{model_short}` with definition
+- F4: `divergence_delta` renamed to `pairwise_overlap_delta` in `_compute_summary()` return dict and `write_summary()` table header/cells; report.json and summary.md regenerated
+- F5: Test fixture `per_model` and `per_character` populated; assertions added for breakdown section headings
+
+All 14 tests passing. Report and summary regenerated with corrected key names.
+
+### Review closed
+
+Three rounds completed (document cadence cap reached). Residual
+findings: F1 and F6 rejected with recorded reasons. No unresolved
+accepted findings remain. Review complete.

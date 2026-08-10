@@ -202,18 +202,30 @@ def test_write_summary_creates_file(tmp_path):
         },
         "summary": {
             "additive_vs_current": {
-                "echo_delta": -0.05, "divergence_delta": -0.05,
+                "echo_delta": -0.05, "pairwise_overlap_delta": -0.05,
                 "echo_consistent_wins": "1/1",
                 "pairwise_overlap_consistent_wins": "1/1",
             },
-            "stopslop_vs_current": {"echo_delta": 0.0, "divergence_delta": 0.0},
+            "stopslop_vs_current": {"echo_delta": 0.0, "pairwise_overlap_delta": 0.0},
             "arm_means": {
                 "current": {"echo": 0.2, "pairwise_overlap": 0.3},
                 "additive": {"echo": 0.15, "pairwise_overlap": 0.25},
                 "stopslop": {"echo": 0.2, "pairwise_overlap": 0.3},
             },
-            "per_model": {},
-            "per_character": {},
+            "per_model": {
+                "sonnet-5": {
+                    "current": {"echo": 0.2, "pairwise_overlap": 0.3},
+                    "additive": {"echo": 0.15, "pairwise_overlap": 0.25},
+                    "stopslop": {"echo": 0.2, "pairwise_overlap": 0.3},
+                },
+            },
+            "per_character": {
+                "nadja": {
+                    "current": {"echo": 0.2, "pairwise_overlap": 0.3},
+                    "additive": {"echo": 0.15, "pairwise_overlap": 0.25},
+                    "stopslop": {"echo": 0.2, "pairwise_overlap": 0.3},
+                },
+            },
         },
     }
     out = str(tmp_path / "summary.md")
@@ -223,4 +235,6 @@ def test_write_summary_creates_file(tmp_path):
     assert "Arm means" in content
     assert "Cross-arm deltas" in content
     assert "Consistency" in content
+    assert "Per-model breakdown" in content
+    assert "Per-character breakdown" in content
     assert "Per-cell detail" in content

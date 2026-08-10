@@ -10,7 +10,7 @@
 
 ## Cross-arm deltas (vs current)
 
-| Comparison | Echo delta | Divergence delta |
+| Comparison | Echo delta | Pairwise overlap delta |
 |---|---|---|
 | additive | -0.0051 | +0.0001 |
 | stopslop | +0.0114 | -0.0349 |

@@ -400,13 +400,13 @@
   "summary": {
     "additive_vs_current": {
       "echo_delta": -0.005127473297482532,
-      "divergence_delta": 9.116833546818359e-05,
+      "pairwise_overlap_delta": 9.116833546818359e-05,
       "echo_consistent_wins": "3/4",
       "pairwise_overlap_consistent_wins": "2/4"
     },
     "stopslop_vs_current": {
       "echo_delta": 0.011388594541419272,
-      "divergence_delta": -0.03493762482785878
+      "pairwise_overlap_delta": -0.03493762482785878
     },
     "arm_means": {
       "current": {
