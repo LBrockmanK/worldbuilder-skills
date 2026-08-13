@@ -4,8 +4,9 @@ title: worldvault Template & worldbuilder-setup Skill Implementation Plan
 description: Implementation plan for building the worldvault Obsidian vault template and the worldbuilder-setup skill that copies it into new projects.
 tags: [complete]
 date: 2026-05-30
-timestamp: 2026-05-30T17:10
-resources: []
+timestamp: 2026-08-13T19:27Z
+resources:
+- "[[2026-05-28-vault-template-design]]"
 ---
 # worldvault Template & worldbuilder-setup Skill Implementation Plan
 

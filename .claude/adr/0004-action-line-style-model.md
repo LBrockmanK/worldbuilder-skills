@@ -4,8 +4,9 @@ title: Screenwriting action-line convention as primary writing style model
 description: Decision to adopt the screenwriting action-line convention as the primary style model for behavioral descriptions, with Orwell's rules retained as a vocabulary co-anchor.
 tags: [complete]
 date: 2026-06-15
-timestamp: 2026-06-15T17:10
-resources: []
+timestamp: 2026-08-13T19:28Z
+resources:
+- "[[Anti Slop Research Results]]"
 ---
 # Screenwriting action-line convention as primary writing style model
 

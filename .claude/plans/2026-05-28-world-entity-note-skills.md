@@ -4,8 +4,9 @@ title: World Entity Note Skills Implementation Plan
 description: Implementation plan for adding location and faction blueprint skills and constraint-first concept note guidance to the lorebook skill.
 tags: [complete]
 date: 2026-05-28
-timestamp: 2026-05-28T17:10
-resources: []
+timestamp: 2026-08-13T19:27Z
+resources:
+- "[[2026-05-28-world-entity-notes-design]]"
 ---
 # World Entity Note Skills Implementation Plan
 

@@ -9,13 +9,16 @@ description: 'Spec for three coordinated changes to the character generation pip
 tags:
 - complete
 date: 2026-07-31
-timestamp: 2026-07-31T01:54Z
+timestamp: 2026-08-13T19:27Z
 resources:
 - "[[2026-07-30-convergence-validation-experiment-findings-and-graduation-assessment]]"
 - "[[2026-07-30-resource-review-aeon-s-notebook-decision-engine-and-helpful-default-convergence]]"
 - "[[2026-07-25-resource-review-hoplight-a-webnovel-author-s-ai-writing-guide-and-character-builder-v3]]"
 - "[[2026-07-11-causal-character-writing-for-llm-roleplay-friction-engines-and-trait-word-poisoning]]"
 - "[[2026-06-03-blueprint-rework-design]]"
+- "[[0001-three-phase-architecture]]"
+output:
+- "[[2026-07-31-review-character-generation-pipeline-v2-spec-and-plan]]"
 ---
 
 # Character Generation Pipeline v2 — Input Restructuring, Doctrine Additions, and Grader Agent

@@ -4,8 +4,9 @@ title: Wide phase is platform-agnostic; only the Export phase targets a specific
 description: Decision that Phases 1 and 2 produce platform-agnostic notes and only the Export phase knows the target system's field names and format.
 tags: [complete]
 date: 2026-06-15
-timestamp: 2026-06-15T17:10
-resources: []
+timestamp: 2026-08-13T19:27Z
+resources:
+- "[[0002-seed-as-target-format]]"
 ---
 # Wide phase is platform-agnostic; only the Export phase targets a specific system
 

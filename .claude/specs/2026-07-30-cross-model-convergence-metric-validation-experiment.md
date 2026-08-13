@@ -7,9 +7,11 @@ description: 'Validation experiment for the cross-model convergence check (METHO
 tags:
 - complete
 date: 2026-07-30
-timestamp: 2026-07-30T13:24Z
+timestamp: 2026-08-13T19:27Z
 resources:
 - '[[2026-07-23-writing-doctrine-blind-trial-results-viralys-nadja]]'
+output:
+- "[[2026-07-30-convergence-validation-experiment-implementation]]"
 ---
 
 # Cross-model convergence metric validation experiment

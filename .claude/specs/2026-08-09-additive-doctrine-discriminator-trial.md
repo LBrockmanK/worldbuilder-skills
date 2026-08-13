@@ -8,10 +8,12 @@ description: Trial using graduated detection components (input-echo, within-mode
 tags:
 - complete
 date: 2026-08-09
-timestamp: 2026-08-10T01:20Z
+timestamp: 2026-08-13T19:27Z
 resources:
 - "[[2026-07-23-writing-doctrine-blind-trial-results-viralys-nadja]]"
 - "[[2026-07-26-standing-writing-assessment-methodology-a-b-trial-suite-and-production-self-review-battery]]"
+output:
+- "[[2026-08-09-review-additive-doctrine-discriminator-trial]]"
 ---
 
 # Additive-Doctrine Discriminator Trial

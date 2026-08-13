@@ -4,8 +4,10 @@ title: Restructure Discussion Notes — 2026-05
 description: Working notes from design discussions capturing decisions on platform decoupling, note structure, and pipeline restructuring ahead of formal ADRs.
 tags: [complete]
 date: 2026-06-15
-timestamp: 2026-06-15T17:10
+timestamp: 2026-08-13T19:27Z
 resources: []
+output:
+- "[[2026-06-08-note-type-restructure]]"
 ---
 # Restructure Discussion Notes — 2026-05
 

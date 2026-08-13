@@ -4,8 +4,10 @@ title: "Design: World Entity Note Skills — Location, Faction, Concept Depth"
 description: Design applying the character blueprint's behavioral-specification reframing to location, faction, and concept notes.
 tags: [complete]
 date: 2026-05-28
-timestamp: 2026-05-28T17:10
+timestamp: 2026-08-13T19:27Z
 resources: []
+output:
+- "[[2026-05-28-world-entity-note-skills]]"
 ---
 # Design: World Entity Note Skills — Location, Faction, Concept Depth
 

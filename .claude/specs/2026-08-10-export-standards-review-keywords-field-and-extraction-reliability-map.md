@@ -8,10 +8,12 @@ description: Review of Hoplight and export-format standards (CCv3, ST worldinfo,
 tags:
 - complete
 date: 2026-08-10
-timestamp: 2026-08-10T02:38Z
+timestamp: 2026-08-13T19:27Z
 resources:
 - "[[2026-07-25-resource-review-hoplight-a-webnovel-author-s-ai-writing-guide-and-character-builder-v3]]"
 - "[[0003-platform-decoupling]]"
+output:
+- "[[2026-08-10-review-export-standards-review-spec]]"
 ---
 
 # Export-Standards Review: Keywords Field and Extraction Reliability Map

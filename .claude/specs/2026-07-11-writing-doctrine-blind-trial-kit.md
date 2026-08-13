@@ -7,10 +7,12 @@ description: 'Portable kit a worldbuilding project runs on one pending character
 tags:
 - complete
 date: 2026-07-11
-timestamp: 2026-07-11T16:05Z
+timestamp: 2026-08-13T19:27Z
 resources:
 - '[[2026-07-11-causal-character-writing-for-llm-roleplay-friction-engines-and-trait-word-poisoning]]'
 - https://github.com/hardikpandya/stop-slop/
+output:
+- "[[2026-07-11-writing-doctrine-blind-trial-kit-build]]"
 ---
 
 # Writing-doctrine blind-trial kit

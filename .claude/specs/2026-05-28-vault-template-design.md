@@ -4,8 +4,10 @@ title: "Design: worldvault Template and worldbuilder-setup Skill"
 description: Design for the pre-configured worldvault Obsidian vault template and the worldbuilder-setup skill that installs it into new projects.
 tags: [complete]
 date: 2026-05-28
-timestamp: 2026-05-28T17:10
+timestamp: 2026-08-13T19:27Z
 resources: []
+output:
+- "[[2026-05-30-worldvault-and-setup-skill]]"
 ---
 # Design: worldvault Template and worldbuilder-setup Skill
 

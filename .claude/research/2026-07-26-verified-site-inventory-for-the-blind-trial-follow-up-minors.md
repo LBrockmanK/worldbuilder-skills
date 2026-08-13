@@ -7,8 +7,10 @@ description: Line-accurate inventory of the seven follow-up defect sites across 
 tags:
 - complete
 date: 2026-07-26
-timestamp: 2026-07-30T01:58Z
+timestamp: 2026-08-13T19:27Z
 resources: []
+output:
+- "[[2026-07-26-blind-trial-follow-up-minors-filler-lead-adverb-label-slop-checklist-kin-engine-complement-rule-scan-collapse]]"
 ---
 
 # Verified site inventory for the blind-trial follow-up minors

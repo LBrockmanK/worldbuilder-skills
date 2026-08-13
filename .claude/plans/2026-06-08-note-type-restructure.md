@@ -4,8 +4,9 @@ title: Note Type Restructure Implementation Plan
 description: Implementation plan for rewriting all five non-character note type skills under the Design Notes / Facts / Function framework with a universal brief frontmatter field.
 tags: [complete]
 date: 2026-06-08
-timestamp: 2026-06-08T17:10
-resources: []
+timestamp: 2026-08-13T19:27Z
+resources:
+- "[[restructure-notes]]"
 ---
 # Note Type Restructure Implementation Plan
 

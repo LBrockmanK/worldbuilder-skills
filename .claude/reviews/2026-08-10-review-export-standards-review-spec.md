@@ -4,9 +4,9 @@ title: Review — Export-Standards Review Spec
 description: Adversarial review of the export-standards review spec (keywords field
   and extraction reliability map).
 tags:
-- agent-ready
+- complete
 date: 2026-08-10
-timestamp: 2026-08-10T02:57Z
+timestamp: 2026-08-13T19:11Z
 resources: []
 ---
 

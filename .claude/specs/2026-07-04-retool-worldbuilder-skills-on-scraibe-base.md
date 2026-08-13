@@ -7,8 +7,10 @@ description: Strip note-taking/vault management from worldbuilder skills; scraib
 tags:
 - complete
 date: 2026-07-04
-timestamp: 2026-07-09T23:06Z
+timestamp: 2026-08-13T19:27Z
 resources: []
+output:
+- "[[2026-07-05-retool-implementation-worldbuilder-on-scraibe]]"
 ---
 
 # Retool worldbuilder-skills on scraibe base

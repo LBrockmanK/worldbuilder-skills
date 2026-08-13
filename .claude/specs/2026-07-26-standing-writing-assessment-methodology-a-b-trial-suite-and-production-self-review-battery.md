@@ -9,11 +9,13 @@ description: 'Two-part assessment system: a standing A/B testing suite (trials/M
 tags:
 - complete
 date: 2026-07-26
-timestamp: 2026-07-26T15:25Z
+timestamp: 2026-08-13T19:27Z
 resources:
 - '[[2026-07-17-resource-review-world-forge-multi-agent-world-pipeline]]'
 - '[[2026-07-25-resource-review-hoplight-a-webnovel-author-s-ai-writing-guide-and-character-builder-v3]]'
 - '[[2026-07-23-writing-doctrine-blind-trial-results-viralys-nadja]]'
+output:
+- "[[2026-07-26-author-the-standing-writing-assessment-methodology-document]]"
 ---
 
 # Standing writing-assessment methodology: A/B trial suite and production self-review battery
