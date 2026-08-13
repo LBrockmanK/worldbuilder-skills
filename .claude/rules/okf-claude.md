@@ -29,6 +29,7 @@ Field types: `text`, `number`, `checkbox` (boolean), `date`, `datetime`, `list`,
 - **reference**
 - **reflection**
 - **research** — Planned investigation of external material: goals, gathered results, consolidation
+- **review** — Adversarial review record for one plan or one ad-hoc review: rounds with adjudications, in dispatch order, final pass last
 - **spec**
 
 ## Status tags (exactly one, in `tags`)

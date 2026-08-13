@@ -66,6 +66,11 @@
       "fields": {},
       "template": "## Goals\n\n## Results\n\n## Consolidation\n",
       "description": "Planned investigation of external material: goals, gathered results, consolidation"
+    },
+    "review": {
+      "fields": {},
+      "template": "## Rounds\n",
+      "description": "Adversarial review record for one plan or one ad-hoc review: rounds with adjudications, in dispatch order, final pass last"
     }
   },
   "tags": {
