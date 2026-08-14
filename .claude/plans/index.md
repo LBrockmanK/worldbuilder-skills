@@ -15,3 +15,4 @@
 * [Additive-Doctrine Discriminator Trial Implementation](2026-08-09-additive-doctrine-discriminator-trial-implementation.md) - Implementation plan for the discriminator trial: prompt assembly, API-driven generation, detection and reporting. 3 tasks.
 * [Export-Standards Review Implementation](2026-08-10-export-standards-review-implementation.md) - Implementation plan for the keywords field on concept notes and the extraction reliability map. 2 tasks.
 * [Pipeline quality trial implementation](2026-08-13-pipeline-quality-trial-implementation.md) - Implementation plan for the pipeline quality trial: fail-check gate, input restructuring, decomposition step, blind comparison against baseline
+* [Writing style trial implementation](2026-08-14-writing-style-trial-implementation.md) - Implementation plan for the writing style trial: STE-100 strict, STE-100 loose, and BLUF conditions against baseline

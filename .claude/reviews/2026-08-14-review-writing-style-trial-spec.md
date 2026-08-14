@@ -6,7 +6,7 @@ description: Adversarial review of the writing style trial spec (STE-100 and sem
 tags:
 - agent-ready
 date: 2026-08-14
-timestamp: 2026-08-14T02:20Z
+timestamp: 2026-08-14T02:34Z
 resources: []
 ---
 
@@ -159,4 +159,162 @@ FINDINGS: 0 critical, 10 major, 0 minor, 0 nit
 8. **ACCEPT.** Soften the negative-result language. A blanket failure could reflect input quality or the generation pipeline, not the style anchors.
 9. **ACCEPT.** Simplify: a graduating condition replaces writing-style.md as-is. No untested hybrid. Retaining the ban list alongside is a separate follow-up decision.
 10. **ACCEPT in part.** A graduating style is adopted for Soul initially. Extension to other sections is a separate decision.
+
+## Round 2 — digest `ca2ee2b0…`, anchor `fd4541d0` (dirty), tokens 26808, 2026-08-13T21:33:37-05:00, 171s
+
+Anchor: fd4541d0e6a60e438d4507c6baf623ed8f93cab1 (dirty tree)
+Artifact digest: ca2ee2b0c258a524370539f4b5df0be65876a6f5425207a3aec0999f58659bcf (sha256 over the exact scoped bytes as delivered)
+Scope: .claude/plans/2026-08-14-writing-style-trial-implementation.md
+
+1. Title: The pinned model and temperature are documented but not applied during generation
+   Anchor: fd4541d0e6a60e438d4507c6baf623ed8f93cab1 | ca2ee2b0c258a524370539f4b5df0be65876a6f5425207a3aec0999f58659bcf | scoped plan
+   Location: .claude/plans/2026-08-14-writing-style-trial-implementation.md:121
+   Quote: “- Pinned model and temperature (same as previous trial: `claude-opus-4-6`, temperature `1.0`)”
+   Type: completeness
+   Severity: major
+   Effort-to-fix: medium
+   Risk-of-fix: low
+   Channel: fix
+   Body: Task 1 only tells the implementer to document these settings. Task 2 neither consumes the protocol nor provides an invocation that applies the model and temperature to each run. Consequently, D1’s identical-model requirement is not operationalized, and an executor can generate outputs using whatever runtime settings happen to be active.
+
+2. Title: The test-character check does not establish that the Design Notes accurately reflect the intended portrayal
+   Anchor: fd4541d0e6a60e438d4507c6baf623ed8f93cab1 | ca2ee2b0c258a524370539f4b5df0be65876a6f5425207a3aec0999f58659bcf | scoped plan
+   Location: .claude/plans/2026-08-14-writing-style-trial-implementation.md:62
+   Quote: “Use Nadja. Copy Design Notes from `trials/2026-07-convergence-retest/nadja-cleaned.md` to `trials/2026-08-writing-style/inputs/design-notes.md`. Review the notes for quality: they should contain clear facts, not vague implications. If the notes need cleanup, clean them before copying. Do not invent new facts.”
+   Type: completeness
+   Severity: major
+   Effort-to-fix: small
+   Risk-of-fix: low
+   Channel: fix
+   Body: D2 requires known-good notes that accurately reflect the intended portrayal. Checking only whether facts are “clear” does not verify factual or portrayal accuracy. “If the notes need cleanup, clean them” also leaves the permitted edits and completion standard undefined, violating the no-vague-instructions criterion.
+
+3. Title: The generation tasks omit D3’s required approximate entry count
+   Anchor: fd4541d0e6a60e438d4507c6baf623ed8f93cab1 | ca2ee2b0c258a524370539f4b5df0be65876a6f5425207a3aec0999f58659bcf | scoped plan
+   Location: .claude/plans/2026-08-14-writing-style-trial-implementation.md:149
+   Quote: “Read the baseline style file (`conditions/style-baseline.md`) as the writing style instruction. Read the Design Notes, framework, and generation rules. Generate the Soul section for Nadja following the standard generation flow (deslop/deframe, routing, 3-variant spread with fact-to-manifestation, synthesis). Save the synthesized entries to `out/condition-0.md`. Include variant spreads as a second section for reference.”
+   Type: completeness
+   Severity: major
+   Effort-to-fix: small
+   Risk-of-fix: low
+   Channel: fix
+   Body: D3 specifies approximately 8–12 synthesized entries per condition. Neither this step nor the subsequent condition steps state that range or require validation of it, so conforming execution can produce materially different output sizes.
+
+4. Title: The strict STE-100 file changes the approved-word rule and adds unapproved constraints
+   Anchor: fd4541d0e6a60e438d4507c6baf623ed8f93cab1 | ca2ee2b0c258a524370539f4b5df0be65876a6f5425207a3aec0999f58659bcf | scoped plan
+   Location: .claude/plans/2026-08-14-writing-style-trial-implementation.md:79
+   Quote: “1. Use approved words only. Where a simpler word exists, use it. No jargon, no literary vocabulary.
+2. Sentences must not exceed 20 words (procedural/instructional) or 25 words (descriptive).
+3. Use active voice. Name the subject.
+4. One instruction or one idea per sentence.
+5. No figurative language. No metaphor, no simile, no personification.
+6. Present tense for current state. Past tense only for completed events.
+7. Write as if producing an aircraft maintenance manual entry. Each sentence is a discrete behavioral instruction an AI must follow.
+8. No em-dashes. Use periods to separate ideas.
+9. No hedging words (perhaps, might, somewhat, rather, quite).
+10. Every sentence must describe something the AI can act on in a scene.”
+   Type: consistency
+   Severity: major
+   Effort-to-fix: small
+   Risk-of-fix: low
+   Channel: fix
+   Body: D1 limits the approved-word rule to cases where an approved equivalent exists. The plan instead says “approved words only” unconditionally. It also introduces no-jargon, no-literary-vocabulary, no-em-dash, no-hedging, and universal scene-actionability constraints that D1 does not define for Condition A. These additions create a different experimental condition, so results cannot be attributed to the specified strict STE-100 treatment.
+
+5. Title: The BLUF condition adds unrelated style restrictions
+   Anchor: fd4541d0e6a60e438d4507c6baf623ed8f93cab1 | ca2ee2b0c258a524370539f4b5df0be65876a6f5425207a3aec0999f58659bcf | scoped plan
+   Location: .claude/plans/2026-08-14-writing-style-trial-implementation.md:112
+   Quote: “1. Lead with the observable behavior. The first sentence states what the character does.
+2. Follow with context. Why, when, or how the behavior manifests comes after the behavior itself.
+3. No entry may begin with backstory, emotional framing, atmosphere, or implication before stating the behavior.
+4. No em-dashes. Use periods to separate ideas.
+5. Every sentence must describe something the AI can act on in a scene.”
+   Type: consistency
+   Severity: major
+   Effort-to-fix: small
+   Risk-of-fix: low
+   Channel: fix
+   Body: D1 defines Condition C as a structural intervention: observable behavior first, supporting context afterward. Rules 4 and 5 independently constrain punctuation and every sentence’s content. Because those restrictions are not part of the specified BLUF condition, this file confounds BLUF ordering with additional style changes.
+
+6. Title: The blind key is stored and committed beside the reviewer document without being sealed
+   Anchor: fd4541d0e6a60e438d4507c6baf623ed8f93cab1 | ca2ee2b0c258a524370539f4b5df0be65876a6f5425207a3aec0999f58659bcf | scoped plan
+   Location: .claude/plans/2026-08-14-writing-style-trial-implementation.md:184
+   Quote: “Randomly assign letter codes W, X, Y, Z to the four conditions (0, A, B, C). Write the mapping to `results/blind-key.md`. Use a genuinely random assignment, not alphabetical.”
+   Type: correctness
+   Severity: major
+   Effort-to-fix: medium
+   Risk-of-fix: low
+   Channel: fix
+   Body: D4 requires a sealed key. The plan supplies no access separation, sealing mechanism, or instruction preventing the reviewer from opening `results/blind-key.md`; it then commits that file in the same results directory as the review document. Random labels alone do not provide blinding when their mapping is immediately accessible.
+
+7. Title: The reviewer form omits D4’s required general-impression questions
+   Anchor: fd4541d0e6a60e438d4507c6baf623ed8f93cab1 | ca2ee2b0c258a524370539f4b5df0be65876a6f5425207a3aec0999f58659bcf | scoped plan
+   Location: .claude/plans/2026-08-14-writing-style-trial-implementation.md:190
+   Quote: “Write `results/blinded-review.md`:
+- Include the original Design Notes at the top for reference
+- For each letter code, include only the synthesized entries (not variant spreads)
+- Label entries sequentially within each group (W-1, W-2, etc.)
+- After each group, add a space for general impression:
+
+```markdown
+**General impression:**
+
+```”
+   Type: completeness
+   Severity: major
+   Effort-to-fix: small
+   Risk-of-fix: low
+   Channel: fix
+   Body: D4 says each impression should address whether the output is an actionable functional instruction set and whether most of it requires rewriting. A blank “General impression” field does not ask either question, so reviewers can provide impressions that do not evaluate the specified criteria.
+
+8. Title: The plan moves the absolute quality decision away from the blind reviewer
+   Anchor: fd4541d0e6a60e438d4507c6baf623ed8f93cab1 | ca2ee2b0c258a524370539f4b5df0be65876a6f5425207a3aec0999f58659bcf | scoped plan
+   Location: .claude/plans/2026-08-14-writing-style-trial-implementation.md:221
+   Quote: “After the human reviewer provides general impressions for each letter group and a ranking, unblind the results. Write `results/trial-data.md` with:
+- The blind key mapping
+- Each condition's general impression (quoted from reviewer)
+- The ranking (best to worst)
+- The adoption decision: is the best condition good enough to adopt for Soul? If yes, which condition. If no, record as negative result.”
+   Type: correctness
+   Severity: major
+   Effort-to-fix: medium
+   Risk-of-fix: low
+   Channel: fix
+   Body: Under D5, the reviewer must state whether the best condition is good enough or all conditions fail. Here, the reviewer supplies only impressions and ranking; the adoption decision is made while recording results after unblinding. Knowing condition identities can bias the absolute quality gate and does not implement the specified reviewer decision.
+
+9. Title: The adoption rule omits clear superiority and the simpler-condition tie-break
+   Anchor: fd4541d0e6a60e438d4507c6baf623ed8f93cab1 | ca2ee2b0c258a524370539f4b5df0be65876a6f5425207a3aec0999f58659bcf | scoped plan
+   Location: .claude/plans/2026-08-14-writing-style-trial-implementation.md:225
+   Quote: “- The adoption decision: is the best condition good enough to adopt for Soul? If yes, which condition. If no, record as negative result.”
+   Type: completeness
+   Severity: major
+   Effort-to-fix: small
+   Risk-of-fix: low
+   Channel: fix
+   Body: D5 permits adoption when a condition is both clearly better and good enough, and says the simpler condition wins when multiple conditions are comparable. The quoted binary test considers only absolute adequacy. It can therefore adopt a marginally ranked winner or choose the wrong member of a comparable group.
+
+10. Title: No task implements a successful condition’s required Soul-only adoption
+   Anchor: fd4541d0e6a60e438d4507c6baf623ed8f93cab1 | ca2ee2b0c258a524370539f4b5df0be65876a6f5425207a3aec0999f58659bcf | scoped plan
+   Location: .claude/plans/2026-08-14-writing-style-trial-implementation.md:212
+   Quote: “**Files:**
+- Create: `trials/2026-08-writing-style/results/trial-data.md`”
+   Type: completeness
+   Severity: major
+   Effort-to-fix: medium
+   Risk-of-fix: medium
+   Channel: fix
+   Body: D5 and the spec’s consequences require a graduating condition to replace the Soul generation style exactly as tested. The final task only creates a result record; no conditional task changes the Soul generation rules or installs the winning instruction. Thus a positive trial can finish without carrying out a required spec decision.
+
+FINDINGS: 0 critical, 10 major, 0 minor, 0 nit
+
+### Round 2 adjudication (plan)
+
+1. **ACCEPT.** Add note that all conditions generate in the same session with the same model.
+2. **REJECT.** Best-effort step; the user will judge output quality directly.
+3. **ACCEPT.** Add "aim for 8-12 entries" to each generation step.
+4. **ACCEPT in part.** Fix "approved words only" to match spec ("where an approved equivalent exists"). Keep em-dash ban and actionability as legitimate STE-100 rules.
+5. **ACCEPT.** Remove rules 4 and 5 from BLUF file — em-dash ban and scene-actionability are not BLUF rules and confound the test.
+6. **ACCEPT.** Add instruction that the reviewer doesn’t access blind-key.md until scoring is complete.
+7. **ACCEPT.** Add D4’s two questions to the review form.
+8. **ACCEPT.** Reviewer provides ranking and adoption judgment while still blind.
+9. **ACCEPT.** Add tie-break from spec.
+10. **ACCEPT.** Add a conditional adoption step to Task 4.
 
