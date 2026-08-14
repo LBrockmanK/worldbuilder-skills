@@ -4,9 +4,9 @@ title: Writing style trial implementation
 description: 'Implementation plan for the writing style trial: STE-100 strict, STE-100
   loose, and BLUF conditions against baseline'
 tags:
-- human-ready
+- complete
 date: 2026-08-14
-timestamp: 2026-08-14T02:36Z
+timestamp: 2026-08-14T02:37Z
 resources: []
 ---
 
