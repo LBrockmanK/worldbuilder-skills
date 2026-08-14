@@ -4,9 +4,9 @@ title: 'Review: pipeline quality trial spec'
 description: Adversarial review of the pipeline quality trial spec (fail-check gate,
   input restructuring, decomposition step)
 tags:
-- agent-ready
+- complete
 date: 2026-08-13
-timestamp: 2026-08-13T22:08Z
+timestamp: 2026-08-14T02:06Z
 resources: []
 ---
 

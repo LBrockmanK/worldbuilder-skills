@@ -4,9 +4,9 @@ title: Pipeline quality trial implementation
 description: 'Implementation plan for the pipeline quality trial: fail-check gate,
   input restructuring, decomposition step, blind comparison against baseline'
 tags:
-- complete
+- abandoned
 date: 2026-08-13
-timestamp: 2026-08-13T22:21Z
+timestamp: 2026-08-14T02:06Z
 resources: []
 ---
 

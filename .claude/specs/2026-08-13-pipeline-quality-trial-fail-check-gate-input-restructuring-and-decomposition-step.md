@@ -5,9 +5,9 @@ title: Pipeline quality trial — fail-check gate, input restructuring, and deco
 description: Experiment comparing three pipeline improvement approaches for reducing
   echo and slop in character note generation
 tags:
-- complete
+- abandoned
 date: 2026-08-13
-timestamp: 2026-08-13T21:57Z
+timestamp: 2026-08-14T02:06Z
 resources: []
 ---
 
