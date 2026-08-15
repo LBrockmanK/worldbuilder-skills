@@ -4,62 +4,89 @@
 completed vertical-slice test; the remaining 33 need source ingestion
 batched by cast group.
 
+## Status key
+
+- **available** — ready for ingestion, not claimed
+- **in-progress (session)** — claimed by a session; other sessions skip
+- **extracted** — source ingestion complete, card not yet written
+- **card-done** — card written, review not yet run
+- **review-done** — review gate passed, card finalized
+- **done** — complete, no further work needed
+
+A session claims a character by changing its status to
+`in-progress` and committing. On session close, update to the
+appropriate completion status.
+
 ## Ingestion batches
 
 ### Batch 1: Noble household (Adeline's family)
 
-- **Adeline** — DONE (vertical-slice test, review applied)
-- **Eiland** — noble, townsfolk, dateable. Brother, shares the Manor.
-- **Elsie** — noble, townsfolk. Great-aunt figure, retired opera singer.
+| Character | Status | Tags | Notes |
+|-----------|--------|------|-------|
+| Adeline | done | noble, dateable | Vertical-slice test, review applied |
+| Eiland | available | noble, dateable | Brother, shares the Manor |
+| Elsie | available | noble | Great-aunt figure, retired opera singer |
 
 ### Batch 2: Friend trio + close circle
 
-- **Celine** — townsfolk, dateable, general_store_family
-- **Reina** — townsfolk, dateable, inn_family
-- **Nora** — townsfolk, dateable, general_store_family
+| Character | Status | Tags | Notes |
+|-----------|--------|------|-------|
+| Celine | available | dateable, general_store_family | |
+| Reina | available | dateable, inn_family | |
+| Nora | available | dateable, general_store_family | |
 
 ### Batch 3: Inn family
 
-- **Josephine** — townsfolk, inn_family
-- **Hemlock** — townsfolk, inn_family
-- **Luc** — townsfolk, child, inn_family
-- **Maple** — townsfolk, child, inn_family
+| Character | Status | Tags | Notes |
+|-----------|--------|------|-------|
+| Josephine | available | inn_family | |
+| Hemlock | available | inn_family | |
+| Luc | available | child, inn_family | |
+| Maple | available | child, inn_family | |
 
 ### Batch 4: Trade families
 
-- **Landen** — townsfolk, carpenter_family
-- **Ryis** — townsfolk, dateable, carpenter_family
-- **Olric** — townsfolk, forge_family
-- **March** — townsfolk, dateable, forge_family
-- **Dell** — townsfolk, child, general_store_family
-- **Holt** — townsfolk, general_store_family
+| Character | Status | Tags | Notes |
+|-----------|--------|------|-------|
+| Landen | available | carpenter_family | |
+| Ryis | available | dateable, carpenter_family | |
+| Olric | available | forge_family | |
+| March | available | dateable, forge_family | |
+| Dell | available | child, general_store_family | |
+| Holt | available | general_store_family | |
 
 ### Batch 5: Dateable townsfolk (remaining)
 
-- **Balor** — townsfolk, dateable, vendor
-- **Errol** — townsfolk, dateable
-- **Hayden** — townsfolk, dateable
-- **Juniper** — townsfolk, dateable
-- **Terithia** — townsfolk, dateable
-- **Valen** — townsfolk, dateable
+| Character | Status | Tags | Notes |
+|-----------|--------|------|-------|
+| Balor | available | dateable, vendor | |
+| Errol | available | dateable | |
+| Hayden | available | dateable | |
+| Juniper | available | dateable | |
+| Terithia | available | dateable | |
+| Valen | available | dateable | |
 
 ### Batch 6: Vendors and supporting cast
 
-- **Darcy** — townsfolk, vendor
-- **Louis** — townsfolk, vendor
-- **Merri** — townsfolk, vendor
-- **Stillwell** — townsfolk, vendor
-- **Taliferro** — townsfolk, vendor
-- **Vera** — townsfolk, vendor
-- **Wheedle** — townsfolk, vendor
-- **Zorel** — townsfolk, vendor
+| Character | Status | Tags | Notes |
+|-----------|--------|------|-------|
+| Darcy | available | vendor | |
+| Louis | available | vendor | |
+| Merri | available | vendor | |
+| Stillwell | available | vendor | |
+| Taliferro | available | vendor | |
+| Vera | available | vendor | |
+| Wheedle | available | vendor | |
+| Zorel | available | vendor | |
 
 ### Batch 7: Special characters
 
-- **Caldarus** — townsfolk, draconic. Arrives during game (Story Beat, not Relationship for pre-game characters).
-- **Seridia** — townsfolk, draconic. Arrives during game (Story Beat, not Relationship for pre-game characters).
-- **Dozy** — animal
-- **Henrietta** — animal
+| Character | Status | Tags | Notes |
+|-----------|--------|------|-------|
+| Caldarus | available | draconic | Arrives during game — Story Beat, not Relationship for pre-game characters |
+| Seridia | available | draconic | Arrives during game — Story Beat, not Relationship for pre-game characters |
+| Dozy | available | animal | |
+| Henrietta | available | animal | |
 
 ## World info sources
 
