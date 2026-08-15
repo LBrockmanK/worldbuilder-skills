@@ -83,8 +83,8 @@ Maintained alongside the export skill. See spec:
 | `characters[].lastName` | Structural | Character note filename |
 | `characters[].type` | Structural | Cast plan in `project/plan.md` (Major="main", Supporting="side") |
 | `characters[].role` | Derived | Agent derives from character note content (position, relationships, narrative function) |
-| `characters[].baseProfile` | Derived | Agent assembles from character note Foundation, Behavioral Descriptions, Relationships, Relationship Behavior, and Storylines sections per `card-assembly.md` |
-| `characters[].appearance` | Structural | Character note Appearance section (verbatim or lightly condensed) |
+| `characters[].baseProfile` | Derived | Agent assembles from character note Background, Body, Soul, Relationships, and Story Beats sections per `card-assembly.md`; Story Beats are transformed to possibility-style framing in the Future Storylines subsection |
+| `characters[].appearance` | Structural | Character note Body preamble (verbatim or lightly condensed) |
 | `characters[].availableFromDay` | Derived | Agent assigns based on narrative logic and introduction note timing |
 | `characters[].spriteSets[].name` | Constructed | Export-time convention ("default" for casual, descriptive name for others) |
 | `characters[].spriteSets[].description` | Derived | Agent writes art generation context from character note Appearance section |
@@ -127,7 +127,7 @@ and lore data already covers.
 | `mes_example` | Derived | Character note Influence Thresholds (reformatted as example dialogue) |
 | `system_prompt` | Derived | `project/direction.md` (requires target-specific transformation, not verbatim) |
 | `post_history_instructions` | Constructed | No current note source |
-| `alternate_greetings[]` | Constructed | No current note source |
+| `alternate_greetings[]` | Derived | Character note Story Beats scenario prose, adapted to greeting format; trigger conditions degraded to narrative framing when not mechanically enforceable |
 | `creator_notes` | Constructed | Export-time metadata |
 | `creator` | Constructed | Export-time metadata |
 | `character_version` | Constructed | Export-time metadata |
