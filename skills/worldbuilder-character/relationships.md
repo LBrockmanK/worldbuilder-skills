@@ -58,8 +58,6 @@ Each archetype is defined by its behavioral signature — the specific way it ch
 
 Counts are per-character. A relationship in A's list does not require a matching entry in B's list, and no archetype on one side obliges a complement on the other.
 
-**Contrast declaration (1 entry):** Name the cast member this character is built against and the axis of differentiation. For the first character or a standalone character, contrast against an archetype or trope the character is designed to subvert. This may be a standalone note rather than a relationship entry. Nothing else in this framework asks whether two characters in a cast are distinguishable — this entry does.
-
 ---
 
 ## Archetype Distribution
