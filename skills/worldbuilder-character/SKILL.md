@@ -37,7 +37,7 @@ Before beginning the Q&A, determine which addon blocks to include. Record the de
 
 **Intimate Dynamics:** Check the project-plan flag. If the flag is set, include the block. If absent, do not raise it or ask about it.
 
-**Voice/Dialogue:** Recommend when the character will be exported to platforms that support example dialogue or when voice distinctiveness matters for the project. The user decides.
+**Voice / Dialogue:** Recommend when the character will be exported to platforms that support example dialogue or when voice distinctiveness matters for the project. The user decides.
 
 ---
 
@@ -59,13 +59,13 @@ When proposing an entry, reproduce the semantic content of the user's answer, no
 
 ### Addon blocks
 
-After Core, work through selected addon blocks in order: Relationships, then Intimate Dynamics, then Voice/Dialogue.
+After Core, work through selected addon blocks in order: Relationships, then Intimate Dynamics, then Voice / Dialogue.
 
 **Relationships:** See `relationships.md` for the 12-archetype framework, coverage requirements, and entry format. Ask about the character's named relationships, their behavioral dynamics, and what each relationship makes the character do. Follow the coverage and distribution requirements in `relationships.md`.
 
 **Intimate Dynamics:** See `intimate.md` for coverage areas and entry format. Ask about attraction expression, hesitation and limits, and any specific dynamic. Ensure at least one friction point.
 
-**Voice/Dialogue:** The user picks 2-4 situation categories from the list in `card-format.md`. For each chosen category, write a composite dialogue snippet showing the character pulling from multiple Core areas at the same time. Include enough scene context to establish the situation.
+**Voice / Dialogue:** The user picks 2-4 situation categories from the list in `card-format.md`. For each chosen category, write a composite dialogue snippet showing the character pulling from multiple Core areas at the same time. Include enough scene context to establish the situation.
 
 ---
 
@@ -140,7 +140,7 @@ The note stays on an open status tag while work is in progress. Mark it `complet
 
 - [ ] All required doctrine entries present or explicitly waived with a recorded reason
 - [ ] Each Core section (Background, Body, Soul) has at least one entry. Target ranges in `card-format.md` are guidance, not gates
-- [ ] Selected addon blocks completed (Relationships, Intimate Dynamics, Voice/Dialogue as determined in session opening)
+- [ ] Selected addon blocks completed (Relationships, Intimate Dynamics, Voice / Dialogue as determined in session opening)
 - [ ] No trait adjectives anywhere in the note. Each replaced by the behavior that earned it
 - [ ] Entries follow section-appropriate writing rules per `card-format.md`
 - [ ] `### Session Notes` present with Q&A capture

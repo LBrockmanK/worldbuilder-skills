@@ -29,7 +29,7 @@ Physical presence and habits. What you see and experience physically.
 **Target range:** 3-5 entries. Thin Body sections are acceptable when nothing about the character's physicality is distinctive. Do not force entries.
 
 **Example entries:**
-- When she enters a room she does not know, she finds a wall or corner first. She grew up visible in ways she did not choose, and learned to make herself an observer before becoming a subject.
+- When she enters a room she does not know, she finds a wall or corner first. She positions herself to watch before anyone watches her.
 - He talks with his hands when he is confident and folds his arms when he is not.
 
 ### Soul

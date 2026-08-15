@@ -1,5 +1,17 @@
 > For future agents: this is a character note. The filename is the character's name. Use `worldbuilder-character` to build it out. Card format defined in `skills/worldbuilder-character/card-format.md`.
 
+## Design Notes
+
+_Builder record. Excluded from all exports._
+
+### Session Notes
+
+_Q&A capture: what the user said they wanted this character to be._
+
+### Builder Context
+
+_Design decisions, narrative function, external references._
+
 ## Background
 
 _Where this character comes from. Fact pairs: [Fact] → [what it made true]. No behavioral content._
