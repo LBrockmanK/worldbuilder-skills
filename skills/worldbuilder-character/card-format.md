@@ -66,7 +66,7 @@ A 3x3 grid crossing the three information-type rows with a depth-of-access progr
 | | Immediate | Over time | Hidden / foundational |
 |---|---|---|---|
 | **Background** | Known history, visible circumstances | Things they let slip, stories that emerge | Formative wound, what they never tell |
-| **Body** | Surface features, first impression, obvious mannerisms | Subtle habits noticed with familiarity | Hidden under clothes. Scars, marks, physical tells |
+| **Body** | Surface features, first impression, obvious mannerisms | Subtle habits noticed with familiarity | Physical tells revealed with familiarity — the preamble holds static hidden features (scars, marks) |
 | **Soul** | Social persona, default behavior with strangers | True self that emerges with trust | Motivational engine. Core want, fear, false belief, value-conflict stance |
 
 ---
@@ -136,7 +136,7 @@ not prose-styled.
 **Distinction from other sections:**
 - vs. Voice/Dialogue: Voice/Dialogue shows speech patterns. Story
   Beats describe specific events that could unfold.
-- vs. calendar events: calendar events are recurring scheduled
+- vs. calendar events: calendar events are scheduled
   occurrences. Story Beats are one-time or progression-gated.
   A dated one-time event with character-specific narrative (e.g. a
   festival date at a milestone) is a Story Beat referencing the

@@ -221,7 +221,7 @@ Every character needs at minimum:
 
 Add additional states only where they're meaningfully distinct from the above (Formal for a character who attends ceremonial occasions; Combat for a fighter, etc.). Do not create states for transient emotional conditions.
 
-The `description` drives art generation context; keep it concrete and consistent with the character's Appearance section. The `expressions.neutral` prompt is the base image generation prompt for that state.
+The `description` drives art generation context; keep it concrete and consistent with the character's Body preamble. The `expressions.neutral` prompt is the base image generation prompt for that state.
 
 ---
 

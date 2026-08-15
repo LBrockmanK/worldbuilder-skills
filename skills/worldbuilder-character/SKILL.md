@@ -109,7 +109,7 @@ Missing required entries must be addressed before finalization or explicitly wai
 
 ## Working Document
 
-Entries accumulate in the character note as the user approves them. Each section is a markdown heading. Entries are bullet points under their section heading.
+Entries accumulate in the character note as the user approves them. Each section is a markdown heading. Entries are bullet points under their section heading. The Body appearance preamble (prose before the first bullet) and Story Beats (labeled prose blocks) are recognized exceptions.
 
 The document may carry optional annotations (grid position, coverage area) during creation. These are a working aid; export strips them.
 

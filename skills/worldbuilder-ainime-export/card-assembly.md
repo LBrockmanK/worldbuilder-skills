@@ -14,7 +14,7 @@ Source material: the character note in `notes/`.
 
 ## Card Prose (Personality/Description)
 
-Weave the character note's Foundation, Behavioral Descriptions, Relationships, and Relationship Behavior into flowing prose. This becomes the first section of `baseProfile`.
+Weave the character note's Background, Body, Soul, and Relationships into flowing prose. This becomes the first section of `baseProfile`.
 
 ### Paragraph order
 
@@ -55,9 +55,9 @@ After the personality/description prose, write the influence thresholds. These s
 | Open | 51 to 70 | Personal material surfaces: specific memories, private observations, things not ordinarily shared. |
 | Trusted | 71 to 100 | Full inner life: the complete argument, the thing they don't say out loud. |
 
-### Deriving bands from Relationship Behavior
+### Deriving bands from the Relationships section
 
-The character note's Relationship Behavior section describes the behavioral axis in prose. Map it to bands:
+The character note's Relationships section describes the behavioral axis in prose. Map it to bands:
 
 - **Default register** → Neutral band. This is the baseline the engine starts from.
 - **Distance / coldness** → Cold band. What the note describes as distance is the Cold state; amplify slightly for Hostile.
@@ -66,7 +66,7 @@ The character note's Relationship Behavior section describes the behavioral axis
 - **Personal material, specific sharing** → Open band. What the note describes as warmth becoming present.
 - **Full inner life, no reserve** → Trusted band. The deepest end of what the note describes as warmth.
 
-If the Relationship Behavior section describes variation by relationship type (authority vs. peers, etc.), reflect that variation across bands where it's significant — particularly in high bands.
+If the Relationships section describes variation by relationship type (authority vs. peers, etc.), reflect that variation across bands where it's significant — particularly in high bands.
 
 ### Format rules
 
@@ -115,5 +115,5 @@ After the influence thresholds, write the Future Storylines section. Source mate
 - [ ] 2–4 examples per band
 - [ ] Low bands include active conflict, not only avoidance
 - [ ] High band has both platonic and romantic examples
-- [ ] Future Storylines present and phrased as possibility
+- [ ] Future Storylines present and phrased as possibility (if Story Beats included)
 - [ ] Introduction note exists separately; no Introduction entry in the card
