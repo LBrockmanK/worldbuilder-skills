@@ -40,7 +40,9 @@ to the Q&A workflow, not this skill.
 - Map material to card blocks
 - Synthesize across sources
 - Rate confidence or importance
-- Summarize (selecting what matters is interpretation)
+- Summarize — selecting what matters is interpretation. (When the
+  user directs a narrower extraction depth, that is scoping, not
+  summarizing — see Extraction Depth below.)
 - Declare one source as correcting another (record discrepancies)
 
 **Permitted structural transformations** (exhaustive — anything else
@@ -57,10 +59,11 @@ is interpretation):
 ## Workflow
 
 1. The user provides source material (files, URLs, documents)
-2. Explore the source to map its file and directory structure
-3. Extract content following the source's own organization
-4. Output one or more reference documents
-5. The Q&A workflow consumes the references as source material
+2. Explore the source to map its structure
+3. The user confirms scope and depth
+4. Extract content following the source's own organization
+5. Output one or more reference documents
+6. The Q&A workflow consumes the references as source material
 
 ### Exploring the source
 
@@ -69,6 +72,41 @@ types, file counts, naming conventions. Present this map to the user
 and confirm which parts to extract. Large sources (thousands of files)
 may need selective extraction — the user decides which directories
 or file sets to include.
+
+Explore is iterative, not one-shot. The initial map covers what the
+user identified; extraction may reveal adjacent sources worth
+including. After each batch, propose newly discovered sources with a
+relevance assessment and recommended depth. The user decides whether
+to expand scope.
+
+For sources with many independent files (game data dumps, wiki sites),
+classify sources by what they contribute to the world presentation
+and recommend an extraction depth for each. Independent sources can
+be extracted in parallel — identify which sources share no
+dependencies so workers do not collide.
+
+### Extraction depth
+
+Three levels, always user-directed:
+
+- **Full** — extract all fields with values. Default for sources
+  central to the entity being built (a character's dialogue files,
+  a location's primary definition).
+- **Structural** — extract the structure (section names, field names,
+  categories, relationships) with representative values, but not
+  every individual entry. For a list of 200 items, capture the
+  list's purpose and a few examples.
+- **Broad strokes** — capture what the source is and how it is
+  organized without individual entries. One table or paragraph per
+  source section.
+
+The agent proposes a depth per source based on size and centrality;
+the user confirms. The agent choosing not to extract something it
+considers unimportant is interpretation (banned); the user choosing
+"broad strokes" for a 60K inventory file is scoping (fine).
+
+Within any depth level, the no-inference principle holds: reproduce
+what the source says at the chosen granularity.
 
 ### Creating reference documents
 
@@ -79,16 +117,15 @@ extraction) — those conflict with the no-inference principle.
 
 ```bash
 python "<scraibe-plugin>/scripts/new_doc.py" --type reference \
-  --title "<Entity> — <Source Label>" \
+  --title "<Topic> — <Source Label>" \
   --description "<what this document contains>" \
-  --dir notes
+  --dir <project entity directory>/reference
 ```
 
 Record source paths in the frontmatter `resources` field.
 
-The script creates a date-prefixed filename. Rename the file to match
-the naming convention (`<entity-name> — <source-label>.md`) using
-the scraibe plugin's `rename_doc.py`.
+The date-prefixed filename from `new_doc.py` is the default. Rename
+only if the generated filename is misleading.
 
 ---
 
@@ -104,9 +141,15 @@ structure. The source's directory organization is the partition.
 - Mixed-content files (dialogue mixed with narration) are reproduced
   as-is without splitting by content type — the file is the unit
 
-Content is ordered by source path (alphabetical or directory-tree
-order) or by in-source sequence. No reordering by perceived
-importance, narrative arc, or thematic grouping.
+**Within a source**, content is ordered by source path (alphabetical
+or directory-tree order) or by in-source sequence. No reordering by
+perceived importance, narrative arc, or thematic grouping.
+
+**Across sources**, related small files can be combined into one
+document (see Granularity below). Each source gets its own H2 section
+with a source-path heading. The grouping of sources into documents
+is a user or agent decision about document scope — it does not
+change the ordering within each source's section.
 
 ---
 
@@ -114,8 +157,25 @@ importance, narrative arc, or thematic grouping.
 
 **Granularity:** one document per source directory or logical source
 boundary (a wiki page, a data file, a directory of related files).
-When sources are small, multiple directories can share a document
-with section breaks preserving the source path as headings.
+When sources are small, multiple related sources can share a document
+with section breaks preserving each source's path as headings —
+prefer this over creating many tiny documents. The test: if each
+document would be under ~50 lines of extracted content, combine them.
+
+**Per-entity vs type-level documents:** character ingestion creates
+per-entity directories (`characters/adeline/reference/`) because each
+character draws from many sources. Non-character entities often come
+from a single source covering many instances (a locations file
+defining 60 locations, a festivals file defining 4 events). These
+produce type-level reference documents in `<entity-type>/reference/`.
+
+**Entity placement:** when the source doesn't map to an obvious
+entity directory:
+- Describes a place or space → `locations/`
+- Describes a temporal event or story progression → `events/`
+- Describes a group identity or social structure → `factions/`
+- Everything else (systems, ecology, economy, culture) → `concepts/`
+- Tiebreak: where would someone search for it?
 
 **Multi-entity sources:** when a source contains material about
 multiple characters or entities (group conversations, ensemble
@@ -123,11 +183,11 @@ scenes), store the material once in a shared document. Each entity's
 reference set links to the shared document. No per-entity splitting
 or duplication.
 
-**Naming:** `<entity-name> — <source-directory-or-label>.md`
+**Naming:** `<topic> — <source-label-or-summary>.md`
 
-For shared multi-entity documents, list the entity names:
-`<source-label> — <entity-names>.md`
-(e.g., `Group Conversations — Adeline Celine Reina.md`).
+For per-entity documents: `<entity-name> — <source-label>.md`
+For type-level documents: `<topic> — <descriptive-label>.md`
+For shared multi-entity documents: `<source-label> — <entity-names>.md`
 
 ---
 
