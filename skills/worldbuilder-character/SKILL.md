@@ -9,207 +9,141 @@ description: Use when building or developing a character for an AI-powered RPG o
 
 ## Overview
 
-A character for an LLM-powered game is not a description — it is a behavioral specification. The engine handles generic social warmth and distance; the character note supplies the specific: what this character carries privately, what they do when trust is low or high, what their contradiction is.
+A character for an LLM-powered game is not a description. It is a behavioral specification. The engine handles generic social warmth and distance; the character note supplies the specific: what this character carries privately, what they do when trust is low or high, what their contradiction is.
 
-The character note is the comprehensive single source of truth for a character in the Wide phase. It is richer than any export format can hold — it contains everything true about the character, including material that won't appear in any platform output. Export skills derive their output from this note.
-
-**Description field:** the cast navigation summary — who this character is in the world, their key traits, and their place in the social ecosystem. Described, not prescribed: no relationship recommendations, no design rationale. Written last, after the full blueprint is complete; other agents scan it across the roster to understand each character without opening their notes.
+`card-format.md` is the governing document for entry format and section-scoped writing rules. Read it before writing any entry.
 
 ---
 
-## Character Note Structure
+## Collaboration Model
 
-Work through sections in order. Do not skip sections because the character seems simple — every section exists to catch what the others miss.
+The session is a conversation. The AI asks targeted questions, the human answers, the AI translates each answer into a card-format entry, and the human approves or revises the entry before it is committed.
 
-| Section | Sub-file | Notes |
-|---|---|---|
-| Design Notes | — | Builder record; H3 subheadings; excluded from exports |
-| Background | `framework.md` | Declarative context; different in kind from behavioral sections |
-| Body | `framework.md` | Physical behavioral descriptions |
-| Soul | `framework.md` | Psychological + social behavioral descriptions |
-| Relationships | `relationships.md` | Named relationships; bullet format |
-| Intimate Dynamics (if flagged) | `intimate.md` | Only if flagged in project plan |
+The human can override at any point:
+- Write entries directly instead of answering questions
+- Edit AI-proposed entries before approving
+- Skip questions
+- Provide source material (existing character sheets, fiction excerpts, reference images) in place of answers
 
-Frontmatter is defined by the project's OKF registry; `new_doc.py` stamps it at creation and the generated rules describe it. The script produces a date-prefixed filename; rename the fresh note to the character's name itself (e.g. `notes/Maren Holt.md`) before adding content — the filename convention the templates state, and safe while nothing links to the note yet.
+Source material substitutes for human answers. When the human provides source material, extract the behavioral content and translate it into card-format entries the same way you would translate a spoken answer.
 
 ---
 
-## Design Notes
+## Session Opening
 
-Design Notes is the builder record — it captures what drove the design of this character. Excluded from all exports. Two H3 subheadings:
+Before beginning the Q&A, determine which addon blocks to include. Record the decision.
 
-### Session Notes
+**Relationships:** Ask whether the character is part of a cast. If yes, include the Relationships block.
 
-Q&A capture: what the user said they wanted this character to be. Written during the Q&A phase, before any note sections are drafted. Raw intent, plain language, bullet points. Future agents revisiting this character read Session Notes first to understand original intent before examining the behavioral sections.
+**Intimate Dynamics:** Check the project-plan flag. If the flag is set, include the block. If absent, do not raise it or ask about it.
 
-### Builder Context
-
-Narrative function, external references, design decisions, open questions. Bullet points. Leave blank if there is nothing worth capturing — do not pad.
-
-Typical bullets for Builder Context:
-- Narrative function: what this character uniquely contributes to the setting; what tensions or themes they embody
-- External references: named real people, fictional characters, or combinations that shaped the design; what specifically was drawn from each
-- Design decisions and constraints: choices made that would be confusing without context
-- Open questions: unresolved decisions to revisit in future sessions
-
-Imported character cards: judge by behavioral specificity, negative-track content, and connections; a card failing more than one needs the full pass, not transcription.
+**Voice / Dialogue:** Recommend when the character will be exported to platforms that support example dialogue or when voice distinctiveness matters for the project. The user decides.
 
 ---
 
 ## Session Flow
 
-Before writing any note section, conduct a Q&A with the user. Ask one question at a time — this is a conversation, not a checklist delivered in bulk.
+Work through blocks in order.
 
-**Technique:**
+### Core block
 
-- **One question at a time.** Ask one, wait for the answer, ask the next.
-- **Offer a hypothesis.** After each answer, surface what it implies: "Based on that, she might be afraid of being truly seen — does that sound right?" Give the user something to confirm, redirect, or build on.
-- **Follow threads.** When an answer opens something up, pursue it before moving topics. A Background answer that implies a Soul pattern should be surfaced immediately: "You said she was the reliable one — that might mean her irrational behavior is overcommitting even when she can't afford to. Does that track?"
-- **Sharpen vague answers.** "She has trouble trusting people" is not enough. Ask what that looks like: does she test people, avoid closeness, or extend trust and then panic when it's taken seriously?
-- **Check Intimate Dynamics flag first.** Before beginning Q&A, check whether the character is flagged for Intimate Dynamics in the project plan. If flagged, include intimate coverage in the Q&A (see coverage list below). If not flagged, do not raise it.
+Background, then Body, then Soul. Every character card has all three.
 
-**Coverage before writing begins:**
+Within each section, follow the depth-of-access progression defined in `card-format.md`: immediate (what is apparent on first meeting), then over time (what emerges with familiarity), then hidden/foundational (what is rarely seen or never spoken). This progression guides question order, not document structure. Entries land flat under section headings.
 
-- Background: origin, class/culture, key formative events, current situation and how they feel about it
-- Body: appearance, any notable physical self-consciousness, embodied habits
-- Soul (psychological): core want beneath the surface want, core fear, self-image gap, irrational behavior and its root
-- Soul (social behavior): how they are with strangers, what warmth looks like, what distance or friction looks like
-- Relationships: who the named cast is, which relationships matter most to this character, the behavioral dynamic of each — what it makes them do when that person is present or mentioned. Then as separate questions: who counts as family, who they answer to, who depends on them, who they clash with, who they would tell the truth to. An absence here is an answer: note it and move on.
-- Intimate Dynamics: if the character is flagged for intimate dynamics (check project plan first), also cover how they express attraction, what makes them hold back, and any specific dynamic that drives their intimate behavior
+Ask one question at a time. Wait for the answer before asking the next. Follow threads: when an answer implies something about a different section, surface it immediately and pursue it before changing topics.
 
-During the Q&A phase, capture the following doctrine fields in the **Structured Doctrine** subsection of Design Notes (not Session Notes). Ask for each explicitly if the user's answers do not surface them naturally:
+After each answer, propose how the answer translates into a card entry. Apply the section-scoped writing rules from `card-format.md`. The rules are overridable defaults; the user can override any rule for their project.
 
-- **Core want:** "What does this character want most — not the surface want, but the deeper want underneath?"
-- **Core fear:** "What outcome or realization would be hardest for them to face?"
-- **Values carry costs:** "What has holding that value cost them or someone else?" (for each stated value)
-- **False belief:** "What does this character believe that is not true, and how does it shape what they do?"
-- **Contrast declaration:** "Which existing cast member is this character most likely to be confused with, and what separates them?" For the first character or a standalone character: "What archetype or trope is this character designed to subvert?"
-- **Value-conflict stance:** "When this character's code hits what most people would consider decent behavior, which wins? What would tip them the other way?"
-- **Charge-scored memories:** After capturing formative memories, tag each as high/mid/low charge.
+When proposing an entry, reproduce the semantic content of the user's answer, not the phrasing. The input is the fact; the output is the staged behavior the fact produces.
 
-The Q&A ends when the agent has confident, specific answers across all coverage areas. Capture general answers in Design Notes → Session Notes before moving to note writing.
+### Addon blocks
+
+After Core, work through selected addon blocks in order: Relationships, then Intimate Dynamics, then Voice / Dialogue.
+
+**Relationships:** See `relationships.md` for the 12-archetype framework, coverage requirements, and entry format. Ask about the character's named relationships, their behavioral dynamics, and what each relationship makes the character do. Follow the coverage and distribution requirements in `relationships.md`.
+
+**Intimate Dynamics:** See `intimate.md` for coverage areas and entry format. Ask about attraction expression, hesitation and limits, and any specific dynamic. Ensure at least one friction point.
+
+**Voice / Dialogue:** The user picks 2-4 situation categories from the list in `card-format.md`. For each chosen category, write a composite dialogue snippet showing the character pulling from multiple Core areas at the same time. Include enough scene context to establish the situation.
 
 ---
 
-## Writing Rules
+## Coverage Checking
 
-These rules apply to all behavioral sections (Body, Soul, Relationships, Intimate Dynamics). Two bans reach every section, Background included: the rule below on deciding what not to specify, and the ban on heavy trait adjectives in `../writing-style.md`.
+### After each Core section
 
-**Make decisions, don't hedge.** Every fact in the note is a decision. Never write "X or Y" or "grew up somewhere, perhaps Y" unless the ambiguity is a deliberate mystery being preserved. If you don't know, ask the user.
+Report depth-of-access observations: which columns (immediate, over time, hidden/foundational) have entries, and which are thin or empty. This is advisory, not deterministic. Suggest follow-up questions for under-represented columns. The user can accept the suggestion or mark the section as complete.
 
-**Decide what not to specify.** This is not the same as the hedging rule above: hedging governs what you commit to when you do write a fact, and this governs which facts you decline to write at all. See *Decide what not to specify* in `../writing-style.md`.
+### After the full Core block
 
-**Write plainly. No flair.** Write each behavioral description the way a screenplay writes action lines: present tense, only what can be seen or heard, no internal states, short plain sentences. If a director cannot stage the sentence, rewrite it. For vocabulary: shortest Anglo-Saxon word that works, active voice, cut every word that can go. See `../writing-style.md` for the full style model.
+Check for missing required doctrine entries (defined in `card-format.md`). The required entries are:
 
-**Write what characters ARE, not what they aren't.** Positive statements give the LLM something to act on. Negative constructions define by absence — the LLM has to invent the positive case itself. State the fact directly. Factual negatives are fine when the un-done thing is the meaningful information: "she has not sent the letter," "he hasn't asked."
+1. Core want (behavioral, Soul)
+2. Core fear (behavioral, Soul)
+3. False belief the character acts on (Soul)
+4. Value-conflict stance (Soul)
+5. At least one unresolved tension or competing pull (Soul)
+6. Values with costs (Background or Soul)
 
-**The note describes the character's starting state.** Nothing in the note may reference events that haven't happened yet. Check: has this already happened before the player meets this character? If not, create a story note or cut it.
-
-**Section discipline.** Each section carries information the others don't:
-- Background: where they came from (facts, not behavior)
-- Body: behaviors grounded in physical experience
-- Soul: general psychological and social patterns
-- Relationships: behaviors specific to named individuals
-
-Physical description (appearance, carriage, notable physical traits) belongs in Body — it is the physical reality that produces behavior, not a separate Appearance section.
-
-If a behavior is primarily about one specific relationship, it belongs in Relationships. If a behavioral pattern is general (appears with many people), it belongs in Soul. Redundancy between sections means content is in the wrong place.
-
-**Asymmetry in relationships is normal.** A named relationship does not require the other character to name it back. Write only what this character actually experiences.
+Missing required entries must be addressed before finalization or explicitly waived by the user with a recorded reason.
 
 ---
 
-## Generation Rules
+## Working Document
 
-See `generation-rules.md` for preprocessing, routing, fact-to-manifestation, multi-option spread, and selection rules. Read before generating any section.
+Entries accumulate in the character note as the user approves them. Each section is a markdown heading. Entries are bullet points under their section heading.
 
----
-
-## Background, Body & Soul
-
-See `framework.md` for construction format, coverage requirements, the When/Behavior/Because formula, and examples for all three sections.
+The document may carry optional annotations (grid position, coverage area) during creation. These are a working aid; export strips them.
 
 ---
 
-## Relationships
+## Design Notes
 
-See `relationships.md` for the full relationship archetypes, coverage requirements, generativity hierarchy, perspective-focus rules, and entry format.
+Design Notes is the builder record. It is excluded from all exports. Two H3 subheadings:
+
+### Session Notes
+
+Q&A capture: what the user said they wanted this character to be. Written during the Q&A phase, before entries are drafted. Raw intent, plain language, bullet points. Future agents revisiting this character read Session Notes first to understand original intent.
+
+### Builder Context
+
+Narrative function, external references, design decisions, open questions. Bullet points. Leave blank if there is nothing worth capturing. Do not pad.
+
+---
+
+## Frontmatter and File Naming
+
+Frontmatter is defined by the project's OKF registry; `new_doc.py` stamps it at creation. The script produces a date-prefixed filename; rename the fresh note to the character's name (e.g. `notes/Maren Holt.md`) before adding content.
+
+**Description field:** the cast navigation summary. Who this character is in the world, their key traits, their place in the social ecosystem. Described, not prescribed: no relationship recommendations, no design rationale. Written last, after the full blueprint is complete.
 
 ---
 
 ## Story Notes
 
-**Story notes instead of inline storylines.** Story possibilities for this character live in separate story notes, not in the character note. When you have enough clarity on a character's arc, create a story note with intention scope and link it back to this character. See `worldbuilder-story` for story note structure.
+Story possibilities for this character live in separate story notes, not in the character note. When you have enough clarity on a character's arc, create a story note with intention scope and link it back. See `worldbuilder-story` for story note structure.
 
-The introduction note is also a story note (introduction scope). When you have enough character clarity to know where and how the player would first meet this character, create it then.
-
----
-
-## Intimate Dynamics
-
-Check the project plan before starting any blueprint. If the character is flagged for intimate dynamics, read `intimate.md` before beginning the Soul section. If the flag is absent, skip `intimate.md` entirely — do not prompt for it or ask about it.
+The introduction note is also a story note (introduction scope). Create it when you have enough character clarity to know where and how the player first meets this character.
 
 ---
 
 ## Post-Group Sync Pass
 
-After completing a household group or batch of characters, run a relationship sync pass before moving on. Characters develop during the blueprinting sequence — a character written later may shift in ways that make an earlier character's relationship entry inaccurate. Check the group's notes against each other: are named relationships still consistent? Update when the sequence reveals something that changes the picture.
+After completing a household group or batch of characters, run a relationship sync pass before moving on. Characters develop during the blueprinting sequence. A character written later may shift in ways that make an earlier character's relationship entry inaccurate. Check the group's notes against each other: are named relationships still consistent? Update when the sequence reveals something that changes the picture.
 
 ---
 
-## Self-Check Before Marking Complete
+## Completion Checklist
 
-The note stays on an open status tag while work is in progress; mark it `complete` when every item below passes.
+The note stays on an open status tag while work is in progress. Mark it `complete` when every item below passes.
 
-**Frontmatter**
-- [ ] Fields match the generated rules; `factions` links to this character's faction notes
-
-**Design Notes**
+- [ ] All required doctrine entries present or explicitly waived with a recorded reason
+- [ ] Each Core section (Background, Body, Soul) has at least one entry. Target ranges in `card-format.md` are guidance, not gates
+- [ ] Selected addon blocks completed (Relationships, Intimate Dynamics, Voice / Dialogue as determined in session opening)
+- [ ] No trait adjectives anywhere in the note. Each replaced by the behavior that earned it
+- [ ] Entries follow section-appropriate writing rules per `card-format.md`
 - [ ] `### Session Notes` present with Q&A capture
 - [ ] `### Builder Context` present as applicable; not padded
-- [ ] `### Structured Doctrine` present with all 7 fields filled: core want, core fear, values carry costs, false belief, contrast declaration, value-conflict stance, charge-scored memories
-
-**Background**
-- [ ] Declarative fact pairs only — no behavioral content, no prose elaboration
-
-**Body**
-- [ ] Entries grounded in physical experience
-- [ ] No forced entries — thin is acceptable if nothing is distinctive
-
-**Soul**
-- [ ] 7–9 psychological behavioral entries minimum (3–5 base + 4 doctrine-required: core want, core fear, false belief, value-conflict stance)
-- [ ] 2–3 general social behavior entries minimum
-- [ ] One contradiction stated as a behavioral description
-- [ ] Irrational behavior with emotional root present
-- [ ] Self-image gap expressed as behavioral description
-- [ ] Speech patterns described concretely if distinctive
-- [ ] Because clauses trace to the user's stated wants, fears, or experiences from Session Notes — if a Because clause didn't emerge from the Q&A, ask the user before writing
-- [ ] Plain language throughout — no literary flair, no Latinate vocabulary
-- [ ] No heavy trait adjectives anywhere in the note; each replaced by the behavior that earned it
-- [ ] Where the blueprint states an expertise, it also states where that expertise stops
-- [ ] At least one standing pressure of the character's own, shown through what they do about it
-- [ ] The character's direction is left unresolved: competing pulls, no chosen future
-- [ ] Across every section, details that do not change behavior are left unwritten
-- [ ] No negative-led characterization (state what they ARE)
-- [ ] No forward references (starting state only)
-
-**Relationships**
-- [ ] Coverage requirements met: 8 named relationships for major characters, 5 for supporting; required anchor types present (family or Ghost, Authority or Charge, friction or rivalry, Confidant; see `relationships.md` for full requirements)
-- [ ] Each entry in bullet format with `**Name — Archetype(s):**` prefix
-- [ ] Each entry describes behavioral dynamic, not history or emotional label
-- [ ] Each entry describes this character's experience only, not the other person's traits
-
-**Intimate Dynamics (if flagged)**
-- [ ] Behavioral entries covering attraction expression, hesitation/limits, specific dynamic if present
-- [ ] One friction point present
-
-**Story Notes**
 - [ ] Story notes created or flagged as pending for any known character arcs
-- [ ] Introduction note created or flagged as pending
-
-**Pre-Handoff Scan**
-- [ ] Before moving to the next character, scan the session for any decisions made about characters who do not yet have a complete note
-- [ ] Record any such decisions as a Blueprint note in that character's cast plan entry in `project/plan.md`
-
-**Description**
-- [ ] `description` written last and reflects the completed character; no recommendations, no design rationale
+- [ ] `description` field written last and reflects the completed character
