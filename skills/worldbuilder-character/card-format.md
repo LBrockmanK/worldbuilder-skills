@@ -264,8 +264,8 @@ violation pattern — it does not reproduce the full rule text.
   no internal contradiction in intimate behavior.
 
 **Voice / Dialogue (when included):**
-- 2-4 composite snippets (`this document, Addon blocks — Voice /
-  Dialogue`). Violation: count outside range.
+- 2-4 composite snippets (this document, Addon blocks — Voice /
+  Dialogue). Violation: count outside range.
 - Each snippet pulls from multiple Core areas (this document, Addon
   blocks — Voice / Dialogue). Violation: snippet exercises only one
   area.
