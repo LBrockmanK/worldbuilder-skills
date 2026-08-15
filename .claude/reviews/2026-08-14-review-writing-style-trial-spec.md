@@ -4,9 +4,9 @@ title: 'Review: writing style trial spec'
 description: Adversarial review of the writing style trial spec (STE-100 and semantic
   anchors)
 tags:
-- agent-ready
+- complete
 date: 2026-08-14
-timestamp: 2026-08-14T02:34Z
+timestamp: 2026-08-15T14:20Z
 resources: []
 ---
 

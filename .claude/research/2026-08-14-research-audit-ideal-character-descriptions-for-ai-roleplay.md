@@ -5,9 +5,9 @@ description: Audit of all prior research, resource reviews, and empirical trials
   synthesize what the ideal end state for character descriptions looks like, identify
   what is established vs. open, and flag where further research is needed.
 tags:
-- human-ready
+- complete
 date: 2026-08-14
-timestamp: 2026-08-14T20:24Z
+timestamp: 2026-08-15T14:31Z
 resources:
 - "[[2026-07-11-causal-character-writing-for-llm-roleplay-friction-engines-and-trait-word-poisoning]]"
 - "[[Anti Slop Research Results]]"

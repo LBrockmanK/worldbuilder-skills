@@ -4,9 +4,9 @@ title: Review — Character Card Architecture Spec
 description: Adversarial review of the character card architecture spec (Q&A workflow,
   block model, export interface replacement).
 tags:
-- agent-ready
+- complete
 date: 2026-08-15
-timestamp: 2026-08-15T13:21Z
+timestamp: 2026-08-15T14:20Z
 resources: []
 ---
 

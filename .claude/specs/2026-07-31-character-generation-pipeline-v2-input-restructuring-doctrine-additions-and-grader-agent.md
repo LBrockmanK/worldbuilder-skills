@@ -7,9 +7,11 @@ description: 'Spec for three coordinated changes to the character generation pip
   generation with divergence validation, and an input-aware grader agent for convergence-based
   slop detection.'
 tags:
-- complete
+- deprecated
+superseded-by:
+- "[[2026-08-15-character-card-architecture-q-a-workflow-block-model-and-export-interface]]"
 date: 2026-07-31
-timestamp: 2026-08-13T19:27Z
+timestamp: 2026-08-15T14:37Z
 resources:
 - "[[2026-07-30-convergence-validation-experiment-findings-and-graduation-assessment]]"
 - "[[2026-07-30-resource-review-aeon-s-notebook-decision-engine-and-helpful-default-convergence]]"
@@ -20,6 +22,8 @@ resources:
 output:
 - "[[2026-07-31-review-character-generation-pipeline-v2-spec-and-plan]]"
 ---
+
+> **Partially superseded.** The [Character Card Architecture spec](2026-08-15-character-card-architecture-q-a-workflow-block-model-and-export-interface.md) supersedes the generation-related portions of this spec: multi-option generation, Design Notes as generation input, and the grader agent. Content principles remain in force: doctrine entries, trait-word ban, values-with-costs.
 
 # Character Generation Pipeline v2 — Input Restructuring, Doctrine Additions, and Grader Agent
 
