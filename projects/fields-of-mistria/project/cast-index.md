@@ -96,4 +96,4 @@ For location/faction ingestion (item 10):
 - `source/fiddle/festivals.toml` — festival/event data
 - `source/fiddle/stores.toml` — vendor locations
 - `source/t2/Cutscenes/` — story and festival events
-- `source/fiddle/t2_location_descriptions/` — location prose
+- `source/fiddle/t2_location_descriptions.toml` — location prose
