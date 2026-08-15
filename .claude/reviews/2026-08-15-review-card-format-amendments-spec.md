@@ -6,7 +6,7 @@ description: Adversarial review of the card format amendments spec (Body appeara
 tags:
 - human-ready
 date: 2026-08-15
-timestamp: 2026-08-15T17:19Z
+timestamp: 2026-08-15T17:35Z
 resources: []
 ---
 
@@ -407,4 +407,99 @@ FINDINGS: 0 critical, 6 major, 0 minor, 0 nit
 4. **Accept.** Fixed: Step 6 (export SKILL.md) now includes updating the appearance field source to reference the Body preamble.
 5. **Partial accept.** extraction-reliability-map already deferred to inbox (separate concern — file doesn't exist or needs broader scope). SillyTavern export skill does not exist in the project yet (inbox item #1 is the mapping study) — no file to update. The card-format.md definition captures the mapping intent for when that skill is built.
 6. **Accept.** Fixed: line ranges corrected to match actual file lengths.
+
+## Round 3 — digest `7fedae6b…`, anchor `5ccaba3b` (dirty), tokens 78638, 2026-08-15T12:32:49-05:00, 240s
+
+Anchor: 5ccaba3bada24360dbc9ac14f8e08bd30567cd2c (dirty tree)
+Artifact digest: 7fedae6b462383624caf890b54dde5b97e57cc927d8cfc32f291bb375b123022 (sha256 over the exact scoped bytes as delivered)
+Scope: git diff c481294 -- . :(exclude).claude/reviews/2026-08-15-review-card-format-amendments-spec.md
+
+1. Base-profile assembly still reads removed character sections
+   Location: skills/worldbuilder-ainime-export/card-assembly.md:17
+   Quote: `Weave the character note's Foundation, Behavioral Descriptions, Relationships, and Relationship Behavior into flowing prose. This becomes the first section of `baseProfile`.`
+   Type: correctness
+   Severity: major
+   Effort-to-fix: small
+   Risk-of-fix: low
+   Channel: fix
+   Body: Foundation, Behavioral Descriptions, and Relationship Behavior are obsolete section names; current cards use Background, Body, and Soul. The exporter may omit most current card content while looking for nonexistent inputs, directly violating the no-stale-references criterion.
+
+2. Influence thresholds still depend on the removed Relationship Behavior section
+   Location: skills/worldbuilder-ainime-export/card-assembly.md:58
+   Quote:
+   `### Deriving bands from Relationship Behavior`
+   
+   `The character note's Relationship Behavior section describes the behavioral axis in prose. Map it to bands:`
+   Type: correctness
+   Severity: major
+   Effort-to-fix: medium
+   Risk-of-fix: medium
+   Channel: fix
+   Body: Current character notes have no Relationship Behavior section, so the exporter has no stated source for its six required bands. The repeated stale references at lines 58, 60, and 69 leave a reachable export path unable to satisfy its own completion gate.
+
+3. Optional Story Beats are treated as a mandatory export
+   Location: skills/worldbuilder-ainime-export/card-assembly.md:118
+   Quote: `- [ ] Future Storylines present and phrased as possibility`
+   Type: correctness
+   Severity: major
+   Effort-to-fix: medium
+   Risk-of-fix: low
+   Channel: fix
+   Body: Story Beats are defined as an optional addon and are now the source of Future Storylines, but this check requires Future Storylines for every character. A character that legitimately omits Story Beats cannot pass export without fabricated storyline content.
+
+4. The operational workflow still requires every entry to be a bullet
+   Location: skills/worldbuilder-character/SKILL.md:110
+   Quote: `Entries accumulate in the character note as the user approves them. Each section is a markdown heading. Entries are bullet points under their section heading.`
+   Type: correctness
+   Severity: major
+   Effort-to-fix: small
+   Risk-of-fix: low
+   Channel: fix
+   Body: Story Beats are entries but must be labeled prose blocks, while the Body preamble is also deliberately non-bulleted. This unconditional workflow instruction conflicts with both recognized exceptions and can make the skill serialize Story Beats in the wrong format.
+
+5. The depth grid still classifies hidden static appearance as behavioral entries
+   Location: skills/worldbuilder-character/card-format.md:69
+   Quote: `| **Body** | Surface features, first impression, obvious mannerisms | Subtle habits noticed with familiarity | Hidden under clothes. Scars, marks, physical tells |`
+   Type: correctness
+   Severity: major
+   Effort-to-fix: small
+   Risk-of-fix: low
+   Channel: fix
+   Body: The new preamble rule places scars, marks, and other static features in the preamble regardless of depth, and SKILL.md says the depth grid guides behavioral entries only. This unchanged cell contradicts both instructions and can duplicate static features or turn them into invalid staged bullets.
+
+6. The calendar boundary incorrectly defines every calendar event as recurring
+   Location: skills/worldbuilder-character/card-format.md:139
+   Quote:
+   `- vs. calendar events: calendar events are recurring scheduled`
+   `  occurrences. Story Beats are one-time or progression-gated.`
+   Type: correctness
+   Severity: major
+   Effort-to-fix: small
+   Risk-of-fix: low
+   Channel: fix
+   Body: The scoped exporter says recurring annual events specifically receive `recurring: true`, which means recurrence is not intrinsic to every calendar event. This false distinction can misclassify nonrecurring scheduled events as Story Beats and violates the requirement to define the boundary accurately.
+
+7. Sprite generation still reads the removed Appearance section
+   Location: skills/worldbuilder-ainime-export/SKILL.md:224
+   Quote: `The `description` drives art generation context; keep it concrete and consistent with the character's Appearance section. The `expressions.neutral` prompt is the base image generation prompt for that state.`
+   Type: correctness
+   Severity: major
+   Effort-to-fix: small
+   Risk-of-fix: low
+   Channel: fix
+   Body: Character notes now store appearance in the Body preamble, not an Appearance section. Although the dedicated `appearance` field was updated, this downstream sprite path retains the old section name and therefore violates the no-stale-references criterion.
+
+FINDINGS: 0 critical, 7 major, 0 minor, 0 nit
+
+### Adjudication — Round 3 (final whole-change pass)
+
+1. **Accept.** Fixed at cccd974: section names updated to Background, Body, Soul, Relationships.
+2. **Accept.** Fixed at cccd974: heading and text changed from "Relationship Behavior" to "Relationships section."
+3. **Accept.** Fixed at cccd974: Future Storylines checklist item made conditional "(if Story Beats included)."
+4. **Accept.** Fixed at cccd974: added Body preamble and Story Beats as recognized exceptions to all-bullets rule.
+5. **Accept.** Fixed at cccd974: depth grid Body/Hidden cell reworded to distinguish preamble static features from behavioral tells.
+6. **Accept.** Fixed at cccd974: "recurring scheduled" changed to "scheduled."
+7. **Accept.** Fixed at cccd974: "Appearance section" changed to "Body preamble" in sprite generation.
+
+All fixes verified by grep: stale terms absent, new terms present at expected locations. Ready to merge.
 
