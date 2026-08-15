@@ -171,3 +171,4 @@ The note stays on an open status tag while work is in progress. Mark it `complet
 - [ ] `### Builder Context` present as applicable; not padded
 - [ ] Story notes created or flagged as pending for any known character arcs
 - [ ] `description` field written last and reflects the completed character
+- [ ] Adversarial review gate passed — invoke `worldbuilder-review` with this document, `card-format.md` as the governing format document, and all reference material used to produce the document. Resolve all escalated findings before marking complete.
