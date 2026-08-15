@@ -18,3 +18,4 @@
 * [Writing style trial implementation](2026-08-14-writing-style-trial-implementation.md) - Implementation plan for the writing style trial: STE-100 strict, STE-100 loose, and BLUF conditions against baseline
 * [Card Format Amendments — Implementation Plan](2026-08-15-card-format-amendments-implementation-plan.md) - Implementation plan for Body appearance preamble (D1) and Story Beats addon block (D2) amendments to card-format.md and related files.
 * [Character card architecture implementation](2026-08-15-character-card-architecture-implementation.md) - Implementation plan for the character card architecture spec: card format definition, Q&A workflow skill rewrite, template update, intimate dynamics update, and generation pipeline retirement.
+* [Source Ingestion Skill — Implementation Plan](2026-08-15-source-ingestion-skill-implementation-plan.md) - Implementation plan for the worldbuilder source ingestion skill (SKILL.md creation).

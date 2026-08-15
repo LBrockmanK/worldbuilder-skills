@@ -136,3 +136,94 @@ All 11 findings accepted. Decisions rewritten to address all findings:
 10. **Accept.** D6 now specifies that the worldbuilder skill uses scraibe:ingest only for document creation and explicitly skips the judgment pass.
 11. **Accept.** Removed false claim. D6 now states that reference documents carry per-piece provenance for downstream consumers including the Q&A workflow.
 
+## Round 2 — digest `17c3f2a2…`, anchor `ea1bd935` (dirty), tokens 45852, 2026-08-15T13:18:49-05:00, 158s
+
+Anchor: ea1bd93542124eb952ced19555bf642f60e274e6 (dirty tree)
+Artifact digest: 17c3f2a2befcf478dee53748ffd0a8c5c1d1e320e8515b0c2facab47c90335d2 (sha256 over the exact scoped bytes as delivered)
+Scope: .claude/plans/2026-08-15-source-ingestion-skill-implementation-plan.md
+
+1. Title: Execution depends on a nonexistent approval gate
+   Location: .claude/plans/2026-08-15-source-ingestion-skill-implementation-plan.md:15
+   Quote: `Execution requires the plan artifact's approval flip (see Approval Gate).`
+   Type: completeness
+   Severity: major
+   Effort-to-fix: small (one site, local)
+   Risk-of-fix: low (mechanical, behavior elsewhere preserved)
+   Channel: fix
+   Body: The scoped plan has no `Approval Gate` section or approval field defining the referenced flip. An implementing worker cannot determine how execution becomes authorized, producing a reachable, detectable block.
+
+2. Title: The exhaustive transformation list improperly restricts metadata labels to filenames
+   Location: .claude/plans/2026-08-15-source-ingestion-skill-implementation-plan.md:103-109
+   Quote:
+   > **Permitted structural transformations** (exhaustive — anything else
+   > is interpretation):
+   > - Format conversion (TOML/JSON/XML to markdown)
+   > - Reproducing existing speaker tags from tagged dialogue
+   > - Stripping engine markup while preserving content
+   > - Reproducing file/directory names as section headers
+   > - Reproducing metadata labels from filenames
+   Type: correctness
+   Severity: major
+   Effort-to-fix: small (one site, local)
+   Risk-of-fix: low (mechanical, behavior elsewhere preserved)
+   Channel: fix
+   Body: D1 permits reproducing existing metadata labels generally and gives filename-derived portrait names only as an example. Because this skill declares its list exhaustive, “from filenames” excludes labels found in embedded metadata, manifests, or other source structures and misclassifies their reproduction as interpretation. This violates acceptance criterion 2.
+
+3. Title: Large external references lack the required extraction rule
+   Location: .claude/plans/2026-08-15-source-ingestion-skill-implementation-plan.md:232-238
+   Quote:
+   > ### External references (wiki, community, developer commentary)
+   >
+   > - Content reproduced with source attribution (URL, page title,
+   >   access date) — not summarized
+   > - `[official]` or `[community]` marker per source
+   > - Discrepancies with other sources noted with both sides and
+   >   provenance — never declared as corrections
+   Type: completeness
+   Severity: major
+   Effort-to-fix: small (one site, local)
+   Risk-of-fix: low (mechanical, behavior elsewhere preserved)
+   Channel: fix
+   Body: D4 expressly requires that when an external source is too large, relevant sections be reproduced with provenance rather than converted into a digest. That reachable case is absent here. The general prohibition on summarization does not tell the worker what extraction behavior replaces full reproduction, so D4 is incomplete and acceptance criteria 1 and 4 are violated.
+
+4. Title: The creation workflow does not realize the mandated filename
+   Location: .claude/plans/2026-08-15-source-ingestion-skill-implementation-plan.md:136-140 and 178
+   Quote:
+   > python "<scraibe-plugin>/scripts/new_doc.py" --type reference \
+   >   --title "<Entity> — <Source Label>" \
+   >   --description "<what this document contains>" \
+   >   --dir notes
+   >
+   > **Naming:** `<entity-name> — <source-directory-or-label>.md`
+   Type: correctness
+   Severity: major
+   Effort-to-fix: small (one site, local)
+   Risk-of-fix: low (mechanical, behavior elsewhere preserved)
+   Channel: fix
+   Body: The repository’s established `new_doc.py` behavior creates a date-prefixed slug filename, while the plan never instructs the worker to rename that output. Following the command therefore produces a filename that conflicts with D3’s explicit naming rule. This leaves one of the six required decisions operationally unimplemented.
+
+5. Title: Verification checks headings and keywords instead of the acceptance criteria
+   Location: .claude/plans/2026-08-15-source-ingestion-skill-implementation-plan.md:275-298
+   Quote:
+   > Run: `grep -n "^## " skills/worldbuilder-source-ingestion/SKILL.md`
+   >
+   > Run: `grep -c "Format conversion\|speaker tags\|engine markup\|file/directory names\|metadata labels" skills/worldbuilder-source-ingestion/SKILL.md`
+   >
+   > Run: `grep "judgment pass" skills/worldbuilder-source-ingestion/SKILL.md`
+   Type: completeness
+   Severity: minor
+   Effort-to-fix: medium (several sites within scope)
+   Risk-of-fix: low (mechanical, behavior elsewhere preserved)
+   Channel: fix
+   Body: These checks can pass when D2–D5 are empty or incorrect, when a transformation has been semantically narrowed, when source-absence tests have drifted, or when interpretive instructions were added elsewhere. Consequently, the plan has no effective verification for acceptance criteria 1, 4, 5, or 6; the metadata-label defect above also passes its purported exhaustive-list check.
+
+FINDINGS: 0 critical, 4 major, 1 minor, 0 nit
+
+### Adjudication — Round 2 (plan)
+
+1. **Accept.** Fixed: removed "see Approval Gate" reference; replaced with direct statement about status flip.
+2. **Accept.** Fixed: metadata labels now says "from filenames, manifests, or other source structures" matching D1's general permission.
+3. **Accept.** Fixed: external references guidance now includes "If a source is too large to reproduce in full, reproduce the relevant sections with provenance."
+4. **Accept.** Fixed: document creation instructions now include a rename step using `rename_doc.py` to match the naming convention.
+5. **Accept (minor).** Verification checks are inherently shallow for markdown — no semantic test exists. The grep checks verify structure, not content correctness. The task reviewer covers the gap.
+
