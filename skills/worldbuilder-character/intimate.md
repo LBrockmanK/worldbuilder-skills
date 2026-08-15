@@ -43,7 +43,7 @@ Write entries covering:
 
 The depth-of-access progression (see `card-format.md`) applies as a conceptual guide to intimate dynamics:
 
-- **Immediate:** The intimate behavior visible in early encounters — how the character shows interest, surfaces-level attraction expression, what boundaries appear obvious
+- **Immediate:** The intimate behavior visible in early encounters — how the character shows interest, surface-level attraction expression, what boundaries appear obvious
 - **Over time:** How the dynamic shifts with growing trust — hesitation that melts with familiarity, vulnerabilities that emerge slowly, tests the character uses to gauge safety
 - **Hidden / foundational:** The emotional needs the dynamic serves — why this particular dynamic matters, what wound it addresses, what would be revealed if full trust were achieved
 
