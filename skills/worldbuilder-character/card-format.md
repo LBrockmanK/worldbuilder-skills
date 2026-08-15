@@ -24,7 +24,18 @@ Facts and formative events. What is true about the character. No behavioral fram
 
 Physical presence and habits. What you see and experience physically.
 
-**Entry format:** One stageable sentence per entry. Describes physical behavior that can be observed.
+**Appearance preamble:** Body opens with short descriptive prose
+(sentences or descriptive clauses) covering the character's static
+physical appearance. The preamble is exempt from the staging test.
+Orwell co-anchor and trait-word ban apply. No meta-vocabulary from
+the builder abstraction layer. Content: hair, eyes, skin, build,
+distinguishing physical features, default or seasonal clothing, and
+hidden static features (scars, marks, tattoos) when relevant —
+everything about what this person looks like, regardless of
+depth-of-access.
+
+**Entry format:** One stageable sentence per entry. Describes
+physical behavior that can be observed.
 
 **Target range:** 3-5 entries. Thin Body sections are acceptable when nothing about the character's physicality is distinctive. Do not force entries.
 
@@ -109,6 +120,30 @@ Recommended when the character will be exported to platforms that support exampl
 
 Each snippet includes enough scene context to establish the situation. The working sheet notes which Core areas each example exercises as a coverage sanity check. Include this block when voice distinctiveness matters for the project or when the target platform supports example dialogue.
 
+### Story Beats
+
+Optional. Included when the character has triggerable narrative
+scenarios worth specifying. Labeled prose blocks — each entry has a
+short title, a trigger/condition note, and 2-4 sentences of scenario
+prose describing: the setup (where and when), the key action or
+exchange, and what the event reveals about the character. Prose
+follows the action-line convention. Staging test applies. Orwell
+co-anchor applies. No meta-vocabulary. Condition notes are factual,
+not prose-styled.
+
+**Target range:** 3-8 entries.
+
+**Distinction from other sections:**
+- vs. Voice/Dialogue: Voice/Dialogue shows speech patterns. Story
+  Beats describe specific events that could unfold.
+- vs. calendar events: calendar events are recurring scheduled
+  occurrences. Story Beats are one-time or progression-gated.
+  A dated one-time event with character-specific narrative (e.g. a
+  festival date at a milestone) is a Story Beat referencing the
+  calendar context.
+- vs. story notes: Story Beats are character-local hooks inside the
+  card. Story notes are full arc documents outside it.
+
 ---
 
 ## Section-scoped writing rules
@@ -139,3 +174,9 @@ For the full writing doctrine, see `../writing-style.md`.
 ## Working document conventions
 
 Entries accumulate under section headings as bullet points. The document may carry optional annotations (grid position, coverage area) during creation; export strips these. Annotations are a working aid, not part of the card's final content.
+
+Two recognized exceptions to the all-bullets convention: the Body
+appearance preamble (prose before the first bullet point) and Story
+Beats entries (labeled prose blocks with bold title, em-dash
+condition, and scenario prose). Export strips working annotations
+but preserves both formats.
