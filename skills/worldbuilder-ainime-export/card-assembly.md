@@ -18,7 +18,7 @@ Weave the character note's Foundation, Behavioral Descriptions, Relationships, a
 
 ### Paragraph order
 
-1. **Who they are at a glance** — physical presence, situational context, what a stranger notices first
+1. **Who they are at a glance** — physical presence, situational context, what a stranger notices first. The Body section's appearance preamble is the source for physical presence: include it verbatim as the physical description.
 2. **How they got here** — 2–4 sentences on the formative experiences that most directly explain who they are now
 3. **How they behave** — behavioral descriptions woven as natural prose (not listed)
 4. **The friction** — the contradiction, the mask vs. truth, the irrational behavior
@@ -90,7 +90,7 @@ Used in Influence Thresholds and Future Storylines:
 
 ## Future Storylines
 
-After the influence thresholds, write the Future Storylines section. Source material: the Storylines section of the character note.
+After the influence thresholds, write the Future Storylines section. Source material: the Story Beats section of the character note. Each Story Beat entry (title, trigger/condition, scenario prose) maps to one storyline: the title becomes the storyline label, the trigger/condition becomes the storyline context, and the scenario prose is reframed from definite to possibility-style.
 
 - Each entry phrased as possibility: "may surface," "could take," "there is a possibility that"
 - Engine format applies (speech, asterisks, parentheses, backticks)
