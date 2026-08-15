@@ -1,61 +1,4 @@
 ---
-type: plan
-title: Source Ingestion Skill — Implementation Plan
-description: Implementation plan for the worldbuilder source ingestion skill (SKILL.md
-  creation).
-tags:
-- complete
-date: 2026-08-15
-timestamp: 2026-08-15T18:24Z
-resources: []
----
-
-# Source Ingestion Skill — Implementation Plan
-
-> **For agentic workers:** REQUIRED SUB-SKILL: Use core-workflow:subagent-driven-development (recommended) or core-workflow:executing-plans to implement this plan task-by-task. Steps use checkbox (`- [x]`) syntax for tracking. Execution requires the plan artifact's status to be `complete` (flipped on user approval).
-
-**Goal:** Create the worldbuilder source ingestion skill that extracts source material into reference documents following the no-inference principle.
-
-**Architecture:** One new skill file (`SKILL.md`) encoding the spec's 6 decisions as operational instructions. The skill uses scraibe:ingest only for document creation and explicitly overrides its judgment pass.
-
-**Tech Stack:** Markdown
-
-**Research dossier:** [Implementation Research](../research/2026-08-15-implementation-research-source-ingestion-skill.md)
-
-**Governing spec:** [Source Ingestion Skill Spec](../specs/2026-08-15-source-ingestion-skill-reference-document-structure-and-extraction-principles.md)
-
-## Global Constraints
-
-- All skill prose follows `skills/writing-style.md`
-- Shipped content is model-neutral: never name a specific AI model
-- Skill frontmatter uses `name` and `description` fields in YAML
-- Skill directory follows `worldbuilder-` prefix convention
-
----
-
-### Task 1: Create the source ingestion skill
-
-**Files:**
-- Create: `skills/worldbuilder-source-ingestion/SKILL.md`
-
-**Interfaces:**
-- Consumes: spec decisions D1-D6 from the governing spec
-- Produces: a complete skill file that agents invoke when ingesting source material
-
-- [x] **Step 1: Create the skill directory**
-
-Run: `mkdir -p skills/worldbuilder-source-ingestion`
-
-Verify: `ls skills/worldbuilder-source-ingestion`
-Expected: empty directory exists
-
-- [x] **Step 2: Write the SKILL.md file**
-
-Create `skills/worldbuilder-source-ingestion/SKILL.md` with the
-following content. This is the complete file — write it exactly.
-
-````markdown
----
 name: worldbuilder-source-ingestion
 description: Use when bringing external source material into the worldbuilder — game assets, existing character cards, fiction excerpts, wiki pages, or any reference material that will feed the character Q&A workflow or other entity skills.
 ---
@@ -182,6 +125,10 @@ or duplication.
 
 **Naming:** `<entity-name> — <source-directory-or-label>.md`
 
+For shared multi-entity documents, list the entity names:
+`<source-label> — <entity-names>.md`
+(e.g., `Group Conversations — Adeline Celine Reina.md`).
+
 ---
 
 ## Extraction Guidance
@@ -238,7 +185,8 @@ path or section) is required for all extraction.
 
 - Content reproduced with source attribution (URL, page title,
   access date) — not summarized. If a source is too large to
-  reproduce in full, reproduce the relevant sections with provenance
+  reproduce in full, reproduce the sections the user identified
+  during source exploration with provenance
 - `[official]` or `[community]` marker per source
 - Discrepancies with other sources noted with both sides and
   provenance — never declared as corrections
@@ -249,14 +197,15 @@ path or section) is required for all extraction.
 
 Each reference document ends with a **Source Absences** section
 noting what the extracted source does not contain. Absences are
-factual observations about the source's coverage, stated relative to
-the source's own apparent scope.
+factual observations about the source's coverage, limited to
+structural observations: missing fields in structured data, empty
+directories, absent file types declared elsewhere in the source.
 
-**Valid:** "This source contains no dialogue files for seasons after
-Fall."
+**Valid:** "The `Schedules/` directory has subdirectories for Spring,
+Summer, and Fall but none for Winter."
 
-**Valid:** "No text-based physical description appears in this
-source."
+**Valid:** "This directory contains no `.toml` files for Winter
+schedules — only Spring, Summer, and Fall are present."
 
 **Invalid (pipeline-specific):** "No information about core fear or
 false belief." (Card-format concepts the source has no obligation to
@@ -265,47 +214,3 @@ contain.)
 **Invalid (unbounded):** "Does not mention childhood pets." (The
 source omits infinitely many facts — note structural gaps in the
 source's own coverage only.)
-````
-
-- [x] **Step 3: Verify the file exists and has correct frontmatter**
-
-Run: `head -4 skills/worldbuilder-source-ingestion/SKILL.md`
-Expected:
-```
----
-name: worldbuilder-source-ingestion
-description: Use when bringing external source material into the worldbuilder — game assets, existing character cards, fiction excerpts, wiki pages, or any reference material that will feed the character Q&A workflow or other entity skills.
----
-```
-
-- [x] **Step 4: Verify key sections present**
-
-Run: `grep -n "^## " skills/worldbuilder-source-ingestion/SKILL.md`
-Expected output showing these section headings:
-- `## Overview`
-- `## The No-Inference Principle`
-- `## Workflow`
-- `## Source-Path Organization`
-- `## Reference Document Structure`
-- `## Extraction Guidance`
-- `## Source Absence Notes`
-
-- [x] **Step 5: Verify no-inference principle contains the exhaustive list**
-
-Run: `grep -c "Permitted structural transformations" skills/worldbuilder-source-ingestion/SKILL.md`
-Expected: `1`
-
-Run: `grep -c "Format conversion\|speaker tags\|engine markup\|file/directory names\|metadata labels" skills/worldbuilder-source-ingestion/SKILL.md`
-Expected: `5` (one match per permitted transformation)
-
-- [x] **Step 6: Verify scraibe override is stated**
-
-Run: `grep "judgment pass" skills/worldbuilder-source-ingestion/SKILL.md`
-Expected: match containing "Do not use scraibe:ingest's judgment pass"
-
-- [x] **Step 7: Commit**
-
-```bash
-git add skills/worldbuilder-source-ingestion/SKILL.md
-git commit -m "feat: source ingestion skill — no-inference extraction into reference documents"
-```

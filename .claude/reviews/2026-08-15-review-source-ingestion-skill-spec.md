@@ -227,3 +227,88 @@ FINDINGS: 0 critical, 4 major, 1 minor, 0 nit
 4. **Accept.** Fixed: document creation instructions now include a rename step using `rename_doc.py` to match the naming convention.
 5. **Accept (minor).** Verification checks are inherently shallow for markdown — no semantic test exists. The grep checks verify structure, not content correctness. The task reviewer covers the gap.
 
+## Round 3 — digest `6661c25f…`, anchor `27c6e3b9` (clean), tokens 52138, 2026-08-15T13:29:53-05:00, 202s
+
+Anchor: 27c6e3b9df09879178c99c4c7381adf93858f2d6 (clean tree)
+Artifact digest: 6661c25fd89e5b99bd270ea2c50891787614305a19bc29e05fcdf388cc39ef1a (sha256 over the exact scoped bytes as delivered)
+Scope: git diff 49703c2 -- . :(exclude).claude/reviews/2026-08-15-review-source-ingestion-skill-spec.md
+
+1. Perceptual image descriptions violate the exhaustive no-inference boundary
+   Location: skills/worldbuilder-source-ingestion/SKILL.md:170-176
+   Quote:
+   > ### Visual assets
+   >
+   > - File path and naming convention
+   > - Available variants (expressions, outfits, seasons) reproduced from
+   >   filenames and metadata — not from viewing images
+   > - When images are viewed for physical description, mark every
+   >   observation `[perceptual]` with the source image path
+   Type: correctness
+   Severity: major
+   Effort-to-fix: large (reaches beyond the scoped change)
+   Risk-of-fix: medium (alters behavior on existing paths)
+   Channel: escalate
+   Body: In the artifact identified by the stated anchor, digest, and scope, this directs ingestion to convert visual perception into physical-description claims. That is interpretation, not one of D1’s exhaustive structural transformations; adding `[perceptual]` labels the judgment but does not make it mechanical extraction. It therefore violates acceptance criteria 2 and 3. The supplied requirements provide no local resolution: removing this behavior would cease to implement D4, while adding perceptual description to the permitted list would cease to match D1 exactly.
+
+2. Large-source handling commands the same relevance judgment the skill prohibits
+   Location: skills/worldbuilder-source-ingestion/SKILL.md:75-78; 180-184
+   Quote:
+   > Do not use scraibe:ingest's
+   > judgment pass (source ranking, contradiction resolution, relevance
+   > extraction) — those conflict with the no-inference principle.
+   >
+   > - Content reproduced with source attribution (URL, page title,
+   >   access date) — not summarized. If a source is too large to
+   >   reproduce in full, reproduce the relevant sections with provenance
+   Type: correctness
+   Severity: major
+   Effort-to-fix: small (one site, local)
+   Risk-of-fix: low (mechanical, behavior elsewhere preserved)
+   Channel: fix
+   Body: For this scoped artifact, “relevant sections” leaves the extractor to decide what matters, despite the earlier declaration that relevance extraction is a prohibited judgment. This is a reachable path for every oversized external source and violates acceptance criterion 2. Requiring the sections to be selected through the user-confirmed scope already established in “Exploring the source” would resolve the contradiction without changing the surrounding workflow.
+
+3. Source-absence validation requires semantic inference about apparent scope
+   Location: skills/worldbuilder-source-ingestion/SKILL.md:191-202
+   Quote:
+   > Each reference document ends with a **Source Absences** section
+   > noting what the extracted source does not contain. Absences are
+   > factual observations about the source's coverage, stated relative to
+   > the source's own apparent scope.
+   >
+   > **Valid:** "No text-based physical description appears in this
+   > source."
+   Type: correctness
+   Severity: major
+   Effort-to-fix: medium (several sites within scope)
+   Risk-of-fix: medium (alters behavior on existing paths)
+   Channel: fix
+   Body: Under the stated review identity, determining a source’s “apparent scope” asks what the source seems intended to cover, and proving that no prose constitutes a physical description requires classifying the meaning of all candidate text. Both cross the skill’s own “what does this say?” boundary and violate acceptance criterion 2. The rule can remain an absence test while limiting claims to explicit structural coverage—declared file sets, chapters, fields, or metadata—and using structurally testable examples.
+
+4. The naming rule does not define a valid filename for required shared multi-entity documents
+   Location: skills/worldbuilder-source-ingestion/SKILL.md:120-126
+   Quote:
+   > **Multi-entity sources:** when a source contains material about
+   > multiple characters or entities (group conversations, ensemble
+   > scenes), store the material once in a shared document. Each entity's
+   > reference set links to the shared document. No per-entity splitting
+   > or duplication.
+   >
+   > **Naming:** `<entity-name> — <source-directory-or-label>.md`
+   Type: correctness
+   Severity: major
+   Effort-to-fix: small (one site, local)
+   Risk-of-fix: low (mechanical, behavior elsewhere preserved)
+   Channel: fix
+   Body: In the scoped change, a shared document has multiple entities, but the only naming grammar requires one singular `<entity-name>`. Choosing any participant privileges one entity, while producing one file per name violates the immediately preceding no-duplication rule. This leaves D3’s required multi-entity path operationally undefined and violates acceptance criterion 1. A separate shared-document naming form or the governing spec’s multi-entity example would resolve the ambiguity locally.
+
+FINDINGS: 0 critical, 4 major, 0 minor, 0 nit
+
+### Adjudication — Round 3 (final whole-change pass)
+
+1. **Reject.** Re-litigates spec decision D4 (visual assets, `[perceptual]` markers), which was adjudicated in spec review round 1 finding 5 and accepted. The SKILL.md faithfully implements the spec's explicit permission for perceptual observation with markers. Recorded reason: the spec decided this tradeoff; the implementation is correct.
+2. **Accept.** Fixed at 61093c2: "relevant sections" changed to "sections the user identified during source exploration." The user picks what to extract during source mapping, not the extractor.
+3. **Accept.** Fixed at 61093c2: source absence notes now limited to structural observations (missing fields, empty directories, absent file types). Valid examples rewritten to be structurally testable.
+4. **Accept.** Fixed at 61093c2: added multi-entity naming pattern with example.
+
+All fixes verified by grep. One rejected finding recorded with reason. Ready to merge.
+
