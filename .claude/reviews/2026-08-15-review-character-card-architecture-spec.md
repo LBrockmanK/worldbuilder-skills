@@ -6,7 +6,7 @@ description: Adversarial review of the character card architecture spec (Q&A wor
 tags:
 - agent-ready
 date: 2026-08-15
-timestamp: 2026-08-15T13:00Z
+timestamp: 2026-08-15T13:21Z
 resources: []
 ---
 
@@ -245,3 +245,250 @@ FINDINGS: 0 critical, 15 major, 0 minor, 0 nit
 13. **Accept.** Fixed: risk reworded to reference existing human-override capability (D2.1) rather than naming an undefined mode.
 14. **Accept.** Fixed: consequence aligned with D2.5 "may carry" language.
 15. **Accept.** Fixed: consequence now states what actually changed (export layer's dependency shifts to new card format definition).
+## Round 2 — digest `d05f59a8…`, anchor `80ec70d2` (dirty), tokens 87092, 2026-08-15T08:15:49-05:00, 499s
+
+Anchor: 80ec70d2f4162aed6ceeab2054ffd0822367d967 (dirty tree)
+Artifact digest: d05f59a8239c47130b12f1a776a6e4857a371d3d9bd4a20c5b70b1d2ad732a46 (sha256 over the exact scoped bytes as delivered)
+Scope: .claude/plans/2026-08-15-character-card-architecture-implementation.md
+
+1. The grader agent is not retired
+   Location: .claude/plans/2026-08-15-character-card-architecture-implementation.md:61
+   Quote:
+     **Spec anchor:** D1 (card format block model), D2.3 (entry
+     translation rules), D3 (what this replaces — retirement of
+     framework.md and generation-rules.md).
+   Type: completeness
+   Severity: major
+   Effort-to-fix: medium
+   Risk-of-fix: high
+   Channel: fix
+   Body: D3 also explicitly supersedes the post-generation grader agent, but the plan reduces retirement to two character sub-files. At the anchor, `skills/worldbuilder-grader/SKILL.md` remains an auto-discovered skill that directs users to run the retired generation workflow and `scripts/detect_input_echo.py`. Task 1’s reference sweep would find this file, contradicting its stated expectation, but no task says whether to delete or rewrite it. The shipped plugin would therefore retain a reachable entry point for the architecture being retired.
+
+2. The intimate-dynamics file retains a Design Notes dependency
+   Location: .claude/plans/2026-08-15-character-card-architecture-implementation.md:305
+   Quote:
+     Keep the existing content: three coverage areas (attraction
+     expression, hesitation and limits, specific dynamic), mandatory
+     friction point, existing examples. The coverage areas and friction
+     point requirement are unchanged — this is additive guidance, not
+     a rewrite.
+   Type: consistency
+   Severity: major
+   Effort-to-fix: small
+   Risk-of-fix: medium
+   Channel: fix
+   Body: The anchored `intimate.md` says exploration answers belong in “the Q&A session and Design Notes.” D3 retires Design Notes as a separate input, while this task is explicitly additive and contains no instruction to remove that reference. The resulting skill set would direct users toward a section Task 1 removes from the template.
+
+3. A retired mandatory contrast declaration remains in Relationships
+   Location: .claude/plans/2026-08-15-character-card-architecture-implementation.md:65
+   Quote:
+     **Files:**
+     - Create: `skills/worldbuilder-character/card-format.md`
+     - Modify: `defaults/templates/character.md`
+     - Delete: `skills/worldbuilder-character/framework.md`
+     - Delete: `skills/worldbuilder-character/generation-rules.md`
+   Type: correctness
+   Severity: major
+   Effort-to-fix: small
+   Risk-of-fix: medium
+   Channel: fix
+   Body: The spec preserves the relationship archetypes but expressly drops contrast declarations as a mandatory requirement. The anchored `relationships.md` still contains “Contrast declaration (1 entry)” under Coverage Requirements, yet it is absent from every task’s modification list. Referencing that file unchanged carries forward a requirement the new architecture removes.
+
+4. Background omits the fact-to-manifestation exemption
+   Location: .claude/plans/2026-08-15-character-card-architecture-implementation.md:99
+   Quote:
+     5. **Section-scoped writing rules** — per D2.3. Background entries:
+        Orwell co-anchor, no meta-vocabulary, no staging test or
+        action-line. Body and Soul entries: action-line, staging test
+        (Because clause exempt), trait-word ban, Orwell co-anchor,
+        fact-to-manifestation. State these are overridable defaults.
+   Type: completeness
+   Severity: major
+   Effort-to-fix: small
+   Risk-of-fix: low
+   Channel: fix
+   Body: D2.3 explicitly says fact-to-manifestation does not apply to Background entries. The task names the staging and action-line exemptions but omits this third exemption while assigning fact-to-manifestation to Body and Soul. That leaves the governing reference ambiguous about whether factual Background phrasing should be transformed behaviorally.
+
+5. Voice/Dialogue omits required scene context and coverage annotations
+   Location: .claude/plans/2026-08-15-character-card-architecture-implementation.md:233
+   Quote:
+     7. **Addon block guidance** — reference relationships.md for
+        Relationships, intimate.md for Intimate Dynamics. For
+        Voice/Dialogue: list the situation categories, state the user
+        picks 2–4, each snippet is a composite showing pulling from
+        multiple Core areas.
+   Type: completeness
+   Severity: major
+   Effort-to-fix: small
+   Risk-of-fix: low
+   Channel: fix
+   Body: D1.4 additionally requires enough scene context in every snippet to establish its situation and requires the working sheet to record which Core areas each example exercises. Neither this instruction nor Task 1 includes those requirements, so an implementation can satisfy the plan while omitting two normative parts of the Voice/Dialogue interface.
+
+6. Coverage checking stops before prescribed follow-up behavior
+   Location: .claude/plans/2026-08-15-character-card-architecture-implementation.md:222
+   Quote:
+     5. **Coverage checking** — per D2.4. After each Core section,
+        report depth-of-access observations (advisory, not
+        deterministic). After full Core block, check for missing
+        mandatory doctrine entries (D1.3). Missing mandatory entries
+        must be addressed before finalization or explicitly waived with
+        a recorded reason.
+   Type: completeness
+   Severity: major
+   Effort-to-fix: small
+   Risk-of-fix: medium
+   Channel: fix
+   Body: D2.4 requires the workflow to suggest follow-up questions for under-represented columns and let the user either accept the suggestion or mark the section complete. Reporting observations alone does not implement that interaction, leaving the Q&A workflow without its normative remediation and exit behavior.
+
+7. Working-document annotations and export stripping are omitted
+   Location: .claude/plans/2026-08-15-character-card-architecture-implementation.md:229
+   Quote:
+     6. **Working document** — per D2.5. Entries accumulate in the
+        character note as approved. Each section is a markdown heading,
+        entries are bullet points.
+   Type: completeness
+   Severity: major
+   Effort-to-fix: small
+   Risk-of-fix: high
+   Channel: fix
+   Body: D2.5 defines an interface in which the working document may carry grid-position or coverage-area labels and the export step strips them. The task specifies only headings and bullets. Because `card-format.md` is intended to govern both skills and export tools, omitting the annotation/stripping contract leaves a normative cross-layer interface unimplemented.
+
+8. Target ranges are incorrectly converted into completion gates
+   Location: .claude/plans/2026-08-15-character-card-architecture-implementation.md:239
+   Quote:
+     8. **Completion checklist** — replace the current self-check
+        checklist. New checklist covers: all mandatory doctrine entries
+        present or waived, each Core section within target range,
+        addon blocks present per project flags, no trait adjectives,
+        entries follow section-appropriate writing rules.
+   Type: correctness
+   Severity: major
+   Effort-to-fix: small
+   Risk-of-fix: medium
+   Channel: fix
+   Body: D1.1 says the entry ranges are targets, “not a rigid count.” Making “within target range” a completion-checklist condition turns them into a gate alongside genuinely mandatory doctrine entries. Valid cards outside a target range could consequently be rejected despite satisfying the spec.
+
+9. Addon activation relies on undefined generic flags
+   Location: .claude/plans/2026-08-15-character-card-architecture-implementation.md:210
+   Quote:
+     3. **Session flow** — per D2.2. Block order: Core (Background →
+        Body → Soul), then addon blocks if flagged (Relationships →
+        Intimate Dynamics → Voice/Dialogue). Within each Core section,
+        follow the depth-of-access progression (immediate → over time
+        → hidden/foundational). Addon blocks follow their own coverage
+        structure.
+   Type: completeness
+   Severity: major
+   Effort-to-fix: medium
+   Risk-of-fix: high
+   Channel: fix
+   Body: Only Intimate Dynamics has an existing project-plan flag. The spec gives different activation rules for each addon: Relationships is relevant for cast-based work, Intimate Dynamics is a planning judgment, and Voice/Dialogue is recommended for particular export or distinctiveness needs. The plan neither defines Relationship or Voice flags nor tasks any file with setting them, so those blocks can be silently skipped or demanded without a specified decision path.
+
+10. The OKF verification command always crashes on the real schema
+   Location: .claude/plans/2026-08-15-character-card-architecture-implementation.md:152
+   Quote:
+     ```bash
+     python -c "import json; d=json.load(open('defaults/okf.json')); t=[x for x in d['types'] if x.get('name')=='character']; print('OK' if t and 'Background' in t[0].get('template','') and 'Design Notes' not in t[0].get('template','') else 'FAIL')"
+     ```
+   Type: correctness
+   Severity: major
+   Effort-to-fix: small
+   Risk-of-fix: low
+   Channel: fix
+   Body: `defaults/okf.json` stores `types` as an object keyed by type name, not a list of objects with `name` fields. Iterating it produces strings, so `x.get(...)` raises `AttributeError`; this was reproducible against the anchored file. Task 1 therefore cannot reach its expected `OK` result even after a correct implementation.
+
+11. The reference checker can pass without checking any references
+   Location: .claude/plans/2026-08-15-character-card-architecture-implementation.md:245
+   Quote:
+     Check that SKILL.md references only files that exist after Task 1:
+
+     ```bash
+     grep -oP '(?<=\()[\w/.-]+\.md(?=\))' skills/worldbuilder-character/SKILL.md | while read f; do test -f "skills/worldbuilder-character/$f" || test -f "$f" || echo "MISSING: $f"; done
+     ```
+   Type: correctness
+   Severity: major
+   Effort-to-fix: small
+   Risk-of-fix: low
+   Channel: fix
+   Body: The regex recognizes only `.md` destinations immediately enclosed in parentheses. The task itself instructs authors to reference files using code spans such as `` `card-format.md` ``, matching the existing skill’s convention. If all references use that permitted form, `grep` emits nothing and the command reports success without inspecting a single reference. It also provides no semantic verification of the required Q&A sections.
+
+12. Card-format and template requirements have no effective content verification
+   Location: .claude/plans/2026-08-15-character-card-architecture-implementation.md:105
+   Quote:
+     Source content from the spec decisions. Follow
+     `skills/writing-style.md` for the prose style. Check against
+     `docs/slop-phrases.md`.
+
+     - [ ] **Step 2: Update character template**
+   Type: completeness
+   Severity: major
+   Effort-to-fix: medium
+   Risk-of-fix: low
+   Channel: fix
+   Body: Step 1 ends without a verification command or expected result for its grid, six doctrine entries, ranges, addon rules, or section-scoped rules. The only later template assertion checks for `Background` and absence of `Design Notes`—and that command crashes as described above. Consequently most of Task 1 can be omitted or malformed without a planned check detecting it.
+
+13. Intimate-dynamics verification tests keyword count, not the task
+   Location: .claude/plans/2026-08-15-character-card-architecture-implementation.md:314
+   Quote:
+     Check that intimate.md's entry format guidance matches
+     card-format.md's Soul entry format:
+
+     ```bash
+     grep -c "When/Behavior/Because\|behavioral prose\|card-format" skills/worldbuilder-character/intimate.md
+     ```
+
+     Expected: at least 2 matches.
+   Type: correctness
+   Severity: major
+   Effort-to-fix: small
+   Risk-of-fix: low
+   Channel: fix
+   Body: Two unrelated lines containing any of these tokens satisfy the check. It does not verify the 1–2-per-area target, the three depth-of-access concepts, preservation of all coverage areas, the mandatory friction point, or removal of stale Design Notes guidance. A materially incomplete Task 3 therefore passes its sole verification.
+
+14. Task 1’s interface omits most of its consumed and produced artifacts
+   Location: .claude/plans/2026-08-15-character-card-architecture-implementation.md:71
+   Quote:
+     **Interfaces:**
+     - Consumes: spec decisions D1.1–D1.4, D2.3
+     - Produces: `card-format.md` — the reference document that Task 2's
+       SKILL.md and Task 3's intimate.md reference by name
+   Type: completeness
+   Severity: major
+   Effort-to-fix: medium
+   Risk-of-fix: low
+   Channel: fix
+   Body: The task also consumes D3, the existing template and retired files, two writing references, and the OKF build contract. It produces a modified character template, regenerated `defaults/okf.json`, two deletions, and potentially a modified `CONTEXT.md`. Declaring only `card-format.md` as output leaves downstream workers without a complete dependency or handoff contract, directly violating the task-interface criterion.
+
+15. The conditional CONTEXT.md edit is absent from scope and staging
+   Location: .claude/plans/2026-08-15-character-card-architecture-implementation.md:139
+   Quote:
+     Expected: only SKILL.md (which is rewritten in Task 2) and
+     possibly CONTEXT.md. If CONTEXT.md references them, update the
+     reference to point to card-format.md.
+   Type: consistency
+   Severity: major
+   Effort-to-fix: medium
+   Risk-of-fix: low
+   Channel: fix
+   Body: `CONTEXT.md` is not listed under Task 1 Files or Interfaces, and Task 1’s commit stages neither it nor a general tracked-change set. If the stated condition is true, the executor is told to modify a file that the task does not declare and then leave that modification out of the prescribed commit. “Possibly” also makes the expected reference-sweep result non-deterministic rather than providing a concrete branching verification.
+
+FINDINGS: 0 critical, 15 major, 0 minor, 0 nit
+
+### Adjudication — Round 2
+
+1. **Accept.** Fixed: added grader skill and detect_input_echo.py to retirement list in Task 1.
+2. **Accept.** Fixed: Task 3 now includes removing Design Notes reference from intimate.md.
+3. **Accept.** Fixed: Task 1 now modifies relationships.md to remove contrast declaration as mandatory.
+4. **Accept.** Fixed: card-format.md step now explicitly lists fact-to-manifestation as exempt for Background.
+5. **Accept.** Fixed: Voice/Dialogue guidance now includes scene context and coverage annotation requirements.
+6. **Accept.** Fixed: coverage checking in Task 2 now includes follow-up question suggestion and accept/complete exit behavior.
+7. **Partial accept.** Fixed: card-format.md step now includes working document annotation conventions. Annotation syntax details are implementation decisions.
+8. **Accept.** Fixed: completion checklist uses "at least one entry" not target ranges as gates.
+9. **Partial accept.** Fixed: added session-opening step to Task 2 that determines which addons to include with specific criteria per block.
+10. **Accept.** Fixed: OKF verification command uses dict key access matching actual schema structure.
+11. **Accept.** Fixed: reference check improved; note that semantic verification of SKILL.md content is inherently human review.
+12. **Partial accept.** Fixed: added section-presence verification for card-format.md.
+13. **Accept.** Fixed: intimate.md verification now checks for required additions and stale references separately.
+14. **Accept.** Fixed: Task 1 interfaces expanded to list all consumed and produced artifacts.
+15. **Accept.** Fixed: CONTEXT.md explicitly added to Task 1 files and commit staging.
+

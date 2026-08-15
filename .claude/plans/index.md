@@ -16,3 +16,4 @@
 * [Export-Standards Review Implementation](2026-08-10-export-standards-review-implementation.md) - Implementation plan for the keywords field on concept notes and the extraction reliability map. 2 tasks.
 * [Pipeline quality trial implementation](2026-08-13-pipeline-quality-trial-implementation.md) - Implementation plan for the pipeline quality trial: fail-check gate, input restructuring, decomposition step, blind comparison against baseline
 * [Writing style trial implementation](2026-08-14-writing-style-trial-implementation.md) - Implementation plan for the writing style trial: STE-100 strict, STE-100 loose, and BLUF conditions against baseline
+* [Character card architecture implementation](2026-08-15-character-card-architecture-implementation.md) - Implementation plan for the character card architecture spec: card format definition, Q&A workflow skill rewrite, template update, intimate dynamics update, and generation pipeline retirement.
