@@ -12,7 +12,7 @@ resources: []
 
 # Source Ingestion Skill — Implementation Plan
 
-> **For agentic workers:** REQUIRED SUB-SKILL: Use core-workflow:subagent-driven-development (recommended) or core-workflow:executing-plans to implement this plan task-by-task. Steps use checkbox (`- [ ]`) syntax for tracking. Execution requires the plan artifact's status to be `complete` (flipped on user approval).
+> **For agentic workers:** REQUIRED SUB-SKILL: Use core-workflow:subagent-driven-development (recommended) or core-workflow:executing-plans to implement this plan task-by-task. Steps use checkbox (`- [x]`) syntax for tracking. Execution requires the plan artifact's status to be `complete` (flipped on user approval).
 
 **Goal:** Create the worldbuilder source ingestion skill that extracts source material into reference documents following the no-inference principle.
 
@@ -42,14 +42,14 @@ resources: []
 - Consumes: spec decisions D1-D6 from the governing spec
 - Produces: a complete skill file that agents invoke when ingesting source material
 
-- [ ] **Step 1: Create the skill directory**
+- [x] **Step 1: Create the skill directory**
 
 Run: `mkdir -p skills/worldbuilder-source-ingestion`
 
 Verify: `ls skills/worldbuilder-source-ingestion`
 Expected: empty directory exists
 
-- [ ] **Step 2: Write the SKILL.md file**
+- [x] **Step 2: Write the SKILL.md file**
 
 Create `skills/worldbuilder-source-ingestion/SKILL.md` with the
 following content. This is the complete file — write it exactly.
@@ -267,7 +267,7 @@ source omits infinitely many facts — note structural gaps in the
 source's own coverage only.)
 ````
 
-- [ ] **Step 3: Verify the file exists and has correct frontmatter**
+- [x] **Step 3: Verify the file exists and has correct frontmatter**
 
 Run: `head -4 skills/worldbuilder-source-ingestion/SKILL.md`
 Expected:
@@ -278,7 +278,7 @@ description: Use when bringing external source material into the worldbuilder �
 ---
 ```
 
-- [ ] **Step 4: Verify key sections present**
+- [x] **Step 4: Verify key sections present**
 
 Run: `grep -n "^## " skills/worldbuilder-source-ingestion/SKILL.md`
 Expected output showing these section headings:
@@ -290,7 +290,7 @@ Expected output showing these section headings:
 - `## Extraction Guidance`
 - `## Source Absence Notes`
 
-- [ ] **Step 5: Verify no-inference principle contains the exhaustive list**
+- [x] **Step 5: Verify no-inference principle contains the exhaustive list**
 
 Run: `grep -c "Permitted structural transformations" skills/worldbuilder-source-ingestion/SKILL.md`
 Expected: `1`
@@ -298,12 +298,12 @@ Expected: `1`
 Run: `grep -c "Format conversion\|speaker tags\|engine markup\|file/directory names\|metadata labels" skills/worldbuilder-source-ingestion/SKILL.md`
 Expected: `5` (one match per permitted transformation)
 
-- [ ] **Step 6: Verify scraibe override is stated**
+- [x] **Step 6: Verify scraibe override is stated**
 
 Run: `grep "judgment pass" skills/worldbuilder-source-ingestion/SKILL.md`
 Expected: match containing "Do not use scraibe:ingest's judgment pass"
 
-- [ ] **Step 7: Commit**
+- [x] **Step 7: Commit**
 
 ```bash
 git add skills/worldbuilder-source-ingestion/SKILL.md
