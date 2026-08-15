@@ -95,7 +95,7 @@ A card is not finalized until all of the following are present or the user expli
 
 ### Relationships
 
-Named dynamics with specific other characters. One entry per relationship. Relevant for cast-based worldbuilding; not needed for standalone characters. The 12-archetype framework and coverage requirements are defined in `relationships.md`.
+Named dynamics with specific other characters. One entry per relationship. Relevant for cast-based worldbuilding; not needed for standalone characters. Only characters already in the character's life before the story begins get entries; characters who arrive during the story are narrative events, not standing relationships, and belong in Story Beats. The 12-archetype framework and coverage requirements are defined in `relationships.md`.
 
 ### Intimate Dynamics
 
@@ -134,6 +134,9 @@ not prose-styled.
 **Target range:** 3-8 entries.
 
 **Distinction from other sections:**
+- vs. Relationships: Relationships describe standing dynamics with
+  characters already present before the story begins. Interactions
+  with characters who arrive during the story are Story Beats.
 - vs. Voice/Dialogue: Voice/Dialogue shows speech patterns. Story
   Beats describe specific events that could unfold.
 - vs. calendar events: calendar events are scheduled
