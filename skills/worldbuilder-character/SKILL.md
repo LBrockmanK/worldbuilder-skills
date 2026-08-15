@@ -39,6 +39,11 @@ Before beginning the Q&A, determine which addon blocks to include. Record the de
 
 **Voice / Dialogue:** Recommend when the character will be exported to platforms that support example dialogue or when voice distinctiveness matters for the project. The user decides.
 
+**Story Beats:** Recommend when the character has progression-gated
+events (relationship milestones, story involvement), when the target
+platform supports future storylines or alternate greetings, or when
+the source material provides rich scenario data. The user decides.
+
 ---
 
 ## Session Flow
@@ -51,6 +56,11 @@ Background, then Body, then Soul. Every character card has all three.
 
 Within each section, follow the depth-of-access progression defined in `card-format.md`: immediate (what is apparent on first meeting), then over time (what emerges with familiarity), then hidden/foundational (what is rarely seen or never spoken). This progression guides question order, not document structure. Entries land flat under section headings.
 
+For the Body section, ask about appearance first (preamble), then
+physical mannerisms (entries). The preamble covers static appearance
+at all depths; the depth-of-access grid guides behavioral entries
+only.
+
 Ask one question at a time. Wait for the answer before asking the next. Follow threads: when an answer implies something about a different section, surface it immediately and pursue it before changing topics.
 
 After each answer, propose how the answer translates into a card entry. Apply the section-scoped writing rules from `card-format.md`. The rules are overridable defaults; the user can override any rule for their project.
@@ -59,13 +69,20 @@ When proposing an entry, reproduce the semantic content of the user's answer, no
 
 ### Addon blocks
 
-After Core, work through selected addon blocks in order: Relationships, then Intimate Dynamics, then Voice / Dialogue.
+After Core, work through selected addon blocks in order: Relationships, then Intimate Dynamics, then Voice / Dialogue, then Story Beats.
 
 **Relationships:** See `relationships.md` for the 12-archetype framework, coverage requirements, and entry format. Ask about the character's named relationships, their behavioral dynamics, and what each relationship makes the character do. Follow the coverage and distribution requirements in `relationships.md`.
 
 **Intimate Dynamics:** See `intimate.md` for coverage areas and entry format. Ask about attraction expression, hesitation and limits, and any specific dynamic. Ensure at least one friction point.
 
 **Voice / Dialogue:** The user picks 2-4 situation categories from the list in `card-format.md`. For each chosen category, write a composite dialogue snippet showing the character pulling from multiple Core areas at the same time. Include enough scene context to establish the situation.
+
+**Story Beats:** When selected at session opening, work through Story
+Beats after Voice / Dialogue (or after the last selected addon
+block). Ask about narrative milestones, story events, or
+progression-gated encounters. Work through them in approximate
+narrative order. See `card-format.md` for entry format, writing
+rules, and distinctions from other sections.
 
 ---
 
@@ -92,7 +109,7 @@ Missing required entries must be addressed before finalization or explicitly wai
 
 ## Working Document
 
-Entries accumulate in the character note as the user approves them. Each section is a markdown heading. Entries are bullet points under their section heading.
+Entries accumulate in the character note as the user approves them. Each section is a markdown heading. Entries are bullet points under their section heading. The Body appearance preamble (prose before the first bullet) and Story Beats (labeled prose blocks) are recognized exceptions.
 
 The document may carry optional annotations (grid position, coverage area) during creation. These are a working aid; export strips them.
 
@@ -124,6 +141,13 @@ Frontmatter is defined by the project's OKF registry; `new_doc.py` stamps it at 
 
 Story possibilities for this character live in separate story notes, not in the character note. When you have enough clarity on a character's arc, create a story note with intention scope and link it back. See `worldbuilder-story` for story note structure.
 
+Story Beats (the addon block) are character-local scenario sketches —
+hooks short enough to live inside the character card. A story note is
+a full narrative document with arc structure, scope, and its own
+lifecycle. Story Beats may reference story notes for arcs they
+participate in. If a scenario needs more than 2-4 sentences to
+describe, it belongs in a story note.
+
 The introduction note is also a story note (introduction scope). Create it when you have enough character clarity to know where and how the player first meets this character.
 
 ---
@@ -140,7 +164,7 @@ The note stays on an open status tag while work is in progress. Mark it `complet
 
 - [ ] All required doctrine entries present or explicitly waived with a recorded reason
 - [ ] Each Core section (Background, Body, Soul) has at least one entry. Target ranges in `card-format.md` are guidance, not gates
-- [ ] Selected addon blocks completed (Relationships, Intimate Dynamics, Voice / Dialogue as determined in session opening)
+- [ ] Selected addon blocks completed (Relationships, Intimate Dynamics, Voice / Dialogue, Story Beats as determined in session opening)
 - [ ] No trait adjectives anywhere in the note. Each replaced by the behavior that earned it
 - [ ] Entries follow section-appropriate writing rules per `card-format.md`
 - [ ] `### Session Notes` present with Q&A capture

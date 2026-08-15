@@ -160,7 +160,7 @@ For each character note in `notes/`, produce a character record. Process one cha
 | Character name | `name`, `lastName` |
 | Derived by export skill | `role` |
 | Assembled card prose | `baseProfile` |
-| Appearance section | `appearance` |
+| Body preamble | `appearance` |
 | Sprite sets (see below) | `spriteSets[]` |
 | Available Day (see below) | `availableFromDay` |
 
@@ -172,7 +172,16 @@ For each character note in `notes/`, produce a character record. Process one cha
 
 **`baseProfile`** — The card prose. See `card-assembly.md` for full assembly guidance. This is the most complex field; do not attempt it without reading that file.
 
-**`appearance`** — Use the Appearance section of the character note verbatim or lightly condensed. Cover species/type and sex if relevant, age presentation and body type, notable features, clothing style.
+**`appearance`** — Use the Body section's appearance preamble of the character note verbatim or lightly condensed. Cover species/type and sex if relevant, age presentation and body type, notable features, clothing style.
+
+**Body preamble → appearance:** The Body appearance preamble provides
+the character's physical description for the appearance field.
+
+**Story Beats → Future Storylines:** Each Story Beat entry maps to
+a future storyline. The export transforms definite scenario prose to
+possibility-style framing. Trigger conditions that the platform
+cannot mechanically enforce are woven into the storyline context as
+narrative framing.
 
 ---
 
@@ -212,7 +221,7 @@ Every character needs at minimum:
 
 Add additional states only where they're meaningfully distinct from the above (Formal for a character who attends ceremonial occasions; Combat for a fighter, etc.). Do not create states for transient emotional conditions.
 
-The `description` drives art generation context; keep it concrete and consistent with the character's Appearance section. The `expressions.neutral` prompt is the base image generation prompt for that state.
+The `description` drives art generation context; keep it concrete and consistent with the character's Body preamble. The `expressions.neutral` prompt is the base image generation prompt for that state.
 
 ---
 

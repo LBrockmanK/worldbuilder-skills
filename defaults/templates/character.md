@@ -20,7 +20,9 @@ _Where this character comes from. Fact pairs: [Fact] → [what it made true]. No
 
 ## Body
 
-_Physical behavioral descriptions. One stageable sentence per entry._
+_Appearance preamble: short descriptive prose — hair, eyes, skin, build, distinguishing features, clothing._
+
+_Behavioral entries below. One stageable sentence per entry._
 
 -
 
@@ -47,3 +49,7 @@ _Included only when flagged at project planning. Behavioral prose in Soul format
 _Included when relevant. 2-4 composite dialogue snippets showing the character across different situations._
 
 -
+
+## Story Beats
+
+_Labeled prose blocks. Title, trigger/condition, 2-4 sentences of scenario prose. 3-8 entries._

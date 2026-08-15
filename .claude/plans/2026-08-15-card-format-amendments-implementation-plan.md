@@ -6,7 +6,7 @@ description: Implementation plan for Body appearance preamble (D1) and Story Bea
 tags:
 - complete
 date: 2026-08-15
-timestamp: 2026-08-15T17:21Z
+timestamp: 2026-08-15T17:36Z
 resources: []
 ---
 
@@ -47,7 +47,7 @@ resources: []
 - Consumes: spec decisions D1 and D2 verbatim
 - Produces: updated card-format.md and SKILL.md that Task 2 reads from
 
-- [ ] **Step 1: Add Body appearance preamble to card-format.md**
+- [x] **Step 1: Add Body appearance preamble to card-format.md**
 
 In the Body section (after the `### Body` heading and before `**Entry format:**`), insert the preamble definition before the existing entry format. The section should read:
 
@@ -72,7 +72,7 @@ physical behavior that can be observed.
 
 Leave the existing target range and example entries unchanged.
 
-- [ ] **Step 2: Add Story Beats addon block to card-format.md**
+- [x] **Step 2: Add Story Beats addon block to card-format.md**
 
 After the Voice / Dialogue addon block section, add:
 
@@ -102,7 +102,7 @@ not prose-styled.
   card. Story notes are full arc documents outside it.
 ```
 
-- [ ] **Step 3: Update working-document conventions in card-format.md**
+- [x] **Step 3: Update working-document conventions in card-format.md**
 
 In the working-document conventions section, after the existing text about bullet points and annotations, add:
 
@@ -114,7 +114,7 @@ condition, and scenario prose). Export strips working annotations
 but preserves both formats.
 ```
 
-- [ ] **Step 4: Update SKILL.md session opening**
+- [x] **Step 4: Update SKILL.md session opening**
 
 In the Session Opening section, after the Voice / Dialogue recommendation paragraph, add:
 
@@ -125,7 +125,7 @@ platform supports future storylines or alternate greetings, or when
 the source material provides rich scenario data. The user decides.
 ```
 
-- [ ] **Step 5: Update SKILL.md session flow — addon blocks**
+- [x] **Step 5: Update SKILL.md session flow — addon blocks**
 
 In the Addon blocks subsection, update the ordered addon processing list to include Story Beats after Voice / Dialogue: "Relationships, then Intimate Dynamics, then Voice / Dialogue, then Story Beats." Then add a Story Beats paragraph after the Voice / Dialogue paragraph:
 
@@ -138,7 +138,7 @@ narrative order. See `card-format.md` for entry format, writing
 rules, and distinctions from other sections.
 ```
 
-- [ ] **Step 6: Update SKILL.md session flow — Body section guidance**
+- [x] **Step 6: Update SKILL.md session flow — Body section guidance**
 
 In the Core block subsection of Session Flow, after the depth-of-access progression paragraph, add a note about the Body preamble:
 
@@ -149,7 +149,7 @@ at all depths; the depth-of-access grid guides behavioral entries
 only.
 ```
 
-- [ ] **Step 7: Update SKILL.md story notes boundary**
+- [x] **Step 7: Update SKILL.md story notes boundary**
 
 In the Story Notes section, after "Story possibilities for this character live in separate story notes," add:
 
@@ -162,7 +162,7 @@ participate in. If a scenario needs more than 2-4 sentences to
 describe, it belongs in a story note.
 ```
 
-- [ ] **Step 8: Update SKILL.md completion checklist**
+- [x] **Step 8: Update SKILL.md completion checklist**
 
 Change the parenthetical in the "Selected addon blocks completed" item from:
 
@@ -176,7 +176,7 @@ to:
 (Relationships, Intimate Dynamics, Voice / Dialogue, Story Beats as determined in session opening)
 ```
 
-- [ ] **Step 9: Verify internal consistency**
+- [x] **Step 9: Verify internal consistency**
 
 Read both files fully. Verify:
 - card-format.md Body section has preamble definition before entry format
@@ -193,7 +193,7 @@ Expected: matches in both files at the inserted locations.
 Run: `grep -n "preamble" skills/worldbuilder-character/card-format.md skills/worldbuilder-character/SKILL.md`
 Expected: matches in both files.
 
-- [ ] **Step 10: Commit**
+- [x] **Step 10: Commit**
 
 ```bash
 git add skills/worldbuilder-character/card-format.md skills/worldbuilder-character/SKILL.md
@@ -216,7 +216,7 @@ git commit -m "feat: Body appearance preamble and Story Beats addon block — ca
 - Consumes: card-format.md definitions from Task 1
 - Produces: updated template, generated preset, updated export instructions
 
-- [ ] **Step 1: Update character template — Body section**
+- [x] **Step 1: Update character template — Body section**
 
 In `defaults/templates/character.md`, change the Body section stub from its current format to include a preamble placeholder:
 
@@ -230,7 +230,7 @@ _Behavioral entries below. One stageable sentence per entry._
 - 
 ```
 
-- [ ] **Step 2: Update character template — add Story Beats heading**
+- [x] **Step 2: Update character template — add Story Beats heading**
 
 After the Voice / Dialogue section in the template, add:
 
@@ -241,22 +241,22 @@ _Labeled prose blocks. Title, trigger/condition, 2-4 sentences of scenario prose
 
 ```
 
-- [ ] **Step 3: Regenerate OKF preset**
+- [x] **Step 3: Regenerate OKF preset**
 
 Run: `python scripts/build-okf.py`
 Expected: `defaults/okf.json` is regenerated without errors.
 
 Verify: `python -c "import json; d=json.load(open('defaults/okf.json')); print('OK')"` prints `OK`.
 
-- [ ] **Step 4: Update card-assembly.md — Body preamble in export**
+- [x] **Step 4: Update card-assembly.md — Body preamble in export**
 
 In `skills/worldbuilder-ainime-export/card-assembly.md`, in the section that assembles the character prose (around line 21 where "Who they are at a glance" is constructed), add a note that the Body preamble provides the physical appearance description and is included verbatim in the assembled prose.
 
-- [ ] **Step 5: Update card-assembly.md — Future Storylines from Story Beats**
+- [x] **Step 5: Update card-assembly.md — Future Storylines from Story Beats**
 
 In the Future Storylines section (lines 91-101), update the source reference to note that Story Beats entries from the character card are the source material. The export transforms them to possibility-style framing (present tense, "might" or "could" voice). The title becomes the storyline label; the trigger/condition becomes the storyline context; the scenario prose is reframed as a possibility.
 
-- [ ] **Step 6: Update ainime-export SKILL.md — Story Beats mapping**
+- [x] **Step 6: Update ainime-export SKILL.md — Story Beats mapping**
 
 In the Character Export section:
 
@@ -274,7 +274,7 @@ cannot mechanically enforce are woven into the storyline context as
 narrative framing.
 ```
 
-- [ ] **Step 7: Verify export consistency**
+- [x] **Step 7: Verify export consistency**
 
 Read card-assembly.md and ainime-export SKILL.md. Verify:
 - Body preamble consumption is noted in the prose assembly section
@@ -284,7 +284,7 @@ Read card-assembly.md and ainime-export SKILL.md. Verify:
 Run: `grep -n "Story Beats\|preamble" skills/worldbuilder-ainime-export/card-assembly.md skills/worldbuilder-ainime-export/SKILL.md`
 Expected: matches in both files.
 
-- [ ] **Step 8: Commit**
+- [x] **Step 8: Commit**
 
 ```bash
 git add defaults/templates/character.md defaults/okf.json skills/worldbuilder-ainime-export/card-assembly.md skills/worldbuilder-ainime-export/SKILL.md
