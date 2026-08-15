@@ -183,3 +183,135 @@ appearance preamble (prose before the first bullet point) and Story
 Beats entries (labeled prose blocks with bold title, em-dash
 condition, and scenario prose). Export strips working annotations
 but preserves both formats.
+
+---
+
+## Review criteria
+
+Rules the pre-completion review enforces, organized by scope. Each
+check names the rule and its source location, then describes the
+violation pattern — it does not reproduce the full rule text.
+
+### Checks
+
+**Document-level:**
+- Required doctrine entries present or waived (this document,
+  Required doctrine entries section). Violation: missing entry with
+  no recorded waiver.
+- Each Core section has at least one entry (this document, Core block
+  section). Violation: empty section.
+- Slop-phrase scan (`docs/slop-phrases.md`, full checklist).
+  Violation: any listed phrase present in card prose.
+- Writing doctrine compliance (`skills/writing-style.md`;
+  `.claude/adr/0004-action-line-style-model.md`). Violation: any
+  failure mode listed in those documents.
+
+**Background entries:**
+- Fact-pair format (this document, Background section). Violation:
+  result half contains behavioral framing instead of a concrete fact.
+- No meta-vocabulary (this document, Section-scoped writing rules —
+  Background).
+- Orwell co-anchor (this document, Section-scoped writing rules —
+  Background).
+- Trait-word ban (`skills/writing-style.md`, trait-word ban).
+  Violation: trait adjective anywhere in a Background entry.
+
+**Body preamble:**
+- Short descriptive prose before the first bullet (this document,
+  Body section — Appearance preamble). Violation: preamble formatted
+  as a bullet entry.
+- Staging test exempt (this document, Body section — Appearance
+  preamble).
+- Orwell co-anchor and trait-word ban apply.
+
+**Body entries:**
+- Entry format (this document, Body section) and action-line
+  convention (Section-scoped writing rules). Violation:
+  multi-sentence entries, past tense, internal states.
+- Staging test (this document, Section-scoped writing rules — Body
+  and Soul). Violation: entries a director cannot stage.
+- Trait-word ban. Violation: adjective labels instead of behavior.
+
+**Soul entries:**
+- Entry format (this document, Soul section). Violation: missing
+  When trigger, missing Behavior, missing Because reason.
+- Action-line convention (Section-scoped writing rules — Body and
+  Soul). Violation: internal states outside the Because clause.
+- Staging test; Because clause exempt.
+- Trait-word ban.
+
+**Relationship entries:**
+- Perspective-focus (`relationships.md`, perspective-focus section
+  and per-entry self-review). Violation: entry describes the other
+  character's actions without describing this character's behavior.
+- Archetype in bold prefix (`relationships.md`, Writing Relationship
+  Entries section). Violation: missing archetype.
+- Pre-story characters only (this document, Addon blocks —
+  Relationships). Violation: entry for a character who arrives
+  during the story.
+- Trait-word ban. Violation: trait adjective describing a related
+  character.
+- Coverage requirements (`relationships.md`, Coverage Requirements
+  section). Violation: count below the minimum for the character's
+  role.
+
+**Intimate Dynamics entries (when included):**
+- When/Behavior/Because format, same as Soul (this document, Addon
+  blocks — Intimate Dynamics; `intimate.md`).
+- Three coverage areas present with 1-2 entries each
+  (`intimate.md`).
+- Mandatory friction point present (`intimate.md`). Violation:
+  no internal contradiction in intimate behavior.
+
+**Voice / Dialogue (when included):**
+- 2-4 composite snippets (`this document, Addon blocks — Voice /
+  Dialogue`). Violation: count outside range.
+- Each snippet pulls from multiple Core areas (this document, Addon
+  blocks — Voice / Dialogue). Violation: snippet exercises only one
+  area.
+- Sufficient scene context to establish the situation.
+
+**Story Beats entries (when included):**
+- Action-line convention, staging test, Orwell co-anchor (this
+  document, Addon blocks — Story Beats).
+- No meta-vocabulary.
+- Condition notes are factual, not prose-styled.
+
+### Exempt
+
+- **Design Notes:** exempt from all review checks. Design Notes are
+  excluded from all exports and exist as a builder record.
+- **Working annotations** (doctrine labels like `*(core want)*`,
+  `*(false belief)*`): stripped at export; drafting aids, not
+  meta-vocabulary violations.
+- **In-world quoted text:** exempt from the trait-word ban. Text
+  quoted from the source material (game dialogue, in-world documents)
+  is not prose the card author chose.
+- **Voice / Dialogue speech lines:** in-character dialogue follows
+  the character's speech patterns, not the card-body writing rules.
+  Stage directions and situation descriptions within Voice / Dialogue
+  are not exempt.
+
+### Judgment calls
+
+The general rule (D4 of the governing spec): auto-fix when the
+violation is clear AND the repair is safe (mechanical restructuring
+only). Escalate when either is ambiguous.
+
+Character-card-specific guidance:
+- Splitting a multi-sentence Body entry into one sentence: auto-fix
+  when the entry contains one core behavior and the extra sentences
+  are elaboration. Escalate when the entry contains multiple distinct
+  behaviors that each need their own entry.
+- Removing an internal state from a Soul entry: auto-fix when the
+  internal state can be replaced by the observable behavior already
+  described in the entry. Escalate when removing it would lose the
+  entry's meaning and a replacement behavior must be sourced from
+  reference material.
+- Reformatting a bullet preamble to prose: always auto-fix (purely
+  mechanical).
+- Adding a missing relationship archetype: always escalate (requires
+  a characterization choice about which archetype fits).
+- Rewriting a Background fact-pair result: escalate when the current
+  result is a trait label or abstract interpretation and a concrete
+  replacement must be sourced from reference material.
