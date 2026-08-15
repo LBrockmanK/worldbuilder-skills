@@ -125,6 +125,10 @@ or duplication.
 
 **Naming:** `<entity-name> — <source-directory-or-label>.md`
 
+For shared multi-entity documents, list the entity names:
+`<source-label> — <entity-names>.md`
+(e.g., `Group Conversations — Adeline Celine Reina.md`).
+
 ---
 
 ## Extraction Guidance
@@ -181,7 +185,8 @@ path or section) is required for all extraction.
 
 - Content reproduced with source attribution (URL, page title,
   access date) — not summarized. If a source is too large to
-  reproduce in full, reproduce the relevant sections with provenance
+  reproduce in full, reproduce the sections the user identified
+  during source exploration with provenance
 - `[official]` or `[community]` marker per source
 - Discrepancies with other sources noted with both sides and
   provenance — never declared as corrections
@@ -192,14 +197,15 @@ path or section) is required for all extraction.
 
 Each reference document ends with a **Source Absences** section
 noting what the extracted source does not contain. Absences are
-factual observations about the source's coverage, stated relative to
-the source's own apparent scope.
+factual observations about the source's coverage, limited to
+structural observations: missing fields in structured data, empty
+directories, absent file types declared elsewhere in the source.
 
-**Valid:** "This source contains no dialogue files for seasons after
-Fall."
+**Valid:** "The `Schedules/` directory has subdirectories for Spring,
+Summer, and Fall but none for Winter."
 
-**Valid:** "No text-based physical description appears in this
-source."
+**Valid:** "This directory contains no `.toml` files for Winter
+schedules — only Spring, Summer, and Fall are present."
 
 **Invalid (pipeline-specific):** "No information about core fear or
 false belief." (Card-format concepts the source has no obligation to
