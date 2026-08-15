@@ -90,10 +90,34 @@ appropriate completion status.
 
 ## World info sources
 
-For location/faction ingestion (item 10):
+Ingested sources (reference documents in locations/, events/, concepts/):
 
-- `source/fiddle/locations.toml` — location data
+- `source/fiddle/locations.toml` — location definitions
+- `source/fiddle/t2_location_descriptions.toml` — zone definitions and NPC routing
 - `source/fiddle/festivals.toml` — festival/event data
-- `source/fiddle/stores.toml` — vendor locations
-- `source/t2/Cutscenes/` — story and festival events
-- `source/fiddle/t2_location_descriptions.toml` — location prose
+- `source/fiddle/stores.toml` — vendor inventories
+- `source/fiddle/weather.toml` — seasonal weather system
+- `source/fiddle/spells.toml` — magic system
+- `source/fiddle/artifacts.toml` — collectible lore objects
+- `source/fiddle/songs.toml` — in-world music
+- `source/fiddle/gossip.toml` — NPC social gossip
+- `source/fiddle/flavor_text.toml` — world atmospheric text
+- `source/fiddle/barks.toml` — ambient NPC expressions
+- `source/fiddle/letters.toml` — in-world correspondence
+- `source/fiddle/quests/` — story, heart, fetch, and challenge quests
+- `source/fiddle/dates.toml` — calendar system
+- `source/fiddle/monsters/` — mine creatures
+- `source/fiddle/forageables.toml` — wild flora
+- `source/fiddle/museum_wings/` — museum collections
+- `source/fiddle/cameos/` — visiting characters
+- `source/fiddle/ranching/` — domesticated animals
+- `source/fiddle/items/fish/` — fish species by habitat
+- `source/fiddle/spouse.toml` — marriage mechanics
+- `source/fiddle/children.toml` — child NPC system
+
+Not yet ingested (character-specific, handled by character ingestion):
+
+- `source/fiddle/npcs/` — per-character data (35 files)
+- `source/t2/Cutscenes/` — story and festival event scripts
+- `source/t2/Conversations/` — NPC dialogue
+- `source/t2/Schedules/` — NPC daily routines
