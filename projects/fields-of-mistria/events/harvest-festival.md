@@ -17,7 +17,7 @@ harvest festival, harvest, fall festival, autumn dance, harvest competition, aut
 
 The Harvest Festival is Mistria's autumn celebration. The town square is dressed in fall colors, and the day splits between a harvest competition and a community dance.
 
-The competition is a harvest showcase — participants present what they've grown, and the town judges the results. Placement earns recognition, from honorable mention to first place.
+The competition is a harvest showcase — participants present their best crops, preserves, and crafted goods, and the town judges the results. Placement earns recognition, from honorable mention to first place.
 
 The dance follows. Anyone can invite someone to dance, and most people are happy to accept from someone they know well — a close friend, a sweetheart, someone who has spent real time with them. A stranger asking out of the blue gets a polite no. A few people are harder to win over than others. Everyone dances together; it is a shared moment, not individual performances.
 
