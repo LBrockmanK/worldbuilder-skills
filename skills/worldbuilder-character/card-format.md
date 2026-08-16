@@ -174,6 +174,39 @@ For the full writing doctrine, see `../writing-style.md`.
 
 ---
 
+## Starting world state
+
+Core sections (Background, Body, Soul) and Relationships describe
+who the character is at the project's declared starting point — the
+moment the story begins. Events, outcomes, and characters that
+arrive after that point are story content and belong in Story Beats.
+
+The starting world state is a project-level document, not part of
+the card format. When a project declares one, it is the authority on
+what counts as pre-story. When no starting state is declared, the
+card author applies their best judgment and the reviewer flags
+entries that appear to reference progression-gated events.
+
+Voice / Dialogue scenes are composites illustrating the character's
+voice. They should depict situations plausible at the starting
+state, not scenes from specific story events.
+
+## Player references
+
+The player (the user interacting with the character on the target
+platform) is not referenced in Core sections or Relationships. These
+sections describe who the character is independent of any specific
+interlocutor.
+
+Story Beats may reference the player — these are progression-gated
+events that involve the player by design. Voice / Dialogue may
+reference the player — these are composite scenes showing how the
+character talks to the person in front of them.
+
+In dialogue lines, use `{{user}}` for the player's name. In stage
+directions and Story Beats prose, use "the player." Do not use
+source-specific or project-specific player names.
+
 ## Working document conventions
 
 Entries accumulate under section headings as bullet points. The document may carry optional annotations (grid position, coverage area) during creation; export strips these. Annotations are a working aid, not part of the card's final content.
@@ -205,6 +238,18 @@ violation pattern — it does not reproduce the full rule text.
 - Writing doctrine compliance (`skills/writing-style.md`;
   `.claude/adr/0004-action-line-style-model.md`). Violation: any
   failure mode listed in those documents.
+- Starting-state scope (this document, Starting world state section).
+  Violation: entry in Background, Body, Soul, or Relationships
+  references an event, outcome, or character that does not exist at
+  the project's declared starting point. Story Beats and Voice /
+  Dialogue are exempt. When no starting state is declared, flag
+  entries that appear to reference progression-gated events and
+  escalate for confirmation.
+- Player reference scope (this document, Player references section).
+  Violation: the player is referenced by name or role in Background,
+  Body, Soul, or Relationships. Story Beats and Voice / Dialogue may
+  reference the player. Dialogue uses `{{user}}`; stage directions
+  use "the player." Source-specific player names are violations.
 
 **Background entries:**
 - Fact-pair format (this document, Background section). Violation:
@@ -270,6 +315,10 @@ violation pattern — it does not reproduce the full rule text.
   blocks — Voice / Dialogue). Violation: snippet exercises only one
   area.
 - Sufficient scene context to establish the situation.
+- Scene situations are plausible at the starting state (this
+  document, Starting world state section). Violation: scene depicts
+  a specific progression-gated story event rather than a
+  starting-state situation.
 
 **Story Beats entries (when included):**
 - Action-line convention, staging test, Orwell co-anchor (this

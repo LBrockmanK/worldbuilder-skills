@@ -31,6 +31,17 @@ Source material substitutes for human answers. When the human provides source ma
 
 ## Session Opening
 
+**Starting world state:** Check whether the project has a starting
+world state document (a project-level reference listing the timeline
+boundary, which characters are present at the start, and what has
+already happened before the story begins). If one exists, read it
+before asking any questions — it governs what counts as pre-story
+content for Core sections and Relationships versus story content for
+Story Beats. If one does not exist, establish the boundary with the
+user during the first character session and record it as a project
+document. Subsequent sessions read it rather than re-deriving the
+boundary.
+
 Before beginning the Q&A, determine which addon blocks to include. Record the decision.
 
 **Relationships:** Ask whether the character is part of a cast. If yes, include the Relationships block.

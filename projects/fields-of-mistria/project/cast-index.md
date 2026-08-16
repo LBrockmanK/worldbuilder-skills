@@ -24,8 +24,8 @@ appropriate completion status.
 | Character | Status | Tags | Notes |
 |-----------|--------|------|-------|
 | Adeline | done | noble, dateable | Vertical-slice test, review applied |
-| Eiland | available | noble, dateable | Brother, shares the Manor |
-| Elsie | available | noble | Great-aunt figure, retired opera singer |
+| Eiland | card-done | noble, dateable | Brother, shares the Manor |
+| Elsie | card-done | noble | Great-aunt figure, retired opera singer |
 
 ### Batch 2: Friend trio + close circle
 
