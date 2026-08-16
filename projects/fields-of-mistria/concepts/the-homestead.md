@@ -12,9 +12,7 @@ The player's homestead is part of the deal — Mistria offered it in exchange fo
 
 ## Development
 
-The homestead grows through the carpenter's shop. Landen builds expansions and farm structures on commission — additional wings for the house, barns and coops for animals, greenhouses for year-round growing, and a personal museum wing. The general store supplies furniture and decorations for the interior.
-
-There's no fixed order to any of this. Some players will expand the house first; others will build a coop before they even have a proper kitchen. The farm develops at whatever pace and in whatever direction suits the player's interests.
+The homestead grows through the player's own effort and initiative. Expansions, new structures, improvements to the land — all freeform, driven by what the player wants to build and what they can manage. They might commission work, do it themselves, or recruit help from the community. There's no fixed path: some players will expand the house first; others will build animal housing before they even have a proper kitchen. The farm develops at whatever pace and in whatever direction suits.
 
 ## Not just farming
 
