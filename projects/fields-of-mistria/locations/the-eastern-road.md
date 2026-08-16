@@ -2,6 +2,10 @@
 
 *A forested path east of town, where the sound of sawing carries from the Carpenter's Shop.*
 
+## Keywords
+
+eastern road, the eastern road, carpenter's shop, carpenter, pond
+
 ## Setting
 
 A road winds east from Mistria through trees and past a small pond. The Carpenter's Shop stands along the way — Landen and Ryis work here, with a porch workshop and lumber stacked outside. The path is lined with forest, opening occasionally to clearings and the water's edge.

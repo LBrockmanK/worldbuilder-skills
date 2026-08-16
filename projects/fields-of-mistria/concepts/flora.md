@@ -2,6 +2,10 @@
 
 *Every habitat has its own palette of growing things, from sunlit meadows to volcanic vents.*
 
+## Keywords
+
+flora, plants, flowers, foraging, wildflowers, mushrooms, herbs, forage
+
 ## Premise
 
 The plant life of Mistria varies by location and season. Surface forageables follow the calendar — spring daffodils and wild leeks give way to summer herbs, fall chestnuts and moon fruit, winter frost lilies and holly. But the most distinctive flora grows underground and in the Deep Woods, where conditions produce species found nowhere else.

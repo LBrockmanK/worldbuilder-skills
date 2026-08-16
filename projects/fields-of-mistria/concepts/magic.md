@@ -2,6 +2,10 @@
 
 *Rare, practical, and earned — not studied from books but unlocked from the land itself.*
 
+## Keywords
+
+magic, spells, spell, enchantment, sacred light, dragon's breath, summon rain, growth
+
 ## Premise
 
 Magic is not commonplace in Mistria. Most people live without it, and the player learning to cast spells is unusual — a consequence of the seal discoveries underground, not formal training. Magic here is tied to the story's progression: each ability surfaces as the seals reveal more of the region's buried history.

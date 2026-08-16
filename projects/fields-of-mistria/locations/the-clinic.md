@@ -2,6 +2,10 @@
 
 *Where Valen heals what he can and studies what he cannot.*
 
+## Keywords
+
+clinic, the clinic, doctor, medical, hospital
+
 ## Setting
 
 The Clinic sits on the eastern side of Mistria. The ground floor serves as Valen's medical practice — a desk for consultations, a bed for patients, and a corner where he sometimes watches over children. Upstairs holds private quarters.

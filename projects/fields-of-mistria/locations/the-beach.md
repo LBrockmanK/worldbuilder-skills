@@ -2,6 +2,10 @@
 
 *Salt air and warm sand, where Mistria meets the sea.*
 
+## Keywords
+
+beach, the beach, shore, coast, seaside, dock, tackle shop
+
 ## Setting
 
 The Beach stretches along the coast south of Mistria. A dock extends into the water. Campfire benches cluster near the shore, and a picnic area offers seating with a view. Towels mark where people settle in the sand. Terithia's Tackle Shop sits at the edge of the beach, part storefront, part home.

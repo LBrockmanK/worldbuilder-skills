@@ -2,6 +2,10 @@
 
 *Twenty-eight days to a season, four seasons to a year, and the whole world turns with it.*
 
+## Keywords
+
+calendar, seasons, spring, summer, fall, winter, festivals, time
+
 ## Premise
 
 Mistria runs on a four-season calendar — Spring, Summer, Fall, and Winter, each lasting twenty-eight days. The calendar is not just a way to mark time; it governs what grows, what can be caught, what the weather does, and when the community gathers for festivals.

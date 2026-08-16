@@ -2,6 +2,10 @@
 
 *The mountain's interior — layer after layer descending toward something ancient and sealed.*
 
+## Keywords
+
+mines, the mines, dungeon, underground, caverns, lava caves, seal chambers
+
 ## Setting
 
 The Mines open from the Narrows, beginning with an entrance chamber that serves as the threshold between the surface world and what lies below. From there, the depths unfold in distinct layers: the Upper Mines give way to the Tide Caverns, where water seeps through stone. Deeper still, the Deep Earth presses close. At the lowest levels, the Lava Caves burn with subterranean heat.

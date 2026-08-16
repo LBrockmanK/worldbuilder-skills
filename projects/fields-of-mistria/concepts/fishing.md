@@ -2,6 +2,10 @@
 
 *Every body of water holds something different, and what bites depends on when you cast.*
 
+## Keywords
+
+fishing, fish, catch, rod, bait, diving, fish trap, legendary fish
+
 ## Premise
 
 Mistria's waterways are rich and varied. Rivers, ponds, the ocean, deep woods pools, and underground caverns each hold their own populations of fish. What you can catch shifts with the seasons, the weather, and the time of day. Fishing is part livelihood, part exploration, part patience.

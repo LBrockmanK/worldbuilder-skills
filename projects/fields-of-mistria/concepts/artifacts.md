@@ -2,6 +2,10 @@
 
 *Curiosities alone, but together they tell the story of what happened underground.*
 
+## Keywords
+
+artifacts, relics, archaeology, dig sites, ancient objects, ooparts, donations
+
 ## Premise
 
 The mines beneath the Narrows are layered with history. Ancient objects surface at every level — mining picks left by forgotten workers, coral formations from underground tides, crystals shaped by pressure and time, fire-forged relics from volcanic depths, and strange items from the deepest ruins that defy easy explanation. Each artifact belongs to the environment that produced it.

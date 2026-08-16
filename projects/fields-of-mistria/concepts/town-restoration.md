@@ -2,6 +2,10 @@
 
 *An earthquake-damaged village rebuilt through labor, community, and stubbornness.*
 
+## Keywords
+
+restoration, repair, rebuild, earthquake, town repair, community projects, construction
+
 ## Premise
 
 Mistria was hit by an earthquake before the player arrives. Buildings are damaged, infrastructure is broken, and the town has lost its momentum. The player is offered a homestead in exchange for helping restore the community — that exchange is the reason they're here.

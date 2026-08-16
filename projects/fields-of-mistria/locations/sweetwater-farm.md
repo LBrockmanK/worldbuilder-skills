@@ -2,6 +2,10 @@
 
 *Hayden's place — where the animals know you before you reach the gate.*
 
+## Keywords
+
+sweetwater, sweetwater farm, animal farm, barn, ranch
+
 ## Setting
 
 Sweetwater Farm lies east of Mistria, a working livestock operation run by Hayden. A barn houses cows and horses. The farmhouse doubles as a shop for animal supplies. A statue stands on the grounds, and the land extends into open pasture and foraging ground.

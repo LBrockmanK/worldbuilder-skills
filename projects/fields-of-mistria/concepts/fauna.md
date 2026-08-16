@@ -2,6 +2,10 @@
 
 *Each level of the mines has its own ecosystem of creatures adapted to that world.*
 
+## Keywords
+
+fauna, creatures, monsters, bugs, insects, wildlife, enemies, combat
+
 ## Premise
 
 The mines beneath the Narrows are not empty tunnels — they are habitats. Each level supports its own population of creatures, distinct in form and behavior. The surface has its own wildlife too: seasonal bugs, birds, and the small animals that share the landscape. But the underground fauna is what gives the mines their character.

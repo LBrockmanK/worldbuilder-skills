@@ -2,6 +2,10 @@
 
 *The social heart of Mistria — where the town gathers, stories are told, and Friday nights come alive.*
 
+## Keywords
+
+inn, the inn, sleeping dragon, tavern, bar, pub
+
 ## Setting
 
 The Inn sits in southwestern Mistria, just west of the main road into town. A two-story building with a ground-floor bar and dining area, a kitchen in the back, and a balcony overlooking the main room. Private rooms upstairs house the family and at least one long-term lodger.

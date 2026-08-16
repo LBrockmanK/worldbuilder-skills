@@ -2,6 +2,10 @@
 
 *A record of everything the region contains — its living world and its buried past.*
 
+## Keywords
+
+museum, collection, donate, donations, exhibits, specimens, wings
+
 ## Premise
 
 The museum sits in the Narrows, curated by Errol, and houses four collection wings: archaeology, insects, fish, and flora. It starts sparse and fills as the player donates specimens and artifacts from across the region. Each donation adds to a visible, growing record of Mistria's natural and historical wealth.

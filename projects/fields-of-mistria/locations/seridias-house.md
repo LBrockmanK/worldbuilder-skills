@@ -2,6 +2,10 @@
 
 *A home at the edge of the ruins, where one room faces the world and another faces something else entirely.*
 
+## Keywords
+
+seridia's house, seridia house, void room, back room
+
 ## Setting
 
 Seridia's house stands near the Western Ruins, set apart from Mistria proper. The front room is a living space — her home, furnished and personal. A back room opens behind it, and the atmosphere there shifts completely. The void ambience that fills that space has no parallel anywhere else in Mistria above ground.

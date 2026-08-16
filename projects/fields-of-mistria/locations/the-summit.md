@@ -2,6 +2,10 @@
 
 *The peak above Mistria, where the sky opens wide and the town is a scatter of rooftops below.*
 
+## Keywords
+
+summit, the summit, peak, mountaintop, mountain top
+
 ## Setting
 
 The Summit sits at the top of the mountain above town, reached by climbing through the Narrows. The terrain is sparse — rock and scrub, little shade, the wind stronger than anywhere else in the valley.

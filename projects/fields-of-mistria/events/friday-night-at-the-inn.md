@@ -2,6 +2,10 @@
 
 *The weekly gathering — the whole town under one roof.*
 
+## Keywords
+
+friday night, friday night at the inn, inn gathering, weekly gathering, friday
+
 ## Setting
 
 - **When:** Every Friday evening

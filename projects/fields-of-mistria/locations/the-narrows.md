@@ -2,6 +2,10 @@
 
 *Rocky passage between town and the mountain, where ancient stonework breaks through the earth.*
 
+## Keywords
+
+narrows, the narrows, rocky corridor, river, mountain pass
+
 ## Setting
 
 The Narrows is the rocky corridor connecting Mistria to the mines and the museum. The terrain is rough — river cuts through stone, and fragments of old ruins push up from the ground. The Museum stands here, housing four collection wings. Errol's cabin sits alone further along the path. The entrance to the mines opens in the rock face.

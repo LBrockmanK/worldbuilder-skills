@@ -2,6 +2,10 @@
 
 *Steam and copper — where the town comes to soak and slow down.*
 
+## Keywords
+
+bathhouse, the bathhouse, baths, bath, hot spring, spa
+
 ## Setting
 
 The Bathhouse stands in Mistria near the fountain square. Dozy manages the front desk. Beyond the entrance, a changing room with benches leads to the bath hall proper, where four cauldron baths sit in a row. Juniper and Dozy live upstairs.

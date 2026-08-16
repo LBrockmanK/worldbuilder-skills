@@ -2,6 +2,10 @@
 
 *Five worlds stacked beneath one entrance, each deeper and stranger than the last.*
 
+## Keywords
+
+mining, mines, ores, gems, caverns, underground, minerals, excavation
+
 ## Premise
 
 The mines beneath the Narrows descend through five distinct environments, each with its own ecology, atmosphere, and dangers. What begins as practical resource extraction — ores and building materials — becomes the gateway to the seal mystery and the buried history of the region.

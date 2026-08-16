@@ -2,6 +2,10 @@
 
 *Four wings, four collections, and the slow work of cataloguing what Mistria has lost and found.*
 
+## Keywords
+
+museum, the museum, collections, archaeology wing, exhibits
+
 ## Setting
 
 The Museum stands in the Narrows, built into the rocky landscape between town and the mines. The entry hall leads to four collection wings: Archaeology, Insect, Fish, and Flora. A desk near the entrance serves visitors. Display cases and wall space fill as collections grow.

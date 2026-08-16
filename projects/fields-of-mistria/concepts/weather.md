@@ -2,6 +2,10 @@
 
 *Rain changes the mood before it changes anything else.*
 
+## Keywords
+
+weather, rain, snow, storm, blizzard, sunny, cloudy, forecast
+
 ## Premise
 
 Most days in Mistria are calm — clear skies, open air, people going about their routines. But four to six days each season bring inclement weather: rain in spring, summer, and fall; snow in winter. Heavy storms roll in less often, darkening the sky and driving people indoors. Rare special weather — cherry blossom breezes, falling leaf winds, blizzards — marks moments that feel like the world itself is putting on a show.

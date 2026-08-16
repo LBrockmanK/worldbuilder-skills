@@ -2,6 +2,10 @@
 
 *The last night of summer — stargazing at the summit with someone who matters.*
 
+## Keywords
+
+shooting star festival, shooting stars, stargazing, summer festival, star brooch, summer celebration
+
 ## Setting
 
 - **When:** Summer, Day 28

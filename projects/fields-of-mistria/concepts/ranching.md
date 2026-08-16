@@ -2,6 +2,10 @@
 
 *Eight species, daily care, and the quiet satisfaction of a barn full of animals.*
 
+## Keywords
+
+ranching, animals, livestock, barn, chickens, cows, sheep, breeding
+
 ## Premise
 
 The fields around Mistria support a range of domesticated animals, housed and cared for at Sweetwater Farm. Chickens, cows, ducks, horses, sheep, rabbits, alpacas, and capybaras — each with their own products, temperaments, and needs. Hayden's shop supplies feed, accessories, and the knowledge to keep them healthy.

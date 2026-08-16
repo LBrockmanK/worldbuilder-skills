@@ -2,6 +2,10 @@
 
 *The flower competition — a town-wide effort to make Mistria bloom.*
 
+## Keywords
+
+spring festival, spring, flower competition, flower festival, spring celebration
+
 ## Setting
 
 - **When:** Spring, Day 17

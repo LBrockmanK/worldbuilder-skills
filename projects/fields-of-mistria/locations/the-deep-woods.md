@@ -2,6 +2,10 @@
 
 *Dense forest where the canopy closes overhead and the air smells of old growth and strange flowers.*
 
+## Keywords
+
+deep woods, the deep woods, forest, woods, dragonsworn glade
+
 ## Setting
 
 North of Mistria, the woods thicken into something older. Caldarus' house sits deep within, accessible by winding paths through heavy tree cover. Ponds — one to the west, one to the east — break the forest floor. Garden plots grow in clearings where enough light reaches down. A bench near Caldarus' home overlooks the water.

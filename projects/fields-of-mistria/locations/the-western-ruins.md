@@ -2,6 +2,10 @@
 
 *An archaeological dig where the old world surfaces in broken stone and buried artifacts.*
 
+## Keywords
+
+western ruins, the western ruins, ruins, dig site, excavation
+
 ## Setting
 
 West of Mistria, past the edge of settled land, the Western Ruins spread across uneven ground. An excavation pit anchors the site, surrounded by tarps covering sorted artifacts. Dig site tours run when someone is available to lead them. Seridia's house stands nearby, a short walk from the work.

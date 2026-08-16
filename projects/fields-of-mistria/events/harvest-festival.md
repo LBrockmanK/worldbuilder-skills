@@ -2,6 +2,10 @@
 
 *The fall celebration — a harvest competition followed by a dance under the autumn sky.*
 
+## Keywords
+
+harvest festival, harvest, fall festival, autumn dance, harvest competition, autumn celebration
+
 ## Setting
 
 - **When:** Fall, Day 10

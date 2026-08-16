@@ -2,6 +2,10 @@
 
 *Seasonal labor, patient growth, and the economic backbone of a homestead.*
 
+## Keywords
+
+farming, crops, harvest, planting, seeds, greenhouse, farm, agriculture
+
 ## Premise
 
 The player came to Mistria for a homestead, and the farm is what makes that homestead work. Crops follow the seasons — each one has its own roster of plants that will grow, and planting the wrong thing at the wrong time means nothing comes up. Fruit trees take longer but bear harvests across multiple seasons once established.

@@ -2,6 +2,10 @@
 
 *The household on the hill — where Mistria's decisions are made and its history is kept.*
 
+## Keywords
+
+manor, manor house, the manor, mansion, gazebo, gardens
+
 ## Setting
 
 The Manor House sits at the top of the hill overlooking Mistria, reached by walking north through the town. A grand entry opens into a formal space with couches and hall seating. Deeper inside: a dining room with a long table, separate offices for Adeline and Eiland, and private bedrooms for the family — Adeline, Eiland, and Elsie.

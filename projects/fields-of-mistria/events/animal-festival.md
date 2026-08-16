@@ -2,6 +2,10 @@
 
 *The winter showcase — a day to celebrate the animals that make the farm feel alive.*
 
+## Keywords
+
+animal festival, animal showcase, winter festival, livestock show, winter celebration
+
 ## Setting
 
 - **When:** Winter, Day 10

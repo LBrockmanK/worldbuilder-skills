@@ -2,6 +2,10 @@
 
 *The heart of everything — a small town rebuilding itself around a fountain, a manor on the hill, and the people who stayed.*
 
+## Keywords
+
+mistria, town, town square, fountain square, fountain, village
+
 ## Setting
 
 Mistria spreads along a main road that runs north to south, with a fountain square near its center. The Manor House sits on a hill at the northern end, overlooking the town through its gardens and gazebo. South of the fountain, the Inn and General Store face each other across the road. The Blacksmith's forge works in the open air near the fountain, and the Bathhouse and Clinic sit to the east. A mill stands at the town's edge, and Celine's cottage garden grows quietly to the south.

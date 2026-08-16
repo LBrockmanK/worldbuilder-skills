@@ -2,6 +2,10 @@
 
 *A homestead offered in exchange for a promise — help restore the town, and this land is yours.*
 
+## Keywords
+
+farm, the farm, farmhouse, homestead, greenhouse, player home
+
 ## Setting
 
 The farm sits just south of Mistria, a stretch of open land with tillable soil, space for animal buildings, and a farmhouse that grows with its owner. Coops and barns dot the property as the work expands. A shipping box near the road connects the farm's output to the wider world.

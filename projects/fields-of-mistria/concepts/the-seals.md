@@ -2,6 +2,10 @@
 
 *Ancient chambers beneath the earth, holding something that should not have been disturbed.*
 
+## Keywords
+
+seals, seal chambers, elemental seals, narrows, underground, mystery, dragon tablets
+
 ## Premise
 
 Five elemental seal chambers lie buried beneath the Narrows. The earthquake that damaged Mistria also cracked something deeper — old magic is leaking through, and strange things stir underground. The seals are the core of the story's mystery arc, running parallel to the town restoration above.

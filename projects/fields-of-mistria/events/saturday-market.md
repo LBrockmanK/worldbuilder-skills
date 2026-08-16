@@ -2,6 +2,10 @@
 
 *The weekly market — traveling vendors and town commerce in the square.*
 
+## Keywords
+
+saturday market, market, weekly market, town market, vendors, market day
+
 ## Setting
 
 - **When:** Every Saturday
