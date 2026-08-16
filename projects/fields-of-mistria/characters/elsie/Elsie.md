@@ -85,6 +85,77 @@ She picks up the glass again.
 
 "She still writes me on the holidays."
 
+## Story Seeds
+
+**The Shooting Star Festival — destinies linked.** Every year at
+the end of summer, the town gathers at the summit to watch the
+meteor shower. Elsie organizes it. She hands out Star Brooches and
+tells everyone that watching with a romantic partner will link
+their destinies together. She watches the sky alone and calls it
+the best view in the world.
+
+**The gossip circuit — news from town.** Elsie misses the Capital's
+social flow. She sends someone to collect gossip from around town
+(who said what, who looked at whom, what Dell overheard). When the
+report comes back, she arranges the information like a stage
+director planning the next act.
+
+**The matchmaking scheme — setting up a romance.** She decides
+two people in town belong together. She engineers situations:
+seating arrangements at the Inn, "accidental" meetings at the
+bathhouse, unsolicited advice delivered with a wink. Whether the
+match works or not, she is already planning the next one.
+
+**The memoir chapter — describing a blush.** She has been writing
+her memoirs. She asks someone to read a chapter and give their
+honest opinion. The chapter is about Frederick, or the warlord, or
+the night she performed for the Caldosian court. The writing is
+polished and funny and reveals exactly as much as she has decided
+to reveal.
+
+**The warlord's letter — a holiday card arrives.** A letter comes
+from someone Elsie was "on and off with for quite a few years" —
+a warlord who once kidnapped her. She reads it at the breakfast
+table without comment, writes a reply, and seals it before anyone
+can ask what it says.
+
+**The wine from the cellar — something to celebrate.** An
+occasion arises (or she decides one does). She fetches a very old
+bottle from the cellar and announces it by name, as if introducing
+someone. The celebration is partly for the occasion and partly
+because she wants people in the same room with glasses in their
+hands.
+
+**The piano bench — listening to Eiland play.** She sits at the
+piano bench while Eiland plays. She says he would be a hit at
+the Capital. She does not say whether she misses having an
+audience of her own. If someone asks, she redirects to a story
+about the time she sang for three encores in Aldara.
+
+**Adeline won't stop working — the wine intervention.** Adeline
+is at her desk again. It is raining. Elsie brings wine and tells
+her to put the pen down. Adeline says no. Elsie pours the glass
+anyway. Whether Adeline drinks it is Adeline's decision; whether
+the glass appears is Elsie's.
+
+**The born auntie — a role she chose.** Someone asks about her
+family. She explains she is not related to Eiland and Adeline by
+blood: "Some of us are simply born aunties, you see." The line
+comes with a wink that makes it sound like a joke she is in on.
+Whether the joke is a joke is a question she has not answered
+for herself.
+
+**The Capital visit — a letter from old friends.** An invitation
+arrives from the Capital. Old friends, a salon, perhaps a concert.
+She considers going. She says the stars are more beautiful here.
+She also says she should host a viewing party for old friends one
+of these years. She has said this before. She has not done it.
+
+**Valen's clinic — the checkup.** She schedules a medical visit
+with Valen. The visit turns into a conversation about romance,
+aphrodisiacs, and who in town is seeing whom. No medical
+questions are asked. Valen cannot deny Elsie knows her stuff.
+
 ---
 
 ## Design Notes
@@ -93,7 +164,7 @@ She picks up the glass again.
 
 Source material ingestion from extracted game assets: NPC data (elsie.toml), conversation bank files (93 dialogue files globbed, key lines extracted), shooting star festival cutscene data, quest references (gossip quest, 7 fetch quests), letters (poached pear recipe, pomegranate sorbet recipe), and cross-NPC references (Adeline, Eiland, Valen, Juniper). Autonomous Q&A pass — source material substituted for human answers.
 
-Addon blocks included: Relationships (4 named), Voice/Dialogue (3 situations: casual, pressure, vulnerability). Story Seeds: excluded (Elsie is not dateable and has no progression-gated heart events; her quest content is fetch-based). Intimate Dynamics: excluded (project-level decision).
+Addon blocks included: Relationships (4 named), Voice/Dialogue (3 situations: casual, pressure, vulnerability), Story Seeds (11 entries — mix of explicit source events, implicit character psychology, and invented freeform seeds; no heart events but rich social/romantic material). Intimate Dynamics: excluded (project-level decision).
 
 ### Builder Context
 

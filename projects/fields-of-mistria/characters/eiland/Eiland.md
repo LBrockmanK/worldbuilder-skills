@@ -92,39 +92,68 @@ A pause. His voice changes.
 
 ## Story Seeds
 
-**The Stele — two hearts.** Eiland takes the player to an
-ancient stele on the Manor grounds, still intact after the earthquake.
-He teaches them how to read the raised lettering and they discover a
-hidden compartment together. Inside: the Dragonsworn Greaves. He picks
-up the artifact and leaves for the Museum before saying goodbye.
+**The Dragonsworn Armor — the stele holds a secret.** The
+ancient stele on the Manor grounds depicts a legendary set of armor
+tied to Mistria's founding. Eiland has been translating its
+inscriptions for years and believes they point to hidden pieces
+scattered across the region. If someone helps him find the first
+piece, the hunt becomes the defining project of his life. He would
+drop everything else to follow the trail.
 
-**The Western Ruins — four hearts.** A site revealed by the
-earthquake, untouched for centuries. Eiland calls the player a
-collaborator, not an assistant, and they uncover the Dragonsworn Helmet
-together. He says he could spend the rest of his life here and not find
-all its secrets.
+**The Western Ruins — an untouched site.** The earthquake
+revealed ruins on the western cliffs that no one has explored.
+Eiland believes the site could hold archaeological discoveries
+worth a lifetime of study. He needs a collaborator, not an
+assistant, and he says so.
 
-**The Manor Search — six hearts.** The clues point to the Manor
-itself. Eiland is embarrassed that the adventure is a closet search.
-Adeline tells the childhood story of the Caldosian signet ring. Elsie
-finds the Dragonsworn Cloak folded among blankets in her wardrobe. No
-inscription, no puzzle — just a family house that never throws anything
-away.
+**The accidental lecture — enthusiasm escapes.** Someone asks a
+casual question about Mistria's history. He answers with a
+ten-minute explanation of the differences between early and late
+Alda artifacts, complete with hand gestures and a piece of pottery
+pulled from his desk. He catches himself mid-sentence, apologizes,
+and stops. If the listener tells him to keep going, he does.
 
-**The Grove of Rest — eight hearts.** Eiland brings the player
-to a sacred grove where memorial trees carry stone markers skyward as
-they grow. He reflects on his childhood, his parents, and the passage
-of time. They find the last two pieces of the Dragonsworn Armor. He
-asks the player to stay and appreciate the moment instead of rushing to
-the Museum. In the romantic path, he tells the player he has been
-wanting to say how much they mean to him for some time.
+**The snack drawer — artifacts in the wrong place.** Errol finds
+something important filed where it should not be. Eiland's
+disorganization has consequences this time. He has to fix it, and
+the fix requires admitting that his attention was somewhere else
+when it should not have been.
 
-**The Legacy Stele — ten hearts.** Back where it all started. Eiland
-reveals he commissioned a Legacy Stele to commemorate their shared
-adventures — "more permanent than a record in a book." He connects
-archaeology to love: "I was so lost in the hunt for the Dragonsworn
-Armor, that I didn't initially see the treasure right in front of me."
-If the player proposes, he accepts and calls it fate.
+**The budget meeting — cookies versus infrastructure.** Adeline
+needs his input on a practical decision. He pitches something
+impractical and earnest (imported sweets, a monument, a historical
+reenactment). She vetoes it. He concedes, but his case has just
+enough merit that she lets him present it first.
+
+**The translation — something he cannot read.** He finds an
+inscription he cannot translate on his own. The text could unlock
+the next step of a discovery, but he needs help from someone who
+does not want to give it (Juniper, a visiting scholar, a reluctant
+source). He considers bribing them. The bribe is always something
+thoughtful and slightly absurd.
+
+**Elsie's advice — romance as an inscription.** Elsie tells him
+something about love or relationships. He repeats it later to
+someone else, word for word, in the same tone he uses for ancient
+texts: curious, turning the phrase over, not yet sure what it
+translates to. He has not decoded the advice yet.
+
+**The grove — a place that was his.** Before the earthquake, he
+had a quiet place in the woods where he sat and read beneath the
+old trees. He has not been back since. Going there means facing
+the fact that things changed, and some of what changed was him.
+
+**The adventure ends — nothing left to find.** A major project
+finishes. The artifact is cataloged, the site is mapped, the
+translation is complete. He should feel satisfied. Instead he
+reaches for the next thing before the current one settles, because
+a day with nothing to discover is a day he does not know how to
+fill.
+
+**The monument — making something permanent.** He commissions or
+builds something to commemorate a shared experience. Not a record
+in a book — something physical, something that will outlast them.
+The gesture is over the top and he knows it. He does it anyway.
 
 ---
 
@@ -134,7 +163,7 @@ If the player proposes, he accepts and calls it fate.
 
 Source material ingestion from extracted game assets: NPC data (eiland.toml), 5 heart event cutscenes (2/4/6/8/10 hearts), conversation bank files (Eiland's own + 10 cross-NPC references), quest data (heart quests, story quests), letters, and spouse content. Autonomous Q&A pass — source material substituted for human answers.
 
-Addon blocks included: Relationships (5 named), Voice/Dialogue (3 situations: casual, pressure, vulnerability), Story Seeds (5 progression-gated events following the Dragonsworn Armor arc). Intimate Dynamics: excluded (project-level decision, same as Adeline).
+Addon blocks included: Relationships (4 named), Voice/Dialogue (3 situations: casual, pressure, vulnerability), Story Seeds (11 entries — mix of explicit source material, implicit character psychology, and invented freeform seeds; Dragonsworn Armor arc consolidated from 5 heart events into 2 setup seeds). Intimate Dynamics: excluded (project-level decision, same as Adeline).
 
 ### Builder Context
 
