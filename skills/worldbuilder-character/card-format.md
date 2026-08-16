@@ -95,7 +95,7 @@ A card is not finalized until all of the following are present or the user expli
 
 ### Relationships
 
-Named dynamics with specific other characters. One entry per relationship. Relevant for cast-based worldbuilding; not needed for standalone characters. Only characters already in the character's life before the story begins get entries; characters who arrive during the story are narrative events, not standing relationships, and belong in Story Beats. The 12-archetype framework and coverage requirements are defined in `relationships.md`.
+Named dynamics with specific other characters. One entry per relationship. Relevant for cast-based worldbuilding; not needed for standalone characters. Only characters already in the character's life before the story begins get entries; characters who arrive during the story are narrative events, not standing relationships, and belong in Story Seeds. The 12-archetype framework and coverage requirements are defined in `relationships.md`.
 
 ### Intimate Dynamics
 
@@ -120,10 +120,10 @@ Recommended when the character will be exported to platforms that support exampl
 
 Each snippet includes enough scene context to establish the situation. The working sheet notes which Core areas each example exercises as a coverage sanity check. Include this block when voice distinctiveness matters for the project or when the target platform supports example dialogue.
 
-### Story Beats
+### Story Seeds
 
-Every character should have Story Beats. These are story seeds —
-narrative setups the target platform can grow in any direction.
+Every character should have Story Seeds — narrative setups the target
+platform can grow in any direction.
 They provide the character's stake in a scenario and the conditions
 that could trigger it, not a scripted outcome. Labeled prose blocks:
 each entry has a short title, a trigger/condition note, and 2-4
@@ -135,10 +135,10 @@ notes are factual, not prose-styled.
 
 **Target range:** 5-12 entries. Err on the side of more rather
 than fewer — entries can be pared down later, but gaps in coverage
-leave the platform with nothing to work from. A thin Story Beats
+leave the platform with nothing to work from. A thin Story Seeds
 section is a bigger problem than a generous one.
 
-**Sources for Story Beats:**
+**Sources for Story Seeds:**
 - **Explicit:** events defined in source material (heart events,
   quest progressions, story milestones).
 - **Implicit:** scenarios implied by the character's psychology,
@@ -148,34 +148,41 @@ section is a bigger problem than a generous one.
   important).
 - **Invented:** scenarios that serve the character's arc even when
   no source material exists. Every character has developmental
-  potential; Story Beats make it available to the platform.
+  potential; Story Seeds make it available to the platform.
 
 **Writing for freeform play:** The target platform is freeform —
-events can diverge from any scripted path. Write Story Beats as
+events can diverge from any scripted path. Write Story Seeds as
 setups, not outcomes. Describe the situation that could arise and
 what the character would do, not the resolution. A multi-step arc
 from source material (e.g. a five-event quest chain) becomes one
-Story Beat that establishes the premise and the character's stake
+Story Seed that establishes the premise and the character's stake
 in it, not a sequence of scripted events.
 
-**Relationship to world info:** Story Beats provide the character's
+**Relationship to world info:** Story Seeds provide the character's
 stake in a scenario. Factual context that supports the scenario
 (lore, mechanics, history) belongs in world info entries (location,
-concept, or event documents), not in the Story Beat itself. A Story
+concept, or event documents), not in the Story Seed itself. A Story
 Beat can reference world info by name without reproducing it.
+
+When a Story Seed requires world info that does not yet exist,
+create a stub entry in the character's folder (e.g. a concept or
+location note alongside the card) to be merged into the project's
+main world info set later. This avoids blocking card completion on
+the full world info pipeline. Note the stub in the character's
+Design Notes so the merge is not forgotten.
 
 **Distinction from other sections:**
 - vs. Relationships: Relationships describe standing dynamics with
   characters already present before the story begins. Interactions
-  with characters who arrive during the story are Story Beats.
+  with characters who arrive during the story are Story Seeds.
 - vs. Voice/Dialogue: Voice/Dialogue shows speech patterns. Story
   Beats describe specific events that could unfold.
 - vs. calendar events: calendar events are scheduled
-  occurrences. Story Beats are one-time or progression-gated.
+  occurrences. Story Seeds are one-time or progression-gated.
   A dated one-time event with character-specific narrative (e.g. a
-  festival date at a milestone) is a Story Beat referencing the
+  festival date at a milestone) is a Story Seed referencing the
   calendar context.
-- vs. story notes: Story Beats are character-local hooks inside the
+- vs. story notes: Story Seeds are character-local hooks inside the
   card. Story notes are full arc documents outside it.
 
 ---
@@ -210,7 +217,7 @@ For the full writing doctrine, see `../writing-style.md`.
 Core sections (Background, Body, Soul) and Relationships describe
 who the character is at the project's declared starting point — the
 moment the story begins. Events, outcomes, and characters that
-arrive after that point are story content and belong in Story Beats.
+arrive after that point are story content and belong in Story Seeds.
 
 The starting world state is a project-level document, not part of
 the card format. When a project declares one, it is the authority on
@@ -229,13 +236,13 @@ platform) is not referenced in Core sections or Relationships. These
 sections describe who the character is independent of any specific
 interlocutor.
 
-Story Beats may reference the player — these are progression-gated
+Story Seeds may reference the player — these are progression-gated
 events that involve the player by design. Voice / Dialogue may
 reference the player — these are composite scenes showing how the
 character talks to the person in front of them.
 
 In dialogue lines, use `{{user}}` for the player's name. In stage
-directions and Story Beats prose, use "the player." Do not use
+directions and Story Seeds prose, use "the player." Do not use
 source-specific or project-specific player names.
 
 ## Working document conventions
@@ -272,13 +279,13 @@ violation pattern — it does not reproduce the full rule text.
 - Starting-state scope (this document, Starting world state section).
   Violation: entry in Background, Body, Soul, or Relationships
   references an event, outcome, or character that does not exist at
-  the project's declared starting point. Story Beats and Voice /
+  the project's declared starting point. Story Seeds and Voice /
   Dialogue are exempt. When no starting state is declared, flag
   entries that appear to reference progression-gated events and
   escalate for confirmation.
 - Player reference scope (this document, Player references section).
   Violation: the player is referenced by name or role in Background,
-  Body, Soul, or Relationships. Story Beats and Voice / Dialogue may
+  Body, Soul, or Relationships. Story Seeds and Voice / Dialogue may
   reference the player. Dialogue uses `{{user}}`; stage directions
   use "the player." Source-specific player names are violations.
 
@@ -351,9 +358,9 @@ violation pattern — it does not reproduce the full rule text.
   a specific progression-gated story event rather than a
   starting-state situation.
 
-**Story Beats entries (when included):**
+**Story Seeds entries (when included):**
 - Action-line convention, staging test, Orwell co-anchor (this
-  document, Addon blocks — Story Beats).
+  document, Addon blocks — Story Seeds).
 - No meta-vocabulary.
 - Condition notes are factual, not prose-styled.
 

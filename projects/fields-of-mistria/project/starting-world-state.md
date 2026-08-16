@@ -3,7 +3,7 @@
 The character card creation and review boundary for this project.
 Core sections (Background, Body, Soul) and Relationships describe
 the character at the starting point defined here. Events after this
-point belong in Story Beats.
+point belong in Story Seeds.
 
 ## Timeline boundary
 
@@ -71,7 +71,7 @@ Henrietta.
 
 Caldarus (draconic), Seridia (draconic). These characters are not
 part of anyone's pre-story Relationships. Interactions with them
-belong in Story Beats.
+belong in Story Seeds.
 
 ## Recurring events
 

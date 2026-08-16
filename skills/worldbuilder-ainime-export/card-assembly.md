@@ -90,7 +90,7 @@ Used in Influence Thresholds and Future Storylines:
 
 ## Future Storylines
 
-After the influence thresholds, write the Future Storylines section. Source material: the Story Beats section of the character note. Each Story Beat entry (title, trigger/condition, scenario prose) maps to one storyline: the title becomes the storyline label, the trigger/condition becomes the storyline context, and the scenario prose is reframed from definite to possibility-style.
+After the influence thresholds, write the Future Storylines section. Source material: the Story Seeds section of the character note. Each Story Seed entry (title, trigger/condition, scenario prose) maps to one storyline: the title becomes the storyline label, the trigger/condition becomes the storyline context, and the scenario prose is reframed from definite to possibility-style.
 
 - Each entry phrased as possibility: "may surface," "could take," "there is a possibility that"
 - Engine format applies (speech, asterisks, parentheses, backticks)
@@ -115,5 +115,5 @@ After the influence thresholds, write the Future Storylines section. Source mate
 - [ ] 2–4 examples per band
 - [ ] Low bands include active conflict, not only avoidance
 - [ ] High band has both platonic and romantic examples
-- [ ] Future Storylines present and phrased as possibility (if Story Beats included)
+- [ ] Future Storylines present and phrased as possibility (if Story Seeds included)
 - [ ] Introduction note exists separately; no Introduction entry in the card

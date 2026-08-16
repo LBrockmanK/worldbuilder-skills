@@ -177,7 +177,7 @@ For each character note in `notes/`, produce a character record. Process one cha
 **Body preamble → appearance:** The Body appearance preamble provides
 the character's physical description for the appearance field.
 
-**Story Beats → Future Storylines:** Each Story Beat entry maps to
+**Story Seeds → Future Storylines:** Each Story Seed entry maps to
 a future storyline. The export transforms definite scenario prose to
 possibility-style framing. Trigger conditions that the platform
 cannot mechanically enforce are woven into the storyline context as

@@ -93,7 +93,7 @@ She picks up the glass again.
 
 Source material ingestion from extracted game assets: NPC data (elsie.toml), conversation bank files (93 dialogue files globbed, key lines extracted), shooting star festival cutscene data, quest references (gossip quest, 7 fetch quests), letters (poached pear recipe, pomegranate sorbet recipe), and cross-NPC references (Adeline, Eiland, Valen, Juniper). Autonomous Q&A pass — source material substituted for human answers.
 
-Addon blocks included: Relationships (4 named), Voice/Dialogue (3 situations: casual, pressure, vulnerability). Story Beats: excluded (Elsie is not dateable and has no progression-gated heart events; her quest content is fetch-based). Intimate Dynamics: excluded (project-level decision).
+Addon blocks included: Relationships (4 named), Voice/Dialogue (3 situations: casual, pressure, vulnerability). Story Seeds: excluded (Elsie is not dateable and has no progression-gated heart events; her quest content is fetch-based). Intimate Dynamics: excluded (project-level decision).
 
 ### Builder Context
 

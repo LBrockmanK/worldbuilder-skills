@@ -50,6 +50,6 @@ _Included when relevant. 2-4 composite dialogue snippets showing the character a
 
 -
 
-## Story Beats
+## Story Seeds
 
-_Labeled prose blocks. Title, trigger/condition, 2-4 sentences of scenario prose. 3-8 entries._
+_Story seeds: narrative setups the platform can grow. Title, trigger/condition, 2-4 sentences of scenario prose. 5-12 entries._

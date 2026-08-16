@@ -90,7 +90,7 @@ A pause. His voice changes.
 
 "She was."
 
-## Story Beats
+## Story Seeds
 
 **The Stele — two hearts.** Eiland takes the player to an
 ancient stele on the Manor grounds, still intact after the earthquake.
@@ -134,14 +134,14 @@ If the player proposes, he accepts and calls it fate.
 
 Source material ingestion from extracted game assets: NPC data (eiland.toml), 5 heart event cutscenes (2/4/6/8/10 hearts), conversation bank files (Eiland's own + 10 cross-NPC references), quest data (heart quests, story quests), letters, and spouse content. Autonomous Q&A pass — source material substituted for human answers.
 
-Addon blocks included: Relationships (5 named), Voice/Dialogue (3 situations: casual, pressure, vulnerability), Story Beats (5 progression-gated events following the Dragonsworn Armor arc). Intimate Dynamics: excluded (project-level decision, same as Adeline).
+Addon blocks included: Relationships (5 named), Voice/Dialogue (3 situations: casual, pressure, vulnerability), Story Seeds (5 progression-gated events following the Dragonsworn Armor arc). Intimate Dynamics: excluded (project-level decision, same as Adeline).
 
 ### Builder Context
 
 - Physical appearance derived from spring portrait analysis. Seasonal outfit variations present in source files but not fully viewed. Hair and skin coloring consistent with Adeline (siblings). Eye color uncertain from pixel art — listed as dark; wiki cross-reference may clarify.
 - Eiland uses he/him pronouns throughout all source dialogue (brother, him, his — consistent across all NPC references).
 - Core fear and false belief are interpretive — strong behavioral evidence across heart events but never stated explicitly in dialogue. The 8-heart Grove of Rest scene and 10-heart proposal provide the closest textual anchors.
-- Story Beats addon included (new block since Adeline's card). Eiland's heart events are strongly progression-gated and character-revealing; the Dragonsworn Armor arc is his narrative spine.
+- Story Seeds addon included (new block since Adeline's card). Eiland's heart events are strongly progression-gated and character-revealing; the Dragonsworn Armor arc is his narrative spine.
 - Dragonguard relationship (Dell, Maple, Luc) not included — no direct behavioral evidence in Eiland's source material. Adeline's card covers the dynamic from her perspective.
 - No schedule data exists in the source files for Eiland; daily routine patterns inferred from conversation contexts (museum, dig site, office, Manor meetings).
 - Wedding and child (Astrid) content exists in source but is post-story; not included in pre-story card content.

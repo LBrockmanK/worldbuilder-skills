@@ -71,7 +71,7 @@ boundary, which characters are present at the start, and what has
 already happened before the story begins). If one exists, read it
 before asking any questions — it governs what counts as pre-story
 content for Core sections and Relationships versus story content for
-Story Beats. If one does not exist, establish the boundary with the
+Story Seeds. If one does not exist, establish the boundary with the
 user during the first character session and record it as a project
 document. Subsequent sessions read it rather than re-deriving the
 boundary.
@@ -84,7 +84,7 @@ Before beginning the Q&A, determine which addon blocks to include. Record the de
 
 **Voice / Dialogue:** Recommend when the character will be exported to platforms that support example dialogue or when voice distinctiveness matters for the project. The user decides.
 
-**Story Beats:** Included for every character. Every character has
+**Story Seeds:** Included for every character. Every character has
 narrative scenarios worth specifying — from source material, from
 their psychology, or invented to serve their arc.
 
@@ -113,7 +113,7 @@ When proposing an entry, reproduce the semantic content of the user's answer, no
 
 ### Addon blocks
 
-After Core, work through selected addon blocks in order: Relationships, then Intimate Dynamics, then Voice / Dialogue, then Story Beats.
+After Core, work through selected addon blocks in order: Relationships, then Intimate Dynamics, then Voice / Dialogue, then Story Seeds.
 
 **Relationships:** See `relationships.md` for the 12-archetype framework, coverage requirements, and entry format. Ask about the character's named relationships, their behavioral dynamics, and what each relationship makes the character do. Follow the coverage and distribution requirements in `relationships.md`.
 
@@ -121,7 +121,7 @@ After Core, work through selected addon blocks in order: Relationships, then Int
 
 **Voice / Dialogue:** The user picks 2-4 situation categories from the list in `card-format.md`. For each chosen category, write a composite dialogue snippet showing the character pulling from multiple Core areas at the same time. Include enough scene context to establish the situation.
 
-**Story Beats:** Work through Story Beats after Voice / Dialogue
+**Story Seeds:** Work through Story Seeds after Voice / Dialogue
 (or after the last selected addon block). Draw from three sources:
 explicit events in source material, implicit scenarios suggested by
 the character's psychology and relationships, and invented hooks
@@ -158,7 +158,7 @@ Missing required entries must be addressed before finalization or explicitly wai
 
 ## Working Document
 
-Entries accumulate in the character note as the user approves them. Each section is a markdown heading. Entries are bullet points under their section heading. The Body appearance preamble (prose before the first bullet) and Story Beats (labeled prose blocks) are recognized exceptions.
+Entries accumulate in the character note as the user approves them. Each section is a markdown heading. Entries are bullet points under their section heading. The Body appearance preamble (prose before the first bullet) and Story Seeds (labeled prose blocks) are recognized exceptions.
 
 The document may carry optional annotations (grid position, coverage area) during creation. These are a working aid; export strips them.
 
@@ -190,10 +190,10 @@ Frontmatter is defined by the project's OKF registry; `new_doc.py` stamps it at 
 
 Story possibilities for this character live in separate story notes, not in the character note. When you have enough clarity on a character's arc, create a story note with intention scope and link it back. See `worldbuilder-story` for story note structure.
 
-Story Beats (the addon block) are character-local scenario sketches —
+Story Seeds (the addon block) are character-local scenario sketches —
 hooks short enough to live inside the character card. A story note is
 a full narrative document with arc structure, scope, and its own
-lifecycle. Story Beats may reference story notes for arcs they
+lifecycle. Story Seeds may reference story notes for arcs they
 participate in. If a scenario needs more than 2-4 sentences to
 describe, it belongs in a story note.
 
@@ -214,7 +214,7 @@ The note stays on an open status tag while work is in progress. Mark it `complet
 - [ ] All required doctrine entries present or explicitly waived with a recorded reason
 - [ ] Each Core section (Background, Body, Soul) has at least one entry. Target ranges in `card-format.md` are guidance, not gates
 - [ ] Reference documents present in `reference/` subdirectory when working from source material
-- [ ] Story Beats section present with entries (every character; 5-12 target range)
+- [ ] Story Seeds section present with entries (every character; 5-12 target range)
 - [ ] Other selected addon blocks completed (Relationships, Intimate Dynamics, Voice / Dialogue as determined in session opening)
 - [ ] No trait adjectives anywhere in the note. Each replaced by the behavior that earned it
 - [ ] Entries follow section-appropriate writing rules per `card-format.md`
