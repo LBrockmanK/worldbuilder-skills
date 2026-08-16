@@ -33,7 +33,7 @@ appropriate completion status.
 |-----------|--------|------|-------|
 | Celine | available | dateable, general_store_family | |
 | Reina | available | dateable, inn_family | |
-| Nora | available | dateable, general_store_family | |
+| Nora | available | general_store_family | Celine's mother — not dateable in game data |
 
 ### Batch 3: Inn family
 
@@ -48,12 +48,12 @@ appropriate completion status.
 
 | Character | Status | Tags | Notes |
 |-----------|--------|------|-------|
-| Landen | available | carpenter_family | |
-| Ryis | available | dateable, carpenter_family | |
-| Olric | available | forge_family | |
-| March | available | dateable, forge_family | |
-| Dell | available | child, general_store_family | |
-| Holt | available | general_store_family | |
+| Landen | extracted | carpenter_family | |
+| Ryis | extracted | dateable, carpenter_family | |
+| Olric | extracted | forge_family | |
+| March | extracted | dateable, forge_family | |
+| Dell | extracted | child, general_store_family | |
+| Holt | extracted | general_store_family | |
 
 ### Batch 5: Dateable townsfolk (remaining)
 
