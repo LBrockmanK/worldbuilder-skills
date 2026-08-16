@@ -1,5 +1,7 @@
 # Eiland
 
+Noble-born archaeologist and brother to Adeline. Studies the Dragonsworn stele on the Manor grounds, plays piano in the evenings, and drifts through civic duties on his way back to the dig site. Present when it matters, absent the rest of the time.
+
 ## Background
 
 - Son of Baron Wiscar and Baroness Linnet, brother to Adeline, raised at the Manor on the hill → when his parents left for the Capital after the earthquake, he stayed in Mistria with no administrative role and no expectation that he take one

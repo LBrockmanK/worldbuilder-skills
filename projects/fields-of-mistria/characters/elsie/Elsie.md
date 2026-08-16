@@ -1,5 +1,7 @@
 # Elsie
 
+Retired opera singer from the Capital, not a blood relative but Great Aunt to Eiland and Adeline by force of personality. Organizes the Shooting Star Festival, writes her memoirs between bathhouse gossip sessions, and steers every conversation toward romance. Born auntie, self-appointed matchmaker, audience of one for a town that does not know it is performing.
+
 ## Background
 
 - Retired opera singer, a prima donna from the Capital who filled theaters → moved to Mistria after the earthquake and took up residence at the Manor, a town with no opera house and no society column

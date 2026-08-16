@@ -1,5 +1,7 @@
 # Adeline
 
+Acting Leader of Mistria after her parents were called to the Capital. Runs the town through grant applications, request boards, and Thursday door-to-door reviews. Works until she faints, hides behind the clipboard when conversations turn personal, and does not know whether the work that makes her happy is the same work she uses to avoid everything else.
+
 ## Background
 
 - Daughter of Baron Wiscar and Baroness Linnet of Mistria, raised in the Manor on the hill → when the earthquake hit and her parents were called to the Capital, she stepped up as Acting Leader with no one above her to check against
