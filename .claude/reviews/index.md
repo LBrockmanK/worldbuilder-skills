@@ -7,5 +7,6 @@
 * [Review: writing style trial spec](2026-08-14-review-writing-style-trial-spec.md) - Adversarial review of the writing style trial spec (STE-100 and semantic anchors)
 * [Review — Card Format Amendments Spec](2026-08-15-review-card-format-amendments-spec.md) - Adversarial review of the card format amendments spec (Body appearance preamble and Story Beats addon block).
 * [Review — Character Card Architecture Spec](2026-08-15-review-character-card-architecture-spec.md) - Adversarial review of the character card architecture spec (Q&A workflow, block model, export interface replacement).
+* [2026-08-15-review-fom-world-info-entity-documents](2026-08-15-review-fom-world-info-entity-documents.md)
 * [2026-08-15-review-source-ingestion-skill-spec](2026-08-15-review-source-ingestion-skill-spec.md)
 * [Review: worldbuilder document review gate spec](2026-08-15-review-worldbuilder-document-review-gate-spec.md) - Adversarial review of the worldbuilder document review gate spec
