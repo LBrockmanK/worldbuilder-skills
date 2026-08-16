@@ -31,9 +31,9 @@ appropriate completion status.
 
 | Character | Status | Tags | Notes |
 |-----------|--------|------|-------|
-| Celine | available | dateable, general_store_family | |
-| Reina | available | dateable, inn_family | |
-| Nora | available | general_store_family | Celine's mother — not dateable in game data |
+| Celine | card-done | dateable, general_store_family | Gardener, Codex Mistria researcher |
+| Reina | card-done | dateable, inn_family | Head Cook, culinary competition arc |
+| Nora | card-done | general_store_family | Supporting character — not dateable, Chamber of Commerce head |
 
 ### Batch 3: Inn family
 
@@ -48,23 +48,23 @@ appropriate completion status.
 
 | Character | Status | Tags | Notes |
 |-----------|--------|------|-------|
-| Landen | extracted | carpenter_family | |
-| Ryis | extracted | dateable, carpenter_family | |
-| Olric | extracted | forge_family | |
-| March | extracted | dateable, forge_family | |
-| Dell | extracted | child, general_store_family | |
-| Holt | extracted | general_store_family | |
+| Landen | card-done | carpenter_family | Semi-retired carpenter, uncle to Ryis |
+| Ryis | card-done | dateable, carpenter_family | Carpenter, birdhouse arc |
+| Olric | card-done | forge_family | Part-timer at forge, father of March |
+| March | card-done | dateable, forge_family | Blacksmith, Shield of the Realm arc |
+| Dell | card-done | child, general_store_family | Dragon-obsessed child |
+| Holt | card-done | general_store_family | General Store co-owner, dad jokes |
 
 ### Batch 5: Dateable townsfolk (remaining)
 
 | Character | Status | Tags | Notes |
 |-----------|--------|------|-------|
-| Balor | available | dateable, vendor | |
-| Errol | available | dateable | |
-| Hayden | available | dateable | |
-| Juniper | available | dateable | |
-| Terithia | available | dateable | |
-| Valen | available | dateable | |
+| Balor | extracted | dateable, vendor | |
+| Errol | extracted | townsfolk | Not dateable — no heart events, date lines, or wedding in source data |
+| Hayden | extracted | dateable | |
+| Juniper | extracted | dateable | |
+| Terithia | extracted | townsfolk | Not dateable — no heart events, date lines, or wedding in source data |
+| Valen | extracted | dateable | |
 
 ### Batch 6: Vendors and supporting cast
 
