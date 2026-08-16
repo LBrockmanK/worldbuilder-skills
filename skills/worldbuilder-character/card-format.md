@@ -122,16 +122,47 @@ Each snippet includes enough scene context to establish the situation. The worki
 
 ### Story Beats
 
-Optional. Included when the character has triggerable narrative
-scenarios worth specifying. Labeled prose blocks — each entry has a
-short title, a trigger/condition note, and 2-4 sentences of scenario
-prose describing: the setup (where and when), the key action or
-exchange, and what the event reveals about the character. Prose
-follows the action-line convention. Staging test applies. Orwell
-co-anchor applies. No meta-vocabulary. Condition notes are factual,
-not prose-styled.
+Every character should have Story Beats. These are story seeds —
+narrative setups the target platform can grow in any direction.
+They provide the character's stake in a scenario and the conditions
+that could trigger it, not a scripted outcome. Labeled prose blocks:
+each entry has a short title, a trigger/condition note, and 2-4
+sentences of scenario prose describing the setup (where and when),
+the key action or exchange, and what the event reveals about the
+character. Prose follows the action-line convention. Staging test
+applies. Orwell co-anchor applies. No meta-vocabulary. Condition
+notes are factual, not prose-styled.
 
-**Target range:** 3-8 entries.
+**Target range:** 5-12 entries. Err on the side of more rather
+than fewer — entries can be pared down later, but gaps in coverage
+leave the platform with nothing to work from. A thin Story Beats
+section is a bigger problem than a generous one.
+
+**Sources for Story Beats:**
+- **Explicit:** events defined in source material (heart events,
+  quest progressions, story milestones).
+- **Implicit:** scenarios implied by the character's psychology,
+  relationships, or role but not scripted in source material
+  (a gossip-lover trying to set up a romance in town, a reluctant
+  leader being forced to delegate, a daydreamer missing something
+  important).
+- **Invented:** scenarios that serve the character's arc even when
+  no source material exists. Every character has developmental
+  potential; Story Beats make it available to the platform.
+
+**Writing for freeform play:** The target platform is freeform —
+events can diverge from any scripted path. Write Story Beats as
+setups, not outcomes. Describe the situation that could arise and
+what the character would do, not the resolution. A multi-step arc
+from source material (e.g. a five-event quest chain) becomes one
+Story Beat that establishes the premise and the character's stake
+in it, not a sequence of scripted events.
+
+**Relationship to world info:** Story Beats provide the character's
+stake in a scenario. Factual context that supports the scenario
+(lore, mechanics, history) belongs in world info entries (location,
+concept, or event documents), not in the Story Beat itself. A Story
+Beat can reference world info by name without reproducing it.
 
 **Distinction from other sections:**
 - vs. Relationships: Relationships describe standing dynamics with

@@ -33,20 +33,27 @@ player's first conversations — is story.
 
 ## Starting conditions
 
-**Town infrastructure:** Bridge (damaged), Inn (operational, needs
-renovation), General Store (operational, needs upgrade), Mill
-(needs restoration), Bathhouse (operational), Manor (Adeline's
-residence and administrative center), Museum (Eiland/Errol),
-Summit (accessible), Beach (accessible), Western Ruins (newly
-exposed, unexplored).
+**Town infrastructure:** Bridge (out — prevents outside access),
+Inn (operational, needs renovation), General Store (operational,
+needs upgrade), Mill (needs restoration), Bathhouse (operational),
+Manor (Adeline's residence and administrative center), Museum
+(Eiland/Errol), Summit (inaccessible — stairs damaged), Beach
+(accessible), Western Ruins (newly exposed by earthquake,
+unexplored).
+
+**The mines:** Closed due to safety concerns after the earthquake.
+Errol has been hearing strange noises. Reopening the mines is a
+story event.
 
 **Governance:** Adeline is Acting Leader. Town council exists. The
 Request Board is the primary task system. Earthquake relief
 applications are in progress.
 
-**Economy:** Stores and vendors are operating. The Saturday Market
-does not yet exist (established during story). Farming, mining,
-fishing, and foraging are active.
+**Economy:** Local stores and resident vendors are operating. Four
+outside vendors cannot reach Mistria while the bridge is out. The
+Saturday Market historically existed but is currently impossible
+without bridge access for traveling merchants. Farming, fishing,
+and foraging are active. Mining is suspended.
 
 ## Cast availability
 

@@ -29,6 +29,40 @@ Source material substitutes for human answers. When the human provides source ma
 
 ---
 
+## Source Ingestion
+
+When working from source material (game data, existing character
+sheets, fiction, wiki references), build reference documents before
+writing the card. Reference documents organize the raw material
+into a reviewable evidence base. They live in a `reference/`
+subdirectory alongside the character card.
+
+The reference set depends on what the source material provides, but
+typically includes:
+
+- **Data profile** — extracted facts: name, role, relationships,
+  gifts, schedules, physical data, anything structured.
+- **Behavioral evidence** — dialogue and actions that reveal
+  personality, organized by context. What the character says and
+  does; what others say about them.
+- **Calendar/schedule** — daily and seasonal routines, if the
+  source tracks them.
+- **Narrative arc** — story progression, relationship milestones,
+  key events, thematic analysis.
+- **Storylines/greetings** — progression-gated events and
+  context-gated dialogue, organized by trigger.
+
+Cross-reference multiple sources (game files, wiki, community
+resources) when available. The reference folder is the evidence
+base for the card; the review can check card entries against it.
+
+Do not skip this step to write the card faster. A card written
+directly from raw source material without organized reference
+documents is harder to review, harder to verify, and harder for
+future sessions to update.
+
+---
+
 ## Session Opening
 
 **Starting world state:** Check whether the project has a starting
@@ -50,10 +84,9 @@ Before beginning the Q&A, determine which addon blocks to include. Record the de
 
 **Voice / Dialogue:** Recommend when the character will be exported to platforms that support example dialogue or when voice distinctiveness matters for the project. The user decides.
 
-**Story Beats:** Recommend when the character has progression-gated
-events (relationship milestones, story involvement), when the target
-platform supports future storylines or alternate greetings, or when
-the source material provides rich scenario data. The user decides.
+**Story Beats:** Included for every character. Every character has
+narrative scenarios worth specifying — from source material, from
+their psychology, or invented to serve their arc.
 
 ---
 
@@ -88,12 +121,17 @@ After Core, work through selected addon blocks in order: Relationships, then Int
 
 **Voice / Dialogue:** The user picks 2-4 situation categories from the list in `card-format.md`. For each chosen category, write a composite dialogue snippet showing the character pulling from multiple Core areas at the same time. Include enough scene context to establish the situation.
 
-**Story Beats:** When selected at session opening, work through Story
-Beats after Voice / Dialogue (or after the last selected addon
-block). Ask about narrative milestones, story events, or
-progression-gated encounters. Work through them in approximate
-narrative order. See `card-format.md` for entry format, writing
-rules, and distinctions from other sections.
+**Story Beats:** Work through Story Beats after Voice / Dialogue
+(or after the last selected addon block). Draw from three sources:
+explicit events in source material, implicit scenarios suggested by
+the character's psychology and relationships, and invented hooks
+that serve the character's arc. Consolidate multi-step source arcs
+into single setup beats — describe the premise and the character's
+stake, not a scripted sequence. Write for freeform play: setups,
+not outcomes. Aim for the high end of the target range (5-12); thin
+coverage is a bigger risk than generous coverage. See
+`card-format.md` for entry format, writing rules, and distinctions
+from other sections.
 
 ---
 
@@ -175,7 +213,9 @@ The note stays on an open status tag while work is in progress. Mark it `complet
 
 - [ ] All required doctrine entries present or explicitly waived with a recorded reason
 - [ ] Each Core section (Background, Body, Soul) has at least one entry. Target ranges in `card-format.md` are guidance, not gates
-- [ ] Selected addon blocks completed (Relationships, Intimate Dynamics, Voice / Dialogue, Story Beats as determined in session opening)
+- [ ] Reference documents present in `reference/` subdirectory when working from source material
+- [ ] Story Beats section present with entries (every character; 5-12 target range)
+- [ ] Other selected addon blocks completed (Relationships, Intimate Dynamics, Voice / Dialogue as determined in session opening)
 - [ ] No trait adjectives anywhere in the note. Each replaced by the behavior that earned it
 - [ ] Entries follow section-appropriate writing rules per `card-format.md`
 - [ ] `### Session Notes` present with Q&A capture
