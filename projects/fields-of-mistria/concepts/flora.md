@@ -18,8 +18,8 @@ The plant life of Mistria varies by location and season. Surface forageables fol
 - **Tide Caverns** — Seaweed, sea grapes, cave kelp, and tide lettuce grow in the underground salt water.
 - **Deep Earth** — Crystal roses, earthshrooms, rockroot, and crystal berries — plants as much mineral as organic, shaped by pressure and darkness.
 - **Lava Caves** — Flame peppers, breath-of-fire flowers, ash mushrooms, and lava chestnuts thrive in volcanic heat where nothing should grow.
-- **The Ruins** — Spell fruit, essence blossoms, ethereal grass, and chirping ferns — flora touched by whatever old magic saturates the deepest levels.
+- **The Ruins** — Spell fruit, essence blossoms, ethereal grass, and chirping ferns — flora touched by whatever old magic saturates the deepest reaches.
 
 ## Narrative significance
 
-Flora gives each environment its own living texture. The plants tell you where you are as clearly as the stone or the light does. Underground flora especially reinforces that each mine level is not just a tunnel but an ecosystem — adapted, strange, and self-sustaining. The contrast between a sunlit field of daffodils and a cavern of crystal roses is part of what makes Mistria's world feel layered.
+Flora gives each environment its own living texture. The plants tell you where you are as clearly as the stone or the light does. Underground flora especially reinforces that each mine depth is not just a tunnel but an ecosystem — adapted, strange, and self-sustaining. The contrast between a sunlit field of daffodils and a cavern of crystal roses is part of what makes Mistria's world feel layered.

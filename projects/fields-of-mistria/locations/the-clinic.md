@@ -1,6 +1,6 @@
 # The Clinic
 
-*Where Valen heals what he can and studies what he cannot.*
+*Where Valen heals what they can and studies what they cannot.*
 
 ## Keywords
 
@@ -8,7 +8,7 @@ clinic, the clinic, doctor, medical, hospital
 
 ## Setting
 
-The Clinic sits on the eastern side of Mistria. The ground floor serves as Valen's medical practice — a desk for consultations, a bed for patients, and a corner where he sometimes watches over children. Upstairs holds private quarters.
+The Clinic sits on the eastern side of Mistria. The ground floor serves as Valen's medical practice — a desk for consultations, a bed for patients, and a corner where they sometimes watch over children. Upstairs holds private quarters.
 
 Below the clinic, a basement exists that most people in town don't think about. The sound down there is different — a low, persistent ambience that doesn't belong in a doctor's office.
 
@@ -20,5 +20,5 @@ But there is an undercurrent. The basement hums with something unexplained. Vale
 
 ## Music
 
-- Default: "Music/Location Tracks/Clinic"
+- "Please Take A Seat" (42-please-take-a-seat.ogg)
 - Basement: "SoundEffects/Environment/ValenBasementLoop"

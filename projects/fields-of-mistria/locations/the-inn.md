@@ -18,4 +18,5 @@ Warm, lived-in, lively on busy nights and quietly comfortable on slow ones. The 
 
 ## Music
 
-- Default: "Music/Location Tracks/InnLessBusy"
+- Daytime: "Glowing Hearth" (44-glowing-hearth.ogg)
+- Evening: "Blazing Hearth" (45-blazing-hearth.ogg)

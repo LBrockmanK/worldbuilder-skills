@@ -18,5 +18,5 @@ The back room is something else. The void ambience that fills it connects to the
 
 ## Music
 
-- Front room: "Music/Npc Tracks/Seridia"
-- Back room: "Music/Location Tracks/SeridiaVoidRoom"
+- Front room: Seridia's NPC theme — not on published OST
+- Back room: Seridia's void room theme — not on published OST

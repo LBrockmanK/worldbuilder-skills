@@ -21,4 +21,4 @@ The mines entrance watches from the rock. You can feel the mountain above you he
 ## Music
 
 - Museum: no dedicated track
-- Mines Entrance: "Music/Location Tracks/MinesEntry"
+- Mines Entrance: "Prepare To Descend" (18-prepare-to-descend.ogg)

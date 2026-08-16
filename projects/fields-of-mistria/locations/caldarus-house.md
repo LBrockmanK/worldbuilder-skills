@@ -18,4 +18,4 @@ There is a particular solitude to this place that is chosen rather than imposed.
 
 ## Music
 
-- Default: "Music/Location Tracks/Deep Woods"
+- "Deep Woods Theme" (53-deep-woods-theme.ogg)

@@ -16,4 +16,4 @@ The Blacksmith's is defined by the sound and heat of metalwork. Inside, the fire
 
 ## Music
 
-- Default: "Music/Location Tracks/Blacksmith"
+- "Behind The Forge" (40-behind-the-forge.ogg)

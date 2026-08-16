@@ -20,4 +20,4 @@ It is a place where someone chose to live away from everyone, and the forest clo
 
 ## Music
 
-- Default: "Music/Location Tracks/Deep Woods"
+- "Deep Woods Theme" (53-deep-woods-theme.ogg)

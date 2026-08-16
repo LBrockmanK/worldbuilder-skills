@@ -17,13 +17,13 @@ shooting star festival, shooting stars, stargazing, summer festival, star brooch
 
 The Shooting Star Festival is Mistria's most intimate celebration. On the last night of summer, the whole town makes the climb to the summit to watch the stars fall. The night music plays everywhere — even walking through town feels different.
 
-The heart of the festival is the invitation. Anyone can offer a star brooch to someone and ask them to watch the stars together. Whether they accept depends on the closeness of the relationship — a near-stranger will turn it down, but a friend will say yes. A partner gets a different, more personal response. Each person has their own private moment with the player if they accept — no two stargazing scenes are the same.
+The heart of the festival is the invitation. Anyone can offer a star brooch to someone and ask them to watch the stars together. People say yes to someone they are close to — a real friend, someone who has been part of their life. A stranger offering a brooch gets a gentle refusal. A sweetheart's response is different, more personal. No two stargazing conversations are the same.
 
-Going alone is also an option. The solo experience is quieter but not empty — the stars are still beautiful, and the night still matters.
+Going alone is also fine. The solo experience is quieter but not empty — the stars are still beautiful, and the night still matters.
 
 ## Lead-up
 
-Word spreads a few days before the festival. The player should be notified in advance so they have time to decide who to invite and prepare a star brooch. The anticipation is part of the event — choosing who to ask carries weight.
+Word spreads a few days before the festival. People start talking about who they hope will ask them, or who they are thinking of inviting. The anticipation is part of the event.
 
 ## Tone
 

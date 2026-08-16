@@ -18,4 +18,4 @@ It is the one place in town where no one is working, building, or selling anythi
 
 ## Music
 
-- Default: "Music/Location Tracks/Bathhouse"
+- "A Backwater Bathhouse" (39-backwater-bathhouse.ogg)
