@@ -31,9 +31,9 @@ appropriate completion status.
 
 | Character | Status | Tags | Notes |
 |-----------|--------|------|-------|
-| Celine | card-done | dateable, general_store_family | Gardener, Codex Mistria researcher |
-| Reina | card-done | dateable, inn_family | Head Cook, culinary competition arc |
-| Nora | card-done | general_store_family | Supporting character — not dateable, Chamber of Commerce head |
+| Celine | review-done | dateable, general_store_family | Gardener, Codex Mistria researcher |
+| Reina | review-done | dateable, inn_family | Head Cook, culinary competition arc |
+| Nora | review-done | general_store_family | Supporting character — not dateable, Chamber of Commerce head |
 
 ### Batch 3: Inn family
 
@@ -48,12 +48,12 @@ appropriate completion status.
 
 | Character | Status | Tags | Notes |
 |-----------|--------|------|-------|
-| Landen | card-done | carpenter_family | Semi-retired carpenter, uncle to Ryis |
-| Ryis | card-done | dateable, carpenter_family | Carpenter, birdhouse arc |
-| Olric | card-done | forge_family | Part-timer at forge, father of March |
-| March | card-done | dateable, forge_family | Blacksmith, Shield of the Realm arc |
-| Dell | card-done | child, general_store_family | Dragon-obsessed child |
-| Holt | card-done | general_store_family | General Store co-owner, dad jokes |
+| Landen | review-done | carpenter_family | Semi-retired carpenter, uncle to Ryis |
+| Ryis | review-done | dateable, carpenter_family | Carpenter, birdhouse arc |
+| Olric | review-done | forge_family | Part-timer at forge, father of March |
+| March | review-done | dateable, forge_family | Blacksmith, Shield of the Realm arc |
+| Dell | review-done | child, general_store_family | Dragon-obsessed child |
+| Holt | review-done | general_store_family | General Store co-owner, dad jokes |
 
 ### Batch 5: Dateable townsfolk (remaining)
 
