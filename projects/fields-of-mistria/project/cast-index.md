@@ -59,12 +59,12 @@ appropriate completion status.
 
 | Character | Status | Tags | Notes |
 |-----------|--------|------|-------|
-| Balor | card-done | dateable, vendor | |
-| Errol | card-done | townsfolk | Not dateable — no heart events, date lines, or wedding in source data |
-| Hayden | card-done | dateable | |
-| Juniper | card-done | dateable | |
-| Terithia | card-done | townsfolk | Not dateable — no heart events, date lines, or wedding in source data |
-| Valen | card-done | dateable | |
+| Balor | review-done | dateable, vendor | |
+| Errol | review-done | townsfolk | Not dateable — no heart events, date lines, or wedding in source data |
+| Hayden | review-done | dateable | |
+| Juniper | review-done | dateable | |
+| Terithia | review-done | townsfolk | Not dateable — no heart events, date lines, or wedding in source data |
+| Valen | review-done | dateable | |
 
 ### Batch 6: Vendors and supporting cast
 
