@@ -50,7 +50,7 @@ appropriate completion status.
 |-----------|--------|------|-------|
 | Landen | review-done | carpenter_family | Semi-retired carpenter, uncle to Ryis |
 | Ryis | review-done | dateable, carpenter_family | Carpenter, birdhouse arc |
-| Olric | review-done | forge_family | Part-timer at forge, father of March |
+| Olric | review-done | forge_family | Part-timer at forge, brother of March |
 | March | review-done | dateable, forge_family | Blacksmith, Shield of the Realm arc |
 | Dell | review-done | child, general_store_family | Dragon-obsessed child |
 | Holt | review-done | general_store_family | General Store co-owner, dad jokes |

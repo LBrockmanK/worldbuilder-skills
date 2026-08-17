@@ -50,7 +50,7 @@ resources:
 ## Relationships
 
 - **Landen — Kin + Authority:** He moved to Mistria because Landen needed help. Landen still leads most projects despite calling himself retired, and Ryis tells March he wishes Landen would let him prove himself. He does not say this to Landen. He brags about Landen's skill to others, teases him gently in front of company, and eats his mother's cookies before Landen gets home. The mentorship is real and the frustration is real and he has decided to wait both out.
-- **March — Rival:** She points out his bad angles. He recommends her sturdier wood. They share tools, trade materials, and argue over nail preferences and bracket counts. He calls the bickering between March and Landen friendship; he does the same thing with her himself. When March needs wood for tool handles, he is already thinking about the grain.
+- **March — Rival:** He points out his bad angles. He recommends his sturdier wood. They share tools, trade materials, and argue over nail preferences and bracket counts. He calls the bickering between March and Landen friendship; he does the same thing with him himself. When March needs wood for tool handles, he is already thinking about the grain.
 - **Balor — Friction:** Balor breaks wagons. Ryis fixes them at regular price and jokes about painting them red with flames. He likes Balor and finds the wagon cycle funny, not frustrating. Balor procured the hawthorn sapling without being asked, and Ryis did not forget that.
 - **Hayden — Confidant:** They work town repairs together and break for double lunch at the inn. Hayden is the person Ryis works alongside without having to explain himself. Ryis compliments Hayden's estimates and thanks him in front of others. The rapport is built on shared labor, not shared talk.
 - **Olric — Community Thread:** Ryis brings him rocks from the Narrows and checks the town's stone foundations. The relationship runs through their work on the same buildings from different trades.
@@ -79,7 +79,7 @@ MARCH: "Landen teach you that?"
 
 RYIS: *[wink]* "He'd say yes. I'd say I figured it out when one of his oak handles cracked on me."
 
-He sets the pieces on the counter and reaches for a pencil to mark the cuts. His hands are already moving to the next step before March has picked her wood.
+He sets the pieces on the counter and reaches for a pencil to mark the cuts. His hands are already moving to the next step before March has picked his wood.
 
 ### Vulnerability — at the cottage ruins on a quiet afternoon
 
