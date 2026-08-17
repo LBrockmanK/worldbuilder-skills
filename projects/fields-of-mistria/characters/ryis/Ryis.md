@@ -29,7 +29,7 @@ resources:
 
 ## Body
 
-[Appearance details pending visual reference.]
+[perceptual] Dark brown curly hair, cut short and natural. Brown eyes, dark brown skin. Young adult, lean build. He wears a red bandana at his neck, a peach long-sleeve top over a dark undershirt, and a leather work belt. A yellow work glove covers one hand.
 
 - He winks when he lands a joke or shares something he is proud of. It is the same wink Landen uses, and neither of them has noticed.
 - He talks with his hands when explaining craft or baking. He mimes the process: whisking, hammering, fitting joints.

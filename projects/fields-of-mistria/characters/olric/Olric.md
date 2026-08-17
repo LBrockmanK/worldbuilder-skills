@@ -27,7 +27,7 @@ resources:
 
 ## Body
 
-[Appearance details pending visual reference. Hair, skin, build, clothing need confirmation from game portraits.]
+[perceptual] Dark brown hair, straight and slightly tousled. Light skin, dark eyes. Young adult, lean and muscled from forge work. He wears a red vest over a white sleeveless shirt, a green cloth tied at the waist, and work gloves.
 
 - He winks when he is pleased with himself or wants to punctuate a joke. The wink lands the same whether the joke is funny or not.
 - His hands are always doing something. He picks up heavy things for the sake of picking them up. He offered to lift March's anvil for Valen on the spot.

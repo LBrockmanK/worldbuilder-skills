@@ -28,7 +28,7 @@ resources:
 
 ## Body
 
-Brown eyes. [Appearance details pending visual reference — hair, skin, build, clothing need confirmation from game portraits.]
+[perceptual] Silver-grey hair, wavy. Brown eyes, brown skin. Broad build, older adult. His spring outfit is a lavender and white patterned short-sleeve shirt, worn open and casual. He stands with confidence, one hand on his hip.
 
 - He winks when he lands a joke or a compliment.
 - He keeps his hands busy in conversation. He picks up a tool, turns it over, sets it down. He stays in motion when he can hold something.

@@ -29,7 +29,7 @@ resources:
 
 ## Body
 
-Mustache. [Appearance details pending visual reference. Hair, skin, build, clothing need confirmation from game portraits.]
+[perceptual] Auburn hair, mustache. Fair skin. Middle-aged, sturdy build. He wears a green plaid button shirt with brown suspenders and a red bandana at his neck.
 
 - He winks when he delivers a pun, lands a compliment, or finishes a joke.
 - He sweeps the store floor during slow hours and whittles or writes between tasks.

@@ -30,7 +30,7 @@ resources:
 
 ## Body
 
-[Appearance details pending visual reference. Hair is dyed (natural color shows at the roots). Build, skin, clothing, and eye color need confirmation from game portraits.]
+[perceptual] Red hair, dyed, short, with darker roots showing. Light skin, dark eyes. Lean build, young adult. He wears a teal sleeveless V-neck top, dark gear-shaped earrings, a tool belt, and a small pendant necklace.
 
 - He frowns by default. Children notice it. Adults mention it. He does not know he is doing it.
 - When he is working metal, he calls out hammer counts with Olric. His voice gets louder and his movements sharpen. Olric calls this "the zone."

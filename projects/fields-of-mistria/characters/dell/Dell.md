@@ -28,7 +28,7 @@ resources:
 
 ## Body
 
-[Appearance details pending visual reference. Portrait expressions: neutral, think, happy, wink, mad, embarrassed, sad, ugh.]
+[perceptual] Blonde hair, tied back with a red flower clip. Blue eyes, fair skin. A child, small build. She wears a pink short-sleeve shirt under denim overalls. Portrait expressions: neutral, think, happy, wink, mad, embarrassed, sad, ugh.
 
 - She swings sticks at things only she can see. The swing is committed. She follows through.
 - She scratches her head when she is thinking and yawns when she has been standing still too long.
