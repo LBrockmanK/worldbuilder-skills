@@ -26,7 +26,7 @@ Traveling merchant who lives out of his wagon at the edge of town. Runs the only
 
 ## Body
 
-Light blue-purple tones across his clothing. His seasonal outfits change but he keeps the same polished look year-round, with a beach outfit and a wedding outfit for formal occasions.
+Blue-purple hair, medium length and swept to one side with a loose fall across the forehead. Purple eyes, fair skin, slender build. Light blue-purple tones across his clothing. His seasonal outfits change but he keeps the same polished look year-round, with a beach outfit and a wedding outfit for formal occasions.
 
 - He flips a coin when he is thinking through a deal and inspects gems by holding them up and turning them in the light.
 - He flips his hair in warm weather and tilts his head into a wink when he wants to close a point or redirect a conversation.

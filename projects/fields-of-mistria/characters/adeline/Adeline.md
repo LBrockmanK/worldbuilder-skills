@@ -14,7 +14,7 @@ Acting Leader of Mistria after her parents were called to the Capital. Runs the 
 
 ## Body
 
-Pink hair past her shoulders, wavy, with a bow on top. Purple eyes, brown skin. Her spring outfit is a magenta bodice over white puffed sleeves, dark navy skirt with floral embroidery. The outfit changes with the season but the bow stays.
+Slender frame, medium height. Pink hair past her shoulders, wavy, with a bow on top. Purple eyes, brown skin. Her spring outfit is a magenta bodice over white puffed sleeves, dark navy skirt with floral embroidery. The outfit changes with the season but the bow stays.
 
 - She always has something to write with: pen at her desk, clipboard at the quest board, notepad at the bathhouse.
 - When it rains her hair goes frizzy, and she books bathhouse visits to manage it, already smiling at the lavender before she is through the door.

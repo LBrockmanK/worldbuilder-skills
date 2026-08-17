@@ -26,7 +26,7 @@ Mistria's town doctor. She took over her father's practice, his clinic, his jack
 
 ## Body
 
-She wears jackets passed down through her family, tailored by Louis for a better fit. Seasonal outfit changes but the jackets stay.
+Short lavender hair, wavy and loosely swept back. Deep blue eyes, fair skin, slender build. She wears jackets passed down through her family, tailored by Louis for a better fit. Seasonal outfit changes but the jackets stay.
 
 - She raises one eyebrow before she speaks when she finds something worth questioning.
 - When she is reading, she sits still and does not look up until she finishes the passage.

@@ -26,7 +26,7 @@ Sorceress who runs Mistria's Bathhouse. Tests potions on willing townsfolk, trac
 
 ## Body
 
-Heeled boots and painted nails. Her outfits change with the season but the boots stay. She owns enough pairs that other people comment on the collection.
+Long purple hair past the waist, straight and flowing. Purple eyes, olive skin, slender build. Gold earrings and a decorative headpiece. Heeled boots and painted nails. Her outfits change with the season but the boots stay. She owns enough pairs that other people comment on the collection.
 
 - When she laughs, she throws her head back and lets "OH HO HO HO!" fill the room without holding back or lowering her voice.
 - She flips her hair when she is talking and has an audience.

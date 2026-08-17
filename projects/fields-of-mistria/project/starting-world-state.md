@@ -49,23 +49,28 @@ story event.
 Request Board is the primary task system. Earthquake relief
 applications are in progress.
 
-**Economy:** Local stores and resident vendors are operating. Four
-outside vendors cannot reach Mistria while the bridge is out. The
-Saturday Market historically existed but is currently impossible
-without bridge access for traveling merchants. Farming, fishing,
-and foraging are active. Mining is suspended.
+**Economy:** Local stores and resident vendors are operating. All
+eight outside vendors (Darcy, Louis, Merri, Vera, Stillwell,
+Taliferro, Wheedle, Zorel) cannot reach Mistria while the bridge is
+out; none are available at the start. All become available after
+bridge repair. The Saturday Market historically existed but is
+currently impossible without bridge access for traveling merchants.
+Farming, fishing, and foraging are active. Mining is suspended.
 
 ## Cast availability
 
-**Present at start (32 named characters):**
+**Present at start (24 named characters):**
 
 Noble household: Adeline, Eiland, Elsie. Inn family: Josephine,
 Hemlock, Reina, Luc (child), Maple (child). General Store family:
 Celine, Nora, Holt, Dell (child). Carpenter family: Landen, Ryis.
 Forge family: Olric, March. Dateable townsfolk: Balor, Errol,
-Hayden, Juniper, Terithia, Valen. Vendors: Darcy, Louis, Merri,
-Stillwell, Taliferro, Vera, Wheedle, Zorel. Animals: Dozy,
-Henrietta.
+Hayden, Juniper, Terithia, Valen. Animals: Dozy, Henrietta.
+
+**Available after bridge repair:**
+
+Vendors: Darcy, Louis, Merri, Stillwell, Taliferro, Vera, Wheedle,
+Zorel.
 
 **Arrive during story:**
 
@@ -95,9 +100,11 @@ These events happen after the player arrives. They belong in Story
 Beats, not in Core sections or Relationships.
 
 - Player's arrival and farmhouse introduction
-- Town rebuilding sequence: Bridge Repair → Inn Renovation →
-  General Store → Mill → Summit Stairs → Beach Bridge → Barn →
-  Carpenter Shop → Saturday Market → Stone Refinery → Food Reserves
+- Town rebuilding sequence (flexible order — the community works on
+  what it can, when it can; this list is illustrative, not fixed):
+  Bridge Repair, Inn Renovation, General Store, Mill, Summit Stairs,
+  Beach Bridge, Barn, Carpenter Shop, Saturday Market, Stone Refinery,
+  Food Reserves
 - Heart event progressions for dateable characters (2/4/6/8/10)
 - Dragonsworn Armor discoveries (Eiland's heart event arc)
 - Mine exploration and unlocking

@@ -13,7 +13,7 @@ Retired opera singer from the Capital, not a blood relative but Great Aunt to Ei
 
 ## Body
 
-Lavender-gray curled hair. Her spring outfit is a pink long-sleeved dress with burgundy trim and belt. Summer brings a light blue sleeveless dress with a gold shawl draped at the shoulders. Winter switches to a cream-white fur shawl over a dark green dress. The wardrobe rotates but the composure does not. She carries herself like someone who once commanded a stage and still remembers how the shoulders go.
+Lavender-gray curled hair. Mauve eyes, fair rosy skin, full build. Her spring outfit is a pink long-sleeved dress with burgundy trim and belt. Summer brings a light blue sleeveless dress with a gold shawl draped at the shoulders. Winter switches to a cream-white fur shawl over a dark green dress. The wardrobe rotates but the composure does not. She carries herself like someone who once commanded a stage and still remembers how the shoulders go.
 
 - When she delivers romantic advice, she pauses, winks, and lets the suggestion settle before moving on.
 - When telling stories about her past (Frederick's tights, the warlord's ransom, the stage lights), she performs them with placement and emphasis. She lands each beat where the laugh should go.

@@ -14,7 +14,7 @@ Noble-born archaeologist and brother to Adeline. Studies the Dragonsworn stele o
 
 ## Body
 
-Light pink hair, wavy, short to medium length. Brown skin, dark eyes. His spring outfit is a white-lavender jacket with gold chevron embroidery at the chest, gold-trimmed collar, purple cape, and a gold belt at the waist. The outfit changes with the season but keeps the noble cut and the pale color that Hayden says both siblings wear.
+Lean build, medium height. Light pink hair, wavy, short to medium length. Brown skin, dark eyes. His spring outfit is a white-lavender jacket with gold chevron embroidery at the chest, gold-trimmed collar, purple cape, and a gold belt at the waist. The outfit changes with the season but keeps the noble cut and the pale color that Hayden says both siblings wear.
 
 - When a discovery excites him, he moves toward it before he finishes the sentence.
 - He talks with his hands when explaining history: tilting an artifact toward the light, tracing raised lettering on a stele, pointing at a marker in a tree canopy.

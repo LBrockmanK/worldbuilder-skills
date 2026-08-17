@@ -22,10 +22,11 @@ Retired mine foreman turned museum curator. Rises before dawn, tells stories fro
 - Saved artifacts he dug up while searching for ore in the mines, though he was not always successful → brought what he kept to the museum when it opened and now calls preservation work "a dream come true"
 - Transitioned to Museum Curator after the mines closed → tells Valen he feels healthier and happier than he did as foreman, calls the work "a dream come true"
 - Taught Eiland excavation techniques from his mining days → the museum's fieldwork runs on skills he brought from underground
+- Lives alone in a cabin in the Narrows, set apart from town along the path toward the mines → the distance suits him, and the walk to the museum is short
 
 ## Body
 
-Older man with a full mustache. Seasonal outfits that change with the weather. No formal dress variants.
+Older man, bald on top with short gray hair at the sides and a full mustache. Dark eyes, fair ruddy skin, broad stocky build. Seasonal outfits that change with the weather. No formal dress variants.
 
 - He examines objects with a magnifying glass held close, tilting the artifact rather than the lens.
 - He talks with his hands when telling a story and goes still when listening to someone else's.

@@ -52,6 +52,8 @@ resources:
 - **Hayden -- Rival:** They work out together and push each other through sets. Hayden called Olric's new routine "pretty tough." Olric designs workouts the night before and corrects Hayden when he says exercise is a competition: "Working out's not a competition, bro. Except against yourself." The rivalry is physical and easy. Neither keeps score, but neither stops first.
 - **Landen -- Community Thread:** He listens to Landen and Errol tell the THUNDERSTRUCK story and reacts with open amazement. His forge work supplies handles to the carpentry shop and receives hardware in return. The connection is through the craft supply chain and shared company, not through personal history.
 - **Eiland -- Charge:** Eiland teaches him piano and sends shield replica orders to the forge. Olric calls him "boss" and practices between lessons. When Eiland explains music theory, Olric's head hurts, but when Olric plays by ear, Eiland is the one caught off guard. The teaching runs in the expected direction; the surprise runs back.
+- **Jade -- Ghost:** His mother was a master blacksmith. He does not remember her work the way March does — he remembers her hands and the heat of the forge. He took up metalwork because March needed someone at the bellows, not because he inherited her ambition. The loss sits in him quietly, without March's anger.
+- **Olin -- Ghost:** His father was a merchant who sailed west for buyers. Olric was young when the ship went down and does not talk about it unless March brings it up first. He does not carry resentment toward trade or travel — he simply never left Mistria, and the staying was enough.
 
 ## Voice / Dialogue
 
