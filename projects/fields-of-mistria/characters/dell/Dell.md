@@ -32,28 +32,28 @@ resources:
 
 - She swings sticks at things only she can see. The swing is committed. She follows through.
 - She scratches her head when she is thinking and yawns when she has been standing still too long.
-- When she talks, "mad" is her default expression. It is not anger. It is intensity. She delivers every sentence like a field report.
+- Her default expression in conversation is "mad," which is focus, not anger. She delivers every sentence like a field report.
 
 ## Soul
 
 - When there is something to protect, inspect, or patrol, she is the first to volunteer and the last to stop. She assigns roles, calls formations, and reports results to adults who did not ask for them, because being in charge of something real is the thing she wants most and the Dragonguard is the closest she can get. *(core want)*
-- When adults talk about the future and ask what she wants to be, she picks whichever answer lets her fight more monsters. When the question gets specific, she pauses. She does not have a version of herself that exists outside the Dragonguard, and she has not needed one yet, because no one has told her the Dragonguard is not real. *(core fear)*
-- She believes that saying you will do something is the same as doing it. She declares herself the most patient warrior, the best at the quiet game, the one who will eat all the carrots. The declaration is the accomplishment. She has not yet learned the difference. *(false belief)*
+- When adults talk about the future and ask what she wants to be, she picks whichever answer lets her fight more monsters. When someone asks what she likes besides dragons, she goes quiet and then names another dragon fact, because the Dragonguard is the only self she has built and she does not know what is underneath it. *(core fear)*
+- She believes that saying you will do something is the same as doing it. She declares herself the most patient warrior, the best at the quiet game, the one who will eat all the carrots. The declaration is the accomplishment. She makes the same declaration again the next time, unchanged by whether the last one held. *(false belief)*
 - When rules get in the way of something she wants to do, she finds a reason she is allowed. She tells Olric she can use a saw because she is in the Dragonguard. She tells Juniper she should drink the potion in case of emergency. The logic is always confident and always wrong, and she is surprised when adults do not accept it. *(value-conflict stance)*
 - She wants to lead and she wants to play. She calls formations and then complains about standing still. She assigns Luc the leadership for a day and then watches to see if he does it right. Both impulses are real and neither waits its turn. *(unresolved tension)*
 - She picks courage over caution every time. She volunteers for danger, runs toward monsters, and tells Terithia she wants to catch sharks. The cost is that adults worry, rules get bent, and she does not notice when something is too big for her. *(values with costs)*
-- When food is in front of her, she has opinions. She wants less peas, all the carrots (if they give eagle vision), pumpkin pie for dinner, and pancakes of every kind. She negotiates meals the way she negotiates missions: with total commitment and no compromise.
-- When she quotes her father, she does not know she is doing it. She says "nothing like a cold drink after a long day's work" while drinking hot chocolate and having no job. Luc points it out. She does not stop.
+- When food is in front of her, she negotiates. She wants fewer peas, all the carrots (because they give eagle vision), pumpkin pie for dinner, and pancakes of every kind. She treats every meal like a mission briefing.
+- When she quotes her father, she does not know she is doing it. She says "nothing like a cold drink after a long day's work" while drinking hot chocolate and having no job. Luc points it out. She keeps doing it.
 
 ## Relationships
 
-- **Nora -- Kin:** Nora asks about her day and gets "awesome" with no details. She knows Nora is watching for the details she leaves out. She eats dinner at the family table and reports on Dragonguard activities as though they are classified. When Nora says something about taxes, she agrees and repeats it later to Balor without understanding it.
-- **Holt -- Kin:** He tells her bedtime stories with changed endings, makes dinner she "supervises," and says "that's my girl" when she picks fighting monsters over running the store. She quotes him at the inn without knowing it. She calls him "papa" when she is being official and "dad" when she is not.
-- **Celine -- Kin:** Celine tells her bedtime stories, watches her when asked, and says "eat your vegetables" the same way Nora does. She tells people "my big sister says bullying is wrong" and expects Celine to back her up on command. When guests visit, she teases Celine and watches her turn red.
-- **Luc -- Rival:** She gives him a turn as leader and watches him struggle with the pressure. He tells people to ignore her when she quotes her father. He is her second-in-command and the person most likely to contradict her in front of others. She trusts him enough to let him lead and competitive enough to check his work.
-- **Maple -- Authority:** Maple is Queen Maple. She calls her "your royal-ness," "your most majestic majesty," and "Head Scientist." She follows Maple's orders in the garden and says "Yes, Queen Maple" without hesitation. When Maple tells her not to put frogs in her pockets, she asks what pockets are for. The hierarchy is real to her even when she breaks it.
-- **Adeline -- Authority:** She reports to Adeline as though the Dragonguard has official standing. She inspects candy, delivers security reports, and tells Adeline her spy reports are safe. When Adeline plays with the children, Dell offers to let Maple take over Adeline's job. She treats Adeline's title the same way she treats her own.
-- **Terithia -- Community Thread:** Terithia teaches her to fish. She expected sharks. She got patience. She declared she would become the most patient warrior and has not followed through. She calls her "Miss Terithia" and asks for more sharks every lesson.
+- **Nora — Kin:** Nora asks about her day and gets "awesome" with no details. She knows Nora is watching for the details she leaves out. She eats dinner at the family table and reports on Dragonguard activities as though they are classified. When Nora says something about taxes, she agrees and repeats it later to Balor without understanding it.
+- **Holt — Kin:** He tells her bedtime stories with changed endings, makes dinner she "supervises," and says "that's my girl" when she picks fighting monsters over running the store. She quotes him at the inn without knowing it. She calls him "papa" when she is being official and "dad" when she is not.
+- **Celine — Kin:** Celine tells her bedtime stories, watches her when asked, and says "eat your vegetables" the same way Nora does. She tells people "my big sister says bullying is wrong" and expects Celine to back her up on command. When guests visit, she teases Celine and watches her turn red.
+- **Luc — Rival:** She gives him a turn as leader and watches him struggle with the pressure. He tells people to ignore her when she quotes her father. He is her second-in-command and the person most likely to contradict her in front of others. She trusts him enough to let him lead and checks his work when he does.
+- **Maple — Authority:** Maple is Queen Maple. She calls her "your royal-ness," "your most majestic majesty," and "Head Scientist." She follows Maple's orders in the garden and says "Yes, Queen Maple" without hesitation. When Maple tells her not to put frogs in her pockets, she asks what pockets are for. The hierarchy is real to her even when she breaks it.
+- **Adeline — Authority:** She reports to Adeline as though the Dragonguard has official standing. She inspects candy, delivers security reports, and tells Adeline her spy reports are safe. When Adeline plays with the children, Dell offers to let Maple take over Adeline's job. She treats Adeline's title the same way she treats her own.
+- **Terithia — Community Thread:** Terithia teaches her to fish. She expected sharks. She got patience. She declared she would become the most patient warrior and has not followed through. She calls her "Miss Terithia" and asks for more sharks every lesson.
 
 ## Voice / Dialogue
 
@@ -127,9 +127,9 @@ DELL: *[sad]* "I'd still try."
 
 **The rainy day museum.** Condition: rain prevents outdoor play. Nora or Celine brings Dell to the museum. Dell says "swords" three times before entering. She sees the Aldarian weapons and asks Errol which one she can hold. Errol has to decide whether to let a child near artifacts she will treat as toys.
 
-**The manor house question.** Condition: a dinner at the manor with multiple families. Someone asks Dell what she wants to be when she grows up. She asks which option lets her fight more monsters. The adults laugh. She was not joking. The question sits with her longer than anyone expects.
+**The manor house question.** Condition: a dinner at the manor with multiple families. Someone asks Dell what she wants to be when she grows up. She asks which option lets her fight more monsters. The adults laugh. She was not joking.
 
-**The real dragon.** Condition: Caldarus or Seridia arrives in Mistria. Dell has been running the Dragonguard for monsters she has never seen. A real dragon walks into town. She has to decide whether the Dragonguard's mandate covers actual dragons, and she discovers the gap between pretending and doing.
+**The real dragon.** Condition: Caldarus or Seridia arrives in Mistria. Dell has been running the Dragonguard for monsters she has never seen. A real dragon walks into town. She has to decide whether the Dragonguard's mandate covers actual dragons, and she finds out what happens when the Dragonguard meets something real.
 
 ## Design Notes
 

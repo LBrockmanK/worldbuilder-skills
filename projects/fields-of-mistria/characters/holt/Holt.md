@@ -31,17 +31,17 @@ resources:
 
 Mustache. [Appearance details pending visual reference. Hair, skin, build, clothing need confirmation from game portraits.]
 
-- He winks when he delivers a pun, lands a compliment, or finishes a joke. It is his punctuation.
-- He sweeps the store floor during slow hours. When not sweeping, he whittles or writes. His hands stay busy.
+- He winks when he delivers a pun, lands a compliment, or finishes a joke.
+- He sweeps the store floor during slow hours and whittles or writes between tasks.
 - When someone does not get his pun, he repeats the key word slower and sadder until he gives up.
 
 ## Soul
 
-- When he sees his family, he feeds them. He packs Nora's lunch with a sandwich she demands the recipe for. He makes dinner dates. He reads Dell bedtime stories and changes the endings to happy ones. He fixes Celine's cottage and invites himself for dinner, because keeping people laughing and fed is what he knows how to do, and he does not stop doing it. *(core want)*
+- When he sees his family, he feeds them. He packs Nora's lunch with a sandwich she demands the recipe for. He makes dinner dates. He reads Dell bedtime stories and changes the endings to happy ones. He fixes Celine's cottage and invites himself for dinner, because keeping people laughing and fed is what he knows how to do, and he keeps doing it. *(core want)*
 - When Nora turns her attention to the Saturday Market, the store gets stretched thin at the end of the week. He mentions it to Adeline but does not ask for help. When something in the family shifts, he makes a joke and moves on, because sitting with what he cannot fix is worse than filling the silence. *(core fear)*
-- He believes a pun works in every situation. He tells them when March is tired, when Olric does not understand, when Celine begs him to stop. He saves them for weeks and waits for the right moment. The rooms where no one laughs do not slow him down. *(false belief)*
+- He believes a pun works in every situation. He tells them when March is tired, when Olric does not understand, when Celine begs him to stop. He saves them for weeks and waits for the right moment. He keeps telling them when no one laughs. *(false belief)*
 - He changes Dell's bedtime stories to happy endings. Dell knows they are not the real endings and likes his versions better. He chooses comfort over the truth when the audience is his daughter, and the choice is deliberate. *(value-conflict stance)*
-- He is proud Celine moved out and built something of her own. He also shows up to fix her cottage, repair her shelves, and check on her plants. Both are genuine. He has not worked out what "letting go" looks like when the repairs keep needing doing. *(unresolved tension)*
+- He is proud Celine moved out and built something of her own. He also shows up to fix her cottage, repair her shelves, and check on her plants, arriving before she asks and inviting himself to dinner while he is there. Each impulse crowds out the other; he never simply visits without finding something to fix, and he never simply fixes without staying to eat. *(unresolved tension)*
 - He values keeping his family close and comfortable. The cost is that his humor fills every pause, and some of those pauses could hold a harder conversation. *(values with costs)*
 
 ## Relationships
@@ -49,7 +49,7 @@ Mustache. [Appearance details pending visual reference. Hair, skin, build, cloth
 - **Nora — Desire:** He packs her lunch and she demands the recipe. He plans dinner dates and makes cheese puns about them. When the kids are in bed, he calls his cup of tea "cracking a cold one" and she says "you're drinking a cup of tea, dear." He proposed and she waited for the punchline. He was not joking.
 - **Celine — Kin:** He shows up to fix her cottage, repair the things that break, and keep the place standing. He tells her puns she does not want and seizes on her accidental ones. He says he is proud of her and tells her the cottage is a happy home. He invites himself for dinner in the same breath.
 - **Dell — Charge:** He reads her bedtime stories and changes the endings. He plays along when she pretends to be a spy or a monster fighter. When she announces something bold, he says "that's my girl." He does not push back on her imagination. He steers it toward happiness and lets Nora handle the discipline.
-- **Hemlock — Rival:** He claims to have shoveled more snow than anyone in Mistria and calls himself the Snow King. Hemlock calls himself the Snow Sage. They agree on the importance of beach cookouts with the focus of people settling doctrine. He cannot eat Hemlock's plain scramble without sweating.
+- **Hemlock — Rival:** He claims to have shoveled more snow than anyone in Mistria and calls himself the Snow King. Hemlock calls himself the Snow Sage. They plan beach cookouts together and debate every detail. He cannot eat Hemlock's plain scramble without sweating.
 - **Landen — Community Thread:** They gather wood on the Eastern Road together. Holt finds sticks for whittling; Landen tells him which ones are too hard. He whittles animal figures at Landen's house and Landen guesses what they are, usually wrong. They built the General Store shelves together when they were young.
 
 ## Voice / Dialogue
@@ -114,7 +114,7 @@ He picks up the broom and starts sweeping. The subject is closed, but the broom 
 
 **The belt buckle.** Condition: Dell asks March for a belt buckle at the forge. Dell has no money and does not mention this. Holt finds out and has to decide whether to pay March, tell Dell she cannot commission things for free, or let March handle it. Each option teaches Dell something different.
 
-**The staffing gap.** Condition: Nora is pulled between the General Store and the Saturday Market. The store is stretched thin. Holt raises it with Adeline during a business review but does not ask directly for help. The gap stays open until someone else fills it or the season changes.
+**The short-handed store.** Condition: Nora is pulled between the General Store and the Saturday Market. The store is stretched thin. Holt raises it with Adeline during a business review but does not ask directly for help. The store stays short-handed until someone else steps in or the season changes.
 
 **Beach cookout.** Condition: summer arrives. Holt and Hemlock plan a beach cookout with the focus of generals planning a campaign. What to grill, who brings what, and whether Holt can handle anything above mild are all contested points.
 
