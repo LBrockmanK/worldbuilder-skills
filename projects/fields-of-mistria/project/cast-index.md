@@ -70,23 +70,23 @@ appropriate completion status.
 
 | Character | Status | Tags | Notes |
 |-----------|--------|------|-------|
-| Darcy | available | vendor | |
-| Louis | available | vendor | |
-| Merri | available | vendor | |
-| Stillwell | available | vendor | |
-| Taliferro | available | vendor | |
-| Vera | available | vendor | |
-| Wheedle | available | vendor | |
-| Zorel | available | vendor | |
+| Darcy | review-done | vendor | |
+| Louis | review-done | vendor | |
+| Merri | review-done | vendor | |
+| Stillwell | review-done | vendor | |
+| Taliferro | review-done | vendor | |
+| Vera | review-done | vendor | |
+| Wheedle | review-done | vendor | |
+| Zorel | review-done | vendor | |
 
 ### Batch 7: Special characters
 
 | Character | Status | Tags | Notes |
 |-----------|--------|------|-------|
-| Caldarus | available | draconic | Arrives during game — Story Beat, not Relationship for pre-game characters |
-| Seridia | available | draconic | Arrives during game — Story Beat, not Relationship for pre-game characters |
-| Dozy | available | animal | |
-| Henrietta | available | animal | |
+| Caldarus | drafted | draconic | Arrives during game — Story Beat. Bent-rules arrival relationships with Hayden, Juniper. |
+| Seridia | drafted | draconic | Arrives during game — Story Beat. Bent-rules arrival relationships with Juniper, Celine. |
+| Dozy | drafted | animal | Golden retriever. Cannot talk — body language only. Relationship with Valen (pre-story). |
+| Henrietta | drafted | animal | Cannot talk — stage directions only. Relationship with March (pecking target). |
 
 ## World info sources
 
