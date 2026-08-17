@@ -18,8 +18,8 @@ Retired mine foreman turned museum curator. Rises before dawn, tells stories fro
 
 - Worked as mine foreman in Mistria for decades before the mines closed after the earthquake → still rises before dawn and cannot break the habit
 - Helped Baron Wiscar and Landen renovate the Manor the summer the Baron first moved in, standing shoulder to shoulder through the work → has known Mistria's leadership since before the title was inherited
-- Knew Hayden's grandmother Greta by name and Valen's father as a personal friend → carries a generation of relationships that no one else in town still holds
-- Saved artifacts he dug up while searching for ore in the mines, though he was not always successful → the losses shaped his commitment to preservation once he became curator
+- Knew Hayden's grandmother Greta by name and Valen's father as a personal friend → still tells Hayden what beer Greta drank and tells Valen he looks just like his father
+- Saved artifacts he dug up while searching for ore in the mines, though he was not always successful → brought what he kept to the museum when it opened and now calls preservation work "a dream come true"
 - Transitioned to Museum Curator after the mines closed → tells Valen he feels healthier and happier than he did as foreman, calls the work "a dream come true"
 - Taught Eiland excavation techniques from his mining days → the museum's fieldwork runs on skills he brought from underground
 
@@ -36,10 +36,10 @@ Older man with a full mustache. Seasonal outfits that change with the weather. N
 - When a new artifact surfaces at the Western Ruins or the museum receives a donation, he drops what he is doing to examine, catalog, and archive it before anything else happens, because recording what came before is the work that makes him feel whole *(core want)*
 - When something is damaged, discarded, or lost before it can be recorded, he goes quiet and does not recover his usual pace for the rest of the day, because every artifact he could not save in the mines proved that some losses are permanent *(core fear)*
 - When Eiland's storage room fills with uncatalogued finds or Seridia throws a tablet into the ocean, he treats disorder as the first step toward loss, insisting on proper procedure even when the moment has already passed, because he believes that if the system holds, nothing important will disappear *(false belief)*
-- When preservation and progress collide, he sides with preservation. He warned against opening the mines to the player. When the player proved capable, he conceded in private to Eiland, choosing his words and giving credit where it was earned, because admitting he was wrong costs less than admitting something was risked that could have been lost *(value-conflict stance)*
-- He tells Valen he is happier as curator than he ever was as foreman. He also rises before dawn, tells mining stories at every gathering, and lights up when someone mentions the tunnels. The mines shaped him. The museum fulfills him. He has not settled which life fits *(unresolved tension)*
-- He values preservation above speed: archiving before display, documentation before celebration, careful excavation before excitement. The cost is that Eiland's enthusiasm sometimes outpaces him, and the museum moves at his pace or not at all *(values with costs)*
-- When a younger person shows skill or knowledge he did not expect, he stops, listens, and adjusts. Luc reorganized the fauna collection by genus instead of alphabet. Errol adopted the system and credited him. When he is wrong, he says so, but only after he has confirmed it himself.
+- When Eiland proposes skipping documentation to put new finds on display, Errol blocks the exhibition hall and pulls out the ledger, because losing the record of where something came from turns an artifact into "just a rock on a shelf," and he has lost too many finds that way to let it happen again *(value-conflict stance)*
+- When someone mentions the mines or the tunnels, he picks up the story mid-sentence, leans in, and talks with his hands, even though he tells Valen he is happier as curator than he ever was as foreman, because the mines gave him 30 years of identity and the museum has given him only a few seasons of purpose *(unresolved tension)*
+- When Eiland returns from the Western Ruins with a crate of finds, Errol opens the ledger before the crate, because he will not display what he has not recorded, and the cost is that the museum moves at his pace or waits *(values with costs)*
+- When a younger person shows skill or knowledge he did not expect, he stops, listens, and adjusts. Luc reorganized the fauna collection by genus instead of alphabet. Errol adopted the system and credited him, because he spent decades as foreman learning that the person closest to the work usually sees it clearest.
 
 ## Relationships
 
@@ -62,7 +62,7 @@ Older man with a full mustache. Seasonal outfits that change with the weather. N
 
 **The student who teaches back — Luc visits the museum.** Luc shows up for a museum visit and starts correcting the display logic. Errol finds himself learning from a child who knows more about genus classification than he does. He adjusts the system and tells Luc he is onto something, then wonders aloud who is teaching whom.
 
-**Seridia and the buried prank — a dragon plants a fake artifact.** Seridia buries something at the Western Ruins dig site. Errol and Eiland unearth it. The discovery triggers a full cataloging response before anyone realizes it is a joke. Errol's anger is real. So is the relief that the real artifacts are untouched.
+**Seridia and the buried prank — a dragon plants a fake artifact.** Seridia buries something at the Western Ruins dig site. Errol and Eiland unearth it. The discovery triggers a full cataloging response before anyone realizes it is a joke. Errol slams the ledger shut and does not speak to Seridia for the rest of the day. He checks every real artifact twice before his hands stop shaking.
 
 **Dinner at Hayden's — Errol visits Hayden for dinner.** Hayden cooks. Errol brings stories. The conversation drifts to Hayden's grandmother, to the farm, to how things used to be. Errol is the last person alive who knew Greta well enough to tell Hayden things about her he has never heard.
 

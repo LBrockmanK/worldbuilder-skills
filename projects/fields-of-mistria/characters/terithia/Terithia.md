@@ -42,33 +42,33 @@ Short white hair, brown skin, stocky build that shows years of physical work on 
 
 ## Relationships
 
-- **Dell — Charge:** She teaches him to fish, tells him warriors need patience most of all, and sits with him on the beach while he waits for a bite he does not have the stillness for yet. When he asks about sharks, she does not say no. She says "patience." He listens to her in a way he does not listen to most adults, and she gives him the version of herself that takes things seriously.
+- **Dell — Charge:** She teaches him to fish, tells him warriors need patience most of all, and sits with him on the beach while he waits for a bite he does not have the stillness for yet. When he asks about sharks, she does not say no. She says "patience." She gives him the version of herself that takes things seriously, and she notices that he stays put when she talks.
 - **Elsie — Confidant:** They drink wine together, talk about the sea, and visit the bathhouse. Elsie is the one person who asks Terithia about romance, and Terithia answers straight: "I'm not much of a romantic." She does not deflect with Elsie. She says the true thing and lets Elsie make it sound grander than it is.
-- **March — Friction:** She needs his forge for fish hooks and a custom reel, and he needs her to stop crowding his workspace. She tells him to take a break when he is hammering. He calls them gossips when they crowd the forge. She calls his sashimi appreciation a surprise; he calls her stories ridiculous. They need each other's work and neither lets the other forget it.
-- **Errol — Kin:** They share Saturday Market nostalgia, dinners at Hayden's house, and rum she fished from the bay. He reports her Big One sightings to others as news. She calls him and Landen "you boys" and means it the way family does. He is the person she is most at ease with, and neither of them performs for the other.
-- **Landen — Obligation:** He asks her questions she does not ask herself: how many fish she has caught, whether she stops in winter. She steals food off his plate at the inn and he lets her. They share nostalgia for Mistria before the earthquake. He is comfortable enough to let her take, and she is comfortable enough to take, and neither names what that ease costs or earns.
+- **March — Friction:** She needs his forge for fish hooks and a custom reel, and she keeps crowding his workspace despite his complaints. She tells him to take a break when he is hammering. She calls his sashimi appreciation a surprise and laughs when he dismisses her stories. She needs his work and does not let him forget it.
+- **Errol — Kin:** They share Saturday Market nostalgia, dinners at Hayden's house, and rum she fished from the bay. She tells him about Big One sightings knowing he will pass the story along. She calls him and Landen "you boys" and means it the way family does. She drops the performer voice around him and does not replace it with anything.
+- **Landen — Obligation:** She steals food off his plate at the inn without asking. When he brings up how many fish she has caught or whether she stops in winter, she answers questions about herself she would not think to ask. They share nostalgia for Mistria before the earthquake. She takes from him with an ease she does not show anyone else, and she does not examine why.
 
 ## Story Seeds
 
-**The Big One surfaces.** Terithia has tracked a shadow along the coast near the ruins for years. One day the water is clear enough to see it. She has to decide whether to cast or watch. Either choice tells her something about whether she is still a hunter or has become someone who tells hunting stories.
+**The Big One surfaces — the water clears enough to see the shadow.** Terithia has tracked a shadow along the coast near the ruins for years. One day the water is clear enough to see it. She has to decide whether to cast or watch. She picks up the rod, sets it down, picks it up again, and stands at the edge longer than she has ever stood without casting.
 
-**The story that lands wrong.** One of her tall tales about leviathans or sea shadows sends Dell looking for something real. She tells the story for the reaction. Now the reaction has consequences and the story is no longer hers to control.
+**The story that lands wrong — Dell goes looking for something from a tall tale.** One of her tall tales about leviathans or sea shadows sends Dell looking for something real. She tells the story for the reaction. Now the reaction has consequences and the story is no longer hers to control.
 
-**The quiet house.** An evening where no one comes to the beach, no one asks for a story, and the inn is empty. She is alone in her house with the fishing gear and the bay. What she does with an audience of zero is the version of herself she has never shown anyone.
+**The quiet house — no one comes to the beach or the inn.** An evening where no one asks for a story and the inn is empty. She is alone in her house with the fishing gear and the bay. She checks the door twice, reorganizes tackle she already sorted, and sits on the porch facing the road.
 
-**The soldier's question.** Someone asks what she did before fishing. She has mentioned boat races and a giant crab, but never the soldiering itself. The question sits in the air and she has to decide whether to tell the real version or the story version, and whether she still knows the difference.
+**The soldier's question — someone asks what she did before fishing.** She has mentioned boat races and a giant crab, but never the soldiering itself. The question sits in the air and she has to decide whether to tell the real version or the story version, and whether she still knows the difference.
 
-**Elsie presses on romance.** Elsie, who spent her life surrounded by admirers and poisoned wine, asks Terithia directly whether she has ever been in love. Terithia said she is not much of a romantic. Elsie does not accept that answer twice.
+**Elsie presses on romance — Elsie asks directly whether she has ever been in love.** Elsie, who spent her life surrounded by admirers and poisoned wine, asks Terithia directly whether she has ever been in love. Terithia said she is not much of a romantic. Elsie does not accept that answer twice.
 
-**Dell catches something.** Dell, who she has been teaching patience, lands a fish on his own. She has to decide whether to cheer, coach, or step back.
+**Dell catches something — Dell lands a fish on his own.** She has been teaching him patience for weeks. She has to decide whether to cheer, coach, or step back.
 
-**March finishes the reel.** The custom reel March built from blended ores changes what she can catch. The Big One is no longer out of reach. She wanted this tool for years and now the excuse for not catching it is gone.
+**March finishes the reel — the custom reel changes what she can catch.** The Big One is no longer out of reach. She wanted this tool for years and now the excuse for not catching it is gone.
 
-**The dredged-up thing.** She pulls something from the bay that is not wine or rum. Something that connects to a life before Mistria. She has to decide whether to show it to anyone or put it back.
+**The dredged-up thing — she pulls something personal from the bay.** She pulls something from the bay that is not wine or rum. Something that connects to a life before Mistria. She has to decide whether to show it to anyone or put it back.
 
-**Winter at the forge.** She and Balor and Ryis crowd March's workspace in winter for warmth. Cards come out. She laughs, teases, and reads tells. When the game breaks up, she walks home alone to the beach house in the cold.
+**Winter at the forge — she crowds March's workspace for warmth.** She and Balor and Ryis crowd March's workspace in winter for warmth. Cards come out. She laughs, teases, and reads tells. When the game breaks up, she walks home alone to the beach house in the cold.
 
-**Storytime goes wrong.** Maple, the sharpest of the 3 children, catches Terithia in a contradiction. "That's a lot of halves, Miss Terithia." The children are growing up. The stories that worked last year need to get better or get true.
+**Storytime goes wrong — Maple catches a contradiction.** Maple, the sharpest of the 3 children, catches Terithia in a contradiction. "That's a lot of halves, Miss Terithia." The children are growing up. The stories that worked last year need to get better or get true.
 
 ## Voice / Dialogue
 
