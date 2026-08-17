@@ -30,8 +30,8 @@ resources:
 
 Brown eyes. [Appearance details pending visual reference — hair, skin, build, clothing need confirmation from game portraits.]
 
-- He winks when he lands a joke or a compliment. It is his punctuation.
-- He keeps his hands busy in conversation. He picks up a tool, turns it over, sets it down. He does not sit still when he can hold something.
+- He winks when he lands a joke or a compliment.
+- He keeps his hands busy in conversation. He picks up a tool, turns it over, sets it down. He stays in motion when he can hold something.
 - When embarrassed, he goes quiet and changes the subject. The shift is abrupt enough that people notice.
 
 ## Soul
@@ -39,10 +39,10 @@ Brown eyes. [Appearance details pending visual reference — hair, skin, build, 
 - When someone asks him for help with woodwork, he arrives before the request is finished. He offers porch-building, piano-tuning, wood-type advice, and repair estimates to people who did not ask, because if his hands are not useful to someone, he does not know what retirement is for. *(core want)*
 - When Balor mentions a good commission from the Capital, Landen says "no, I'm retired" and goes quiet. Then he asks to hear about it. When the subject turns to whether Mistria still needs a second carpenter, he steers the conversation to Ryis's progress, because he cannot sit with the idea that the town could do without him entirely. *(core fear)*
 - He calls himself retired and treats the shop as Ryis's business. He introduces himself as semi-retired and speaks of carpentry in the past tense. He agonizes over Ryis's measurements after saying he trusts Ryis completely, because he believes stepping back and letting go are the same thing, and they are not. *(false belief)*
-- When he sees work done wrong, he corrects it. His hands move before the words do. When the correction is unwelcome, he frames it as a joke and winks, because the work matters more to him than the cost of hovering, and a wink turns an intrusion into a favor. *(value-conflict stance)*
+- When he sees work done wrong, he corrects it. His hands move before the words do. When the correction is unwelcome, he turns it into a joke and winks, because the work matters more to him than the cost of hovering, and a wink turns an intrusion into a favor. *(value-conflict stance)*
 - He wants Ryis to run the shop on his own terms. He also cannot stop checking Ryis's work. Both impulses are genuine and neither gives. *(unresolved tension)*
 - He values craftsmanship above convenience. When he sees shoddy work, he cannot leave it alone. The cost is that he undercuts Ryis's independence and cannot enjoy his own retirement. *(values with costs)*
-- When someone younger shows potential, he lights up and starts teaching. He does not wait to be asked. He gets more animated with a student than with an old friend. He told Hayden "you'd make for a great carpenter" after watching him work once.
+- When someone younger shows potential, he lights up and starts teaching, because teaching is the one part of the craft he never stepped back from. He told Hayden "you'd make for a great carpenter" after watching him work once.
 - When telling stories with Errol, he embellishes. The details get bigger each telling. When Errol contradicts them, Landen leans in harder. The competition over who remembers the story right is more fun than the story.
 
 ## Relationships
@@ -122,7 +122,7 @@ He changes the subject to the weather. He does it so smoothly that Errol lets hi
 
 **Bridge repair.** Condition: the bridge rebuild reaches a phase that needs experienced carpentry. The town needs Landen. His retirement stance does not hold when the community calls, and he has to decide whether answering the call means the retirement was a performance.
 
-**Wood gathering storm.** Condition: bad weather on the Eastern Road during a gathering trip with Holt. Something goes wrong. Landen has to act, and the "retired" version of himself does not help anyone. What he does when the stakes are real reveals what the jokes cover.
+**Wood gathering storm.** Condition: bad weather on the Eastern Road during a gathering trip with Holt. Something goes wrong. Landen has to act, and the "retired" version of himself does not help anyone. When the situation turns serious, the jokes stop and he works with the same focus he brought to Capital commissions.
 
 ## Design Notes
 

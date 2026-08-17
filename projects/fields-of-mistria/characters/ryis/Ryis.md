@@ -34,7 +34,7 @@ resources:
 - He winks when he lands a joke or shares something he is proud of. It is the same wink Landen uses, and neither of them has noticed.
 - He talks with his hands when explaining craft or baking. He mimes the process: whisking, hammering, fitting joints.
 - When embarrassed, he stutters on the first word and then pushes through the sentence. He does not stop talking; he speeds up.
-- He sits with his eyes closed when he is relaxing outdoors. He does not fall asleep. He listens.
+- He sits with his eyes closed when he is relaxing outdoors. He stays awake. He listens.
 
 ## Soul
 
@@ -43,9 +43,9 @@ resources:
 - He calls Landen's hovering "a work in progress" and waits for Landen to step back on his own. He does not push, does not set a boundary, does not say what he needs, because he believes that earning trust means waiting for the other person to offer it, not asking for it. *(false belief)*
 - When March points out a bad angle on a bracket, Ryis says "you're right" and tries it again. When a problem has no solution through normal channels, he reads, asks around, and invents one. He chose nail-free joinery over complaining about the nail shortage, because doing the work matters more to him than getting credit for solving the problem. *(value-conflict stance)*
 - He wants Mistria to be home. He is not sure it is yet. Both feelings are present in the same conversation, and neither wins. *(unresolved tension)*
-- He values being helpful above protecting his own time. He takes every repair job Adeline sends, checks hinges nobody asked about, and inspects buildings on his own schedule. The cost is that he has no time left for himself, and when he is tired, he hammers before he is awake and hits his own finger. *(values with costs)*
-- When someone mentions birds, he lights up. He knows species names, nesting habits, and song patterns. He corrects Landen's overselling ("you don't have to over-sell me like that, Uncle") and then confirms it ("he's right, though").
-- When children want to help with carpentry, he lets them. He steers Dell toward a simpler project instead of saying no. He treats their interest as real, not cute.
+- When a repair job comes in, he takes it. When no job comes in, he checks hinges nobody asked about and inspects buildings on his own schedule, because being useful is how he earns his place in a town he is still not sure is home. The cost is that he has no time left for himself, and when he is tired, he hammers before he is awake and hits his own finger. *(values with costs)*
+- When someone mentions birds, he lights up. He knows species names, nesting habits, and song patterns, because birdwatching was how he found quiet in a full house. He corrects Landen's overselling ("you don't have to over-sell me like that, Uncle") and then confirms it ("he's right, though").
+- When children want to help with carpentry, he lets them. He steers Dell toward a simpler project instead of saying no, because no one learns from being told to watch. He treats their interest as real, not cute.
 
 ## Relationships
 
@@ -56,7 +56,7 @@ resources:
 - **Olric — Community Thread:** Ryis brings him rocks from the Narrows and checks the town's stone foundations. The relationship runs through their work on the same buildings from different trades.
 - **Holt — Obligation:** Holt and Landen go back decades. Ryis tightens hinges on the general store and delivers Landen's greetings. He maintains a relationship Landen built, and the maintenance is habit now, not calculation. Holt tells him puns. Ryis does not laugh but does not leave.
 - **Adeline — Authority:** She assigns him repair projects around town. He reports progress to her, requests lumber through her, and keeps up with the pace she sets. He tells her "I can keep up" and means it. She is the structure his work fits into.
-- **Eiland — Unease:** Ryis likes Eiland. He goes to Eiland for historical building references and ancient architecture research. But Eiland suggested Dell would make a good archaeologist, and Ryis thought she would make a good carpenter, and neither of them is wrong. Ryis cannot tell whether Eiland sees the town the same way he does.
+- **Eiland — Unease:** Ryis likes Eiland. He goes to Eiland for historical building references and ancient architecture research. But Eiland suggested Dell would make a good archaeologist, and Ryis thought she would make a good carpenter, and neither of them is wrong. He has not figured out what to do with the fact that Eiland might be right too.
 - **Valen — Community Thread:** Ryis goes to the clinic when he injures himself at work. Valen checks him out, says it is not sprained, and they move on. The relationship is professional, warm, and does not carry weight beyond the visit.
 
 ## Voice / Dialogue
@@ -131,13 +131,13 @@ He sets the scrap down and picks up another piece. He is already testing the fit
 
 **The bird expert.** Condition: someone asks about a bird they have seen in Mistria. Ryis knows Aldarian bird species well enough that Landen calls him the town's expert. He corrects the overselling and then confirms it. When the question is about a species he has not seen, he goes to his books and comes back with an answer. The knowledge is personal, not professional, and it is one of the few things he claims for himself.
 
-**The bakery letters.** Condition: a letter arrives from the Capital. Ryis's family runs a bakery. His mother sends cookies. His sister writes about him to family in terms he would find embarrassing. A letter that contains news forces Ryis to reckon with the distance between where he is and where he came from, and whether the distance is a gap or a choice.
+**The bakery letters.** Condition: a letter arrives from the Capital. Ryis's family runs a bakery. His mother sends cookies. His sister writes about him to family in terms he would find embarrassing. A letter that contains news forces Ryis to reckon with the distance between where he is and where he came from, and whether the distance is a separation or a choice.
 
 **Dell's apprenticeship.** Condition: Dell asks to help with a carpentry project. Ryis lets children help. He steers them toward simpler projects instead of saying no. But Dell is persistent and has a hammer, and Eiland thinks she would make a good archaeologist. Ryis thinks she would make a good carpenter. If Dell keeps coming back, Ryis has to decide whether he is teaching or just keeping her busy.
 
 **Capital commission.** Condition: a furniture request arrives that needs Capital-grade technique. Ryis learned from Landen, who built for Capital nobility. Whether Ryis has the skill for this level of work is the question Landen's hovering has kept unanswered. The commission forces a test neither of them can redirect.
 
-**The Mistrian bluebird.** Condition: birdhouse restoration reaches the waiting phase. The birds that nested in the old tree were Mistrian bluebirds. Whether they return is not in Ryis's control. He watches. He checks. He does not talk about what it would mean if they did not come back, and he does not talk about what it would mean if they did.
+**The Mistrian bluebird.** Condition: birdhouse restoration reaches the waiting phase. The birds that nested in the old tree were Mistrian bluebirds. Whether they return is not in Ryis's control. He watches. He checks. He keeps quiet about the bluebirds when anyone asks.
 
 **Forge-side winter.** Condition: winter, the forge is warm. Ryis, March, Balor, and Terithia gather at the forge when the weather turns cold. Cards come out. Ryis deals. The group dynamic shifts when the work context drops and the social context takes over. Ryis is quieter at cards than at work.
 
