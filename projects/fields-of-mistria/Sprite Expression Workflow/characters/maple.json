@@ -1,0 +1,41 @@
+{
+  "schema_version": 1,
+  "id": "maple",
+  "display_name": "Maple",
+  "identity_anchor": "Maple, preserving the exact identity, apparent age, facial structure, body type, skin or surface coloring, hair or species anatomy, eyes, and distinctive features shown in the source reference. Source description: Dark brown skin. Black hair with a white bow. Brown eyes. Rounded, soft build. In spring she wears a purple dress with a white collar; in summer a peach polka-dot dress; in autumn a green dress with a white bow; in winter a magenta dress with white trim. The white collar stays year-round.",
+  "personality_notes": "- When she tells someone what to do and they do it, she lights up. She does not want obedience for its own sake. She wants to matter enough that people follow. *(core want)*\n- When she senses someone is about to dismiss her as just a kid, she switches to the queen persona. The voice drops, the titles come out, the decree is issued. The performance started as play and became armor she has not taken off. *(core fear)*\n- She plans taxation, spy networks, and royal courts with detail that goes past play-acting. She also negotiates for extra snacks and cannot stay up past bedtime. She has not noticed the gap because she believes wanting to be queen is the same as being ready to be one. *(false belief)*\n- When her commands are not followed, she chooses charm over force. She makes the cute face, flatters, negotiates. The lever is dignity: when someone mocks the queen persona rather than simply ignoring it, the charm drops and the anger is real. *(value-conflict stance)*\n- When someone asks if she is really a queen, she does not laugh. She says \"not yet\" and means it. She calls herself \"not LADY Maple... yet\" and the emphasis is always on the \"yet.\" The line between pretending and aspiring has disappeared, and she treats both as the same project. *(unresolved tension)*\n- She has assigned every adult in town a position in her future court. Dell is captain, Reina is chef, Wheedle is \"the deceitful minister every queen needs.\" The thoroughness is not a joke. She has built her sense of who she will become around one outcome, and she does not talk about what happens if it does not arrive. *(values with cost)*\n- When Luc corrects her facts, she argues. When he is right, she changes the subject and uses the correct version next time without attribution.",
+  "physicality_notes": "Dark brown skin. Black hair with a white bow. Brown eyes. Rounded, soft build. In spring she wears a purple dress with a white collar; in summer a peach polka-dot dress; in autumn a green dress with a white bow; in winter a magenta dress with white trim. The white collar stays year-round.\n\n- She holds herself like someone who expects to be looked at. Chin up, hands on her hips or at her sides, feet planted.\n- She has practiced making her cutest face: wide eyes, small tilt of the head, deployed at the exact moment it will work best.\n- When she is angry, she draws herself up, narrows her eyes, and speaks in the voice she has decided a queen would use.",
+  "sprite_sets": [
+    {
+      "id": "spring",
+      "display_name": "Spring Outfit",
+      "asset_stem": "maple_spring",
+      "style": "seiyo",
+      "expression_pack": "seiyo-26",
+      "outfit_anchor": "The exact spring outfit clothing, jewelry, accessories, fasteners, layers, color blocking, and silhouette shown in the source reference. Use this source description as supporting evidence: Dark brown skin. Black hair with a white bow. Brown eyes. Rounded, soft build. In spring she wears a purple dress with a white collar; in summer a peach polka-dot dress; in autumn a green dress with a white bow; in winter a magenta dress with white trim. The white collar stays year-round.",
+      "set_notes": "The approved generated neutral is authoritative for Maple's Spring Outfit identity, outfit or form construction, fixed gradient, framing, and Seiyo rendering. Future expressions are mapped to Seiyo-26 and must be generated independently from this approved neutral.",
+      "references": [
+        {
+          "path": "sprites/maple/spring/maple_spring_neutral.png",
+          "role": "identity-base",
+          "notes": "Approved generated neutral. Preserve its identity, outfit or form construction, gradient, framing, and Seiyo rendering."
+        },
+        {
+          "path": "references/maple/spring/maple_spring_source_sprite.png",
+          "role": "outfit-reference",
+          "notes": "Canonical source for outfit or form construction, colors, and distinctive landmarks; do not reproduce pixel rendering or the exact source pose."
+        }
+      ],
+      "background": {
+        "mode": "character",
+        "top": "#9C6C3C",
+        "bottom": "#E4B4B4"
+      },
+      "expression_overrides": {
+        "neutral": {
+          "instruction": "Show composed neutrality: level brows, relaxed jaw, softly closed mouth, and attentive forward eyes. Keep the character's habitual posture from the source but simplify the pose: both shoulders visible, arms separated, and any visible hands fully inside the canvas with natural anatomy."
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,41 @@
+{
+  "schema_version": 1,
+  "id": "olric",
+  "display_name": "Olric",
+  "identity_anchor": "Olric, preserving the exact identity, apparent age, facial structure, body type, skin or surface coloring, hair or species anatomy, eyes, and distinctive features shown in the source reference. Source description: [perceptual] Dark brown hair, straight and slightly tousled. Light skin, dark eyes. Young adult, lean and muscled from forge work. He wears a red vest over a white sleeveless shirt, a green cloth tied at the waist, and work gloves.",
+  "personality_notes": "'Part-timer at the forge and older brother to March. Works odd jobs across - When someone needs something lifted, built, delivered, or counted, he says yes before they finish asking. He picks up shifts at the inn, hauls brewing supplies, installs shelves, and records patient symptoms at the clinic, because if he is not helping someone, he does not know what to do with himself. *(core want)*\n- When someone mentions the mines being closed, he goes quiet, then talks about the whirlpools and the shrines and the copper seams. He visits the mine entrance alone to remember the good times, because the mines were the one place where his energy had a job that fit, and nothing since has replaced it. *(core fear)*\n- He calls himself an \"Olric of all trades\" and treats every odd job as proof that he belongs everywhere. He does not notice that none of the jobs are his. March runs the forge. Hemlock runs the inn. Errol runs the museum. Olric helps at all of them and owns none, because he believes showing up is the same as having a place. *(false belief)*\n- When March snaps at him or dismisses him, he laughs. He does not push back, correct, or take offense, because keeping the peace matters more to him than being right, and he does not notice when the cost is that people stop taking him seriously. *(value-conflict stance)*\n- He wants to be useful to March at the forge. He also misses the mines and the work he did there. Both pulls are real and neither has a resolution while the mines stay closed. *(unresolved tension)*\n- He values helping anyone who asks, at any time, for any reason. The cost is that he spreads himself across every job in town and builds nothing of his own. *(values with costs)*\n- When someone younger needs attention, he drops to their level. He told Luc \"you're such a grown-up\" without irony. He let Dell use the forge to make a sword without hesitating. He does not gate-keep and does not lecture.\n- When Eiland talks about ancient music connecting people across time, Olric responds with something Eiland calls poetic. He arrives at these observations without effort and does not recognize them as unusual.",
+  "physicality_notes": "[perceptual] Dark brown hair, straight and slightly tousled. Light skin, dark eyes. Young adult, lean and muscled from forge work. He wears a red vest over a white sleeveless shirt, a green cloth tied at the waist, and work gloves.\n\n- He winks when he is pleased with himself or wants to punctuate a joke. The wink lands the same whether the joke is funny or not.\n- His hands are always doing something. He picks up heavy things for the sake of picking them up. He offered to lift March's anvil for Valen on the spot.\n- When he counts reps or hammer strokes, he does it out loud. He does not lower his voice for the audience.",
+  "sprite_sets": [
+    {
+      "id": "spring",
+      "display_name": "Spring Outfit",
+      "asset_stem": "olric_spring",
+      "style": "seiyo",
+      "expression_pack": "seiyo-26",
+      "outfit_anchor": "The exact spring outfit clothing, jewelry, accessories, fasteners, layers, color blocking, and silhouette shown in the source reference. Use this source description as supporting evidence: [perceptual] Dark brown hair, straight and slightly tousled. Light skin, dark eyes. Young adult, lean and muscled from forge work. He wears a red vest over a white sleeveless shirt, a green cloth tied at the waist, and work gloves.",
+      "set_notes": "The approved generated neutral is authoritative for Olric's Spring Outfit identity, outfit or form construction, fixed gradient, framing, and Seiyo rendering. Future expressions are mapped to Seiyo-26 and must be generated independently from this approved neutral.",
+      "references": [
+        {
+          "path": "sprites/olric/spring/olric_spring_neutral.png",
+          "role": "identity-base",
+          "notes": "Approved generated neutral. Preserve its identity, outfit or form construction, gradient, framing, and Seiyo rendering."
+        },
+        {
+          "path": "references/olric/spring/olric_spring_source_sprite.png",
+          "role": "outfit-reference",
+          "notes": "Canonical source for outfit or form construction, colors, and distinctive landmarks; do not reproduce pixel rendering or the exact source pose."
+        }
+      ],
+      "background": {
+        "mode": "character",
+        "top": "#CC6C54",
+        "bottom": "#FCE4B4"
+      },
+      "expression_overrides": {
+        "neutral": {
+          "instruction": "Show composed neutrality: level brows, relaxed jaw, softly closed mouth, and attentive forward eyes. Keep the character's habitual posture from the source but simplify the pose: both shoulders visible, arms separated, and any visible hands fully inside the canvas with natural anatomy."
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,41 @@
+{
+  "schema_version": 1,
+  "id": "zorel",
+  "display_name": "Zorel",
+  "identity_anchor": "Zorel, preserving the exact identity, apparent age, facial structure, body type, skin or surface coloring, hair or species anatomy, eyes, and distinctive features shown in the source reference. Source description: Dark brown skin. Dark purple-black hair, short and tousled, falling across her forehead and over one eye. Brown eyes. She carries a lute on her back in every season, the neck visible over her shoulder. In spring she wears a green top with patterned green-and-red arm wraps and a tan skirt. In summer, an orange-and-green layered top with the same arm wraps. In autumn, a green top with an orange waist wrap and fringed hem. In winter, a green hooded jacket over orange-and-yellow layers with fingerless gloves.",
+  "personality_notes": "Traveling musician and crystal vendor from the Capital. Sells Song Crystals and Crystal Resonators at Mistria's Saturday Market. Plays lute, writes her own music, and keeps her lute case stocked with artifacts and mushroom snacks. Connected to the Inn family through her parents' friendship with Hemlock. Does not live anywhere long enough to call it home, and likes it that way. - When she talks about Song Crystals, she leans forward and her voice lifts, because she wants her music to reach people she will never meet, in places she will never go, and the crystals are how that happens. *(core want)*\n- When someone treats her music as a product to own rather than a thing to hear, she goes cold. The shift is fast and the warmth does not come back in that conversation, because the line between sharing music and losing it is the one she watches. *(core fear)*\n- She believes that if she keeps moving, she can spread her music farther than if she stopped. She has not tested whether staying somewhere would let her music go deeper instead of wider, because she has not stayed anywhere long enough to find out. *(false belief)*\n- When Louis hesitated about making her lute cases, she told him it was \"a coat for instruments\" and talked him into it. She pushes when something matters to her and backs down when it does not, and the line between the two is sharp. She does not feel guilty about the push, because she sees urgency about her craft as correct. *(value-conflict stance)*\n- She says she likes roaming too much to settle down, and in the next sentence she says \"maybe someday.\" *(unresolved tension)*\n- She works on melodies between customers, talks about recording a whole album on a single crystal, and says her performances might be heard hundreds of years from now. The music comes before the money, and the cost is that she tracks her stock as an afterthought and notices she is running low only after it happens. *(values with costs)*",
+  "physicality_notes": "Dark brown skin. Dark purple-black hair, short and tousled, falling across her forehead and over one eye. Brown eyes. She carries a lute on her back in every season, the neck visible over her shoulder. In spring she wears a green top with patterned green-and-red arm wraps and a tan skirt. In summer, an orange-and-green layered top with the same arm wraps. In autumn, a green top with an orange waist wrap and fringed hem. In winter, a green hooded jacket over orange-and-yellow layers with fingerless gloves.\n\n- She talks with her hands open and spread, palms out, the same gesture whether she is selling a Crystal Resonator or telling a story about Stillwell.\n- When she is working on a song at her booth, she hums and does not look up until someone speaks to her.\n- When her hands get cold in winter, she stops playing and tucks them under her arms. She mentions it to whoever is nearby.",
+  "sprite_sets": [
+    {
+      "id": "spring",
+      "display_name": "Spring Outfit",
+      "asset_stem": "zorel_spring",
+      "style": "seiyo",
+      "expression_pack": "seiyo-26",
+      "outfit_anchor": "The exact spring outfit clothing, jewelry, accessories, fasteners, layers, color blocking, and silhouette shown in the source reference. Use this source description as supporting evidence: Dark brown skin. Dark purple-black hair, short and tousled, falling across her forehead and over one eye. Brown eyes. She carries a lute on her back in every season, the neck visible over her shoulder. In spring she wears a green top with patterned green-and-red arm wraps and a tan skirt. In summer, an orange-and-green layered top with the same arm wraps. In autumn, a green top with an orange waist wrap and fringed hem. In winter, a green hooded jacket over orange-and-yellow layers with fingerless gloves.",
+      "set_notes": "The approved generated neutral is authoritative for Zorel's Spring Outfit identity, outfit or form construction, fixed gradient, framing, and Seiyo rendering. Future expressions are mapped to Seiyo-26 and must be generated independently from this approved neutral.",
+      "references": [
+        {
+          "path": "sprites/zorel/spring/zorel_spring_neutral.png",
+          "role": "identity-base",
+          "notes": "Approved generated neutral. Preserve its identity, outfit or form construction, gradient, framing, and Seiyo rendering."
+        },
+        {
+          "path": "references/zorel/spring/zorel_spring_source_sprite.png",
+          "role": "outfit-reference",
+          "notes": "Canonical source for outfit or form construction, colors, and distinctive landmarks; do not reproduce pixel rendering or the exact source pose."
+        }
+      ],
+      "background": {
+        "mode": "character",
+        "top": "#B4E484",
+        "bottom": "#0C3C3C"
+      },
+      "expression_overrides": {
+        "neutral": {
+          "instruction": "Show composed neutrality: level brows, relaxed jaw, softly closed mouth, and attentive forward eyes. Keep the character's habitual posture from the source but simplify the pose: both shoulders visible, arms separated, and any visible hands fully inside the canvas with natural anatomy."
+        }
+      }
+    }
+  ]
+}

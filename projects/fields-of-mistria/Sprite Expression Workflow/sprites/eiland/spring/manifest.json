@@ -1,0 +1,10 @@
+{
+  "schema_version": 1,
+  "character": "eiland",
+  "sprite_set": "spring",
+  "asset_stem": "eiland_spring",
+  "style": "seiyo",
+  "background": { "top": "#E4B484", "bottom": "#542424" },
+  "base_expression": "neutral",
+  "expressions": { "neutral": "eiland_spring_neutral.png" }
+}

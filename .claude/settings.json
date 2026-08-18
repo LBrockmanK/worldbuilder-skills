@@ -1,5 +1,6 @@
 {
   "enabledPlugins": {
-    "core-workflow@local-desktop-app-uploads": true
+    "core-workflow@local-desktop-app-uploads": true,
+    "worldbuilder-skills@local-desktop-app-uploads": true
   }
 }

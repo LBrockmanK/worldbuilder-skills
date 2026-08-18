@@ -1,0 +1,41 @@
+{
+  "schema_version": 1,
+  "id": "reina",
+  "display_name": "Reina",
+  "identity_anchor": "Reina, preserving the exact identity, apparent age, facial structure, body type, skin or surface coloring, hair or species anatomy, eyes, and distinctive features shown in the source reference. Source description: Dark brown curly hair, shoulder-length, gathered into two small buns at the crown. Brown eyes, dark brown skin. Her spring outfit is a mustard-gold long-sleeved top over a pink undershirt, with a magenta skirt and a brown belt. The outfit changes with the season but keeps the warm palette.",
+  "personality_notes": "Head Cook at the Sleeping Dragon Inn. Daughter of Hemlock and Josephine, - When someone eats her food and asks for seconds, she watches their face before answering — because cooking for someone and watching them enjoy it is the closest she gets to saying what she means without words *(core want)*\n- When a recipe fails or a dish does not turn out, she tries it again the same night — because a kitchen that produces nothing is a kitchen that does not need her, and she has not separated what the Inn needs from what she needs *(core fear)*\n- When someone praises her cooking, she says thank you and moves to the next dish — because she has been cooking for the same people her whole life and she does not know whether their praise measures her skill or their loyalty, and she has not asked *(false belief)*\n- When Adeline stays up past midnight or skips lunch, Reina intervenes — bans coffee after sundown, drags her to the beach, stages an intervention on the balcony — because she believes taking care of people who will not take care of themselves is worth the argument, even when the argument is the same one every time *(value-conflict stance)*\n- When Luc asks her to learn bug facts and Maple demands historically accurate bedtime stories, she does both — but she learns the facts and tells the stories instead of developing a new recipe or writing in her cookbook, and she does not notice the trade *(unresolved tension)*\n- When someone needs a cooking lesson or a bedtime story or a festival menu, she says yes — and the recipe she was working on goes back in the notebook, because she does not know how to say \"not right now\" to someone who is standing in front of her *(values with costs)*\n- When she sees someone eating alone, she sends over a plate. When a newcomer arrives in Mistria, she gives them an extra helping of soup. She does not announce it. She does not ask if they are hungry. She reads the room and feeds it.",
+  "physicality_notes": "Dark brown curly hair, shoulder-length, gathered into two small buns at the crown. Brown eyes, dark brown skin. Her spring outfit is a mustard-gold long-sleeved top over a pink undershirt, with a magenta skirt and a brown belt. The outfit changes with the season but keeps the warm palette.\n\n- When she chops vegetables, the rhythm is fast and precise enough that the kitchen has its own sound when she is working.\n- When someone mentions a new ingredient, she tilts her head and names what to pair it with before they finish the sentence.\n- When a child makes a mistake in the kitchen, she says \"oh dear\" and shows them how to fix it instead of starting over.\n- When she says something serious to a friend, she leads with \"so know that I say this with love\" and then says exactly what she means.",
+  "sprite_sets": [
+    {
+      "id": "spring",
+      "display_name": "Spring Outfit",
+      "asset_stem": "reina_spring",
+      "style": "seiyo",
+      "expression_pack": "seiyo-26",
+      "outfit_anchor": "The exact spring outfit clothing, jewelry, accessories, fasteners, layers, color blocking, and silhouette shown in the source reference. Use this source description as supporting evidence: Dark brown curly hair, shoulder-length, gathered into two small buns at the crown. Brown eyes, dark brown skin. Her spring outfit is a mustard-gold long-sleeved top over a pink undershirt, with a magenta skirt and a brown belt. The outfit changes with the season but keeps the warm palette.",
+      "set_notes": "The approved generated neutral is authoritative for Reina's Spring Outfit identity, outfit or form construction, fixed gradient, framing, and Seiyo rendering. Future expressions are mapped to Seiyo-26 and must be generated independently from this approved neutral.",
+      "references": [
+        {
+          "path": "sprites/reina/spring/reina_spring_neutral.png",
+          "role": "identity-base",
+          "notes": "Approved generated neutral. Preserve its identity, outfit or form construction, gradient, framing, and Seiyo rendering."
+        },
+        {
+          "path": "references/reina/spring/reina_spring_source_sprite.png",
+          "role": "outfit-reference",
+          "notes": "Canonical source for outfit or form construction, colors, and distinctive landmarks; do not reproduce pixel rendering or the exact source pose."
+        }
+      ],
+      "background": {
+        "mode": "character",
+        "top": "#E4B46C",
+        "bottom": "#3C0C24"
+      },
+      "expression_overrides": {
+        "neutral": {
+          "instruction": "Show composed neutrality: level brows, relaxed jaw, softly closed mouth, and attentive forward eyes. Keep the character's habitual posture from the source but simplify the pose: both shoulders visible, arms separated, and any visible hands fully inside the canvas with natural anatomy."
+        }
+      }
+    }
+  ]
+}

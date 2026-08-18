@@ -1,0 +1,10 @@
+{
+  "schema_version": 1,
+  "character": "seridia",
+  "sprite_set": "dragon",
+  "asset_stem": "seridia_dragon",
+  "style": "seiyo",
+  "background": { "top": "#6C84CC", "bottom": "#3C0C0C" },
+  "base_expression": "neutral",
+  "expressions": { "neutral": "seridia_dragon_neutral.png" }
+}

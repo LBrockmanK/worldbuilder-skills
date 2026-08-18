@@ -1,0 +1,10 @@
+{
+  "schema_version": 1,
+  "character": "vera",
+  "sprite_set": "spring",
+  "asset_stem": "vera_spring",
+  "style": "seiyo",
+  "background": { "top": "#B48454", "bottom": "#0C0C3C" },
+  "base_expression": "neutral",
+  "expressions": { "neutral": "vera_spring_neutral.png" }
+}

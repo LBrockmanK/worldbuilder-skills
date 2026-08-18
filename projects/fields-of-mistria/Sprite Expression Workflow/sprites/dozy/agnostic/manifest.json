@@ -1,0 +1,15 @@
+{
+  "schema_version": 1,
+  "character": "dozy",
+  "sprite_set": "agnostic",
+  "asset_stem": "dozy_agnostic",
+  "style": "seiyo",
+  "background": {
+    "top": "#FCE49C",
+    "bottom": "#3C240C"
+  },
+  "base_expression": "neutral",
+  "expressions": {
+    "neutral": "dozy_agnostic_neutral.png"
+  }
+}

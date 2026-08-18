@@ -1,0 +1,40 @@
+{
+  "schema_version": 1,
+  "character": "adeline",
+  "sprite_set": "spring",
+  "asset_stem": "adeline_spring",
+  "style": "seiyo",
+  "background": {
+    "top": "muted deep indigo-purple",
+    "bottom": "soft dusty rose-pink"
+  },
+  "base_expression": "neutral",
+  "expressions": {
+    "amused": "adeline_spring_amused.png",
+    "angry": "adeline_spring_angry.png",
+    "annoyed": "adeline_spring_annoyed.png",
+    "beaming": "adeline_spring_beaming.png",
+    "blushing": "adeline_spring_blushing.png",
+    "comedic-shock": "adeline_spring_comedic_shock.png",
+    "confident": "adeline_spring_confident.png",
+    "crying": "adeline_spring_crying.png",
+    "embarrassed": "adeline_spring_embarrassed.png",
+    "emotional": "adeline_spring_emotional.png",
+    "emotional-shock": "adeline_spring_emotional_shock.png",
+    "flirty": "adeline_spring_flirty.png",
+    "happy": "adeline_spring_happy.png",
+    "intimate": "adeline_spring_intimate.png",
+    "laughing": "adeline_spring_laughing.png",
+    "nervous": "adeline_spring_nervous.png",
+    "neutral": "adeline_spring_neutral.png",
+    "sad": "adeline_spring_sad.png",
+    "shy": "adeline_spring_shy.png",
+    "sleepy-tired": "adeline_spring_sleepy_tired.png",
+    "smiling": "adeline_spring_smiling.png",
+    "stoic": "adeline_spring_stoic.png",
+    "surprised": "adeline_spring_surprised.png",
+    "upset": "adeline_spring_upset.png",
+    "wary": "adeline_spring_wary.png",
+    "worried-concerned": "adeline_spring_worried_concerned.png"
+  }
+}

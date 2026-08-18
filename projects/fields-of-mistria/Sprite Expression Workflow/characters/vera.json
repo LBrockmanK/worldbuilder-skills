@@ -1,0 +1,41 @@
+{
+  "schema_version": 1,
+  "id": "vera",
+  "display_name": "Vera",
+  "identity_anchor": "Vera, preserving the exact identity, apparent age, facial structure, body type, skin or surface coloring, hair or species anatomy, eyes, and distinctive features shown in the source reference. Source description: Short, voluminous magenta curls, styled up and away from her face. Dark brown skin, violet-purple eyes. Gold dangling earrings. She wears a work apron over seasonal outfits: a navy apron with a white blouse in spring, a sleeveless blue top in summer, a purple jacket over pink in autumn, a brown vest with a white blouse in winter. Scissors and styling tools hang from her apron ties. Her own hair is a walking display of her craft.",
+  "personality_notes": "Traveling hair stylist who sells hairstyles and hair clips at the Saturday Market. Visits Mistria weekly on her route through Aldaria, cuts hair, collects gossip, and has no home in town. - When someone sits at her stall and starts talking, she leans in and asks follow-up questions, because hearing what people share while she works is the part of the job she never wants to lose. *(core want)*\n- When the market closes and the stall comes down, she packs quickly and looks for someone to talk to, because a town that goes quiet when she leaves is a town that does not need her back. *(core fear)*\n- When someone tells her a story at the stall, she treats it as closeness, because she believes that knowing everyone's business means she belongs here. The gossip flows to whoever holds the scissors, not to her specifically, and she has not tested that difference. *(false belief)*\n- When someone's hairstyle does not suit them, she says so even if they did not ask, because she would rather lose the sale than let someone walk away looking wrong. She does not check whether \"wrong\" is her standard or theirs. *(value-conflict stance)*\n- She calls Mistria her favorite stop and means it, but she has never stayed past Saturday. She wants the town without the roots. The traveling life is the only life she has tried, and she calls it a choice. *(unresolved tension)*\n- She values her independence. She goes where she wants, works her own hours, answers to no one. The cost is that she has no home, sleeps on borrowed carpets, and her closest relationships reset to weekly visits. *(values with costs)*",
+  "physicality_notes": "Short, voluminous magenta curls, styled up and away from her face. Dark brown skin, violet-purple eyes. Gold dangling earrings. She wears a work apron over seasonal outfits: a navy apron with a white blouse in spring, a sleeveless blue top in summer, a purple jacket over pink in autumn, a brown vest with a white blouse in winter. Scissors and styling tools hang from her apron ties. Her own hair is a walking display of her craft.\n\n- She rests one hand on her hip when she talks, the other hand reaching for her tools or gesturing at whoever she is speaking to.\n- When she sizes up someone's hair, she tilts her head and squints the same way she checks a finished cut.\n- When she packs up after market, she sweeps the hair clippings into a pile and talks to whoever is still nearby, stretching the conversation past what the cleanup requires.",
+  "sprite_sets": [
+    {
+      "id": "spring",
+      "display_name": "Spring Outfit",
+      "asset_stem": "vera_spring",
+      "style": "seiyo",
+      "expression_pack": "seiyo-26",
+      "outfit_anchor": "The exact spring outfit clothing, jewelry, accessories, fasteners, layers, color blocking, and silhouette shown in the source reference. Use this source description as supporting evidence: Short, voluminous magenta curls, styled up and away from her face. Dark brown skin, violet-purple eyes. Gold dangling earrings. She wears a work apron over seasonal outfits: a navy apron with a white blouse in spring, a sleeveless blue top in summer, a purple jacket over pink in autumn, a brown vest with a white blouse in winter. Scissors and styling tools hang from her apron ties. Her own hair is a walking display of her craft.",
+      "set_notes": "The approved generated neutral is authoritative for Vera's identity, violet-purple eyes, Spring costume and tools, fixed gradient, and Seiyo rendering. Future expressions are mapped to Seiyo-26 and must be generated independently from this approved neutral.",
+      "references": [
+        {
+          "path": "sprites/vera/spring/vera_spring_neutral.png",
+          "role": "identity-base",
+          "notes": "Approved generated Spring neutral. Preserve its face, violet-purple eyes, costume, tools, gradient, framing, and Seiyo rendering."
+        },
+        {
+          "path": "references/vera/spring/vera_spring_source_sprite.png",
+          "role": "outfit-reference",
+          "notes": "Canonical source for identity, Spring outfit, hairstyle, tools, jewelry, and colors; do not reproduce pixel rendering or pose."
+        }
+      ],
+      "background": {
+        "mode": "character",
+        "top": "#0C0C3C",
+        "bottom": "#B4B4E4"
+      },
+      "expression_overrides": {
+        "neutral": {
+          "instruction": "Show composed neutrality: level brows, relaxed jaw, softly closed mouth, and attentive forward eyes. Keep the character's habitual posture from the source but simplify the pose: both shoulders visible, arms separated, and any visible hands fully inside the canvas with natural anatomy."
+        }
+      }
+    }
+  ]
+}

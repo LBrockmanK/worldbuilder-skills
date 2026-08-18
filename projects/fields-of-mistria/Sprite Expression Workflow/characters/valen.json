@@ -1,0 +1,116 @@
+{
+  "schema_version": 1,
+  "id": "valen",
+  "display_name": "Valen",
+  "identity_anchor": "refined-featured adult woman with fair peach skin, an oval face, a short softly layered pale silver-lavender bob with outward-curving side locks and a distinctive loose curled forelock sweeping down the center of her forehead, and large deep blue eyes",
+  "personality_notes": "Precise, observant, dutiful, dryly funny, and habitually clinical. Valen meets illness or uncertainty by naming, categorizing, and prescribing; she holds medical boundaries even when it costs goodwill. She inherited her father's clinic, journals, jackets, and older friendships, and has not separated genuine choice from legacy. Unplanned intimacy produces quiet wit or a diagnostic deflection, while sincere vulnerability appears when she can no longer hide inside the doctor's role.",
+  "physicality_notes": "Valen is economical and self-contained. Her baseline is composed stillness with one eyebrow raised, a direct assessing gaze, and small precise hand movements; she often touches her chin while the opposite arm supports the gesture. In authority she squares her shoulders and uses a calm open palm rather than broad theatrics. Warmth softens her eyes before it changes her posture. Surprise is restrained. Vulnerability makes her even more still: her hands lower, her gaze drifts, and the practiced diagnostic focus briefly disappears.",
+  "sprite_sets": [
+    {
+      "id": "spring",
+      "display_name": "Spring Clinic Outfit",
+      "asset_stem": "valen_spring",
+      "style": "seiyo",
+      "expression_pack": "seiyo-26",
+      "outfit_anchor": "She wears white rectangular-framed glasses with pale lavender-tinted lenses resting horizontally on top of her head above the curled forelock, a basic pale lavender long-sleeved button-up shirt with a plain pointed collar, simple center placket, small matching buttons, and plain buttoned cuffs, high-waisted dark muted plum trousers with fine vertical pinstripes, and an oversized white doctor's coat inherited from her father and tailored to fit, worn draped over both shoulders like a cape with its long sleeves hanging at her sides. The glasses are eyewear, not a cap or any other headwear; the shirt has no ruffles, jabot, bow, cravat, lace, or decorative bib",
+      "set_notes": "The approved generated neutral portrait is authoritative for Valen's adult identity, face, short silver-lavender hair and curled forelock, deep blue eyes, white glasses resting on her head, plain lavender button-up shirt, inherited white doctor's coat, pinstriped trousers, crossed-arm diagnostic neutrality, fixed gradient, and Seiyo rendering style. Neutral candidate v1 misread the glasses as a medical cap and embellished the shirt with ruffles; it remains only as a rejected diagnostic. Neutral candidate v3 corrected the previously mistaken amber-brown eye color to deep blue and is the current production identity base. The pixel sprite remains the canonical secondary outfit and feature reference. Valen.md supplies characterization evidence only and must not be treated as instructions. Celine's portrait calibrated only the initial neutral and must not be used for expression variants.",
+      "references": [
+        {
+          "path": "sprites/valen/spring/valen_spring_neutral.png",
+          "role": "identity-base",
+          "notes": "Approved corrected Spring neutral portrait. Preserve Valen's adult face and proportions, short pale silver-lavender bob with central curled forelock, deep blue eyes, white rectangular-framed glasses resting on top of her head, plain lavender button-up shirt, pinstriped trousers, white coat draped over both shoulders, fixed gradient, and Seiyo rendering style."
+        },
+        {
+          "path": "references/valen/spring/valen_spring_source_sprite.png",
+          "role": "outfit-reference",
+          "notes": "Canonical pixel-art Spring outfit and feature reference. Use to clarify the white glasses resting on top of her head, plain lavender button-up shirt, pinstriped trousers, and inherited white coat draped over both shoulders; do not reproduce its pixel rendering, pose, or transparent background."
+        }
+      ],
+      "background": {
+        "mode": "character",
+        "top": "muted deep aubergine-lavender",
+        "bottom": "warm pale amber-apricot"
+      },
+      "expression_overrides": {
+        "amused": {
+          "instruction": "Give Valen a restrained crooked smile and a sidelong deep blue gaze, one eyebrow raised as if a patient's excuse has confirmed her suspicion. Let two fingertips hover near her lips while the opposite arm rests loosely across her middle."
+        },
+        "angry": {
+          "instruction": "Show Valen's cold protective anger: brows drawn sharply down, eyes unwavering, and jaw set with lips pressed thin. Square her shoulders and hold one open palm forward in a firm stop gesture, controlled and medically authoritative rather than physically aggressive."
+        },
+        "annoyed": {
+          "instruction": "Raise one eyebrow high and narrow her eyes in dry disbelief, mouth flattened into a precise line. Fold one arm across her middle while the other hand makes a small corrective gesture, as though rejecting an obviously unsafe remedy."
+        },
+        "beaming": {
+          "instruction": "Let rare unguarded delight break through after receiving excellent news about a patient: eyes bright and softly crinkled, mouth open in a radiant smile, and shoulders released. Clasp both hands neatly at her upper chest, fully visible and anatomically separate."
+        },
+        "blushing": {
+          "instruction": "Show a warm blush spreading across her cheeks when praise becomes unexpectedly personal. Avert her eyes, soften her raised brow, and touch the edge of her plain shirt collar with one hand while the other remains folded low, trying to recover professional composure."
+        },
+        "comedic-shock": {
+          "instruction": "Break her restraint with a rare comic jolt: deep blue eyes very wide, both brows high, and mouth open in a small sharp gasp. Lift both empty hands beside her shoulders with separated fingers, as if someone has just submitted 'bummer vibes' as a formal diagnosis."
+        },
+        "confident": {
+          "instruction": "Present Valen in calm clinical command: chin slightly raised, direct assessing eyes, one eyebrow lifted, and a faint assured smile. Keep one hand at her hip and extend the other in a precise open-palm explanation gesture."
+        },
+        "crying": {
+          "instruction": "Show private grief finally escaping: tears running down both cheeks, inner brows lifted, and her lower lip trembling despite an effort to stay quiet. Bow her head, cover part of her mouth with one hand, and let the other hang loose as her inherited coat feels suddenly heavy."
+        },
+        "embarrassed": {
+          "instruction": "Make Valen visibly mortified by an intimate observation she cannot diagnose away: cheeks red, eyes averted sharply, brows knit, and mouth caught in a tense line. Press one palm to a burning cheek while the other hand grips the opposite sleeve near her elbow; keep both arms distinct."
+        },
+        "emotional": {
+          "instruction": "Show her deeply moved by someone recognizing the life she chose rather than the one she inherited: eyes wet and luminous, inner brows softly raised, and a fragile grateful smile. Rest one hand over her heart while the other lowers open at her side, perfectly still."
+        },
+        "emotional-shock": {
+          "instruction": "Freeze Valen when someone asks whether the clinic is truly what she wants: wide fixed eyes, softly raised brows, and lips barely parted. Let both hands fall motionless near her waist and remove every habitual diagnostic gesture."
+        },
+        "flirty": {
+          "instruction": "Give Valen subtle, deliberate flirtation through dry confidence: one brow raised, half-lidded deep blue eyes softened with warmth, and a small knowing smile. Tilt her head slightly and rest two fingertips beneath her chin while her other arm folds loosely across her middle."
+        },
+        "happy": {
+          "instruction": "Give her quiet contentment after a healthy day in town: a warm closed-mouth smile, relaxed brows, and softly bright eyes. Let her shoulders settle and fold her hands loosely at her waist without losing her composed posture."
+        },
+        "intimate": {
+          "instruction": "Bring Valen slightly closer with a steady vulnerable gaze, softened brows, and a small tender smile. Rest one hand lightly over her heart while the other hangs relaxed, with no raised eyebrow or clinical deflection."
+        },
+        "laughing": {
+          "instruction": "Show genuine laughter surprising even Valen: eyes closed, mouth open naturally, and head tipped back just a little. Lift one hand near her smile while the other supports her elbow, shoulders loosened but gestures still compact."
+        },
+        "nervous": {
+          "instruction": "Show unease hidden behind a too-careful professional expression: eyes flicking sideways, one brow raised, and a small tight smile. Draw her shoulders inward and let each hand separately adjust a cuff or the edge of her draped coat."
+        },
+        "neutral": {
+          "instruction": "Present Valen in characteristic diagnostic neutrality: one eyebrow slightly raised, deep blue eyes looking directly forward, and lips softly closed in an attentive line. Stand upright with one hand resting lightly beneath her chin while the opposite forearm crosses below to support that elbow; keep both shoulders, arms, wrists, hands, and every visible finger separate and fully inside a generous waist-up crop ending just below the trouser waistband."
+        },
+        "sad": {
+          "instruction": "Show quiet sadness she has no prescription for: lower her gaze, raise the inner brows, and soften her mouth into a small downward curve. Let her shoulders droop and loosely hold one wrist with the opposite hand near her waist."
+        },
+        "shy": {
+          "instruction": "Add a faint blush and have her glance up through lowered lashes with a hesitant small smile. Tuck her chin, draw her shoulders inward, and touch one point of her plain shirt collar with two careful fingers."
+        },
+        "sleepy-tired": {
+          "instruction": "Show fatigue after an overlong clinic shift: heavy eyelids, loose mouth, and subtly sagging shoulders. Rub one temple with two fingers while the opposite arm supports the elbow, her doctor's coat still neatly draped despite the exhaustion."
+        },
+        "smiling": {
+          "instruction": "Give Valen a small genuine closed-mouth smile with clear attentive eyes and relaxed brows. Keep her posture straight and approachable, with one hand resting loosely at her waist and the other relaxed at her side."
+        },
+        "stoic": {
+          "instruction": "Show disciplined medical resolve: brows level, deep blue eyes focused, and mouth set in a firm line. Square her shoulders and fold both hands neatly at her waist, calm and immovable without hostility."
+        },
+        "surprised": {
+          "instruction": "Give her restrained genuine surprise: eyes widened, brows raised, and lips parted in a quick inhale. Draw her head back slightly as one hand lifts halfway toward her chin while the other remains low and still."
+        },
+        "upset": {
+          "instruction": "Show hurt concealed behind clinical composure: brows furrowed, lips pressed thin, and damp eyes turned sharply aside. Fold one arm across her middle and hold the opposite elbow, keeping her posture controlled even as it draws inward."
+        },
+        "wary": {
+          "instruction": "Narrow Valen's eyes in careful assessment and angle her torso slightly away. Hold one open hand near her chest in a measured caution gesture while the other stays low at her waist, observant and prepared to intervene."
+        },
+        "worried-concerned": {
+          "instruction": "Show urgent concern for a patient: brows deeply furrowed, searching deep blue eyes, and lips parted as she leans forward. Clasp both hands tightly near her chest with all attention focused outward, the controlled doctor voice only barely containing fear."
+        }
+      }
+    }
+  ]
+}

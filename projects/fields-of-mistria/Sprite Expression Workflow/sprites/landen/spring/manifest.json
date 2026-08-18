@@ -1,0 +1,15 @@
+{
+  "schema_version": 1,
+  "character": "landen",
+  "sprite_set": "spring",
+  "asset_stem": "landen_spring",
+  "style": "seiyo",
+  "background": {
+    "top": "#9C6C54",
+    "bottom": "#FCE4CC"
+  },
+  "base_expression": "neutral",
+  "expressions": {
+    "neutral": "landen_spring_neutral.png"
+  }
+}

@@ -1,0 +1,41 @@
+{
+  "schema_version": 1,
+  "id": "luc",
+  "display_name": "Luc",
+  "identity_anchor": "Luc, preserving the exact identity, apparent age, facial structure, body type, skin or surface coloring, hair or species anatomy, eyes, and distinctive features shown in the source reference. Source description: Tan skin. Dark brown wavy hair, cut short. Brown eyes. Small build. He wears a maroon vest over a cream shirt year-round; the only seasonal change is the color of his neckerchief: yellow-gold in spring, green in summer, burgundy in autumn, teal in winter.",
+  "personality_notes": "- When someone mentions insects, he starts talking and does not stop. He uses genus names, cites population counts, and introduces his specimens by name, because if he explains it precisely enough, they will see what he sees. *(core want)*\n- When the Dragonguard plans an adventure without him, he argues his way back in. He offers charts, supply lists, defensive formations. He makes himself useful because being left out means being the one who does not matter. *(core fear)*\n- When he faces something that scares him (frogs, the mines, a decision he must make alone), he freezes. He knows everything about insects and nothing about the feeling in his stomach, because he believes knowing enough about one thing prepares him for everything else. *(false belief)*\n- When the group needs a leader and Dell is not there, he sweats. He can plan, chart, and strategize for hours, but choosing what to do next is different from knowing what to do next. He picks the safe option and second-guesses it after. *(value-conflict stance)*\n- He talks about studying at the Capital and about his terrariums in Mistria in the same breath. When someone asks which he wants more, he says both and goes back to his charts, because choosing one means admitting the other is something he would leave behind. *(unresolved tension)*\n- When his insects need something, he gives it to them before he checks what it costs. He names them, keeps records, says goodnight to them alphabetically by genus. His father's lute has had bugs in it more than once. His bed has had ants. His family adjusts around his collection without complaint, because his passion is real, and the mess it makes is the price no one has asked him to notice. *(values with cost)*\n- When an adult talks about his bugs in a voice that sounds like humoring, he answers with more detail, not less, because being taken seriously is the one thing he will not stop pushing for.",
+  "physicality_notes": "Tan skin. Dark brown wavy hair, cut short. Brown eyes. Small build. He wears a maroon vest over a cream shirt year-round; the only seasonal change is the color of his neckerchief: yellow-gold in spring, green in summer, burgundy in autumn, teal in winter.\n\n- When he finds an insect he has not seen before, he drops to his knees and goes still, and his voice drops to a whisper.\n- He scratches the back of his head when he is thinking.\n- When he is embarrassed, he sweats visibly and his voice speeds up.",
+  "sprite_sets": [
+    {
+      "id": "spring",
+      "display_name": "Spring Outfit",
+      "asset_stem": "luc_spring",
+      "style": "seiyo",
+      "expression_pack": "seiyo-26",
+      "outfit_anchor": "The exact spring outfit clothing, jewelry, accessories, fasteners, layers, color blocking, and silhouette shown in the source reference. Use this source description as supporting evidence: Tan skin. Dark brown wavy hair, cut short. Brown eyes. Small build. He wears a maroon vest over a cream shirt year-round; the only seasonal change is the color of his neckerchief: yellow-gold in spring, green in summer, burgundy in autumn, teal in winter.",
+      "set_notes": "The approved generated neutral is authoritative for Luc's Spring Outfit identity, outfit or form construction, fixed gradient, framing, and Seiyo rendering. Future expressions are mapped to Seiyo-26 and must be generated independently from this approved neutral.",
+      "references": [
+        {
+          "path": "sprites/luc/spring/luc_spring_neutral.png",
+          "role": "identity-base",
+          "notes": "Approved generated neutral. Preserve its identity, outfit or form construction, gradient, framing, and Seiyo rendering."
+        },
+        {
+          "path": "references/luc/spring/luc_spring_source_sprite.png",
+          "role": "outfit-reference",
+          "notes": "Canonical source for outfit or form construction, colors, and distinctive landmarks; do not reproduce pixel rendering or the exact source pose."
+        }
+      ],
+      "background": {
+        "mode": "character",
+        "top": "#FCE49C",
+        "bottom": "#3C0C24"
+      },
+      "expression_overrides": {
+        "neutral": {
+          "instruction": "Show composed neutrality: level brows, relaxed jaw, softly closed mouth, and attentive forward eyes. Keep the character's habitual posture from the source but simplify the pose: both shoulders visible, arms separated, and any visible hands fully inside the canvas with natural anatomy."
+        }
+      }
+    }
+  ]
+}

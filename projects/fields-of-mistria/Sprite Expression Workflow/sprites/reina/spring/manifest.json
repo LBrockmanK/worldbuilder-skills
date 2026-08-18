@@ -1,0 +1,15 @@
+{
+  "schema_version": 1,
+  "character": "reina",
+  "sprite_set": "spring",
+  "asset_stem": "reina_spring",
+  "style": "seiyo",
+  "background": {
+    "top": "#E4B46C",
+    "bottom": "#3C0C24"
+  },
+  "base_expression": "neutral",
+  "expressions": {
+    "neutral": "reina_spring_neutral.png"
+  }
+}

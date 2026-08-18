@@ -1,0 +1,15 @@
+{
+  "schema_version": 1,
+  "character": "seridia",
+  "sprite_set": "priestess",
+  "asset_stem": "seridia_priestess",
+  "style": "seiyo",
+  "background": {
+    "top": "#6C84B4",
+    "bottom": "#0C0C54"
+  },
+  "base_expression": "neutral",
+  "expressions": {
+    "neutral": "seridia_priestess_neutral.png"
+  }
+}

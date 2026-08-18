@@ -1,0 +1,10 @@
+{
+  "schema_version": 1,
+  "character": "seridia",
+  "sprite_set": "spring",
+  "asset_stem": "seridia_spring",
+  "style": "seiyo",
+  "background": { "top": "#CCB49C", "bottom": "#3C0C24" },
+  "base_expression": "neutral",
+  "expressions": { "neutral": "seridia_spring_neutral.png" }
+}

@@ -1,0 +1,92 @@
+Expression Sprite Prompts — Generic (character-agnostic)
+==================================================
+FORMAT: Change the character's facial expression to [face] and their body language to [body].
+        Replace the background with a gradient. Keep the character's appearance,
+        clothing, and distinctive features unchanged.
+
+SETUP: Find-replace the two placeholder colors before use:
+  [TOP COLOR]    — color at the top of the gradient  (e.g. "deep navy blue", "dark charcoal")
+  [BOTTOM COLOR] — color at the bottom               (e.g. "soft lavender", "vivid crimson")
+  Pick colors that complement your character's palette.
+
+NOTE: For characters with distinctive features (unusual skin tone, wings, horns, etc.)
+      add a character-specific anchor at the end, e.g.:
+      "... same [feature] as the original."
+
+--- AMUSED ---
+Change the character's facial expression to quiet amusement — a slight smirk at the corner of the mouth, eyes narrowed with a knowing glint. Their body language is relaxed and unhurried, weight settled back, shoulders easy. Replace the background with a solid two-color gradient, [TOP COLOR] at the top fading to [BOTTOM COLOR] at the bottom. Keep the character's appearance, clothing, and distinctive features unchanged.
+
+--- ANGRY ---
+Change the character's facial expression to restrained anger — brows sharply pulled together, jaw set, eyes cold and hard. Their body language is rigid and confrontational, shoulders squared, posture braced. Replace the background with a solid two-color gradient, [TOP COLOR] at the top fading to [BOTTOM COLOR] at the bottom. Keep the character's appearance, clothing, and distinctive features unchanged.
+
+--- ANNOYED ---
+Change the character's facial expression to plain annoyance — eyes rolled upward, brows raised, lips pressed flat. Their body language shows exasperation, posture stiff with a barely-restrained huff. Replace the background with a solid two-color gradient, [TOP COLOR] at the top fading to [BOTTOM COLOR] at the bottom. Keep the character's appearance, clothing, and distinctive features unchanged.
+
+--- BEAMING ---
+Change the character's facial expression to a genuine wide smile — mouth open with real happiness, teeth slightly showing, eyes crinkled at the corners. Their body language is warm and open, shoulders light, posture relaxed and unguarded. Replace the background with a solid two-color gradient, [TOP COLOR] at the top fading to [BOTTOM COLOR] at the bottom. Keep the character's appearance, clothing, and distinctive features unchanged.
+
+--- BLUSHING ---
+Change the character's facial expression to flustered self-consciousness — eyes averted downward, brows slightly raised, lips pressed softly together. Their body language is stiff and withdrawn, shoulders pulled inward, posture tight with embarrassment. Replace the background with a solid two-color gradient, [TOP COLOR] at the top fading to [BOTTOM COLOR] at the bottom. Keep the character's appearance, clothing, and distinctive features unchanged.
+
+--- COMEDIC SHOCK ---
+Change the character's facial expression to exaggerated shock — eyes wide and round, brows shot up, mouth dropped open. Their body language is frozen mid-motion, body locked in place, a split second of total surprise. Replace the background with a solid two-color gradient, [TOP COLOR] at the top fading to [BOTTOM COLOR] at the bottom. Keep the character's appearance, clothing, and distinctive features unchanged.
+
+--- CONFIDENT ---
+Change the character's facial expression to calm self-assurance — chin slightly raised, lips in a quiet knowing smile, eyes direct and unhurried. Their body language radiates ease and authority, shoulders back, posture grounded and open. Replace the background with a solid two-color gradient, [TOP COLOR] at the top fading to [BOTTOM COLOR] at the bottom. Keep the character's appearance, clothing, and distinctive features unchanged.
+
+--- CRYING ---
+Change the character's facial expression to quiet grief — eyes glassy and red-rimmed, brows drawn together with pain, lower lip trembling. Their body language is collapsed and vulnerable, head lowered, shoulders hunched inward, posture closed off. Replace the background with a solid two-color gradient, [TOP COLOR] at the top fading to [BOTTOM COLOR] at the bottom. Keep the character's appearance, clothing, and distinctive features unchanged.
+
+--- EMBARRASSED ---
+Change the character's facial expression to acute embarrassment — eyes averted hard to one side, brows furrowed, mouth a tight grimace. Their body language is stiff and mortified, shoulders drawn in sharply, posture trying to disappear. Replace the background with a solid two-color gradient, [TOP COLOR] at the top fading to [BOTTOM COLOR] at the bottom. Keep the character's appearance, clothing, and distinctive features unchanged.
+
+--- EMOTIONAL ---
+Change the character's facial expression to open vulnerability — eyes wide and slightly shining, brows softly raised, lips barely parted. Their body language is still and exposed, posture quiet and unguarded, a sense of being genuinely moved. Replace the background with a solid two-color gradient, [TOP COLOR] at the top fading to [BOTTOM COLOR] at the bottom. Keep the character's appearance, clothing, and distinctive features unchanged.
+
+--- EMOTIONAL SHOCK ---
+Change the character's facial expression to stunned disbelief — eyes wide and unblinking, mouth barely parted, expression frozen. Their body language has gone completely still, shoulders locked, body quiet as if the world has stopped. Replace the background with a solid two-color gradient, [TOP COLOR] at the top fading to [BOTTOM COLOR] at the bottom. Keep the character's appearance, clothing, and distinctive features unchanged.
+
+--- FLIRTY ---
+Change the character's facial expression to understated flirtation — lips curved in a slow knowing smile, eyes half-lidded, one brow slightly raised. Their body language is loose and inviting, head tilted slightly, posture easy with quiet confidence. Replace the background with a solid two-color gradient, [TOP COLOR] at the top fading to [BOTTOM COLOR] at the bottom. Keep the character's appearance, clothing, and distinctive features unchanged.
+
+--- HAPPY ---
+Change the character's facial expression to warm contentment — a small genuine smile, eyes soft and crinkled, brows relaxed. Their body language is at ease, shoulders loose, posture open and comfortable. Replace the background with a solid two-color gradient, [TOP COLOR] at the top fading to [BOTTOM COLOR] at the bottom. Keep the character's appearance, clothing, and distinctive features unchanged.
+
+--- INTIMATE ---
+Change the character's facial expression to a smoldering intimate look — eyes half-lidded and steady, lips slightly parted, brows soft. Their body language is close and deliberate, posture leaning slightly inward, a calm focused intensity. Replace the background with a solid two-color gradient, [TOP COLOR] at the top fading to [BOTTOM COLOR] at the bottom. Keep the character's appearance, clothing, and distinctive features unchanged.
+
+--- LAUGHING ---
+Change the character's facial expression to genuine laughter — mouth open in a real laugh, eyes nearly closed with amusement, brows raised. Their body language is loose and animated, head tilted back, shoulders shaking lightly with the laugh. Replace the background with a solid two-color gradient, [TOP COLOR] at the top fading to [BOTTOM COLOR] at the bottom. Keep the character's appearance, clothing, and distinctive features unchanged.
+
+--- NERVOUS ---
+Change the character's facial expression to anxious unease — eyes darting slightly aside, brows raised and worried, mouth closed in a tense line, jaw tight. Their body language is hunched and restless, shoulders up, posture coiled with nervous energy. Replace the background with a solid two-color gradient, [TOP COLOR] at the top fading to [BOTTOM COLOR] at the bottom. Keep the character's appearance, clothing, and distinctive features unchanged.
+
+--- NEUTRAL ---
+Change the character's facial expression to composed neutrality — brows level, mouth closed, eyes forward and unreadable, jaw relaxed. Their body language is still and controlled, posture straight and guarded, a quiet restrained composure. Replace the background with a solid two-color gradient, [TOP COLOR] at the top fading to [BOTTOM COLOR] at the bottom. Keep the character's appearance, clothing, and distinctive features unchanged.
+
+--- SAD ---
+Change the character's facial expression to quiet sadness — eyes downcast, brows drawn with inner corners raised, mouth a thin unhappy line. Their body language is heavy and withdrawn, shoulders slightly slumped, posture turned inward. Replace the background with a solid two-color gradient, [TOP COLOR] at the top fading to [BOTTOM COLOR] at the bottom. Keep the character's appearance, clothing, and distinctive features unchanged.
+
+--- SHY ---
+Change the character's facial expression to self-conscious shyness — eyes lowered and averted, brows gently raised, mouth closed softly. Their body language is small and guarded, shoulders drawn inward, posture tentative, looking up hesitantly from under their brow. Replace the background with a solid two-color gradient, [TOP COLOR] at the top fading to [BOTTOM COLOR] at the bottom. Keep the character's appearance, clothing, and distinctive features unchanged.
+
+--- SLEEPY OR TIRED ---
+Change the character's facial expression to heavy tiredness — eyelids drooping, brows low and relaxed, mouth soft and slightly open. Their body language is loose and heavy, head resting slightly to one side, posture sagging with fatigue. Replace the background with a solid two-color gradient, [TOP COLOR] at the top fading to [BOTTOM COLOR] at the bottom. Keep the character's appearance, clothing, and distinctive features unchanged.
+
+--- SMILING ---
+Change the character's facial expression to a gentle closed-mouth smile — lips curved softly, eyes warm and slightly crinkled, brows relaxed. Their body language is calm and approachable, posture easy and open. Replace the background with a solid two-color gradient, [TOP COLOR] at the top fading to [BOTTOM COLOR] at the bottom. Keep the character's appearance, clothing, and distinctive features unchanged.
+
+--- STOIC ---
+Change the character's facial expression to cold stoicism — expression hardened and unreadable, jaw set, eyes focused and distant, brows level. Their body language is rigid and closed, shoulders squared, arms drawn in, posture like a wall. Replace the background with a solid two-color gradient, [TOP COLOR] at the top fading to [BOTTOM COLOR] at the bottom. Keep the character's appearance, clothing, and distinctive features unchanged.
+
+--- SURPRISED ---
+Change the character's facial expression to genuine surprise — brows raised, eyes widened, mouth slightly open. Their body language shifts back instinctively, a slight lean away, posture caught completely off guard. Replace the background with a solid two-color gradient, [TOP COLOR] at the top fading to [BOTTOM COLOR] at the bottom. Keep the character's appearance, clothing, and distinctive features unchanged.
+
+--- UPSET ---
+Change the character's facial expression to quiet hurt — brows furrowed, lips pressed thin, eyes averted sharply to one side. Their body language is tense and withdrawn, shoulders pulled tight, posture closed off with restrained emotion. Replace the background with a solid two-color gradient, [TOP COLOR] at the top fading to [BOTTOM COLOR] at the bottom. Keep the character's appearance, clothing, and distinctive features unchanged.
+
+--- WARY ---
+Change the character's facial expression to guarded suspicion — eyes narrowed, brows slightly furrowed, mouth tight and closed. Their body language is angled away and watchful, weight shifted back, posture coiled and ready. Replace the background with a solid two-color gradient, [TOP COLOR] at the top fading to [BOTTOM COLOR] at the bottom. Keep the character's appearance, clothing, and distinctive features unchanged.
+
+--- WORRIED OR CONCERNED ---
+Change the character's facial expression to deep concern — brow furrowed, eyes focused with worried intensity, mouth tightened. Their body language leans slightly forward, posture taut with focus, a sense of weight and urgency. Replace the background with a solid two-color gradient, [TOP COLOR] at the top fading to [BOTTOM COLOR] at the bottom. Keep the character's appearance, clothing, and distinctive features unchanged.

@@ -1,0 +1,15 @@
+{
+  "schema_version": 1,
+  "character": "elsie",
+  "sprite_set": "spring",
+  "asset_stem": "elsie_spring",
+  "style": "seiyo",
+  "background": {
+    "top": "#FCB4B4",
+    "bottom": "#542424"
+  },
+  "base_expression": "neutral",
+  "expressions": {
+    "neutral": "elsie_spring_neutral.png"
+  }
+}

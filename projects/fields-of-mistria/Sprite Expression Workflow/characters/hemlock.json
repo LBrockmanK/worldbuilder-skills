@@ -1,0 +1,41 @@
+{
+  "schema_version": 1,
+  "id": "hemlock",
+  "display_name": "Hemlock",
+  "identity_anchor": "Hemlock, preserving the exact identity, apparent age, facial structure, body type, skin or surface coloring, hair or species anatomy, eyes, and distinctive features shown in the source reference. Source description: Dark brown skin. Dark hair swept up in a high quiff. Brown eyes. Lean build. In spring he wears a maroon vest over a white shirt with an orange neckerchief; in summer a tan vest over a white V-neck; in autumn a lavender jacket over a pink shirt; in winter a plum coat with a pink-and-white striped scarf. An apron at the waist year-round.",
+  "personality_notes": "- When someone new walks into the Inn, he treats them like a regular before they have earned it, because he spent years on the road and knows what it costs to be the stranger in the room. *(core want)*\n- When Josephine asks for something, he does it without hesitating, because saying no to her is something he has never practiced and does not want to start. *(unresolved tension)*\n- When his children chase their own interests, he supports them without steering, because he believes parents who push too hard produce people who leave. *(false belief)*\n- When the Inn faces a problem, he fixes what he can with what he has before he sits down to worry, because years of road life taught him that most problems shrink once you start working on them. He tips toward worry only when the problem touches his family directly. *(value-conflict stance)*\n- When someone he cares about faces their own fight, he holds back and lets them handle it even when he could step in, because he believes autonomy matters more than rescue. He pays for this by watching people struggle when a word from him might have helped. *(values with cost)*\n- When he is alone with the lute, he plays longer than he intends. He does not hear the first call. He stops on the second, sets the lute down, and goes, because the version of himself that plays past close is the one he chose not to be, and he is not sure the choice is finished. *(core fear)*\n- When someone asks about his touring years, he talks about the road without bitterness and calls the family life \"fun AND good. Real good.\" He lingers on the last two words, because if he says it firmly enough, the question of whether he misses the road does not need an answer.",
+  "physicality_notes": "Dark brown skin. Dark hair swept up in a high quiff. Brown eyes. Lean build. In spring he wears a maroon vest over a white shirt with an orange neckerchief; in summer a tan vest over a white V-neck; in autumn a lavender jacket over a pink shirt; in winter a plum coat with a pink-and-white striped scarf. An apron at the waist year-round.\n\n- He stands with one hand on his hip, the same posture behind the bar, in the yard, and at festivals.\n- When he hears a tune or catches himself humming, his hands move to where the lute would be, and if it is nearby, he picks it up.\n- He polishes the bar counter the way someone else might drum their fingers: automatic, rhythmic. His eyes stay on whoever he is talking to, not on the glass.",
+  "sprite_sets": [
+    {
+      "id": "spring",
+      "display_name": "Spring Outfit",
+      "asset_stem": "hemlock_spring",
+      "style": "seiyo",
+      "expression_pack": "seiyo-26",
+      "outfit_anchor": "The exact spring outfit clothing, jewelry, accessories, fasteners, layers, color blocking, and silhouette shown in the source reference. Use this source description as supporting evidence: Dark brown skin. Dark hair swept up in a high quiff. Brown eyes. Lean build. In spring he wears a maroon vest over a white shirt with an orange neckerchief; in summer a tan vest over a white V-neck; in autumn a lavender jacket over a pink shirt; in winter a plum coat with a pink-and-white striped scarf. An apron at the waist year-round.",
+      "set_notes": "The approved generated neutral is authoritative for Hemlock's Spring Outfit identity, outfit or form construction, fixed gradient, framing, and Seiyo rendering. Future expressions are mapped to Seiyo-26 and must be generated independently from this approved neutral.",
+      "references": [
+        {
+          "path": "sprites/hemlock/spring/hemlock_spring_neutral.png",
+          "role": "identity-base",
+          "notes": "Approved generated neutral. Preserve its identity, outfit or form construction, gradient, framing, and Seiyo rendering."
+        },
+        {
+          "path": "references/hemlock/spring/hemlock_spring_source_sprite.png",
+          "role": "outfit-reference",
+          "notes": "Canonical source for outfit or form construction, colors, and distinctive landmarks; do not reproduce pixel rendering or the exact source pose."
+        }
+      ],
+      "background": {
+        "mode": "character",
+        "top": "#6C3C3C",
+        "bottom": "#FCE4B4"
+      },
+      "expression_overrides": {
+        "neutral": {
+          "instruction": "Show composed neutrality: level brows, relaxed jaw, softly closed mouth, and attentive forward eyes. Keep the character's habitual posture from the source but simplify the pose: both shoulders visible, arms separated, and any visible hands fully inside the canvas with natural anatomy."
+        }
+      }
+    }
+  ]
+}

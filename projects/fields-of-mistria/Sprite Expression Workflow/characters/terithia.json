@@ -1,0 +1,41 @@
+{
+  "schema_version": 1,
+  "id": "terithia",
+  "display_name": "Terithia",
+  "identity_anchor": "Terithia, preserving the exact identity, apparent age, facial structure, body type, skin or surface coloring, hair or species anatomy, eyes, and distinctive features shown in the source reference. Source description: Short white hair, brown skin, stocky build that shows years of physical work on boats and battlefields. Her clothing is practical and functional.",
+  "personality_notes": "Former soldier turned fisherwoman who holds the town together through tall tales, shared meals, and a laugh that carries across the beach, but steers every conversation away from herself. - When someone shows up at the beach or the inn, she pulls up a chair, pours a drink, and starts a story, because being the person who brings people together is the only role she has built for herself since she stopped being a soldier *(core want)*\n- When a conversation turns to her own feelings or her past, she steers it back to fish, the weather, or a tall tale, because sitting with her own life without an audience to perform for leaves her with nothing to say *(core fear)*\n- When she tells the children about a leviathan that was \"half shark, half kraken, half stingray,\" she lets the math stand, because she believes the story is what keeps people coming back, and if she told them the plain version, they might not *(false belief)*\n- She tells Elsie \"I'm not much of a romantic... I don't have a way with words\" and then spends the evening sharing wine she pulled from the ocean floor. She gives with flair but calls it nothing, because admitting she puts thought into how she shows up for people would break the easy, no-fuss version of herself she has built *(value-conflict stance)*\n- She tells Seridia \"you and I spent our youth on fighting... it's nice, retiring.\" She says she is happy to trade sailing for Mistria's coastline. She also hunts the Big One, tells war stories every week, and lights up when someone mentions a giant crab or a shadow in the water. She chose peace and keeps rehearsing for the thing she left *(unresolved tension)*\n- When someone praises her, she deflects with a joke. Valen calls her the picture of health and she says \"we've got a flatterer here!\" and laughs before the compliment can land. She treats every compliment as a setup for a punchline, because accepting it straight would mean the thing she does matters, and she has arranged her life so nothing she does has to matter too much.",
+  "physicality_notes": "Short white hair, brown skin, stocky build that shows years of physical work on boats and battlefields. Her clothing is practical and functional.\n\n- Her laugh fills a room: a sharp \"KYA HA HA!\" that starts at full volume and stays there.\n- When she tells a story, her voice drops low for the setup and her hands widen for the payoff.\n- She casts a line with no wasted motion, reads the water, and waits without fidgeting.",
+  "sprite_sets": [
+    {
+      "id": "spring",
+      "display_name": "Spring Outfit",
+      "asset_stem": "terithia_spring",
+      "style": "seiyo",
+      "expression_pack": "seiyo-26",
+      "outfit_anchor": "The exact spring outfit clothing, jewelry, accessories, fasteners, layers, color blocking, and silhouette shown in the source reference. Use this source description as supporting evidence: Short white hair, brown skin, stocky build that shows years of physical work on boats and battlefields. Her clothing is practical and functional.",
+      "set_notes": "The approved generated neutral is authoritative for Terithia's Spring Outfit identity, outfit or form construction, fixed gradient, framing, and Seiyo rendering. Future expressions are mapped to Seiyo-26 and must be generated independently from this approved neutral.",
+      "references": [
+        {
+          "path": "sprites/terithia/spring/terithia_spring_neutral.png",
+          "role": "identity-base",
+          "notes": "Approved generated neutral. Preserve its identity, outfit or form construction, gradient, framing, and Seiyo rendering."
+        },
+        {
+          "path": "references/terithia/spring/terithia_spring_source_sprite.png",
+          "role": "outfit-reference",
+          "notes": "Canonical source for outfit or form construction, colors, and distinctive landmarks; do not reproduce pixel rendering or the exact source pose."
+        }
+      ],
+      "background": {
+        "mode": "character",
+        "top": "#CC9C84",
+        "bottom": "#0C243C"
+      },
+      "expression_overrides": {
+        "neutral": {
+          "instruction": "Show composed neutrality: level brows, relaxed jaw, softly closed mouth, and attentive forward eyes. Keep the character's habitual posture from the source but simplify the pose: both shoulders visible, arms separated, and any visible hands fully inside the canvas with natural anatomy."
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,41 @@
+{
+  "schema_version": 1,
+  "id": "josephine",
+  "display_name": "Josephine",
+  "identity_anchor": "Josephine, preserving the exact identity, apparent age, facial structure, body type, skin or surface coloring, hair or species anatomy, eyes, and distinctive features shown in the source reference. Source description: Dark brown skin. Dark reddish-brown hair in an updo, with a long section that falls past one shoulder. Brown eyes. Drop earrings. Curvy build. In spring she wears an off-shoulder peach blouse with a pink apron tied at the front with a bow; in summer a peach-striped dress with short puffed sleeves; in autumn a golden dress with fuller sleeves and burgundy trim at the waist; in winter a pink dress with a burgundy waistband and a pink headwrap woven into her updo. The earrings stay year-round.",
+  "personality_notes": "- When someone walks into the Inn, she asks if they have eaten before she asks their name, because feeding people is how she opens the door. *(core want)*\n- When she notices someone struggling, she does not wait for them to ask. She brings soup, sends a note, sits closer. She acts before the person has decided whether to reach out, because the possibility of missing the moment someone needed help is the one thing she cannot set aside. *(core fear)*\n- When her children take over things she used to do, she celebrates their progress and fills the freed-up time with more work, because she believes being needed is the proof that she matters. *(false belief)*\n- When her protective instincts collide with someone's independence, she keeps her hands busy, sweeps a clean floor, and does not step in, because she trusts that people need space more than they need her intervention. The lever is direct threat: if a child is in danger, she moves. *(value-conflict stance)*\n- When someone in town is struggling, she tracks the details: Adeline's sleep schedule, March's moods, the children's routes, Hemlock's late nights. She adjusts her routine around theirs, sends food, checks in, because she would rather lose sleep than miss the moment someone needed help. Her own rest comes last and she treats that as the natural order. *(values with cost)*\n- When someone asks whether she will miss running the Harvest Festival kitchen, she says Reina will do it better and changes the subject, because the pride in Reina's growth and the loss of her own role are tangled together and she does not know how to talk about one without the other. *(unresolved tension)*\n- When she does not trust someone, she says so in a level voice without raising it. She called Wheedle's methods dishonest while Hemlock stayed quiet. She gives one warning, clearly, and does not revisit it, because she believes a person who shows you who they are the first time does not earn a second look.",
+  "physicality_notes": "Dark brown skin. Dark reddish-brown hair in an updo, with a long section that falls past one shoulder. Brown eyes. Drop earrings. Curvy build. In spring she wears an off-shoulder peach blouse with a pink apron tied at the front with a bow; in summer a peach-striped dress with short puffed sleeves; in autumn a golden dress with fuller sleeves and burgundy trim at the waist; in winter a pink dress with a burgundy waistband and a pink headwrap woven into her updo. The earrings stay year-round.\n\n- She sings under her breath while working. Scales, lullabies, fragments of whatever Hemlock was playing the night before.\n- She touches her hair when she is thinking, one hand reaching up to the loose section that falls past her shoulder.\n- When she is worried, she sweeps. The floor may already be clean.",
+  "sprite_sets": [
+    {
+      "id": "spring",
+      "display_name": "Spring Outfit",
+      "asset_stem": "josephine_spring",
+      "style": "seiyo",
+      "expression_pack": "seiyo-26",
+      "outfit_anchor": "The exact spring outfit clothing, jewelry, accessories, fasteners, layers, color blocking, and silhouette shown in the source reference. Use this source description as supporting evidence: Dark brown skin. Dark reddish-brown hair in an updo, with a long section that falls past one shoulder. Brown eyes. Drop earrings. Curvy build. In spring she wears an off-shoulder peach blouse with a pink apron tied at the front with a bow; in summer a peach-striped dress with short puffed sleeves; in autumn a golden dress with fuller sleeves and burgundy trim at the waist; in winter a pink dress with a burgundy waistband and a pink headwrap woven into her updo. The earrings stay year-round.",
+      "set_notes": "The approved generated neutral is authoritative for Josephine's Spring Outfit identity, outfit or form construction, fixed gradient, framing, and Seiyo rendering. Future expressions are mapped to Seiyo-26 and must be generated independently from this approved neutral.",
+      "references": [
+        {
+          "path": "sprites/josephine/spring/josephine_spring_neutral.png",
+          "role": "identity-base",
+          "notes": "Approved generated neutral. Preserve its identity, outfit or form construction, gradient, framing, and Seiyo rendering."
+        },
+        {
+          "path": "references/josephine/spring/josephine_spring_source_sprite.png",
+          "role": "outfit-reference",
+          "notes": "Canonical source for outfit or form construction, colors, and distinctive landmarks; do not reproduce pixel rendering or the exact source pose."
+        }
+      ],
+      "background": {
+        "mode": "character",
+        "top": "#FCCCB4",
+        "bottom": "#3C0C24"
+      },
+      "expression_overrides": {
+        "neutral": {
+          "instruction": "Show composed neutrality: level brows, relaxed jaw, softly closed mouth, and attentive forward eyes. Keep the character's habitual posture from the source but simplify the pose: both shoulders visible, arms separated, and any visible hands fully inside the canvas with natural anatomy."
+        }
+      }
+    }
+  ]
+}

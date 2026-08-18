@@ -1,0 +1,103 @@
+{
+  "schema_version": 1,
+  "id": "caldarus",
+  "display_name": "Caldarus",
+  "identity_anchor": "Caldarus, preserving the exact form-specific identity shown in the current sprite-set source reference, including apparent age, facial or draconic structure, body plan, skin or scale coloring, hair, horns, eyes, wings, and every distinctive feature; the humanoid, dragon, statue, and guise designs are alternate forms of one character and must not be blended together",
+  "personality_notes": "Dragon guardian of Mistria, sealed in statue form for centuries. A scholar - When someone visits his home, he prepares food, clears a seat, and asks them to stay. He wants to stand in the world alongside others, not apart from it as a guardian watching over them. *(core want)*\n- When he senses distance from someone he cares about, he grows formal and retreats to his role as protector. He is afraid that without his purpose as guardian, he has no reason to be near anyone. *(core fear)*\n- He acts as though understanding an emotion requires naming it first. He asks for help articulating what he feels, treating the word as the missing piece, when what he wants is permission to feel it without explanation. *(false belief)*\n- He sealed Seridia to protect the world and would do it again. The cost was centuries of his own power and memory. He does not regret the choice, but he stopped sleeping near the statue afterward. *(value-conflict stance / values with costs)*\n- He has guarded Mistria for so long that the role and the self are the same thing. He wants to be more than a caretaker, but every gesture of closeness defaults to service: cooking for visitors, granting spells, offering protection. He gives because he does not yet believe he can simply be present. *(unresolved tension)*",
+  "physicality_notes": "**In statue form:** A carved stone dragon in a clearing deep in the woods. The statue is tended and the surrounding area is maintained. A disembodied voice, formal and measured, speaks from the statue or through dreams.\n\n**In human form:** Long teal hair that falls past his shoulders, with small pale horns curving upward from above his ears. Pale skin, light-colored eyes. Tall and slender. He wears a loose turquoise robe over a dark blue garment, with a red scarf draped around his neck. Red ornamental drops hang from his hair. The horns are the only visible sign of what he is.\n\n- He speaks with formal precision, choosing each word as if translating from a language with no equivalent for casual speech.\n- He once used 3 full bottles of soy sauce for a single dish because the recipe said \"a generous amount.\" He left the onions in the soup whole and unpeeled because the recipe did not say to cut them.\n- He picks up the lute after good conversations or meals and puts it down before he finishes a song.",
+  "sprite_sets": [
+    {
+      "id": "spring",
+      "display_name": "Spring Humanoid",
+      "asset_stem": "caldarus_spring",
+      "style": "seiyo",
+      "expression_pack": "seiyo-26",
+      "outfit_anchor": "The exact spring humanoid clothing, jewelry, accessories, fasteners, layers, color blocking, and silhouette shown in the source reference. Use this source description as supporting evidence: **In statue form:** A carved stone dragon in a clearing deep in the woods. The statue is tended and the surrounding area is maintained. A disembodied voice, formal and measured, speaks from the statue or through dreams.  **In human form:** Long teal hair that falls past his shoulders, with small pale horns curving upward from above his ears. Pale skin, light-colored eyes. Tall and slender. He wears a loose turquoise robe over a dark blue garment, with a red scarf draped around his neck. Red ornamental drops hang from his hair. The horns are the only visible sign of what he is.",
+      "set_notes": "The approved generated neutral is authoritative for Caldarus's Spring Humanoid identity, outfit or form construction, fixed gradient, framing, and Seiyo rendering. Future expressions are mapped to Seiyo-26 and must be generated independently from this approved neutral.",
+      "references": [
+        {
+          "path": "sprites/caldarus/spring/caldarus_spring_neutral.png",
+          "role": "identity-base",
+          "notes": "Approved generated neutral. Preserve its identity, outfit or form construction, gradient, framing, and Seiyo rendering."
+        },
+        {
+          "path": "references/caldarus/spring/caldarus_spring_source_sprite.png",
+          "role": "outfit-reference",
+          "notes": "Canonical source for outfit or form construction, colors, and distinctive landmarks; do not reproduce pixel rendering or the exact source pose."
+        }
+      ],
+      "background": {
+        "mode": "character",
+        "top": "#9CE4CC",
+        "bottom": "#3C0C24"
+      },
+      "expression_overrides": {
+        "neutral": {
+          "instruction": "Show composed neutrality: level brows, relaxed jaw, softly closed mouth, and attentive forward eyes. Keep the character's habitual posture from the source but simplify the pose: both shoulders visible, arms separated, and any visible hands fully inside the canvas with natural anatomy."
+        }
+      }
+    },
+    {
+      "id": "dragon",
+      "display_name": "Dragon Form",
+      "asset_stem": "caldarus_dragon",
+      "style": "seiyo",
+      "expression_pack": "seiyo-26",
+      "outfit_anchor": "No clothing except the exact ornaments visibly belonging to Caldarus's dragon design in the source; preserve every horn, crest, wing, scale, spine, tail, jewelry, and colored accent",
+      "set_notes": "The approved generated neutral is authoritative for Caldarus's male dragon-form identity, mature masculine facial and body read, canonical anatomy, ornaments, fixed gradient, and Seiyo rendering. Future expressions are mapped to Seiyo-26 and must be generated independently from this approved neutral. Caldarus is male; his dragon form should retain a mature masculine facial and body read without changing canonical anatomy or ornaments.",
+      "references": [
+        {
+          "path": "sprites/caldarus/dragon/caldarus_dragon_neutral.png",
+          "role": "identity-base",
+          "notes": "Approved generated dragon neutral. Preserve its masculine facial and body read, anatomy, ornaments, gradient, framing, and Seiyo rendering."
+        },
+        {
+          "path": "references/caldarus/dragon/caldarus_dragon_source_sprite.png",
+          "role": "outfit-reference",
+          "notes": "Canonical source for dragon anatomy, horns, wings, scales, mane, ornaments, and colors; do not reproduce pixel rendering or pose."
+        }
+      ],
+      "background": {
+        "mode": "character",
+        "top": "#CCB49C",
+        "bottom": "#243C54"
+      },
+      "expression_overrides": {
+        "neutral": {
+          "instruction": "Show calm, alert neutrality in the dragon's eyes and resting mouth. Use a readable three-quarter view with the head, neck, near shoulder, wing roots, and enough torso to establish true quadrupedal dragon anatomy; no humanoid pose or hands."
+        }
+      }
+    },
+    {
+      "id": "statue",
+      "display_name": "Statue Form",
+      "asset_stem": "caldarus_statue",
+      "style": "seiyo",
+      "expression_pack": "seiyo-26",
+      "outfit_anchor": "Exact carved stone dragon statue design from the source, including horns, antlers, hanging ornaments, cracks, facets, and monochrome stone material; no clothing",
+      "set_notes": "The approved generated neutral is authoritative for Caldarus's Statue Form identity, outfit or form construction, fixed gradient, framing, and Seiyo rendering. This sprite set intentionally supports neutral only.",
+      "references": [
+        {
+          "path": "sprites/caldarus/statue/caldarus_statue_neutral.png",
+          "role": "identity-base",
+          "notes": "Approved generated neutral. Preserve its identity, outfit or form construction, gradient, framing, and Seiyo rendering."
+        },
+        {
+          "path": "references/caldarus/statue/caldarus_statue_source_sprite.png",
+          "role": "outfit-reference",
+          "notes": "Canonical source for outfit or form construction, colors, and distinctive landmarks; do not reproduce pixel rendering or the exact source pose."
+        }
+      ],
+      "background": {
+        "mode": "character",
+        "top": "#E4CCB4",
+        "bottom": "#846C54"
+      },
+      "expression_overrides": {
+        "neutral": {
+          "instruction": "Show the inert stone statue exactly as carved, with no facial acting, movement, glow, breath, or living pose. Use a centered three-quarter portrait crop that clearly contains the head, neck, shoulders, and ornamental silhouette."
+        }
+      }
+    }
+  ]
+}

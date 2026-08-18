@@ -1,0 +1,15 @@
+{
+  "schema_version": 1,
+  "character": "maple",
+  "sprite_set": "spring",
+  "asset_stem": "maple_spring",
+  "style": "seiyo",
+  "background": {
+    "top": "#9C6C3C",
+    "bottom": "#E4B4B4"
+  },
+  "base_expression": "neutral",
+  "expressions": {
+    "neutral": "maple_spring_neutral.png"
+  }
+}

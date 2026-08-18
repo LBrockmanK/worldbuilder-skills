@@ -1,0 +1,41 @@
+{
+  "schema_version": 1,
+  "id": "wheedle",
+  "display_name": "Wheedle",
+  "identity_anchor": "Wheedle, preserving the exact identity, apparent age, facial structure, body type, skin or surface coloring, hair or species anatomy, eyes, and distinctive features shown in the source reference. Source description: Peach and salmon tones in his journal color palette. He has 8 portrait expressions with seasonal outfit variants for all 4 seasons. His summer outfit is more casual and unbuttoned. He commissions clothing from Louis and comments on the style.",
+  "personality_notes": "Traveling salesman who runs a booth at the Saturday Market, sells snake oil and costumes with carnival-barker showmanship, and represents a merchant consortium whose interests do not always align with the town's. - When a customer approaches, he opens with flattery and false scarcity: \"my favorite customer,\" \"VIP list,\" \"Saturday won't last forever.\" He addresses people by name, claims he was thinking of them when he set his prices, and pitches every exchange as a once-in-a-lifetime deal, because a sale that feels personal closes faster than one that feels honest. *(core want)*\n- When someone brings him a criminal confession as a gift, he goes defensive, denies ownership, takes it \"for safekeeping,\" and talks about using it as kindling. He hoards damaging information rather than destroying it, because having leverage matters more to him than having nothing to hide. *(core fear)*\n- When the town tolerates his booth but distrusts him personally, he calls himself \"unfairly maligned,\" promises he is an honest businessman, and leans into the snake oil label as a joke. He believes that charm and showmanship can substitute for trust, and that the difference between a con and a sale is presentation. *(false belief)*\n- When his commercial interests and personal conduct collide, commerce wins. He has unpaid tabs at the Inn and avoids the place socially rather than settling up. He pitches Nora the same rejected proposals on repeat. He walks away from personal friction as long as the booth stays open, because the transaction is the only relationship he protects. *(value-conflict stance)*\n- He calls Mistria a \"backwater\" when he is angry and praises its economy when he is selling. He works the market every Saturday and commissions gloves from Louis for winter packing. He is invested enough in the town to dress for it and show up every week, but he tells himself it is business and calls the people here marks. *(unresolved tension)*\n- He values profit and the self-image that comes with closing deals. The cost: the town sees through him. Josephine is outraged by his methods. Hemlock would rather absorb an unpaid tab than have him return socially. Adeline watches him for schemes. He keeps his booth and loses every relationship outside it. *(values with costs)*",
+  "physicality_notes": "Peach and salmon tones in his journal color palette. He has 8 portrait expressions with seasonal outfit variants for all 4 seasons. His summer outfit is more casual and unbuttoned. He commissions clothing from Louis and comments on the style.\n\n- He cycles through expressions fast during sales pitches: neutral to happy to wink to mock sadness and back, matching each line to a face.\n- He gestures at his inventory and sweeps his arm toward his booth when a potential customer approaches.\n- When a deal falls through or he is rejected, his face shifts to anger before he controls it, and his voice drops out of the patter.",
+  "sprite_sets": [
+    {
+      "id": "spring",
+      "display_name": "Spring Outfit",
+      "asset_stem": "wheedle_spring",
+      "style": "seiyo",
+      "expression_pack": "seiyo-26",
+      "outfit_anchor": "The exact spring outfit clothing, jewelry, accessories, fasteners, layers, color blocking, and silhouette shown in the source reference. Use this source description as supporting evidence: Peach and salmon tones in his journal color palette. He has 8 portrait expressions with seasonal outfit variants for all 4 seasons. His summer outfit is more casual and unbuttoned. He commissions clothing from Louis and comments on the style.",
+      "set_notes": "The approved generated neutral is authoritative for Wheedle's Spring Outfit identity, outfit or form construction, fixed gradient, framing, and Seiyo rendering. Future expressions are mapped to Seiyo-26 and must be generated independently from this approved neutral.",
+      "references": [
+        {
+          "path": "sprites/wheedle/spring/wheedle_spring_neutral.png",
+          "role": "identity-base",
+          "notes": "Approved generated neutral. Preserve its identity, outfit or form construction, gradient, framing, and Seiyo rendering."
+        },
+        {
+          "path": "references/wheedle/spring/wheedle_spring_source_sprite.png",
+          "role": "outfit-reference",
+          "notes": "Canonical source for outfit or form construction, colors, and distinctive landmarks; do not reproduce pixel rendering or the exact source pose."
+        }
+      ],
+      "background": {
+        "mode": "character",
+        "top": "#6C543C",
+        "bottom": "#FCCC9C"
+      },
+      "expression_overrides": {
+        "neutral": {
+          "instruction": "Show composed neutrality: level brows, relaxed jaw, softly closed mouth, and attentive forward eyes. Keep the character's habitual posture from the source but simplify the pose: both shoulders visible, arms separated, and any visible hands fully inside the canvas with natural anatomy."
+        }
+      }
+    }
+  ]
+}

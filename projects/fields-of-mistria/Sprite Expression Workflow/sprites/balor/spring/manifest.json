@@ -1,0 +1,15 @@
+{
+  "schema_version": 1,
+  "character": "balor",
+  "sprite_set": "spring",
+  "asset_stem": "balor_spring",
+  "style": "seiyo",
+  "background": {
+    "top": "#3C5484",
+    "bottom": "#FCE4CC"
+  },
+  "base_expression": "neutral",
+  "expressions": {
+    "neutral": "balor_spring_neutral.png"
+  }
+}

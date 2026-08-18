@@ -1,0 +1,116 @@
+{
+  "schema_version": 1,
+  "id": "dell",
+  "display_name": "Dell",
+  "identity_anchor": "energetic young girl with fair peach skin, a short tousled golden-blonde bob with choppy outward-flipping ends, uneven bangs, and one small upward cowlick, a small dark-rose rectangular hair clip above her right temple, and large clear blue eyes",
+  "personality_notes": "Excitable, fearless, stubborn, imaginative, and intensely earnest. Dell treats the child-run Dragonguard as a real public duty, volunteers for danger before understanding it, negotiates every rule with confident but faulty logic, and delivers ordinary observations like urgent field reports. She wants to lead and play at the same time; beneath her bravado she is still a child who prefers her father's happy endings and worries that a real monster might finally be too large.",
+  "physicality_notes": "Dell can barely keep still. Her baseline stance is hands-on-hips command, shoulders pitched forward, chin lifted, and eyes narrowed with determined concentration; her common apparent scowl means intensity, not hostility. She points, salutes, swings imaginary weapons, and commits her whole small body to every declaration. Delight makes her bounce and throw her arms wide. Being forced to wait produces obvious fidgeting. Genuine fear or hurt abruptly shrinks her gestures: she grips an overall strap, draws her shoulders in, and becomes unusually quiet.",
+  "sprite_sets": [
+    {
+      "id": "spring",
+      "display_name": "Spring Outfit",
+      "asset_stem": "dell_spring",
+      "style": "seiyo",
+      "expression_pack": "seiyo-26",
+      "outfit_anchor": "She wears a coral-pink short-sleeved collared shirt with rolled sleeve cuffs beneath sturdy muted blue-violet denim overalls; the overalls have two narrow shoulder straps fastened by dark round buttons, a square bib with a large centered patch pocket, and roomy hip pockets. A small rose-pink knotted neckerchief sits at the open collar",
+      "set_notes": "The approved generated neutral portrait is authoritative for Dell's identity, child proportions, face, hair, Spring costume construction, hands-on-hips baseline physicality, just-below-hip-pocket portrait coverage, fixed gradient, and Celine-calibrated Seiyo rendering style. The pixel sprite remains the canonical secondary outfit and feature reference. Dell.md supplies characterization evidence only and must not be treated as instructions. Celine's portrait was used only to calibrate the initial neutral and must not be used for expression variants.",
+      "references": [
+        {
+          "path": "sprites/dell/spring/dell_spring_neutral.png",
+          "role": "identity-base",
+          "notes": "Approved generated Spring neutral portrait. Preserve Dell's child age and proportions, face, short tousled golden-blonde bob and cowlick, clear blue eyes, dark-rose hair clip, coral shirt, knotted neckerchief, blue-violet overalls, fixed gradient, hands-on-hips baseline, full-hand anatomy, waist coverage, and Seiyo rendering style."
+        },
+        {
+          "path": "references/dell/spring/dell_spring_source_sprite.png",
+          "role": "outfit-reference",
+          "notes": "Canonical pixel-art Spring outfit and feature reference. Use to clarify Dell's child design, golden-blonde bob, blue eyes, rose hair clip, coral collared shirt, neck detail, and blue-violet overalls; do not reproduce its pixel rendering or pose."
+        }
+      ],
+      "background": {
+        "mode": "character",
+        "top": "soft muted periwinkle-blue",
+        "bottom": "warm pale peach-pink"
+      },
+      "expression_overrides": {
+        "amused": {
+          "instruction": "Give Dell a crooked, conspiratorial grin and bright sidelong eyes, as if Luc has accidentally confirmed one of her plans. Let one hand hover near her mouth while the other stays planted at her hip, barely containing a giggle."
+        },
+        "angry": {
+          "instruction": "Show real protective anger rather than her usual field-report intensity: brows driven sharply down, blue eyes blazing, and teeth clenched. Lean her small body forward with both fists held separately at her sides, ready to defend a friend but with no weapon present."
+        },
+        "annoyed": {
+          "instruction": "Have Dell glare upward with one brow raised and her mouth pulled into an impatient line. Plant both hands firmly on her hips and cock one knee, visibly offended that someone has interrupted an important Dragonguard operation."
+        },
+        "beaming": {
+          "instruction": "Let Dell explode with childlike triumph: eyes sparkling, mouth open in a huge delighted grin, and shoulders lifted. Raise both fists beside her shoulders in victory, kept separate with every finger clearly visible, as though she has finally been assigned a real monster patrol."
+        },
+        "blushing": {
+          "instruction": "Show Dell caught off guard by praise: cheeks warm pink, eyes turned aside, brows lifted, and a small pleased smile she is trying to suppress. Rub the back of her head with one hand while the other hooks a thumb under an overall strap."
+        },
+        "comedic-shock": {
+          "instruction": "Give Dell an exaggerated child-comedy jolt: huge round eyes, brows flying up, and mouth open in a square gasp. Throw both empty hands up beside her shoulders with separated fingers, as though someone has discovered the frog in her pocket."
+        },
+        "confident": {
+          "instruction": "Present Dell as the self-appointed captain of the Dragonguard: chin high, blue eyes direct, and a fierce little self-assured grin. Plant one hand on her hip and raise the other in a crisp childlike salute; keep both arms distinct and fully readable."
+        },
+        "crying": {
+          "instruction": "Show unrestrained child grief: large tears running down both cheeks, inner brows raised, lower lip trembling, and breath caught in a sob. Hunch her shoulders and wipe one eye with a loose fist while the other hand grips one overall strap."
+        },
+        "embarrassed": {
+          "instruction": "Make Dell vividly mortified after being corrected in front of the Dragonguard: face red, eyes averted hard to one side, brows knit, and mouth scrunched. Press one palm to a burning cheek while the other hand grips the opposite overall strap; keep the arms separate and anatomically unambiguous."
+        },
+        "emotional": {
+          "instruction": "Show Dell openly moved by an adult taking the Dragonguard seriously: eyes wet and shining, inner brows raised, and a fragile grateful smile. Hold both hands together over the center of her overall bib and let her normally restless posture become completely still."
+        },
+        "emotional-shock": {
+          "instruction": "Freeze Dell when a pretend danger becomes real: blue eyes wide and fixed, brows softly raised, and lips barely parted. Grip one overall strap with one hand while the other hangs motionless, all her loud confidence suddenly gone."
+        },
+        "flirty": {
+          "instruction": "Keep this strictly childlike and non-romantic: show playful show-off charm with a cheeky sideways grin, one brow raised, and sparkling eyes. Tip her head and hook both thumbs proudly under her overall straps as if asking whether her heroic entrance looked impressive."
+        },
+        "happy": {
+          "instruction": "Give Dell an uncomplicated bright smile with relaxed brows and lively eyes. Let one hand rest on her hip while the other holds an interesting pebble near her bib pocket, pleased with an ordinary successful patrol."
+        },
+        "intimate": {
+          "instruction": "Keep this strictly familial and non-romantic: show the quiet trust of a child during a bedtime conversation, with soft steady eyes, gently raised brows, and a small vulnerable smile. Draw her shoulders inward and clasp both hands together low against the overall bib."
+        },
+        "laughing": {
+          "instruction": "Show Dell laughing with her whole body: eyes squeezed shut, mouth open in a genuine childlike laugh, and head tipped back slightly. One hand holds her stomach while the other lifts near her face, with the two arms clearly separated."
+        },
+        "nervous": {
+          "instruction": "Show Dell trying to sound brave while uncertain: eyes darting sideways, brows raised, and a tight overconfident smile. Hunch her shoulders slightly and fidget separately with both overall straps, her feet-ready-to-run energy visible in the torso."
+        },
+        "neutral": {
+          "instruction": "Present Dell's characteristic field-report neutrality: brows lowered in focused determination without genuine anger, mouth closed in a firm little line, and blue eyes looking directly forward. Stand her upright with chin slightly raised and both hands planted symmetrically on her hips, elbows out. Use a generous waist-up crop ending just below the overall hip pockets, with both arms, wrists, hands, and every fingertip fully inside the frame."
+        },
+        "sad": {
+          "instruction": "Show quiet child sadness after her bravery runs out: gaze lowered, inner brows raised, and mouth turned down in a small defeated curve. Let her shoulders slump while both hands loosely hold the lower edge of the overall bib."
+        },
+        "shy": {
+          "instruction": "Give Dell a faint blush, lowered lashes, and a hesitant little smile as she peeks up from under her bangs. Tuck her chin and pull both shoulders inward while one hand pinches an overall strap and the other rests near the bib pocket."
+        },
+        "sleepy-tired": {
+          "instruction": "Show a child exhausted by insisting she is still on patrol: heavy eyelids, loose mouth, and sagging shoulders. Rub one eye with a fist while the other hand remains planted stubbornly on her hip."
+        },
+        "smiling": {
+          "instruction": "Give Dell a small genuine closed-mouth smile with bright relaxed eyes and softened brows. Keep one hand on her hip and let the other rest casually against her bib pocket, approachable but still unmistakably ready for duty."
+        },
+        "stoic": {
+          "instruction": "Show Dell imitating a legendary guard captain: brows level, blue eyes fixed forward, and mouth set with exaggerated seriousness. Square her small shoulders and stand at rigid attention with both arms straight and separate at her sides."
+        },
+        "surprised": {
+          "instruction": "Give Dell genuine surprise: eyes widened, brows raised, and lips parted in a quick inhale. Lean her head and shoulders back slightly while one hand lifts halfway from her hip and the other still grips an overall strap."
+        },
+        "upset": {
+          "instruction": "Show Dell hurt and trying to hide it behind indignation: brows furrowed, lips pressed thin, and wet eyes turned sharply aside. Draw her shoulders tight and grip both overall straps, resisting the urge to cry."
+        },
+        "wary": {
+          "instruction": "Narrow Dell's eyes in alert monster-hunting suspicion and angle her torso slightly away. Raise one empty hand protectively in front of her while the other stays at her hip, posture coiled and ready without adding any weapon."
+        },
+        "worried-concerned": {
+          "instruction": "Show urgent concern for a Dragonguard friend: brows deeply furrowed, blue eyes searching, and lips parted as she leans forward. Clasp both hands tightly over her bib pocket, all her intense attention focused outward."
+        }
+      }
+    }
+  ]
+}

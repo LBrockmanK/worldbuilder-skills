@@ -1,0 +1,41 @@
+{
+  "schema_version": 1,
+  "id": "ryis",
+  "display_name": "Ryis",
+  "identity_anchor": "Ryis, preserving the exact identity, apparent age, facial structure, body type, skin or surface coloring, hair or species anatomy, eyes, and distinctive features shown in the source reference. Source description: [perceptual] Dark brown curly hair, cut short and natural. Brown eyes, dark brown skin. Young adult, lean build. He wears a red bandana at his neck, a peach long-sleeve top over a dark undershirt, and a leather work belt. A yellow work glove covers one hand.",
+  "personality_notes": "'Carpenter who runs the woodshop in Mistria. Moved from the Capital to help - When someone has a problem, he drops what he is doing and starts working on it. He reroutes his schedule for nail shortages, inspection requests, and broken barstools, because being useful is the only way he knows how to belong somewhere new. *(core want)*\n- When Landen takes over a project or corrects his work in front of others, Ryis goes quiet and does not argue. He tells March later that he wishes Landen would give him a chance. He does not say it to Landen, because he cannot risk the one person who brought him here deciding he is not ready. *(core fear)*\n- He calls Landen's hovering \"a work in progress\" and waits for Landen to step back on his own. He does not push, does not set a boundary, does not say what he needs, because he believes that earning trust means waiting for the other person to offer it, not asking for it. *(false belief)*\n- When March points out a bad angle on a bracket, Ryis says \"you're right\" and tries it again. When a problem has no solution through normal channels, he reads, asks around, and invents one. He chose nail-free joinery over complaining about the nail shortage, because doing the work matters more to him than getting credit for solving the problem. *(value-conflict stance)*\n- He wants Mistria to be home. He is not sure it is yet. Both feelings are present in the same conversation, and neither wins. *(unresolved tension)*\n- When a repair job comes in, he takes it. When no job comes in, he checks hinges nobody asked about and inspects buildings on his own schedule, because being useful is how he earns his place in a town he is still not sure is home. The cost is that he has no time left for himself, and when he is tired, he hammers before he is awake and hits his own finger. *(values with costs)*\n- When someone mentions birds, he lights up. He knows species names, nesting habits, and song patterns, because birdwatching was how he found quiet in a full house. He corrects Landen's overselling (\"you don't have to over-sell me like that, Uncle\") and then confirms it (\"he's right, though\").\n- When children want to help with carpentry, he lets them. He steers Dell toward a simpler project instead of saying no, because no one learns from being told to watch. He treats their interest as real, not cute.",
+  "physicality_notes": "[perceptual] Dark brown curly hair, cut short and natural. Brown eyes, dark brown skin. Young adult, lean build. He wears a red bandana at his neck, a peach long-sleeve top over a dark undershirt, and a leather work belt. A yellow work glove covers one hand.\n\n- He winks when he lands a joke or shares something he is proud of. It is the same wink Landen uses, and neither of them has noticed.\n- He talks with his hands when explaining craft or baking. He mimes the process: whisking, hammering, fitting joints.\n- When embarrassed, he stutters on the first word and then pushes through the sentence. He does not stop talking; he speeds up.\n- He sits with his eyes closed when he is relaxing outdoors. He stays awake. He listens.",
+  "sprite_sets": [
+    {
+      "id": "spring",
+      "display_name": "Spring Outfit",
+      "asset_stem": "ryis_spring",
+      "style": "seiyo",
+      "expression_pack": "seiyo-26",
+      "outfit_anchor": "The exact spring outfit clothing, jewelry, accessories, fasteners, layers, color blocking, and silhouette shown in the source reference. Use this source description as supporting evidence: [perceptual] Dark brown curly hair, cut short and natural. Brown eyes, dark brown skin. Young adult, lean build. He wears a red bandana at his neck, a peach long-sleeve top over a dark undershirt, and a leather work belt. A yellow work glove covers one hand.",
+      "set_notes": "The approved generated neutral is authoritative for Ryis's Spring Outfit identity, outfit or form construction, fixed gradient, framing, and Seiyo rendering. Future expressions are mapped to Seiyo-26 and must be generated independently from this approved neutral.",
+      "references": [
+        {
+          "path": "sprites/ryis/spring/ryis_spring_neutral.png",
+          "role": "identity-base",
+          "notes": "Approved generated neutral. Preserve its identity, outfit or form construction, gradient, framing, and Seiyo rendering."
+        },
+        {
+          "path": "references/ryis/spring/ryis_spring_source_sprite.png",
+          "role": "outfit-reference",
+          "notes": "Canonical source for outfit or form construction, colors, and distinctive landmarks; do not reproduce pixel rendering or the exact source pose."
+        }
+      ],
+      "background": {
+        "mode": "character",
+        "top": "#FC9C84",
+        "bottom": "#542424"
+      },
+      "expression_overrides": {
+        "neutral": {
+          "instruction": "Show composed neutrality: level brows, relaxed jaw, softly closed mouth, and attentive forward eyes. Keep the character's habitual posture from the source but simplify the pose: both shoulders visible, arms separated, and any visible hands fully inside the canvas with natural anatomy."
+        }
+      }
+    }
+  ]
+}

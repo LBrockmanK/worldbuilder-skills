@@ -1,0 +1,45 @@
+{
+  "schema_version": 1,
+  "id": "mara",
+  "display_name": "Mara",
+  "identity_anchor": "Medium copper-brown-skinned adult woman with short thick wavy navy-blue hair, one prominent silver streak at the front, and large amber eyes",
+  "personality_notes": "Mara is a practical, dryly funny lighthouse keeper who is fiercely protective and reluctant to accept help. She speaks plainly and rarely raises her voice. Her confidence is grounded rather than showy; her amusement begins as a suppressed one-corner smile; anger makes her quieter and more exact; concern brings her closer; fear makes her completely still.",
+  "physicality_notes": "Her baseline is contained, steady, and work-ready, with economical gestures and settled weight. She opens only in an unguarded burst of enthusiasm or laughter. Irritation stays compact, anger becomes rigidly precise, concern closes distance, and vulnerability strips away motion until she is conspicuously still.",
+  "sprite_sets": [
+    {
+      "id": "spring",
+      "display_name": "Spring Outfit",
+      "asset_stem": "mara_spring",
+      "style": "seiyo",
+      "expression_pack": "seiyo-26",
+      "outfit_anchor": "A cream sailor-collar blouse with a rust-red neckerchief, worn under a weathered cropped navy coat with brass buttons, plus a narrow brown utility belt and one small brass compass pendant",
+      "set_notes": "Text-only bootstrap: no source image or approved neutral base exists. References remain empty until a generated neutral portrait is visually approved; that portrait should then become the first identity-base reference.",
+      "references": [],
+      "background": {
+        "mode": "character",
+        "top": "warm sailcloth cream (#F2E4C8)",
+        "bottom": "muted rust red (#A64F3A)"
+      },
+      "expression_overrides": {
+        "neutral": {
+          "instruction": "Show Mara at her composed baseline: large amber eyes looking directly ahead, brows level, jaw relaxed, and mouth closed in a plain unreadable line. Keep her weight settled, shoulders naturally squared, and gestures contained, like a capable keeper pausing between practical tasks."
+        },
+        "confident": {
+          "instruction": "Show Mara's grounded confidence without display: chin level rather than raised, steady direct eyes, and the faintest assured set to her mouth. Settle her weight evenly, keep her shoulders low and firm, and let one hand rest naturally near her utility belt as if she already knows what must be done."
+        },
+        "laughing": {
+          "instruction": "Show a rare unguarded laugh breaking through Mara's reserve: mouth open in genuine laughter, eyes squeezed warm, and the suppressed one-corner smile finally released. Let her shoulders loosen and tip slightly forward while one hand rises toward her mouth too late to hide the laugh; use a waist-up crop with that hand fully visible and anatomically clear."
+        },
+        "annoyed": {
+          "instruction": "Show Mara's dry, contained annoyance: one brow lifts, her eyes cut sideways, and her lips flatten around an unspoken blunt reply. Keep the posture upright and compact, shoulders held in a small restrained breath, with no theatrical eye roll or broad gesture."
+        },
+        "emotional": {
+          "instruction": "Show Mara quietly moved despite herself: amber eyes shining, brows softened and slightly raised, and lips barely parted as if accepting help is harder than any physical task. Hold her conspicuously still, shoulders no longer braced, with her usual protective reserve briefly exposed rather than melodramatic."
+        },
+        "angry": {
+          "instruction": "Show Mara's quiet, exact anger: eyes unwavering and hard, brows drawn with controlled focus, jaw set, and mouth closed before a precise reply. Square her shoulders, eliminate every unnecessary gesture, and make the stillness feel protective and more dangerous than shouting."
+        }
+      }
+    }
+  ]
+}

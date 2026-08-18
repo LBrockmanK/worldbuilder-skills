@@ -1,0 +1,41 @@
+{
+  "schema_version": 1,
+  "id": "elsie",
+  "display_name": "Elsie",
+  "identity_anchor": "Elsie, preserving the exact identity, apparent age, facial structure, body type, skin or surface coloring, hair or species anatomy, eyes, and distinctive features shown in the source reference. Source description: Lavender-gray curled hair. Her spring outfit is a pink long-sleeved dress with burgundy trim and belt. Summer brings a light blue sleeveless dress with a gold shawl draped at the shoulders. Winter switches to a cream-white fur shawl over a dark green dress. The wardrobe rotates but the composure does not. She carries herself like someone who once commanded a stage and still remembers how the shoulders go.",
+  "personality_notes": "- When someone new arrives in Mistria, she steers the conversation toward their romantic prospects (recommending dates, handing out Star Brooches, asking every couple at the festival how they met) because being the person who sets love stories in motion is how she keeps herself at the center of the narrative, even with no stage to perform on *(core want)*\n- When the town goes quiet and no one needs advice or matchmaking, she opens the memoir, writes another paragraph about a blush, and waits for someone to visit, because a performer without an audience is just someone who used to be interesting *(core fear)*\n- She introduces herself as \"Great Aunt, well, not by blood — some of us are simply born aunties\" and plays the role with a wink that makes it sound like a joke she is in on. She treats the family role as a part she is performing well rather than a relationship she earned, because the line between performing care and feeling care collapsed somewhere during a career spent doing both for applause *(false belief)*\n- She chose Mistria over the Capital, quiet evenings over standing ovations. When she tells people the stars look more beautiful here than back home, she means it. When she says she should host a viewing party for old friends, she means that too. She manages the split by importing the Capital's social energy (gossip circuits, romantic traditions, wine from the cellar) rather than choosing one life cleanly over the other *(value-conflict stance)*\n- She pushes romance on everyone around her (newcomers, Eiland, passing couples) while her own romantic life is past tense. Frederick is a dream and a fond story. The warlord is a holiday card. She writes memoirs about blushing and advises Valen on aphrodisiacs, but whether she wants another love story of her own is a question she answers with a laugh and a change of subject *(unresolved tension)*\n- She left the Capital (her audience, her friends, her social world) to fill a role at the Manor that no one asked her to fill. The cost of being a born auntie is leaving the world where she was a prima donna *(values with costs)*",
+  "physicality_notes": "Lavender-gray curled hair. Her spring outfit is a pink long-sleeved dress with burgundy trim and belt. Summer brings a light blue sleeveless dress with a gold shawl draped at the shoulders. Winter switches to a cream-white fur shawl over a dark green dress. The wardrobe rotates but the composure does not. She carries herself like someone who once commanded a stage and still remembers how the shoulders go.\n\n- When she delivers romantic advice, she pauses, winks, and lets the suggestion settle before moving on.\n- When telling stories about her past (Frederick's tights, the warlord's ransom, the stage lights), she performs them with placement and emphasis. She lands each beat where the laugh should go.\n- When there is something to celebrate, she fetches wine from the cellar without being asked and announces the bottle as if introducing someone she knows personally.",
+  "sprite_sets": [
+    {
+      "id": "spring",
+      "display_name": "Spring Outfit",
+      "asset_stem": "elsie_spring",
+      "style": "seiyo",
+      "expression_pack": "seiyo-26",
+      "outfit_anchor": "The exact spring outfit clothing, jewelry, accessories, fasteners, layers, color blocking, and silhouette shown in the source reference. Use this source description as supporting evidence: Lavender-gray curled hair. Her spring outfit is a pink long-sleeved dress with burgundy trim and belt. Summer brings a light blue sleeveless dress with a gold shawl draped at the shoulders. Winter switches to a cream-white fur shawl over a dark green dress. The wardrobe rotates but the composure does not. She carries herself like someone who once commanded a stage and still remembers how the shoulders go.",
+      "set_notes": "The approved generated neutral is authoritative for Elsie's Spring Outfit identity, outfit or form construction, fixed gradient, framing, and Seiyo rendering. Future expressions are mapped to Seiyo-26 and must be generated independently from this approved neutral.",
+      "references": [
+        {
+          "path": "sprites/elsie/spring/elsie_spring_neutral.png",
+          "role": "identity-base",
+          "notes": "Approved generated neutral. Preserve its identity, outfit or form construction, gradient, framing, and Seiyo rendering."
+        },
+        {
+          "path": "references/elsie/spring/elsie_spring_source_sprite.png",
+          "role": "outfit-reference",
+          "notes": "Canonical source for outfit or form construction, colors, and distinctive landmarks; do not reproduce pixel rendering or the exact source pose."
+        }
+      ],
+      "background": {
+        "mode": "character",
+        "top": "#FCB4B4",
+        "bottom": "#542424"
+      },
+      "expression_overrides": {
+        "neutral": {
+          "instruction": "Show composed neutrality: level brows, relaxed jaw, softly closed mouth, and attentive forward eyes. Keep the character's habitual posture from the source but simplify the pose: both shoulders visible, arms separated, and any visible hands fully inside the canvas with natural anatomy."
+        }
+      }
+    }
+  ]
+}

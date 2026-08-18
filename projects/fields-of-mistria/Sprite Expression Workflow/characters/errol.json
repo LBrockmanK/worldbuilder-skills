@@ -1,0 +1,41 @@
+{
+  "schema_version": 1,
+  "id": "errol",
+  "display_name": "Errol",
+  "identity_anchor": "Errol, preserving the exact identity, apparent age, facial structure, body type, skin or surface coloring, hair or species anatomy, eyes, and distinctive features shown in the source reference. Source description: Older man with a full mustache. Seasonal outfits that change with the weather. No formal dress variants.",
+  "personality_notes": "Retired mine foreman turned museum curator who rises before dawn, tells stories from 3 decades of Mistria history, and insists on archiving every find before anyone celebrates it. - When a new artifact surfaces at the Western Ruins or the museum receives a donation, he drops what he is doing to examine, catalog, and archive it before anything else happens, because recording what came before is the work that makes him feel whole *(core want)*\n- When something is damaged, discarded, or lost before it can be recorded, he goes quiet and does not recover his usual pace for the rest of the day, because every artifact he could not save in the mines proved that some losses are permanent *(core fear)*\n- When Eiland's storage room fills with uncatalogued finds or Seridia throws a tablet into the ocean, he treats disorder as the first step toward loss, insisting on proper procedure even when the moment has already passed, because he believes that if the system holds, nothing important will disappear *(false belief)*\n- When Eiland proposes skipping documentation to put new finds on display, Errol blocks the exhibition hall and pulls out the ledger, because losing the record of where something came from turns an artifact into \"just a rock on a shelf,\" and he has lost too many finds that way to let it happen again *(value-conflict stance)*\n- When someone mentions the mines or the tunnels, he picks up the story mid-sentence, leans in, and talks with his hands, even though he tells Valen he is happier as curator than he ever was as foreman, because the mines gave him 30 years of identity and the museum has given him only a few seasons of purpose *(unresolved tension)*\n- When Eiland returns from the Western Ruins with a crate of finds, Errol opens the ledger before the crate, because he will not display what he has not recorded, and the cost is that the museum moves at his pace or waits *(values with costs)*\n- When a younger person shows skill or knowledge he did not expect, he stops, listens, and adjusts. Luc reorganized the fauna collection by genus instead of alphabet. Errol adopted the system and credited him, because he spent decades as foreman learning that the person closest to the work usually sees it clearest.",
+  "physicality_notes": "Older man with a full mustache. Seasonal outfits that change with the weather. No formal dress variants.\n\n- He examines objects with a magnifying glass held close, tilting the artifact rather than the lens.\n- He talks with his hands when telling a story and goes still when listening to someone else's.\n- When caught off guard, he sputters before recovering: \"Egads!\" or a sharp intake of breath, then collects himself and asks a follow-up question.",
+  "sprite_sets": [
+    {
+      "id": "spring",
+      "display_name": "Spring Outfit",
+      "asset_stem": "errol_spring",
+      "style": "seiyo",
+      "expression_pack": "seiyo-26",
+      "outfit_anchor": "The exact spring outfit clothing, jewelry, accessories, fasteners, layers, color blocking, and silhouette shown in the source reference. Use this source description as supporting evidence: Older man with a full mustache. Seasonal outfits that change with the weather. No formal dress variants.",
+      "set_notes": "The approved generated neutral is authoritative for Errol's Spring Outfit identity, outfit or form construction, fixed gradient, framing, and Seiyo rendering. Future expressions are mapped to Seiyo-26 and must be generated independently from this approved neutral.",
+      "references": [
+        {
+          "path": "sprites/errol/spring/errol_spring_neutral.png",
+          "role": "identity-base",
+          "notes": "Approved generated neutral. Preserve its identity, outfit or form construction, gradient, framing, and Seiyo rendering."
+        },
+        {
+          "path": "references/errol/spring/errol_spring_source_sprite.png",
+          "role": "outfit-reference",
+          "notes": "Canonical source for outfit or form construction, colors, and distinctive landmarks; do not reproduce pixel rendering or the exact source pose."
+        }
+      ],
+      "background": {
+        "mode": "character",
+        "top": "#FCCC3C",
+        "bottom": "#3C240C"
+      },
+      "expression_overrides": {
+        "neutral": {
+          "instruction": "Show composed neutrality: level brows, relaxed jaw, softly closed mouth, and attentive forward eyes. Keep the character's habitual posture from the source but simplify the pose: both shoulders visible, arms separated, and any visible hands fully inside the canvas with natural anatomy."
+        }
+      }
+    }
+  ]
+}

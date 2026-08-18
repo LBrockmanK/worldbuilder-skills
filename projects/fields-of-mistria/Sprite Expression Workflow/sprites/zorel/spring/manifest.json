@@ -1,0 +1,15 @@
+{
+  "schema_version": 1,
+  "character": "zorel",
+  "sprite_set": "spring",
+  "asset_stem": "zorel_spring",
+  "style": "seiyo",
+  "background": {
+    "top": "#B4E484",
+    "bottom": "#0C3C3C"
+  },
+  "base_expression": "neutral",
+  "expressions": {
+    "neutral": "zorel_spring_neutral.png"
+  }
+}

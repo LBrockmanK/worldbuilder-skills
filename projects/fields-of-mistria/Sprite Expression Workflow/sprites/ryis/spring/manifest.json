@@ -1,0 +1,15 @@
+{
+  "schema_version": 1,
+  "character": "ryis",
+  "sprite_set": "spring",
+  "asset_stem": "ryis_spring",
+  "style": "seiyo",
+  "background": {
+    "top": "#FC9C84",
+    "bottom": "#542424"
+  },
+  "base_expression": "neutral",
+  "expressions": {
+    "neutral": "ryis_spring_neutral.png"
+  }
+}

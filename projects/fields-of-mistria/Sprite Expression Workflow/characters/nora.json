@@ -1,0 +1,41 @@
+{
+  "schema_version": 1,
+  "id": "nora",
+  "display_name": "Nora",
+  "identity_anchor": "Nora, preserving the exact identity, apparent age, facial structure, body type, skin or surface coloring, hair or species anatomy, eyes, and distinctive features shown in the source reference. Source description: Short golden-blonde hair in a bob cut with a slight wave. Dark eyes, fair skin. Her spring outfit is a navy blue vest over a white long-sleeved blouse, with a navy skirt. The outfit changes with the season but keeps the professional cut.",
+  "personality_notes": "General Store Co-Owner, Head of Mistria's Chamber of Commerce, Head of - When the books balance and the shelves are full and every form is filed, she sits back and drinks her tea — because a store that runs well is a town that eats, and she feels most like herself when the numbers add up and nothing is missing *(core want)*\n- When a number does not add up or a shelf is empty or Dell is \"suspiciously light on the details,\" she does not rest until the gap is closed — because things that slip through cracks become things that break, and she has watched an earthquake prove it *(core fear)*\n- When Celine says she is fine, Nora drops off dinner anyway. When Adeline deflects a personal question, Nora catches it with humor. She believes the way to keep things from falling apart is to keep track of everything — every ledger, every dinner, every detail — and she does not see that some things she tracks are not hers to hold *(false belief)*\n- When Celine moved out, Nora said \"I was worried\" and in the same sentence said \"your cottage is so cute.\" She wants Celine to be independent and she wants to make sure Celine is eating. Both are true at the same time and she has not found a way to hold one without the other *(value-conflict stance)*\n- She asks Adeline \"how are YOU doing\" and catches the deflection every time. No one asks Nora the same question, and she does not notice the omission *(unresolved tension)*\n- Running the store, the Chamber of Commerce, and the Saturday Market with her family means every relationship doubles as a working relationship. Holt packs her lunch and handles the register. Celine works part-time. Balor sources inventory. The personal and professional share the same ledger, and she has never drawn a line between them *(values with costs)*",
+  "physicality_notes": "Short golden-blonde hair in a bob cut with a slight wave. Dark eyes, fair skin. Her spring outfit is a navy blue vest over a white long-sleeved blouse, with a navy skirt. The outfit changes with the season but keeps the professional cut.\n\n- When she is explaining something, she holds up one finger and points as she talks.\n- When Holt makes a pun, she corrects him with a straight face and then laughs.\n- When Dell reports on her day with too few details, she narrows her eyes and says nothing until Dell fills the silence.",
+  "sprite_sets": [
+    {
+      "id": "spring",
+      "display_name": "Spring Outfit",
+      "asset_stem": "nora_spring",
+      "style": "seiyo",
+      "expression_pack": "seiyo-26",
+      "outfit_anchor": "The exact spring outfit clothing, jewelry, accessories, fasteners, layers, color blocking, and silhouette shown in the source reference. Use this source description as supporting evidence: Short golden-blonde hair in a bob cut with a slight wave. Dark eyes, fair skin. Her spring outfit is a navy blue vest over a white long-sleeved blouse, with a navy skirt. The outfit changes with the season but keeps the professional cut.",
+      "set_notes": "The user-selected v3 generated neutral is authoritative for Nora's mature identity, faint small bun, Spring costume, fixed gradient, and Seiyo rendering. Future expressions are mapped to Seiyo-26 and must be generated independently from this approved neutral. Nora is a mature older adult. Preserve the faint small bun or gathered hair visible behind her short golden-blonde style.",
+      "references": [
+        {
+          "path": "sprites/nora/spring/nora_spring_neutral.png",
+          "role": "identity-base",
+          "notes": "User-selected v3 Spring neutral. Preserve its mature face, faint bun, costume, gradient, framing, and Seiyo rendering."
+        },
+        {
+          "path": "references/nora/spring/nora_spring_source_sprite.png",
+          "role": "outfit-reference",
+          "notes": "Canonical source for Nora's identity, hair construction, Spring outfit, and colors; do not reproduce pixel rendering or pose."
+        }
+      ],
+      "background": {
+        "mode": "character",
+        "top": "#243C54",
+        "bottom": "#FCE4CC"
+      },
+      "expression_overrides": {
+        "neutral": {
+          "instruction": "Show composed neutrality: level brows, relaxed jaw, softly closed mouth, and attentive forward eyes. Keep the character's habitual posture from the source but simplify the pose: both shoulders visible, arms separated, and any visible hands fully inside the canvas with natural anatomy."
+        }
+      }
+    }
+  ]
+}

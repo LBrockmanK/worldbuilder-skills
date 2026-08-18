@@ -1,0 +1,41 @@
+{
+  "schema_version": 1,
+  "id": "eiland",
+  "display_name": "Eiland",
+  "identity_anchor": "Eiland, preserving the exact identity, apparent age, facial structure, body type, skin or surface coloring, hair or species anatomy, eyes, and distinctive features shown in the source reference. Source description: Light pink hair, wavy, short to medium length. Brown skin, violet-purple eyes. His spring outfit is a white-lavender jacket with gold chevron embroidery at the chest, gold-trimmed collar, purple cape, and a gold belt at the waist. The outfit changes with the season but keeps the noble cut and the pale color that Hayden says both siblings wear.",
+  "personality_notes": "- When someone shows interest in Mistria's history, he talks without stopping (explaining steles, describing ancient armor, sharing translation work, pulling artifacts from shelves) because making the past clear to another person is when he feels most like himself *(core want)*\n- When a line of inquiry runs dry or a translation is finished, he reaches for the next one before the current one settles. He has been studying the same stele for years and still finds new angles to pursue, because a world with nothing left to find is one where he does not know what to do with himself *(core fear)*\n- When he faces an emotional experience, he reaches for a historical framework first (a childhood discovery becomes a research project, a family heirloom becomes a cataloging exercise, Elsie's advice about romance becomes an inscription he has not yet translated). He believes the past holds answers the present cannot supply on its own, because translating feeling into scholarship lets him approach it at one remove before he approaches it directly *(false belief)*\n- When civic duty calls (budget meetings, museum desk shifts, cataloging), he shows up, does the work, and drifts the moment it releases him. He deflects with self-deprecation (\"my office... let's call it a work in progress\") and redirects to archaeology before anyone can press the point, because he knows what the Manor expects and he knows he is not meeting it *(value-conflict stance)*\n- When something matters to him he goes still and quiet, giving it his full attention (the stele at dusk, a passage he has been translating for weeks, Elsie playing piano). In daily life he daydreams through conversations, misfiles pottery into desk drawers, and drifts mid-sentence into the past. He does not know how to carry that focus into the rest of his day *(unresolved tension)*\n- His archaeological passion costs Adeline a governing partner. She carries the administrative load alone while he proposes dessert budgets and files late. Neither pretends otherwise, and neither has found a way to change it *(values with costs)*\n- When someone encourages his enthusiasm rather than tolerating it (\"Please, go on!\" or \"I love it when you talk about things you feel passionate about!\"), he drops the self-conscious apology, speaks faster, and shares more. When they do not, he wraps up quickly and moves on.",
+  "physicality_notes": "Light pink hair, wavy, short to medium length. Brown skin, violet-purple eyes. His spring outfit is a white-lavender jacket with gold chevron embroidery at the chest, gold-trimmed collar, purple cape, and a gold belt at the waist. The outfit changes with the season but keeps the noble cut and the pale color that Hayden says both siblings wear.\n\n- When a discovery excites him, he moves toward it before he finishes the sentence.\n- He talks with his hands when explaining history: tilting an artifact toward the light, tracing raised lettering on a stele, pointing at a marker in a tree canopy.\n- When he catches himself mid-lecture, he stops, blushes, and says something like \"S-sorry... I nearly dove into another history lesson.\" He continues if encouraged.\n- His desk at the Museum holds artifacts where the snacks should go, and he calls the workspace \"a work in progress.\"",
+  "sprite_sets": [
+    {
+      "id": "spring",
+      "display_name": "Spring Outfit",
+      "asset_stem": "eiland_spring",
+      "style": "seiyo",
+      "expression_pack": "seiyo-26",
+      "outfit_anchor": "The exact spring outfit clothing, jewelry, accessories, fasteners, layers, color blocking, and silhouette shown in the source reference. Use this source description as supporting evidence: Light pink hair, wavy, short to medium length. Brown skin, violet-purple eyes. His spring outfit is a white-lavender jacket with gold chevron embroidery at the chest, gold-trimmed collar, purple cape, and a gold belt at the waist. The outfit changes with the season but keeps the noble cut and the pale color that Hayden says both siblings wear.",
+      "set_notes": "The approved generated neutral is authoritative for Eiland's identity, violet-purple eyes, Spring costume, fixed gradient, and Seiyo rendering. Future expressions are mapped to Seiyo-26 and must be generated independently from this approved neutral.",
+      "references": [
+        {
+          "path": "sprites/eiland/spring/eiland_spring_neutral.png",
+          "role": "identity-base",
+          "notes": "Approved generated Spring neutral. Preserve its face, violet-purple eyes, costume, gradient, framing, and Seiyo rendering."
+        },
+        {
+          "path": "references/eiland/spring/eiland_spring_source_sprite.png",
+          "role": "outfit-reference",
+          "notes": "Canonical source for identity, Spring outfit, jewelry, and colors; do not reproduce pixel rendering or pose."
+        }
+      ],
+      "background": {
+        "mode": "character",
+        "top": "#E49C6C",
+        "bottom": "#542424"
+      },
+      "expression_overrides": {
+        "neutral": {
+          "instruction": "Show composed neutrality: level brows, relaxed jaw, softly closed mouth, and attentive forward eyes. Keep the character's habitual posture from the source but simplify the pose: both shoulders visible, arms separated, and any visible hands fully inside the canvas with natural anatomy."
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,41 @@
+{
+  "schema_version": 1,
+  "id": "holt",
+  "display_name": "Holt",
+  "identity_anchor": "Holt, preserving the exact identity, apparent age, facial structure, body type, skin or surface coloring, hair or species anatomy, eyes, and distinctive features shown in the source reference. Source description: [perceptual] Auburn hair, mustache. Fair skin. Middle-aged, sturdy build. He wears a green plaid button shirt with brown suspenders and a red bandana at his neck.",
+  "personality_notes": "'General Store Co-Owner, father of Celine and Dell, husband of Nora. - When he sees his family, he feeds them. He packs Nora's lunch with a sandwich she demands the recipe for. He makes dinner dates. He reads Dell bedtime stories and changes the endings to happy ones. He fixes Celine's cottage and invites himself for dinner, because keeping people laughing and fed is what he knows how to do, and he keeps doing it. *(core want)*\n- When Nora turns her attention to the Saturday Market, the store gets stretched thin at the end of the week. He mentions it to Adeline but does not ask for help. When something in the family shifts, he makes a joke and moves on, because sitting with what he cannot fix is worse than filling the silence. *(core fear)*\n- He believes a pun works in every situation. He tells them when March is tired, when Olric does not understand, when Celine begs him to stop. He saves them for weeks and waits for the right moment. He keeps telling them when no one laughs. *(false belief)*\n- He changes Dell's bedtime stories to happy endings. Dell knows they are not the real endings and likes his versions better. He chooses comfort over the truth when the audience is his daughter, and the choice is deliberate. *(value-conflict stance)*\n- He is proud Celine moved out and built something of her own. He also shows up to fix her cottage, repair her shelves, and check on her plants, arriving before she asks and inviting himself to dinner while he is there. Each impulse crowds out the other; he never simply visits without finding something to fix, and he never simply fixes without staying to eat. *(unresolved tension)*\n- He values keeping his family close and comfortable. The cost is that his humor fills every pause, and some of those pauses could hold a harder conversation. *(values with costs)*",
+  "physicality_notes": "[perceptual] Auburn hair, mustache. Fair skin. Middle-aged, sturdy build. He wears a green plaid button shirt with brown suspenders and a red bandana at his neck.\n\n- He winks when he delivers a pun, lands a compliment, or finishes a joke.\n- He sweeps the store floor during slow hours and whittles or writes between tasks.\n- When someone does not get his pun, he repeats the key word slower and sadder until he gives up.",
+  "sprite_sets": [
+    {
+      "id": "spring",
+      "display_name": "Spring Outfit",
+      "asset_stem": "holt_spring",
+      "style": "seiyo",
+      "expression_pack": "seiyo-26",
+      "outfit_anchor": "The exact spring outfit clothing, jewelry, accessories, fasteners, layers, color blocking, and silhouette shown in the source reference. Use this source description as supporting evidence: [perceptual] Auburn hair, mustache. Fair skin. Middle-aged, sturdy build. He wears a green plaid button shirt with brown suspenders and a red bandana at his neck.",
+      "set_notes": "The approved generated neutral is authoritative for Holt's Spring Outfit identity, outfit or form construction, fixed gradient, framing, and Seiyo rendering. Future expressions are mapped to Seiyo-26 and must be generated independently from this approved neutral.",
+      "references": [
+        {
+          "path": "sprites/holt/spring/holt_spring_neutral.png",
+          "role": "identity-base",
+          "notes": "Approved generated neutral. Preserve its identity, outfit or form construction, gradient, framing, and Seiyo rendering."
+        },
+        {
+          "path": "references/holt/spring/holt_spring_source_sprite.png",
+          "role": "outfit-reference",
+          "notes": "Canonical source for outfit or form construction, colors, and distinctive landmarks; do not reproduce pixel rendering or the exact source pose."
+        }
+      ],
+      "background": {
+        "mode": "character",
+        "top": "#FCCC84",
+        "bottom": "#243C54"
+      },
+      "expression_overrides": {
+        "neutral": {
+          "instruction": "Show composed neutrality: level brows, relaxed jaw, softly closed mouth, and attentive forward eyes. Keep the character's habitual posture from the source but simplify the pose: both shoulders visible, arms separated, and any visible hands fully inside the canvas with natural anatomy."
+        }
+      }
+    }
+  ]
+}

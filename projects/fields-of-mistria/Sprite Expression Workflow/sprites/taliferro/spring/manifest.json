@@ -1,0 +1,15 @@
+{
+  "schema_version": 1,
+  "character": "taliferro",
+  "sprite_set": "spring",
+  "asset_stem": "taliferro_spring",
+  "style": "seiyo",
+  "background": {
+    "top": "#FCE4B4",
+    "bottom": "#3C240C"
+  },
+  "base_expression": "neutral",
+  "expressions": {
+    "neutral": "taliferro_spring_neutral.png"
+  }
+}

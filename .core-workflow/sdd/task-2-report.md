@@ -1,4 +1,4 @@
 STATUS: DONE
-COMMITS: 5ccaba3
-TEST SUMMARY: build-okf.py regenerated defaults/okf.json without errors; JSON parse verification printed OK; grep verification found "Story Beats"/"preamble" matches in both card-assembly.md and SKILL.md.
+COMMITS: d70d440
+TEST_SUMMARY: Verified slop-phrases.md and writing-style.md both referenced in Review criteria section (grep confirmed matches at lines 203, 205, 216).
 CONCERNS: none
