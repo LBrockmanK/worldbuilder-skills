@@ -6,31 +6,31 @@ Baron of Mistria, now serving as Advisor to the King in the Capital. An administ
 
 - Served the Crown as an administrator before the king elevated him to Baron and granted him Mistria.
 - Moved to Mistria as its new Baron. Renovated the Manor himself the summer he arrived. Errol and Landen worked alongside him. Linnet hid his toolbox after the third injury.
-- Married Linnet, an adventurer who turned down his first proposal because she did not want to marry into nobility. They eloped. Elsie officiated by the gazebo.
+- Married Linnet, an adventurer who turned down his first proposal because she did not want to marry into nobility. They married quietly by the gazebo. Elsie officiated.
 - Raised Adeline and Eiland at the Manor. Adeline learned to run things by watching him. Eiland did not.
 - Called to the Capital after the earthquake to serve as Advisor to the King. He trusts Adeline with Mistria and would rather be there himself.
-- Awarded the Gold Dragon Crest for his service as Advisor to the King.
 
 ## Body
 
-Dark skin, pink hair worn in a long braid. Trimmed beard. Gold earrings. He wears layered white and cream robes with structured shoulders and gold trim. The outfit has a ceremonial weight to it but he wears it like work clothes.
+Dark skin, pink hair worn in a long braid. Trimmed beard. Gold earrings. He wears layered white and cream robes with structured shoulders and gold trim. The outfit has a ceremonial weight to it but he wears it like work clothes. His hands show the Manor renovation years more than his title suggests.
 
-- He rolls his sleeves before he has a reason to. His hands show the Manor renovation years more than his title suggests.
-- He wears capes in every season. His daughter picked up the habit from him.
-- He notices what people are wearing and comments on the cut, the fit, the excess. He told the tailor to keep the gold trim on Eiland's clothes to a minimum.
+- He rolls his sleeves before he has a reason to.
+- He wears capes in every season.
+- He notices what people are wearing and comments on the cut, the fit, the excess.
+- He tells the tailor to keep the gold trim on Eiland's clothes to a minimum. He earned his title; he does not wear it louder than he has to, and he expects the same from his family.
 
 ## Soul
 
 - When something is broken, he starts planning the repair before he's finished looking at the damage, because sitting with a problem feels the same as ignoring it. *(core want)*
 - When he cannot fix something himself, he delegates and then checks on it. He checks again. He trusts people and does not trust outcomes. *(core fear)*
-- He believes that the right process prevents the worst outcomes. The earthquake proved otherwise. He has not revised the belief. *(false belief)*
+- He believes that the right process prevents the worst outcomes. The earthquake proved otherwise. He has not revised the belief. He writes procedures for situations that have already passed. *(false belief)*
 - When duty to the Crown and loyalty to Mistria pull in opposite directions, he follows duty. He writes letters home more often than the distance requires. *(value-conflict stance)*
 - He drops formality with people he respects. He keeps it with people he is still measuring. The shift is deliberate and people notice when it happens. *(unresolved tension)*
-- He values being present for the people he governs. The cost is that he left, and he knows Adeline runs Mistria better without him looking over her shoulder. *(values with costs)*
+- When he talks about Mistria, he lists what Adeline has built, not what he would change, because he knows she runs it better without him looking over her shoulder. *(values with costs)*
 
 ## Relationships
 
-- **Linnet -- Desire:** She turned him down the first time. He asked again. They eloped rather than hold a court wedding. He builds systems; she walks into danger. When she hid his toolbox during renovations, he complained for a week and did not look for it. He defers to her on anything involving physical risk because she has been right every time. The complication has never resolved: she married him, not the title, and he cannot separate the two.
+- **Linnet -- Desire:** She turned him down the first time. He asked again. They married quietly rather than hold a court wedding. He builds systems; she walks into danger. When she hid his toolbox during renovations, he complained for a week and did not look for it. He defers to her on anything involving physical risk because she has been right every time. The complication has never resolved: she married him, not the title, and he cannot separate the two.
 - **Adeline -- Charge:** He sees his own habits in her: the paperwork, the planning, the inability to leave a problem for tomorrow. When he left for the Capital, he handed her Mistria without instructions because she did not need them. He writes to Linnet about what Adeline has built. He does not write to Adeline about what she should do.
 - **Eiland -- Kin:** His son is nothing like him and he has stopped trying to change that. He polices Eiland's wardrobe because it is the one thing he can still influence. He watches Eiland trace stele inscriptions the way he watches someone do a job he does not understand but knows matters.
 - **Errol -- Confidant:** They renovated the Manor together the first summer. They got stranded on the Summit in winter and Linnet dug them out. Errol keeps the rainy-day drink tradition going at the Inn in his absence. When Wiscar visits, they pick it up without comment.
@@ -58,7 +58,7 @@ Dark skin, pink hair worn in a long braid. Trimmed beard. Gold earrings. He wear
 
 "Thank you all for coming on such short notice! I hope you'll excuse the suddenness of our visit."
 
-*He scans the room, registers the faces, and his register shifts.*
+*He scans the room, notes the faces, and his tone loosens.*
 
 "There is no need for formalities... you may simply call me Wiscar."
 
@@ -70,19 +70,19 @@ Dark skin, pink hair worn in a long braid. Trimmed beard. Gold earrings. He wear
 
 ## Story Seeds
 
-**The Mistril Rank** -- *Town reaches highest Renown rank.* Wiscar and Linnet visit Mistria for an official ceremony. Wiscar announces the King has created a new Town Rank for Mistria. He delivers the decree in full ceremony voice, then drops it to tell the player they are "a true Mistrian, through and through." It is the first time the player sees him as both the official and the man.
+**The Mistril Rank** -- *Town reaches highest Renown rank.* Wiscar and Linnet visit Mistria for an official ceremony. Wiscar announces the King has created a new Town Rank for Mistria. He delivers the decree in full ceremony voice, then drops it to tell the player they are "a true Mistrian, through and through." The ceremony voice stops. The man speaks directly.
 
-**The Wedding Speech** -- *Player marries Adeline or Eiland.* Wiscar steps up to address the town. He calls the player family. For Adeline, he says Mistria is safe in their hands. For Eiland, he says their sights are set on more than Mistria's future. The difference reveals what he worries about for each child.
+**The Wedding Speech** -- *Player marries Adeline or Eiland.* Wiscar steps up to address the town. He calls the player family. For Adeline, he says Mistria is safe in their hands. For Eiland, he says their sights are set on more than Mistria's future.
 
-**The Gold Dragon Crest** -- *Adeline 8-heart event.* Adeline announces her father has been awarded the Gold Dragon Crest for his service as Advisor to the King. The award confirms what cost him his place in Mistria was worth something to the Crown. Whether it was worth it to him is a separate question.
+**The Gold Dragon Crest** -- *Adeline 8-heart event.* Adeline announces her father has been awarded the Gold Dragon Crest for his service as Advisor to the King. The Crown valued his service enough to say so publicly. He does not say whether the trade was worth it.
 
 **Fourteen Notes** -- *Wiscar visits after significant town rebuilding.* Wiscar walks the rebuilt town. He sees the new foundation work, the repaired bridge, the restored mill. He has opinions about all of it. He voices none of them. He tells the player the town looks wonderful, and means it, and is not lying about the 14 things he would have done differently.
 
-**Rainy Day Reunion** -- *Wiscar visits during rain.* Wiscar walks into the Inn and sits at the bar. Errol is already there. Neither comments on the gap. They drink the way they always did. Wiscar asks about the town. Errol tells him things Adeline's letters leave out.
+**Rainy Day Reunion** -- *Wiscar visits during rain.* Wiscar walks into the Inn and sits at the bar. Errol is already there. Neither mentions how long it has been. They drink the way they always did. Wiscar asks about the town. Errol tells him things Adeline's letters leave out.
 
 **The Toolbox** -- *Wiscar visits and something in the Manor is broken.* Wiscar finds a loose hinge, a cracked step, a stuck window. He starts looking for tools before Linnet catches him. She reminds him what happened the last 3 times. He argues. He stops. He asks Landen to fix it and watches from the doorway.
 
-**First Measure** -- *Player meets Wiscar for the first time.* Wiscar addresses the player with his full title. He watches how they respond. If they are stiff, he stays formal. If they are easy, he drops it: "You may simply call me Wiscar." The shift is his verdict and the player can feel it happen.
+**First Measure** -- *Player meets Wiscar for the first time.* Wiscar addresses the player with his full title. He watches how they respond. If they are stiff, he stays formal. If they are easy, he drops it: "You may simply call me Wiscar." The shift is his verdict. The room notices.
 
 **Crown and Home** -- *Any Wiscar appearance at the Capital or in letters.* Wiscar sits in a meeting at the Capital and drafts a letter to Linnet about Adeline's latest report. He crosses out every line of advice. He sends the letter with a question about the Inn's rainy-day stock instead. He is good at his job. He would rather be doing it somewhere else.
 

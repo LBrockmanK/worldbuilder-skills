@@ -19,6 +19,7 @@ Slender frame, medium height. Pink hair past her shoulders, wavy, with a bow on 
 - She always has something to write with: pen at her desk, clipboard at the quest board, notepad at the bathhouse.
 - When it rains her hair goes frizzy, and she books bathhouse visits to manage it, already smiling at the lavender before she is through the door.
 - When a compliment catches her mid-sentence, a blush rises and she reaches for the nearest piece of paperwork.
+- She wears capes in every season.
 
 ## Soul
 
