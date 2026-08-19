@@ -12,6 +12,7 @@ All field names below are the exact JSON keys. These fields are produced by `wor
 
 | JSON field | UI label | Type | Source content skill |
 |---|---|---|---|
+| `worldName` | World Name | string | World configuration |
 | `settingSummary` | Setting Summary | string | `worldbuilder-world-foundation` → `seed.md` |
 | `genre` | Genre & Tone | string | `worldbuilder-world-foundation` → `seed.md` |
 | `inspirations` | Inspirations | string[ ] | `worldbuilder-world-foundation` → `seed.md` |
@@ -65,7 +66,7 @@ StoryTrigger schema:
 }
 ```
 
-Set `recurring: true` for annual events (festivals, observances). One-time events use `recurring: false`.
+Set `recurring: true` for annual events (festivals, observances). One-time events use `recurring: false`. Recurrence is yearly only — there is no weekly or monthly repeat. To make a weekly event (e.g., a Saturday market), create a separate `storyTrigger` entry for every instance across the first year, each with its own `triggerOnDay` and `recurring: true` so it repeats in subsequent years.
 
 ---
 
@@ -82,7 +83,7 @@ Set `recurring: true` for annual events (festivals, observances). One-time event
 | `storyTriggers` | Events / Recurring Events | StoryTrigger[ ] | `worldbuilder-calendar` → `events/` |
 | `eventCalendarSummary` | Event Calendar Summary | string | `worldbuilder-calendar` → `events/` |
 
-> **Note on `dailyPlannerDirective`:** This field appeared in some earlier `.json` world exports but is absent from the current `.sbworld` format. It may have been folded into `arcManagerGuidance`, removed from the schema, or be UI-only content that does not export. Treat daily planner guidance as part of `arcManagerGuidance` until the field status is confirmed.
+> **`dailyPlannerDirective`** — Present in the format as a string field but typically empty. Planner-style guidance belongs in `arcManagerGuidance`.
 
 ### Field notes
 
@@ -176,7 +177,28 @@ Physical description for image generation and LLM reference. Cover: species/type
 ]
 ```
 
-Each sprite set is a named visual state (Casual, Working, Formal, etc.). Not emotional expressions — those are handled separately. The `description` guides art generation; the `expressions` object contains per-expression image prompts.
+Each sprite set is a named visual state (Casual, Working, Formal, etc.). The `description` guides art generation; the `expressions` object maps each expression name to an image — either a generation prompt (at skill output time) or an `asset://` URL (in the final `.sbworld`). Expression keys must be drawn from the world's `availableExpressions` list.
+
+---
+
+## Expression Configuration
+
+| JSON field | Type | Source |
+|---|---|---|
+| `availableExpressions` | string[ ] | World configuration |
+
+The `availableExpressions` array defines the palette of emotional expressions available across all characters in the world. Each entry is a snake_case expression name (e.g., `"happy"`, `"eyes_closed"`). Every key in a character's `spriteSets[].expressions` object must appear in this list.
+
+The platform's default set of 26 expressions:
+
+```
+amused, angry, annoyed, beaming, blushing, comedic_shock, confident,
+crying, embarrassed, emotional, emotional_shock, flirty, happy,
+intimate, laughing, nervous, neutral, sad, shy, sleepy_or_tired,
+smiling, stoic, surprised, upset, wary, worried_or_concerned
+```
+
+Worlds may define a custom set with more or fewer entries. Define `availableExpressions` early when building a world from scratch — it determines how many expression variants each character sprite set needs and how many expression images must be generated per sprite set.
 
 ---
 
@@ -223,9 +245,120 @@ Do not attempt to write `style_prefix` / `style_suffix` content during the Seed 
 
 ## Moods Tab
 
-The Moods tab drives AI-generated music. It has no text fields that the worldbuilding workflow writes — the AI generates music based on your world configuration.
+The `moods` array configures the world's music. Each entry is either a link to an existing audio file (`url` populated, `prompt` empty) or a directive for AI music generation (`prompt` populated, `url` empty).
 
-The Seed phase produces a **plain-language musical theme reference** describing genre, tempo, instrumentation, and mood register. This informs the music generation configuration but does not map to a specific JSON text field.
+| JSON field path | Type | Source content skill |
+|---|---|---|
+| `moods` | Mood[ ] | `worldbuilder-world-foundation` → `seed.md` (musical reference) + `worldbuilder-character` (character themes) |
+
+### Mood entry schema
+
+```json
+{
+  "id": "uuid",
+  "name": "spring_wake_up_little_seed",
+  "description": "Outdoor daytime during Spring. Fresh, optimistic, the season of new growth.",
+  "prompt": "",
+  "url": "https://example.com/track.ogg",
+  "updatedAt": 1787103438769,
+  "category": "standard"
+}
+```
+
+**`id`** — UUID for user-created moods. System moods use `system:{slot_name}` (see below).
+
+**`slot`** — Present only on system moods. Identifies the fixed playback slot.
+
+**`name`** — Snake-case identifier. Convention: `{context}_{descriptive_name}` — e.g. `spring_tenacious_sprout`, `mines_dig_deeper`, `location_bathhouse`, `reina_theme`.
+
+**`description`** — When and where this mood plays, written for the AI music selector. Describes scene context (season, location, activity, weather, emotional state) so the engine can match music to the current game state. This is the most important field for AI-generated music — it is the selection signal.
+
+**`prompt`** — Text prompt for AI music generation. Empty string when `url` provides a direct audio link instead.
+
+**`url`** — Direct link to an audio file (hosted URL or `asset://` reference within the `.sbworld` archive). Empty when `prompt` drives AI generation.
+
+**`updatedAt`** — Millisecond timestamp of last edit.
+
+**`category`** — One of `"standard"`, `"ambient"`, or `"character_theme"`. Absent on system moods.
+
+### System moods
+
+Three fixed-slot entries the engine requires. Use `system:{slot}` as the `id` and include a `slot` field (no `category`):
+
+| slot | Purpose |
+|------|---------|
+| `main_menu` | Title screen, new-game generation, and endgame / credits |
+| `segment_transition` | Brief musical bridge between day segments (Morning → Afternoon, etc.) |
+| `day_transition` | End-of-day / going to sleep |
+
+### Standard moods (`category: "standard"`)
+
+General-purpose tracks the engine selects based on scene context. Typical coverage for a full world:
+
+- **Seasonal outdoor** — 2–4 tracks per season for daytime outdoor scenes (farm work, exploration, town activity)
+- **Weather** — Rain, storms, overcast, snowfall (cross-season or season-specific)
+- **Mines / dungeon** — Per-level-range tracks, rest floors, boss or seal encounters, ambient underground
+- **Events** — Festival days, weekly markets, special occasions
+- **Story beats** — Revelation moments, milestone achievements, tonal shifts
+- **Home** — Morning wake-up, evening wind-down inside the player's house
+
+### Ambient moods (`category: "ambient"`)
+
+Location-specific atmospheric tracks that play when the player enters a named location:
+
+- Shops and services (blacksmith, carpenter, clinic, general store)
+- Social spaces (inn daytime vs. evening)
+- Special locations (bathhouse, deep woods, underground water features)
+
+Ambient moods layer over or replace standard moods based on location context.
+
+### Character theme moods (`category: "character_theme"`)
+
+Per-character leitmotifs. One entry per major character, with two additional fields:
+
+```json
+{
+  "id": "uuid",
+  "name": "reina_theme",
+  "description": "Warm kitchen energy, competitive drive, care expressed through food.",
+  "prompt": "",
+  "url": "...",
+  "updatedAt": 1787103438769,
+  "category": "character_theme",
+  "characterRef": "character-uuid",
+  "referenceImage": "asset://sandboxWorldAssets/uuid"
+}
+```
+
+**`characterRef`** — UUID of the character entry in the `characters` array.
+
+**`referenceImage`** — Asset URL for the character's reference image, used by the AI music generator for visual-to-audio synthesis.
+
+### Music sourcing
+
+Two paths for populating a mood's audio:
+
+1. **Existing audio** — Set `url` to a hosted link or an `asset://` reference to a file bundled in the `.sbworld` archive. Leave `prompt` as `""`.
+2. **AI generation** — Write a `prompt` describing the desired music (genre, tempo, instrumentation, mood, energy). Leave `url` empty. The platform generates audio from the prompt and the mood's `description`.
+
+The Seed phase produces a **plain-language musical theme reference** (genre, tempo, instrumentation, mood register) that informs mood descriptions across all categories.
+
+### Music style (`musicStyle`)
+
+Global style modifiers for AI-generated music, analogous to `artStyle` for images:
+
+```json
+{
+  "musicStyle": {
+    "prefix": "",
+    "suffix": ""
+  }
+}
+```
+
+**`prefix`** — Prepended to every AI music generation prompt. Use for global genre, instrumentation, or production style directions.
+
+**`suffix`** — Appended to every AI music generation prompt. Use for consistent quality tags or stylistic constraints.
 
 ---
 
@@ -274,6 +407,11 @@ story/intention-*.md   → storyTriggers[] (story events, where trigger day exis
 
 characters/*.md        → characters[].name, lastName, type, role, availableFromDay,
                          baseProfile, appearance, spriteSets[]
+
+seed.md (music ref)    → moods[] (system, standard, ambient mood entries),
+                         musicStyle.prefix, musicStyle.suffix
+characters/*.md        → moods[] (character_theme entries, linked via characterRef)
+seed.md (expressions)  → availableExpressions[]
 ```
 
 ### Export skill deliverables
@@ -287,11 +425,10 @@ The `worldbuilder-ainime-export` skill produces formatted output ready for entry
 These fields are auto-generated or configured by the platform — do not produce content for them:
 
 - `worldId` — UUID assigned by the platform
-- `availableExpressions` — system-provided expression list
+- `dailyPlannerDirective` — present for compatibility, typically empty; use `arcManagerGuidance` instead
 - `generateSideCharacterOnNewGame` — platform toggle
 - `characters[].color` — UI display color, set in platform
 - `characters[].image` — generated artwork
-- `characters[].expressionPrompts` — generated expression prompts
 - `locations[].url` — generated background images
 - `artStyle.sprite.same_character_consistency` — platform setting
 - `artStyle.sprite.use_tag_style_prompts` — platform setting
