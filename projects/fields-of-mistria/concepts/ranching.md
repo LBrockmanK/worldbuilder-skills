@@ -1,3 +1,13 @@
+---
+layer: mid
+keywords:
+  - ranching
+  - animals+barn
+  - animals+coop
+  - livestock
+  - eggs+milk
+---
+
 # Ranching
 
 *Eight species, daily care, and the quiet satisfaction of a barn full of animals.*

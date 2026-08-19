@@ -49,6 +49,8 @@ resources:
 
 ## Story Seeds
 
+**Introduction — The player encounters a ghostly figure deep in the Mines.** A translucent woman in priestess robes appears in the darkness underground. She calls herself the Dragon Priestess, says someone sealed her here centuries ago, and asks for help breaking free. Her voice does not waver, and her eyes fix on the player before she finishes the first sentence.
+
 **The Dragon Priestess** — *Condition: A mortal reaches the deep Mines.* Seridia appears as a ghostly image and calls herself the Dragon Priestess. She asks for help. The identity is false. She hid what she was because cunning was the only tool she had. She did not consider whether the deception was necessary until after it worked.
 
 **The Final Seal** — *Condition: All seals broken.* Seridia is freed from centuries of imprisonment. She reveals her true identity: the Witch Queen, not the Priestess. She is grateful. She is also immediately assessing the tactical situation.

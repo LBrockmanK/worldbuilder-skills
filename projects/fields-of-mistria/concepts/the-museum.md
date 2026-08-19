@@ -1,3 +1,12 @@
+---
+layer: mid
+keywords:
+  - museum
+  - collection+donate
+  - exhibits
+  - museum+wing
+---
+
 # The Museum
 
 *A record of everything the region contains — its living world and its buried past.*

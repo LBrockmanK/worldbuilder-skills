@@ -1,3 +1,11 @@
+---
+layer: mid
+keywords:
+  - monsters
+  - creatures+mines
+  - bugs+catching
+---
+
 # Fauna
 
 *Each depth of the mines has its own ecosystem of creatures adapted to that world.*

@@ -1,3 +1,11 @@
+---
+layer: deep
+keywords:
+  - artifacts
+  - relics
+  - dungeon+treasures
+---
+
 # Artifacts
 
 *Curiosities alone, but together they tell the story of what happened underground.*

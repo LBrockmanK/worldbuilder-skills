@@ -54,6 +54,8 @@ Black hair, short and slightly wavy, swept to one side. Brown eyes, dark brown s
 
 ## Story Seeds
 
+**Introduction — the Saturday Market reopens after the bridge is repaired.** Merri greets the player from her antiques stall and introduces herself. She explains that she sources and restores all the furniture herself, that the selection is always changing, and that anything on display might be gone by next week. She laughs as she says it.
+
 **Swiftwind at the Animal Festival.** Condition: Animal Festival, large animal bracket. Merri enters Swiftwind in the large animal bracket. She grooms him that morning, walks the festival grounds comparing him to the other animals, and watches the judging from the crowd. When the results come in she thanks everyone, regardless of placement. She spends the evening at the inn, the only night of the year she stays in Mistria past dark.
 
 **The Caldosia dresser.** Condition: Balor locates an antique dresser from Caldosia. The dresser arrives damaged in ways Merri has not seen before. The restoration needs techniques she does not have yet. She goes to Ryis and Landen for help, and the project turns into a joint effort that tests whether she can work alongside her teachers as a peer rather than a student.

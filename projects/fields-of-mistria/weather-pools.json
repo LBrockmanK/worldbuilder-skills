@@ -1,0 +1,181 @@
+{
+  "Spring": {
+    "Morning": [
+      "Thin fog hangs over the river, burning off where sunlight touches the water",
+      "Dew sits heavy on the grass; the air smells like wet earth and new leaves",
+      "A clear morning with a faint chill — the kind that lifts by mid-morning",
+      "Cherry blossoms drift across the path from the trees along the eastern road",
+      "Birdsong from the deep woods carries all the way into town on the still air",
+      "A soft rain falls, barely more than mist, darkening the cobblestones",
+      "The sky is pale blue and cloudless, the fields still damp from overnight dew",
+      "Light wind stirs the new growth along the riverbank, carrying the smell of turned soil",
+      "A warm front has moved in overnight; the morning feels almost like early summer",
+      "Puddles from last night's rain reflect the sky between the market stalls",
+      "The sun comes up behind a low bank of cloud that glows pink at the edges",
+      "A gentle shower sweeps in from the coast, pattering on rooftops and running off in clear streams"
+    ],
+    "Afternoon": [
+      "Warm sun on the fields; the breeze carries pollen and the hum of insects",
+      "A bright afternoon — the kind where the light makes every color sharper",
+      "High white clouds move slowly inland from the sea, casting brief shadows",
+      "The air is warm and still, heavy with the smell of wildflowers from the narrows",
+      "A spring shower rolls through, steady and unhurried, flooding the gutters for an hour",
+      "Sunlight glitters on the river where it widens near the mill",
+      "The wind picks up from the south, warm and gusty, pulling at laundry on the lines",
+      "Clear skies from horizon to horizon; the mountains to the north stand out sharp and blue",
+      "Bees work the clover in the fields around Sweetwater Farm",
+      "A sudden downpour drives everyone under awnings; it passes in ten minutes and the sun returns",
+      "The afternoon is mild and pleasant, good for nothing more urgent than a walk to the beach",
+      "Clouds build over the deep woods but never quite reach town"
+    ],
+    "Evening": [
+      "The sun drops behind the western ruins, leaving the sky streaked orange and pink",
+      "A cool evening after a warm day; the river sounds louder in the quiet",
+      "Fog rolls in off the sea as the temperature drops, thickening along the beach path",
+      "The last light catches the cherry blossoms, turning them gold for a few minutes",
+      "A light rain begins at dusk, tapping against windows and darkening the thatch",
+      "The evening is still and clear; chimney smoke rises straight up from every house in town",
+      "Frogs start up along the riverbank as the light fades",
+      "A warm breeze from the coast makes the evening feel gentle and unhurried",
+      "The sky turns a deep violet over the mountains as the first stars appear",
+      "Clouds thin out as evening settles, and the air smells of wood smoke and damp grass",
+      "The lamplighter makes their rounds early; the streets are quiet and softly lit",
+      "A brief squall blows through at sunset, rattling shutters and scattering petals across the cobblestones"
+    ]
+  },
+  "Summer": {
+    "Morning": [
+      "The sun is already warm by the time it clears the treeline; the day will be hot",
+      "A haze hangs over the fields, the air thick and still before the heat builds",
+      "Clear blue sky and a salt breeze from the beach — a good morning to be outside",
+      "The river runs low and slow, its banks dry and cracked in places",
+      "Dew evaporates quickly from the grass; by mid-morning the fields are bone dry",
+      "A hot morning with no wind; the town feels sluggish before it fully wakes",
+      "Cumulus clouds pile up white and tall over the mountains, flat-bottomed and bright",
+      "The air smells like sun-warmed pine and dry grass from the eastern road",
+      "A faint breeze off the ocean makes the heat bearable near the shore",
+      "The morning light is golden and intense, throwing long shadows from the bell tower",
+      "Cicadas are already loud in the trees around the narrows",
+      "A thin overcast takes the edge off the heat; the light is flat and even"
+    ],
+    "Afternoon": [
+      "The heat settles over everything like a weight; the cobblestones radiate warmth",
+      "A perfect beach afternoon — the water glitters and the sand is white-hot in the sun",
+      "Thunderheads build over the deep woods, dark at the base, towering bright above",
+      "The afternoon is blazing and still; even the insects have gone quiet",
+      "A sudden thunderstorm breaks the heat — lightning over the mountains, rain hammering the rooftops",
+      "The breeze off the sea picks up in the afternoon, bending the tall grass in the fields",
+      "Shade under the market awnings is at a premium; the square shimmers with heat",
+      "High thin clouds veil the sun just enough to soften the glare",
+      "The river is warm enough to wade in; light plays on the bottom through the clear water",
+      "A warm afternoon with a steady wind from the south, carrying the smell of salt and seaweed",
+      "The air crackles before a storm that never quite arrives; the clouds move on east",
+      "Long golden light stretches across the fields as the afternoon deepens",
+      "The heat refuses to break, the air thick and still, the river low and warm, everything waiting for a storm that has not come"
+    ],
+    "Evening": [
+      "The heat finally breaks as the sun drops; the air cools slowly, almost reluctantly",
+      "A warm evening with fireflies along the riverbank and over the fields",
+      "The sunset is enormous — red and orange piled across the western sky",
+      "Thunder rumbles in the distance after a hot day; the storm stays over the mountains",
+      "The evening is calm and golden; people linger outside longer than usual",
+      "A heavy rain begins at dusk, warm and straight down, steaming on the hot cobblestones",
+      "The sea is flat and pink in the evening light; the beach is quiet",
+      "Bats loop over the river as the last light drains from the sky",
+      "The air is heavy and humid even after dark; no wind at all",
+      "A spectacular sunset paints the clouds in layers of rose and amber",
+      "The evening cools enough to sit outside comfortably; the town feels alive and social",
+      "Heat lightning flickers silently over the ocean, too far away for thunder"
+    ]
+  },
+  "Fall": {
+    "Morning": [
+      "A heavy frost on the grass, melting by mid-morning into dark wet patches",
+      "The air is sharp and cold; breath clouds hang in the still air",
+      "Mist fills the river valley, thick enough to muffle the sound of the bell tower",
+      "A clear autumn morning — the light is low and golden, slanting through orange leaves",
+      "Fallen leaves crunch underfoot on the path through the narrows",
+      "A cold drizzle falls from a grey sky, steady and joyless",
+      "The fields around Sweetwater Farm are stubbled and bare after harvest",
+      "Woodsmoke from every chimney in town; the air smells like oak and apple",
+      "The mountains to the north have fresh snow on their peaks, visible in the clear air",
+      "A brisk wind from the sea strips leaves from the trees along the eastern road",
+      "The morning is cool and bright, the kind of day that makes you walk faster",
+      "Fog clings to the beach until nearly noon, cold and salt-smelling",
+      "A warm wind sweeps through the valley, pulling leaves from every tree at once and filling the air with a slow golden rain"
+    ],
+    "Afternoon": [
+      "Pale sunlight through thinning branches; the shadows are long even at midday",
+      "A gusty wind pushes clouds across the sun, alternating warmth and chill",
+      "The afternoon is cool and grey, the light flat and even",
+      "Leaves blow across the town square in spirals, collecting against walls and doorsteps",
+      "A cold rain begins, driven sideways by wind from the mountains",
+      "The sun breaks through for an hour, warming the cobblestones before the clouds close in again",
+      "The deep woods are a tunnel of red and gold; the canopy is half gone",
+      "An unexpectedly warm afternoon — the last gift of the season, and everyone knows it",
+      "The river runs higher than usual, brown with runoff from the hills",
+      "Geese pass overhead in a ragged V, heading south along the coast",
+      "A dry, cold afternoon with a wind that smells like frost and dead leaves",
+      "Thin rain falls through pale sunshine, making the wet streets shine",
+      "The falling leaf wind picks up, carrying orange and russet leaves in long spirals across the farm and down toward the beach"
+    ],
+    "Evening": [
+      "Darkness comes early; the lamplighter is out before the market closes",
+      "A cold wind drops at sunset and the evening goes still and sharp",
+      "The last light turns the remaining leaves to copper against a grey sky",
+      "Smoke hangs low over the rooftops in the cold, still air",
+      "A raw evening with spitting rain and a wind that finds every gap in clothing",
+      "The evening is clear and cold; stars appear while there is still a band of orange on the horizon",
+      "The smell of wood fires and cooking carries through the quiet streets",
+      "Mist rises from the river as the temperature drops, pooling in the low ground near the farm",
+      "A hard frost is coming — you can feel it in the air before the sun is fully down",
+      "The beach is empty and wind-scoured; waves break rough and grey",
+      "An autumn evening that feels almost warm, the wind gone soft and southerly",
+      "Rain rattles against the windows of the inn; the streets are dark and empty early"
+    ]
+  },
+  "Winter": {
+    "Morning": [
+      "A thick frost covers everything; the world is white and silent before the sun touches it",
+      "Snow fell overnight — a few inches, soft and clean, muffling every sound",
+      "The morning is grey and bitter cold; the river steams where it meets the frozen air",
+      "Clear skies and sharp cold; the light off the snow is almost blinding",
+      "A thin crust of ice on every puddle; the cobblestones are slick and treacherous",
+      "The sun rises late and low, casting long blue shadows across the snow",
+      "A raw morning with a wet wind off the sea; not cold enough for snow, too cold for comfort",
+      "Frost patterns cover every window in town; inside, the fires are banked high",
+      "The deep woods are quiet and still, the branches bare and black against the white sky",
+      "A light snowfall begins at dawn, fine and dry, drifting on a faint north wind",
+      "The air is so cold it hurts to breathe deeply; the sky is a hard, pale blue",
+      "Icicles hang from the eaves of the inn and the general store, dripping slowly in weak sunlight"
+    ],
+    "Afternoon": [
+      "Weak winter sunlight warms nothing but gives the snow a faint golden cast",
+      "A grey afternoon with low clouds; the mountains are hidden completely",
+      "The snow has stopped but the sky stays heavy and white, promising more",
+      "A bitter wind cuts through town from the north, driving everyone indoors",
+      "Pale sun breaks through for an hour; the icicles drip and the snow softens on south-facing roofs",
+      "Snow falls steadily all afternoon, accumulating on every surface",
+      "The afternoon is still and cold; smoke from the chimneys barely moves",
+      "A brief thaw makes the paths slushy and muddy before the cold returns at dusk",
+      "The beach is wild in winter — grey waves crash against the rocks, spray freezing on contact",
+      "Clear cold afternoon; the shadows are already lengthening by early afternoon",
+      "A blizzard moves in from the mountains — heavy snow and wind that whites out the town square",
+      "The river is edged with ice but still flowing; the water is dark and fast in the center"
+    ],
+    "Evening": [
+      "Darkness falls early; by late afternoon the lamplighter is already finishing their rounds",
+      "The cold deepens as the sun sets; the stars come out sharp and hard",
+      "Snow begins again at dusk, falling straight down in the windless air",
+      "The evening is raw and damp, the kind of cold that settles into bones",
+      "Firelight glows from every window in town; the streets are empty and crunching with frost",
+      "A clear evening with a spectacular sunset — reds and purples reflected in the snow",
+      "The wind dies at sunset and the silence is absolute, broken only by footsteps on packed snow",
+      "A light freezing rain coats the branches in glass; everything clicks and chimes in the breeze",
+      "The smell of wood smoke and baking bread drifts from the inn into the cold street",
+      "Heavy clouds roll in from the sea, blotting out the early stars",
+      "The evening is surprisingly mild for winter; the snow drips from the rooftops",
+      "A bitter night is coming — the cold has a weight to it that presses against the windows"
+    ]
+  }
+}

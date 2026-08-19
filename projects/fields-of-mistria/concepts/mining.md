@@ -1,3 +1,13 @@
+---
+layer: mid
+keywords:
+  - mining
+  - mines
+  - dungeon+floors
+  - ores
+  - combat+mines
+---
+
 # Mining
 
 *Five worlds stacked beneath one entrance, each deeper and stranger than the last.*

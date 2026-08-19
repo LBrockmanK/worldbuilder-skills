@@ -123,6 +123,8 @@ He sets the scrap down and picks up another piece. He is already testing the fit
 
 ## Story Seeds
 
+**Introduction — the player's first encounter near the Carpenter's Shop.** Ryis approaches the player, introduces himself, and explains he runs the Carpenter's Shop with his uncle Landen. He steers the conversation toward crafting, fences, furniture, the crafting station near the Town Square, and offers a few tips before stepping back. He mentions the shop sells crafting recipes and tells the player to drop by if they need anything.
+
 **The birdhouse restoration.** Condition: player delivers wood for Landen's commission. A tree south of the woodshop held a birdhouse before the earthquake. The birds that nested there sang. The earthquake took the tree and smashed the house. Ryis wants to rebuild it but keeps putting it off because there is always more town work to do. The project needs a hawthorn tree, a birdhouse, and time. What it means to Ryis changes as he works on it.
 
 **The nail-free joinery.** Condition: nail shortage reaches a bottleneck on town repairs. March cannot supply enough nails. Adeline cannot source more. Ryis researches ancient building techniques and starts experimenting with interlocking joinery that needs no nails. The solution works, but it is slow to master, and the town needs repairs now.

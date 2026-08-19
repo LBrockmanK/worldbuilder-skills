@@ -59,6 +59,8 @@ Blue-purple hair, medium length and swept to one side with a loose fall across t
 
 ## Story Seeds
 
+**Introduction — the player's first days on the farm.** Balor catches up with the player to pass along something he forgot to mention. He explains how the Shipping Bin beside the farmhouse works: the player places items inside, he picks them up overnight, and payment appears by morning. He notes that the town shops depend on stock he gets for them, so everyone in Mistria has an interest in what the player grows.
+
 **The journal.** Condition: player reaches Balor's room at the Inn
 while he is out. His trade journal sits open on the desk. Columns
 of price data going back months show his supply line runs at a loss

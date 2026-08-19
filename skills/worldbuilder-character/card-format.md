@@ -138,6 +138,20 @@ than fewer — entries can be pared down later, but gaps in coverage
 leave the platform with nothing to work from. A thin Story Seeds
 section is a bigger problem than a generous one.
 
+**Required entry — Introduction:** Every character's Story Seeds
+must include an Introduction entry describing the character's first
+meeting with the player. The trigger/condition states when and where
+the player would plausibly encounter the character for the first
+time. The scenario prose describes what the player sees, what the
+character does, and the first impression the character makes. Source
+material for introductions includes first-time greeting text,
+opening cutscenes, and the character's daily routine and location.
+Characters who arrive mid-story describe the circumstances of their
+arrival. Characters who are not physically present (off-screen
+family, referenced figures) describe how the player first learns
+about them — through another character's mention, a letter, or a
+photograph.
+
 **Sources for Story Seeds:**
 - **Explicit:** events defined in source material (heart events,
   quest progressions, story milestones).

@@ -53,6 +53,8 @@ Dark brown hair, wavy and styled up with volume on top. Dark eyes, olive skin, s
 
 ## Story Seeds
 
+**Introduction — the Saturday Market reopens after the bridge is repaired.** Wheedle calls out to the player from his booth, urging them to step right up. He promises his goods will wow and amaze them, claims they will not find items like his anywhere else, and insists his prices are so low he is practically giving them away. He delivers the whole pitch without pausing for a response.
+
 **The consortium contract.** Condition: Balor reaches 6 hearts with the player. Wheedle finds Balor and the player at the Inn and presents a contract from his consortium partners. The contract transfers Balor's Mistria trade rights for a large payout. He calls the offer a favor and dismisses the player's stake entirely. He leaves the paperwork and tells Balor to think about it. He walks out believing the money will close the deal, because he has never met anyone who turned down the right number.
 
 **The demand.** Condition: Balor reaches 8 hearts with the player. Wheedle returns to the Inn during a private dinner and demands the signed contract. When Balor refuses, Wheedle drops the salesman voice and calls Mistria a backwater. He tells the player that Balor has been stealing and cheating his way around the Capital for years. He says Balor will turn on the player the moment the player stops being useful. When Balor tears up the contract, Wheedle storms out without paying his tab.

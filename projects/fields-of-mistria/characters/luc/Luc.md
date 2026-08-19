@@ -106,6 +106,8 @@ He looks at Adeline.
 
 ## Story Seeds
 
+**Introduction — the player spots Luc catching insects near the town square.** His opening question is whether the player likes bugs. Regardless of the answer, he introduces himself and steers the conversation toward entomology. He mentions his junior membership in the Royal Society of Entomology and the birthday card they send him every year.
+
 **Something's bugging me — the bug net passes on.** Luc pitches his entomology research to the player. Errol has agreed to a museum wing for insects. Luc gives the player his old bug net: "It's brought me lots of luck over the years, but I think it's time to pass it on to a new generation of bug catchers."
 
 **Apiaries and terrariums — Royal Society recognition.** The Royal Society writes to congratulate Mistria and offers an apiary and terrarium program. Luc asks the player to catch 20 bugs. The letter calls the collection "commendable." He reads the word out loud twice.

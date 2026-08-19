@@ -1,3 +1,12 @@
+---
+layer: deep
+keywords:
+  - magic
+  - spells
+  - infusion
+  - elemental+magic
+---
+
 # Magic
 
 *Rare, practical, and earned — not studied from books but drawn from the land itself.*

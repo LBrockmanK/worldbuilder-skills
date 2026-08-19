@@ -1,3 +1,11 @@
+---
+layer: surface
+keywords:
+  - homestead
+  - farmhouse
+  - player+farm
+---
+
 # The Homestead
 
 *A run-down farmhouse and overgrown fields, waiting for someone stubborn enough to make them home.*

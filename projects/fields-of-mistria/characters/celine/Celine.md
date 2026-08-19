@@ -122,6 +122,8 @@ Her voice drops.
 
 ## Story Seeds
 
+**Introduction — the player meets Celine in town during the first two weeks.** She checks in to ask how the player is settling in. She offers to lend a hand if they need help, mentioning that she lives just up the road. She makes eye contact, then looks away.
+
 **The lost flower — a seed from childhood.** The Codex
 Mistria describes a flower Celine saw once as a child near the cottage
 ruins east of town. She has been searching for it since. If someone

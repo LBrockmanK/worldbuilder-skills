@@ -54,6 +54,8 @@ Dark skin, short curly dark hair. Gold dangling earrings. She wears a blue dress
 
 ## Story Seeds
 
+**Introduction — Ryis mentions his sister in the Capital.** Ryis talks about a letter from his older sister Wynne. He says she runs a bakery in the Capital and writes him more often than he writes back. He reads one line aloud and laughs. Ryis mentions that Wynne writes every week and tracks his progress from the Capital.
+
 **The Wedding Toast** -- *Player marries Ryis.* Wynne delivers a toast that moves from comedy to tears and back. She tells the room she cried when Ryis left, spotted his crush in his letters, and decided Mistria was where he was meant to be. She welcomes the player to the family before Ryis can say anything.
 
 **The Recipe Request** -- *After player marries Ryis.* Ryis mentions that Wynne is looking for new menu ideas for the bakery. She is asking every family member to contribute a recipe. The request is about the bakery. The real purpose is giving everyone a reason to write back.

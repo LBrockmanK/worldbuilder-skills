@@ -6,7 +6,7 @@
 
 ## Overview
 
-The `baseProfile` field is a single flowing prose block — no internal headers, no JSON sub-fields. It contains two parts written in sequence: the personality/description prose, then the Influence Thresholds, then Future Storylines. The entire block is what the engine reads as "who this character is."
+The `baseProfile` field is a single flowing prose block — no internal headers, no JSON sub-fields. It contains two parts written in sequence: the personality/description prose, then Future Storylines. The entire block is what the engine reads as "who this character is."
 
 Source material: the character note in `notes/`.
 
@@ -40,46 +40,9 @@ These include the Influence Thresholds. If the prose section alone reaches the t
 
 ---
 
-## Influence Thresholds
+## Engine format
 
-After the personality/description prose, write the influence thresholds. These show the engine how the character behaves at each trust level through short in-character scenes — not behavioral descriptions, but actual moments.
-
-### The six bands
-
-| Band | Range | Character state |
-|---|---|---|
-| Hostile | -50 to -21 | Active avoidance or open conflict. Refuses the relationship or is in genuine opposition. |
-| Cold | -20 to 0 | Transactional minimum. Required interactions completed; nothing volunteered. |
-| Neutral | 1 to 25 | Functional. Answers what is asked; nothing extra. Default with strangers. |
-| Warming | 26 to 50 | Attention begins to show. Volunteers unrequested information, small redirections. |
-| Open | 51 to 70 | Personal material surfaces: specific memories, private observations, things not ordinarily shared. |
-| Trusted | 71 to 100 | Full inner life: the complete argument, the thing they don't say out loud. |
-
-### Deriving bands from the Relationships section
-
-The character note's Relationships section describes the behavioral axis in prose. Map it to bands:
-
-- **Default register** → Neutral band. This is the baseline the engine starts from.
-- **Distance / coldness** → Cold band. What the note describes as distance is the Cold state; amplify slightly for Hostile.
-- **Active conflict / friction** → Hostile band. If the note describes how this character behaves in genuine opposition, that is Hostile. If not described explicitly, extrapolate from the distance pattern.
-- **Warmth beginning to show** → Warming band. The first signs of engagement described in the note.
-- **Personal material, specific sharing** → Open band. What the note describes as warmth becoming present.
-- **Full inner life, no reserve** → Trusted band. The deepest end of what the note describes as warmth.
-
-If the Relationships section describes variation by relationship type (authority vs. peers, etc.), reflect that variation across bands where it's significant — particularly in high bands.
-
-### Format rules
-
-- **All six bands required.** A card with missing bands is incomplete.
-- **2–4 examples per band** showing breadth of situations.
-- **Low bands include active conflict** — not only passive avoidance. What happens when forced into proximity? What if a topic they care about regardless of trust comes up?
-- **High band:** include examples distinguishing platonic and romantic registers, marked with context in parentheses. No subheadings.
-- Write examples as compact scenes. Separate with blank lines.
-- **Describe what THIS character specifically does.** Never write generic warmth/distance language the engine already handles automatically.
-
-### Engine format
-
-Used in Influence Thresholds and Future Storylines:
+Used in Future Storylines:
 
 - Speech: plain text
 - Narration/action that appears in play: `_asterisks_`
@@ -90,14 +53,19 @@ Used in Influence Thresholds and Future Storylines:
 
 ## Future Storylines
 
-After the influence thresholds, write the Future Storylines section. Source material: the Story Seeds section of the character note. Each Story Seed entry (title, trigger/condition, scenario prose) maps to one storyline: the title becomes the storyline label, the trigger/condition becomes the storyline context, and the scenario prose is reframed from definite to possibility-style.
+After the personality/description prose, write the Future Storylines section. Source material: the Story Seeds section of the character note. Each Story Seed entry (title, trigger/condition, scenario prose) maps to one storyline: the title becomes the storyline label, the trigger/condition becomes the storyline context, and the scenario prose is reframed from definite to possibility-style.
 
 - Each entry phrased as possibility: "may surface," "could take," "there is a possibility that"
 - Engine format applies (speech, asterisks, parentheses, backticks)
 - Do not script outcomes — give the engine material to work from and let it find the moment
 - Write for robustness: arcs that remain interesting whether or not a specific beat fires
 
-**Introduction** — The character's introduction is its own story note in `notes/` (not a Storylines entry and not in the card). Do not add an Introduction entry here. Verify the introduction note exists before finalizing the character export.
+**Introduction** — The character's Introduction Story Seed exports as
+a Future Storyline like any other seed. The trigger condition becomes
+the storyline context. The scenario prose is reframed to
+possibility-style, same as other Future Storylines. Every character
+must have an Introduction seed before export; a missing introduction
+is a blocking deficiency.
 
 ---
 
@@ -110,10 +78,6 @@ After the influence thresholds, write the Future Storylines section. Source mate
 - [ ] Irrational behavior with emotional root
 - [ ] Self-image gap stated directly
 - [ ] Plain language throughout; no literary flair
-- [ ] Token count in target range (prose + thresholds combined)
-- [ ] All six influence bands present
-- [ ] 2–4 examples per band
-- [ ] Low bands include active conflict, not only avoidance
-- [ ] High band has both platonic and romantic examples
+- [ ] Token count in target range (~1500 main, ~900 side)
 - [ ] Future Storylines present and phrased as possibility (if Story Seeds included)
-- [ ] Introduction note exists separately; no Introduction entry in the card
+- [ ] Introduction Story Seed present and exported as a Future Storyline

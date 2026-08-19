@@ -45,6 +45,8 @@ A chicken. White feathers, red comb, black eyes. She holds herself upright with 
 
 ## Story Seeds
 
+**Introduction — The player encounters Hayden's prize-winning chicken near the farm.** A chicken clucks at the player, chest puffed out, head high. This is Henrietta, Hayden's prize-winning chicken, and her blue ribbons hang on the coop wall behind her. She pecks the ground without acknowledging the greeting, then squawks and flaps her wings.
+
 **Game Night** — *Condition: Social event at Hayden's farm.* March arrives and Henrietta pecks him. March complains. Hayden defends her. Ryis says she is territorial, not mean. Valen explains she has been Hayden's closest companion since Greta passed. Hayden brings her a bowl of popcorn to calm her down.
 
 **The Socialization Project** — *Condition: 4-heart event with Hayden.* Hayden worries that Henrietta's pecking will get her blue ribbons revoked at a judging. He cannot bring himself to discipline her. "I raised her from an egg, you know?" He decides to send away for books on the subject.

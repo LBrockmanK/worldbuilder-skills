@@ -108,6 +108,8 @@ Her voice falters.
 
 ## Story Seeds
 
+**Introduction — the player runs into Adeline around town in the first week.** She stops mid-sentence when she notices the newcomer, a half-finished list visible in her hand. She greets the player by name and apologizes for being distracted, mentioning forms she needs to fill out later. She says she cannot wait to see what they do with the old farm.
+
 **The collapse — overwork catches up.** She has been running on
 lists and willpower for weeks. Friends have warned her. Elsie has
 hidden the tea. She does not stop until her body forces it. When

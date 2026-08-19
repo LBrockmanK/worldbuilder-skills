@@ -53,6 +53,8 @@ Blond hair swept up and back. Blue eyes, light skin, sharp features, a small ear
 
 ## Story Seeds
 
+**Introduction — the Saturday Market reopens after the bridge is repaired.** Taliferro introduces himself as the host of his Cooking Challenge booth. He says he does not know what the Merchant's Association is thinking, sending him and Wheedle out to a place like this, and that he does not have high expectations. He tells the player to check the Challenge Board on Saturdays and complete each round in order. He wishes the player luck and says they will need it.
+
 **The replacement. Stillwell takes his booth.** When the Saturday Market upgrades a second time, Taliferro's booth is gone. Stillwell and Zorel fill the expanded market instead. The Royal Chef from the Capital, who called the townsfolk peasants and yokels, loses his Saturday stage to a local vendor. Whether he returns to the Capital quietly or shows up in Mistria on a non-Saturday to see who replaced him is open.
 
 **The lifetime ban. Seridia asks the wrong question.** Seridia asks Taliferro if running a cooking contest is what he really wants to be doing with his life. He gives her a lifetime ban from his booth. The ban is the most authority he can exercise, and it is directed at the one question he cannot answer.

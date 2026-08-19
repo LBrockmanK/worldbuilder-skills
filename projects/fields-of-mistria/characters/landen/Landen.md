@@ -104,6 +104,7 @@ He changes the subject to the weather. He does it so smoothly that Errol lets hi
 
 ## Story Seeds
 
+**Introduction — the player's first visit to the Carpenter's Shop.** Landen introduces himself outside the shop, leaning against the doorframe with one hand on his hip. He mentions his nephew Ryis, who runs the shop now, and lists what they sell, crafting stations, furniture recipes, farm buildings, home upgrades, pausing between each item.
 **The Capital commission.** Condition: a request arrives for furniture in the Capital style. A request arrives that needs Capital-grade joinery only Landen knows. He insists it is Ryis's job. Ryis does not know the technique. Landen has to decide whether to teach it, take over, or let Ryis figure it out and risk the reputation.
 
 **THUNDERSTRUCK.** Condition: someone asks about the legendary axe. Landen and Errol tell the story together, contradicting each other on every detail. The axe was forged from a lightning-struck tree. Who felled the tree, who shaped the handle, who finished the blade changes with the audience. The listener leaves with no clear version of what happened, which is the point.

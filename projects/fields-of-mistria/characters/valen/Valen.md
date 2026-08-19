@@ -54,6 +54,8 @@ Short lavender hair, wavy and loosely swept back. Deep blue eyes, fair skin, sle
 
 ## Story Seeds
 
+**Introduction — the player arrives in Mistria.** Valen greets the player and confirms their name. She introduces herself as the town doctor who runs the Clinic, asking the player to skip the formalities and just call her Valen. She checks whether the player is settling in and advises them to get plenty of sleep and eat well to keep their energy up for farm work.
+
 **The ancestral journal — she reads a diagnosis that matches a living person.** Valen finds entries in her family's medical journals that describe personality traits as diseases. "Punmania" matches Holt's puns. "Churlish behavior" matches March's temper. "Laughing sickness" matches Juniper's cackle. She visits each of them with questions and a notebook. The exercise is half joke and half genuine inquiry, and she does not draw a clean line between the two.
 
 **The father's story — an older resident shares an unknown detail about her father.** Someone from the older generation tells a story about Valen's father that she has not heard before. Errol mentions a hiking trip. Landen describes a cart accident. Elsie recalls his opera attendance. Each story adds to a picture of a man she thought she knew completely, and each one lands on the question of whether she is continuing his work or repeating his life.

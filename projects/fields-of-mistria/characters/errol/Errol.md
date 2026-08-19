@@ -53,6 +53,8 @@ Older man, bald on top with short gray hair at the sides and a full mustache. Da
 
 ## Story Seeds
 
+**Introduction — the player arrives in Mistria.** Errol approaches the player and asks if they are the new farmer everyone has been talking about. He introduces himself as the curator of the new Museum and says they share a common goal: raising Mistria's Renown. He suggests the player consider donating items to the Museum's collections, mentioning rewards for completed sets.
+
 **Strange noises in the mines — the mines are closed after the earthquake.** Errol has been hearing sounds from the sealed tunnels. He does not name what he thinks they are. He mentions it to whoever asks and changes the subject before anyone suggests going in, because reopening the mines means risking what is down there, and he spent decades down there knowing what that risk costs.
 
 **The Saturday Market returns — the bridge is repaired.** He remembers the Saturday Market as the best day of the week: the hustle, the food, the rounds he used to make with Landen and Valen's father. When the bridge is fixed and the market reopens, he walks the stalls looking for what has changed and what has not.

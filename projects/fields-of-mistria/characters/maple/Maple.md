@@ -105,6 +105,8 @@ She makes the cute face.
 
 ## Story Seeds
 
+**Introduction — the player walks through town and Maple runs up to them.** She bounces up and introduces herself immediately, asking if the player is the new farmer. She asks where they lived before and whether they have been to the Capital. She brings up the royal family unprompted and declares herself an expert on the subject.
+
 **Lost and found — the Dragonguard breaks into a council meeting.** Maple, Luc, and Dell burst into a town council session demanding to help protect Mistria. Maple negotiates: "We're your eyes and ears in town, Lady Adeline!" She reports that Eiland snuck seconds on strawberry shortcake. She leaves with extra snack funding.
 
 **The spy network — Maple proposes intelligence operations.** Maple wants a royal spy network to monitor the town. Her list of observations: who ate what at the Inn, who visited the bathhouse twice, and who Eiland is talking to. The adults find it funny. Maple does not.

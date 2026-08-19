@@ -89,6 +89,8 @@ She picks up the glass again.
 
 ## Story Seeds
 
+**Introduction — the player visits the Manor House.** She notices the newcomer and asks who they are, complimenting their name. She introduces herself and explains that she lives at the Manor House with her niece and nephew, Adeline and Eiland. She mentions that she once lived in the Capital herself and invites the player to stop by anytime for a chat, gossip, or romantic advice.
+
 **The Shooting Star Festival — destinies linked.** Every year at
 the end of summer, the town gathers at the summit to watch the
 meteor shower. Elsie organizes it. She hands out Star Brooches and

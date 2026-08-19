@@ -51,6 +51,8 @@ Compact, sturdy build. Short, voluminous magenta curls, styled up and away from 
 
 ## Story Seeds
 
+**Introduction — the Saturday Market reopens after the bridge is repaired.** Vera greets the player and asks if they are looking for a new hairstyle. She introduces herself as a traveling hair stylist who has been all over Aldaria. She offers to teach the player any hairstyle she knows, as long as they put down their coins.
+
 **The Saturday Market returns.** Bridge repair complete. Vera arrives at her stall for the first time since the earthquake. She greets returning customers, checks who changed their hair while she was gone, and catches up on months of missed gossip. She is glad to be back but has to rebuild momentum with a town that managed without her.
 
 **The cooking contest.** Reina's 8-heart event triggers. Vera judges the Aldarian Cooking Contest alongside Darcy and Taliferro at the Sleeping Dragon Inn. She tastes three courses and gives specific feedback on each: mushroom flavor, curry aroma, pie crust texture. She presses Taliferro to admit he enjoyed the food and formally announces the Aldarian Star award to Reina.

@@ -48,6 +48,8 @@ resources:
 
 ## Story Seeds
 
+**Introduction — Caldarus appears in Mistria after the seal cracks.** The earthquake that fractures the ancient seal sends a pulse through the deep woods. The stone dragon in the clearing shifts, and a voice speaks aloud for the first time in centuries. Caldarus steps into view, tall, horned, wearing a turquoise robe, and speaks slowly, pausing between words. He asks where he might find wheat powder.
+
 **The Invisible Guardian** — *Condition: Caldarus in the deep woods, not yet in town.* Caldarus protects people near his territory without being seen. Celine almost falls into the Deep Woods pond and invisible arms pull her back. She thinks it was a ghost. It was not a ghost.
 
 **The Mysterious Orders** — *Condition: Caldarus in the deep woods, not yet in town.* Balor receives orders written in an archaic hand, left by the Deep Woods stairs. Items are described strangely: "wheat powder" for flour. Payment is in ancient coins worth more than the goods. Balor leaves the deliveries on a designated stump and does not ask questions.

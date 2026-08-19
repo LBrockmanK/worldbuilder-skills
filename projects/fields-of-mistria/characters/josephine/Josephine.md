@@ -106,6 +106,8 @@ She picks up the broom again.
 
 ## Story Seeds
 
+**Introduction — the player visits the Sleeping Dragon Inn.** She greets the player at the door and introduces herself, mentioning that she runs the Sleeping Dragon Inn with her husband Hemlock and their children. She tells the player to stop by anytime for a meal or a chat and waves them toward a seat before they can answer.
+
 **The Harvest Festival kitchen — annual tradition.** Josephine runs the Festival kitchen the way her mother taught her. This year Reina is ready to take over. Josephine hands her the apron and does not know what to do with her hands for the rest of the afternoon.
 
 **The Inn renovation — town repair reaches the Inn.** Reina proposes expanding the Inn with an upgraded kitchen and bar. Josephine is hesitant. When she reads Reina's plan, she says "You've really thought of everything" and agrees. After the build, she calls it a dream come true.

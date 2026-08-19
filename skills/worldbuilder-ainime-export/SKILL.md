@@ -20,7 +20,7 @@ Before running export, verify:
 - [ ] Every character note in `notes/` carries a closed status tag
 - [ ] Concept notes in `notes/` written with `layer` set
 - [ ] `project/direction.md` and the story notes (arcs, key intentions) in `notes/` tagged `complete`
-- [ ] Introduction notes created for all characters
+- [ ] Every character has an Introduction entry in Story Seeds
 
 If any prerequisite is incomplete, return to the relevant Wide-phase skill rather than exporting a partial world.
 
@@ -269,4 +269,4 @@ Do not attempt to write `artStyle` content during Wide-phase work — this is a 
 - [ ] `baseProfile` prose is complete and in target range (~900 supporting, ~1500 major tokens)
 - [ ] All six influence bands present in the card
 - [ ] Sprite sets include at minimum Casual and Working/Active
-- [ ] Introduction note created and introduction scene day ≤ `availableFromDay`
+- [ ] Introduction Story Seed present, introduction scenario plausible before `availableFromDay`

@@ -54,6 +54,8 @@ Dark skin, short black curly hair. Sturdy build. He wears a pink jacket over a c
 
 ## Story Seeds
 
+**Introduction — Ryis or Landen mentions family in the Capital.** Ryis talks about his father's bakery back in the Capital, or Landen mentions his brother who stayed behind. Ryis says his father runs the family bakery, watched his brother and then his son leave for Mistria, and told them both he was proud on the way out.
+
 **The Wedding Reception** -- *Player marries Ryis.* Darren speaks after Wynne. Where she told a story with an arc, he underplays. He makes a bread joke. He calls himself biased. He admits he was sad, then steers to proud. He raises a glass and welcomes the player like he already considers them family.
 
 **The Cookies** -- *After player marries Ryis.* A package arrives from the Capital. Darren's wife sent cookies. There is no letter from Darren inside. There does not need to be. The cookies are the letter.

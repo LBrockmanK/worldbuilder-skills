@@ -111,6 +111,8 @@ DELL: *[sad]* "I'd still try."
 
 ## Story Seeds
 
+**Introduction — the player moves to the old farm.** Dell greets the player by asking if they are the one moving to the old farm, then introduces herself by name. She announces that the place is haunted, then clarifies she means haunted with monsters, because she saw one hiding behind a tree. She tells the player to let her know if there is any trouble and she will take care of it, not blinking.
+
 **The candy inspection.** Condition: Balor receives a chocolate shipment. Dell and the Dragonguard arrive to escort and inspect the delivery. She announces the inspection is official, demands no special treatment from her father's supplier, and eats a piece as a quality check. Balor plays along. Whether the inspection finds anything depends on whether Balor decides it should.
 
 **The forge request.** Condition: Dell visits Olric's forge for a second time. She wants to make a sword. Olric says no. She asks about a smaller sword, then a knife, then tongs. She does not give up, and Olric has to decide how much of his afternoon he is willing to lose to a child who will not leave.

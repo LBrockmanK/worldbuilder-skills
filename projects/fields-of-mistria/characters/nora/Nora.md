@@ -92,6 +92,8 @@ She picks up the cloth again.
 
 ## Story Seeds
 
+**Introduction — the player visits the General Store.** She uses the player's name before they introduce themselves. She introduces herself as the owner of the General Store and head of the Chamber of Commerce. She brings up the Saturday Market and explains that it has been on hiatus since the earthquake collapsed the bridge into town. She mentions that if the bridge were repaired, merchants could return.
+
 **The mystery number — something does not add up.** A figure in the ledger is off. It is not a large amount. She cannot let it go. She reviews every transaction until she finds it, and the answer is Holt's lunch sauce on the page.
 
 **The Saturday Market revival — the bridge reopens.** The bridge is repaired and traveling merchants can reach Mistria again. Nora has been planning the Saturday Market's return since the earthquake. The first market day is hers to organize, and she has been costing pennants for next year since before this year's market opened.

@@ -120,6 +120,8 @@ A pause.
 
 ## Story Seeds
 
+**Introduction — the player visits the Sleeping Dragon Inn kitchen.** She recognizes the player as the new farmer and introduces herself, explaining that her family owns the Sleeping Dragon Inn. She asks what brought them to Mistria and mentions her passion for locally sourced food. She invites the player to stop by and try her cooking sometime.
+
 **The culinary competition — Mistria gets noticed.** A
 panel of judges is looking for regional cooks to compete.
 Reina is selected to represent Mistria. She has never cooked

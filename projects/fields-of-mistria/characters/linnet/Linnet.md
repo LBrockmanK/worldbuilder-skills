@@ -69,6 +69,8 @@ Dark skin, light purple hair swept up with a veil trailing behind. She wears sil
 
 ## Story Seeds
 
+**Introduction — A family member mentions Linnet's past.** Eiland mentions his mother while explaining his interest in old ruins. He says she held the lantern while he traced inscriptions as a child and that she used to adventure through a guild before she married his father. Eiland mentions that his mother carries a sword, and adds that she taught him how to hold one before he could read.
+
 **The Mistril Rank Tour** -- *Town reaches highest Renown rank.* Linnet asks the player to walk her through the rebuilt town. She reads every change against Adeline's letters — the bridge, the mill, the inn. She notices things Adeline did not write about and asks why. The questions are not accusations. They are a mother confirming her daughter is eating.
 
 **The Wedding Speech** -- *Player marries Adeline or Eiland.* Linnet speaks after Wiscar. Her voice is steady. Her hands are not. She tells the player she tracked the romance in letters and is not surprised. She offers distance, not advice: "We're only a few day's carriage ride away."

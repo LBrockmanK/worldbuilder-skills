@@ -1,3 +1,12 @@
+---
+layer: surface
+keywords:
+  - farming
+  - crops+seeds
+  - harvest
+  - planting+soil
+---
+
 # Farming
 
 *Seasonal labor, patient growth, and the work that holds a homestead together.*

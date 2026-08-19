@@ -1,3 +1,13 @@
+---
+layer: surface
+keywords:
+  - restoration
+  - rebuild
+  - repair+town
+  - request board
+  - town rank
+---
+
 # Town Restoration
 
 *An earthquake-damaged village rebuilt through labor, community, and stubbornness.*

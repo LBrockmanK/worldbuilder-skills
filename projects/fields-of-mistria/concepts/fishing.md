@@ -1,3 +1,14 @@
+---
+layer: mid
+keywords:
+  - fishing
+  - fish
+  - rod+bait
+  - pond+fishing
+  - river+fishing
+  - ocean+fishing
+---
+
 # Fishing
 
 *Every body of water holds something different, and what bites depends on when you cast.*

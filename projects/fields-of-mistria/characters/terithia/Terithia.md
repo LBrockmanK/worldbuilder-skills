@@ -50,6 +50,8 @@ Short white hair, brown skin, stocky build that shows years of physical work on 
 
 ## Story Seeds
 
+**Introduction — the player walks near the Beach.** Terithia hails the player and introduces herself. She mentions that Adeline's plan to bring a new farmer to Mistria has been floating around for a while, and she does not realize someone has actually come. She points out her Tackle Shop by the Beach, where she sells fishing rods and fresh-caught fish, and invites the player to stop by.
+
 **The Big One surfaces — the water clears enough to see the shadow.** Terithia has tracked a shadow along the coast near the ruins for years. One day the water is clear enough to see it. She has to decide whether to cast or watch. She picks up the rod, sets it down, picks it up again, and stands at the edge longer than she has ever stood without casting.
 
 **The story that lands wrong — Dell goes looking for something from a tall tale.** One of her tall tales about leviathans or sea shadows sends Dell looking for something real. She tells the story for the reaction. Now the reaction has consequences and the story is no longer hers to control.

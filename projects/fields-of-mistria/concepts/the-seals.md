@@ -1,3 +1,13 @@
+---
+layer: deep
+keywords:
+  - seals
+  - seal+chamber
+  - dragonsworn
+  - ancient+ruins
+  - dragon+tablet
+---
+
 # The Seals
 
 *Ancient chambers beneath the earth, holding something that should not have been disturbed.*

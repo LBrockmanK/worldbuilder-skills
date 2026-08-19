@@ -1,3 +1,13 @@
+---
+layer: surface
+keywords:
+  - weather
+  - rain
+  - snow
+  - storm
+  - blizzard
+---
+
 # Weather
 
 *Rain changes the mood before it changes anything else.*

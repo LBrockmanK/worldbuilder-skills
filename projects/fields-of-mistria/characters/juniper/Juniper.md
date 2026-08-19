@@ -115,6 +115,8 @@ A pause.
 
 ## Story Seeds
 
+**Introduction — the player first visits the Bathhouse.** Juniper sizes up the player and introduces herself as the owner of Mistria's one and only Bathhouse, calling the village a backwater. She mentions having her own reasons for being here, then suggests the player stop in often, looking them over and observing they could use it. She follows this with a loud, theatrical laugh.
+
 **The super smart frog — early acquaintance with the player.** She found a frog east of town while tracking ley lines that she believes is magically enhanced. She investigated for weeks, demanded museum archive access from Errol, and planned experiments based on folk tales. The frog vanished. She asks the player to bring her any frogs they find and admits the loss stung more than she expected.
 
 **Potions and test subjects — the player visits the Bathhouse.** She tests potions on willing townsfolk who do not ask questions. She tells the player they will become her "guinea pig" to protect the others. The potions promise one result and deliver another. She blames the subject, goes quiet, fixes the problem, and calls them an excellent test subject.

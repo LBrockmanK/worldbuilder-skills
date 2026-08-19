@@ -45,6 +45,8 @@ A golden retriever. Brown and cream coat, black eyes, rounded build. Compact and
 
 ## Story Seeds
 
+**Introduction — The player visits the Bathhouse and meets the dog at the front desk.** Dozy barks once from behind the front desk. His collar reads "Dozy." He tilts his head at the newcomer, then wags his tail. The tail does not stop.
+
 **The Front Desk** — *Condition: Someone visits the Bathhouse.* Dozy is at the front desk. He may be asleep or watching with one eye. Juniper says he knew the visitor would show up. She had her doubts.
 
 **The Wine Ban** — *Condition: Someone asks about Bathhouse policies.* Juniper explains that Dozy will not allow wine in the bath. She is a wine lover. She follows the rule without argument. The reason for the ban has never been stated.

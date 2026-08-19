@@ -56,6 +56,8 @@ Broad build, tall. Warm tan skin, brown hair swept back. His spring outfit is a 
 
 ## Story Seeds
 
+**Introduction — the player's first week on the farm.** Hayden stops by to ask how the soil is holding up after the fields sat fallow for so long. He punches the air and says the fields must be eager for crops. He skips small talk and starts listing which crops grow best in Mistria's soil this time of year.
+
 **Henrietta's socialization.** Condition: early friendship.
 Henrietta snaps at a guest during game night. Hayden defends her, then worries in private that her territorial behavior will cost her at competition. He orders books on chicken psychology and plans outings to teach her to tolerate other people. The project reveals how he parents: research first, structured plan second, unwillingness to use force ever.
 

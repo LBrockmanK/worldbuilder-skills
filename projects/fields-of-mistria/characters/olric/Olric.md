@@ -107,6 +107,8 @@ He talks about the mines the way someone talks about a home they moved out of. T
 
 ## Story Seeds
 
+**Introduction — the player arrives in town as the new farmer.** Olric spots the player and stops mid-stride, asking if they are the new farmer everyone has been talking about. He introduces himself by name, mentions he lives at the Blacksmith's with his brother, and says he hopes they can be friends.
+
 **Mine reopening.** Condition: mines reopen after safety clearance. Olric has been waiting for this since the earthquake. He knows the layout, the copper seams, the springs. Whether he goes back to mining or stays at the forge with March is a choice no one has asked him to make yet.
 
 **The piano recital.** Condition: Eiland suggests a performance. Olric plays by ear and Eiland has called him self-taught. A recital would put his playing in front of the town. He does not get nervous about physical feats. Whether he gets nervous about this reveals something different.

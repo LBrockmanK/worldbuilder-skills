@@ -112,6 +112,8 @@ He works in silence for the rest of the evening. If Olric asks anything else, Ma
 
 ## Story Seeds
 
+**Introduction — the player's first time approaching the Blacksmith's.** March opens with silence, then gives his name and asks what the player wants. He tells the player he does not see what a new farmer has to do with him. He states that the town does not need an outsider to solve its problems, regardless of what Adeline says, and tells the player not to get in the way.
+
 **The newcomer.** Condition: early days after the player arrives. March confronts the player at their farm. He has heard the town praising the new arrival and resents it. He says the player is in over their head, will quit when things get hard, and has stolen attention from people who earned it. He gives the player something useful anyway and says he does not want to be blamed if they fail. The hostility is real. So is the gift.
 
 **Forge day.** Condition: the forge is overwhelmed with post-earthquake orders. Olric recruits the player to help. March objects but allows it. Working side by side at the anvil, March and the player fall into a rhythm. Afterward March thanks the player in a single awkward sentence and leaves the room. Balor later reports that when he reminded March the player helped make the bridge repair possible, March got flustered.

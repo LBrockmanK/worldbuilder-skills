@@ -70,6 +70,8 @@ Dark skin, pink hair worn in a long braid. Trimmed beard. Gold earrings. He wear
 
 ## Story Seeds
 
+**Introduction — Adeline mentions her father's absence.** Adeline refers to her father while handling a town matter the Baron would normally oversee. She states the facts: what he built, that the Crown called him to the Capital, and that she runs things now. Adeline explains that Mistria's systems exist because her father designed them and then left them in her hands.
+
 **The Mistril Rank** -- *Town reaches highest Renown rank.* Wiscar and Linnet visit Mistria for an official ceremony. Wiscar announces the King has created a new Town Rank for Mistria. He delivers the decree in full ceremony voice, then drops it to tell the player they are "a true Mistrian, through and through." The ceremony voice stops. The man speaks directly.
 
 **The Wedding Speech** -- *Player marries Adeline or Eiland.* Wiscar steps up to address the town. He calls the player family. For Adeline, he says Mistria is safe in their hands. For Eiland, he says their sights are set on more than Mistria's future.

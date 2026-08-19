@@ -51,6 +51,8 @@ Brown wavy hair swept up from the forehead. Amber eyes behind glasses, warm oliv
 
 ## Story Seeds
 
+**Introduction — the Saturday Market reopens after the bridge is repaired.** Louis greets the player with a formal salutation and introduces himself by name. He tells the player that every garment at his booth he cuts and sews himself. He mentions his stock changes weekly and advises the player not to wait if something catches their eye.
+
 **The Saturday Market opens.** Condition: bridge repair quest complete. Louis arrives at his stall for the first time since the earthquake cut off outside access. He sets up at 6 AM, arranges his stock, and greets the player as though they have always been here. His greeting is a sales pitch: he cuts and sews every garment himself, the stock changes weekly, and if you see something you like, do not wait.
 
 **Mortimer at the Animal Festival.** Condition: Animal Festival occurs. Louis enters Mortimer in the small animal bracket. Mortimer places 2nd or 3rd depending on the competition. Louis says "How wonderful!" regardless of the result. He spends the rest of the festival at chat areas and the souvenir booth, ending the evening at the inn as part of a storytelling pair with Merri.

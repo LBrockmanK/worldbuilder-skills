@@ -51,6 +51,8 @@ Dark brown hair in a side braid. A red flower pins her hair in spring and summer
 
 ## Story Seeds
 
+**Introduction — the Saturday Market reopens after the bridge is repaired.** Darcy greets the player from behind her cafe stall, introducing herself and her booth in the same breath. She offers coffee and sweet treats, everything she makes fresh, and invites the player to stop by whenever they are in the mood.
+
 **Market reopening.** Condition: bridge repair complete. The Saturday Market opens for the first time since the earthquake. Darcy arrives at 6 AM with a full bag of beans, sets up her stall, and grinds the first cup of the season.
 
 **The cooking contest.** Condition: Reina reaches 8 hearts. Darcy is nominated as a judge for the Aldarian Cooking Contest alongside Taliferro and Vera. She says she did not expect to be chosen. She asks about take-home containers and takes the lead in deliberation when Taliferro stalls the process.

@@ -51,6 +51,8 @@ Dark blue hair, long and shaggy, falling past his shoulders. Gray eyes, pale ski
 
 ## Story Seeds
 
+**Introduction — the player visits the Saturday Market after the plaza upgrade.** Stillwell greets the player by name before they have met. He says he sees the past, present, and future, all at once, and that he has come to Mistria on urgent business. He explains that the Gate Between Worlds is spawning monsters underground and asks for the player's help. When the player asks about his booth, he says saving the world does not pay rent and he sells fortunes on the side.
+
 **The first reading.** Condition: player meets Stillwell at the market for the first time. He greets the player by name before they have met. He says he sees the past, present, and future. He explains the Gate Between Worlds is spawning monsters underground and the player must stop them. Then the player asks about his booth and he says he has to make a living. He treats world-saving as one job and fortune-telling as the other, and he does not rank them.
 
 **The refused fortune.** Condition: player approaches the booth with fewer than 100 tesserae. He apologizes and says he cannot see what will come to pass without tesserae to "light the way." He presents the fee as a mystical requirement, not a payment. The player leaves without a reading and without knowing whether the money was the real barrier or a convenient excuse.

@@ -108,6 +108,8 @@ He picks up the broom and starts sweeping. The subject is closed, but the broom 
 
 ## Story Seeds
 
+**Introduction — the player's first visit to town.** Holt greets the player and immediately drops a cow pun about moving into the old farm. He laughs at his own joke, waits for the player's reaction, and doubles down with another pun if they do not volley one back. He then explains that he and his wife Nora run the General Store, that their daughters Celine and Dell help out, and tells the player to stop by for supplies.
+
 **The pun that lands.** Condition: Seridia arrives in Mistria. Seridia walks into the General Store and demands entertainment. Holt tells a dragon pun. She analyzes it aloud, declares she is amused, and calls him "you funny little man." She comes back for more. He has never had an audience that takes his puns apart with this kind of attention.
 
 **The cottage repair.** Condition: something breaks at Celine's cottage. Celine's roof leaks or a shelf falls. Holt arrives before she asks. He fixes it, checks the other shelves while he is there, and invites himself for dinner. Whether Celine wanted the help is a question neither of them asks out loud.

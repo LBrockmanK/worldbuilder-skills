@@ -94,6 +94,8 @@ A pause. His voice changes.
 
 ## Story Seeds
 
+**Introduction — the player encounters Eiland in town during the first two days.** He asks if the player is out exploring and starts talking about Mistria's historical sites. He mentions that the area is a hot spot for archaeology and suggests trying a shovel or pickaxe on any raised ground.
+
 **The Dragonsworn Armor — the stele holds a secret.** The
 ancient stele on the Manor grounds depicts a legendary set of armor
 tied to Mistria's founding. Eiland has been translating its

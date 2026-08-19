@@ -1,3 +1,12 @@
+---
+layer: surface
+keywords:
+  - forageables
+  - wildflowers
+  - mushrooms
+  - herbs+plants
+---
+
 # Flora
 
 *Every habitat has its own palette of growing things, from sunlit meadows to volcanic vents.*

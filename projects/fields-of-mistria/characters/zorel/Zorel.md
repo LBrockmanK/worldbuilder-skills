@@ -54,6 +54,8 @@ Lean, wiry frame. Dark brown skin. Dark purple-black hair, short and tousled, fa
 
 ## Story Seeds
 
+**Introduction — the player visits the Saturday Market after the plaza upgrade.** Zorel greets the player and introduces herself. She gestures at the crystals on display and asks the player to guess what they are for. She explains they are Song Crystals that play music through a Crystal Resonator, which she also sells. She mentions she is a musician by trade and that the crystals let her make music that lasts.
+
 **Meet the new vendors. Condition: Saturday Market plaza upgrade complete.** Nora sends a letter inviting the player to meet Zorel and Stillwell at the market. Zorel introduces herself, her Song Crystals, and her Crystal Resonators. She asks the player to guess what the crystals do and is pleased either way.
 
 **The Bell Tower repair. Condition: renown 90, player has met Zorel.** Zorel sends a letter asking the player to meet her at the Bell Tower with Adeline and Landen. She wants it repaired. The tower's Crystal Resonator is damaged and she is the only one who can fix it. She needs a Dragon-Forged Fang and a Dragon-Forged Core. When Landen suggests there is no rush, she cuts him off. When the resonator is repaired, she loads it with new bell tunes and melodies that will play over Mistria.

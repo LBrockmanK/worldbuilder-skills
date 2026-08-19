@@ -111,6 +111,8 @@ He does not move.
 
 ## Story Seeds
 
+**Introduction — the player visits the Sleeping Dragon Inn.** He sizes up the newcomer and asks if they are the farmer everyone has been talking about. He introduces himself and points them toward the bar for a hot meal or a cold drink. He mentions the cauldron of soup he keeps hot for anyone who wants a bowl.
+
 **The Inn renovation — town repair reaches the Inn.** Reina presents a business plan to expand. Hemlock resists at first: "we can't really go much bigger than we are." When he reads her proposal, he comes around. He helps with the construction and stocks the bar free for every volunteer.
 
 **Something's bugging me — Luc's bug-catching quest.** Luc needs help catching insects for study. Hemlock cheers him on from the bar. His one condition: "Please don't bring them here." The bugs end up in his lute anyway.

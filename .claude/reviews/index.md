@@ -10,3 +10,4 @@
 * [2026-08-15-review-fom-world-info-entity-documents](2026-08-15-review-fom-world-info-entity-documents.md)
 * [2026-08-15-review-source-ingestion-skill-spec](2026-08-15-review-source-ingestion-skill-spec.md)
 * [Review: worldbuilder document review gate spec](2026-08-15-review-worldbuilder-document-review-gate-spec.md) - Adversarial review of the worldbuilder document review gate spec
+* [Introduction Story Seeds backfill](2026-08-18-introduction-story-seeds-backfill.md) - Adversarial review of Introduction Story Seed entries added to 38 character cards in the Fields of Mistria project

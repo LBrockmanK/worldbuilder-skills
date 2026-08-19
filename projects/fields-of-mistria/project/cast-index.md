@@ -1,8 +1,6 @@
 # Fields of Mistria — Cast Index
 
-34 characters extracted from `source/fiddle/npcs/`. Adeline is the
-completed vertical-slice test; the remaining 33 need source ingestion
-batched by cast group.
+38 characters across eight batches. All cards complete.
 
 ## Status key
 
@@ -31,62 +29,71 @@ appropriate completion status.
 
 | Character | Status | Tags | Notes |
 |-----------|--------|------|-------|
-| Celine | review-done | dateable, general_store_family | Gardener, Codex Mistria researcher |
-| Reina | review-done | dateable, inn_family | Head Cook, culinary competition arc |
-| Nora | review-done | general_store_family | Supporting character — not dateable, Chamber of Commerce head |
+| Celine | done | dateable, general_store_family | Gardener, Codex Mistria researcher |
+| Reina | done | dateable, inn_family | Head Cook, culinary competition arc |
+| Nora | done | general_store_family | Supporting character — not dateable, Chamber of Commerce head |
 
 ### Batch 3: Inn family
 
 | Character | Status | Tags | Notes |
 |-----------|--------|------|-------|
-| Josephine | available | inn_family | |
-| Hemlock | available | inn_family | |
-| Luc | available | child, inn_family | |
-| Maple | available | child, inn_family | |
+| Josephine | done | inn_family | |
+| Hemlock | done | inn_family | |
+| Luc | done | child, inn_family | |
+| Maple | done | child, inn_family | |
 
 ### Batch 4: Trade families
 
 | Character | Status | Tags | Notes |
 |-----------|--------|------|-------|
-| Landen | review-done | carpenter_family | Semi-retired carpenter, uncle to Ryis |
-| Ryis | review-done | dateable, carpenter_family | Carpenter, birdhouse arc |
-| Olric | review-done | forge_family | Part-timer at forge, brother of March |
-| March | review-done | dateable, forge_family | Blacksmith, Shield of the Realm arc |
-| Dell | review-done | child, general_store_family | Dragon-obsessed child |
-| Holt | review-done | general_store_family | General Store co-owner, dad jokes |
+| Landen | done | carpenter_family | Semi-retired carpenter, uncle to Ryis |
+| Ryis | done | dateable, carpenter_family | Carpenter, birdhouse arc |
+| Olric | done | forge_family | Part-timer at forge, brother of March |
+| March | done | dateable, forge_family | Blacksmith, Shield of the Realm arc |
+| Dell | done | child, general_store_family | Dragon-obsessed child |
+| Holt | done | general_store_family | General Store co-owner, dad jokes |
 
 ### Batch 5: Dateable townsfolk (remaining)
 
 | Character | Status | Tags | Notes |
 |-----------|--------|------|-------|
-| Balor | review-done | dateable, vendor | |
-| Errol | review-done | townsfolk | Not dateable — no heart events, date lines, or wedding in source data |
-| Hayden | review-done | dateable | |
-| Juniper | review-done | dateable | |
-| Terithia | review-done | townsfolk | Not dateable — no heart events, date lines, or wedding in source data |
-| Valen | review-done | dateable | |
+| Balor | done | dateable, vendor | |
+| Errol | done | townsfolk | Not dateable — no heart events, date lines, or wedding in source data |
+| Hayden | done | dateable | |
+| Juniper | done | dateable | |
+| Terithia | done | townsfolk | Not dateable — no heart events, date lines, or wedding in source data |
+| Valen | done | dateable | |
 
 ### Batch 6: Vendors and supporting cast
 
 | Character | Status | Tags | Notes |
 |-----------|--------|------|-------|
-| Darcy | review-done | vendor | |
-| Louis | review-done | vendor | |
-| Merri | review-done | vendor | |
-| Stillwell | review-done | vendor | |
-| Taliferro | review-done | vendor | |
-| Vera | review-done | vendor | |
-| Wheedle | review-done | vendor | |
-| Zorel | review-done | vendor | |
+| Darcy | done | vendor | |
+| Louis | done | vendor | |
+| Merri | done | vendor | |
+| Stillwell | done | vendor | |
+| Taliferro | done | vendor | |
+| Vera | done | vendor | |
+| Wheedle | done | vendor | |
+| Zorel | done | vendor | |
 
 ### Batch 7: Special characters
 
 | Character | Status | Tags | Notes |
 |-----------|--------|------|-------|
-| Caldarus | drafted | draconic | Arrives during game — Story Beat. Bent-rules arrival relationships with Hayden, Juniper. |
-| Seridia | drafted | draconic | Arrives during game — Story Beat. Bent-rules arrival relationships with Juniper, Celine. |
-| Dozy | drafted | animal | Golden retriever. Cannot talk — body language only. Relationship with Valen (pre-story). |
-| Henrietta | drafted | animal | Cannot talk — stage directions only. Relationship with March (pecking target). |
+| Caldarus | done | draconic | Arrives during game — Story Beat. Bent-rules arrival relationships with Hayden, Juniper. |
+| Seridia | done | draconic | Arrives during game — Story Beat. Bent-rules arrival relationships with Juniper, Celine. |
+| Dozy | done | animal | Golden retriever. Cannot talk — body language only. Relationship with Valen (pre-story). |
+| Henrietta | done | animal | Cannot talk — stage directions only. Relationship with March (pecking target). |
+
+### Batch 8: Off-screen family
+
+| Character | Status | Tags | Notes |
+|-----------|--------|------|-------|
+| Darren | done | carpenter_family, off-screen | Baker in the Capital. Father of Ryis and Wynne, brother of Landen. Not in Mistria. |
+| Wiscar | done | noble, off-screen | Baron of Mistria, advisor to the King in the Capital. Father of Adeline and Eiland, husband of Linnet. |
+| Linnet | done | noble, off-screen | Baroness of Mistria, Crown service in the Capital. Former guild adventurer. Mother of Adeline and Eiland, wife of Wiscar. |
+| Wynne | done | carpenter_family, off-screen | Baker in the Capital. Daughter of Darren, sister of Ryis, niece of Landen. |
 
 ## World info sources
 
