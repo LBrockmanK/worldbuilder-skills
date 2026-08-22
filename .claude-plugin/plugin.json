@@ -1,7 +1,6 @@
 {
   "name": "worldbuilder-skills",
   "description": "Worldbuilding craft skills and OKF preset for the ainime-games.com world builder platform. Runs on the scraibe base plugin (hard dependency); scraibe owns vault file management.",
-  "version": "0.1.0",
   "author": {
     "name": "LBrockmanK"
   }
