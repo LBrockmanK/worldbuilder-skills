@@ -1,4 +1,4 @@
-﻿# Intimate Dynamics (Optional Section)
+# Intimate Dynamics (Optional Section)
 
 *Sub-file for `worldbuilder-character`. Only read this if the character's roster entry is flagged `Intimate Dynamics: Yes`. If the flag is absent, skip this file entirely.*
 

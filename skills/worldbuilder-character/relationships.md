@@ -1,4 +1,4 @@
-﻿# Relationships
+# Relationships
 
 *Sub-file for `worldbuilder-character`. Read this when writing the Relationships section. Have the current cast's character notes available — if not, open them before continuing.*
 
