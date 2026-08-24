@@ -1,8 +1,0 @@
-[beautiful_out_here]
-refresh = "1m"
-requires = [
-	{ npc = "adeline" },
-	{ weather = "pleasant" },
-	{ is_inside = false }
-]
-local = "Isn't it beautiful out here, [Ari]?"

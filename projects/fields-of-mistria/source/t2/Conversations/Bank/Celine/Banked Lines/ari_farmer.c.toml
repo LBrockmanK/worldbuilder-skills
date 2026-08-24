@@ -1,5 +1,0 @@
-[ari_farmer]
-refresh = "2m"
-requires = [{ npc = "celine" }, { farming_level = 10, comparator = ">=" }]
-portrait = "happy"
-local = "You've really taken to farming, haven't you! I'm so glad."

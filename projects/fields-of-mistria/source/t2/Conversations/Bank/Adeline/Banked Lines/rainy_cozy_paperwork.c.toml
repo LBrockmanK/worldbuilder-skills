@@ -1,9 +1,0 @@
-[rainy_cozy_paperwork]
-refresh = "2m"
-requires = [
-	{ npc = "adeline" },
-	{ weather = "rainy" },
-	{ adeline_animation = "write_sit" },
-]
-portrait = "wink"
-local = "There's nothing cozier than paperwork on a rainy day, [Ari]."

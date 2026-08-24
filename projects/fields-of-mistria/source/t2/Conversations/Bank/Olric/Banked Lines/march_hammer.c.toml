@@ -1,9 +1,0 @@
-[march_hammer]
-refresh = "1y"
-requires = [
-	{ npc = "olric" },
-	{ march_animation = "hammer" },
-	{ olric_zone = "<march_zone>" }
-]
-portrait = "happy"
-local = "Look at my bro go! No one swings a hammer like him!"

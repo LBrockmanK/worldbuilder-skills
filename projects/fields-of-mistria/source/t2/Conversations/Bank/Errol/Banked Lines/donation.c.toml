@@ -1,5 +1,0 @@
-[donation]
-refresh = "1y"
-requires = [{ npc = "errol" }, { building = "museum" }]
-portrait = "neutral"
-local = "Here to donate something? The Museum welcomes your contributions!"

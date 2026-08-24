@@ -1,5 +1,0 @@
-[nice_seeing_you]
-refresh = "1m"
-requires = [{ npc = "balor" }, { balor_is_traveling = true }]
-portrait = "neutral"
-local = "Nice seeing you, [Ari]."

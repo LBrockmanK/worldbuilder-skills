@@ -1,6 +1,0 @@
-asymptotic_strength = 0.1
-
-x_buffer = 16
-y_buffer = 16
-
-clamping = true

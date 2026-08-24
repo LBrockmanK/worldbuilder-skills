@@ -1,5 +1,0 @@
-[hot_meal]
-refresh = "1y"
-requires = [{ npc = "errol" }, { location = "inn" }, { errol_activity = "eat" }]
-portrait = "happy"
-local = "You can always rely on the Sleeping Dragon Inn for a hot meal."
