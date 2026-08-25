@@ -17,7 +17,7 @@ output:
 
 ## Context
 
-Scraibe (scraibe repo) now owns note-taking and vault file management: OKF-enforced frontmatter, document creation via `new_doc.py`, status/tag lifecycle, inbox/triage, audit, indexes, and generated rules. This plugin's early vault logic (worldvault template, setup skill's file scaffolding, per-skill folder conventions) predates scraibe and is fully superseded by it.
+Scraibe (okf-enforcement repo) now owns note-taking and vault file management: OKF-enforced frontmatter, document creation via `new_doc.py`, status/tag lifecycle, inbox/triage, audit, indexes, and generated rules. This plugin's early vault logic (worldvault template, setup skill's file scaffolding, per-skill folder conventions) predates scraibe and is fully superseded by it.
 
 Decision trail:
 - `scraibe/.claude/specs/2026-07-04-scraibe-skills-design.md` — "Related External Work": pare worldbuilder-skills down to writing/creation guidelines.
