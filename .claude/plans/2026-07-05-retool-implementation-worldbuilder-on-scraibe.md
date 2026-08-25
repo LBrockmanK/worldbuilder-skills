@@ -9,7 +9,7 @@ tags:
 date: 2026-07-05
 timestamp: 2026-07-05T07:36
 resources:
-- '[[2026-07-04-retool-worldbuilder-skills-on-scraibe-base]]'
+- '[[2026-07-04-retool-worldbuilder-workflow-on-scraibe-base]]'
 ---
 
 # Retool implementation: worldbuilder on scraibe
@@ -18,7 +18,7 @@ resources:
 
 **Goal:** Retool the worldbuilder plugin to run on scraibe as its base: ship an OKF preset instead of a vault template, reduce eleven skills to nine craft/adopter/exporter skills with no file-management content, and verify the result in a scratch project.
 
-**Architecture:** The plugin ships `defaults/okf.json` (built by `scripts/build-okf.py` from markdown template sources in `defaults/templates/`) plus a chrome overlay (`Home.md`, `_bases/`). `worldbuilder-setup` becomes a five-step adopter; scraibe's loop (orient/triage/audit/inbox) replaces the world-planning router; craft skills keep doctrine only. Spec: `.claude/specs/2026-07-04-retool-worldbuilder-skills-on-scraibe-base.md`.
+**Architecture:** The plugin ships `defaults/okf.json` (built by `scripts/build-okf.py` from markdown template sources in `defaults/templates/`) plus a chrome overlay (`Home.md`, `_bases/`). `worldbuilder-setup` becomes a five-step adopter; scraibe's loop (orient/triage/audit/inbox) replaces the world-planning router; craft skills keep doctrine only. Spec: `.claude/specs/2026-07-04-retool-worldbuilder-workflow-on-scraibe-base.md`.
 
 **Tech Stack:** Markdown skill files, Python 3 (build script only), Obsidian Bases syntax, scraibe scripts (`new_doc.py`, `generate_rules.py`, `validate.py`).
 
@@ -277,7 +277,7 @@ Frontmatter is defined by the project's OKF registry — `new_doc.py` stamps it 
 - Consumes: everything prior — this task documents the end state.
 
 - [x] **Step 1: Delete.** `git rm -r skills/worldbuilder-ingestion agents && git rm dev-feedback.md`
-- [x] **Step 2: Rewrite `CONTEXT.md`** (keep its role: single-context domain terminology). Required content, in this order: what the plugin is (craft skills + OKF preset on the scraibe base; scraibe owns file management); the player-vault layout diagram from the spec's "Vault layout" section, copied; the ten registry types with one-line definitions; the status-tag lifecycle (scraibe's six, what open/closed means for creative notes and export gating); the three phases as guidance (plan.md's table is the tracker; export skill gates itself); pointers — spec (`.claude/specs/2026-07-04-retool-worldbuilder-skills-on-scraibe-base.md`), `defaults/okf.json` + build script, `docs/target-system.md`.
+- [x] **Step 2: Rewrite `CONTEXT.md`** (keep its role: single-context domain terminology). Required content, in this order: what the plugin is (craft skills + OKF preset on the scraibe base; scraibe owns file management); the player-vault layout diagram from the spec's "Vault layout" section, copied; the ten registry types with one-line definitions; the status-tag lifecycle (scraibe's six, what open/closed means for creative notes and export gating); the three phases as guidance (plan.md's table is the tracker; export skill gates itself); pointers — spec (`.claude/specs/2026-07-04-retool-worldbuilder-workflow-on-scraibe-base.md`), `defaults/okf.json` + build script, `docs/target-system.md`.
 - [x] **Step 3: Update the small files.** `README.md`: skill list to the nine survivors, add "Requires the scraibe plugin" line, terminology pointer stays. `CLAUDE.md`: no content about worldvault remains; add one line under the domain-docs section: "Requires scraibe (hard dependency); its vault conventions govern `.claude/`." `.claude-plugin/plugin.json`: description mentions scraibe base. `docs/agents/domain.md`: remove linker-agent mentions, fix any file-structure diagram to the new tree. `memory/project-restructure.md`: append a dated line to Implementation state: "2026-07-05: retool on scraibe base implemented — see spec/plan in .claude/; worldvault reduced to chrome; skills 11→9."
 - [x] **Step 4: Leftover sweep (spec Verification #4).** Run and clear each: `grep -rn "world-planning\|worldbuilder-ingestion\|linker" skills/ README.md CONTEXT.md CLAUDE.md docs/agents/` and `grep -rn "log\.md\|agent-context\.md\|last_updated\|brief:" skills/ CONTEXT.md README.md`. Historical docs in `.claude/` are exempt (they describe the past).
 - [x] **Step 5: Commit.** `git commit -am "feat: retool docs and deletions — plugin is craft skills + preset on scraibe"`

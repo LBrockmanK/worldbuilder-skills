@@ -1,4 +1,4 @@
-# doodle-lint config for worldbuilder-skills.
+# doodle-lint config for worldbuilder-workflow.
 #
 # body/absolute-user-path is disabled per-path where `~/` references are
 # verified-portable: they point at Claude Code's user-level config

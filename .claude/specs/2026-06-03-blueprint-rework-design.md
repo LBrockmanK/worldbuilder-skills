@@ -10,7 +10,7 @@ resources: []
 # Character Blueprint Rework — Design Spec
 
 **Date:** 2026-06-03  
-**Issue:** [#13](https://github.com/LBrockmanK/worldbuilder-skills/issues/13)  
+**Issue:** [#13](https://github.com/LBrockmanK/worldbuilder-workflow/issues/13)  
 **Status:** Approved for implementation
 
 ---

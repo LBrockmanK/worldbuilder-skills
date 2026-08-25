@@ -1,4 +1,4 @@
-# worldbuilder-skills
+# worldbuilder-workflow
 
 Craft skills and OKF preset for building player world visions for the
 ainime-games.com world builder platform. Runs on the scraibe base plugin

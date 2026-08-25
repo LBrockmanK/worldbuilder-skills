@@ -64,6 +64,6 @@ The Phase Status table in `project/plan.md` is the tracker; the export skill gat
 
 ## Pointers
 
-- Spec for this architecture: `.claude/specs/2026-07-04-retool-worldbuilder-skills-on-scraibe-base.md`
+- Spec for this architecture: `.claude/specs/2026-07-04-retool-worldbuilder-workflow-on-scraibe-base.md`
 - Registry: `defaults/okf.json`, regenerated from `defaults/templates/*.md` by `scripts/build-okf.py`
 - Target platform field reference: `docs/target-system.md`

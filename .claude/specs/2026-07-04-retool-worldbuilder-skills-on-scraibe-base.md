@@ -1,6 +1,6 @@
 ---
 type: spec
-title: Retool worldbuilder-skills on scraibe base
+title: Retool worldbuilder-workflow on scraibe base
 description: Strip note-taking/vault management from worldbuilder skills; scraibe
   owns file management via OKF. This plugin defines worldbuilding types and deliverables
   only. First live trial of scraibe as a base plugin.
@@ -13,14 +13,14 @@ output:
 - "[[2026-07-05-retool-implementation-worldbuilder-on-scraibe]]"
 ---
 
-# Retool worldbuilder-skills on scraibe base
+# Retool worldbuilder-workflow on scraibe base
 
 ## Context
 
 Scraibe (okf-enforcement repo) now owns note-taking and vault file management: OKF-enforced frontmatter, document creation via `new_doc.py`, status/tag lifecycle, inbox/triage, audit, indexes, and generated rules. This plugin's early vault logic (worldvault template, setup skill's file scaffolding, per-skill folder conventions) predates scraibe and is fully superseded by it.
 
 Decision trail:
-- `scraibe/.claude/specs/2026-07-04-scraibe-skills-design.md` — "Related External Work": pare worldbuilder-skills down to writing/creation guidelines.
+- `scraibe/.claude/specs/2026-07-04-scraibe-skills-design.md` — "Related External Work": pare worldbuilder-workflow down to writing/creation guidelines.
 - `scraibe/.claude/grillings/2026-07-02-scraibe-deferred-items-grilling.md` — Obsidian vault config template findings: scraibe supersedes this plugin's note-taking logic.
 
 This retool is the first live trial of scraibe as a base plugin for a domain skillset. Friction points in scraibe's extension surface (type registry, enforced paths, setup/migration flow) should be captured as we hit them and fed back to the scraibe repo.

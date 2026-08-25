@@ -1,6 +1,6 @@
-# worldbuilder-skills
+# worldbuilder-workflow
 
-[![tests](https://github.com/LBrockmanK/worldbuilder-skills/actions/workflows/tests.yml/badge.svg?branch=master)](https://github.com/LBrockmanK/worldbuilder-skills/actions/workflows/tests.yml)
+[![tests](https://github.com/LBrockmanK/worldbuilder-workflow/actions/workflows/tests.yml/badge.svg?branch=master)](https://github.com/LBrockmanK/worldbuilder-workflow/actions/workflows/tests.yml)
 
 Claude Code skills for building a game world on the [ainime-games.com](https://ainime-games.com) world builder platform. Install these skills once; run them in Claude Code to get an AI-assisted worldbuilding pipeline from blank page to finished export.
 

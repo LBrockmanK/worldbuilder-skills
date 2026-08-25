@@ -20,7 +20,7 @@ resources:
 
 Single-item resource review. User's question: is there anything in
 https://github.com/AndreiNicu/World-Forge we might want to learn from and
-apply to worldbuilder-skills?
+apply to worldbuilder-workflow?
 
 Fetched fresh 2026-07-16 (repo overview, README, full tree, LICENSE,
 `agent_roles/03b_The_Voice_Auditor.md`,
