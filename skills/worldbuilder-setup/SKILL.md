@@ -20,7 +20,7 @@ The project root is the directory the user is working in. If they want the vault
 Resolve the scraibe plugin root — the directory containing `scripts/new_doc.py`:
 
 1. Read `~/.claude/plugins/installed_plugins.json` and take the `installPath` of the entry whose key starts with `scraibe@`.
-2. If that file or key is missing, fall back to globbing `~/.claude/plugins/marketplaces/*/*/scripts/new_doc.py` — the plugin's directory is not necessarily named `scraibe` (in the fleet monorepo it is `okf-enforcement`).
+2. If that file or key is missing, fall back to globbing `~/.claude/plugins/marketplaces/*/*/scripts/new_doc.py` — the plugin's directory is not necessarily named `scraibe` (in the fleet monorepo it is `scraibe`).
 
 If neither resolves, stop: "This plugin requires the scraibe plugin. Install it first."
 

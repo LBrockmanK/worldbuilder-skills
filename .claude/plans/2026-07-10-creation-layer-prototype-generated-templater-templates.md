@@ -4,7 +4,7 @@ title: 'Creation-layer prototype: generated Templater templates'
 description: 'Implementation plan for the human-compliance-stack creation layer: generate_templates.py
   emitting per-type Templater templates and type-pickers from okf.json, Templater
   2.20.6 vendored into the worldbuilder chrome, trialed in the Emberwick scratch vault,
-  built for immediate graduation to okf-enforcement'
+  built for immediate graduation to scraibe'
 tags:
 - complete
 date: 2026-07-10
@@ -18,14 +18,14 @@ resources: []
 
 **Goal:** Humans creating notes in a scraibe vault get compliant OKF frontmatter before their first keystroke: `generate_templates.py` derives Templater templates from `okf.json`, Templater 2.20.6 ships vendored and configured in the worldbuilder chrome, and the Emberwick scratch vault proves the flow.
 
-**Architecture:** The generator is a sibling of scraibe's `generate_rules.py` — pure stdlib Python reading the registry, emitting one template per type plus a suggester-based type-picker per mixed-type directory into `_templates/`, and (with `--obsidian`) pointing the vendored Templater `data.json` `folder_templates` at them. It contains zero worldbuilder-specific logic and graduates verbatim to `okf-enforcement/scripts/` at the merge point. Spec: fleet vault `.claude/specs/2026-07-09-vault-human-compliance-stack.md`.
+**Architecture:** The generator is a sibling of scraibe's `generate_rules.py` — pure stdlib Python reading the registry, emitting one template per type plus a suggester-based type-picker per mixed-type directory into `_templates/`, and (with `--obsidian`) pointing the vendored Templater `data.json` `folder_templates` at them. It contains zero worldbuilder-specific logic and graduates verbatim to `scraibe/scripts/` at the merge point. Spec: fleet vault `.claude/specs/2026-07-09-vault-human-compliance-stack.md`.
 
 **Tech Stack:** Python 3 stdlib (json, argparse, os), stdlib `unittest`; Templater 2.20.6 (pinned release assets); Obsidian Templater syntax (`tp.file.title`, `tp.system.suggester`, `tp.file.include`, global `moment`).
 
 ## Global Constraints
 
 - Never name a specific AI model in shipped template content — model-neutral phrasing only.
-- `generate_templates.py` must not import or hardcode anything worldbuilder-specific — directory/type mappings arrive via CLI arguments; it graduates to okf-enforcement unchanged.
+- `generate_templates.py` must not import or hardcode anything worldbuilder-specific — directory/type mappings arrive via CLI arguments; it graduates to scraibe unchanged.
 - Stdlib-only Python; tests runnable as `python tests/test_generate_templates.py`.
 - OKF frontmatter skeletons emit every required universal property (`type`, `title`, `description`, `tags`, `date`, `timestamp`, `resources`) plus the type's own `fields`; exactly one status tag, the registry's first open status.
 - Timestamps in templates are UTC minute-precision: `<% moment.utc().format("YYYY-MM-DDTHH:mm[Z]") %>` (never `tp.date.now`, which is local).
@@ -191,7 +191,7 @@ registry type (frontmatter skeleton + type body) in <out>/_templates/,
 a suggester type-picker per mixed-type directory, and (--obsidian) the
 folder_templates wiring in the vendored Templater data.json. Generic
 over any okf.json — no worldbuilder knowledge; graduates verbatim to
-okf-enforcement/scripts/.
+scraibe/scripts/.
 """
 import argparse
 import json
@@ -383,7 +383,7 @@ Expected: `2.23.1`.
 }
 ```
 
-- [x] **Step 3: Check scraibe's `community-plugins.json`** (`cat ../../../../okf-enforcement/defaults/obsidian/community-plugins.json`) and write this overlay's copy extending it — expected result:
+- [x] **Step 3: Check scraibe's `community-plugins.json`** (`cat ../../../../scraibe/defaults/obsidian/community-plugins.json`) and write this overlay's copy extending it — expected result:
 
 ```json
 ["frontmatter-modified-date", "templater-obsidian"]
@@ -475,6 +475,6 @@ Expected: 0 critical (description is empty but present — if validate flags emp
 
 ### Task 5: Close out and pin bump
 
-- [x] **Step 1:** Fleet inbox line (parent vault `.claude/inbox.md`): the creation layer is prototyped and trialed; `generate_templates.py` graduates to `okf-enforcement/scripts/` and Templater vendoring to scraibe's `defaults/obsidian/` at the merge point — okf-enforcement inbox gets the pointer.
+- [x] **Step 1:** Fleet inbox line (parent vault `.claude/inbox.md`): the creation layer is prototyped and trialed; `generate_templates.py` graduates to `scraibe/scripts/` and Templater vendoring to scraibe's `defaults/obsidian/` at the merge point — scraibe inbox gets the pointer.
 - [x] **Step 2:** Regenerate the sub-vault plans index; flip this plan's tag to `complete` when the trial passes (Kevin confirms).
 - [x] **Step 3:** Commit the submodule on `master`, push, pin bump in the parent on `machine-2`, push, `sync.py --check` clean.

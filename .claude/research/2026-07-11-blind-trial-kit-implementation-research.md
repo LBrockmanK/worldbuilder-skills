@@ -208,7 +208,7 @@ Note the block-stacking implication: the tensions block *modifies* rules present
 Confirmed working invocation (used to create this document):
 
 ```
-python "C:\Users\cpnbe\.claude\plugins\marketplaces\local-desktop-app-uploads\okf-enforcement\scripts\new_doc.py" --type research --title "Blind-trial kit implementation research" --description "..." --dir .claude/research
+python "C:\Users\cpnbe\.claude\plugins\marketplaces\local-desktop-app-uploads\scraibe\scripts\new_doc.py" --type research --title "Blind-trial kit implementation research" --description "..." --dir .claude/research
 ```
 
 It prints the created path (`.claude/research/2026-07-11-blind-trial-kit-implementation-research.md`), stamps full frontmatter (type, title, description, tags with `human-ready` default status, date, timestamp, empty resources), and generates a date-prefixed slug filename. Same pattern with `--type plan --dir .claude/plans` for the implementation plan and `--type spec --dir .claude/specs [--status human-ready]` for specs. The results-return artifact named by the spec ("Results return as a reflection document in this vault") would use `--type reflection` — the parent marketplace rules list `reflection` as a type; this repo's `.claude/rules/okf-claude.md` type list shows adr/grilling/plan/reference/reflection/research/spec, so reflection is available here too. Documents in `trials/` itself are NOT vault documents — `trials/` is outside `.claude/`, carries no OKF frontmatter obligation, and new_doc.py is not used for kit files.

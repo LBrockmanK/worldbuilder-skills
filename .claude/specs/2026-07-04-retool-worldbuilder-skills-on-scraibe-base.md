@@ -17,11 +17,11 @@ output:
 
 ## Context
 
-Scraibe (okf-enforcement repo) now owns note-taking and vault file management: OKF-enforced frontmatter, document creation via `new_doc.py`, status/tag lifecycle, inbox/triage, audit, indexes, and generated rules. This plugin's early vault logic (worldvault template, setup skill's file scaffolding, per-skill folder conventions) predates scraibe and is fully superseded by it.
+Scraibe (scraibe repo) now owns note-taking and vault file management: OKF-enforced frontmatter, document creation via `new_doc.py`, status/tag lifecycle, inbox/triage, audit, indexes, and generated rules. This plugin's early vault logic (worldvault template, setup skill's file scaffolding, per-skill folder conventions) predates scraibe and is fully superseded by it.
 
 Decision trail:
-- `okf-enforcement/.claude/specs/2026-07-04-scraibe-skills-design.md` — "Related External Work": pare worldbuilder-skills down to writing/creation guidelines.
-- `okf-enforcement/.claude/grillings/2026-07-02-scraibe-deferred-items-grilling.md` — Obsidian vault config template findings: scraibe supersedes this plugin's note-taking logic.
+- `scraibe/.claude/specs/2026-07-04-scraibe-skills-design.md` — "Related External Work": pare worldbuilder-skills down to writing/creation guidelines.
+- `scraibe/.claude/grillings/2026-07-02-scraibe-deferred-items-grilling.md` — Obsidian vault config template findings: scraibe supersedes this plugin's note-taking logic.
 
 This retool is the first live trial of scraibe as a base plugin for a domain skillset. Friction points in scraibe's extension surface (type registry, enforced paths, setup/migration flow) should be captured as we hit them and fed back to the scraibe repo.
 
@@ -88,7 +88,7 @@ Rewrite: all nine surviving SKILL.md files (light pass for seven, heavy for setu
 
 ## Scraibe friction log (trial run, 2026-07-04)
 
-Problem points hit while using scraibe as a base, to be delivered to the okf-enforcement repo's inbox:
+Problem points hit while using scraibe as a base, to be delivered to the scraibe repo's inbox:
 
 1. `new_doc.py` prints mixed path separators on Windows (`.claude/specs\2026-...`). Cosmetic.
 2. No `research` type in the default registry; scraibe's own vault uses `reflection`/`reference` in a `research/` directory, but the convention is implicit — consuming projects must read scraibe's vault to learn it.
@@ -98,13 +98,13 @@ Problem points hit while using scraibe as a base, to be delivered to the okf-enf
 6. Type body templates are single-line escaped JSON strings in `okf.json` — unpleasant to author and review for long structured templates (character template is ~850 chars). Template file references would fix this; meanwhile this plugin keeps markdown originals and regenerates the JSON.
 7. Field types support text/list/tags/date/datetime but not boolean (event `recurring` had to become body text / text field).
 8. `links.py` extracts frontmatter links only from `output`/`superseded-by`; domain link fields (`factions`, `members`, `characters`, `up`) are invisible to backlink analysis. Configurable link-bearing fields would fix this.
-9. Lost goal (2026-07-04 design session): the worldbuilder linker agent was meant to be absorbed into scraibe entirely, but scraibe only got read-side link analysis (`links.py`, audit checks). The write side — deterministic forward/back-link insertion, rename-with-link-rewrite, and the LLM post-pass review agent — never landed. This plugin drops its linker on the strength of that absorption, so scraibe needs to pick it up. To prevent redoing work, the linker material (`agents/linker.md` — agent definition, LLM post-pass review flow — and `agents/linker/scripts/`: link-notes.ps1, list-notes.ps1, rename-note.ps1, unresolved-links.ps1) is copied into a self-contained reference directory in the okf-enforcement repo, pointed to by that repo's inbox entry; this repo's copy is then removed during implementation.
+9. Lost goal (2026-07-04 design session): the worldbuilder linker agent was meant to be absorbed into scraibe entirely, but scraibe only got read-side link analysis (`links.py`, audit checks). The write side — deterministic forward/back-link insertion, rename-with-link-rewrite, and the LLM post-pass review agent — never landed. This plugin drops its linker on the strength of that absorption, so scraibe needs to pick it up. To prevent redoing work, the linker material (`agents/linker.md` — agent definition, LLM post-pass review flow — and `agents/linker/scripts/`: link-notes.ps1, list-notes.ps1, rename-note.ps1, unresolved-links.ps1) is copied into a self-contained reference directory in the scraibe repo, pointed to by that repo's inbox entry; this repo's copy is then removed during implementation.
 10. Proposed `scraibe:ingest` updates (from dissolving `worldbuilder-ingestion`): (a) with multiple overlapping sources, establish precedence before extraction and surface contradictions upfront; (b) when ingested material seeds derivative work, ask the fidelity level (strict vs. inspired-by) before extracting; (c) documents from an earlier version of one's own workflow that don't match current type templates are source material requiring reprocessing, not completed documents.
 
 ## Consequences
 
 - Scraibe becomes a hard dependency: without it installed, the plugin does nothing. Declared in README/marketplace metadata; `worldbuilder-setup` checks for it first.
-- Parts of the design are contingent on the okf-enforcement repo accepting handoff items: write-side linking (#9), ingest generalizations (#10), template file references (#6). Fallbacks exist for each (rules-driven linking, two-line skill insertions, the build-okf.py step) so the retool does not block on them.
+- Parts of the design are contingent on the scraibe repo accepting handoff items: write-side linking (#9), ingest generalizations (#10), template file references (#6). Fallbacks exist for each (rules-driven linking, two-line skill insertions, the build-okf.py step) so the retool does not block on them.
 - Player vaults built with the old worldvault template are not auto-migrated by this retool; bringing one forward is a `scraibe:setup` migration run with the worldbuilder registry, and can be designed when one actually needs it.
-- The friction log plus linker material gets delivered to okf-enforcement's inbox after spec approval (tracked in this repo's inbox).
+- The friction log plus linker material gets delivered to scraibe's inbox after spec approval (tracked in this repo's inbox).
 - `docs/restructure-notes.md` (now `.claude/specs/restructure-notes.md`) remains accurate for the platform-decoupling decisions but its vault-structure sections are superseded by this spec.

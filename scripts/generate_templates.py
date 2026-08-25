@@ -6,7 +6,7 @@ registry type (frontmatter skeleton + type body) in <out>/_templates/,
 a suggester type-picker per mixed-type directory, and (--obsidian) the
 folder_templates wiring in the vendored Templater data.json. Generic
 over any okf.json — no worldbuilder knowledge; graduates verbatim to
-okf-enforcement/scripts/.
+scraibe/scripts/.
 """
 import argparse
 import json
