@@ -330,7 +330,7 @@ implementation.
 Source-material extraction (importing characters from existing cards,
 stories, or game files) feeds into the Q&A workflow as an
 alternative answer source. The extraction agent design is a separate
-spec concern, captured in the project inbox.
+spec concern, captured in the inbox.
 
 Export to target platforms (ainime, CCv2/v3, others) is out of scope.
 The card format is designed to be exportable — the

@@ -522,7 +522,7 @@ a character is worthless until something has been paid for it. Both are
 arguments for making the implicit explicit at the moment of writing.
 
 Already applied this session, at the user's request and outside this
-document's routing: two lines to the fleet inbox recording that the
+document's routing: two lines to the inbox recording that the
 Reddit access ladder has shifted and that `reddit_read.py` fails
 silently against the new login wall.
 

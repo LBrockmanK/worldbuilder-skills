@@ -467,14 +467,14 @@ Expected: `folder 2`. Also confirm `type-character.md` opens with `---`, contain
 ```bash
 python <scraibe>/scripts/validate.py notes --root . --format human
 ```
-Expected: 0 critical (description is empty but present — if validate flags empty description as warning, record it in the sub-vault inbox as a template-vs-validator gap to resolve at graduation).
+Expected: 0 critical (description is empty but present — if validate flags empty description as warning, record it in the sub-inbox as a template-vs-validator gap to resolve at graduation).
 
-- [x] **Step 5: Record the trial** in the sub-vault inbox (pass/fail per check, any friction) and check off this plan's boxes.
+- [x] **Step 5: Record the trial** in the sub-inbox (pass/fail per check, any friction) and check off this plan's boxes.
 
 ---
 
 ### Task 5: Close out and pin bump
 
-- [x] **Step 1:** Fleet inbox line (parent vault `.claude/inbox.md`): the creation layer is prototyped and trialed; `generate_templates.py` graduates to `scraibe/scripts/` and Templater vendoring to scraibe's `defaults/obsidian/` at the merge point — scraibe inbox gets the pointer.
+- [x] **Step 1:** Inbox line (parent vault `.claude/inbox.md`): the creation layer is prototyped and trialed; `generate_templates.py` graduates to `scraibe/scripts/` and Templater vendoring to scraibe's `defaults/obsidian/` at the merge point — scraibe inbox gets the pointer.
 - [x] **Step 2:** Regenerate the sub-vault plans index; flip this plan's tag to `complete` when the trial passes (Kevin confirms).
 - [x] **Step 3:** Commit the submodule on `master`, push, pin bump in the parent on `machine-2`, push, `sync.py --check` clean.
