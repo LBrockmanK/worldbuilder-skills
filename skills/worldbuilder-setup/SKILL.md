@@ -11,9 +11,9 @@ This skill turns a directory into a worldbuilding project: an Obsidian vault wit
 
 Scraibe owns file management from here on — document creation, frontmatter enforcement, status lifecycle, inbox, audit. This skill only installs the chrome and templates, then gets out of the way. It asks no creative questions; genre, tone, cast, and setting belong to `worldbuilder-world-foundation`.
 
-**This skill writes no configuration into the project.** The worldbuilder type roster lives in this plugin, at `defaults/types.json`, and is read from there whenever it is needed. A project does not get a copy. What makes a project a worldbuilder project is that scraibe and this plugin are *enabled* for it — see Step 2.
+**This skill writes no configuration into the project.** The worldbuilder type roster lives in this plugin, at `defaults/types.json`, and is read from there whenever it is needed. A project does not get a copy. What makes worldbuilder available is that scraibe and this plugin are *enabled for the working tree the session runs in* — see Step 2.
 
-The project root is the directory the user is working in. If they want the vault somewhere else, ask them to name the directory and use that as the project root throughout.
+Two directories matter and they are usually different. The **project root** is where the vault content goes: the directory the user names for their world. The **session root** is the working tree Claude is running in, whose `.claude/settings.json` carries the live plugin enablement; for a project that lives inside a larger vault, that is the vault root, not the project folder. Steps 3 through 6 all operate on the project root; only Step 2 looks at the session root.
 
 ## Steps
 
@@ -28,19 +28,25 @@ If neither resolves, stop: "This plugin requires the scraibe plugin. Install it 
 
 Record the resolved root — later steps use its scripts and defaults. Never hardcode this path; resolve it fresh each run.
 
-### Step 2: Check the project is adopted
+### Step 2: Check enablement at the working tree root
 
-Adoption is plugin enablement, and fleet:setup is its sole writer. Resolve the fleet plugin root the same way as Step 1 (the entry whose key starts with `fleet@`), then, from the project root:
+Adoption is plugin enablement, and fleet:setup is its sole writer.
+
+**Check the working tree the session is running in, not the project directory.** These are usually not the same place. A project inside a vault is not an independent Claude session: the session runs at the vault root, so the vault root's `.claude/settings.json` is the enablement that is actually live. A project folder's own settings are inert in that case, and checking them would fail a correctly-enabled setup.
+
+Determine that root first: it is the directory the session was started in — the working tree containing the `.claude/` whose settings apply. For a vault-homed project this is the vault root, well above `<project>`. If in doubt, ask the user which directory they launched the session from. Call it `<session-root>`.
+
+Resolve the fleet plugin root the same way as Step 1 (the entry whose key starts with `fleet@`), then:
 
 ```
-python "<fleet>/scripts/plugin_enablement.py" --root . status
-python "<fleet>/scripts/plugin_enablement.py" --root . show
+python "<fleet>/scripts/plugin_enablement.py" --root "<session-root>" status
+python "<fleet>/scripts/plugin_enablement.py" --root "<session-root>" show
 ```
 
 Both conditions must hold:
 
-- `status` exits 0 — a plugin selection is recorded for this project. Exit 1 means no selection exists at all: **stop** and tell the user to run `fleet:setup` in this project first.
-- `show` lists both scraibe and this plugin as `enabled`. The marketplace suffix varies by install (`scraibe@<marketplace>`); match on the plugin name before the `@`. If either is missing or reads `disabled`, **stop** and tell the user to run `fleet:setup` and enable scraibe and worldbuilder-workflow for this project.
+- `status` exits 0 — a plugin selection is recorded there. Exit 1 means no selection exists at all: **stop** and tell the user to run `fleet:setup` at `<session-root>`.
+- `show` lists both scraibe and this plugin as `enabled`. The marketplace suffix varies by install (`scraibe@<marketplace>`); match on the plugin name before the `@`. If either is missing or reads `disabled`, **stop** and tell the user to run `fleet:setup` at `<session-root>` and enable scraibe and worldbuilder-workflow.
 
 Do not work around a failed check by writing config into the project — there is no config to write, and proceeding would make "adopted" mean nothing.
 
