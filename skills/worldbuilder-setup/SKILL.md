@@ -67,17 +67,25 @@ Chrome lives at the vault root — `Home.md` and the Bases carry no vault frontm
 Create the three `project/` documents with scraibe's `new_doc.py`, from the project root. The script produces date-prefixed filenames; rename each to its canonical name afterward so every skill can reference `project/seed.md`, `project/plan.md`, and `project/direction.md` reliably.
 
 ```
-python <scraibe>/scripts/new_doc.py --dir project --type seed --title "<Name> World Foundation" --description "World foundation document for <Name>"
-  → rename the output file to project/seed.md
+python <scraibe>/scripts/new_doc.py --dir project --type seed --status human-ready --title "<Name> World Foundation" --description "World foundation document for <Name>"
+  → rename the output file to project/seed.md, then apply the seed body (below)
 
-python <scraibe>/scripts/new_doc.py --dir project --type plan --title "<Name> Worldbuilding Plan" --description "Phase status and cast plan for <Name>"
-  → rename the output file to project/plan.md
+python <scraibe>/scripts/new_doc.py --dir project --type plan --status human-ready --title "<Name> Worldbuilding Plan" --description "Phase status and cast plan for <Name>"
+  → rename the output file to project/plan.md, then apply the plan body (below)
 
-python <scraibe>/scripts/new_doc.py --dir project --type direction --title "<Name> Story Direction" --description "Standing creative brief for <Name>"
-  → rename the output file to project/direction.md
+python <scraibe>/scripts/new_doc.py --dir project --type direction --status human-ready --title "<Name> Story Direction" --description "Standing creative brief for <Name>"
+  → rename the output file to project/direction.md, then apply the direction body (below)
 ```
 
-`new_doc.py` takes no registry: `type` is an open value, and it writes frontmatter plus whatever body scaffold scraibe ships for that type. These three documents get their real bodies from Step 5's Templater templates and from `worldbuilder-world-foundation`, so a thin scaffold here is expected and fine.
+`--status human-ready` is required. `new_doc.py` defaults to `todo`, which is not in this plugin's status vocabulary; `human-ready` is the roster's first open status and is what the Step 5 Templater templates stamp, so passing it keeps one lifecycle vocabulary across the whole project.
+
+**Apply the type's body to each document, immediately after creating it.** `new_doc.py` takes no registry and scraibe ships no `seed`, `plan`, or `direction` body scaffold, so each file arrives with frontmatter and a `# <title>` heading and nothing else. Step 5's Templater templates cannot fix this: Templater only fires on notes created later inside Obsidian, and never touches a file that already exists. Left alone, `project/plan.md` would lack the Phase Status table and Cast Plan section that later worldbuilder skills read.
+
+For each of the three documents, look up its type in this plugin's `defaults/types.json` and read that type's `template_file` from `defaults/templates/`. Append that file's content to the document, below the `# <title>` heading, leaving one blank line between them. These are the same template sources `generate_templates.py` embeds, so a document created here and a note created later in Obsidian get identical bodies.
+
+As the roster currently stands: `seed` takes `defaults/templates/seed.md`, `plan` takes `defaults/templates/plan.md`, and `direction` has no `template_file` and an empty body — so there is nothing to append for `direction`, and that is correct, not a missing file. Read the roster rather than relying on this list.
+
+Afterwards `project/plan.md` must contain its `## Phase Status` table and `## Cast Plan` heading. If it does not, the body was not applied — fix it before moving on.
 
 Then seed `.claude/glossary.md` with the platform terminology:
 
@@ -101,8 +109,12 @@ the project.
 This writes `_templates/` (one template per type plus a type-picker per
 directory) and points the vendored Templater's folder attachments at
 them. From here on, a note created in `notes/` or `project/` inside
-Obsidian receives compliant frontmatter at creation — the type-picker
-asks one question in mixed directories.
+Obsidian receives compliant frontmatter and its type body at creation —
+the type-picker asks one question in mixed directories.
+
+This applies to notes created from here on, and only inside Obsidian. It
+does not reach back to the three documents Step 4 already created, which
+is why Step 4 applies their bodies itself.
 
 ### Step 6: Validate and hand off
 

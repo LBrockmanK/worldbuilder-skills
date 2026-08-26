@@ -42,19 +42,45 @@ class RosterTests(unittest.TestCase):
             self.assertIsInstance(spec.get('fields'), dict,
                                   f'{name} has no fields map')
 
+    # Every type's fields map and template_file association, exactly as
+    # the retired okf.base.json carried them. The seam's contract is that
+    # nothing generate_templates.py consumes changed in the move, so all
+    # ten types are pinned — not a sample.
+    EXPECTED = {
+        'character': ({'factions': {'type': 'list'}}, 'character.md'),
+        'location': ({'region': {'type': 'text'},
+                      'function': {'type': 'text'},
+                      'primary-characters': {'type': 'list'}}, 'location.md'),
+        'faction': ({'members': {'type': 'list'},
+                     'function': {'type': 'text'}}, 'faction.md'),
+        'event': ({'characters': {'type': 'list'},
+                   'location': {'type': 'text'},
+                   'layer': {'type': 'text'}}, 'event.md'),
+        'concept': ({'layer': {'type': 'text', 'required': True},
+                     'trigger-context': {'type': 'text'},
+                     'keywords': {'type': 'list', 'required': False}},
+                    'concept.md'),
+        'story': ({'scope': {'type': 'text', 'required': True},
+                   'up': {'type': 'text'}}, 'story.md'),
+        'seed': ({}, 'seed.md'),
+        'plan': ({}, 'plan.md'),
+        'direction': ({}, None),
+        'reference': ({}, None),
+    }
+
     def test_field_maps_preserved_from_the_registry(self):
         types = self.roster['types']
-        self.assertEqual(types['character']['fields'],
-                         {'factions': {'type': 'list'}})
-        self.assertEqual(types['event']['fields'],
-                         {'characters': {'type': 'list'},
-                          'location': {'type': 'text'},
-                          'layer': {'type': 'text'}})
-        self.assertEqual(types['concept']['fields'],
-                         {'layer': {'type': 'text', 'required': True},
-                          'trigger-context': {'type': 'text'},
-                          'keywords': {'type': 'list', 'required': False}})
-        self.assertEqual(types['direction']['fields'], {})
+        self.assertEqual(set(types), set(self.EXPECTED),
+                         'roster type set changed')
+        for name, (fields, _) in self.EXPECTED.items():
+            self.assertEqual(types[name]['fields'], fields,
+                             f'{name}: fields map changed')
+
+    def test_template_file_associations_preserved(self):
+        types = self.roster['types']
+        for name, (_, ref) in self.EXPECTED.items():
+            self.assertEqual(types[name].get('template_file'), ref,
+                             f'{name}: template_file association changed')
 
     def test_template_file_references_resolve(self):
         refs = 0
@@ -112,16 +138,22 @@ class GeneratorTests(unittest.TestCase):
 
     def test_template_file_body_is_embedded(self):
         """The compilation contract absorbed from build-okf.py: a type's
-        `template_file` body reaches the generated Templater template."""
-        r = self.run_gen('--dir', 'notes/=character,concept')
+        `template_file` body reaches the generated Templater template.
+
+        Covers every type carrying a reference, so a swapped or wrong
+        reference fails here and not only in the roster assertions."""
+        roster = load_roster()['types']
+        refs = {n: s['template_file'] for n, s in roster.items()
+                if s.get('template_file')}
+        self.assertTrue(refs)
+        r = self.run_gen()
         self.assertEqual(r.returncode, 0, r.stderr)
-        for tname in ('character', 'concept'):
-            with open(os.path.join(TEMPLATE_DIR, f'{tname}.md'),
-                      encoding='utf-8') as f:
+        for tname, ref in refs.items():
+            with open(os.path.join(TEMPLATE_DIR, ref), encoding='utf-8') as f:
                 body = f.read().strip()
             generated = self.read(f'_templates/type-{tname}.md')
             self.assertIn(body, generated,
-                          f'{tname}: template_file body not embedded')
+                          f'{tname}: body of {ref} not embedded')
 
     def test_text_field_and_empty_body(self):
         self.run_gen('--dir', 'notes/=event', '--dir', 'project/=direction')
