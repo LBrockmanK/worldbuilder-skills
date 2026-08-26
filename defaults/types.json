@@ -1,46 +1,4 @@
 {
-  "universal_properties": {
-    "type": {
-      "type": "text",
-      "required": true
-    },
-    "title": {
-      "type": "text",
-      "required": true
-    },
-    "description": {
-      "type": "text",
-      "required": true
-    },
-    "tags": {
-      "type": "tags",
-      "required": true
-    },
-    "date": {
-      "type": "date",
-      "required": true
-    },
-    "timestamp": {
-      "type": "datetime",
-      "required": true
-    },
-    "resources": {
-      "type": "list",
-      "required": true
-    },
-    "aliases": {
-      "type": "list",
-      "required": false
-    },
-    "output": {
-      "type": "list",
-      "required": false
-    },
-    "superseded-by": {
-      "type": "list",
-      "required": false
-    }
-  },
   "types": {
     "character": {
       "fields": {
@@ -160,20 +118,5 @@
       "priority",
       "deferred"
     ]
-  },
-  "stale_days": 30,
-  "enforced_paths": {
-    "notes/": {
-      "level": "full",
-      "subdirs_only": false
-    },
-    "project/": {
-      "level": "full",
-      "subdirs_only": false
-    }
-  },
-  "strictness": {
-    "unknown_type": "warn",
-    "broken_links": "warn"
   }
 }

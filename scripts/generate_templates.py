@@ -1,22 +1,52 @@
 #!/usr/bin/env python
-"""Generate Obsidian Templater templates from an OKF registry.
+"""Generate Obsidian Templater templates from this plugin's type roster.
 
-Write-side sibling of generate_rules.py: one Templater template per
-registry type (frontmatter skeleton + type body) in <out>/_templates/,
-a suggester type-picker per mixed-type directory, and (--obsidian) the
-folder_templates wiring in the vendored Templater data.json. Generic
-over any okf.json — no worldbuilder knowledge; graduates verbatim to
-scraibe/scripts/.
+One Templater template per roster type (frontmatter skeleton + type
+body) in <out>/_templates/, a suggester type-picker per mixed-type
+directory, and (--obsidian) the folder_templates wiring in the vendored
+Templater data.json.
+
+The roster is plugin-internal data — `defaults/types.json`, the single
+source of truth for worldbuilder's types and status tags. There is no
+per-project config file: projects adopt worldbuilder by enabling the
+plugin, not by receiving a copy of the registry. Type bodies live as
+markdown in `defaults/templates/` and are referenced by each type's
+`template_file`; this script resolves those references and embeds the
+bodies at generation time (the contract the retired build-okf.py
+compile step used to satisfy).
 """
 import argparse
 import json
 import os
 import sys
 
+ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+TYPES_JSON = os.path.join(ROOT, 'defaults', 'types.json')
+TEMPLATE_DIR = os.path.join(ROOT, 'defaults', 'templates')
+
 MOMENT_TS = '<% moment.utc().format("YYYY-MM-DDTHH:mm[Z]") %>'
 MOMENT_DATE = '<% moment.utc().format("YYYY-MM-DD") %>'
 UNIVERSAL_ORDER = ('type', 'title', 'description', 'tags', 'date',
                    'timestamp', 'resources')
+
+
+def load_roster():
+    with open(TYPES_JSON, encoding='utf-8') as f:
+        return json.load(f)
+
+
+def type_body(spec):
+    """The type's body content: the referenced template file if there is
+    one, else the inline `template` string."""
+    ref = spec.get('template_file')
+    if ref is None:
+        return spec.get('template') or ''
+    path = os.path.join(TEMPLATE_DIR, ref)
+    if not os.path.isfile(path):
+        print(f'error: missing template file: {path}', file=sys.stderr)
+        sys.exit(2)
+    with open(path, encoding='utf-8') as f:
+        return f.read()
 
 
 def empty_value(ftype):
@@ -41,7 +71,7 @@ def type_template(config, tname):
             continue
         lines.append(f'{fname}: {empty_value(fspec.get("type", "text"))}')
     lines.append('---')
-    body = (spec.get('template') or '').strip()
+    body = type_body(spec).strip()
     return '\n'.join(lines) + '\n' + (('\n' + body + '\n') if body else '')
 
 
@@ -137,8 +167,7 @@ def update_obsidian_config(out_root, attachments):
 
 def main():
     ap = argparse.ArgumentParser(description='Generate Templater templates '
-                                             'from an OKF registry')
-    ap.add_argument('--config', required=True)
+                                             'from the plugin type roster')
     ap.add_argument('--out', required=True)
     ap.add_argument('--dir', action='append', default=[],
                     help='path=type[,type...] — types allowed in that dir')
@@ -147,14 +176,15 @@ def main():
                          'Templater data.json')
     args = ap.parse_args()
 
-    with open(args.config, encoding='utf-8') as f:
-        config = json.load(f)
+    config = load_roster()
 
     if args.dir:
         dirs = parse_dirs(args.dir, config)
     else:
-        all_types = sorted(config['types'])
-        dirs = [(p, all_types) for p in config.get('enforced_paths', {})] or [('', all_types)]
+        # No --dir: one picker over the whole roster at the vault root.
+        # enforced_paths is retired with the registry, so there is no
+        # per-project path list to fan out over.
+        dirs = [('', sorted(config['types']))]
 
     emitted = set()
     attachments = []
