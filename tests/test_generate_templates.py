@@ -1,4 +1,10 @@
-"""Tests for generate_templates.py. Run: python tests/test_generate_templates.py"""
+"""Tests for generate_templates.py. Run: python tests/test_generate_templates.py
+
+The generator reads the plugin's own `defaults/types.json` — there is no
+per-project config path and no `--config` argument. These tests therefore
+assert against the shipped roster itself, which is the single source of
+truth for worldbuilder's types and status tags.
+"""
 import json
 import os
 import shutil
@@ -9,54 +15,114 @@ import unittest
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SCRIPT = os.path.join(ROOT, 'scripts', 'generate_templates.py')
+TYPES_JSON = os.path.join(ROOT, 'defaults', 'types.json')
+TEMPLATE_DIR = os.path.join(ROOT, 'defaults', 'templates')
 
-REGISTRY = {
-    "universal_properties": {
-        "type": {"type": "text", "required": True},
-        "title": {"type": "text", "required": True},
-        "description": {"type": "text", "required": True},
-        "tags": {"type": "tags", "required": True},
-        "date": {"type": "date", "required": True},
-        "timestamp": {"type": "datetime", "required": True},
-        "resources": {"type": "list", "required": True},
-        "aliases": {"type": "list", "required": False},
-    },
-    "types": {
-        "character": {"fields": {"factions": {"type": "list"}},
-                      "template": "## Design Notes\n\n## Background\n"},
-        "event": {"fields": {"characters": {"type": "list"},
-                             "layer": {"type": "text"}},
-                  "template": "## What Happens\n"},
-        "plan": {"fields": {}, "template": ""},
-    },
-    "tags": {"status": {"mutually_exclusive": True,
-                        "values": ["human-ready", "agent-ready", "complete"],
-                        "open": ["human-ready", "agent-ready"],
-                        "closed": ["complete"]}},
-    "enforced_paths": {"notes/": {"level": "full"},
-                       "project/": {"level": "full"}},
-}
+
+def load_roster():
+    with open(TYPES_JSON, encoding='utf-8') as f:
+        return json.load(f)
+
+
+class RosterTests(unittest.TestCase):
+    """The plugin-internal roster is the config source: pin the members
+    generate_templates.py consumes."""
+
+    def setUp(self):
+        self.roster = load_roster()
+
+    def test_roster_has_types_and_tags_only(self):
+        self.assertEqual(set(self.roster), {'types', 'tags'})
+        # enforced_paths is retired with the registry — scope is scraibe's
+        # reserved-space exclusion rule now, not a per-project path list.
+        self.assertNotIn('enforced_paths', self.roster)
+
+    def test_every_type_carries_a_fields_map(self):
+        for name, spec in self.roster['types'].items():
+            self.assertIsInstance(spec.get('fields'), dict,
+                                  f'{name} has no fields map')
+
+    # Every type's fields map and template_file association, exactly as
+    # the retired okf.base.json carried them. The seam's contract is that
+    # nothing generate_templates.py consumes changed in the move, so all
+    # ten types are pinned — not a sample.
+    EXPECTED = {
+        'character': ({'factions': {'type': 'list'}}, 'character.md'),
+        'location': ({'region': {'type': 'text'},
+                      'function': {'type': 'text'},
+                      'primary-characters': {'type': 'list'}}, 'location.md'),
+        'faction': ({'members': {'type': 'list'},
+                     'function': {'type': 'text'}}, 'faction.md'),
+        'event': ({'characters': {'type': 'list'},
+                   'location': {'type': 'text'},
+                   'layer': {'type': 'text'}}, 'event.md'),
+        'concept': ({'layer': {'type': 'text', 'required': True},
+                     'trigger-context': {'type': 'text'},
+                     'keywords': {'type': 'list', 'required': False}},
+                    'concept.md'),
+        'story': ({'scope': {'type': 'text', 'required': True},
+                   'up': {'type': 'text'}}, 'story.md'),
+        'seed': ({}, 'seed.md'),
+        'plan': ({}, 'plan.md'),
+        'direction': ({}, None),
+        'reference': ({}, None),
+    }
+
+    def test_field_maps_preserved_from_the_registry(self):
+        types = self.roster['types']
+        self.assertEqual(set(types), set(self.EXPECTED),
+                         'roster type set changed')
+        for name, (fields, _) in self.EXPECTED.items():
+            self.assertEqual(types[name]['fields'], fields,
+                             f'{name}: fields map changed')
+
+    def test_template_file_associations_preserved(self):
+        types = self.roster['types']
+        for name, (_, ref) in self.EXPECTED.items():
+            self.assertEqual(types[name].get('template_file'), ref,
+                             f'{name}: template_file association changed')
+
+    def test_template_file_references_resolve(self):
+        refs = 0
+        for name, spec in self.roster['types'].items():
+            ref = spec.get('template_file')
+            if ref is None:
+                # A type may ship an inline empty body instead.
+                self.assertEqual(spec.get('template', ''), '',
+                                 f'{name}: inline body but no template_file')
+                continue
+            refs += 1
+            self.assertTrue(os.path.isfile(os.path.join(TEMPLATE_DIR, ref)),
+                            f'{name}: missing template file {ref}')
+        self.assertGreater(refs, 0)
+
+    def test_status_tag_vocabulary_preserved(self):
+        status = self.roster['tags']['status']
+        self.assertEqual(status['open'][0], 'human-ready')
+        self.assertIn('complete', status['closed'])
 
 
 class GeneratorTests(unittest.TestCase):
     def setUp(self):
         self.dir = tempfile.mkdtemp()
-        self.config = os.path.join(self.dir, 'okf.json')
-        with open(self.config, 'w', encoding='utf-8') as f:
-            json.dump(REGISTRY, f)
 
     def tearDown(self):
         shutil.rmtree(self.dir, ignore_errors=True)
 
     def run_gen(self, *args):
         return subprocess.run(
-            [sys.executable, SCRIPT, '--config', self.config,
-             '--out', self.dir, *args],
+            [sys.executable, SCRIPT, '--out', self.dir, *args],
             capture_output=True, text=True)
 
     def read(self, rel):
         with open(os.path.join(self.dir, rel), encoding='utf-8') as f:
             return f.read()
+
+    def test_no_config_argument(self):
+        """The per-project config path is gone: --config is not accepted."""
+        r = self.run_gen('--config', os.path.join(self.dir, 'okf.json'))
+        self.assertEqual(r.returncode, 2)
+        self.assertIn('--config', r.stderr)
 
     def test_type_template_skeleton(self):
         r = self.run_gen('--dir', 'notes/=character,event')
@@ -68,18 +134,38 @@ class GeneratorTests(unittest.TestCase):
         self.assertIn('timestamp: <% moment.utc().format("YYYY-MM-DDTHH:mm[Z]") %>', t)
         self.assertIn('date: <% moment.utc().format("YYYY-MM-DD") %>', t)
         self.assertIn('factions: []', t)           # list field -> []
-        self.assertIn('## Design Notes', t)        # body appended
         self.assertNotIn('aliases', t)             # optional universal skipped
 
+    def test_template_file_body_is_embedded(self):
+        """The compilation contract absorbed from build-okf.py: a type's
+        `template_file` body reaches the generated Templater template.
+
+        Covers every type carrying a reference, so a swapped or wrong
+        reference fails here and not only in the roster assertions."""
+        roster = load_roster()['types']
+        refs = {n: s['template_file'] for n, s in roster.items()
+                if s.get('template_file')}
+        self.assertTrue(refs)
+        r = self.run_gen()
+        self.assertEqual(r.returncode, 0, r.stderr)
+        for tname, ref in refs.items():
+            with open(os.path.join(TEMPLATE_DIR, ref), encoding='utf-8') as f:
+                body = f.read().strip()
+            generated = self.read(f'_templates/type-{tname}.md')
+            self.assertIn(body, generated,
+                          f'{tname}: body of {ref} not embedded')
+
     def test_text_field_and_empty_body(self):
-        self.run_gen('--dir', 'notes/=event', '--dir', 'project/=plan')
+        self.run_gen('--dir', 'notes/=event', '--dir', 'project/=direction')
         e = self.read('_templates/type-event.md')
         self.assertIn('layer: ""', e)              # text field -> ""
-        p = self.read('_templates/type-plan.md')
-        self.assertTrue(p.rstrip().endswith('---'))  # empty body tolerated
+        self.assertIn('characters: []', e)         # list field -> []
+        d = self.read('_templates/type-direction.md')
+        self.assertTrue(d.rstrip().endswith('---'))  # empty body tolerated
 
     def test_picker_for_mixed_dir_only(self):
-        self.run_gen('--dir', 'notes/=character,event', '--dir', 'project/=plan')
+        self.run_gen('--dir', 'notes/=character,event',
+                     '--dir', 'project/=plan')
         picker = self.read('_templates/new-notes.md')
         self.assertIn('"character"', picker)
         self.assertIn('"event"', picker)
@@ -125,10 +211,12 @@ class GeneratorTests(unittest.TestCase):
         self.assertIn('dragon', r.stderr)
 
     def test_default_all_types_one_picker(self):
+        """No --dir: every roster type, one picker. With enforced_paths
+        retired there is no path list to fan out over."""
         r = self.run_gen()
         self.assertEqual(r.returncode, 0, r.stderr)
         picker = self.read('_templates/new-note.md')
-        for t in ('character', 'event', 'plan'):
+        for t in load_roster()['types']:
             self.assertIn(f'"{t}"', picker)
 
     def test_empty_type_list_fails(self):

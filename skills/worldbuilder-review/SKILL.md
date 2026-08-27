@@ -1,6 +1,6 @@
 ---
 name: worldbuilder-review
-description: Pre-completion adversarial review for worldbuilder documents.
+description: Use when a worldbuilder document is drafted and needs adversarial review against its governing format document before it is treated as complete.
 ---
 
 # Worldbuilder Review

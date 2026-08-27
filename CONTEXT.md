@@ -1,6 +1,6 @@
 # RPG World Builder Skills
 
-Craft skills plus an OKF preset, running on the scraibe base plugin. This plugin defines the worldbuilding types and deliverables for the ainime-games.com world builder platform; scraibe owns all file management — document creation (`new_doc.py`), frontmatter enforcement, status lifecycle, inbox, triage, audit, and generated rules. No skill in this plugin creates files by hand or specifies frontmatter; the registry does that.
+Craft skills plus a type roster, running on the scraibe base plugin. This plugin defines the worldbuilding types and deliverables for the ainime-games.com world builder platform; scraibe owns all file management — document creation (`new_doc.py`), frontmatter enforcement, status lifecycle, inbox, triage, audit. No skill in this plugin creates files by hand or specifies frontmatter; the roster and the generated Templater templates do that.
 
 Phases 1 and 2 are platform-agnostic. Only the Export phase produces ainime-specific output.
 
@@ -10,21 +10,20 @@ A player project after `worldbuilder-setup`:
 
 ```
 <project>/
-  .claude/okf.json      ← written from this plugin's defaults/okf.json
-  .claude/rules/        ← generated (generate_rules.py)
   .claude/glossary.md   ← seeded with platform terms ("world info" = lorebook)
   .claude/inbox.md
   .obsidian/            ← scraibe defaults + app.json overlay (attachmentFolderPath)
-  Home.md  _bases/  _attachments/   ← chrome, unenforced
-  project/              ← enforced: seed.md, plan.md, direction.md
-  notes/                ← enforced: all entity notes, flat
+  _templates/           ← generated (generate_templates.py)
+  Home.md  _bases/  _attachments/   ← chrome
+  project/              ← seed.md, plan.md, direction.md
+  notes/                ← all entity notes, flat
 ```
 
-Enforced paths are `notes/` and `project/`, full level. Chrome stays at the root, unenforced — `Home.md` and the Bases carry no frontmatter.
+No configuration file is written into the project: the project is a worldbuilder project because scraibe and this plugin are enabled for it, which `fleet:setup` records. Scraibe's corpus rule excludes reserved spaces (`+/`, `repo/`, `.claude/`, `Imports/`); everything else is a vault document. Chrome at the root — `Home.md` and the Bases — carries no frontmatter, and that is fine.
 
-## Registry types
+## Types
 
-Defined in `defaults/okf.json`. Entity types live in `notes/`; project types live in `project/`.
+Defined in `defaults/types.json`, this plugin's internal roster. Entity types live in `notes/`; project types live in `project/`.
 
 **character** — the comprehensive Wide-phase behavioral specification for one character; the source every export card derives from. _Avoid_: blueprint, draft card.
 
@@ -65,5 +64,5 @@ The Phase Status table in `project/plan.md` is the tracker; the export skill gat
 ## Pointers
 
 - Spec for this architecture: `.claude/specs/2026-07-04-retool-worldbuilder-workflow-on-scraibe-base.md`
-- Registry: `defaults/okf.json`, regenerated from `defaults/templates/*.md` by `scripts/build-okf.py`
+- Type roster: `defaults/types.json`, with type bodies in `defaults/templates/*.md`; both hand-edited, no build step. `scripts/generate_templates.py` reads them to emit a project's Templater templates.
 - Target platform field reference: `docs/target-system.md`
