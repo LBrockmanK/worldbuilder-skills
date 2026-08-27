@@ -6,6 +6,8 @@ All field names below are the exact JSON keys. These fields are produced by `wor
 
 **Format version:** 2 (`.sbworld` — current). Earlier `.json` exports may have different or missing fields.
 
+**ZIP format:** The `.sbworld` archive must use `STORED` compression (compress_type 0) for all entries. The platform cannot read deflated entries — assets will appear blank. Structure: `manifest.json` and `world.json` at root, all bundled files under `assets/`, plus an `assets/` directory entry.
+
 ---
 
 ## Setting Tab
@@ -212,12 +214,17 @@ The Locations tab manages image pools — sets of location images by time of day
 
 ```json
 {
-  "Morning": [{"name": "slug_name", "url": "base64...", "prompt": "image gen prompt"}],
+  "Morning": [{"name": "location_slug_morning", "url": "asset://sandboxWorldAssets/<uuid>", "prompt": "image gen prompt"}],
   "Afternoon": [...],
-  "Evening": [...],
-  "Night": [...]
+  "Evening": [...]
 }
 ```
+
+Each entry has three fields:
+
+- **`name`** — Snake-case identifier. Convention for time-variant locations: `{location_slug}_{time_segment}` (e.g., `blacksmith_forge_morning`).
+- **`url`** — Either an asset reference (`asset://sandboxWorldAssets/<uuid>`) for a bundled image registered in `manifest.json` with `kind: "location"`, or empty string `""` when no image is provided (the platform can generate one from `prompt`).
+- **`prompt`** — Optional. A text description of the location used by the platform's built-in AI image generator. Omit when a bundled image is provided. Prompts describe the empty scene only — no people, characters, or figures unless a specific location is deliberately designed to include them. Each prompt is self-contained: describe the location on its own terms without referencing other locations (no "near the blacksmith" or "across from the inn").
 
 **Narrative location descriptions** belong in `loreEntries`, not the `locations` object. Write a lorebook entry for each major location covering what the place looks like, who uses it, what it means, and one vivid specific detail. The `locations` object is for art assets.
 
@@ -429,7 +436,7 @@ These fields are auto-generated or configured by the platform — do not produce
 - `generateSideCharacterOnNewGame` — platform toggle
 - `characters[].color` — UI display color, set in platform
 - `characters[].image` — generated artwork
-- `locations[].url` — generated background images
+- `locations[].url` — when platform-generated; bundled location images use `asset://sandboxWorldAssets/<uuid>` and are export-produced
 - `artStyle.sprite.same_character_consistency` — platform setting
 - `artStyle.sprite.use_tag_style_prompts` — platform setting
 - `uiTheme.*` — UI configuration, set after content

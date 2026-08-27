@@ -229,11 +229,11 @@ The `description` drives art generation context; keep it concrete and consistent
 
 Read the Art style section of `project/seed.md`. Translate the plain-language reference into prompt-engineering format.
 
-**`artStyle.background.style_prefix`** — Prepended to all background prompts. Should establish the visual style consistently: rendering style, color palette tendencies, era cues.
+**`artStyle.background.style_prefix`** — Prepended to all background prompts. Should establish the visual style consistently: rendering style, color palette tendencies, era cues. Include ground-level perspective direction (eye-level, first-person viewpoint) — backgrounds are seen from the player's position, not from above.
 
-**`artStyle.background.style_suffix`** — Appended to background prompts. Typically quality modifiers and technical parameters.
+**`artStyle.background.style_suffix`** — Appended to background prompts. Typically quality modifiers and technical parameters. Reinforce perspective (ground-level shot) and emptiness (no people, uninhabited).
 
-**`artStyle.background.negative_prompt`** — Elements to suppress across all backgrounds.
+**`artStyle.background.negative_prompt`** — Elements to suppress across all backgrounds. Always include people/person/figure/crowd/character — location backgrounds are empty scenes with no people unless a specific location is deliberately designed to include them. Suppress aerial perspectives: overhead view, isometric, bird's eye view, top-down, aerial view.
 
 **`artStyle.sprite.style_prefix`** / **`style_suffix`** / **`negative_prompt`** — Same structure for character sprites. Sprite style should be consistent with background style but may have different technical requirements (transparent background, consistent character proportions).
 
