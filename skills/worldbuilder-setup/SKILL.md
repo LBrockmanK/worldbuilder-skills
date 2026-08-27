@@ -13,7 +13,7 @@ Scraibe owns file management from here on — document creation, frontmatter enf
 
 **This skill writes no configuration into the project.** The worldbuilder type roster lives in this plugin, at `defaults/types.json`, and is read from there whenever it is needed. A project does not get a copy. What makes worldbuilder available is that scraibe and this plugin are *enabled for the working tree the session runs in* — see Step 2.
 
-Two directories matter and they are usually different. The **project root** is where the vault content goes: the directory the user names for their world. The **session root** is the working tree Claude is running in, whose `.claude/settings.json` carries the live plugin enablement; for a project that lives inside a larger vault, that is the vault root, not the project folder. Steps 3 through 6 all operate on the project root; only Step 2 looks at the session root.
+Two directories matter and they are usually different. The **project root** is where the vault content goes: the directory the user names for their world. The **session root** is the working tree the session is running in, whose `.claude/settings.json` carries the live plugin enablement; for a project that lives inside a larger vault, that is the vault root, not the project folder. Steps 3 through 6 all operate on the project root; only Step 2 looks at the session root.
 
 ## Steps
 
@@ -32,7 +32,7 @@ Record the resolved root — later steps use its scripts and defaults. Never har
 
 Adoption is plugin enablement, and fleet:setup is its sole writer.
 
-**Check the working tree the session is running in, not the project directory.** These are usually not the same place. A project inside a vault is not an independent Claude session: the session runs at the vault root, so the vault root's `.claude/settings.json` is the enablement that is actually live. A project folder's own settings are inert in that case, and checking them would fail a correctly-enabled setup.
+**Check the working tree the session is running in, not the project directory.** These are usually not the same place. A project inside a vault is not an independent session: the session runs at the vault root, so the vault root's `.claude/settings.json` is the enablement that is actually live. A project folder's own settings are inert in that case, and checking them would fail a correctly-enabled setup.
 
 Determine that root first: it is the directory the session was started in — the working tree containing the `.claude/` whose settings apply. For a vault-homed project this is the vault root, well above `<project>`. If in doubt, ask the user which directory they launched the session from. Call it `<session-root>`.
 
@@ -122,7 +122,7 @@ is why Step 4 applies their bodies itself.
 python <scraibe>/scripts/validate.py project --root . --format human
 ```
 
-There is no rules-generation step: scraibe retired `generate_rules.py` and the generated-rules mechanism with it. Project conventions live in the project's own `CLAUDE.md`, which `scraibe:setup` maintains.
+There is no rules-generation step: scraibe retired `generate_rules.py` and the generated-rules mechanism with it. Project conventions live in the project's own agent-conventions file, which `scraibe:setup` maintains.
 
 Report the validation result to the user. Tell them the vault is ready to open in Obsidian ('Open folder as vault' on the project root; Bases and the vendored Templater need Obsidian 1.12.2+ with community plugins enabled for this vault). Then hand off to `worldbuilder-world-foundation` for the seed conversation.
 
