@@ -20,7 +20,7 @@ views:
   - title
   - description
   - tags
-  - timestamp
+  - modified
 - type: table
   name: Open
   filters:
@@ -35,7 +35,7 @@ views:
   - title
   - description
   - tags
-  - timestamp
+  - modified
 - type: table
   name: Closed
   filters:
@@ -52,4 +52,4 @@ views:
   - title
   - description
   - tags
-  - timestamp
+  - modified

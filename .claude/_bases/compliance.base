@@ -11,7 +11,7 @@ filters:
   - file.basename != "log"
 formulas:
   missing_status: if(!file.hasTag("human-ready") && !file.hasTag("agent-ready") && !file.hasTag("complete") && !file.hasTag("deprecated") && !file.hasTag("abandoned") && !file.hasTag("archived"), "✗", "")
-  missing_properties: if(type == null || type == "" || title == null || title == "" || description == null || description == "" || tags == null || date == null || timestamp == null || resources == null, "✗", "")
+  missing_properties: if(type == null || type == "" || title == null || title == "" || description == null || description == "" || tags == null || created == null || modified == null || resources == null, "✗", "")
 views:
 - type: table
   name: Non-compliant
@@ -22,8 +22,8 @@ views:
     - title == null || title == ""
     - description == null || description == ""
     - tags == null
-    - date == null
-    - timestamp == null
+    - created == null
+    - modified == null
     - resources == null
   order:
   - file.name
@@ -32,4 +32,4 @@ views:
   - type
   - title
   - tags
-  - timestamp
+  - modified

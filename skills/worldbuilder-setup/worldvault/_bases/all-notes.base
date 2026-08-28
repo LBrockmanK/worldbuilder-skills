@@ -7,7 +7,7 @@ views:
       - description
       - tags
       - type
-      - timestamp
+      - modified
   - type: table
     name: Open
     filters:
@@ -19,7 +19,7 @@ views:
       - description
       - tags
       - type
-      - timestamp
+      - modified
   - type: table
     name: Complete
     filters: tags.contains("complete")
@@ -28,4 +28,4 @@ views:
       - description
       - tags
       - type
-      - timestamp
+      - modified

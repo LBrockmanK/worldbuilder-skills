@@ -24,7 +24,7 @@ views:
   - tags
   - title
   - description
-  - timestamp
+  - modified
 - type: table
   name: human-ready
   filters: file.hasTag("human-ready")

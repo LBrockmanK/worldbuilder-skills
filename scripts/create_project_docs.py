@@ -50,8 +50,7 @@ def create_doc(project_dir, doc_type, title, description, template_content):
         'title': title,
         'description': description,
         'tags': ['human-ready'],
-        'date': now.date(),
-        'timestamp': now.strftime('%Y-%m-%dT%H:%MZ'),
+        'created': f'[[{now.date().isoformat()}]]',
         'resources': [],
     }
     fm_text = yaml.safe_dump(fm_data, sort_keys=False, allow_unicode=True).strip()

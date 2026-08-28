@@ -11,7 +11,7 @@ views:
       - tags
       - layer
       - trigger-context
-      - timestamp
+      - modified
   - type: table
     name: Open
     filters:
@@ -24,7 +24,7 @@ views:
       - tags
       - layer
       - trigger-context
-      - timestamp
+      - modified
   - type: table
     name: Complete
     filters: tags.contains("complete")
@@ -34,4 +34,4 @@ views:
       - tags
       - layer
       - trigger-context
-      - timestamp
+      - modified

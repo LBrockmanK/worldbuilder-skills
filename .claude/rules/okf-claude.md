@@ -13,8 +13,8 @@ Files in `.claude/` are OKF knowledge documents (enforcement level: full).
 - `title` (text, required)
 - `description` (text, required)
 - `tags` (tags, required)
-- `date` (date, required)
-- `timestamp` (datetime, required)
+- `created` (date-link, required) — the birth date, machine-stamped at creation as `created: "[[YYYY-MM-DD]]"`
+- `modified` (datetime) — maintained automatically by the frontmatter-modified-date plugin; never written by hand, and not required at creation
 - `resources` (list, required)
 - `output` (list, optional)
 - `superseded-by` (list, optional)

@@ -24,10 +24,9 @@ ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 TYPES_JSON = os.path.join(ROOT, 'defaults', 'types.json')
 TEMPLATE_DIR = os.path.join(ROOT, 'defaults', 'templates')
 
-MOMENT_TS = '<% moment.utc().format("YYYY-MM-DDTHH:mm[Z]") %>'
 MOMENT_DATE = '<% moment.utc().format("YYYY-MM-DD") %>'
-UNIVERSAL_ORDER = ('type', 'title', 'description', 'tags', 'date',
-                   'timestamp', 'resources')
+UNIVERSAL_ORDER = ('type', 'title', 'description', 'tags', 'created',
+                   'resources')
 
 
 def load_roster():
@@ -63,8 +62,7 @@ def type_template(config, tname):
              'description: ""',
              'tags:',
              f'  - {status}',
-             f'date: {MOMENT_DATE}',
-             f'timestamp: {MOMENT_TS}',
+             f'created: "[[{MOMENT_DATE}]]"',
              'resources: []']
     for fname, fspec in (spec.get('fields') or {}).items():
         if fname in UNIVERSAL_ORDER:

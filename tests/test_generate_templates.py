@@ -131,8 +131,11 @@ class GeneratorTests(unittest.TestCase):
         self.assertIn('type: character', t)
         self.assertIn('title: <% tp.file.title %>', t)
         self.assertIn('- human-ready', t)          # first open status
-        self.assertIn('timestamp: <% moment.utc().format("YYYY-MM-DDTHH:mm[Z]") %>', t)
-        self.assertIn('date: <% moment.utc().format("YYYY-MM-DD") %>', t)
+        # The birth date is `created`, a date-LINK; `modified` is left to
+        # the frontmatter-modified-date plugin, so no template stamps it.
+        self.assertIn('created: "[[<% moment.utc().format("YYYY-MM-DD") %>]]"', t)
+        self.assertNotIn('timestamp:', t)
+        self.assertNotIn('\ndate:', t)
         self.assertIn('factions: []', t)           # list field -> []
         self.assertNotIn('aliases', t)             # optional universal skipped
 

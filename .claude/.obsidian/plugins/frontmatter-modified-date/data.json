@@ -1,5 +1,5 @@
 {
-  "frontmatterProperty": "timestamp",
+  "frontmatterProperty": "modified",
   "createdDateProperty": "",
   "momentFormat": "YYYY-MM-DDTHH:mm[Z]",
   "momentLocale": "",
