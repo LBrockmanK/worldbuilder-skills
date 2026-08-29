@@ -28,23 +28,57 @@ If any prerequisite is incomplete, return to the relevant Wide-phase skill rathe
 
 ## Field Map
 
-| Source | ainime JSON field(s) |
-|---|---|
-| `project/seed.md` — Setting Summary | `settingSummary` |
-| `project/seed.md` — Genre and Tone | `genre` |
-| `project/seed.md` — Inspirations | `inspirations[]` |
-| `project/seed.md` — Tonal Inspirations | `tonalInspirations[]` |
-| `project/seed.md` — Key Tropes and Themes | `keyTropesAndThemes[]` |
-| `project/seed.md` — Community | `communityDescription` |
-| `project/seed.md` — World Introduction | `introText` |
-| `project/seed.md` — Opening Situation | `initialStoryArc` |
-| `project/seed.md` — era (from story direction or seed) | `calendarConfig.eraReminder` |
-| `project/direction.md` | `arcManagerGuidance` |
-| intention story notes + event notes in `notes/` | `storyTriggers[]` |
-| event notes in `notes/` | `calendarConfig.weatherPools`, `eventCalendarSummary` |
-| concept notes in `notes/` | `loreEntries[]` |
-| character notes in `notes/` | `characters[]` |
-| `project/seed.md` — Art style | `artStyle.background.*`, `artStyle.sprite.*` |
+Fields are marked **required** or **optional**. Required fields must be present in every export; optional fields are included when the world needs them.
+
+| Source | ainime JSON field(s) | Req? |
+|---|---|---|
+| `project/seed.md` — Setting Summary | `settingSummary` | **req** |
+| `project/seed.md` — Genre and Tone | `genre` | opt |
+| `project/seed.md` — Inspirations | `inspirations[]` | opt |
+| `project/seed.md` — Tonal Inspirations | `tonalInspirations[]` | opt |
+| `project/seed.md` — Key Tropes and Themes | `keyTropesAndThemes[]` | opt |
+| `project/seed.md` — Community | `communityDescription` | opt |
+| `project/seed.md` — World Introduction | `introText` | opt |
+| `project/seed.md` — Opening Situation | `initialStoryArc` | opt |
+| builder-specified | `authorCredit` | opt |
+| `project/seed.md` — era (from story direction or seed) | `calendarConfig.eraReminder` | opt |
+| builder-specified | `calendarConfig.startingYear` | opt |
+| builder-specified | `calendarConfig.dailyInfluenceCap` | opt |
+| builder-specified | `calendarConfig.dailyPlannerDirective` | opt |
+| `project/direction.md` | `arcManagerGuidance` | opt |
+| intention story notes + event notes in `notes/` | `storyTriggers[]` | opt |
+| event notes in `notes/` | `calendarConfig.weatherPools`, `eventCalendarSummary` | opt |
+| concept notes in `notes/` | `loreEntries[]` | opt |
+| character notes in `notes/` | `characters[]` | **req** |
+| `project/seed.md` — Art style | `artStyle.background.*`, `artStyle.sprite.*` | opt |
+| `project/seed.md` — Art style | `artStyle.timeOfDayLighting.*` | opt |
+| builder-specified | `locations[]` | opt |
+| builder-specified | `moods` | opt |
+| builder-specified | `theme` | opt |
+| builder-specified | `customPrompts` | opt |
+
+---
+
+## Updating an Existing Export
+
+The .sbworld file is the only true export output — it is what the ainime platform consumes. There is no authoritative standalone world.json; the world.json lives inside the .sbworld archive.
+
+An exported .sbworld accumulates manual tweaks — expanded opening arcs, rewritten lore entries, adjusted character cards. A re-export must never overwrite those changes silently.
+
+**Always use the diff workflow.** `scripts/export_diff.py` extracts world.json from the existing .sbworld, generates candidate field values from the source documents (seed.md, direction.md), and diffs them. Only the fields you name are updated, and the .sbworld is repacked in place.
+
+```bash
+# show what differs between source docs and the current .sbworld
+python scripts/export_diff.py <project-root>
+
+# apply specific fields
+python scripts/export_diff.py <project-root> --apply communityDescription arcManagerGuidance
+
+# apply everything (use only when the diff has been reviewed)
+python scripts/export_diff.py <project-root> --apply-all
+```
+
+Fields not covered by the script (characters, lore entries, calendar events) are updated by extracting world.json from the .sbworld, editing it, and repacking — never by regenerating the whole file.
 
 ---
 
@@ -52,25 +86,29 @@ If any prerequisite is incomplete, return to the relevant Wide-phase skill rathe
 
 Read `project/seed.md` and extract the following. The section names in the seed map directly.
 
-**`settingSummary`** — Setting Summary section verbatim. Concrete and specific; this is the always-active context.
+**`settingSummary`** (required) — The AI's primary reference for every scene. Describe the world in detail: where and when the story takes place, technology level and what exists (and what doesn't), cultural norms, social structure, daily life, and the general feel of the world. The more detail, the more consistent and immersive the AI's scenes. Setting Summary section from seed, verbatim.
 
-**`genre`** — Genre and Tone section verbatim.
+**`genre`** (optional) — Genre and Tone section verbatim.
 
-**`inspirations`** — Inspirations section as a string array. One entry per line item.
+**`inspirations`** (optional) — Inspirations section as a string array. One entry per line item.
 
-**`tonalInspirations`** — Tonal Inspirations section as a string array. One entry per line item.
+**`tonalInspirations`** (optional) — Tonal Inspirations section as a string array. One entry per line item.
 
-**`keyTropesAndThemes`** — Key Tropes and Themes section as a string array. One entry per line item.
+**`keyTropesAndThemes`** (optional) — Key Tropes and Themes section as a string array. One entry per line item.
 
-**`communityDescription`** — Community section verbatim.
+**`communityDescription`** (optional) — Short blurb shown in the community world list. This is a description for potential players browsing the ainime community, not an in-game description of the setting's social dynamics. Community section from seed, verbatim.
 
-**`introText`** — World Introduction section verbatim.
+**`introText`** (optional) — Shown to players when starting a new game. Set the scene: what do they need to know before they step into the world? World Introduction section from seed, verbatim.
 
-**`initialStoryArc`** — Opening Situation section verbatim.
+**`initialStoryArc`** (optional) — Seeds the main plot at game start — the "global adventure arc," a multi-character web of drama that runs for roughly 14 in-game days. The specific story you want to unfold: who is involved, what's the inciting incident, what's the tension. Can be very specific (naming characters, situations) or thematic. Leave empty for a fully randomized opening arc. Opening Situation section from seed on initial export; commonly expanded manually afterward to include the full scripted opening sequence. The diff workflow preserves those expansions.
 
-**`calendarConfig.eraReminder`** — One-phrase era descriptor. Extract from the seed's era description or story direction note.
+**`authorCredit`** (optional) — Your name or Discord handle, shown when sharing your world in the community.
 
-**`calendarConfig.seasons`, `daysPerSeason`, `daysOfWeek`, `daySegments`** — Structural calendar configuration. Defaults: 4 seasons, 28 days/season, standard day names, Morning/Afternoon/Evening/Night. Change only if the world requires a different structure.
+**`calendarConfig.eraReminder`** (optional) — Injected into AI context every day to keep the technology level consistent. Extract from the seed's era description. Leave blank for no restriction.
+
+**`calendarConfig.seasons`, `daysPerSeason`, `daysOfWeek`, `daySegments`** — Structural calendar configuration. Defaults: 4 seasons, 28 days/season, standard day names. Day segments default to Morning/Afternoon/Evening/Night — 4 segments is the recommended sweet spot (the engine is tuned for it), but 3 works fine. Change any of these to fit the world.
+
+**`calendarConfig.startingYear`** (optional) — The calendar year Day 1 starts in. Use 1400 for medieval, 3025 for sci-fi, etc.
 
 ---
 
@@ -78,20 +116,27 @@ Read `project/seed.md` and extract the following. The section names in the seed 
 
 Read `calendar.md` (this skill's reference file) for design guidance on weather pools, festival layout, and day-segment defaults before building this section.
 
-**`calendarConfig.weatherPools`** — Nested object: season → day segment → string array. Each string is a one-line weather description. 10–16 entries per season/segment. Derive from the world's seasonal tone and `project/seed.md`; see `calendar.md` for writing guidance.
+**`calendarConfig.dailyInfluenceCap.gain`** (optional) — Maximum positive influence a character can gain per day. Lower values mean slower relationship growth. Default is 5.
+
+**`calendarConfig.dailyInfluenceCap.loss`** (optional) — Maximum negative influence a character can lose per day. Lower values mean slower relationship decay. Default is 5.
+
+**`calendarConfig.dailyPlannerDirective`** (optional) — Standing rules about daily structure that the AI planner sees every day, before any day-specific events. Examples: "On weekdays, morning and afternoon MUST be classroom lessons. Evenings are free." / "Every day must include at least one scene in the guild hall." / "Weekend days are fully open for character-driven activities."
+
+**`calendarConfig.weatherPools`** (optional) — Nested object: season → day segment → string array. Each string is a one-line weather description. 10–16 entries per season/segment. The segments must match the project's `daySegments` configuration. Derive from the world's seasonal tone and `project/seed.md`; see `calendar.md` for writing guidance.
 
 ```json
 {
   "Spring": {
     "Morning": ["Light fog lifting...", "Crisp clean air..."],
     "Afternoon": ["..."],
-    "Evening": ["..."],
-    "Night": ["..."]
+    "Evening": ["..."]
   }
 }
 ```
 
-**`eventCalendarSummary`** — Prose overview of the event calendar for LLM reference. Summarize the festival calendar and its emotional rhythms after all events are written.
+Note: if the project uses 4 day segments (the platform default), add a `"Night"` key to each season as well.
+
+**`eventCalendarSummary`** (optional) — Prose overview of the event calendar for LLM reference. Summarize the festival calendar and its emotional rhythms after all events are written.
 
 **`storyTriggers[]` (calendar events)** — One entry per event note. Recurring annual events use `recurring: true` in the output. See `calendar.md` for how to derive `triggerOnDay` from the timing language that opens each event note's What Happens section, and how to write effective `promptInjection` content.
 
@@ -111,7 +156,13 @@ Read `calendar.md` (this skill's reference file) for design guidance on weather 
 
 ## Story Direction and Triggers
 
-**`arcManagerGuidance`** — Read `project/direction.md`. This is the standing creative direction for the engine — the primary guard against escalation, flattening, and inappropriate pacing. Export verbatim; do not summarize.
+**`arcManagerGuidance`** — General creative direction that steers the AI throughout the entire game. Not a specific plot — a creative compass. What kinds of adventures should it create after the opening arc concludes? What themes should it keep coming back to? Read `project/direction.md` and export verbatim; do not summarize. The platform's own examples of what belongs here:
+
+- Keep things grounded — no supernatural elements.
+- Romance should always be complicated by external pressures.
+- Lean into political intrigue between factions.
+- After major arcs, give characters breathing room with slice-of-life moments.
+- Lean into moral ambiguity. No clear villains — everyone has reasons.
 
 **`storyTriggers[]` (story events)** — One entry per intention story note where a trigger condition can be expressed as a calendar day or a story moment. Intentions without a concrete trigger day do not produce `storyTriggers` entries; they remain in the `arcManagerGuidance` as ongoing direction instead.
 
@@ -154,25 +205,28 @@ Adjust thresholds based on world pacing if these defaults don't fit.
 
 For each character note in `notes/`, produce a character record. Process one character at a time; read `card-assembly.md` before writing the card.
 
-| Character note field | ainime JSON field |
-|---|---|
-| Major/Supporting (cast plan entry in `project/plan.md`) | `type`: `"main"` or `"side"` |
-| Character name | `name`, `lastName` |
-| Derived by export skill | `role` |
-| Assembled card prose | `baseProfile` |
-| Body preamble | `appearance` |
-| Sprite sets (see below) | `spriteSets[]` |
-| Available Day (see below) | `availableFromDay` |
+| Character note field | ainime JSON field | Req? |
+|---|---|---|
+| Character name | `name`, `lastName` | **req** / opt |
+| Major/Supporting (cast plan entry in `project/plan.md`) | `type`: `"main"` or `"side"` | opt |
+| Derived by export skill | `role` | opt |
+| Assembled card prose | `baseProfile` | opt |
+| Body preamble | `appearance` | opt |
+| Sprite sets (see below) | `spriteSets[]` | opt |
+| Available Day (see below) | `availableFromDay` | opt |
+| Builder-specified | `startingInfluence` | opt |
 
-**`name` / `lastName`** — Extract from the character note filename.
+**`name`** (required) / **`lastName`** (optional) — Extract from the character note filename.
 
-**`type`** — `"main"` for major characters, `"side"` for supporting. Maps from the character's Major/Supporting designation in the cast plan (`project/plan.md`).
+**`type`** (optional) — `"main"` for major characters, `"side"` for supporting. Main characters get dedicated story arcs, fully generated personality traits, likes/dislikes, and relationship dynamics. All characters are romanceable. Maps from the character's Major/Supporting designation in the cast plan (`project/plan.md`).
 
-**`role`** — Not stored in the character note. Derive from the character's function as established by the character note content (their position in the world, their relationship to the player, their narrative role). Write as plain text.
+**`role`** (optional) — Not stored in the character note. Derive from the character's function as established by the character note content (their position in the world, their relationship to the player, their narrative role). Write as plain text. Examples: "The player's mysterious neighbor; a hacker with a heart of gold."
 
-**`baseProfile`** — The card prose. See `card-assembly.md` for full assembly guidance. This is the most complex field; do not attempt it without reading that file.
+**`baseProfile`** (optional) — The character card prose. Include personality, psychology, backstory, motivations, quirks, speech patterns. Optionally add a "Future Storylines" section at the end to guide what happens after the character's initial story arcs conclude. See `card-assembly.md` for full assembly guidance. This is the most complex field; do not attempt it without reading that file.
 
-**`appearance`** — Use the Body section's appearance preamble of the character note verbatim or lightly condensed. Cover species/type and sex if relevant, age presentation and body type, notable features, clothing style.
+**`appearance`** (optional) — Used for sprite generation and as context for all in-game AIs. Use the Body section's appearance preamble of the character note verbatim or lightly condensed. Cover species/type and sex if relevant, age presentation and body type, notable features, clothing style.
+
+**`startingInfluence`** (optional) — Initial relationship value for this character. Default is `"Auto"` (the platform assigns a starting value). Set manually to override.
 
 **Body preamble → appearance:** The Body appearance preamble provides
 the character's physical description for the appearance field.
@@ -227,32 +281,95 @@ The `description` drives art generation context; keep it concrete and consistent
 
 ## Art Style Prompts
 
-Read the Art style section of `project/seed.md`. Translate the plain-language reference into prompt-engineering format.
+Read the Art style section of `project/seed.md`. Translate the plain-language reference into prompt-engineering format. These prompts are prepended/appended to every AI-generated image.
 
-**`artStyle.background.style_prefix`** — Prepended to all background prompts. Should establish the visual style consistently: rendering style, color palette tendencies, era cues. Include ground-level perspective direction (eye-level, first-person viewpoint) — backgrounds are seen from the player's position, not from above.
+### Time-of-Day Lighting (optional)
 
-**`artStyle.background.style_suffix`** — Appended to background prompts. Typically quality modifiers and technical parameters. Reinforce perspective (ground-level shot) and emptiness (no people, uninhabited).
+Per-segment lighting descriptions injected into every background prompt between the scene description and the style suffix. The final prompt is: `prefix + scene + lighting + suffix`. One field per day segment (Morning, Afternoon, Evening, and Night if using 4 segments). Leave empty for segments that don't need specific lighting direction. The platform can AI-generate these from the world's setting.
 
-**`artStyle.background.negative_prompt`** — Elements to suppress across all backgrounds. Always include people/person/figure/crowd/character — location backgrounds are empty scenes with no people unless a specific location is deliberately designed to include them. Suppress aerial perspectives: overhead view, isometric, bird's eye view, top-down, aerial view.
+### Background Generation
 
-**`artStyle.sprite.style_prefix`** / **`style_suffix`** / **`negative_prompt`** — Same structure for character sprites. Sprite style should be consistent with background style but may have different technical requirements (transparent background, consistent character proportions).
+**`artStyle.background.style_prefix`** (optional) — Prepended to all background prompts. Should establish the visual style consistently: rendering style, color palette tendencies, era cues. Include ground-level perspective direction (eye-level, first-person viewpoint) — backgrounds are seen from the player's position, not from above.
+
+**`artStyle.background.style_suffix`** (optional) — Appended to background prompts. Typically quality modifiers and technical parameters. Reinforce perspective (ground-level shot) and emptiness (no people, uninhabited).
+
+**`artStyle.background.negative_prompt`** (optional) — Elements to suppress across all backgrounds. SDXL models only (e.g. Nova Anime XL) — ignored by Gemini/Imagen. Always include people/person/figure/crowd/character — location backgrounds are empty scenes with no people unless a specific location is deliberately designed to include them. Suppress aerial perspectives: overhead view, isometric, bird's eye view, top-down, aerial view.
+
+### Sprite Generation
+
+**`artStyle.sprite.style_prefix`** / **`style_suffix`** / **`negative_prompt`** (optional) — Same structure for character sprites. Sprite style should be consistent with background style but may have different technical requirements (transparent background, consistent character proportions). Negative prompt is SDXL only — ignored by Gemini/Imagen.
+
+**`artStyle.sprite.maintainConsistency`** (optional) — When enabled, appends "Same character, same background." during sprite generation to improve visual consistency across expressions.
 
 Do not attempt to write `artStyle` content during Wide-phase work — this is a prompt-engineering output that belongs here.
+
+---
+
+## Locations
+
+Stock locations are optional — when image generation is enabled in-game, the AI creates locations on the fly. Stock locations are used in hybrid mode (AI picks from stock when a match exists, generates when it doesn't) or when image generation is turned off entirely (stock images are the only backgrounds).
+
+**Naming matters.** The location name is the **only thing the AI sees** when choosing a background — make it descriptive. Use underscores to separate words. Include the place, its vibe or details, and optionally a character owner. Examples: `cafe_cozy_morning`, `hidden_shrine_ruins_mistymorning`, `alex_apartment_livingroom_evening`, `rooftop_bar_cityview_evening`. The more descriptive the name, the better the AI matches scenes to locations.
+
+Locations are organized by day segment (one background image per segment per location). The AI Location Builder can generate location names and image prompts from the world's setting, arcs, characters, and lorebook. It runs iteratively — the first run creates the most essential locations, each subsequent run fills in more niche and atmospheric spots.
+
+---
+
+## Moods
+
+Audio tracks for the world. Two categories:
+
+### System Moods (optional)
+
+Six fixed slots triggered by the game engine (not the AI). Author one audio track per slot — leave any slot empty for silence at that moment. Slots cannot be renamed or removed.
+
+- **Main Menu** (`main_menu`) — plays on the title screen, during new-game generation, and on the endgame/credits screen.
+- **Segment Transition** (`segment_transition`) — brief musical transition between day segments (Morning to Afternoon, Afternoon to Evening).
+- **Day Transition** (`day_transition`) — plays when the day ends and transitions to the next day (going to sleep).
+
+### Gameplay Moods (optional)
+
+AI-picked moods. The AI chooses the best-fitting mood name each turn from this list. Add as many as you want — more specific moods (signature character themes, locale-specific tracks) give the AI richer choices.
+
+---
+
+## Theme (optional)
+
+Visual customization of the game UI. Not world content — purely presentation.
+
+- **Custom Colors** — Primary Accent (borders, glows), Secondary Accent (UI text, labels), textbox gradient colors.
+- **Typography** — custom font for dialogue text. When "Override player font" is on, this font applies to everyone who plays this world.
+
+---
+
+## Custom Prompts (optional)
+
+Per-AI-persona prompt overrides. These inject directly into each AI persona's system prompt and take highest priority, overriding any conflicting built-in instructions. Use to customize how the AI writes, what it focuses on, and how it handles the game.
+
+Available personas: Dungeon Master (scene narration, NPC dialogue, player interactions), Transition Director, Arc Manager, Narrative Architect, Relationship Analyst, Cast Analyst, Novelist, Psychoanalyst, VN Director.
+
+The AI is already handling complex instructions — keep custom prompts clear and concise. The only hard constraint is the JSON response schema; everything else (NPC behavior, writing style, pacing, tone) is yours to shape.
+
+Most worlds do not need custom prompts. Use them when the world has specific mechanical or narrative needs that the standard fields cannot express — for example, enforcing a particular dialogue style, or adding gameplay mechanics the platform does not natively support.
 
 ---
 
 ## Self-Check Before Export Complete
 
 **Setting fields**
-- [ ] All seven Setting Tab fields present and non-empty
+- [ ] `settingSummary` present and detailed (required)
+- [ ] `communityDescription` is a player-facing blurb, not an in-game description
+- [ ] `introText` sets the scene for a new player
 - [ ] `inspirations` and `tonalInspirations` are arrays, one item per source
 - [ ] `keyTropesAndThemes` has 8–12 entries
 
 **Calendar**
-- [ ] `weatherPools` covers all seasons and all day segments
+- [ ] `daySegments` match the project's intended day structure
+- [ ] `weatherPools` covers all seasons and all configured day segments
 - [ ] All festival and observance events have `storyTriggers` entries
 - [ ] Recurring events have `recurring: true`
 - [ ] `eventCalendarSummary` written
+- [ ] `dailyPlannerDirective` set if the world has standing daily-structure rules
 
 **Lorebook**
 - [ ] Every major location has a concept note → lore entry
@@ -261,12 +378,17 @@ Do not attempt to write `artStyle` content during Wide-phase work — this is a 
 - [ ] Keywords are specific; no partial-match traps
 
 **Story direction**
-- [ ] `arcManagerGuidance` is the full direction note, not a stub
+- [ ] `arcManagerGuidance` is creative compass guidance, not a GM prompt
 - [ ] Story intention notes with concrete triggers have `storyTriggers` entries
 
 **Characters (per character)**
-- [ ] All required fields present: name, lastName, type, role, baseProfile, appearance, availableFromDay
+- [ ] `name` present (required); other fields filled as applicable
 - [ ] `baseProfile` prose is complete and in target range (~900 supporting, ~1500 major tokens)
 - [ ] All six influence bands present in the card
 - [ ] Sprite sets include at minimum Casual and Working/Active
 - [ ] Introduction Story Seed present, introduction scenario plausible before `availableFromDay`
+
+**Art style**
+- [ ] Background and sprite prefix/suffix present if using AI generation
+- [ ] Negative prompts are for SDXL models only (Gemini/Imagen ignore them)
+- [ ] Time-of-day lighting set if the world needs per-segment atmosphere
