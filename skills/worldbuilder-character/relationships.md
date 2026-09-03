@@ -72,108 +72,75 @@ Counts are per-character. A relationship in A's list does not require a matching
 
 ## Writing Relationship Entries
 
-Each entry develops an argument about what the relationship does to this character. Not what happened between them, not what the other person is like, not a list of their interactions. What being around this person makes this character do, avoid, or become. Write the character's side, not a neutral summary.
+A relationship entry is a behavioral specification, not a narrative. It tells the LLM what this character does, avoids, or becomes when the other person is present or mentioned. It is written from this character's perspective: what they notice, how they read it, what it makes them do.
 
-### Thesis first
+### What an entry is
 
-Before writing any entry, form a one-sentence thesis for each relationship: the single claim the entry will make about what this relationship reveals about this character. Not about the other person. About this character.
+Each entry states the behavioral dynamic of one relationship in 1-3 sentences. One sentence is the default. A complex relationship earns a second or third sentence when the additional sentence adds a behavioral pattern or cost the first sentence cannot carry. Do not expand to fill space.
 
-Write all theses before writing any prose. The thesis is the argument the entry will develop. Every sentence in the entry must serve it. If you cannot state the thesis in one sentence, the entry does not have a clear enough argument yet.
+**The entry is the thesis.** Form one claim per relationship about what the relationship reveals about this character. Not about the other person. About this character. Every sentence in the entry must serve this claim. When working from source material, derive the claim from the reference documents directly. Do not read the character's existing Core sections (Background, Body, Soul) while forming entries. Pre-written prose creates attractor patterns that override the claim.
 
-When working from source material, derive the theses from the reference documents directly. Do not read the character's existing Core sections (Background, Body, Soul) while forming theses or writing entries. Pre-written prose creates attractor patterns that override the thesis and produce entries that echo the Soul section's phrasing rather than building an independent argument.
+### What an entry is not
 
-### Construction discipline
+**Not a scene narration.** Do not recount specific exchanges, quote dialogue, or narrate what happened in a particular conversation. The entry describes repeatable behavioral patterns, not events. Specific interactions are evidence for the writer; they do not appear in the output. The LLM needs to know what the character does whenever this person appears, not what happened one time.
 
-1. **Build, don't catalog.** Every sentence depends on the previous one. If removing a sentence does not break the argument, it does not belong. An entry that reads as three separate observations about the same person is a list dressed as prose. Find the thread that connects them, or keep only the observation that matters most.
+**Not a neutral description.** A relationship entry is not an objective account of what two people do together. It is one character's experience of the other. This character's interpretations of what they observe are legitimate content. "She reads his visits as excuses to check on her" is perspective. "He visits with invented ailments" is neutral narration that belongs on his card, not hers.
 
-2. **Describe the dynamic, not the history.** History belongs in Background. Specific interactions belong only where they reveal the dynamic, not as evidence that the dynamic exists. The question is not "what are three things these two have done together" but "what does being around this person make this character do."
+**The swap test:** if you can swap the two names and use the entry on the other character's card, the perspective is too neutral. Rewrite it.
 
-3. **End with what the character has not looked at, or what the dynamic costs.** The last sentence is the one the reader carries. It should be the thing the character does not say, the complication they have not resolved, or the cost they are paying.
+### Format
 
-4. **Length follows the relationship's complexity.** A simple rivalry can be two sentences. A load-bearing bond earns a full paragraph or more. Do not compress a complex relationship to fit a target length, and do not inflate a simple one with behavioral evidence it does not need.
+Bullet list. One entry per relationship. Bold `**Name:**` prefix inline on the bullet, followed by prose. Archetype annotations are working aids for distribution checking. Append them after the entry in italics during drafting; export strips them. Evidence citations follow the archetype annotation in parentheses during drafting; export strips them.
 
-**Format:** Bullet list. One entry per relationship. Bold `**Name:**` prefix inline on the bullet, followed by prose. Archetype annotations are working aids for distribution checking. Append them after the entry in italics during drafting; export strips them.
-
-*Example — simple dynamic:*
+*Example — simple dynamic (1 sentence):*
 ```
-- **Jaro Jerab:** His crew handles the dangerous work of collecting
-  venom and shed skin from her. He frames these sessions as
-  low-stakes training for his people: reading her body language,
-  staying calm, knowing when to back off. She takes this as a
-  challenge and puts extra effort into getting his crew. *(Rival)*
+- **Balor:** She guards her trade secrets against Balor's offers and
+  uses his merchant network when it serves her. *(Friction)*
 ```
 
-*Example — complex dynamic:*
+*Example — competing pulls (2 sentences):*
 ```
-- **Vesper:** She found Vesper's tree before the village existed and
-  stayed. Vesper tried to remove her and failed. What formed over
-  the years is a real friendship that Kallya frames as freeloading,
-  because calling it friendship would mean admitting she found
-  something worth staying for. *(Kin)*
+- **Valen:** She contests Valen's medical expertise and seeks her out
+  to do it. She insists the attention is strictly professional.
+  *(Friction, Desire)*
 ```
 
-*Example — dynamic that reveals something the character avoids:*
+*Example — perspective that could not appear on the other card:*
 ```
-- **Elara:** Elara holds that the strong consuming the weak is
-  natural law. Vesper's official position is the opposite. What
-  makes Elara's company uncomfortable is not the philosophical
-  distance. It is the uncomfortable closeness. Elara is honest
-  about being a predator. Vesper's soul-tree absorbs something from
-  every human who dies in Viralys. The rancher and the hunter end
-  up in the same place. Vesper attributes her discomfort to
-  disagreement. The actual source is recognition.
-  *(Ideological Counterpart)*
+- **Hayden:** She has known him since childhood, and she checks
+  whether he is hurt before she registers he came to visit. She
+  treats every one of his social calls as a medical encounter.
+  *(Kin)*
 ```
 
-### The Fiske relational model lens
+### Generativity
 
-Consider which relational model the character applies to each relationship:
-
-- **Communal Sharing** — what's mine is yours; violation = betrayal or exclusion
-- **Authority Ranking** — hierarchy with pastoral care downward, deference upward; violation = tyranny or insubordination. This is a lens on how the relationship works, not an archetype label: the archetype for the downward direction is Charge, not Authority.
-- **Equality Matching** — reciprocity, turn-taking, score-keeping; violation = failure to reciprocate
-- **Market Pricing** — cost-benefit assessment; violation = exploitation or breach of contract
-
-When two characters apply different models to the same relationship, the mismatch is a built-in friction source without any explicit conflict needed.
-
----
-
-## Generativity Hierarchy
-
-**Highest:** Relationships with competing obligations; relationships in transition (slowly developing a crush, recently betrayed, testing whether to trust).
-
-**Strong:** Asymmetric relationships (one cares more, one holds a secret). Conditional alliances (allies only in specific contexts).
+**Highest:** Relationships where the character wants two incompatible things from the same person. A rival who secretly admires. A mentor who fears being surpassed. A friend who needs to betray.
 
 **Low:** Settled positive relationships without tension; simple antagonism. Both provide one behavioral mode and collapse quickly.
 
 > **The love loop:** LLMs default toward romantic and submissive behavior. Include explicit complication in every Desire entry. Non-romantic relationships need explicit anti-romantic framing where appropriate.
 
-> **The ally collapse:** "Close friends with X" is the least generative relationship entry. Identify the specific tension, asymmetry, or behavioral obligation that makes it more than mutual warmth.
+> **The ally collapse:** "Close friends with X" is the least generative entry. Identify the specific tension, asymmetry, or behavioral obligation that makes it more than mutual warmth.
 
----
+### Per-entry self-review
 
-### Per-entry self-review: internal state check
+After drafting each entry, run three checks:
 
-After drafting each entry, read it back and ask: **does any sentence describe what the other character thinks, feels, or concludes internally?** If yes, that content does not belong here.
+**1. Internal-state check:** Does any sentence describe what the other character thinks, feels, or concludes internally? If yes, that content does not belong here. Log it as a Blueprint note for the other character's card.
 
-Each relationship entry describes only what *this* character experiences — what they observe, how they interpret it, and what it makes them do. The other character's internal life is not observable and belongs in *their* entry or in their cast plan, not here.
+**2. Swap check:** Could you swap the two names and use this entry on the other character's card? If yes, it has no perspective. Rewrite it.
+
+**3. Scene-narration check:** Does any sentence recount a specific exchange, quote dialogue, or narrate an event? If yes, replace it with the behavioral pattern the event reveals.
+
+Each entry describes only what *this* character experiences. The other character's internal life is not observable and belongs in *their* card or in their cast plan, not here.
 
 **Remove** any claim that the other character:
 - interprets, hears, reads, or takes something in a particular way
 - is motivated by something internally (unless they've stated it aloud)
 - feels something toward this character that hasn't been expressed behaviorally
 
-**Displaced content** — anything you remove — should be logged as a Blueprint note in the other character's entry in the cast plan in `project/plan.md`, not simply deleted. It may be accurate; it just doesn't belong in this character's voice.
-
-**Worked example — Friction entry (Sophie's card, about Vesper):**
-
-> Wrong: "Sophie pushes back on Vesper's decisions and Vesper hears it as normal grousing."
-
-> Right: "Sophie pushes back on Vesper's decisions; Vesper doesn't change course."
-
-The wrong version tells us how Vesper internally classifies Sophie's pushback ("normal grousing"). Sophie cannot know that. The right version reports only what Sophie observes — Vesper's behavior — and leaves Vesper's internal interpretation where it belongs: in Vesper's card.
-
-This check applies to all entries, not just conflict-laden ones. Even positive relationships can slip into describing the other person's interior ("she knows Vesper cares about her") when only the behavior is visible ("Vesper checks in after every hard session").
+**Displaced content** — anything you remove — should be logged as a Blueprint note in the other character's entry in the cast plan in `project/plan.md`, not simply deleted.
 
 ---
 
