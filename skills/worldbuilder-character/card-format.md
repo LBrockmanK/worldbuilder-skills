@@ -261,7 +261,7 @@ source-specific or project-specific player names.
 
 ## Working document conventions
 
-Entries accumulate under section headings as bullet points. The document may carry optional annotations (grid position, coverage area) during creation; export strips these. Annotations are a working aid, not part of the card's final content.
+Entries accumulate under section headings as bullet points. The document may carry optional annotations (grid position, coverage area, relationship archetype) during creation; export strips these. Annotations are a working aid, not part of the card's final content.
 
 Two recognized exceptions to the all-bullets convention: the Body
 appearance preamble (prose before the first bullet point) and Story
@@ -338,11 +338,19 @@ violation pattern — it does not reproduce the full rule text.
 - Trait-word ban.
 
 **Relationship entries:**
+- Thesis coherence (`relationships.md`, Thesis first section).
+  Violation: entry has no identifiable single-sentence thesis, or
+  sentences in the entry do not serve the thesis.
+- Construction discipline (`relationships.md`, Writing Relationship
+  Entries section). Violation: entry catalogs disconnected
+  interactions or behavioral observations rather than developing an
+  argument about what the relationship does to this character.
 - Perspective-focus (`relationships.md`, perspective-focus section
   and per-entry self-review). Violation: entry describes the other
   character's actions without describing this character's behavior.
-- Archetype in bold prefix (`relationships.md`, Writing Relationship
-  Entries section). Violation: missing archetype.
+- Archetype annotation present (`relationships.md`, Writing
+  Relationship Entries section). Violation: missing archetype
+  working annotation.
 - Pre-story characters only (this document, Addon blocks —
   Relationships). Violation: entry for a character who arrives
   during the story.
@@ -411,8 +419,8 @@ Character-card-specific guidance:
   reference material.
 - Reformatting a bullet preamble to prose: always auto-fix (purely
   mechanical).
-- Adding a missing relationship archetype: always escalate (requires
-  a characterization choice about which archetype fits).
+- Adding a missing relationship archetype annotation: always escalate
+  (requires a characterization choice about which archetype fits).
 - Rewriting a Background fact-pair result: escalate when the current
   result is a trait label or abstract interpretation and a concrete
   replacement must be sourced from reference material.

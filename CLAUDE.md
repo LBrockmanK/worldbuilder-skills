@@ -26,6 +26,16 @@ conventions govern this repo's own `.claude/`.
   concrete, no filler — `skills/writing-style.md`; phrase-level review
   checklist in `docs/slop-phrases.md`.
 
+## Agent policies
+
+- **Writing agents operate at the top available tier.** Character cards,
+  prose content, and any creative writing that requires characterization
+  judgment dispatch at the highest tier, not the default. Tier names
+  follow the fleet tier map; the current top tier is opus-class.
+- **Adversarial review uses codex.** Pre-completion adversarial review
+  runs through `codex exec --sandbox read-only` for cross-provider
+  independence. The same model that wrote the content cannot review it.
+
 ## Review records
 
 Review documents for this project live in `.claude/reviews/`.

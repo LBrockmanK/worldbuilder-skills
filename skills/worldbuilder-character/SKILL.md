@@ -115,7 +115,11 @@ When proposing an entry, reproduce the semantic content of the user's answer, no
 
 After Core, work through selected addon blocks in order: Relationships, then Intimate Dynamics, then Voice / Dialogue, then Story Seeds.
 
-**Relationships:** See `relationships.md` for the 12-archetype framework, coverage requirements, and entry format. Ask about the character's named relationships, their behavioral dynamics, and what each relationship makes the character do. Follow the coverage and distribution requirements in `relationships.md`.
+**Relationships:** See `relationships.md` for the 12-archetype framework, coverage requirements, entry format, and the thesis-first writing process.
+
+When working from source material, write relationships from the reference documents directly. Do not read the character's existing Core sections while writing relationships. The reference documents are the evidence base; the Core sections are pre-written prose that creates convergence patterns in the output.
+
+For each named relationship: form a one-sentence thesis (what this relationship reveals about the character), assign an archetype, and note 2-3 key evidence points from the reference material. Write all theses before writing any entry prose. Then write each entry so that every sentence serves its thesis. Follow the construction discipline and coverage requirements in `relationships.md`.
 
 **Intimate Dynamics:** See `intimate.md` for coverage areas and entry format. Ask about attraction expression, hesitation and limits, and any specific dynamic. Ensure at least one friction point.
 

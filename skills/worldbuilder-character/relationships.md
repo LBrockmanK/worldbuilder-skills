@@ -72,13 +72,57 @@ Counts are per-character. A relationship in A's list does not require a matching
 
 ## Writing Relationship Entries
 
-Each entry is 2–4 sentences describing the character's own experience of this person and the behavioral dynamic between them. Write the character's side, not a neutral summary.
+Each entry develops an argument about what the relationship does to this character. Not what happened between them, not what the other person is like, not a list of their interactions. What being around this person makes this character do, avoid, or become. Write the character's side, not a neutral summary.
 
-**Format:** Bullet list. One entry per relationship. Bold `**Name — Archetype(s):**` prefix inline on the bullet, followed by behavioral description as prose sentence(s).
+### Thesis first
 
-*Example bullet:*
+Before writing any entry, form a one-sentence thesis for each relationship: the single claim the entry will make about what this relationship reveals about this character. Not about the other person. About this character.
+
+Write all theses before writing any prose. The thesis is the argument the entry will develop. Every sentence in the entry must serve it. If you cannot state the thesis in one sentence, the entry does not have a clear enough argument yet.
+
+When working from source material, derive the theses from the reference documents directly. Do not read the character's existing Core sections (Background, Body, Soul) while forming theses or writing entries. Pre-written prose creates attractor patterns that override the thesis and produce entries that echo the Soul section's phrasing rather than building an independent argument.
+
+### Construction discipline
+
+1. **Build, don't catalog.** Every sentence depends on the previous one. If removing a sentence does not break the argument, it does not belong. An entry that reads as three separate observations about the same person is a list dressed as prose. Find the thread that connects them, or keep only the observation that matters most.
+
+2. **Describe the dynamic, not the history.** History belongs in Background. Specific interactions belong only where they reveal the dynamic, not as evidence that the dynamic exists. The question is not "what are three things these two have done together" but "what does being around this person make this character do."
+
+3. **End with what the character has not looked at, or what the dynamic costs.** The last sentence is the one the reader carries. It should be the thing the character does not say, the complication they have not resolved, or the cost they are paying.
+
+4. **Length follows the relationship's complexity.** A simple rivalry can be two sentences. A load-bearing bond earns a full paragraph or more. Do not compress a complex relationship to fit a target length, and do not inflate a simple one with behavioral evidence it does not need.
+
+**Format:** Bullet list. One entry per relationship. Bold `**Name:**` prefix inline on the bullet, followed by prose. Archetype annotations are working aids for distribution checking. Append them after the entry in italics during drafting; export strips them.
+
+*Example — simple dynamic:*
 ```
-- **Mira — Kin:** When Mira dismisses her ideas in front of others, she doesn't argue — she brings the idea back later, one-on-one, where Mira has room to change her mind without losing face.
+- **Jaro Jerab:** His crew handles the dangerous work of collecting
+  venom and shed skin from her. He frames these sessions as
+  low-stakes training for his people: reading her body language,
+  staying calm, knowing when to back off. She takes this as a
+  challenge and puts extra effort into getting his crew. *(Rival)*
+```
+
+*Example — complex dynamic:*
+```
+- **Vesper:** She found Vesper's tree before the village existed and
+  stayed. Vesper tried to remove her and failed. What formed over
+  the years is a real friendship that Kallya frames as freeloading,
+  because calling it friendship would mean admitting she found
+  something worth staying for. *(Kin)*
+```
+
+*Example — dynamic that reveals something the character avoids:*
+```
+- **Elara:** Elara holds that the strong consuming the weak is
+  natural law. Vesper's official position is the opposite. What
+  makes Elara's company uncomfortable is not the philosophical
+  distance. It is the uncomfortable closeness. Elara is honest
+  about being a predator. Vesper's soul-tree absorbs something from
+  every human who dies in Viralys. The rancher and the hunter end
+  up in the same place. Vesper attributes her discomfort to
+  disagreement. The actual source is recognition.
+  *(Ideological Counterpart)*
 ```
 
 ### The Fiske relational model lens
@@ -139,10 +183,10 @@ Before marking the relationships section complete:
 
 1. **Behavioral coverage check:** "If this character appeared in a scene with any named cast member, does the card give the LLM a specific behavioral instruction for that interaction?"
 
-2. **Archetype distribution scan:** Count how many times each archetype appears across the full relationship list, counting every tag on every entry. The ideal is no repeats: flag every repeat and reconsider the relationship behind it, not the label on it. No archetype may appear more than twice — fix any that does. Flag any Community Thread entry beyond the first — these are the lowest-value entries and should be replaced with something more specific when possible.
+2. **Archetype distribution scan:** Count how many times each archetype appears across the full relationship list, reading from the working annotations on each entry. The ideal is no repeats: flag every repeat and reconsider the relationship behind it, not the annotation on it. No archetype may appear more than twice — fix any that does. Flag any Community Thread entry beyond the first — these are the lowest-value entries and should be replaced with something more specific when possible.
 
 3. **Cast web check:** At least 2 relationships should be with other named cast members (not offscreen figures), keeping the cast's social web interconnected.
 
-4. **Archetype fit check:** Read each entry's archetype against the relationship it tags: does that archetype's behavioral signature describe what this relationship actually does? A label that does not fit is a defect however well it serves the distribution — fix it by changing the archetype to the one that fits, or by changing the relationship so the archetype is earned. Where a relationship the Q&A established has no entry carrying it, that is a gap worth flagging. This check imposes no list of its own: the session decides what should be present.
+4. **Archetype fit check:** Read each entry's archetype annotation against the relationship it tags: does that archetype's behavioral signature describe what this relationship actually does? An annotation that does not fit is a defect however well it serves the distribution — fix it by changing the archetype to the one that fits, or by changing the relationship so the archetype is earned. Where a relationship the Q&A established has no entry carrying it, that is a gap worth flagging. This check imposes no list of its own: the session decides what should be present.
 
 > **Community Thread is a last resort**, not a gap-filler. It provides the least behavioral specificity of any archetype. Prefer any other archetype — including Friction, Obligation, or even a weak Unease — over defaulting to Community Thread.
