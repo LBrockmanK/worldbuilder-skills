@@ -277,6 +277,8 @@ Add additional states only where they're meaningfully distinct from the above (F
 
 The `description` drives art generation context; keep it concrete and consistent with the character's Body preamble. The `expressions.neutral` prompt is the base image generation prompt for that state.
 
+The number of expressions per sprite set depends on the project's chosen expression tier (see Expression Tiers in `../../docs/target-system.md`). Standard-18 is the recommended default; Essential-12 for budget-constrained projects; Expansive-26 for maximum emotional range.
+
 ---
 
 ## Art Style Prompts
@@ -370,12 +372,16 @@ Most worlds do not need custom prompts. Use them when the world has specific mec
 - [ ] Recurring events have `recurring: true`
 - [ ] `eventCalendarSummary` written
 - [ ] `dailyPlannerDirective` set if the world has standing daily-structure rules
+- [ ] No `triggerOnDay` exceeds calendar year length (112 for 4×28)
+- [ ] No duplicate non-recurring triggers on the same day
 
 **Lorebook**
 - [ ] Every major location has a concept note → lore entry
 - [ ] Background NPC guidelines entry present
 - [ ] `availableFromDay` set on all entries per layer
 - [ ] Keywords are specific; no partial-match traps
+- [ ] No lore entry has keywords that appear nowhere else in the world (dead content)
+- [ ] No multi-word compound keywords requiring unlikely exact matches
 
 **Story direction**
 - [ ] `arcManagerGuidance` is creative compass guidance, not a GM prompt
@@ -387,8 +393,41 @@ Most worlds do not need custom prompts. Use them when the world has specific mec
 - [ ] All six influence bands present in the card
 - [ ] Sprite sets include at minimum Casual and Working/Active
 - [ ] Introduction Story Seed present, introduction scenario plausible before `availableFromDay`
+- [ ] Expression count matches project's chosen tier (12 / 18 / 26)
 
 **Art style**
 - [ ] Background and sprite prefix/suffix present if using AI generation
 - [ ] Negative prompts are for SDXL models only (Gemini/Imagen ignore them)
 - [ ] Time-of-day lighting set if the world needs per-segment atmosphere
+
+---
+
+## Can-This-Ever-Fire Detection
+
+Run after export assembly to identify content that will never reach the player.
+
+**Lore entry keyword analysis.** For each lore entry, check:
+- Keywords appearing nowhere else in the world (character cards, other lore, story triggers, setting fields) — the entry will never fire. **CRITICAL.**
+- Keywords appearing only in other lore entries — circular dependency, no player-facing trigger. **WARNING.**
+- Multi-word compound keywords requiring exact co-occurrence — may be too specific to fire naturally. **WARNING.**
+- `availableFromDay` set past when the topic would naturally surface — timing conflict. **WARNING.**
+
+**Story trigger analysis.** For each story trigger, check:
+- `triggerOnDay` exceeding calendar year length — will never fire. **CRITICAL.**
+- `promptInjection` referencing a character or lore concept not yet introduced by that day — sequencing concern. **WARNING.**
+- Two triggers on the same day with conflicting emotional tones — sequencing concern. **WARNING.**
+
+---
+
+## Adjustment Priority Order
+
+When an export needs condensing or reformatting, adjust in this order — lowest-risk first, highest-risk last:
+
+1. **Lore keywords** — tighten or broaden keyword targeting (low risk)
+2. **Lore content** — condense entry text (low risk)
+3. **Story trigger promptInjection** — condense injection text (medium risk)
+4. **Character baseProfile** — condense card prose (medium risk)
+5. **settingSummary** — condense setting context (medium risk)
+6. **arcManagerGuidance** — condense direction (medium-high risk — this is the primary creative guard)
+7. **eventCalendarSummary / weatherPools** — condense calendar prose (low risk, but late in priority because rarely needed)
+8. **Art style prompts** — never adjust for size (high risk — prompt changes alter visual output)

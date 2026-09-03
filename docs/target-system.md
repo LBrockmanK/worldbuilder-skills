@@ -202,6 +202,18 @@ smiling, stoic, surprised, upset, wary, worried_or_concerned
 
 Worlds may define a custom set with more or fewer entries. Define `availableExpressions` early when building a world from scratch — it determines how many expression variants each character sprite set needs and how many expression images must be generated per sprite set.
 
+### Expression Tiers
+
+For monolithic AI-generated sprites (one image per expression), three standard tiers balance cost and coverage:
+
+| Tier | Expressions | Cost vs. Expansive |
+|---|---|---|
+| Essential-12 | neutral, happy, sad, angry, annoyed, surprised, laughing, crying, embarrassed, nervous, confident, flirty | 54% cheaper |
+| Standard-18 (recommended) | Essential-12 + beaming, blushing, emotional, upset, wary, worried\_or\_concerned | 31% cheaper |
+| Expansive-26 | Standard-18 + amused, comedic\_shock, emotional\_shock, intimate, shy, sleepy\_or\_tired, smiling, stoic | Full set |
+
+Standard-18 is the recommended default for new projects. For a 20-character project with 2 sprite sets: Essential-12 produces 480 images, Standard-18 produces 720, Expansive-26 produces 1,040.
+
 ---
 
 ## Locations Tab

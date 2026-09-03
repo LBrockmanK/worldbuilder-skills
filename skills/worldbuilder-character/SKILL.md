@@ -17,7 +17,9 @@ A character for an LLM-powered game is not a description. It is a behavioral spe
 
 ## Collaboration Model
 
-The session is a conversation. The AI asks targeted questions, the human answers, the AI translates each answer into a card-format entry, and the human approves or revises the entry before it is committed.
+**Interactive mode** (this document): The session is a conversation. The AI asks targeted questions, the human answers, the AI translates each answer into a card-format entry, and the human approves or revises the entry before it is committed.
+
+**Automated mode** (`automated-workflow.md`): The human sets the goal and the agents execute to completion from source material. Use when backfilling a section across multiple characters, or any workflow without interactive Q&A. The quality standard is the same; the process that reaches it is different.
 
 The human can override at any point:
 - Write entries directly instead of answering questions
