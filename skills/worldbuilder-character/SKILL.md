@@ -35,7 +35,7 @@ Autonomous mode process:
 1. Read the reference documents. Do not read the character's existing Core sections.
 2. Form your understanding of the character from the raw evidence.
 3. Work through the Q&A process section by section, translating your answers into entries.
-4. For Relationships specifically: form a one-sentence thesis per relationship before writing any prose (see `relationships.md`, Thesis first section).
+4. For Relationships specifically: write entries as 1-3 sentence behavioral specifications per `relationships.md`.
 5. Run adversarial review before marking complete (see the Completion Checklist).
 
 ---
@@ -126,11 +126,13 @@ When proposing an entry, reproduce the semantic content of the user's answer, no
 
 After Core, work through selected addon blocks in order: Relationships, then Intimate Dynamics, then Voice / Dialogue, then Story Seeds.
 
-**Relationships:** See `relationships.md` for the 12-archetype framework, coverage requirements, entry format, and the thesis-first writing process.
+**Relationships:** See `relationships.md` for the 12-archetype framework, coverage requirements, and entry format.
+
+Each entry is a 1-3 sentence behavioral specification stating what this relationship makes the character do, avoid, or become. Entries are written from the character's perspective (swap test: if swappable to the other card, too neutral). No scene narration — entries describe repeatable behavioral patterns, not specific events.
+
+When asking Q&A questions for relationships, target perspective and behavior: "What does this character do differently because that person is in the room?" and "How does this character read that person's behavior?" Avoid event-focused questions ("What happened between them?" or "Tell me about a specific time they...") — these produce scene narrations that must then be generalized back into patterns.
 
 When working from source material, write relationships from the reference documents directly. Do not read the character's existing Core sections while writing relationships. The reference documents are the evidence base; the Core sections are pre-written prose that creates convergence patterns in the output.
-
-For each named relationship: form a one-sentence thesis (what this relationship reveals about the character), assign an archetype, and note 2-3 key evidence points from the reference material. Write all theses before writing any entry prose. Then write each entry so that every sentence serves its thesis. Follow the construction discipline and coverage requirements in `relationships.md`.
 
 **Intimate Dynamics:** See `intimate.md` for coverage areas and entry format. Ask about attraction expression, hesitation and limits, and any specific dynamic. Ensure at least one friction point.
 
