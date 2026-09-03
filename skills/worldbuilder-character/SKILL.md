@@ -27,6 +27,17 @@ The human can override at any point:
 
 Source material substitutes for human answers. When the human provides source material, extract the behavioral content and translate it into card-format entries the same way you would translate a spoken answer.
 
+### Autonomous mode
+
+When running autonomously (source material substituting for human answers with no human in the loop), the same Q&A process applies. The AI reads the reference documents, asks itself the questions, and translates the answers into entries. The key difference is source isolation: the AI works from the reference documents, not from any existing card prose. Pre-written prose (especially Soul entries) creates attractor patterns that cause the output to echo the existing card's phrasing rather than building fresh characterization from the evidence.
+
+Autonomous mode process:
+1. Read the reference documents. Do not read the character's existing Core sections.
+2. Form your understanding of the character from the raw evidence.
+3. Work through the Q&A process section by section, translating your answers into entries.
+4. For Relationships specifically: form a one-sentence thesis per relationship before writing any prose (see `relationships.md`, Thesis first section).
+5. Run adversarial review before marking complete (see the Completion Checklist).
+
 ---
 
 ## Source Ingestion
