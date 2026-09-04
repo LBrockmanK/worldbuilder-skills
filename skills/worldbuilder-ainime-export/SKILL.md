@@ -80,6 +80,8 @@ python scripts/export_diff.py <project-root> --apply-all
 
 Fields not covered by the script (characters, lore entries, calendar events) are updated by extracting world.json from the .sbworld, editing it, and repacking — never by regenerating the whole file.
 
+**Every edit session must end with repacking.** The standalone world.json is a working copy, not the export. After any manual edits to world.json, repack it into the .sbworld before reporting the work as done. An edit that touches world.json but not the .sbworld has changed nothing the platform will see.
+
 ---
 
 ## Setting and Adventure Fields
@@ -122,7 +124,7 @@ Read `calendar.md` (this skill's reference file) for design guidance on weather 
 
 **`calendarConfig.dailyPlannerDirective`** (optional) — Standing rules about daily structure that the AI planner sees every day, before any day-specific events. Examples: "On weekdays, morning and afternoon MUST be classroom lessons. Evenings are free." / "Every day must include at least one scene in the guild hall." / "Weekend days are fully open for character-driven activities."
 
-**`calendarConfig.weatherPools`** (optional) — Nested object: season → day segment → string array. Each string is a one-line weather description. 10–16 entries per season/segment. The segments must match the project's `daySegments` configuration. Derive from the world's seasonal tone and `project/seed.md`; see `calendar.md` for writing guidance.
+**`calendarConfig.weatherPools`** (optional) — Nested object: season → day segment → string array. Each string is a one-line weather description. 10–16 entries per season/segment. The segments must match the project's `daySegments` configuration. Derive from `project/seed.md` and the world's setting; see `calendar.md` for writing guidance.
 
 ```json
 {
@@ -180,6 +182,8 @@ Read all concept notes in `notes/`. Each note produces one `loreEntry`.
   "enabled": true
 }
 ```
+
+**Entry scope** — A lore entry should provide specific, non-obvious information the AI needs at the moment a topic arises. Do not create entries for concepts self-evident to any player (what calendars are, what fishing means, what weather does). Do not create entries for systems already handled by other fields — homestead setup belongs in the setting summary, town restoration guidance in arc manager direction, weather in calendar config. Prefer seasonal entries naming specific in-world items (crops, forageables, fish, insects by season) over generic activity descriptions.
 
 **Explicit keywords.** If a concept note has a non-empty `keywords`
 frontmatter field, use those values directly as the entry's

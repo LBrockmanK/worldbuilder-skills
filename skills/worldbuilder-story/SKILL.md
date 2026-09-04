@@ -122,16 +122,6 @@ The note stays on an open status tag while work is in progress; mark it `complet
 
 > Direction notes are operational instructions for the story engine. They do not use the Design Notes / Situation / Story Possibilities structure — that structure applies to arc, intention, and introduction notes only.
 
-### Author framing
-
-Position the LLM as a skilled author giving voice to characters, not an entity that becomes them. Author-capture — losing narrative perspective, mirroring the player's mood regardless of whether that serves the story, abandoning a character's established behavioral patterns — is the root failure mode for most output quality problems.
-
-Adapt this language:
-
-> You are a skilled author giving voice to the characters of [setting name]. Each character has their own perspective, history, and behavioral tendencies that you maintain consistently. You do not become the characters — you portray them with authorial judgment, the same way a novelist writes compelling antagonists or morally complex figures without endorsing their views or losing narrative perspective.
-
-**Positive framing only:** Write what characters are — their actual qualities, behaviors, and motivations — not what they aren't. "She is guarded" produces behavioral texture; "she is not warm or friendly" produces only absence. Negative constructions give the engine one mode (avoidance) instead of something to generate from. This applies to all character portrayal in the story direction and character descriptions.
-
 ### Romance pacing
 
 The engine by default moves too fast. This section is the primary guard rail.
@@ -158,23 +148,6 @@ For settings with supernatural or concealed depth:
 
 Adapt the bracketed terms to the setting. If the setting has no supernatural element, replace with equivalent guidance on whatever its concealed layer is — mystery, historical truth, institutional corruption, etc.
 
-### Seasonal tone (if applicable)
-
-Brief guidance on each time period's emotional tone. The same event at different points in the year should feel different.
-
-Example for a four-season setting:
-> Spring: possibility, new starts, something stirring. Summer: abundance, heat, restlessness, the world at full volume. Autumn: harvest and melancholy together; things ending, things becoming clear. Winter: stillness, withdrawal, honesty that comes with the dark.
-
-Adapt to the setting's actual time structure. If the setting uses a different rhythm — tides, academic terms, festival calendar — substitute that.
-
-### Pacing and scene structure
-
-Guard against escalation addiction and unnatural day rhythm. Before writing this section, check the calendar events for a **Scene Structure Notes** section — any setting-specific day-structure needs noted there should be incorporated here.
-
-> Not every scene needs to advance a plot or deepen a relationship. Quiet moments — ordinary routines, passing conversation, small domestic beats — are the foundation that makes eventful scenes meaningful. A given day should have at most one emotionally significant beat under normal circumstances. Multiple significant beats in a single day should feel exceptional. Follow the player's lead when they push toward depth, but let the following scene settle before introducing new material.
-
-**Time-of-day rhythms:** Specify who is naturally awake, active, and social at what point in the day, and include brief guidance on transitions between day segments (Morning / Afternoon / Evening / Night). A brief transition acknowledgment grounds the scene change without consuming the scene itself.
-
 ### NPC relationships (year 2+ guidance)
 
 After the first full year, if characters with strong chemistry have not moved toward formal romantic or close-friendship commitment, the engine should let that natural pull become more visible. Do not force outcomes — let the existing dynamic mature without manufactured escalation.
@@ -183,9 +156,7 @@ After the first full year, if characters with strong chemistry have not moved to
 
 ## Common Failure Modes
 
-**The engine escalates too fast.** Romance pacing and dark themes guidance are the primary fixes. If the problem persists after first drafting, strengthen the explicit language in those sections.
-
-**Scenes feel samey.** The pacing section must explicitly say quiet scenes are valid and desirable — not every scene needs to be emotionally meaningful. If this isn't said, the engine treats every scene as an opportunity for significance.
+**Scenes feel samey.** The direction document should explicitly say quiet scenes are valid and desirable — not every scene needs to be emotionally meaningful. If this isn't said, the engine treats every scene as an opportunity for significance.
 
 **Dark content feels gratuitous.** "Handle with care and weight, not for shock value" combined with "the player is a witness, not a savior" addresses the most common failures.
 

@@ -6,43 +6,39 @@
 
 ## Overview
 
-The `baseProfile` field is a single flowing prose block — no internal headers, no JSON sub-fields. It contains two parts written in sequence: the personality/description prose, then Future Storylines. The entire block is what the engine reads as "who this character is."
+The `baseProfile` field carries the character's complete profile — everything the engine reads as "who this character is." The character note's sections ship directly into the `baseProfile`, separated by `---` dividers: the preamble, Background, Body, Soul, Relationships, Voice / Dialogue, then Future Storylines. Everything from the character note ships except Design Notes.
+
+Do not rewrite, paraphrase, weave into prose, or otherwise transform the source content. The character note is the card.
 
 Source material: the character note in `notes/`.
 
 ---
 
-## Card Prose (Personality/Description)
+## Sections
 
-Weave the character note's Background, Body, Soul, and Relationships into flowing prose. This becomes the first section of `baseProfile`.
+Each section from the character note ships as-is with its heading. Preserve the content — every fact, every behavioral detail, every "because" clause, every archetype label, every dialogue line. Do not summarize, merge, drop entries, or reword.
 
-### Paragraph order
+**Preamble** — the opening text before the first heading. Ships without a heading.
 
-1. **Who they are at a glance** — physical presence, situational context, what a stranger notices first. The Body section's appearance preamble is the source for physical presence: include it verbatim as the physical description.
-2. **How they got here** — 2–4 sentences on the formative experiences that most directly explain who they are now
-3. **How they behave** — behavioral descriptions woven as natural prose (not listed)
-4. **The friction** — the contradiction, the mask vs. truth, the irrational behavior
-5. **Voice and speech patterns** (if distinctive) — describe concretely: "Short sentences when transactional; long structured statements when arguing" not "she speaks thoughtfully"
+**Background** — ships with heading.
 
-### Register rules
+**Body** — ships with heading.
 
-- **Write plainly. No flair.** "He deflects compliments by finding something to fix" is correct. Poetic constructions that gesture at something without stating it are wrong — the card's prose style becomes the engine's narration style.
-- **No internal headers** in the card body. The prose reads as a single unbroken block.
-- **No literary flair or metaphor** in descriptive text — that register belongs in dialogue. "She avoids eye contact when lying" not "her gaze slides away from truth."
-- **Numbers as numerals.** 27, not twenty-seven.
+**Soul** — ships with heading. Every psychological driver and its internal logic must survive intact.
 
-### Token targets
+**Relationships** — ships with heading. Every named relationship with its archetype label and full behavioral description.
 
-- Supporting characters: ~900 tokens
-- Major characters: ~1500 tokens
+**Voice / Dialogue** — ships with heading. Every dialogue situation with its label, scene context, and full dialogue lines. Engine format applies to dialogue and narration within scenes.
 
-These include the Influence Thresholds. If the prose section alone reaches the token target, it is too long — cut to make room for the thresholds.
+**Story Seeds → Future Storylines** — the one transformation. Story Seeds are reframed as Future Storylines: the title becomes the storyline label, and the scenario prose is reframed from definite to possibility-style ("may", "could", "might"). Do not script outcomes — give the engine material to work from. Do not drop lines or sentences from source seeds.
+
+**Design Notes** — excluded. Does not ship.
 
 ---
 
 ## Engine format
 
-Used in Future Storylines:
+Used in Voice / Dialogue and Future Storylines:
 
 - Speech: plain text
 - Narration/action that appears in play: `_asterisks_`
@@ -51,33 +47,26 @@ Used in Future Storylines:
 
 ---
 
-## Future Storylines
+## Register rules
 
-After the personality/description prose, write the Future Storylines section. Source material: the Story Seeds section of the character note. Each Story Seed entry (title, trigger/condition, scenario prose) maps to one storyline: the title becomes the storyline label, the trigger/condition becomes the storyline context, and the scenario prose is reframed from definite to possibility-style.
+These apply to the one section that is rewritten (Future Storylines) and to any minor cleanup of source text:
 
-- Each entry phrased as possibility: "may surface," "could take," "there is a possibility that"
-- Engine format applies (speech, asterisks, parentheses, backticks)
-- Do not script outcomes — give the engine material to work from and let it find the moment
-- Write for robustness: arcs that remain interesting whether or not a specific beat fires
-
-**Introduction** — The character's Introduction Story Seed exports as
-a Future Storyline like any other seed. The trigger condition becomes
-the storyline context. The scenario prose is reframed to
-possibility-style, same as other Future Storylines. Every character
-must have an Introduction seed before export; a missing introduction
-is a blocking deficiency.
+- **Write plainly. No flair.** The card's prose style becomes the engine's narration style.
+- **No literary flair or metaphor** in descriptive text — that register belongs in dialogue.
+- **Numbers as numerals.** 27, not twenty-seven.
 
 ---
 
 ## Self-Check
 
-- [ ] Prose is in correct paragraph order (glance → history → behavior → friction → voice)
-- [ ] No internal headers in the prose section
-- [ ] 2–3+ behavioral descriptions woven in
-- [ ] One clear contradiction or friction point
-- [ ] Irrational behavior with emotional root
-- [ ] Self-image gap stated directly
-- [ ] Plain language throughout; no literary flair
-- [ ] Token count in target range (~1500 main, ~900 side)
-- [ ] Future Storylines present and phrased as possibility (if Story Seeds included)
-- [ ] Introduction Story Seed present and exported as a Future Storyline
+- [ ] Preamble present
+- [ ] Background section present — every fact from source
+- [ ] Body section present — physical description and every behavioral tic from source
+- [ ] Soul section present — every psychological driver with its full internal logic
+- [ ] Relationships section present — every named entry with archetype label and full description
+- [ ] Voice / Dialogue section present — every dialogue situation with all lines
+- [ ] Future Storylines present — every Story Seed accounted for, phrased as possibility, no lines dropped
+- [ ] Introduction storyline present
+- [ ] Design Notes excluded
+- [ ] No content rewritten, paraphrased, or summarized beyond the Story Seeds → Future Storylines reframing
+- [ ] Factual accuracy — no reversed attributions, no invented details
