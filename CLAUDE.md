@@ -41,5 +41,5 @@ conventions govern this repo's own `.claude/`.
 Review documents for this project live in `.claude/reviews/`.
 Interim assignment (2026-07-28, Kevin): set directly across all projects
 in lieu of a fleet:setup walk; superseded when the vault-merger
-migration lands. The fleet:adversarial-review skill follows this
+migration lands. The scraibe:adversarial-review skill follows this
 declaration and stops if it is absent.
